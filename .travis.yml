@@ -14,8 +14,8 @@ notifications:
 deploy:
   provider: script
   skip_cleanup: true
-  script: scripts/deploy.sh /public_html/beta/
- on:
-   tags: true
-   all_branches: true
-   condition: "$TRAVIS_TAG =~ .*beta.*$"
+  script: scripts/deploy.sh "/public_html/beta/"
+  on:
+    tags: true
+    all_branches: true
+    condition: "$TRAVIS_TAG =~ .*beta.*$"
