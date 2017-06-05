@@ -15,7 +15,7 @@ notifications:
 deploy:
   provider: script
   skip_cleanup: true
-  script: scripts/deploy.sh "/public_html/beta/"
+  script: scripts/deploy.sh "/public_html/beta/" ${FTP_USER} ${FTP_PASSWORD}
   on:
     tags: true
     all_branches: true
