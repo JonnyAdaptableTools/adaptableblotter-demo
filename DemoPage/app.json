@@ -1,0 +1,19 @@
+{
+  "devtools_port": 9090,
+  "startup_app": {
+    "name": "OpenFin with Adaptable Blotter",
+    "description": "OpenFin with Adaptable Blotter",
+    "url": "https://adaptableblotterdemo.000webhostapp.com/hypergriddemo.html",
+    "uuid": "openfin-adaptable-blotter",
+    "autoShow": true
+  },
+  "runtime": {
+    "arguments": "",
+    "version": "stable"
+  },
+  "shortcut": {
+    "company": "Adaptable Tools",
+    "description": "Adaptable Blotter",
+    "name": "Adaptable Blotter"
+  }
+}

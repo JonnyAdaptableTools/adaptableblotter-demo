@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>AdaptableBlotter.JS Kendo Demo</title>
+    <script src="ExtLibs/kendo/jszip.min.js"></script>
+    <script src="ExtLibs/kendo/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="ExtLibs/kendo/kendo.common.min.css" />
+    <link rel="stylesheet" href="ExtLibs/kendo/kendo.rtl.min.css" />
+    <link id="kendotheme" rel="stylesheet" href="ExtLibs/kendo/kendo.blueopal.min.css" />
+    <link rel="stylesheet" href="ExtLibs/kendo/kendo.mobile.all.min.css" />
+    <script src="ExtLibs/kendo/kendo.all.min.js"></script>
+
+    <!--CSS for the Adaptable Blotter-->
+    <% if (htmlWebpackPlugin.options.abCSS) { %>
+    <link href="<%= htmlWebpackPlugin.options.abCSS %>" rel="stylesheet"></script>
+    <% } %>
+    <!--CSS for the demo-->
+    <link href="kendodemo.css" rel="stylesheet" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="ExtLibs/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div>
+        <div id="content" style="margin:15px;"></div>
+    </div>
+    <% if (htmlWebpackPlugin.options.harnessJs) { %>
+    <script src="<%= htmlWebpackPlugin.options.harnessJs %>" type="text/javascript"></script>
+    <% } %>
+    <% if (htmlWebpackPlugin.options.bundleJs) { %>
+    <script src="<%= htmlWebpackPlugin.options.bundleJs %>" type="text/javascript"></script>
+    <% } %>
+    <p/>
+    <!-- Grid Setup -->
+    <script src="kendodemo.js"></script>
+    <div id="grid"></div>
+
+    <script>
+        InitBlotter()
+    </script>
+
+</body>
+
+</html>

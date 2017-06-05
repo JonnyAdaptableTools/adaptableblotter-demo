@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>AdaptableBlotter.JS Hypergrid Demo</title>
+    <!--CSS for the Adaptable Blotter-->
+    <% if (htmlWebpackPlugin.options.abCSS) { %>
+    <link href="<%= htmlWebpackPlugin.options.abCSS %>" rel="stylesheet"></script>
+    <% } %>
+    <!--CSS for the demo-->
+    <link href="hypergriddemo.css" rel="stylesheet" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="ExtLibs/bootstrap/css/bootstrap.min.css">
+    <!-- Latest Hypergrid -->
+    <script src="ExtLibs/hypergrid/fin-hypergrid.js"></script>
+
+</head>
+<body>
+    <!-- Adaptable Blotter div for react and dashboard -->
+    <div id="content" style="margin:15px;"></div>
+    <p/>
+    <!-- Grid div -->
+    <div id="grid"></div>
+    <% if (htmlWebpackPlugin.options.harnessJs) { %>
+    <script src="<%= htmlWebpackPlugin.options.harnessJs %>" type="text/javascript"></script>
+    <% } %>
+    <% if (htmlWebpackPlugin.options.bundleJs) { %>
+    <script src="<%= htmlWebpackPlugin.options.bundleJs %>" type="text/javascript"></script>
+    <% } %>
+    <!-- Grid Setup -->
+    <script src="hypergriddemo.js"></script>
+    <script>
+        InitBlotter()
+    </script>
+</body>
+</html>
