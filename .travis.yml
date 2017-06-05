@@ -15,7 +15,7 @@ notifications:
 deploy:
   provider: script
   skip_cleanup: true
-  script: scripts/deploy.sh "/public_html/beta/" ${FTP_USER} ${FTP_PASSWORD}
+  script: ./node_modules/.bin/gulp ftp-deploy --user ${FTP_USER} --password ${FTP_PASSWORD} --path public_html/beta
   on:
     tags: true
     all_branches: true
