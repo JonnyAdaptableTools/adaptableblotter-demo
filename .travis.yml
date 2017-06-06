@@ -20,3 +20,10 @@ deploy:
     tags: true
     all_branches: true
     condition: "$TRAVIS_TAG =~ .*beta.*$"
+  provider: script
+  skip_cleanup: true
+  script: ./node_modules/.bin/gulp ftp-deploy --user ${FTP_USER} --password ${FTP_PASSWORD} --path public_html
+  on:
+    tags: true
+    all_branches: true
+    condition: "$TRAVIS_TAG =~ ^((?!beta).)*$"
