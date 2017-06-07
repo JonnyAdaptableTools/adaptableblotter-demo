@@ -28,7 +28,7 @@ const arg = (argList => {
 /** Configuration **/
 var user = arg.user;  
 var password = arg.password;  
-var host = 'files.000webhost.com';  
+var host = 'adaptableblotter.com';  
 var port = 21;  
 var localFilesGlob = ['./dist/**/*'];  
 var remoteFolder = arg.path;
