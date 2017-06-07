@@ -13,17 +13,17 @@ script:
 notifications:
   email: false
 deploy:
-  provider: script
-  skip_cleanup: true
-  script: node ftpdeploy.js --user ${BETA_FTP_USER} --password ${BETA_FTP_PWD}
-  on:
-    tags: true
-    all_branches: true
-    condition: "$TRAVIS_TAG =~ .*beta.*$"
-  provider: script
-  skip_cleanup: true
-  script: node ftpdeploy.js --user ${DEMO_FTP_USER} --password ${DEMO_FTP_PWD}
-  on:
-    tags: true
-    all_branches: true
-    condition: "$TRAVIS_TAG =~ ^((?!beta).)*$"
+    - provider: script
+      skip_cleanup: true
+      script: node ftpdeploy.js --user ${BETA_FTP_USER} --password ${BETA_FTP_PWD}
+      on:
+        tags: true
+        all_branches: true
+      condition: "$TRAVIS_TAG =~ .*beta.*$"
+    - provider: script
+      skip_cleanup: true
+      script: node ftpdeploy.js --user ${DEMO_FTP_USER} --password ${DEMO_FTP_PWD}
+      on:
+        tags: true
+        all_branches: true
+        condition: "$TRAVIS_TAG =~ ^((?!beta).)*$"
