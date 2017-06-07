@@ -27,7 +27,6 @@ module.exports = {
             template: 'DemoPage/hypergriddemo.ejs',
             inject: false,
             'harnessJs': PACKAGE.version + "/adaptableblotterhypergrid-bundle.min.js",
-            'abCSS': PACKAGE.version + "/adaptableblotter-style.css",
             'bundleJs': PACKAGE.version + "/harness-bundle.min.js"
         }),
                 new HtmlWebpackPlugin({
@@ -36,7 +35,6 @@ module.exports = {
             template: 'DemoPage/kendodemo.ejs',
             inject: false,
             'harnessJs': PACKAGE.version + "/adaptableblotterkendo-bundle.min.js",
-            'abCSS': PACKAGE.version + "/adaptableblotter-style.css",
             'bundleJs': PACKAGE.version + "/harness-bundle.min.js"
         }),
         new HtmlWebpackPlugin({
