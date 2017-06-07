@@ -43,7 +43,7 @@ module.exports = {
             template: 'DemoPage/index.ejs',
             inject: false,
             'version': PACKAGE.version,
-            'versiondate': (new Date()).toLocaleDateString("en-GB")
+            'versiondate': new Date().toISOString().slice(0,10)
         }),
         //this makes sure we package it in the dist folder and make it available for the webpack dev server
         // new CopyWebpackPlugin([{ context: 'node_modules/adaptableblotter/dist/adaptable-blotter-themes', from: '**/*', to: 'adaptable-blotter-themes' }]),
