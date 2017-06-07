@@ -1,3 +1,5 @@
+"use strict";
+
 var FtpDeploy = require('ftp-deploy');
 var ftpDeploy = new FtpDeploy();
 
