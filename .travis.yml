@@ -5,7 +5,7 @@ os:
 node_js:
   - "4"
 cache:
-  timeout: 1000
+  timeout: 500
   directories:
     - node_modules
 script:
