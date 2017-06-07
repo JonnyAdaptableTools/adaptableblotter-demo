@@ -9,10 +9,16 @@ var PACKAGE = require('./package.json');
 module.exports = {
     entry: {
         'index': ["./index.js"],
+        'ftpdeploy': ["./ftpdeploy.js"],
+    },
+    target: 'node',
+    node: {
+        __dirname: false,
+        __filename: false,
     },
     output: {
         path: __dirname + '/dist',
-        filename: 'index.js',
+        filename: '[name].js',
     },
     resolve: {
         // Add `.ts` and `.tsx` as a resolvable extension.
@@ -29,7 +35,7 @@ module.exports = {
             'harnessJs': PACKAGE.version + "/adaptableblotterhypergrid-bundle.min.js",
             'bundleJs': PACKAGE.version + "/harness-bundle.min.js"
         }),
-                new HtmlWebpackPlugin({
+        new HtmlWebpackPlugin({
             chunks: [],
             filename: "kendodemo.html",
             template: 'DemoPage/kendodemo.ejs',
@@ -43,7 +49,7 @@ module.exports = {
             template: 'DemoPage/index.ejs',
             inject: false,
             'version': PACKAGE.version,
-            'versiondate': new Date().toISOString().slice(0,10)
+            'versiondate': new Date().toISOString().slice(0, 10)
         }),
         //this makes sure we package it in the dist folder and make it available for the webpack dev server
         // new CopyWebpackPlugin([{ context: 'node_modules/adaptableblotter/dist/adaptable-blotter-themes', from: '**/*', to: 'adaptable-blotter-themes' }]),
