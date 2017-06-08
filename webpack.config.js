@@ -9,13 +9,13 @@ var PACKAGE = require('./package.json');
 module.exports = {
     entry: {
         'index': ["./index.js"],
-        'ftpdeploy': ["./ftpdeploy.js"],
+        // 'ftpdeploy': ["./ftpdeploy.js"],
     },
-    target: 'node',
-    node: {
-        __dirname: false,
-        __filename: false,
-    },
+    // target: 'node',
+    // node: {
+    //     __dirname: false,
+    //     __filename: false,
+    // },
     output: {
         path: __dirname + '/dist',
         filename: '[name].js',
