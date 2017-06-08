@@ -25,20 +25,21 @@ const arg = (argList => {
 /** Configuration **/
 var user = arg.user;
 var password = arg.password;
-console.log(__dirname)
+
 
 var config = {
     username: user,
     password: password, // optional, prompted if none given
     host: "adaptableblotter.com",
     port: 21,
-    // localRoot: __dirname + "/dist",
-    //since we now use webpack into dist....
-    localRoot: __dirname,
+    localRoot: __dirname + "/dist",
     remoteRoot: "/",
     include: [],
     exclude: []
 }
+
+console.log("deploying: " + config.localRoot);
+console.log("FTP USER: " + config.username);
 
 ftpDeploy.deploy(config, function (err) {
     if (err) {
