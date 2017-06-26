@@ -6,46 +6,65 @@
     tr {
       height: 45px
     }
+
+    .btn img {
+      display: inline-block;
+      vertical-align: middle;
+      padding: 5px;
+      border-radius: 5px;
+      width: 140px;
+    }
+
+    p {
+    font-family: Helvetica, Arial, sans-serif, "Times New Roman";
+}
   </style>
 </head>
 
-<body style="background-color:#ffffff;">
-  <p><img src="http://images8.webydo.com/93/9340882/3958%2f268BFDCA-400A-104D-DC0C-F6C658386289.png_400" alt="" width="151"
-      height="89" /></p>
+<body style="background-color:#ffffff;margin:30px;padding:2">
+  <p><img src="http://images8.webydo.com/92/9227175/3958/FB1B6AA0-1649-8F4A-7ED2-1F1B38CCFC1A.png" alt="" width="300" height="176"
+    /></p>
   <% if (htmlWebpackPlugin.options.version) { %>
-    <h2>AdaptableBlotter.JS Demos (version
-      <%= htmlWebpackPlugin.options.version %>
-        <%= htmlWebpackPlugin.options.versiondate %>)</h2>
+    <h2>AdaptableBlotter.JS Demo</h2>
+    <i>Version: <%= htmlWebpackPlugin.options.version %>
+    <br/>
+    Date: <%= htmlWebpackPlugin.options.versiondate %></i>
     <% } %>
-      <table style="width:600px">
+      <p/>
+      <table>
         <tr>
-          <td><img src="https://openfin.co/wp-content/uploads/2017/01/OpenFin.png" alt="" width="130" height="38" /></td>
-          <td><a href="hypergriddemo.html">OpenFin Hypergrid Demo</a></td>
+          <td>
+            <p/><b>The Adaptable Blotter</b><br/> AdaptableBlotter.JS is a powerful data-agnostic grid that provides, out of the box, all the functionality that advanced financial and other users require to be productive.<p/>
+            AdaptableBlotter.JS can be integrated with a number of different underlying HTML5 grids, both vendor and open source.<p/>
+            This demo contains 2 instances of AdaptableBlotter.JS, both running with dummy data; one is using Telerik's Kendo grid, and the other OpenFin's Hypergrid.<p/>
+            Click on either button to begin your demo...
+        </tr>
+        <tr style="height:70px">
+          <td>
+            <button class="btn" onclick="location.href='hypergriddemo.html' "><img src="https://openfin.co/wp-content/uploads/2017/01/OpenFin.png" alt="" width="117" height="34" /><span><h2>Run<br/>Hypergrid Demo</h2></span></button>
+          </td>
+        </tr>
+        <tr style="height:70px">
+          <td>
+           <br/> <button class="btn" onclick="location.href='kendodemo.html' "><img src="http://www.irisclasson.com/wp-content/uploads/2012/08/telerikLogo-web-1124x449px-1024x409.png" alt="" width="118" height="48" /><span><h2>Run<br/>Kendo Demo</h2></span></button>
+          </td>
         </tr>
         <tr>
-          <td><img src="http://www.irisclasson.com/wp-content/uploads/2012/08/telerikLogo-web-1124x449px-1024x409.png" alt=""
-              width="113" height="45" /></td>
-          <td><a href="kendodemo.html">Telerik Kendo Demo</a></td>
+          <td>
+            <p/><b>Help</b><br/>If you require further information please visit our <a href="http://adaptabletools.com" target="_blank">website</a> or use the <a href="https://adaptabletools.zendesk.com/hc/en-us" target="_blank">Online Help</a>.  Alternatively download the <a a href="Adaptable_Blotter_User_Guide.pdf" target="_blank">Adaptable Blotter User Guide</a></td>
         </tr>
         <tr>
-          <td>Demo Git Repo</td>
-          <td><a a href="https://github.com/jonathannaim/adaptableblotter-demo">https://github.com/jonathannaim/adaptableblotter-demo</a></td>
+          <td>
+            <p/><b>Licence Information</b><br/> Please note that Adaptable Blotter licences are free for development use, but
+            a paid-for annual end user licence is required for each production user. For more information please read the
+            <a a href="LICENSE.md" target="_blank">Licence File</a> or contact <a href="mailto:support@adaptabletools.com">Adaptable Tools Support</a>.
+          </td>
         </tr>
         <tr>
-          <td>Download User Guide</td>
-          <td><a a href="Adaptable_Blotter_User_Guide.pdf">Adaptable Blotter User Guide</a></td>
+          <td>
+            <p/><b>Source Code</b><br/> The Repository for the AdaptableBlotter.JS Performance Monitor is located <a a href="https://github.com/jonathannaim/adaptableblotter" target="_blank">here</a>.</td>
         </tr>
-        <tr>
-          <td colspan="2"><i>Please note that licences are free for development use, but a paid-for annual end user licence is required for
-            each production user.</i></td>
-        </tr>
-        <tr>
-          <td colspan="2"><i>See the licence file below for more information or contact the <a href="mailto:support@adaptabletools.com">Adaptable Tools Support team </a></i></td>
-        </tr>
-        <tr>
-          <td><i>Licence Information</i></td>
-          <td><i><a a href="LICENSE.md">Adaptable Blotter Licence</a></i></td>
-        </tr>
+
       </table>
 
 </html>
