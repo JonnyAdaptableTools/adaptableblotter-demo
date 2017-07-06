@@ -1,4 +1,4 @@
-var adaptableblotter
+var adaptableblotter;
 function InitBlotter() {
     var dataGen = new harness.DataGenerator();
     var trades = dataGen.getTrades();
@@ -46,7 +46,7 @@ function InitBlotter() {
                 { field: "country", title: "Country", filterable: { multi: true, search: true }, width: 200 },
                 { field: "tradeDate", title: "Trade Date", format: "{0:dd MMM yyyy}", width: 200 },
                 { field: "settlementDate", title: "Settlement Date", format: "{0:dd MMM yyyy}" },
-                { field: "fitchRating", title: "Fitch Rating", filterable: { multi: true, search: true, search: true } },
+                { field: "fitchRating", title: "Fitch Rating", filterable: { multi: true, search: true } },
                 { field: "moodysRating", title: "Moodys Rating" },
                 { field: "sandpRating", title: "S & P Rating" },
                 { field: "price", title: "Price", format: "{0:n4}", attributes: { class: "numberColumn" }, editor: setEditDecimals },
@@ -79,11 +79,11 @@ function InitBlotter() {
     adaptableblotter = new adaptableblotterkendo.AdaptableBlotter(grid, container, {
         primaryKey: "tradeId",
         userName: "Jonathan",
-        enableAuditLog: false,
+        enableAuditLog: true,
         enableRemoteConfigServer: false
     });
     //We subscribe to the AB theme change so we update the theme of the grid (only light or dark for demo)
-    adaptableblotter.AdaptableBlotterStore.TheStore.subscribe(() => this.ThemeChange(adaptableblotter))
+    adaptableblotter.AdaptableBlotterStore.TheStore.subscribe(function () { ThemeChange(adaptableblotter); });
 }
 
 function setEditDecimals(container, options) {
@@ -91,16 +91,15 @@ function setEditDecimals(container, options) {
         .appendTo(container)
         .kendoNumericTextBox({ decimals: 4 });
 }
-var themeName = ""
+var themeName = "";
 function ThemeChange(blotter, grid) {
     if (themeName != blotter.AdaptableBlotterStore.TheStore.getState().Theme.CurrentTheme) {
-        themeName = blotter.AdaptableBlotterStore.TheStore.getState().Theme.CurrentTheme
+        themeName = blotter.AdaptableBlotterStore.TheStore.getState().Theme.CurrentTheme;
+        var a_href = $('#kendotheme').attr('href');
         if (themeName == "Slate" || themeName == "Cyborg" || themeName == "Darkly" || themeName == "Superhero") {
-            var a_href = $('#kendotheme').attr('href')
             $('#kendotheme').attr('href', a_href.replace('blueopal', 'black'));
         }
         else {
-            var a_href = $('#kendotheme').attr('href')
             $('#kendotheme').attr('href', a_href.replace('black', 'blueopal'));
         }
     }

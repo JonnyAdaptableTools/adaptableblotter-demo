@@ -1,6 +1,6 @@
 function ThemeChange(blotter, grid) {
     if (themeName != blotter.AdaptableBlotterStore.TheStore.getState().Theme.CurrentTheme) {
-        themeName = blotter.AdaptableBlotterStore.TheStore.getState().Theme.CurrentTheme
+        themeName = blotter.AdaptableBlotterStore.TheStore.getState().Theme.CurrentTheme;
         if (themeName == "Slate" || themeName == "Cyborg" || themeName == "Darkly" || themeName == "Superhero") {
             grid.addProperties(darkTheme);
         }
@@ -9,8 +9,8 @@ function ThemeChange(blotter, grid) {
         }
     }
 }
-var themeName = ""
-var adaptableblotter
+var themeName = "";
+var adaptableblotter;
 function capitalize(string) {
     return (/[a-z]/.test(string) ? string : string.toLowerCase())
         .replace(/[\s\-_]*([^\s\-_])([^\s\-_]+)/g, replacer)
@@ -49,12 +49,12 @@ function InitBlotter() {
     //create the Hypergrid
     var grid = new fin.Hypergrid('#grid', { data: trades, schema: getSchema(trades) });
 
-    dataGen.startTickingDataHypergrid(grid)
+    dataGen.startTickingDataHypergrid(grid);
     //Set to `true` to render `0` and `false`. Otherwise these value appear as blank cells.
-    grid.addProperties({ renderFalsy: true })
-    grid.addProperties({ editOnKeydown: false })
+    grid.addProperties({ renderFalsy: true });
+    grid.addProperties({ editOnKeydown: false });
     //Set to `true` to render `0` and `false`. Otherwise these value appear as blank cells
-    grid.addProperties({ renderFalsy: true })
+    grid.addProperties({ renderFalsy: true });
 
     grid.localization.add('USDCurrencyFormat', new grid.localization.NumberFormatter('en-US', {
         style: 'currency',
@@ -66,7 +66,7 @@ function InitBlotter() {
     var shortDateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
     grid.localization.add('shortDateFormat', new grid.localization.DateFormatter('en-EN', shortDateOptions));
 
-    let behavior = grid.behavior;
+    var behavior = grid.behavior;
     //Add Edit for Notional column
     behavior.setColumnProperties(1, {
         editor: 'textfield',
@@ -141,7 +141,7 @@ function InitBlotter() {
         });
     //alternate rows
     var origgetCell = grid.behavior.dataModel.getCell;
-    grid.behavior.dataModel.getCell = (config, declaredRendererName) => {
+    grid.behavior.dataModel.getCell = function (config, declaredRendererName) {
         if (config.isDataRow) {
             var y = config.dataCell.y;
             if (y % 2) {
@@ -151,7 +151,7 @@ function InitBlotter() {
         return origgetCell(config, declaredRendererName);
     };
     //We subscribe to the AB theme change so we update the theme of the grid (only light or dark for demo)
-    adaptableblotter.AdaptableBlotterStore.TheStore.subscribe(() => this.ThemeChange(adaptableblotter, grid))
+    adaptableblotter.AdaptableBlotterStore.TheStore.subscribe(function () { ThemeChange(adaptableblotter, grid); });
     grid.addProperties(lightTheme);
 }
 
@@ -194,7 +194,7 @@ var lightTheme = {
     editorActivationKeys: ['alt', 'esc'],
     columnAutosizing: true,
     readOnly: false
-}
+};
 
 var darkTheme = {
     font: '14px Helvetica Neue, Helvetica, Arial, sans-serif',
