@@ -45,6 +45,14 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             chunks: [],
+            filename: "aggriddemo.html",
+            template: 'DemoPage/aggriddemo.ejs',
+            inject: false,
+            'harnessJs': PACKAGE.version + "/adaptableblotteraggrid-bundle.min.js",
+            'bundleJs': PACKAGE.version + "/harness-bundle.min.js"
+        }),
+        new HtmlWebpackPlugin({
+            chunks: [],
             filename: "index.html",
             template: 'DemoPage/index.ejs',
             inject: false,
