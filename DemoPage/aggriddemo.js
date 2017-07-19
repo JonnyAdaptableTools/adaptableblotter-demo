@@ -16,14 +16,14 @@ function getSchema(data) {
     firstRow = (typeof firstRow === 'object') ? firstRow : {};
     for (var p in firstRow) {
         if (firstRow.hasOwnProperty(p)) {
-            if (p === 'deskId') {
+            if (p === 'ask' || p === 'bid' || p === 'bloombergAsk' || p === 'bloombergBid') {
                 schema.push({ headerName: capitalize(p), field: p });
+            }
+            else if (p === 'price') {
+                schema.push({ headerName: capitalize(p), field: p, filter: 'text', cellRenderer: 'animateShowChange' });
             }
             else if (p === 'notional') {
                 schema.push({ headerName: capitalize(p), field: p, editable: true, filter: 'text', cellRenderer: notionalCellRenderer });
-            }
-            else if (p === 'price') {
-                schema.push({ headerName: capitalize(p), field: p, editable: true, filter: 'text', cellRenderer: 'animateShowChange' });
             }
             else {
                 schema.push({ headerName: capitalize(p), field: p, editable: true, filter: 'text' });
