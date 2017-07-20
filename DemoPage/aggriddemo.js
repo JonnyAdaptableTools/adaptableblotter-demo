@@ -71,4 +71,19 @@ function InitBlotter() {
         enableAuditLog: false,
         enableRemoteConfigServer: false
     });
+    //We subscribe to the AB theme change so we update the theme of the grid (only light or dark for demo)
+    adaptableblotter.AdaptableBlotterStore.TheStore.subscribe(function () { ThemeChange(adaptableblotter); });
+}
+var themeName = "";
+function ThemeChange(blotter, grid) {
+    if (themeName != blotter.AdaptableBlotterStore.TheStore.getState().Theme.CurrentTheme) {
+        themeName = blotter.AdaptableBlotterStore.TheStore.getState().Theme.CurrentTheme;
+        var container = document.getElementById('grid')
+        if (themeName == "Slate" || themeName == "Cyborg" || themeName == "Darkly" || themeName == "Superhero") {
+            container.classList = "ag-dark";
+        }
+        else {
+            container.classList = "ag-blue";
+        }
+    }
 }
