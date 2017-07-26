@@ -53,6 +53,14 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             chunks: [],
+            filename: "aggridgroupingdemo.html",
+            template: 'DemoPage/aggridgroupingdemo.ejs',
+            inject: false,
+            'harnessJs': PACKAGE.version + "/adaptableblotteraggrid-bundle.min.js",
+            'bundleJs': PACKAGE.version + "/harness-bundle.min.js"
+        }),
+        new HtmlWebpackPlugin({
+            chunks: [],
             filename: "index.html",
             template: 'DemoPage/index.ejs',
             inject: false,

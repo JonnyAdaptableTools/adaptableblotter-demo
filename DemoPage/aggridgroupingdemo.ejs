@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>AdaptableBlotter.JS ag-Grid Demo with grouping</title>
+    <!--CSS for the demo-->
+    <link href="aggridgroupingdemo.css" rel="stylesheet" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="ExtLibs/bootstrap/css/bootstrap.min.css">
+    <!-- ag-Grid -->
+    <script src="ExtLibs/agGrid/ag-grid.min.js"></script>
+    <script src="ExtLibs/agGrid/ag-grid-enterprise.min.js"></script>
+
+</head>
+<body>
+    <!-- Adaptable Blotter div for react and dashboard -->
+    <div id="content" style="margin:15px;"></div>
+    <p/>
+    <!-- Grid div -->
+    <div id="grid" class="ag-blue"></div>
+    <% if (htmlWebpackPlugin.options.harnessJs) { %>
+    <script src="<%= htmlWebpackPlugin.options.harnessJs %>" type="text/javascript"></script>
+    <% } %>
+    <% if (htmlWebpackPlugin.options.bundleJs) { %>
+    <script src="<%= htmlWebpackPlugin.options.bundleJs %>" type="text/javascript"></script>
+    <% } %>
+    <!-- Grid Setup -->
+    <script src="aggridgroupingdemo.js"></script>
+    <script>
+        InitBlotter()
+    </script>
+</body>
+</html>
