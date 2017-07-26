@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"> 
 </head>
 
 <body>
@@ -17,52 +18,46 @@
     Date: <%= htmlWebpackPlugin.options.versiondate %></i>
       <% } %>
         <p/>
-        <table>
+        <p>
+          <b>The Adaptable Blotter</b><br/> AdaptableBlotter.JS is a powerful data-agnostic grid that provides, out of the
+          box, all the functionality that advanced financial and other users require to be productive.
+        </p>
+        <p> AdaptableBlotter.JS can be integrated with a number of different underlying HTML5 grids, both vendor and open source.
+        </p>
+        <p> This demo contains 3 instances of AdaptableBlotter.JS, each running with dummy data; one is using Telerik's Kendo
+          grid, one is using OpenFin's Hypergrid and the other is using the ag-Grid.
+        </p>
+        <p> Click on one of the 3 buttons to begin your demo...
+        </p>
+        <table style="border-spacing: 20px 5px;border-collapse: separate;">
           <tr>
-            <td>
-              <p/><b>The Adaptable Blotter</b><br/> AdaptableBlotter.JS is a powerful data-agnostic grid that provides, out of
-              the box, all the functionality that advanced financial and other users require to be productive.
-              <p/> AdaptableBlotter.JS can be integrated with a number of different underlying HTML5 grids, both vendor and open
-              source.
-              <p/> This demo contains 3 instances of AdaptableBlotter.JS, each running with dummy data; one is using Telerik's
-              Kendo grid, one is using OpenFin's Hypergrid and the other is using the ag-Grid.
-              <p/> Click on one of the 3 buttons to begin your demo...
-          </tr>
-          <tr style="height:70px">
             <td>
               <button class="btn btn-default" onclick="location.href='hypergriddemo.html' "><img src="https://openfin.co/wp-content/uploads/2017/01/OpenFin.png" alt="" width="117" height="34" /><span><h4>Run Hypergrid Demo</h4></span></button>
             </td>
-          </tr>
-          <tr style="height:70px">
             <td>
-              <br/> <button class="btn btn-default" onclick="location.href='kendodemo.html' "><img src="http://www.irisclasson.com/wp-content/uploads/2012/08/telerikLogo-web-1124x449px-1024x409.png" alt="" width="118" height="48" /><span><h4>Run Kendo Demo</h4></span></button>
+              <button class="btn btn-default" onclick="location.href='kendodemo.html' "><img src="http://www.irisclasson.com/wp-content/uploads/2012/08/telerikLogo-web-1124x449px-1024x409.png" alt="" width="118" height="48" /><span><h4>Run Kendo Demo</h4></span></button>
+            </td>
+            <td>
+              <button class="btn btn-default" onclick="location.href='aggriddemo.html' "><img src="https://www.ag-grid.com/images/logo.png" alt="" width="118" height="48" /><span><h4>Run ag-Grid Demo</h4></span></button>
+            </td>
+            <td>
+              <button class="btn btn-default" onclick="location.href='aggriddemo.html' "><img src="https://www.ag-grid.com/images/logo.png" alt="" width="118" height="48" /><span><h4>Run ag-Grid Demo with grouping</h4></span></button>
             </td>
           </tr>
-          <tr style="height:70px">
-            <td>
-              <br/> <button class="btn btn-default" onclick="location.href='aggriddemo.html' "><img src="https://www.ag-grid.com/images/logo.png" alt="" width="118" height="48" /><span><h4>Run ag-Grid Demo</h4></span></button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p/>
-              <p/><b>Help</b><br/>If you require further information please visit our <a href="http://adaptabletools.com" target="_blank">website</a>              or use the <a href="https://adaptabletools.zendesk.com/hc/en-us" target="_blank">Online Help</a>. Alternatively
-              download the <a a href="Adaptable_Blotter_User_Guide.pdf" target="_blank">Adaptable Blotter User Guide</a></td>
-          </tr>
-          <tr>
-            <td>
-              <p/><b>Licence Information</b><br/> Please note that Adaptable Blotter licences are free for development use, but
-              a paid-for annual end user licence is required for each production user. For more information please read the
-              <a a href="LICENSE.md" target="_blank">Licence File</a> or contact <a href="mailto:support@adaptabletools.com">Adaptable Tools Support</a>.
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p/><b>Source Code</b><br/> The Repository for the AdaptableBlotter.JS Demo is located <a a href="https://github.com/jonathannaim/adaptableblotter-demo"
-                target="_blank">here</a>.</td>
-          </tr>
-
         </table>
+        <p>
+          <b>Help</b><br/>If you require further information please visit our <a href="http://adaptabletools.com" target="_blank">website</a>          or use the <a href="https://adaptabletools.zendesk.com/hc/en-us" target="_blank">Online Help</a>. Alternatively
+          download the <a a href="Adaptable_Blotter_User_Guide.pdf" target="_blank">Adaptable Blotter User Guide</a>
+        </p>
+        <p>
+          <b>Licence Information</b><br/> Please note that Adaptable Blotter licences are free for development use, but a
+          paid-for annual end user licence is required for each production user. For more information please read the
+          <a a href="LICENSE.md" target="_blank">Licence File</a> or contact <a href="mailto:support@adaptabletools.com">Adaptable Tools Support</a>.
+        </p>
+        <p>
+          <b>Source Code</b><br/> The Repository for the AdaptableBlotter.JS Demo is located <a a href="https://github.com/jonathannaim/adaptableblotter-demo"
+            target="_blank">here</a>.
+        </p>
   </div>
 </body>
 
