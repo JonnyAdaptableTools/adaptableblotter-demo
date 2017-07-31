@@ -5,3 +5,7 @@ height: 100%
 #grid{
     height: 80%
 }
+
+    .number-cell {
+        text-align: right;
+    }

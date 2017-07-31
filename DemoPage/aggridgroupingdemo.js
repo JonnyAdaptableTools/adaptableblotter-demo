@@ -17,19 +17,22 @@ function getSchema(data) {
     for (var p in firstRow) {
         if (firstRow.hasOwnProperty(p)) {
             if (p === 'ask' || p === 'bid' || p === 'bloombergAsk' || p === 'bloombergBid' || p === 'price') {
-                schema.push({ headerName: capitalize(p), field: p });
+                schema.push({ headerName: capitalize(p), field: p, cellClass: 'number-cell' });
             }
             // else if (p === 'price') {
             //     schema.push({ headerName: capitalize(p), field: p, filter: 'text', cellRenderer: 'animateShowChange' });
             // }
             else if (p === 'tradeId') {
-                schema.push({ headerName: capitalize(p), field: p });
+                schema.push({ headerName: capitalize(p), field: p, cellClass: 'number-cell' });
             }
             else if (p === 'notional') {
-                schema.push({ headerName: capitalize(p), field: p, editable: true, filter: 'text', cellRenderer: notionalCellRenderer, aggFunc: 'sum' });
+                schema.push({ headerName: capitalize(p), field: p, editable: true, filter: 'text', cellRenderer: notionalCellRenderer, aggFunc: 'sum', cellClass: 'number-cell' });
             }
             else if (p === 'country') {
                 schema.push({ headerName: capitalize(p), field: p, editable: true, filter: 'text', rowGroup: true });
+            }
+            else if (p === 'deskId' || p === 'changeOnYear' || p === 'bidOfferSpread' || p === 'bloombergBid' || p === 'percentChange') {
+                schema.push({ headerName: capitalize(p), field: p, editable: true, cellClass: 'number-cell' });
             }
             else {
                 schema.push({ headerName: capitalize(p), field: p, editable: true, filter: 'text' });
