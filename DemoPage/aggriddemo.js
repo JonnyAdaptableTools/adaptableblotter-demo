@@ -28,6 +28,9 @@ function getSchema(data) {
             else if (p === 'notional') {
                 schema.push({ headerName: capitalize(p), field: p, editable: true, filter: 'text', cellRenderer: notionalCellRenderer, cellClass: 'number-cell' });
             }
+            else if (p === 'tradeDate' || p === 'settlementDate'|| p === 'lastUpdated') {
+                schema.push({ headerName: capitalize(p), field: p, editable: true, filter: 'text', cellRenderer: Datepicker });
+            }
             else if (p === 'deskId' || p === 'changeOnYear' || p === 'bidOfferSpread' || p === 'bloombergBid' || p === 'percentChange') {
                 schema.push({ headerName: capitalize(p), field: p, editable: true, cellClass: 'number-cell' });
             }
@@ -91,3 +94,48 @@ function ThemeChange(blotter, grid) {
         }
     }
 }
+
+// function to act as a class
+function Datepicker () {}
+
+// gets called once before the renderer is used
+Datepicker.prototype.init = function(params) {
+    // create the cell
+    this.eInput = document.createElement('input');
+    this.eInput.value = $.datepicker.formatDate( "dd/mm/yy", params.value );
+    this.params = params;
+    var stopEditing = params.api.stopEditing;
+
+    // https://jqueryui.com/datepicker/
+    $(this.eInput).datepicker({
+        dateFormat: "dd/mm/yy"
+    });
+};
+
+// gets called once when grid ready to insert the element
+Datepicker.prototype.getGui = function() {
+    return this.eInput;
+};
+
+// focus and select can be done after the gui is attached
+Datepicker.prototype.afterGuiAttached = function() {
+    this.eInput.focus();
+    this.eInput.select();
+};
+
+// returns the new value after editing
+Datepicker.prototype.getValue = function() {
+    return this.eInput.value;
+};
+
+// any cleanup we need to be done here
+Datepicker.prototype.destroy = function() {
+    // but this example is simple, no cleanup, we could
+    // even leave this method out as it's optional
+};
+
+// if true, then this editor will appear in a popup
+Datepicker.prototype.isPopup = function() {
+    // and we could leave this method out also, false is the default
+    return false;
+};
