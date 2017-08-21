@@ -4,9 +4,11 @@
 }
 
 .finbar-horizontal div.thumb{
-    background-color: black !important
+    background-color: black !important;
+    height: 17px !important;
 }
 
 .finbar-vertical div.thumb{
-    background-color: black !important
+    background-color: black !important;
+    width: 17px !important;
 }
