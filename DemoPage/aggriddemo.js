@@ -84,7 +84,7 @@ function InitBlotter() {
     adaptableblotter = new adaptableblotteraggrid.AdaptableBlotter(gridOptions, container, gridcontainer, {
         primaryKey: "tradeId",
         userName: "Jonathan",
-        enableAuditLog: true,
+        enableAuditLog: false,
         enableRemoteConfigServer: false
     });
     //We subscribe to the AB theme change so we update the theme of the grid (only light or dark for demo)
