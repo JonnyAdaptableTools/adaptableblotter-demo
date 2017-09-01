@@ -235,7 +235,7 @@ export class DataGenerator {
         return currencies[this.generateRandomInt(0, currencies.length - 1)];
     }
 
-    public getRandomItem(ary: any[] | kendo.data.ObservableArray, max?: number): any {
+    public getRandomItem(ary: any[] /*| kendo.data.ObservableArray*/, max?: number): any {
         if (max) {
             return ary[this.generateRandomInt(0, Math.min(max, ary.length - 1))];
         }
