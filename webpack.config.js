@@ -9,6 +9,7 @@ var PACKAGE = require('./package.json');
 module.exports = {
     entry: {
         'index': ["./index.js"],
+        datagenerator: "./src/DataGenerator.ts"
         // 'ftpdeploy': ["./ftpdeploy.js"],
     },
     // target: 'node',
@@ -19,6 +20,8 @@ module.exports = {
     output: {
         path: __dirname + '/dist',
         filename: '[name].js',
+        library: "[name]",
+        libraryTarget: 'umd'
     },
     resolve: {
         // Add `.ts` and `.tsx` as a resolvable extension.
@@ -33,7 +36,7 @@ module.exports = {
             template: 'DemoPage/hypergriddemo.ejs',
             inject: false,
             'harnessJs': PACKAGE.version + "/adaptableblotterhypergrid-bundle.min.js",
-            'bundleJs': PACKAGE.version + "/harness-bundle.min.js"
+            'bundleJs': "datagenerator.js"
         }),
         new HtmlWebpackPlugin({
             chunks: [],
@@ -41,7 +44,7 @@ module.exports = {
             template: 'DemoPage/kendodemo.ejs',
             inject: false,
             'harnessJs': PACKAGE.version + "/adaptableblotterkendo-bundle.min.js",
-            'bundleJs': PACKAGE.version + "/harness-bundle.min.js"
+            'bundleJs': "datagenerator.js"
         }),
         new HtmlWebpackPlugin({
             chunks: [],
@@ -49,7 +52,7 @@ module.exports = {
             template: 'DemoPage/aggriddemo.ejs',
             inject: false,
             'harnessJs': PACKAGE.version + "/adaptableblotteraggrid-bundle.min.js",
-            'bundleJs': PACKAGE.version + "/harness-bundle.min.js"
+            'bundleJs': "datagenerator.js"
         }),
         new HtmlWebpackPlugin({
             chunks: [],
@@ -57,7 +60,7 @@ module.exports = {
             template: 'DemoPage/aggridgroupingdemo.ejs',
             inject: false,
             'harnessJs': PACKAGE.version + "/adaptableblotteraggrid-bundle.min.js",
-            'bundleJs': PACKAGE.version + "/harness-bundle.min.js"
+            'bundleJs': "datagenerator.js"
         }),
         new HtmlWebpackPlugin({
             chunks: [],

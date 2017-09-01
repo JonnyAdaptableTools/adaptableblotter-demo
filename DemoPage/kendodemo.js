@@ -1,6 +1,6 @@
 var adaptableblotter;
 function InitBlotter() {
-    var dataGen = new harness.DataGenerator();
+    var dataGen = new datagenerator.DataGenerator();
     var trades = dataGen.getTrades();
 
     $("#grid")
@@ -79,7 +79,7 @@ function InitBlotter() {
     adaptableblotter = new adaptableblotterkendo.AdaptableBlotter(grid, container, {
         primaryKey: "tradeId",
         userName: "Jonathan",
-        enableAuditLog: true,
+        enableAuditLog: false,
         enableRemoteConfigServer: false
     });
     //We subscribe to the AB theme change so we update the theme of the grid (only light or dark for demo)

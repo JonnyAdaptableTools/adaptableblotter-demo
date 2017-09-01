@@ -43,7 +43,7 @@ function getSchema(data) {
 }
 function InitBlotter() {
     //Generate the dumy data
-    var dataGen = new harness.DataGenerator();
+    var dataGen = new datagenerator.DataGenerator();
     var trades = dataGen.getTrades();
 
     //create the Hypergrid

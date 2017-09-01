@@ -65,7 +65,7 @@ function shortDateCellRenderer(params) {
     }
 }
 function InitBlotter() {
-    var dataGen = new harness.DataGenerator();
+    var dataGen = new datagenerator.DataGenerator();
     var trades = dataGen.getTrades();
 
     // let the grid know which columns and what data to use
