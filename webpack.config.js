@@ -83,8 +83,9 @@ module.exports = {
             // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
             // note that babel-loader is configured to run after ts-loader
             {
+                exclude: /node_modules/,
                 test: /\.ts(x?)$/, loader: 'babel-loader?presets[]=es2015!ts-loader',
-                exclude: [/node_modules/]
+                
             }
         ]
     },
