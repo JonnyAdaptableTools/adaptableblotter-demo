@@ -10,7 +10,8 @@ export class DataGenerator {
         return trades;
     }
 
-    startTickingDataKendo(grid: kendo.ui.Grid) {
+    //should use proper type for the grid parameter
+    startTickingDataKendo(grid: any) {
         // setInterval(() => {
         //     let numberToAdd: number = this.generateRandomInt(1, 2) == 1 ? -0.5 : 0.5;
         //     //pick a random trade in the first ten
@@ -34,6 +35,7 @@ export class DataGenerator {
         // }, 5000)
     }
 
+    //should use proper type for the grid parameter
     startTickingDataHypergrid(grid: any) {
         setInterval(() => {
             let numberToAdd: number = this.generateRandomInt(1, 2) == 1 ? -0.5 : 0.5;
@@ -53,6 +55,7 @@ export class DataGenerator {
         }, 100)
     }
 
+    //should use proper type for the grid parameter
     startTickingDataagGrid(gridOptions: any) {
         setInterval(() => {
             let tradeId = this.generateRandomInt(0, 29);
