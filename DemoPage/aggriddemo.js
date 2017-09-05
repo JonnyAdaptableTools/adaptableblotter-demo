@@ -73,7 +73,8 @@ function InitBlotter() {
         columnDefs: getSchema(trades),
         rowData: trades,
         enableSorting: true,
-        enableRangeSelection: true
+        enableRangeSelection: true,
+        enableFilter: true
     };
     var eGridDiv = document.getElementById('grid');
     var grid = new agGrid.Grid(eGridDiv, gridOptions);
