@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "adaptableblotter": "^1.2.0-beta.53"
+    "adaptableblotter": "^1.2.0-beta.54"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
-    "babel-loader": "^6.4.1",
+    "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
     "copy-webpack-plugin": "^4.0.1",
     "ftp-deploy": "^1.2.1",
