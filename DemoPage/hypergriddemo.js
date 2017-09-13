@@ -148,7 +148,8 @@ function InitBlotter() {
                 config.backgroundColor = config.altbackground;
             }
         }
-        return origgetCell(config, declaredRendererName);
+        return origgetCell.call(grid.behavior.dataModel, config, declaredRendererName)
+        // return origgetCell(config, declaredRendererName);
     };
     //We subscribe to the AB theme change so we update the theme of the grid (only light or dark for demo)
     adaptableblotter.AdaptableBlotterStore.TheStore.subscribe(function () { ThemeChange(adaptableblotter, grid); });
