@@ -77,6 +77,10 @@ function InitBlotter() {
         enableFilter: true,
         onGridReady: function () {
             gridOptions.columnApi.autoSizeAllColumns();
+
+            gridOptions.api.addEventListener("newColumnsLoaded", function (params) {
+                gridOptions.columnApi.autoSizeAllColumns();
+            });
         }
     };
     var eGridDiv = document.getElementById('grid');
@@ -93,6 +97,7 @@ function InitBlotter() {
     });
     //We subscribe to the AB theme change so we update the theme of the grid (only light or dark for demo)
     adaptableblotter.AdaptableBlotterStore.TheStore.subscribe(function () { ThemeChange(adaptableblotter); });
+
 }
 var themeName = "";
 function ThemeChange(blotter, grid) {
