@@ -57,7 +57,7 @@ function notionalCellRenderer(params) {
 function shortDateCellRenderer(params) {
     if (params.value) {
         if (typeof params.value === "string") {
-            return shortDateFormatter.format(params.value.toDate("dd/mm/yyyy","/"))
+            return shortDateFormatter.format(params.value.toDate("dd/mm/yyyy", "/"))
         }
         return shortDateFormatter.format(params.value)
     } else {
@@ -74,7 +74,10 @@ function InitBlotter() {
         rowData: trades,
         enableSorting: true,
         enableRangeSelection: true,
-        enableFilter: true
+        enableFilter: true,
+        onGridReady: function () {
+            gridOptions.columnApi.autoSizeAllColumns();
+        }
     };
     var eGridDiv = document.getElementById('grid');
     var grid = new agGrid.Grid(eGridDiv, gridOptions);
@@ -90,7 +93,6 @@ function InitBlotter() {
     });
     //We subscribe to the AB theme change so we update the theme of the grid (only light or dark for demo)
     adaptableblotter.AdaptableBlotterStore.TheStore.subscribe(function () { ThemeChange(adaptableblotter); });
-    gridOptions.columnApi.autoSizeAllColumns();
 }
 var themeName = "";
 function ThemeChange(blotter, grid) {
@@ -151,7 +153,7 @@ Datepicker.prototype.isPopup = function () {
     return false;
 };
 
-String.prototype.toDate = function(format, delimiter) {
+String.prototype.toDate = function (format, delimiter) {
     var date = this;
     var formatedDate = null;
     var formatLowerCase = format.toLowerCase();
@@ -163,7 +165,7 @@ String.prototype.toDate = function(format, delimiter) {
     var yearIndex = formatItems.indexOf("yyyy");
     var d = dateItems[dayIndex];
     if (d < 10) {
-    	d = "0"+ d;
+        d = "0" + d;
     }
     if (monthIndex > -1) {
         var month = parseInt(dateItems[monthIndex]);
