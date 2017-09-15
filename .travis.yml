@@ -16,13 +16,13 @@ deploy:
       on:
         tags: true
         all_branches: true
-      condition: "$TRAVIS_TAG =~ .*beta.*$"
+        condition: "$TRAVIS_TAG =~ .*beta.*$"
     - provider: script
       skip_cleanup: true
       script: node ftpdeploy.js --user ${DEMO_FTP_USER} --password ${DEMO_FTP_PWD} --use_strict
       on:
         tags: true
         all_branches: true
-        condition: "$TRAVIS_TAG =~ ^((?!beta).)*$"
+        condition: "! $TRAVIS_TAG =~ .*beta.*$"
 after_deploy:
   - node slack.js --slack ${SLACK} --tag ${TRAVIS_TAG}
