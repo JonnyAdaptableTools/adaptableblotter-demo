@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "adaptableblotter": "^1.2.1"
+    "adaptableblotter": "^1.2.2"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
