@@ -9,23 +9,27 @@ var PACKAGE = require('./package.json');
 module.exports = {
     entry: {
         'index': ["./index.js"],
-        datagenerator: "./src/DataGenerator.ts"
-        // 'ftpdeploy': ["./ftpdeploy.js"],
+        hypergriddemo: "./src/HypergridDemo.ts",
+        aggriddemo: "./src/agGridDemo.ts",
     },
-    // target: 'node',
-    // node: {
-    //     __dirname: false,
-    //     __filename: false,
-    // },
     output: {
         path: __dirname + '/dist',
         filename: '[name].js',
         library: "[name]",
         libraryTarget: 'umd'
     },
+    // Turn on sourcemaps
+    devtool: 'source-map',
     resolve: {
         // Add `.ts` and `.tsx` as a resolvable extension.
         extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js']
+    },
+    externals: {
+        // require("jquery") is external and available
+        //  on the global var jQuery
+        "ag-grid": "agGrid",
+        "ag-grid/main": "agGrid",
+
     },
 
     plugins: [
@@ -36,7 +40,7 @@ module.exports = {
             template: 'DemoPage/hypergriddemo.ejs',
             inject: false,
             'harnessJs': PACKAGE.version + "/adaptableblotterhypergrid-bundle.min.js",
-            'bundleJs': "datagenerator.js"
+            'demoJs': "hypergriddemo.js",
         }),
         new HtmlWebpackPlugin({
             chunks: [],
@@ -52,7 +56,7 @@ module.exports = {
             template: 'DemoPage/aggriddemo.ejs',
             inject: false,
             'harnessJs': PACKAGE.version + "/adaptableblotteraggrid-bundle.min.js",
-            'bundleJs': "datagenerator.js"
+            'demoJs': "aggriddemo.js",
         }),
         new HtmlWebpackPlugin({
             chunks: [],
@@ -76,7 +80,9 @@ module.exports = {
         new CopyWebpackPlugin([{ from: 'UserGuide/Adaptable_Blotter_User_Guide.pdf', to: '' }]),
         new CopyWebpackPlugin([{ from: 'ExtLibs/**/*', to: '' }]),
         new CopyWebpackPlugin([{ from: 'node_modules/adaptableblotter/LICENSE.md', to: '' }]),
-        new CopyWebpackPlugin([{ from: 'DemoPage/*', to: '', flatten: true }])
+        new CopyWebpackPlugin([{ from: 'DemoPage/*', to: '', flatten: true }]),
+        new CopyWebpackPlugin([{ from: 'DataSets/Json/*.json', to: '', flatten: true }]),
+        new CopyWebpackPlugin([{ from: 'src/DataSets/**/*.json', to: '', flatten: true }])
     ],
     module: {
         loaders: [
@@ -84,8 +90,8 @@ module.exports = {
             // note that babel-loader is configured to run after ts-loader
             {
                 exclude: /node_modules/,
-                test: /\.ts(x?)$/, loader: 'babel-loader?presets[]=es2015!ts-loader',
-                
+                test: /\.ts(x?)$/, loader: 'babel-loader?presets[]=es2015&plugins[]=transform-runtime!ts-loader'
+
             }
         ]
     },
