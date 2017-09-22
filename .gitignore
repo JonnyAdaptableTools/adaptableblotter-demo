@@ -246,3 +246,4 @@ ModelManifest.xml
 
 # Ignores compiled TypeScript files
 /dist/**/*.*
+/DataSets/Json/*.*
