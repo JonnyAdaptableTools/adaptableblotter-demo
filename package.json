@@ -26,7 +26,8 @@
   },
   "scripts": {
     "dev": "webpack-dev-server",
-    "build": "webpack"
+    "build": "webpack",
+    "buildDataSets" : "node buildJsonDataset.js"
   },
   "repository": {
     "type": "git",
