@@ -11,6 +11,7 @@ module.exports = {
         'index': ["./index.js"],
         hypergriddemo: "./src/HypergridDemo.ts",
         aggriddemo: "./src/agGridDemo.ts",
+        kendodemo: "./src/KendoDemo.ts",
     },
     output: {
         path: __dirname + '/dist',
@@ -48,7 +49,7 @@ module.exports = {
             template: 'DemoPage/kendodemo.ejs',
             inject: false,
             'harnessJs': PACKAGE.version + "/adaptableblotterkendo-bundle.min.js",
-            'bundleJs': "datagenerator.js"
+            'demoJs': "kendodemo.js"
         }),
         new HtmlWebpackPlugin({
             chunks: [],
