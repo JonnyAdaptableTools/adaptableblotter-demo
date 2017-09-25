@@ -37,6 +37,10 @@ export class HypergridDemo implements IDemo {
                 var shortDateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
                 this.grid.localization.add('shortDateFormat', new this.grid.localization.DateFormatter('en-EN', shortDateOptions));
 
+                //Make the data to tick every 0.5s
+                setInterval(() =>
+                selectedConfig.tickData(this.grid), 500)
+
                 //set all the properties such as editor etc....
                 selectedConfig.setGridProperties(this.grid)
 

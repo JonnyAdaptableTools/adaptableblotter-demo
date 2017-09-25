@@ -29,7 +29,15 @@ export var PriceBlotterBond: IDataSetConfiguration = {
         }
     },
     tickData: (grid: any) => {
+        let numberToAdd: number = Helper.generateRandomInt(1, 2) == 1 ? -0.5 : 0.5;
+        //pick a random trade in the first 30
+        let row = Helper.getRandomItem(grid.behavior.getData(), 30);
+        let columnName = "Price";
+        let initialNewValue = row[columnName];
+        let newValue = Helper.roundTo4Dp(initialNewValue + numberToAdd);
+        row[columnName] = newValue;
 
+        grid.repaint()
     },
     manipulateInitialData(data: any[]) {
         Helper.MakeAllRecordsColumnsDateProperDates(data);

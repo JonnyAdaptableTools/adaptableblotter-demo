@@ -25,7 +25,22 @@ export var PriceBlotterBond: IDataSetConfiguration = {
 
     },
     tickData: (grid: any) => {
+        let InstrumentId = Helper.generateRandomInt(0, 29);
+        grid.api.forEachNode((rowNode: any, index: number) => {
+            if (rowNode.group) {
+                return;
+            }
+            let rowTradeId = grid.api.getValue("InstrumentId", rowNode);
+            // only do first 30
+            if (rowTradeId != InstrumentId) { return; }
 
+            let numberToAdd: number = Helper.generateRandomInt(1, 2) == 1 ? -0.5 : 0.5;
+            let trade = rowNode;
+            let columnName = "Price";
+            let initialNewValue = grid.api.getValue(columnName, trade);
+            let newValue = Helper.roundTo4Dp(initialNewValue + numberToAdd);
+            trade.setDataValue(columnName, newValue)
+        });
     },
     manipulateInitialData(data: any[]) {
         Helper.MakeAllRecordsColumnsDateProperDates(data);

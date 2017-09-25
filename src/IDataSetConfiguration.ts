@@ -10,6 +10,7 @@ export interface IDataSetConfiguration {
     getSchema: (data: any[]) => any[]
     //Set some properties for grid such as formatting, editor and shit
     setGridProperties: (grid: any) => void
-    //make the data to tick where require
+    //make the data to tick where require. It's called every x sec from the main project. 
+    //Do not put a SetInterval in there
     tickData: (grid: any) => void
 }

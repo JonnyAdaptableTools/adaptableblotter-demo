@@ -38,9 +38,11 @@ export class agGridDemo implements IDemo {
                 var eGridDiv = document.getElementById(gridContainer);
                 var grid = new Grid(eGridDiv, gridOptions);
 
-                selectedConfig.tickData(this.grid);
+                //Make the data to tick every 0.5s
+                setInterval(() =>
+                    selectedConfig.tickData(gridOptions), 500)
                 //set all the properties such as editor etc....
-                selectedConfig.setGridProperties(this.grid)
+                selectedConfig.setGridProperties(gridOptions)
 
                 //create Adaptable Blotter
                 var container = document.getElementById(blotterContainer);
@@ -51,7 +53,7 @@ export class agGridDemo implements IDemo {
                     enableRemoteConfigServer: false,
                     blotterId: selectedConfig.name,
                     maxColumnValueItemsDisplayed: 1000,
-                    predefinedConfigUrl : selectedConfig.name.replace(/ /g, "") + "Config.json"
+                    predefinedConfigUrl: selectedConfig.name.replace(/ /g, "") + "Config.json"
                 }
                 this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(gridOptions, container, eGridDiv, blotterOptions);
 

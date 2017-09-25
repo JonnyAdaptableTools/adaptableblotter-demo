@@ -100,3 +100,18 @@ export function manageDomDataSetSelectAndReturnSelectDataset(AvailableDatasetCon
     let selectedConfig: IDataSetConfiguration = AvailableDatasetConfigs.get(currentDataSet)
     return selectedConfig
 }
+
+export function generateRandomInt(minValue: number, maxValue: number): number {
+    return Math.floor(Math.random() * (maxValue - minValue + 1) + minValue);
+}
+export function roundTo4Dp(val: number): number {
+    return Math.round(val * 10000) / 10000;
+}
+export function getRandomItem(array: any[], max?: number): any {
+    if (max) {
+        return array[this.generateRandomInt(0, Math.min(max, array.length - 1))];
+    }
+    else {
+        return array[this.generateRandomInt(0, array.length - 1)];
+    }
+}
