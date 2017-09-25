@@ -1,3 +1,25 @@
 {
-
+    "AdvancedSearch": {
+        "AdvancedSearches": [
+            {
+                "Uid": "27b32478-61a1-41b5-922e-de994b0ff94d",
+                "Name": "Currency EUR+GBP",
+                "Expression": {
+                    "ColumnDisplayValuesExpressions": [
+                        {
+                            "ColumnName": "Currency",
+                            "ColumnValues": [
+                                "EUR",
+                                "GBP"
+                            ]
+                        }
+                    ],
+                    "ColumnRawValuesExpressions": [],
+                    "UserFilters": [],
+                    "RangeExpressions": []
+                },
+                "IsPredefined": true
+            }
+        ]
+    }
 }
