@@ -29,5 +29,8 @@ export var NorthwindOrders: IDataSetConfiguration = {
     },
     manipulateInitialData(data: any[]) {
         Helper.MakeAllRecordsColumnsDateProperDates(data);
+    },
+    ActionWhenRecordUpdatedOrEdited(record:any){
+        
     }
 }

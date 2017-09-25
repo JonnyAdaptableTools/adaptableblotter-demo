@@ -36,5 +36,8 @@ export var TradeBlotterBond: IDataSetConfiguration = {
     manipulateInitialData(data: any[]) {
         Helper.MakeAllRecordsColumnsDateProperDates(data);
         // record.MaturityDate = Helper.ConvertExcelDate(record.MaturityDate);
+    },
+    ActionWhenRecordUpdatedOrEdited(record:any){
+        
     }
 }

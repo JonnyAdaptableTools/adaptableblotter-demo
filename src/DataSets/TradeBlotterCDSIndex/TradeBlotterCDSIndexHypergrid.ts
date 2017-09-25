@@ -33,5 +33,8 @@ export var TradeBlotterCDSIndex: IDataSetConfiguration = {
     },
     manipulateInitialData(data: any[]) {
         Helper.MakeAllRecordsColumnsDateProperDates(data);
+    },
+    ActionWhenRecordUpdatedOrEdited(record:any){
+        
     }
 }

@@ -14,6 +14,9 @@ export var PriceBlotterBond: IDataSetConfiguration = {
                 if (p === 'InstrumentId') {
                     schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
                 }
+                else if (p === 'Price' || p === 'Bid' || p === 'Ask') {
+                    schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
+                }
                 else {
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: true });
                 }
@@ -35,14 +38,20 @@ export var PriceBlotterBond: IDataSetConfiguration = {
             if (rowTradeId != InstrumentId) { return; }
 
             let numberToAdd: number = Helper.generateRandomInt(1, 2) == 1 ? -0.5 : 0.5;
-            let trade = rowNode;
             let columnName = "Price";
-            let initialNewValue = grid.api.getValue(columnName, trade);
+            let initialNewValue = grid.api.getValue(columnName, rowNode);
             let newValue = Helper.roundTo4Dp(initialNewValue + numberToAdd);
-            trade.setDataValue(columnName, newValue)
+            rowNode.setDataValue(columnName, newValue)
+            PriceBlotterBond.ActionWhenRecordUpdatedOrEdited(rowNode)
         });
     },
     manipulateInitialData(data: any[]) {
         Helper.MakeAllRecordsColumnsDateProperDates(data);
+    },
+    ActionWhenRecordUpdatedOrEdited(record: any) {
+        let ask = Helper.roundTo4Dp(record.gridApi.getValue("Price", record) + record.gridApi.getValue("BidOfferSpread", record) / 2);
+        record.setDataValue("Ask", ask)
+        let bid = Helper.roundTo4Dp(record.gridApi.getValue("Price", record) - record.gridApi.getValue("BidOfferSpread", record) / 2);
+        record.setDataValue("Bid", bid)
     }
 }

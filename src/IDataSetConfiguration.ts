@@ -13,4 +13,7 @@ export interface IDataSetConfiguration {
     //make the data to tick where require. It's called every x sec from the main project. 
     //Do not put a SetInterval in there
     tickData: (grid: any) => void
+    //method to be called when the record is edited by the user or updated with the TickData method
+    // a good example is the computation of Bid and Ask when the Price is either updated or edited
+    ActionWhenRecordUpdatedOrEdited: (record : any) => any
 }

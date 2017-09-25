@@ -44,6 +44,12 @@ export class HypergridDemo implements IDemo {
                 //set all the properties such as editor etc....
                 selectedConfig.setGridProperties(this.grid)
 
+                this.grid.addEventListener("fin-after-cell-edit", (e: any) => {
+                    let row = this.grid.behavior.dataModel.getRow(e.detail.input.event.visibleRow.rowIndex);
+                    selectedConfig.ActionWhenRecordUpdatedOrEdited(row)
+                    this.grid.repaint()
+                });
+
                 //create Adaptable Blotter
                 var container = document.getElementById(blotterContainer);
                 let blotterOptions: IAdaptableBlotterOptions = {

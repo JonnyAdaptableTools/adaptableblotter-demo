@@ -29,6 +29,9 @@ export class agGridDemo implements IDemo {
                         gridOptions.columnApi.autoSizeAllColumns();
                         setTimeout(() => gridOptions.columnApi.autoSizeAllColumns(), 1);
 
+                        gridOptions.api.addEventListener("cellEditingStopped", (params: any) => {
+                            selectedConfig.ActionWhenRecordUpdatedOrEdited(params.node);
+                        });
 
                         gridOptions.api.addEventListener("newColumnsLoaded", function (params: any) {
                             gridOptions.columnApi.autoSizeAllColumns();

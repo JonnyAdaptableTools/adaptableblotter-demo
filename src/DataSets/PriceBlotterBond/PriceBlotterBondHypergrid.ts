@@ -20,9 +20,13 @@ export var PriceBlotterBond: IDataSetConfiguration = {
         let behavior = grid.behavior;
 
         //For all columns except primarykey we enable the editor
+        // we prevent Bid, Ask and price from being editable as well
         behavior.dataModel.getCellEditorAt = function (columnIndex: any, rowIndex: any, declaredEditorName: any, options: any) {
             let editorName = declaredEditorName;
-            if (options.column.name !== "InstrumentId") {
+            if (options.column.name !== "InstrumentId"
+                && options.column.name !== "Bid"
+                && options.column.name !== "Ask"
+                && options.column.name !== "Price") {
                 editorName = 'textfield';
             }
             return grid.cellEditors.create(editorName, options);
@@ -37,9 +41,15 @@ export var PriceBlotterBond: IDataSetConfiguration = {
         let newValue = Helper.roundTo4Dp(initialNewValue + numberToAdd);
         row[columnName] = newValue;
 
+        PriceBlotterBond.ActionWhenRecordUpdatedOrEdited(row) 
+
         grid.repaint()
     },
     manipulateInitialData(data: any[]) {
         Helper.MakeAllRecordsColumnsDateProperDates(data);
+    },
+    ActionWhenRecordUpdatedOrEdited(record: any) {
+        record["Bid"] = Helper.roundTo4Dp(record["Price"] - (record["BidOfferSpread"] / 2))
+        record["Ask"] = Helper.roundTo4Dp(record["Price"] + (record["BidOfferSpread"] / 2))
     }
 }
