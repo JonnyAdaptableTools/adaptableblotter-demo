@@ -27,7 +27,7 @@ export var TradeBlotterFX: IDataSetConfiguration = {
     tickData: (grid: any) => {
 
     },
-    manipulateInitialDate(data: any[]) {
+    manipulateInitialData(data: any[]) {
         Helper.MakeAllRecordsColumnsDateProperDates(data);
     }
 }

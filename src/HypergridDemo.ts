@@ -15,7 +15,7 @@ export class HypergridDemo implements IDemo {
 
         let data: any[]
         Helper.getDataFromJson(selectedConfig.name.replace(/ /g, "") + ".json").then(json => data = json)
-            .then(data => selectedConfig.manipulateInitialDate(data)).then(() => {
+            .then(data => selectedConfig.manipulateInitialData(data)).then(() => {
                 //create the Hypergrid
                 this.grid = new (<any>window).fin.Hypergrid('#' + gridContainer, { data: data, schema: selectedConfig.getSchema(data) });
 

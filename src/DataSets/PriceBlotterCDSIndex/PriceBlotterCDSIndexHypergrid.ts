@@ -31,7 +31,7 @@ export var PriceBlotterCDSIndex: IDataSetConfiguration = {
     tickData: (grid: any) => {
 
     },
-    manipulateInitialDate(data: any[]) {
+    manipulateInitialData(data: any[]) {
         Helper.MakeAllRecordsColumnsDateProperDates(data);
     }
 }

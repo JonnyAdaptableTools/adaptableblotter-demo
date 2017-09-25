@@ -15,7 +15,7 @@ export class agGridDemo implements IDemo {
         if (!selectedConfig) { return }
         let data: any[]
         Helper.getDataFromJson(selectedConfig.name.replace(/ /g, "") + ".json").then(json => data = json)
-            .then(data => selectedConfig.manipulateInitialDate(data)).then(() => {
+            .then(data => selectedConfig.manipulateInitialData(data)).then(() => {
                 // let the grid know which columns and what data to use
                 var gridOptions: GridOptions = {
                     columnDefs: selectedConfig.getSchema(data),

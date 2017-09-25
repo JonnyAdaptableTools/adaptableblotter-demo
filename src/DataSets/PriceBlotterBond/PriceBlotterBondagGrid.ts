@@ -27,7 +27,7 @@ export var PriceBlotterBond: IDataSetConfiguration = {
     tickData: (grid: any) => {
 
     },
-    manipulateInitialDate(data: any[]) {
+    manipulateInitialData(data: any[]) {
         Helper.MakeAllRecordsColumnsDateProperDates(data);
     }
 }
