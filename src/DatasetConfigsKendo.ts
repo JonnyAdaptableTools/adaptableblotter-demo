@@ -1,17 +1,17 @@
 import { TradeBlotterBond } from "./DataSets/TradeBlotterBond/TradeBlotterBondKendo";
 import { IDataSetConfiguration } from "./IDataSetConfiguration";
-import { Contacts } from "./DataSets/Contacts/ContactsagGrid";
-import { FTSEClose } from "./DataSets/FTSEClose/FTSECloseagGrid";
-import { Holidays } from "./DataSets/Holidays/HolidaysagGrid";
-import { NorthwindOrders } from "./DataSets/NorthwindOrders/NorthwindOrdersagGrid";
-import { PriceBlotterBond } from "./DataSets/PriceBlotterBond/PriceBlotterBondagGrid";
-import { PriceBlotterCDSIndex } from "./DataSets/PriceBlotterCDSIndex/PriceBlotterCDSIndexagGrid";
-import { PriceBlotterCommodity } from "./DataSets/PriceBlotterCommodity/PriceBlotterCommodityagGrid";
-import { PriceBlotterFX } from "./DataSets/PriceBlotterFX/PriceBlotterFXagGrid";
-import { TradeBlotterCDS } from "./DataSets/TradeBlotterCDS/TradeBlotterCDSagGrid";
-import { TradeBlotterCDSIndex } from "./DataSets/TradeBlotterCDSIndex/TradeBlotterCDSIndexagGrid";
-import { TradeBlotterCommodity } from "./DataSets/TradeBlotterCommodity/TradeBlotterCommodityagGrid";
-import { TradeBlotterFX } from "./DataSets/TradeBlotterFX/TradeBlotterFXagGrid";
+import { Contacts } from "./DataSets/Contacts/ContactsKendo";
+import { FTSEClose } from "./DataSets/FTSEClose/FTSECloseKendo";
+import { Holidays } from "./DataSets/Holidays/HolidaysKendo";
+import { NorthwindOrders } from "./DataSets/NorthwindOrders/NorthwindOrdersKendo";
+import { PriceBlotterBond } from "./DataSets/PriceBlotterBond/PriceBlotterBondKendo";
+import { PriceBlotterCDSIndex } from "./DataSets/PriceBlotterCDSIndex/PriceBlotterCDSIndexKendo";
+import { PriceBlotterCommodity } from "./DataSets/PriceBlotterCommodity/PriceBlotterCommodityKendo";
+import { PriceBlotterFX } from "./DataSets/PriceBlotterFX/PriceBlotterFXKendo";
+import { TradeBlotterCDS } from "./DataSets/TradeBlotterCDS/TradeBlotterCDSKendo";
+import { TradeBlotterCDSIndex } from "./DataSets/TradeBlotterCDSIndex/TradeBlotterCDSIndexKendo";
+import { TradeBlotterCommodity } from "./DataSets/TradeBlotterCommodity/TradeBlotterCommodityKendo";
+import { TradeBlotterFX } from "./DataSets/TradeBlotterFX/TradeBlotterFXKendo";
 
 
 export var AvailableDatasetConfigs = new Map<string, IDataSetConfiguration>([

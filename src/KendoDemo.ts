@@ -51,8 +51,10 @@ export class KendoDemo implements IDemo {
                     maxColumnValueItemsDisplayed: 1000,
                     predefinedConfigUrl: selectedConfig.name.replace(/ /g, "") + "Config.json"
                 }
-                var eGridDiv = document.getElementById(gridContainer);
-                this.adaptableblotter = new (<any>window).adaptableblotterkendo.AdaptableBlotter(this.grid, container, eGridDiv, blotterOptions);
+                this.adaptableblotter = new (<any>window).adaptableblotterkendo.AdaptableBlotter(
+                    this.grid, 
+                    container, 
+                    blotterOptions);
 
                 //We subscribe to the AB theme change so we update the theme of the grid (only light or dark for demo)
                 this.adaptableblotter.AdaptableBlotterStore.TheStore.subscribe(() => { this.ThemeChange(); });

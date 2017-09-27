@@ -115,3 +115,9 @@ export function getRandomItem(array: any[], max?: number): any {
         return array[this.generateRandomInt(0, array.length - 1)];
     }
 }
+
+export function DecimalsEditorWith4DecimalsKendo(container:any, options:any) {
+    $("<input name='" + options.field + "'/>")
+        .appendTo(container)
+        .kendoNumericTextBox({ decimals: 4 });
+}
