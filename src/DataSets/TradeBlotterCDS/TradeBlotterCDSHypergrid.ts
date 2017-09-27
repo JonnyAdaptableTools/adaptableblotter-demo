@@ -22,7 +22,7 @@ export var TradeBlotterCDS: IDataSetConfiguration = {
         //For all columns except primarykey we enable the editor
         behavior.dataModel.getCellEditorAt = function (columnIndex: any, rowIndex: any, declaredEditorName: any, options: any) {
             let editorName = declaredEditorName;
-            if (options.column.name !== "TradeId") {
+            if (options.column.name !== TradeBlotterCDS.primaryKey) {
                 editorName = 'textfield';
             }
             return grid.cellEditors.create(editorName, options);

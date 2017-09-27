@@ -11,7 +11,7 @@ export var Contacts: IDataSetConfiguration = {
         firstRow = (typeof firstRow === 'object') ? firstRow : {};
         for (let p in firstRow) {
             if (firstRow.hasOwnProperty(p)) {
-                if (p === 'ID') {
+                if (p === Contacts.primaryKey) {
                     schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
                 }
                 else {

@@ -11,7 +11,7 @@ export var TradeBlotterBond: IDataSetConfiguration = {
         firstRow = (typeof firstRow === 'object') ? firstRow : {};
         for (let p in firstRow) {
             if (firstRow.hasOwnProperty(p)) {
-                if (p === 'TradeId') {
+                if (p === TradeBlotterBond.primaryKey) {
                     schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
                 }
                 else if (p === 'Notional') {

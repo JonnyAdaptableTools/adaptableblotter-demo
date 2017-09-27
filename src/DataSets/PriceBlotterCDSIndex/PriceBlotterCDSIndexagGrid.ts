@@ -11,7 +11,7 @@ export var PriceBlotterCDSIndex: IDataSetConfiguration = {
         firstRow = (typeof firstRow === 'object') ? firstRow : {};
         for (let p in firstRow) {
             if (firstRow.hasOwnProperty(p)) {
-                if (p === 'REDCode') {
+                if (p === PriceBlotterCDSIndex.primaryKey) {
                     schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
                 }
                 else {

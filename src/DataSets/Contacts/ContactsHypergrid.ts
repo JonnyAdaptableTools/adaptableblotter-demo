@@ -22,7 +22,7 @@ export var Contacts: IDataSetConfiguration = {
         //For all columns except primarykey we enable the editor
         behavior.dataModel.getCellEditorAt = function (columnIndex: any, rowIndex: any, declaredEditorName: any, options: any) {
             let editorName = declaredEditorName;
-            if (options.column.name !== "ID") {
+            if (options.column.name !== Contacts.primaryKey) {
                 editorName = 'textfield';
             }
             return grid.cellEditors.create(editorName, options);

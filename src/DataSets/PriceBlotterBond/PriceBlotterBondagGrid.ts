@@ -11,7 +11,7 @@ export var PriceBlotterBond: IDataSetConfiguration = {
         firstRow = (typeof firstRow === 'object') ? firstRow : {};
         for (let p in firstRow) {
             if (firstRow.hasOwnProperty(p)) {
-                if (p === 'InstrumentId') {
+                if (p === PriceBlotterBond.primaryKey) {
                     schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
                 }
                 else if (p === 'Price' || p === 'Bid' || p === 'Ask') {
@@ -33,7 +33,7 @@ export var PriceBlotterBond: IDataSetConfiguration = {
             if (rowNode.group) {
                 return;
             }
-            let rowTradeId = grid.api.getValue("InstrumentId", rowNode);
+            let rowTradeId = grid.api.getValue(PriceBlotterBond.primaryKey, rowNode);
             // only do first 30
             if (rowTradeId != InstrumentId) { return; }
 

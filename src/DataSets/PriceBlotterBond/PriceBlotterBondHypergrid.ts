@@ -23,7 +23,7 @@ export var PriceBlotterBond: IDataSetConfiguration = {
         // we prevent Bid, Ask and price from being editable as well
         behavior.dataModel.getCellEditorAt = function (columnIndex: any, rowIndex: any, declaredEditorName: any, options: any) {
             let editorName = declaredEditorName;
-            if (options.column.name !== "InstrumentId"
+            if (options.column.name !== PriceBlotterBond.primaryKey
                 && options.column.name !== "Bid"
                 && options.column.name !== "Ask"
                 && options.column.name !== "Price") {

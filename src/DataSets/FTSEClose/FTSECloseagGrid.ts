@@ -11,7 +11,7 @@ export var FTSEClose: IDataSetConfiguration = {
         firstRow = (typeof firstRow === 'object') ? firstRow : {};
         for (let p in firstRow) {
             if (firstRow.hasOwnProperty(p)) {
-                if (p === 'CloseDate') {
+                if (p === FTSEClose.primaryKey) {
                     schema.push({ headerName: Helper.capitalize(p), field: p });
                 }
                 else {
