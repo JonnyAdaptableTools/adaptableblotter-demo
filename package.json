@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "adaptableblotter": "^1.2.2",
+    "adaptableblotter": "^1.2.3",
     "ag-grid": "^13.2.0",
     "isomorphic-fetch": "^2.2.1"
   },
@@ -27,7 +27,7 @@
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "webpack",
-    "buildDataSets" : "node buildJsonDataset.js"
+    "buildDataSets": "node buildJsonDataset.js"
   },
   "repository": {
     "type": "git",

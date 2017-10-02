@@ -24,8 +24,6 @@ export class HypergridDemo implements IDemo {
                 //Set to `true` to render `0` and `false`. Otherwise these value appear as blank cells.
                 this.grid.addProperties({ renderFalsy: true });
                 this.grid.addProperties({ editOnKeydown: false });
-                //Set to `true` to render `0` and `false`. Otherwise these value appear as blank cells
-                this.grid.addProperties({ renderFalsy: true });
 
                 this.grid.localization.add('USDCurrencyFormat', new this.grid.localization.NumberFormatter('en-US', {
                     style: 'currency',
