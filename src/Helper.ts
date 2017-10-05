@@ -1,4 +1,4 @@
-import {IDataSetConfiguration} from './IDataSetConfiguration';
+import { IDataSetConfiguration } from './IDataSetConfiguration';
 import * as fetch from 'isomorphic-fetch';
 
 export function capitalize(input: string) {
@@ -31,20 +31,39 @@ const checkStatus = (response: Response) => {
 };
 
 var shortDateFormatter = new Intl.DateTimeFormat('en-GB');
-export function shortDateCellRendereragGrid(params: any) {
+export var shortDateFormatteragGrid = (columnId: string) => function (params: any) {
     try {
-        if (params.value) {
-            if (typeof params.value === "string") {
-                return shortDateFormatter.format(params.value.toDate("dd/mm/yyyy", "/"))
-            }
-            return shortDateFormatter.format(params.value)
+        if (params.data[columnId]) {
+            return shortDateFormatter.format(params.data[columnId])
         } else {
             return null;
         }
     }
     catch (ex) {
-        console.error("Error formatting the date for value: " + params.value + " and node : ", params.node)
+        console.error("Error formatting the date for value: " + params.data[columnId] + " and node : ", params.node)
     }
+}
+
+export function dateParseragGrid(params: any) {
+    try {
+        return stringToDate(params.newValue,"dd/mm/yyyy", "/");
+    }
+    catch (ex) {
+        console.error("Error parsing the date value: " + params.newValue + " and node : ", params.node)
+    }
+}
+
+function stringToDate(date: string, format: string, delimiter: string) {
+    var formatLowerCase = format.toLowerCase();
+    var formatItems = formatLowerCase.split(delimiter);
+    var dateItems = date.split(delimiter);
+    var monthIndex = formatItems.indexOf("mm");
+    var dayIndex = formatItems.indexOf("dd");
+    var yearIndex = formatItems.indexOf("yyyy");
+    var month = parseInt(dateItems[monthIndex]);
+    month -= 1;
+    var formatedDate = new Date(parseInt(dateItems[yearIndex]), month, parseInt(dateItems[dayIndex]));
+    return formatedDate;
 }
 
 var currencyFormatter = new Intl.NumberFormat('en-US', {
@@ -71,7 +90,7 @@ export function ConvertExcelDate(dateToConvert: number) {
     return result;
 };
 
-export function MakeAllRecordsColumnsDateProperDates(data: any[]){
+export function MakeAllRecordsColumnsDateProperDates(data: any[]) {
     data.forEach(record => {
         for (let prop in record) {
             //we convert all columns where there is date in the name header to proper Date objects
@@ -83,17 +102,16 @@ export function MakeAllRecordsColumnsDateProperDates(data: any[]){
     });
 }
 
-export function manageDomDataSetSelectAndReturnSelectDataset(AvailableDatasetConfigs : Map<string, IDataSetConfiguration>){
-    let select : HTMLSelectElement = document.getElementById("dataset_select") as HTMLSelectElement
-    AvailableDatasetConfigs.forEach(x=>{
+export function manageDomDataSetSelectAndReturnSelectDataset(AvailableDatasetConfigs: Map<string, IDataSetConfiguration>) {
+    let select: HTMLSelectElement = document.getElementById("dataset_select") as HTMLSelectElement
+    AvailableDatasetConfigs.forEach(x => {
         let c = document.createElement("option");
         c.text = x.name;
         c.value = x.name;
         select.options.add(c);
     })
     let currentDataSet = localStorage.getItem("dataset_select")
-    if(!currentDataSet || currentDataSet == "Select")
-    {
+    if (!currentDataSet || currentDataSet == "Select") {
         return null
     }
     select.value = currentDataSet
@@ -116,7 +134,7 @@ export function getRandomItem(array: any[], max?: number): any {
     }
 }
 
-export function DecimalsEditorWith4DecimalsKendo(container:any, options:any) {
+export function DecimalsEditorWith4DecimalsKendo(container: any, options: any) {
     $("<input name='" + options.field + "'/>")
         .appendTo(container)
         .kendoNumericTextBox({ decimals: 4 });

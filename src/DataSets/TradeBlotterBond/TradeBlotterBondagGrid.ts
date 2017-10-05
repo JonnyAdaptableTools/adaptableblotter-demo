@@ -18,7 +18,11 @@ export var TradeBlotterBond: IDataSetConfiguration = {
                     schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell', cellRenderer: Helper.notionalCellRendereragGrid });
                 }
                 else if (p === 'TradeDate' || p === 'EffectiveDate' || p === 'MaturityDate') {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: true, cellRenderer: Helper.shortDateCellRendereragGrid });
+                    schema.push({
+                        headerName: Helper.capitalize(p), field: p, editable: true, 
+                        valueParser: Helper.dateParseragGrid,
+                        valueGetter: Helper.shortDateFormatteragGrid(p)
+                    });
                 }
                 else {
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: true });
@@ -37,7 +41,7 @@ export var TradeBlotterBond: IDataSetConfiguration = {
         Helper.MakeAllRecordsColumnsDateProperDates(data);
         // record.MaturityDate = Helper.ConvertExcelDate(record.MaturityDate);
     },
-    ActionWhenRecordUpdatedOrEdited(record:any){
-        
+    ActionWhenRecordUpdatedOrEdited(record: any) {
+
     }
 }
