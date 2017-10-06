@@ -26,7 +26,7 @@ export class KendoDemo implements IDemo {
                         reorderable: true,
                         navigatable: true,
                         resizable: true,
-                        scrollable: true,
+                        scrollable: false,
                         filterable: true,
                         editable: true,
                         columnMenu: false,
