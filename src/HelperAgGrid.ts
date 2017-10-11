@@ -35,14 +35,29 @@ export var shortDateRendereragGrid = (columnId: string) => function (params: any
     }
 }
 
-export function dateParseragGrid(params: any) {
+
+export function boolParseragGrid(params: any) {
     try {
-        return stringToDate(params.newValue,"dd/mm/yyyy", "/");
+        return  `<input type='checkbox'   ${params.value ? 'checked' : ''} />`;
     }
     catch (ex) {
         console.error("Error parsing the date value: " + params.newValue + " and node : ", params.node)
     }
 }
+
+function numberToBool(number: number): boolean {
+    return (number == 0) ? true : false;
+}
+
+export function dateParseragGrid(params: any) {
+    try {
+        return stringToDate(params.newValue, "dd/mm/yyyy", "/");
+    }
+    catch (ex) {
+        console.error("Error parsing the date value: " + params.newValue + " and node : ", params.node)
+    }
+}
+
 
 
 function stringToDate(date: string, format: string, delimiter: string) {
@@ -61,11 +76,11 @@ function stringToDate(date: string, format: string, delimiter: string) {
 export var decimalPlaceRendereragGrid = (minDigits: number, maxDigits: number) => function (params: any) {
     if (params.value) {
         var fourDecimalPlaceFormatter = new Intl.NumberFormat('en-GB', {
-            minimumFractionDigits:minDigits,
+            minimumFractionDigits: minDigits,
             maximumFractionDigits: maxDigits
-        });        
-        return fourDecimalPlaceFormatter.format(params.value)     
+        });
+        return fourDecimalPlaceFormatter.format(params.value)
     }
 }
-        
+
 

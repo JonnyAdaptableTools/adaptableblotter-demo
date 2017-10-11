@@ -9,3 +9,6 @@ height: 100%
     .number-cell {
         text-align: right;
     }
+    .bool-cell {
+        text-align: center;
+    }

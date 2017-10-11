@@ -3,7 +3,7 @@ import * as Helper from "../../Helper"
 import * as HelperAgGrid from "../../HelperAgGrid"
 
 export var TradeBlotterCDSIndex: IDataSetConfiguration = {
-    name: "Trade Blotter CDSIndex",
+    name: "Trade Blotter CDS Index",
     primaryKey: "TradeId",
     getSchema: (data) => {
         let schema = [],

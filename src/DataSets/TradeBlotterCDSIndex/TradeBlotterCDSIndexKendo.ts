@@ -2,7 +2,7 @@ import { IDataSetConfiguration } from "../../IDataSetConfiguration";
 import * as Helper from "../../Helper"
 
 export var TradeBlotterCDSIndex: IDataSetConfiguration = {
-    name: "Trade Blotter CDSIndex",
+    name: "Trade Blotter CDS Index",
     primaryKey: "TradeId",
     getSchema: (data) => {
         let schema = [],

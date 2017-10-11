@@ -1,7 +1,7 @@
 import { IDataSetConfiguration } from "../../IDataSetConfiguration";
 import * as Helper from "../../Helper"
 import * as HelperAgGrid from "../../HelperAgGrid"
- 
+
 export var PriceBlotterCDSIndex: IDataSetConfiguration = {
     name: "Price Blotter CDSIndex",
     primaryKey: "REDCode",
@@ -14,9 +14,13 @@ export var PriceBlotterCDSIndex: IDataSetConfiguration = {
             if (firstRow.hasOwnProperty(p)) {
                 if (p === PriceBlotterCDSIndex.primaryKey) {
                     schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
-                }   else if (p.includes("Date")) {
-                schema.push({ headerName: Helper.capitalize(p), field: p, editable: true, valueParser: HelperAgGrid.dateParseragGrid, valueGetter: HelperAgGrid.shortDateRendereragGrid(p) });
-                 }  else {
+                } else if (p.includes("Date")) {
+                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: false, valueParser: HelperAgGrid.dateParseragGrid, valueGetter: HelperAgGrid.shortDateRendereragGrid(p) });
+                } else if (p === "OnTheRun") {
+                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: false, cellRenderer: HelperAgGrid.boolParseragGrid, cellClass: 'bool-cell' });
+                } else if (p.includes('Series') || p.includes('Markit') || p.includes('Spread') || p.includes('Maturity')) {
+                    schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
+                } else {
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: true });
                 }
             }
@@ -32,7 +36,7 @@ export var PriceBlotterCDSIndex: IDataSetConfiguration = {
     manipulateInitialData(data: any[]) {
         Helper.MakeAllRecordsColumnsDateProperDates(data);
     },
-    ActionWhenRecordUpdatedOrEdited(record:any){
-        
+    ActionWhenRecordUpdatedOrEdited(record: any) {
+
     }
 }
