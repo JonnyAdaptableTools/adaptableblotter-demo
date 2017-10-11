@@ -1,5 +1,6 @@
 import { IDataSetConfiguration } from "../../IDataSetConfiguration";
 import * as Helper from "../../Helper"
+import * as HelperAgGrid from "../../HelperAgGrid"
 
 export var PriceBlotterBond: IDataSetConfiguration = {
     name: "Price Blotter Bond",
@@ -15,7 +16,7 @@ export var PriceBlotterBond: IDataSetConfiguration = {
                     schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
                 }
                 else if (p === 'Price' || p === 'Bid' || p === 'Ask') {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
+                    schema.push({ headerName: Helper.capitalize(p), field: p, cellRenderer: HelperAgGrid.decimalPlaceCellRenderer(2,4) });
                 }
                 else {
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: true });

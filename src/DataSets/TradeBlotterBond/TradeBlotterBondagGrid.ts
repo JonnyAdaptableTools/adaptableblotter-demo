@@ -1,5 +1,6 @@
 import { IDataSetConfiguration } from "../../IDataSetConfiguration";
 import * as Helper from "../../Helper"
+import * as HelperAgGrid from "../../HelperAgGrid"
 
 export var TradeBlotterBond: IDataSetConfiguration = {
     name: "Trade Blotter Bond",
@@ -15,13 +16,13 @@ export var TradeBlotterBond: IDataSetConfiguration = {
                     schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
                 }
                 else if (p === 'Notional') {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell', cellRenderer: Helper.notionalCellRendereragGrid });
+                    schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell', cellRenderer: HelperAgGrid.currencyRendereragGrid });
                 }
-                else if (p === 'TradeDate' || p === 'EffectiveDate' || p === 'MaturityDate') {
+                else if (p.includes("Date")) {
                     schema.push({
                         headerName: Helper.capitalize(p), field: p, editable: true, 
-                        valueParser: Helper.dateParseragGrid,
-                        valueGetter: Helper.shortDateFormatteragGrid(p)
+                        valueParser: HelperAgGrid.dateParseragGrid,
+                        valueGetter: HelperAgGrid.shortDateFormatteragGrid(p)
                     });
                 }
                 else {

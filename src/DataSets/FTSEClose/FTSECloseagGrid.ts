@@ -1,5 +1,6 @@
 import { IDataSetConfiguration } from "../../IDataSetConfiguration";
 import * as Helper from "../../Helper"
+import * as HelperAgGrid from "../../HelperAgGrid"
 
 export var FTSEClose: IDataSetConfiguration = {
     name: "FTSE Close",
@@ -11,10 +12,13 @@ export var FTSEClose: IDataSetConfiguration = {
         firstRow = (typeof firstRow === 'object') ? firstRow : {};
         for (let p in firstRow) {
             if (firstRow.hasOwnProperty(p)) {
-                if (p === FTSEClose.primaryKey) {
-                    schema.push({ headerName: Helper.capitalize(p), field: p });
+                if (p === FTSEClose.primaryKey) {  // for FTSE the close date is a primary key and a date!
+                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: false, valueParser: HelperAgGrid.dateParseragGrid, valueGetter: HelperAgGrid.shortDateFormatteragGrid(p) });
                 }
-                else {
+                else if (p === 'ChangeOnDay' || p === 'DaySpread' ) {
+                    schema.push({ headerName: Helper.capitalize(p), field: p, cellRenderer: HelperAgGrid.decimalPlaceCellRenderer(2,4) });
+                }
+             else {
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: true });
                 }
             }
@@ -30,7 +34,8 @@ export var FTSEClose: IDataSetConfiguration = {
     manipulateInitialData(data: any[]) {
         Helper.MakeAllRecordsColumnsDateProperDates(data);
     },
-    ActionWhenRecordUpdatedOrEdited(record:any){
-        
+    ActionWhenRecordUpdatedOrEdited(record: any) {
+
     }
 }
+

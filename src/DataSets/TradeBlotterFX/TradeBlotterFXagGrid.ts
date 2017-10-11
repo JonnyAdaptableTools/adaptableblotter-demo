@@ -1,5 +1,6 @@
 import { IDataSetConfiguration } from "../../IDataSetConfiguration";
 import * as Helper from "../../Helper"
+import * as HelperAgGrid from "../../HelperAgGrid"
 
 export var TradeBlotterFX: IDataSetConfiguration = {
     name: "Trade Blotter FX",
@@ -14,7 +15,9 @@ export var TradeBlotterFX: IDataSetConfiguration = {
                 if (p === TradeBlotterFX.primaryKey) {
                     schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
                 }
-                else {
+                else if (p.includes("Date")) {
+                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: true, valueParser: HelperAgGrid.dateParseragGrid, valueGetter: HelperAgGrid.shortDateFormatteragGrid(p) });
+                } else {
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: true });
                 }
             }
@@ -30,7 +33,7 @@ export var TradeBlotterFX: IDataSetConfiguration = {
     manipulateInitialData(data: any[]) {
         Helper.MakeAllRecordsColumnsDateProperDates(data);
     },
-    ActionWhenRecordUpdatedOrEdited(record:any){
-        
+    ActionWhenRecordUpdatedOrEdited(record: any) {
+
     }
 }

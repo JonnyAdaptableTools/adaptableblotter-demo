@@ -30,59 +30,9 @@ const checkStatus = (response: Response) => {
     throw error;
 };
 
-var shortDateFormatter = new Intl.DateTimeFormat('en-GB');
-export var shortDateFormatteragGrid = (columnId: string) => function (params: any) {
-    try {
-        if (params.data[columnId]) {
-            return shortDateFormatter.format(params.data[columnId])
-        } else {
-            return null;
-        }
-    }
-    catch (ex) {
-        console.error("Error formatting the date for value: " + params.data[columnId] + " and node : ", params.node)
-    }
-}
 
-export function dateParseragGrid(params: any) {
-    try {
-        return stringToDate(params.newValue,"dd/mm/yyyy", "/");
-    }
-    catch (ex) {
-        console.error("Error parsing the date value: " + params.newValue + " and node : ", params.node)
-    }
-}
 
-function stringToDate(date: string, format: string, delimiter: string) {
-    var formatLowerCase = format.toLowerCase();
-    var formatItems = formatLowerCase.split(delimiter);
-    var dateItems = date.split(delimiter);
-    var monthIndex = formatItems.indexOf("mm");
-    var dayIndex = formatItems.indexOf("dd");
-    var yearIndex = formatItems.indexOf("yyyy");
-    var month = parseInt(dateItems[monthIndex]);
-    month -= 1;
-    var formatedDate = new Date(parseInt(dateItems[yearIndex]), month, parseInt(dateItems[dayIndex]));
-    return formatedDate;
-}
 
-var currencyFormatter = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    minimumFractionDigits: 2,
-});
-export function notionalCellRendereragGrid(params: any) {
-    try {
-        if (params.value) {
-            return currencyFormatter.format(params.value)
-        } else {
-            return null;
-        }
-    }
-    catch (ex) {
-        console.error("Error formatting the currency for value: " + params.value + " and node : ", params.node)
-    }
-}
 
 export function ConvertExcelDate(dateToConvert: number) {
     var result = new Date();
@@ -134,8 +84,3 @@ export function getRandomItem(array: any[], max?: number): any {
     }
 }
 
-export function DecimalsEditorWith4DecimalsKendo(container: any, options: any) {
-    $("<input name='" + options.field + "'/>")
-        .appendTo(container)
-        .kendoNumericTextBox({ decimals: 4 });
-}

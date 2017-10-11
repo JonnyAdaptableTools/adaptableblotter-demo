@@ -1,5 +1,6 @@
 import { IDataSetConfiguration } from "../../IDataSetConfiguration";
 import * as Helper from "../../Helper"
+import * as HelperKendo from "../../HelperKendo"
 
 export var PriceBlotterBond: IDataSetConfiguration = {
     name: "Price Blotter Bond",
@@ -18,7 +19,7 @@ export var PriceBlotterBond: IDataSetConfiguration = {
                     schema.push({ title: Helper.capitalize(p), field: p, attributes: { class: "numberColumn" } });
                 }
                 else if (p === 'BidOfferSpread') {
-                    schema.push({ title: Helper.capitalize(p), field: p, attributes: { class: "numberColumn" }, editor:Helper.DecimalsEditorWith4DecimalsKendo });
+                    schema.push({ title: Helper.capitalize(p), field: p, attributes: { class: "numberColumn" }, editor:HelperKendo.DecimalsEditorWith4DecimalsKendo });
                 }
                 else {
                     schema.push({ title: Helper.capitalize(p), field: p });

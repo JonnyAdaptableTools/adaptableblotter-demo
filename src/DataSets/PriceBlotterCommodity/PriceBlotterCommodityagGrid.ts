@@ -1,5 +1,6 @@
 import { IDataSetConfiguration } from "../../IDataSetConfiguration";
 import * as Helper from "../../Helper"
+import * as HelperAgGrid from "../../HelperAgGrid"
 
 export var PriceBlotterCommodity: IDataSetConfiguration = {
     name: "Price Blotter Commodity",
@@ -13,8 +14,9 @@ export var PriceBlotterCommodity: IDataSetConfiguration = {
             if (firstRow.hasOwnProperty(p)) {
                 if (p === PriceBlotterCommodity.primaryKey) {
                     schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
-                }
-                else {
+                } else if (p.includes("Date")) {
+                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: true, valueParser: HelperAgGrid.dateParseragGrid, valueGetter: HelperAgGrid.shortDateFormatteragGrid(p) });
+                } else {
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: true });
                 }
             }
@@ -30,7 +32,7 @@ export var PriceBlotterCommodity: IDataSetConfiguration = {
     manipulateInitialData(data: any[]) {
         Helper.MakeAllRecordsColumnsDateProperDates(data);
     },
-    ActionWhenRecordUpdatedOrEdited(record:any){
-        
+    ActionWhenRecordUpdatedOrEdited(record: any) {
+
     }
 }
