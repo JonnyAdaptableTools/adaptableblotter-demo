@@ -23,7 +23,7 @@ export function currencyRendereragGrid(params: any) {
 
 
 var shortDateFormatter = new Intl.DateTimeFormat('en-GB');
-export var shortDateFormatteragGrid = (columnId: string) => function (params: any) {
+export var shortDateRendereragGrid = (columnId: string) => function (params: any) {
     try {
         if (params.data[columnId]) {
             return shortDateFormatter.format(params.data[columnId])
@@ -59,7 +59,7 @@ function stringToDate(date: string, format: string, delimiter: string) {
     return formatedDate;
 }
 
-export var decimalPlaceCellRenderer = (minDigits: number, maxDigits: number) => function (params: any) {
+export var decimalPlaceRendereragGrid = (minDigits: number, maxDigits: number) => function (params: any) {
     if (params.value) {
         var fourDecimalPlaceFormatter = new Intl.NumberFormat('en-GB', {
             minimumFractionDigits:minDigits,

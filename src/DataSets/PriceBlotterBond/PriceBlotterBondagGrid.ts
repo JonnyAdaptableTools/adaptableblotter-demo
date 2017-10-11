@@ -16,7 +16,7 @@ export var PriceBlotterBond: IDataSetConfiguration = {
                     schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
                 }
                 else if (p === 'Price' || p === 'Bid' || p === 'Ask') {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, cellRenderer: HelperAgGrid.decimalPlaceCellRenderer(2,4) });
+                    schema.push({ headerName: Helper.capitalize(p), field: p, cellRenderer: HelperAgGrid.decimalPlaceRendereragGrid(2,4) });
                 }
                 else {
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: true });

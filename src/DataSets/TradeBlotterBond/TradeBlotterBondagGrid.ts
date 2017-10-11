@@ -22,7 +22,7 @@ export var TradeBlotterBond: IDataSetConfiguration = {
                     schema.push({
                         headerName: Helper.capitalize(p), field: p, editable: true, 
                         valueParser: HelperAgGrid.dateParseragGrid,
-                        valueGetter: HelperAgGrid.shortDateFormatteragGrid(p)
+                        valueGetter: HelperAgGrid.shortDateRendereragGrid(p)
                     });
                 }
                 else {

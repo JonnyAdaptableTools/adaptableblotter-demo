@@ -30,10 +30,6 @@ const checkStatus = (response: Response) => {
     throw error;
 };
 
-
-
-
-
 export function ConvertExcelDate(dateToConvert: number) {
     var result = new Date();
     result.setTime((dateToConvert - 25569) * 24 * 3600 * 1000);

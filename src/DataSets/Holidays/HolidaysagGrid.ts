@@ -15,7 +15,7 @@ export var Holidays: IDataSetConfiguration = {
                 if (p === Holidays.primaryKey) {
                     schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
                 } else if (p.includes("Date")) {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: true, valueParser: HelperAgGrid.dateParseragGrid, valueGetter: HelperAgGrid.shortDateFormatteragGrid(p) });
+                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: true, valueParser: HelperAgGrid.dateParseragGrid, valueGetter: HelperAgGrid.shortDateRendereragGrid(p) });
                 } else {
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: true });
                 }
