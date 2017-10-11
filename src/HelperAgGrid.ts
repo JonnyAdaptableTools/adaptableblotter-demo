@@ -21,7 +21,6 @@ export function currencyRendereragGrid(params: any) {
     }
 }
 
-
 var shortDateFormatter = new Intl.DateTimeFormat('en-GB');
 export var shortDateRendereragGrid = (columnId: string) => function (params: any) {
     try {
