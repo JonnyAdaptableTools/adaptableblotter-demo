@@ -16,10 +16,10 @@ export var FTSEClose: IDataSetConfiguration = {
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: false, valueParser: HelperAgGrid.dateParseragGrid, valueGetter: HelperAgGrid.shortDateRendereragGrid(p) });
                 }
                 else if (p === 'ChangeOnDay' || p === 'DaySpread' ) {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, cellRenderer: HelperAgGrid.decimalPlaceRendereragGrid(2,4) });
+                    schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell', cellRenderer: HelperAgGrid.decimalPlaceRendereragGrid(2,4),  editable: false });
                 }
              else {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: true });
+                    schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell',  editable: false });
                 }
             }
         }

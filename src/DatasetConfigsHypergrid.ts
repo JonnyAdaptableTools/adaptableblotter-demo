@@ -2,7 +2,7 @@ import { TradeBlotterBond } from "./DataSets/TradeBlotterBond/TradeBlotterBondHy
 import { IDataSetConfiguration } from "./IDataSetConfiguration";
 import { Contacts } from "./DataSets/Contacts/ContactsHypergrid";
 import { FTSEClose } from "./DataSets/FTSEClose/FTSECloseHypergrid";
-import { Holidays } from "./DataSets/Holidays/HolidaysHypergrid";
+import { InternationalHolidays } from "./DataSets/InternationalHolidays/InternationalHolidaysHypergrid";
 import { NorthwindOrders } from "./DataSets/NorthwindOrders/NorthwindOrdersHypergrid";
 import { PriceBlotterBond } from "./DataSets/PriceBlotterBond/PriceBlotterBondHypergrid";
 import { PriceBlotterCDSIndex } from "./DataSets/PriceBlotterCDSIndex/PriceBlotterCDSIndexHypergrid";
@@ -17,7 +17,7 @@ import { TradeBlotterFX } from "./DataSets/TradeBlotterFX/TradeBlotterFXHypergri
 export var AvailableDatasetConfigs = new Map<string, IDataSetConfiguration>([
     [Contacts.name, Contacts],
     [FTSEClose.name, FTSEClose],
-    [Holidays.name, Holidays],
+    [InternationalHolidays.name, InternationalHolidays],
     [NorthwindOrders.name, NorthwindOrders],
     [PriceBlotterBond.name, PriceBlotterBond],
     [PriceBlotterCDSIndex.name, PriceBlotterCDSIndex],

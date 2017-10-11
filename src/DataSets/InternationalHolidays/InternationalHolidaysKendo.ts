@@ -1,8 +1,8 @@
 import { IDataSetConfiguration } from "../../IDataSetConfiguration";
 import * as Helper from "../../Helper"
 
-export var Holidays: IDataSetConfiguration = {
-    name: "Holidays",
+export var InternationalHolidays: IDataSetConfiguration = {
+    name: "International Holidays",
     primaryKey: "Id",
     getSchema: (data) => {
         let schema = [],
@@ -11,7 +11,7 @@ export var Holidays: IDataSetConfiguration = {
         firstRow = (typeof firstRow === 'object') ? firstRow : {};
         for (let p in firstRow) {
             if (firstRow.hasOwnProperty(p)) {
-                if (p === Holidays.primaryKey) {
+                if (p === InternationalHolidays.primaryKey) {
                     schema.push({ title: Helper.capitalize(p), field: p, attributes: { class: "numberColumn" } });
                 }
                 else {

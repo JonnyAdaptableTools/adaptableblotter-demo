@@ -1,8 +1,8 @@
 import { IDataSetConfiguration } from "../../IDataSetConfiguration";
 import * as Helper from "../../Helper"
 
-export var Holidays: IDataSetConfiguration = {
-    name: "Holidays",
+export var InternationalHolidays: IDataSetConfiguration = {
+    name: "International Holidays",
     primaryKey: "Id",
     getSchema: (data) => {
         let schema = [],
@@ -22,7 +22,7 @@ export var Holidays: IDataSetConfiguration = {
         //For all columns except primarykey we enable the editor
         behavior.dataModel.getCellEditorAt = function (columnIndex: any, rowIndex: any, declaredEditorName: any, options: any) {
             let editorName = declaredEditorName;
-            if (options.column.name !== Holidays.primaryKey) {
+            if (options.column.name !== InternationalHolidays.primaryKey) {
                 editorName = 'textfield';
             }
             return grid.cellEditors.create(editorName, options);

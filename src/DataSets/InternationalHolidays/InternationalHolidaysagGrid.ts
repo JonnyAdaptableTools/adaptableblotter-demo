@@ -2,8 +2,8 @@ import { IDataSetConfiguration } from "../../IDataSetConfiguration";
 import * as Helper from "../../Helper"
 import * as HelperAgGrid from "../../HelperAgGrid"
 
-export var Holidays: IDataSetConfiguration = {
-    name: "Holidays",
+export var InternationalHolidays: IDataSetConfiguration = {
+    name: "International Holidays",
     primaryKey: "Id",
     getSchema: (data) => {
         let schema = [],
@@ -12,7 +12,7 @@ export var Holidays: IDataSetConfiguration = {
         firstRow = (typeof firstRow === 'object') ? firstRow : {};
         for (let p in firstRow) {
             if (firstRow.hasOwnProperty(p)) {
-                if (p === Holidays.primaryKey) {
+                if (p === InternationalHolidays.primaryKey) {
                     schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
                 } else if (p.includes("Date")) {
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: true, valueParser: HelperAgGrid.dateParseragGrid, valueGetter: HelperAgGrid.shortDateRendereragGrid(p) });
