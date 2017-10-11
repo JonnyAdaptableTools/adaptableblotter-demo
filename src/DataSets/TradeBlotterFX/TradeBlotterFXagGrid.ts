@@ -14,8 +14,9 @@ export var TradeBlotterFX: IDataSetConfiguration = {
             if (firstRow.hasOwnProperty(p)) {
                 if (p === TradeBlotterFX.primaryKey) {
                     schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
-                }
-                else if (p.includes("Date")) {
+                } else if (p.includes('Amount')||p==='Rate') {
+                    schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
+                } else if (p.includes("Date")) {
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: true, valueParser: HelperAgGrid.dateParseragGrid, valueGetter: HelperAgGrid.shortDateRendereragGrid(p) });
                 } else {
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: true });

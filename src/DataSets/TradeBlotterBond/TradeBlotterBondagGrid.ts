@@ -24,7 +24,8 @@ export var TradeBlotterBond: IDataSetConfiguration = {
                         valueParser: HelperAgGrid.dateParseragGrid,
                         valueGetter: HelperAgGrid.shortDateRendereragGrid(p)
                     });
-                }
+                } else if (p.includes('TradedAt') || p.includes('Coupon')) {
+                    schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });}
                 else {
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: true });
                 }

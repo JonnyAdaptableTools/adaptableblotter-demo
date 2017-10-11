@@ -13,11 +13,11 @@ export var PriceBlotterCommodity: IDataSetConfiguration = {
         for (let p in firstRow) {
             if (firstRow.hasOwnProperty(p)) {
                 if (p === PriceBlotterCommodity.primaryKey) {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
-                } else if (p.includes("Date")) {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: true, valueParser: HelperAgGrid.dateParseragGrid, valueGetter: HelperAgGrid.shortDateRendereragGrid(p) });
-                } else {
+                    schema.push({ headerName: Helper.capitalize(p), field: p });
+                } else if (p.includes("CommodityType")) {
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: true });
+                } else {
+                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: true, cellClass: 'number-cell' });
                 }
             }
         }
