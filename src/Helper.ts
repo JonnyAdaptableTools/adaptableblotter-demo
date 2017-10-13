@@ -68,6 +68,10 @@ export function manageDomDataSetSelectAndReturnSelectDataset(AvailableDatasetCon
 export function generateRandomInt(minValue: number, maxValue: number): number {
     return Math.floor(Math.random() * (maxValue - minValue + 1) + minValue);
 }
+
+export function generateRandomDouble(): number {
+    return Math.random();
+}
 export function roundTo4Dp(val: number): number {
     return Math.round(val * 10000) / 10000;
 }
@@ -78,5 +82,13 @@ export function getRandomItem(array: any[], max?: number): any {
     else {
         return array[this.generateRandomInt(0, array.length - 1)];
     }
+}
+
+// bit of a hack function to ensure that we dont get negtive prices which looks stupid...
+export function checkPriceIsPostive(numberToCheck: number): number {
+    if (numberToCheck <= 0) {
+        numberToCheck = numberToCheck + 2;
+    }
+    return numberToCheck;
 }
 

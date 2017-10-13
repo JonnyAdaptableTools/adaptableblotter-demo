@@ -44,6 +44,7 @@ export var PriceBlotterBond: IDataSetConfiguration = {
             let columnName = "Price";
             let initialNewValue = grid.api.getValue(columnName, rowNode);
             let newValue = Helper.roundTo4Dp(initialNewValue + numberToAdd);
+            newValue = Helper.checkPriceIsPostive(newValue);
             rowNode.setDataValue(columnName, newValue)
             PriceBlotterBond.ActionWhenRecordUpdatedOrEdited(rowNode)
         });

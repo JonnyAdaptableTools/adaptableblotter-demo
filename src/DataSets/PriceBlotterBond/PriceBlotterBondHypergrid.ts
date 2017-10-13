@@ -39,6 +39,7 @@ export var PriceBlotterBond: IDataSetConfiguration = {
         let columnName = "Price";
         let initialNewValue = row[columnName];
         let newValue = Helper.roundTo4Dp(initialNewValue + numberToAdd);
+        newValue = Helper.checkPriceIsPostive(newValue);
         row[columnName] = newValue;
 
         PriceBlotterBond.ActionWhenRecordUpdatedOrEdited(row) 

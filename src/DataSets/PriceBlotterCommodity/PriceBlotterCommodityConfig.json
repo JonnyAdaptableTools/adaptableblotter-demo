@@ -1,3 +1,90 @@
 {
-
+    "FlashingCell": {
+        "FlashingColumns": [
+            {
+                "IsLive": true,
+                "ColumnName": "Ask",
+                "FlashingCellDuration": {
+                    "Name": "1/2 Second",
+                    "Duration": 500
+                },
+                "UpBackColor": "#008000",
+                "DownBackColor": "#FF0000"
+            },
+            {
+                "IsLive": true,
+                "ColumnName": "Bid",
+                "FlashingCellDuration": {
+                    "Name": "1/2 Second",
+                    "Duration": 500
+                },
+                "UpBackColor": "#008000",
+                "DownBackColor": "#FF0000"
+            },
+            {
+                "IsLive": true,
+                "ColumnName": "Price",
+                "FlashingCellDuration": {
+                    "Name": "1/2 Second",
+                    "Duration": 500
+                },
+                "UpBackColor": "#008000",
+                "DownBackColor": "#FF0000"
+            }
+        ]
+    },
+    "ConditionalStyle": {
+        "ConditionalStyleConditions": [
+            {
+                "Uid": "f72f6f63-3c4a-4ed1-87d0-faf0f62bf44d",
+                "ColumnId": "Change",
+                "Style": {
+                    "BackColor": null,
+                    "ForeColor": "#008000",
+                    "FontWeight": 0,
+                    "FontStyle": 0,
+                    "FontSize": null
+                },
+                "ConditionalStyleScope": 0,
+                "Expression": {
+                    "ColumnDisplayValuesExpressions": [],
+                    "ColumnRawValuesExpressions": [],
+                    "UserFilters": [
+                        {
+                            "ColumnName": "Change",
+                            "UserFilterUids": [
+                                "Positive"
+                            ]
+                        }
+                    ],
+                    "RangeExpressions": []
+                }
+            },
+            {
+                "Uid": "d7a1b234-9fec-4792-a54c-e3538d82c696",
+                "ColumnId": "Change",
+                "Style": {
+                    "BackColor": null,
+                    "ForeColor": "#ff0000",
+                    "FontWeight": 0,
+                    "FontStyle": 0,
+                    "FontSize": null
+                },
+                "ConditionalStyleScope": 0,
+                "Expression": {
+                    "ColumnDisplayValuesExpressions": [],
+                    "ColumnRawValuesExpressions": [],
+                    "UserFilters": [
+                        {
+                            "ColumnName": "Change",
+                            "UserFilterUids": [
+                                "Negative"
+                            ]
+                        }
+                    ],
+                    "RangeExpressions": []
+                }
+            }
+        ]
+    }
 }

@@ -1,5 +1,6 @@
 import { IDataSetConfiguration } from "../../IDataSetConfiguration";
 import * as Helper from "../../Helper"
+import * as HelperAgGrid from "../../HelperAgGrid"
 
 export var PriceBlotterFX: IDataSetConfiguration = {
     name: "Price Blotter FX",
@@ -13,16 +14,16 @@ export var PriceBlotterFX: IDataSetConfiguration = {
             if (firstRow.hasOwnProperty(p)) {
                 if (p === PriceBlotterFX.primaryKey) {
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: false });
-           //     } else if (p === 'Close' || p === 'Change' || p === 'Price' || p === 'Bid' || p === 'Ask' || p === 'YearHigh' || p === 'DayHigh' || p === 'YearLow' || p === 'DayLow') {
-           //         schema.push({ headerName: Helper.capitalize(p), field: p, cellRenderer: decimalPlaceCellRenderer, editable: false });
+                    //     } else if (p === 'Close' || p === 'Change' || p === 'Price' || p === 'Bid' || p === 'Ask' || p === 'YearHigh' || p === 'DayHigh' || p === 'YearLow' || p === 'DayLow') {
+                    //         schema.push({ headerName: Helper.capitalize(p), field: p, cellRenderer: decimalPlaceCellRenderer, editable: false });
                 } else if (p === 'RowId') {
                     // do nothing!  schema.push({ headerName: Helper.capitalize(p), field: p, cellRenderer: twoDecimalPlaceCellRenderer });
                 } else if (p === 'BidOfferSpread') { // only editable column
-                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: true,  cellClass: 'number-cell' });
+                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: true, cellClass: 'number-cell' });
                 } else if (p === "Type") {
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: false });
                 } else {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: false, cellRenderer: decimalPlaceCellRenderer, cellClass: 'number-cell' });
+                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: false, cellRenderer: HelperAgGrid.decimalPlaceRendereragGrid(2,4), cellClass: 'number-cell' });
                 }
             }
         }
@@ -46,6 +47,7 @@ export var PriceBlotterFX: IDataSetConfiguration = {
                 let columnName = "Price";
                 let initialNewValue = grid.api.getValue(columnName, rowNode);
                 let newValue = Helper.roundTo4Dp(initialNewValue + numberToAdd);
+                newValue = Helper.checkPriceIsPostive(newValue);                
                 rowNode.setDataValue(columnName, newValue)
                 PriceBlotterFX.ActionWhenRecordUpdatedOrEdited(rowNode)
             }
@@ -92,15 +94,3 @@ export var PriceBlotterFX: IDataSetConfiguration = {
 }
 
 
-var decimalPlaceFormatter = new Intl.NumberFormat('en-GB', {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 4
-});
-
-function decimalPlaceCellRenderer(params: any) {
-    if (params.value) {
-        return decimalPlaceFormatter.format(params.value)
-    } else {
-        return null;
-    }
-}
