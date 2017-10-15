@@ -18,6 +18,8 @@ export var PriceBlotterCommodity: IDataSetConfiguration = {
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: false });
                 } else if (p === 'BidOfferSpread') { // only editable column
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: true, cellClass: 'number-cell' });
+                } else if (p === 'Volume') { // no decimal places required
+                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: false, cellClass: 'number-cell' });
                 } else {
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: false, cellRenderer: HelperAgGrid.decimalPlaceRendereragGrid(2, 4), cellClass: 'number-cell' });
                 }
@@ -78,6 +80,10 @@ export var PriceBlotterCommodity: IDataSetConfiguration = {
         let ytdPercentChange: number = (yearChange / yearStart) * 100;
         record.setDataValue("YTD%Change", ytdPercentChange)
 
+        // Increment Volume by 1
+        let volume = record.gridApi.getValue("Volume", record);
+        volume = volume + 1;
+        record.setDataValue("Volume", volume)
 
         // Check if need to change High and Low prices
         let dayHigh = record.gridApi.getValue("DayHigh", record);

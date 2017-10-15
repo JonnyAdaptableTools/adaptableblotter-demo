@@ -36,7 +36,7 @@
     "ConditionalStyle": {
         "ConditionalStyleConditions": [
             {
-                "Uid": "f72f6f63-3c4a-4ed1-87d0-faf0f62bf44d",
+                "Uid": "2144a418-bc26-4437-bc46-01ac1f599647",
                 "ColumnId": "Change",
                 "Style": {
                     "BackColor": null,
@@ -61,7 +61,7 @@
                 }
             },
             {
-                "Uid": "d7a1b234-9fec-4792-a54c-e3538d82c696",
+                "Uid": "4fa4409f-3f50-4e39-90d4-5ac05f89b2g3",
                 "ColumnId": "Change",
                 "Style": {
                     "BackColor": null,
@@ -77,6 +77,106 @@
                     "UserFilters": [
                         {
                             "ColumnName": "Change",
+                            "UserFilterUids": [
+                                "Negative"
+                            ]
+                        }
+                    ],
+                    "RangeExpressions": []
+                }
+            },
+            {
+                "Uid": "2144a418-bc26-4437-bc46-01ac1f597658",
+                "ColumnId": "%Change",
+                "Style": {
+                    "BackColor": null,
+                    "ForeColor": "#008000",
+                    "FontWeight": 0,
+                    "FontStyle": 0,
+                    "FontSize": null
+                },
+                "ConditionalStyleScope": 0,
+                "Expression": {
+                    "ColumnDisplayValuesExpressions": [],
+                    "ColumnRawValuesExpressions": [],
+                    "UserFilters": [
+                        {
+                            "ColumnName": "%Change",
+                            "UserFilterUids": [
+                                "Positive"
+                            ]
+                        }
+                    ],
+                    "RangeExpressions": []
+                }
+            },
+            {
+                "Uid": "4fa4409f-3f50-4e39-90d4-5ac05f89a1fc",
+                "ColumnId": "%Change",
+                "Style": {
+                    "BackColor": null,
+                    "ForeColor": "#ff0000",
+                    "FontWeight": 0,
+                    "FontStyle": 0,
+                    "FontSize": null
+                },
+                "ConditionalStyleScope": 0,
+                "Expression": {
+                    "ColumnDisplayValuesExpressions": [],
+                    "ColumnRawValuesExpressions": [],
+                    "UserFilters": [
+                        {
+                            "ColumnName": "%Change",
+                            "UserFilterUids": [
+                                "Negative"
+                            ]
+                        }
+                    ],
+                    "RangeExpressions": []
+                }
+            },
+            {
+                "Uid": "f3460dd3-fa51-4d4f-bc6c-dd65c5b52cf4",
+                "ColumnId": "YTD%Change",
+                "Style": {
+                    "BackColor": null,
+                    "ForeColor": "#008000",
+                    "FontWeight": 0,
+                    "FontStyle": 0,
+                    "FontSize": null
+                },
+                "ConditionalStyleScope": 0,
+                "Expression": {
+                    "ColumnDisplayValuesExpressions": [],
+                    "ColumnRawValuesExpressions": [],
+                    "UserFilters": [
+                        {
+                            "ColumnName": "YTD%Change",
+                            "UserFilterUids": [
+                                "Positive"
+                            ]
+                        }
+                    ],
+                    "RangeExpressions": []
+                }
+            },
+            {
+                "Uid": "2ad6713a-8119-4a2f-80ef-0b8cb140de80",
+                "ColumnId": "YTD%Change",
+                "Style": {
+                    "BackColor": null,
+                    "ForeColor": "#ff0000",
+                    "FontWeight": 0,
+                    "FontStyle": 0,
+                    "FontSize": null
+                },
+                "ConditionalStyleScope": 0,
+                "Expression": {
+                    "ColumnDisplayValuesExpressions": [],
+                    "ColumnRawValuesExpressions": [],
+                    "UserFilters": [
+                        {
+                            "ColumnName": "YTD%Change",
                             "UserFilterUids": [
                                 "Negative"
                             ]
