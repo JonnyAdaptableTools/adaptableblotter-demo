@@ -45,7 +45,7 @@ export function MakeAllRecordsColumnsDateProperDates(data: any[]) {
         for (let prop in record) {
             //we convert all columns where there is date in the name header to proper Date objects
             if (record.hasOwnProperty(prop) && prop.match(/date/i)) {
-        //        record[prop] = ConvertExcelDate(record[prop]);
+                record[prop] = ConvertExcelDate(record[prop]);
             }
         }
         // record.MaturityDate = Helper.ConvertExcelDate(record.MaturityDate);

@@ -1,5 +1,6 @@
 import { IDataSetConfiguration } from "../../IDataSetConfiguration";
 import * as Helper from "../../Helper"
+import * as HelperHypergrid from "../../HelperHypergrid"
 
 export var NorthwindOrders: IDataSetConfiguration = {
     name: "Northwind Orders",
@@ -27,16 +28,9 @@ export var NorthwindOrders: IDataSetConfiguration = {
             }
             return grid.cellEditors.create(editorName, options);
         }
-          // // Add format for Order, Required, Shipped date columns
-          behavior.setColumnProperties(5, {
-            format: 'shortDateFormat'
-        });
-          behavior.setColumnProperties(6, {
-            format: 'shortDateFormat'
-        });
-          behavior.setColumnProperties(7, {
-            format: 'shortDateFormat'
-        });
+         
+        // Add format for date columns
+        HelperHypergrid.FormatDateColumns([5, 6, 7], behavior)
     },
     tickData: (grid: any) => {
 

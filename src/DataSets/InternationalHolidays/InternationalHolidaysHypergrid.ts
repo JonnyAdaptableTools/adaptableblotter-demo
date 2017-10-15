@@ -1,5 +1,6 @@
 import { IDataSetConfiguration } from "../../IDataSetConfiguration";
 import * as Helper from "../../Helper"
+import * as HelperHypergrid from "../../HelperHypergrid"
 
 export var InternationalHolidays: IDataSetConfiguration = {
     name: "International Holidays",
@@ -27,10 +28,8 @@ export var InternationalHolidays: IDataSetConfiguration = {
             }
             return grid.cellEditors.create(editorName, options);
         }
-          // // Add format for Date column
-          behavior.setColumnProperties(1, {
-            format: 'shortDateFormat'
-        });
+     
+        HelperHypergrid.FormatDateColumns([1], behavior)
     },
     tickData: (grid: any) => {
 

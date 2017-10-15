@@ -1,5 +1,6 @@
 import { IDataSetConfiguration } from "../../IDataSetConfiguration";
 import * as Helper from "../../Helper"
+import * as HelperHypergrid from "../../HelperHypergrid"
 
 export var TradeBlotterCDS: IDataSetConfiguration = {
     name: "Trade Blotter CDS",
@@ -27,6 +28,8 @@ export var TradeBlotterCDS: IDataSetConfiguration = {
             }
             return grid.cellEditors.create(editorName, options);
         }
+        HelperHypergrid.FormatDateColumns([1, 2, 7], behavior)
+        HelperHypergrid.FormatCurrencyColumns([4], behavior)
     },
     tickData: (grid: any) => {
 

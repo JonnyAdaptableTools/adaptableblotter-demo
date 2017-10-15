@@ -32,6 +32,20 @@ export class HypergridDemo implements IDemo {
                     maximumFractionDigits: 0
                 }));
 
+                this.grid.localization.add('twoDPFormat', new this.grid.localization.NumberFormatter('en-US', {
+                    style: 'decimal',
+                    minimumFractionDigits: 0,
+                    maximumFractionDigits: 2
+                }));
+               
+                this.grid.localization.add('fourDPFormat', new this.grid.localization.NumberFormatter('en-US', {
+                    style: 'decimal',
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 4
+                }));
+
+                
+
                 var shortDateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
                 this.grid.localization.add('shortDateFormat', new this.grid.localization.DateFormatter('en-EN', shortDateOptions));
 

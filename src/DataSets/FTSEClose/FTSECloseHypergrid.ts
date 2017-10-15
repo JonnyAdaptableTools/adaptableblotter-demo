@@ -1,5 +1,6 @@
 import { IDataSetConfiguration } from "../../IDataSetConfiguration";
 import * as Helper from "../../Helper"
+import * as HelperHypergrid from "../../HelperHypergrid"
 
 export var FTSEClose: IDataSetConfiguration = {
     name: "FTSE Close",
@@ -28,10 +29,7 @@ export var FTSEClose: IDataSetConfiguration = {
             return grid.cellEditors.create(editorName, options);
         }
 
-          // // Add format for CloseDate column
-          behavior.setColumnProperties(0, {
-            format: 'shortDateFormat'
-        });
+        HelperHypergrid.FormatDateColumns([0], behavior)
     },
     tickData: (grid: any) => {
 

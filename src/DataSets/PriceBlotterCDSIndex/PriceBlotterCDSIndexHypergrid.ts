@@ -1,5 +1,6 @@
 import { IDataSetConfiguration } from "../../IDataSetConfiguration";
 import * as Helper from "../../Helper"
+import * as HelperHypergrid from "../../HelperHypergrid"
 
 export var PriceBlotterCDSIndex: IDataSetConfiguration = {
     name: "Price Blotter CDSIndex",
@@ -28,22 +29,8 @@ export var PriceBlotterCDSIndex: IDataSetConfiguration = {
             return grid.cellEditors.create(editorName, options);
         }
 
-          // // Add format for Maturity and Updated Date column
-          behavior.setColumnProperties(10, {
-            format: 'shortDateFormat'
-        });
-          behavior.setColumnProperties(11, {
-            format: 'shortDateFormat'
-        });
-          behavior.setColumnProperties(12, {
-            format: 'shortDateFormat'
-        });
-          behavior.setColumnProperties(13, {
-            format: 'shortDateFormat'
-        });
-          behavior.setColumnProperties(16, {
-            format: 'shortDateFormat'
-        });
+        HelperHypergrid.FormatDateColumns([10, 11, 12, 13, 16], behavior)
+       // HelperHypergrid.FormatDecimalColumns([2, 3, 4, 5, 6, 7, 8, 9], 4, behavior)
     },
     tickData: (grid: any) => {
 

@@ -1,5 +1,6 @@
 import { IDataSetConfiguration } from "../../IDataSetConfiguration";
 import * as Helper from "../../Helper"
+import * as HelperHypergrid from "../../HelperHypergrid"
 
 export var PriceBlotterBond: IDataSetConfiguration = {
     name: "Price Blotter Bond",
@@ -31,10 +32,8 @@ export var PriceBlotterBond: IDataSetConfiguration = {
             }
             return grid.cellEditors.create(editorName, options);
         }
-          // // Add format for MaturityDate column
-          behavior.setColumnProperties(4, {
-            format: 'shortDateFormat'
-        });
+        HelperHypergrid.FormatDateColumns([4], behavior)
+        HelperHypergrid.FormatDecimalColumns([8, 17, 18], 4, behavior)
     },
     tickData: (grid: any) => {
         let numberToAdd: number = Helper.generateRandomInt(1, 2) == 1 ? -0.5 : 0.5;

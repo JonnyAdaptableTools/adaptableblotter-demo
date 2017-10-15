@@ -1,5 +1,6 @@
 import { IDataSetConfiguration } from "../../IDataSetConfiguration";
 import * as Helper from "../../Helper"
+import * as HelperHypergrid from "../../HelperHypergrid"
 
 export var TradeBlotterBond: IDataSetConfiguration = {
     name: "Trade Blotter Bond",
@@ -28,22 +29,8 @@ export var TradeBlotterBond: IDataSetConfiguration = {
             return grid.cellEditors.create(editorName, options);
         }
 
-        // // Add format for TradeDate column
-        behavior.setColumnProperties(1, {
-            format: 'shortDateFormat'
-        });
-        // // Add format for EffectiveDate column
-        behavior.setColumnProperties(2, {
-            format: 'shortDateFormat'
-        });
-        // // Add format for Notional column
-        behavior.setColumnProperties(3, {
-            format: 'USDCurrencyFormat'
-        });
-        // // Add format for MaturityDate column
-        behavior.setColumnProperties(6, {
-            format: 'shortDateFormat'
-        });
+        HelperHypergrid.FormatDateColumns([1, 2,  6], behavior)
+        HelperHypergrid.FormatCurrencyColumns([3], behavior)
     },
     tickData: (grid: any) => {
 

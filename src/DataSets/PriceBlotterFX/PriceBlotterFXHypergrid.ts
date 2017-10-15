@@ -1,5 +1,6 @@
 import { IDataSetConfiguration } from "../../IDataSetConfiguration";
 import * as Helper from "../../Helper"
+import * as HelperHypergrid from "../../HelperHypergrid"
 
 export var PriceBlotterFX: IDataSetConfiguration = {
     name: "Price Blotter FX",
@@ -27,6 +28,7 @@ export var PriceBlotterFX: IDataSetConfiguration = {
             }
             return grid.cellEditors.create(editorName, options);
         }
+        HelperHypergrid.FormatDecimalColumns([3, 4, 5, 6, 7, 8, 9, 10], 4, behavior)
     },
     tickData: (grid: any) => {
 
