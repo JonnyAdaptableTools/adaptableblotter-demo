@@ -27,6 +27,11 @@ export var FTSEClose: IDataSetConfiguration = {
             }
             return grid.cellEditors.create(editorName, options);
         }
+
+          // // Add format for CloseDate column
+          behavior.setColumnProperties(0, {
+            format: 'shortDateFormat'
+        });
     },
     tickData: (grid: any) => {
 

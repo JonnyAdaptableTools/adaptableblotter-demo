@@ -27,6 +27,10 @@ export var InternationalHolidays: IDataSetConfiguration = {
             }
             return grid.cellEditors.create(editorName, options);
         }
+          // // Add format for Date column
+          behavior.setColumnProperties(1, {
+            format: 'shortDateFormat'
+        });
     },
     tickData: (grid: any) => {
 

@@ -27,14 +27,43 @@ export var PriceBlotterCDSIndex: IDataSetConfiguration = {
             }
             return grid.cellEditors.create(editorName, options);
         }
+
+          // // Add format for Maturity and Updated Date column
+          behavior.setColumnProperties(10, {
+            format: 'shortDateFormat'
+        });
+          behavior.setColumnProperties(11, {
+            format: 'shortDateFormat'
+        });
+          behavior.setColumnProperties(12, {
+            format: 'shortDateFormat'
+        });
+          behavior.setColumnProperties(13, {
+            format: 'shortDateFormat'
+        });
+          behavior.setColumnProperties(16, {
+            format: 'shortDateFormat'
+        });
     },
     tickData: (grid: any) => {
 
     },
     manipulateInitialData(data: any[]) {
         Helper.MakeAllRecordsColumnsDateProperDates(data);
+        MakeMaturityColumnsProperDates(data);        
     },
     ActionWhenRecordUpdatedOrEdited(record:any){
         
     }
+}
+
+
+function MakeMaturityColumnsProperDates(data: any[]) {
+    data.forEach(record => {
+        for (let prop in record) {
+            if (record.hasOwnProperty(prop) && prop.match(/Maturity/i)) {
+                record[prop] = Helper.ConvertExcelDate(record[prop]);
+            }
+        }
+    });
 }

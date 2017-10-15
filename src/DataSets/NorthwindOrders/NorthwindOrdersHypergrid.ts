@@ -27,6 +27,16 @@ export var NorthwindOrders: IDataSetConfiguration = {
             }
             return grid.cellEditors.create(editorName, options);
         }
+          // // Add format for Order, Required, Shipped date columns
+          behavior.setColumnProperties(5, {
+            format: 'shortDateFormat'
+        });
+          behavior.setColumnProperties(6, {
+            format: 'shortDateFormat'
+        });
+          behavior.setColumnProperties(7, {
+            format: 'shortDateFormat'
+        });
     },
     tickData: (grid: any) => {
 

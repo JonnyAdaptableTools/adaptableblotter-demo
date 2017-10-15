@@ -38,4 +38,3 @@ export var FTSEClose: IDataSetConfiguration = {
 
     }
 }
-

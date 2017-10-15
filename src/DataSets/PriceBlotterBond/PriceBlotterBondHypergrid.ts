@@ -31,6 +31,10 @@ export var PriceBlotterBond: IDataSetConfiguration = {
             }
             return grid.cellEditors.create(editorName, options);
         }
+          // // Add format for MaturityDate column
+          behavior.setColumnProperties(4, {
+            format: 'shortDateFormat'
+        });
     },
     tickData: (grid: any) => {
         let numberToAdd: number = Helper.generateRandomInt(1, 2) == 1 ? -0.5 : 0.5;
@@ -53,4 +57,7 @@ export var PriceBlotterBond: IDataSetConfiguration = {
         record["Bid"] = Helper.roundTo4Dp(record["Price"] - (record["BidOfferSpread"] / 2))
         record["Ask"] = Helper.roundTo4Dp(record["Price"] + (record["BidOfferSpread"] / 2))
     }
+
+
 }
+
