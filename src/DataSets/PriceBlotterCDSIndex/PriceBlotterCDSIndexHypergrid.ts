@@ -29,8 +29,8 @@ export var PriceBlotterCDSIndex: IDataSetConfiguration = {
             return grid.cellEditors.create(editorName, options);
         }
 
-        HelperHypergrid.FormatDateColumns([10, 11, 12, 13, 16], behavior)
-       // HelperHypergrid.FormatDecimalColumns([2, 3, 4, 5, 6, 7, 8, 9], 4, behavior)
+        HelperHypergrid.FormatColumns([10, 11, 12, 13, 16], behavior, "shortDateFormat")
+        // HelperHypergrid.FormatDecimalColumns([2, 3, 4, 5, 6, 7, 8, 9], 4, behavior)
     },
     tickData: (grid: any) => {
 

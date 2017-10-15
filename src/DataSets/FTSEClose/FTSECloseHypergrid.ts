@@ -29,7 +29,7 @@ export var FTSEClose: IDataSetConfiguration = {
             return grid.cellEditors.create(editorName, options);
         }
 
-        HelperHypergrid.FormatDateColumns([0], behavior)
+        HelperHypergrid.FormatColumns([0], behavior, "shortDateFormat")
     },
     tickData: (grid: any) => {
 

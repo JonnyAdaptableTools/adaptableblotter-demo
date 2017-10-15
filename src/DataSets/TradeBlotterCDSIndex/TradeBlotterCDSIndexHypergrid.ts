@@ -29,8 +29,8 @@ export var TradeBlotterCDSIndex: IDataSetConfiguration = {
             return grid.cellEditors.create(editorName, options);
         }
 
-            HelperHypergrid.FormatDateColumns([1, 2, 6, 12, 13, 14, 15], behavior)
-            HelperHypergrid.FormatCurrencyColumns([3], behavior)
+        HelperHypergrid.FormatColumns([1, 2, 6, 12, 13, 14, 15], behavior, "shortDateFormat")
+        HelperHypergrid.FormatColumns([3], behavior, "USDCurrencyFormat")
     },
     tickData: (grid: any) => {
 

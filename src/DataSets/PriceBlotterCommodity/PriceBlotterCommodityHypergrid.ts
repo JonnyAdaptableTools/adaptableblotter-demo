@@ -29,7 +29,7 @@ export var PriceBlotterCommodity: IDataSetConfiguration = {
             return grid.cellEditors.create(editorName, options);
         }
 
-        HelperHypergrid.FormatDecimalColumns([3, 4, 5, 7, 8, 9, 10,11, 12, 13, 14], 4, behavior)
+        HelperHypergrid.FormatColumns([3, 4, 5, 7, 8, 9, 10,11, 12, 13, 14], behavior, "fourDPFormat")
     },
     tickData: (grid: any) => {
         let randomDouble: number = Helper.generateRandomDouble();

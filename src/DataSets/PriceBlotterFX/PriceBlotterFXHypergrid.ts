@@ -28,7 +28,7 @@ export var PriceBlotterFX: IDataSetConfiguration = {
             }
             return grid.cellEditors.create(editorName, options);
         }
-        HelperHypergrid.FormatDecimalColumns([3, 4, 5, 6, 7, 8, 9, 10], 4, behavior)
+        HelperHypergrid.FormatColumns([3, 4, 5, 6, 7, 8, 9, 10], behavior, "fourDPFormat")
     },
     tickData: (grid: any) => {
         let numberToAdd: number = Helper.generateRandomInt(1, 2) == 1 ? -0.5 : 0.5;

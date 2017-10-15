@@ -29,7 +29,7 @@ export var InternationalHolidays: IDataSetConfiguration = {
             return grid.cellEditors.create(editorName, options);
         }
      
-        HelperHypergrid.FormatDateColumns([1], behavior)
+        HelperHypergrid.FormatColumns([1], behavior, "shortDateFormat")
     },
     tickData: (grid: any) => {
 
