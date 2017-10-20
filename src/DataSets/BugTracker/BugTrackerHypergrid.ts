@@ -1,10 +1,9 @@
 import { IDataSetConfiguration } from "../../IDataSetConfiguration";
 import * as Helper from "../../Helper"
-import * as HelperHypergrid from "../../HelperHypergrid"
 
-export var PriceBlotterCDSIndex: IDataSetConfiguration = {
-    name: "Price Blotter CDSIndex",
-    primaryKey: "REDCode",
+export var BugTracker: IDataSetConfiguration = {
+    name: "Bug Tracker",
+    primaryKey: "ID",
     getSchema: (data) => {
         let schema = [],
             firstRow = Array.isArray(data) && data[0];
@@ -23,35 +22,19 @@ export var PriceBlotterCDSIndex: IDataSetConfiguration = {
         //For all columns except primarykey we enable the editor
         behavior.dataModel.getCellEditorAt = function (columnIndex: any, rowIndex: any, declaredEditorName: any, options: any) {
             let editorName = declaredEditorName;
-            if (options.column.name !== PriceBlotterCDSIndex.primaryKey) {
+            if (options.column.name !== BugTracker.primaryKey) {
                 editorName = 'textfield';
             }
             return grid.cellEditors.create(editorName, options);
         }
-
-        HelperHypergrid.FormatColumns([10, 11, 12, 13], behavior, "shortDateFormat")
-        HelperHypergrid.FormatColumns([16], behavior, "longDateFormat")
-        // HelperHypergrid.FormatDecimalColumns([2, 3, 4, 5, 6, 7, 8, 9], 4, behavior)
     },
     tickData: (grid: any) => {
 
     },
     manipulateInitialData(data: any[]) {
         Helper.MakeAllRecordsColumnsDateProperDates(data);
-        MakeMaturityColumnsProperDates(data);        
     },
     ActionWhenRecordUpdatedOrEdited(record:any){
         
     }
-}
-
-
-function MakeMaturityColumnsProperDates(data: any[]) {
-    data.forEach(record => {
-        for (let prop in record) {
-            if (record.hasOwnProperty(prop) && prop.match(/Maturity/i)) {
-                record[prop] = Helper.ConvertExcelDate(record[prop]);
-            }
-        }
-    });
 }

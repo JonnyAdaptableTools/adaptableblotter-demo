@@ -48,6 +48,9 @@ export class HypergridDemo implements IDemo {
 
                 var shortDateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
                 this.grid.localization.add('shortDateFormat', new this.grid.localization.DateFormatter('en-EN', shortDateOptions));
+              
+                var longDateOptions = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'short' };
+                this.grid.localization.add('longDateFormat', new this.grid.localization.DateFormatter('en-EN', longDateOptions));
 
                 //Make the data to tick every 0.5s
                 setInterval(() =>

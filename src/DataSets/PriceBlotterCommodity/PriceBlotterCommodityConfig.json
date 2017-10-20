@@ -1,4 +1,33 @@
 {
+    "Filter": {
+        "UserFilters": [
+            {
+                "Uid": "85b0def4-5a75-40c3-a5a8-fb3f8582d727",
+                "FriendlyName": "wank",
+                "Description": "([Day Low] > 5)",
+                "DataType": 1,
+                "Expression": {
+                    "ColumnDisplayValuesExpressions": [],
+                    "ColumnRawValuesExpressions": [],
+                    "UserFilters": [],
+                    "RangeExpressions": [
+                        {
+                            "ColumnName": "DayLow",
+                            "Ranges": [
+                                {
+                                    "Operand1": "5",
+                                    "Operand2": "",
+                                    "Operator": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "IsPredefined": false
+            }
+        ],
+        "ColumnFilters": []
+    },
     "FlashingCell": {
         "FlashingColumns": [
             {
