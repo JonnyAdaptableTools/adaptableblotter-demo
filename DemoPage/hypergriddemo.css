@@ -12,13 +12,3 @@
     background-color: black !important;
     width: 17px !important;
 }
-
-div.topBar {
-    background-color: white;
-    height: 50px;
-    text-align: left;          
-}
-h2 {
-    display: inline;
-    vertical-align: middle
-}

@@ -15,6 +15,7 @@
 
     <!--CSS for the demo-->
     <link href="kendodemo.css" rel="stylesheet" />
+    <link href="demo.css" rel="stylesheet" />
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="ExtLibs/bootstrap/css/bootstrap.min.css">
@@ -22,42 +23,47 @@
 
 <body>
     <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                    <a class="navbar-left"><img src="http://images8.webydo.com/92/9227175/3958/FB1B6AA0-1649-8F4A-7ED2-1F1B38CCFC1A.png" height="50"></a>
-                <div class="navbar-header">
-                <a class="navbar-brand" >Data Selector</a>
+        <div class="topBar">
+            <span>
+                &nbsp;&nbsp; &nbsp;&nbsp;
+                <img src="http://images8.webydo.com/92/9227175/3958/FB1B6AA0-1649-8F4A-7ED2-1F1B38CCFC1A.png" height="50">
+                <h2>&nbsp;&nbsp;AdaptableBlotter.JS - Demo Application&nbsp;&nbsp;</h2>
+                <img src="http://images8.webydo.com/92/9227175/3958/FB1B6AA0-1649-8F4A-7ED2-1F1B38CCFC1A.png" height="50">
+            </span>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <select onchange="saveData()" class="form-control" id="dataset_select">
+                        <option value="Select">Select a Dataset</option>
+                    </select>
                 </div>
-            
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <form class="navbar-form navbar-left">
-                    <div class="form-group">
-                            <select onchange="saveData()" class="form-control" id="dataset_select">
-                                    <option value="Select">Select a Dataset</option> 
-                                    </select>
-                    </div>
-                    <button class="btn btn-default" onclick="window.location.reload()">Regenerate Blotter</button>
-                </form>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
-        <script>
-            function saveData() {
-                var datasetElement = document.getElementById("dataset_select");
-                localStorage.setItem(datasetElement.id, datasetElement.value);
-            }
-        </script>
+                <button class="btn btn-default" onclick="window.location.reload()">Regenerate Blotter</button>
+            </form>
+        </div>
+        <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <script>
+        function saveData() {
+            var datasetElement = document.getElementById("dataset_select");
+            localStorage.setItem(datasetElement.id, datasetElement.value);
+        }
+    </script>
     <div id="content" style="margin-top:15px;margin-left:15px;height:85px;"></div>
     <div id="grid"></div>
     <% if (htmlWebpackPlugin.options.harnessJs) { %>
-    <script src="<%= htmlWebpackPlugin.options.harnessJs %>" type="text/javascript"></script>
-    <% } %>
-    <% if (htmlWebpackPlugin.options.demoJs) { %>
-    <script src="<%= htmlWebpackPlugin.options.demoJs %>" type="text/javascript"></script>
-    <% } %>
-    <script>
-        var blotter = new kendodemo.KendoDemo("grid","content")
-    </script>
+        <script src="<%= htmlWebpackPlugin.options.harnessJs %>" type="text/javascript"></script>
+        <% } %>
+            <% if (htmlWebpackPlugin.options.demoJs) { %>
+                <script src="<%= htmlWebpackPlugin.options.demoJs %>" type="text/javascript"></script>
+                <% } %>
+                    <script>
+                        var blotter = new kendodemo.KendoDemo("grid", "content")
+                    </script>
 
 </body>
 
