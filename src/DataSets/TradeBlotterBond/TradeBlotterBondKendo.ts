@@ -16,11 +16,9 @@ export var TradeBlotterBond: IDataSetConfiguration = {
                 }
                 else if (p === 'Notional') {
                     schema.push({ title: Helper.capitalize(p), field: p, attributes: { class: "numberColumn" }, format: "{0:c0}" });
-                }
-                else if (p === 'TradeDate' || p === 'EffectiveDate' || p === 'MaturityDate') {
-                    schema.push({ title: Helper.capitalize(p), field: p, format: "{0:dd MMM yyyy}" });
-                }
-                else {
+                } else if (p.includes("Date")) {
+                    schema.push({ title: Helper.capitalize(p), field: p, format: "{0:dd MMMM yyyy}" });
+                } else {
                     schema.push({ title: Helper.capitalize(p), field: p });
                 }
             }

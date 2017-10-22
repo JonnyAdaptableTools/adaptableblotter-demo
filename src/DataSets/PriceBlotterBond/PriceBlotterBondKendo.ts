@@ -15,12 +15,12 @@ export var PriceBlotterBond: IDataSetConfiguration = {
                 if (p === PriceBlotterBond.primaryKey) {
                     schema.push({ title: Helper.capitalize(p), field: p, attributes: { class: "numberColumn" } });
                 }
-                else if (p === 'Price' || p === 'Bid' || p === 'Ask') {
-                    schema.push({ title: Helper.capitalize(p), field: p, attributes: { class: "numberColumn" } });
-                }
-                else if (p === 'BidOfferSpread') {
-                    schema.push({ title: Helper.capitalize(p), field: p, attributes: { class: "numberColumn" }, editor:HelperKendo.DecimalsEditorWith4DecimalsKendo });
-                }
+           //     else if (p === 'Price' || p === 'Bid' || p === 'Ask') {
+             //       schema.push({ title: Helper.capitalize(p), field: p, attributes: { class: "numberColumn" } });
+           //     }
+         //       else if (p === 'BidOfferSpread') {
+             //       schema.push({ title: Helper.capitalize(p), field: p, attributes: { class: "numberColumn" }, editor:HelperKendo.DecimalsEditorWith4DecimalsKendo });
+          //      }
                 else {
                     schema.push({ title: Helper.capitalize(p), field: p });
                 }

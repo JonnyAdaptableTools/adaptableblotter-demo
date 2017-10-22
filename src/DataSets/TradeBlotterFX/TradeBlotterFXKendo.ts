@@ -13,8 +13,11 @@ export var TradeBlotterFX: IDataSetConfiguration = {
             if (firstRow.hasOwnProperty(p)) {
                 if (p === TradeBlotterFX.primaryKey) {
                     schema.push({ title: Helper.capitalize(p), field: p, attributes: { class: "numberColumn" } });
-                }
-                else {
+                } else if (p.includes("Date")) {
+                    schema.push({ title: Helper.capitalize(p), field: p, format: "{0:dd MMMM yyyy}" }  );
+                } else if (p.includes('Amount')||p==='Rate') {
+                    schema.push({ title: Helper.capitalize(p), field: p,  attributes: { class: "numberColumn" } });
+                }else {
                     schema.push({ title: Helper.capitalize(p), field: p });
                 }
             }
@@ -34,3 +37,4 @@ export var TradeBlotterFX: IDataSetConfiguration = {
         
     }
 }
+

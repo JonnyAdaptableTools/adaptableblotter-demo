@@ -12,10 +12,16 @@ export var PriceBlotterFX: IDataSetConfiguration = {
         for (let p in firstRow) {
             if (firstRow.hasOwnProperty(p)) {
                 if (p === PriceBlotterFX.primaryKey) {
-                    schema.push({ title: Helper.capitalize(p), field: p, attributes: { class: "numberColumn" } });
-                }
-                else {
                     schema.push({ title: Helper.capitalize(p), field: p });
+                }
+                else if (p === 'RowId') {
+                    // do nothing!  schema.push({ headerName: Helper.capitalize(p), field: p, cellRenderer: twoDecimalPlaceCellRenderer });
+                } else if (p === 'BidOfferSpread') { // only editable column
+                    schema.push({ title: Helper.capitalize(p), field: p, editable: false, attributes: { class: "numberColumn" } , format: '{0:0.00}'});
+                } else if (p === "Type") {
+                    schema.push({ title: "Helper.capitalize(p)", field: p, editable: false });
+                } else {
+                    schema.push({ title: Helper.capitalize(p), field: p, editable: false, attributes: { class: "numberColumn" }, format: '{0:0.0000}' });
                 }
             }
         }
@@ -30,7 +36,7 @@ export var PriceBlotterFX: IDataSetConfiguration = {
     manipulateInitialData(data: any[]) {
         Helper.MakeAllRecordsColumnsDateProperDates(data);
     },
-    ActionWhenRecordUpdatedOrEdited(record:any){
-        
+    ActionWhenRecordUpdatedOrEdited(record: any) {
+
     }
 }

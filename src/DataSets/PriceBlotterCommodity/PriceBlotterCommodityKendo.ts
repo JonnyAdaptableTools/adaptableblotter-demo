@@ -12,7 +12,7 @@ export var PriceBlotterCommodity: IDataSetConfiguration = {
         for (let p in firstRow) {
             if (firstRow.hasOwnProperty(p)) {
                 if (p === PriceBlotterCommodity.primaryKey) {
-                    schema.push({ title: Helper.capitalize(p), field: p, attributes: { class: "numberColumn" } });
+                    schema.push({ title: Helper.capitalize(p), field: p  });
                 }
                 else {
                     schema.push({ title: Helper.capitalize(p), field: p });
