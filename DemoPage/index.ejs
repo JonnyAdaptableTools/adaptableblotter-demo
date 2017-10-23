@@ -16,7 +16,8 @@
     <% if (htmlWebpackPlugin.options.version) { %>
       <h2>AdaptableBlotter.JS Demo</h2>
       <i>Version:
-        <%= htmlWebpackPlugin.options.version %>&nbsp;&nbsp;(<%= htmlWebpackPlugin.options.versiondate %>)
+        <%= htmlWebpackPlugin.options.version %>&nbsp;&nbsp;(
+          <%= htmlWebpackPlugin.options.versiondate %>)
       </i>
       <% } %>
         <p/>
@@ -29,13 +30,15 @@
         </p>
         <p>
           <b>Dummy Data Sets</b>
-          <br/>This demo contains 4 instances of AdaptableBlotter.JS: Telerik's Kendo grid, OpenFin's
-          Hypergrid, and 2 instances of the ag-Grid (one in non-grouped mode and one in grouped mode).
+          <br/>This demo contains 4 instances of AdaptableBlotter.JS: Telerik's Kendo grid, OpenFin's Hypergrid, and 2 instances
+          of the ag-Grid (one in non-grouped mode and one in grouped mode).
         </p>
-        <p>For each grid you can select from 13 different randomised dummy data sets to cover various life-like use cases of the Adaptable Blotter.&nbsp;&nbsp;Each
-          dummy data set ships with different predefined searches, styles, custom sorts, filters etc. as apppropriate.
+        <p>For each grid you can select from 13 different randomised dummy data sets to cover various life-like use cases of
+          the Adaptable Blotter.&nbsp;&nbsp;Each dummy data set ships with different predefined searches, styles, custom
+          sorts, filters etc. as apppropriate.
         </p>
-        <p> <i> Click a button to begin your demo...</i>
+        <p>
+          <i> Click a button to begin your demo...</i>
         </p>
         <table style="border-spacing: 20px 5px;border-collapse: separate;">
           <tr>
@@ -49,8 +52,8 @@
             </td>
             <td>
               <button style="height:110px; width:220px" class="btn btn-default" onclick="location.href='kendodemo.html' ">
-                <img src="http://www.irisclasson.com/wp-content/uploads/2012/08/telerikLogo-web-1124x449px-1024x409.png" alt=""
-                  width="118" height="48" />
+                <img src="http://www.irisclasson.com/wp-content/uploads/2012/08/telerikLogo-web-1124x449px-1024x409.png" alt="" width="118"
+                  height="48" />
                 <span>
                   <h4>Run Kendo Demo</h4>
                 </span>
@@ -74,13 +77,27 @@
             </td>
           </tr>
         </table>
-        <p><br/>
+        <p>
+          <br/>
           <b>Performance</b>
           <br/>This demo is designed to allow you to evaluate AdaptableBlotter.JS running under 'normal' conditions. Use
-          <a href="http://perf.adaptableblotter.com"
-            target="_blank">Performance Monitor</a>
+          <a href="http://perf.adaptableblotter.com" target="_blank">Performance Monitor</a>
           to test AdaptableBlotter.JS under more extreme conditions of multiple conditions and searches, tens of thousands of rows,
           and 500,000 flashing and data updates per second. </p>
+        <p>
+          <br/>
+          <b>Finsemble Demo</b>
+          <br/>We have a finsemblized demo of the Adaptable Blotter. It simulates a life like trading application
+          with a Trade, Price and Position blotter and 2-way communication between blotters and 3rd party component such as
+          ChartIQ components.
+          <br/>
+          <button class="btn btn-default" onclick="location.href='http://beta.adaptableblotter.com/finsembledemo/Adaptable-Blotter-finsemble-beta-installer.zip' ">
+              <img src="https://www.chartiq.com/wp-content/uploads/2017/05/Finsemble_LogoWhite-300x62.png" alt="" width="118" height="48" />
+              <span>
+                <h4>finsemblized Adaptable Blotter</h4>
+              </span>
+            </button>
+          <br/>You can read more on what are the features of the demo on the GitHub page : <a href="https://github.com/jonathannaim/finsemble-adaptableblotterdemo" target="_blank">Adaptable Blotter finsemble GitHub</a> </p>
         <p>
           <b>Help</b>
           <br/>If you require further information please visit our
@@ -99,8 +116,7 @@
         <p>
           <b>Source Code</b>
           <br/> The Repository for the AdaptableBlotter.JS Demo is located in
-          <a a href="https://github.com/jonathannaim/adaptableblotter-demo"
-            target="_blank">Github</a>.
+          <a a href="https://github.com/jonathannaim/adaptableblotter-demo" target="_blank">Github</a>.
         </p>
   </div>
 </body>
