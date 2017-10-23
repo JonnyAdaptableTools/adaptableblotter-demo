@@ -12,10 +12,12 @@ export var FTSEClose: IDataSetConfiguration = {
         for (let p in firstRow) {
             if (firstRow.hasOwnProperty(p)) {
                 if (p === FTSEClose.primaryKey) {
-                    schema.push({ title: Helper.capitalize(p), field: p });
+                    schema.push({ title: Helper.capitalize(p), field: p, format: "{0:dd MMMM yyyy}"  });
                 }
-                else {
-                    schema.push({ title: Helper.capitalize(p), field: p });
+                else if (p === 'ChangeOnDay' || p === 'DaySpread' ) {
+                    schema.push({ title: Helper.capitalize(p), field: p, attributes: { class: "numberColumn" }, format: '{0:0.0000}'  });
+                } else {
+                    schema.push({ title: Helper.capitalize(p), field: p , attributes: { class: "numberColumn" }});
                 }
             }
         }

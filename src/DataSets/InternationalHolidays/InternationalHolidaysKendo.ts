@@ -13,8 +13,9 @@ export var InternationalHolidays: IDataSetConfiguration = {
             if (firstRow.hasOwnProperty(p)) {
                 if (p === InternationalHolidays.primaryKey) {
                     schema.push({ title: Helper.capitalize(p), field: p, attributes: { class: "numberColumn" } });
-                }
-                else {
+                } else if (p.includes("Date")) {
+                    schema.push({ title: Helper.capitalize(p), field: p, format: "{0:dddd, dd MMMM yyyy}" });
+                } else {
                     schema.push({ title: Helper.capitalize(p), field: p });
                 }
             }
@@ -30,7 +31,7 @@ export var InternationalHolidays: IDataSetConfiguration = {
     manipulateInitialData(data: any[]) {
         Helper.MakeAllRecordsColumnsDateProperDates(data);
     },
-    ActionWhenRecordUpdatedOrEdited(record:any){
-        
+    ActionWhenRecordUpdatedOrEdited(record: any) {
+
     }
 }

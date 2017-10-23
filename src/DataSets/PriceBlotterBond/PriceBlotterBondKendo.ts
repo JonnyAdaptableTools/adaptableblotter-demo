@@ -14,14 +14,13 @@ export var PriceBlotterBond: IDataSetConfiguration = {
             if (firstRow.hasOwnProperty(p)) {
                 if (p === PriceBlotterBond.primaryKey) {
                     schema.push({ title: Helper.capitalize(p), field: p, attributes: { class: "numberColumn" } });
-                }
-           //     else if (p === 'Price' || p === 'Bid' || p === 'Ask') {
-             //       schema.push({ title: Helper.capitalize(p), field: p, attributes: { class: "numberColumn" } });
-           //     }
-         //       else if (p === 'BidOfferSpread') {
-             //       schema.push({ title: Helper.capitalize(p), field: p, attributes: { class: "numberColumn" }, editor:HelperKendo.DecimalsEditorWith4DecimalsKendo });
-          //      }
-                else {
+                } else if (p === 'Price' || p === 'Bid' || p === 'Ask') {
+                    schema.push({ title: Helper.capitalize(p), field: p, attributes: { class: "numberColumn" }, format: '{0:0.0000}' });
+                } else if (p.includes("Date")) {
+                    schema.push({ title: Helper.capitalize(p), field: p, format: "{0:dd MMMM yyyy}" }  );
+               } else if (p === 'BidOfferSpread') {
+                    schema.push({ title: Helper.capitalize(p), field: p, attributes: { class: "numberColumn" }, editor: HelperKendo.DecimalsEditorWith4DecimalsKendo });
+                } else {
                     schema.push({ title: Helper.capitalize(p), field: p });
                 }
             }
@@ -33,6 +32,7 @@ export var PriceBlotterBond: IDataSetConfiguration = {
     },
     tickData: (grid: any) => {
         let InstrumentId = Helper.generateRandomInt(0, 29);
+        /*
         grid.api.forEachNode((rowNode: any, index: number) => {
             if (rowNode.group) {
                 return;
@@ -49,6 +49,7 @@ export var PriceBlotterBond: IDataSetConfiguration = {
             rowNode.setDataValue(columnName, newValue)
             PriceBlotterBond.ActionWhenRecordUpdatedOrEdited(rowNode)
         });
+        */
     },
     manipulateInitialData(data: any[]) {
         Helper.MakeAllRecordsColumnsDateProperDates(data);

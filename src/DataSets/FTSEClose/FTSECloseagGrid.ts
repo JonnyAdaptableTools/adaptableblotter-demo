@@ -15,11 +15,10 @@ export var FTSEClose: IDataSetConfiguration = {
                 if (p === FTSEClose.primaryKey) {  // for FTSE the close date is a primary key and a date!
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: false, valueParser: HelperAgGrid.dateParseragGrid, valueGetter: HelperAgGrid.shortDateRendereragGrid(p) });
                 }
-                else if (p === 'ChangeOnDay' || p === 'DaySpread' ) {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell', cellRenderer: HelperAgGrid.decimalPlaceRendereragGrid(2,4),  editable: false });
-                }
-             else {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell',  editable: false });
+                else if (p === 'ChangeOnDay' || p === 'DaySpread') {
+                    schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell', cellRenderer: HelperAgGrid.decimalPlaceRendereragGrid(2, 4), editable: false });
+                } else {
+                    schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell', editable: false });
                 }
             }
         }

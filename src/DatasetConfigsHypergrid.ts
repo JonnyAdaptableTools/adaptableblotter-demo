@@ -17,7 +17,7 @@ import { TradeBlotterFX } from "./DataSets/TradeBlotterFX/TradeBlotterFXHypergri
 
 export var AvailableDatasetConfigs = new Map<string, IDataSetConfiguration>([
     [Contacts.name, Contacts],
-    [BugTracker.name, BugTracker],
+  //  [BugTracker.name, BugTracker],
     [FTSEClose.name, FTSEClose],
     [InternationalHolidays.name, InternationalHolidays],
     [NorthwindOrders.name, NorthwindOrders],

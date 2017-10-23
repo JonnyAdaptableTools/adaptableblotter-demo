@@ -15,8 +15,7 @@ export var TradeBlotterCDS: IDataSetConfiguration = {
                     schema.push({ title: Helper.capitalize(p), field: p, attributes: { class: "numberColumn" } });
                 } else if (p.includes("Date")) {
                     schema.push({ title: Helper.capitalize(p), field: p, format: "{0:dd MMMM yyyy}" }  );
-                }
-                else {
+                }                else {
                     schema.push({ title: Helper.capitalize(p), field: p });
                 }
             }
