@@ -3,6 +3,8 @@ export interface IDataSetConfiguration {
     name: string
     //Primary key from the data
     primaryKey: string
+    //When in group mode, data should be grouped by that field
+    groupingField?: string
     //if you need to manipulate the data before setting the datasource on the grid
     //One good example is for date columns. We want them to be Date objects which doesn;t exist in json
     manipulateInitialData: (data: any[]) => void
@@ -15,5 +17,5 @@ export interface IDataSetConfiguration {
     tickData: (grid: any) => void
     //method to be called when the record is edited by the user or updated with the TickData method
     // a good example is the computation of Bid and Ask when the Price is either updated or edited
-    ActionWhenRecordUpdatedOrEdited: (record : any) => any
+    ActionWhenRecordUpdatedOrEdited: (record: any) => any
 }

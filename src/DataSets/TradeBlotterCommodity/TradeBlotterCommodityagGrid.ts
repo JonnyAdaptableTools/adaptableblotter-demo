@@ -5,6 +5,7 @@ import * as HelperAgGrid from "../../HelperAgGrid"
 export var TradeBlotterCommodity: IDataSetConfiguration = {
     name: "Trade Blotter Commodity",
     primaryKey: "TradeId",
+    groupingField: "Counterparty",
     getSchema: (data) => {
         let schema = [],
             firstRow = Array.isArray(data) && data[0];

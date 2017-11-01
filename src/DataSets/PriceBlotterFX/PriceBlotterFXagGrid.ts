@@ -5,6 +5,7 @@ import * as HelperAgGrid from "../../HelperAgGrid"
 export var PriceBlotterFX: IDataSetConfiguration = {
     name: "Price Blotter FX",
     primaryKey: "CurrencyPair",
+    groupingField: "Type",
     getSchema: (data) => {
         let schema = [],
             firstRow = Array.isArray(data) && data[0];

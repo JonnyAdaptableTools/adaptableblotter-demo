@@ -5,6 +5,7 @@
     <title>AdaptableBlotter.JS ag-Grid Demo with grouping</title>
     <!--CSS for the demo-->
     <link href="aggridgroupingdemo.css" rel="stylesheet" />
+    <link href="demo.css" rel="stylesheet" />
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="ExtLibs/bootstrap/css/bootstrap.min.css">
     <!-- ag-Grid -->
@@ -13,21 +14,58 @@
 
 </head>
 <body>
+    <nav class="navbar navbar-inverse">
+        <div class="topBar">
+            <span>
+                &nbsp;&nbsp;  &nbsp;&nbsp;
+                <img src="http://images8.webydo.com/92/9227175/3958/FB1B6AA0-1649-8F4A-7ED2-1F1B38CCFC1A.png" height="50">
+                <h2>&nbsp;&nbsp;AdaptableBlotter.JS - Demo Application&nbsp;&nbsp;</h2>
+                <img src="http://images8.webydo.com/92/9227175/3958/FB1B6AA0-1649-8F4A-7ED2-1F1B38CCFC1A.png" height="50">
+            </span>
+        </div>
+        <div class="container-fluid">
+
+            <a class="navbar-left">
+
+            </a>
+            <div class="navbar-header">
+                <a class="navbar-brand">Data Selector</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <select onchange="saveData()" class="form-control" id="dataset_select">
+                            <option value="Select">Select a Dataset</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-default" onclick="window.location.reload()">Regenerate Blotter</button>
+                </form>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <script>
+        function saveData() {
+            var datasetElement = document.getElementById("dataset_select");
+            localStorage.setItem(datasetElement.id, datasetElement.value);
+        }
+    </script>
     <!-- Adaptable Blotter div for react and dashboard -->
     <div id="content" style="margin:15px;"></div>
     <p/>
     <!-- Grid div -->
     <div id="grid" class="ag-blue"></div>
     <% if (htmlWebpackPlugin.options.harnessJs) { %>
-    <script src="<%= htmlWebpackPlugin.options.harnessJs %>" type="text/javascript"></script>
-    <% } %>
-    <% if (htmlWebpackPlugin.options.bundleJs) { %>
-    <script src="<%= htmlWebpackPlugin.options.bundleJs %>" type="text/javascript"></script>
-    <% } %>
-    <!-- Grid Setup -->
-    <script src="aggridgroupingdemo.js"></script>
-    <script>
-        InitBlotter()
-    </script>
+        <script src="<%= htmlWebpackPlugin.options.harnessJs %>" type="text/javascript"></script>
+        <% } %>
+            <% if (htmlWebpackPlugin.options.demoJs) { %>
+                <script src="<%= htmlWebpackPlugin.options.demoJs %>" type="text/javascript"></script>
+                <% } %>
+                    <script>
+                        var blotter = new aggridgroupingdemo.agGridGroupingDemo("grid", "content")
+                    </script>
 </body>
 </html>
