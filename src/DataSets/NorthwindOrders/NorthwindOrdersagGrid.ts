@@ -6,6 +6,7 @@ import * as HelperAgGrid from "../../HelperAgGrid"
 export var NorthwindOrders: IDataSetConfiguration = {
     name: "Northwind Orders",
     primaryKey: "OrderID",
+    groupingField: "CompanyName",
     getSchema: (data) => {
         let schema = [],
             firstRow = Array.isArray(data) && data[0];

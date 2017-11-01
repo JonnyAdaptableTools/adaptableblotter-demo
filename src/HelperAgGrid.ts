@@ -24,7 +24,7 @@ export function currencyRendereragGrid(params: any) {
 var shortDateFormatter = new Intl.DateTimeFormat('en-GB');
 export var shortDateRendereragGrid = (columnId: string) => function (params: any) {
     try {
-        if (params.data[columnId]) {
+        if (params.data && params.data[columnId]) {
             return shortDateFormatter.format(params.data[columnId])
         } else {
             return null;
@@ -38,7 +38,7 @@ export var shortDateRendereragGrid = (columnId: string) => function (params: any
 
 export function boolParseragGrid(params: any) {
     try {
-        return  `<input type='checkbox'   ${params.value ? 'checked' : ''} />`;
+        return `<input type='checkbox'   ${params.value ? 'checked' : ''} />`;
     }
     catch (ex) {
         console.error("Error parsing the date value: " + params.newValue + " and node : ", params.node)

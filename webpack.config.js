@@ -12,6 +12,7 @@ module.exports = {
         hypergriddemo: "./src/HypergridDemo.ts",
         aggriddemo: "./src/agGridDemo.ts",
         kendodemo: "./src/KendoDemo.ts",
+        aggridgroupingdemo: "./src/agGridGroupingDemo.ts",
     },
     output: {
         path: __dirname + '/dist',
@@ -65,7 +66,7 @@ module.exports = {
             template: 'DemoPage/aggridgroupingdemo.ejs',
             inject: false,
             'harnessJs': PACKAGE.version + "/adaptableblotteraggrid-bundle.min.js",
-            'bundleJs': "datagenerator.js"
+            'demoJs': "aggridgroupingdemo.js",
         }),
         new HtmlWebpackPlugin({
             chunks: [],
