@@ -4,7 +4,7 @@ import * as HelperHypergrid from "../../HelperHypergrid"
 
 export var NorthwindOrders: IDataSetConfiguration = {
     name: "Northwind Orders",
-    primaryKey: "OrderID",
+    primaryKey: "OrderId",
     getSchema: (data) => {
         let schema = [],
             firstRow = Array.isArray(data) && data[0];

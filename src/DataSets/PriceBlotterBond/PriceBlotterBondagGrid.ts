@@ -15,9 +15,9 @@ export var PriceBlotterBond: IDataSetConfiguration = {
             if (firstRow.hasOwnProperty(p)) {
                 if (p === PriceBlotterBond.primaryKey) {
                     schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
-                } else if (p === 'Price' || p === 'Bid' || p === 'Ask') {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell', cellRenderer: HelperAgGrid.decimalPlaceRendereragGrid(2, 4) });
-                } else if (p === 'Coupon' || p === 'Depth' || p === 'BidOfferSpread') {
+                    } else if (p === 'Price' || p === 'Bid' || p === 'Ask') {
+                        schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell', cellRenderer: HelperAgGrid.decimalPlaceRendereragGrid(2, 4) });
+                    } else if (p === 'Coupon' || p === 'Depth' || p === 'BidOfferSpread') {
                     schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
                 } else if (p.includes("Date")) {
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: true, valueParser: HelperAgGrid.dateParseragGrid, valueGetter: HelperAgGrid.shortDateRendereragGrid(p) });
