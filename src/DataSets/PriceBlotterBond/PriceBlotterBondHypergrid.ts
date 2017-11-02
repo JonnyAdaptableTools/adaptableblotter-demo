@@ -32,8 +32,8 @@ export var PriceBlotterBond: IDataSetConfiguration = {
             }
             return grid.cellEditors.create(editorName, options);
         }
-        HelperHypergrid.FormatColumns([4], behavior, "shortDateFormat")
-        HelperHypergrid.FormatColumns([8, 17, 18],  behavior, "fourDPFormat")
+        HelperHypergrid.FormatColumns([5], behavior, "shortDateFormat")
+        HelperHypergrid.FormatColumns([9, 10, 11, 13],  behavior, "fourDPFormat")
     },
     tickData: (grid: any) => {
         let numberToAdd: number = Helper.generateRandomInt(1, 2) == 1 ? -0.5 : 0.5;

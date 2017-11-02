@@ -29,7 +29,7 @@ export var TradeBlotterFX: IDataSetConfiguration = {
             return grid.cellEditors.create(editorName, options);
         }
         HelperHypergrid.FormatColumns([1, 2, 11], behavior, "shortDateFormat")
-        HelperHypergrid.FormatColumns([5, 7], behavior , "USDCurrencyFormat")
+    //    HelperHypergrid.FormatColumns([5, 7], behavior , "USDCurrencyFormat")
     },
     tickData: (grid: any) => {
 

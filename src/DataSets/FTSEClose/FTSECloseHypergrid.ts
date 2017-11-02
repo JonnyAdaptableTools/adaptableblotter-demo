@@ -30,7 +30,7 @@ export var FTSEClose: IDataSetConfiguration = {
         }
 
         HelperHypergrid.FormatColumns([0], behavior, "shortDateFormat")
-        HelperHypergrid.FormatColumns([5,6,9],  behavior, "fourDPFormat")
+        HelperHypergrid.FormatColumns([5,6,8, 9],  behavior, "fourDPFormat")
         
     },
     tickData: (grid: any) => {
