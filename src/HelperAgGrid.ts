@@ -22,19 +22,18 @@ export function currencyRendereragGrid(params: any) {
 }
 
 var shortDateFormatter = new Intl.DateTimeFormat('en-GB');
-export var shortDateRendereragGrid = (columnId: string) => function (params: any) {
+export function shortDateFormatteragGrid(params: any) {
     try {
-        if (params.data && params.data[columnId]) {
-            return shortDateFormatter.format(params.data[columnId])
+        if (params.value) {
+            return shortDateFormatter.format(params.value)
         } else {
             return null;
         }
     }
     catch (ex) {
-        console.error("Error formatting the date for value: " + params.data[columnId] + " and node : ", params.node)
+        console.error("Error formatting the date for value: " + params.value + " and node : ", params.node)
     }
 }
-
 
 export function boolParseragGrid(params: any) {
     try {

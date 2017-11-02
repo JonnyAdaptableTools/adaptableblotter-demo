@@ -20,7 +20,7 @@ export var PriceBlotterBond: IDataSetConfiguration = {
                 } else if (p === 'Coupon' || p === 'Depth' || p === 'BidOfferSpread') {
                     schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
                 } else if (p.includes("Date")) {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: true, valueParser: HelperAgGrid.dateParseragGrid, valueGetter: HelperAgGrid.shortDateRendereragGrid(p) });
+                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: true, cellEditorParams: { useFormatter: true }, valueParser: HelperAgGrid.dateParseragGrid, valueFormatter : HelperAgGrid.shortDateFormatteragGrid });
                 } else {
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: true });
                 }
