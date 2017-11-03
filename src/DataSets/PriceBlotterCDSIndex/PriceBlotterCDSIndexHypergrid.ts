@@ -4,7 +4,7 @@ import * as HelperHypergrid from "../../HelperHypergrid"
 
 export var PriceBlotterCDSIndex: IDataSetConfiguration = {
     name: "Price Blotter CDSIndex",
-    primaryKey: "REDCode",
+    primaryKey: "RedCode",
     getSchema: (data) => {
         let schema = [],
             firstRow = Array.isArray(data) && data[0];
@@ -23,15 +23,21 @@ export var PriceBlotterCDSIndex: IDataSetConfiguration = {
         //For all columns except primarykey we enable the editor
         behavior.dataModel.getCellEditorAt = function (columnIndex: any, rowIndex: any, declaredEditorName: any, options: any) {
             let editorName = declaredEditorName;
-            if (options.column.name !== PriceBlotterCDSIndex.primaryKey) {
+            if (options.column.name !== PriceBlotterCDSIndex.primaryKey
+                && options.column.name !== "Markit3Y"
+                && options.column.name !== "Markit5Y"
+                && options.column.name !== "Markit7Y"
+                && options.column.name !== "Markit10Y"
+                && options.column.name !== "Maturity3Y"
+                && options.column.name !== "Maturity5Y"
+                && options.column.name !== "Maturity7Y"
+                && options.column.name !== "Maturity10Y") {
                 editorName = 'textfield';
             }
             return grid.cellEditors.create(editorName, options);
         }
 
         HelperHypergrid.FormatColumns([10, 11, 12, 13], behavior, "shortDateFormat")
-        HelperHypergrid.FormatColumns([16], behavior, "longDateFormat")
-        // HelperHypergrid.FormatDecimalColumns([2, 3, 4, 5, 6, 7, 8, 9], 4, behavior)
     },
     tickData: (grid: any) => {
 

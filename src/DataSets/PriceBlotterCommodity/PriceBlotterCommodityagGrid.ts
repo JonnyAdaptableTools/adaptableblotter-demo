@@ -73,13 +73,13 @@ export var PriceBlotterCommodity: IDataSetConfiguration = {
 
         // Update % Change
         let percentChange: number = (priceChange / openPrice) * 100;
-        record.setDataValue("%Change", percentChange)
+        record.setDataValue("PercentChange", percentChange)
 
         // Update Year to date % Change
         let yearStart = record.gridApi.getValue("YearStart", record);
         let yearChange: number = price - yearStart
         let ytdPercentChange: number = (yearChange / yearStart) * 100;
-        record.setDataValue("YTD%Change", ytdPercentChange)
+        record.setDataValue("YTDPercentChange", ytdPercentChange)
 
         // Increment Volume by 1
         let volume = record.gridApi.getValue("Volume", record);

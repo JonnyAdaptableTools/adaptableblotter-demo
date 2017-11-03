@@ -4,7 +4,7 @@ import * as HelperAgGrid from "../../HelperAgGrid"
 
 export var PriceBlotterCDSIndex: IDataSetConfiguration = {
     name: "Price Blotter CDSIndex",
-    primaryKey: "REDCode",
+    primaryKey: "RedCode",
     getSchema: (data) => {
         let schema = [],
             firstRow = Array.isArray(data) && data[0];
@@ -15,11 +15,11 @@ export var PriceBlotterCDSIndex: IDataSetConfiguration = {
                 if (p === PriceBlotterCDSIndex.primaryKey) {
                     schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
                 } else if (p.includes("Date")) {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: true, cellEditorParams: { useFormatter: true }, valueParser: HelperAgGrid.dateParseragGrid, valueFormatter : HelperAgGrid.shortDateFormatteragGrid });
+                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: false, cellEditorParams: { useFormatter: true }, valueParser: HelperAgGrid.dateParseragGrid, valueFormatter : HelperAgGrid.shortDateFormatteragGrid });
                 } else if (p === "OnTheRun") {
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: false, cellRenderer: HelperAgGrid.boolParseragGrid, cellClass: 'bool-cell' });
-                } else if (p.includes('Series') || p.includes('Markit') || p.includes('Spread') || p.includes('Maturity')) {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
+                } else if (p.includes('Series') || p.includes('Markit') || p.includes('Spread') ) {
+                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: false, cellClass: 'number-cell' });
                 } else {
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: true });
                 }

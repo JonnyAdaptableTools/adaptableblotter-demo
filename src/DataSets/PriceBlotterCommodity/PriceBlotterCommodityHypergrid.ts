@@ -29,7 +29,7 @@ export var PriceBlotterCommodity: IDataSetConfiguration = {
             return grid.cellEditors.create(editorName, options);
         }
 
-        HelperHypergrid.FormatColumns([3, 4, 5, 7, 8, 9, 10,11, 12, 13, 14], behavior, "fourDPFormat")
+        HelperHypergrid.FormatColumns([2, 3, 4, 5, 6, 7, 8, 10,11, 12, 13, 14, 15,16, 17], behavior, "fourDPFormat")
     },
     tickData: (grid: any) => {
         let randomDouble: number = Helper.generateRandomDouble();
@@ -66,13 +66,13 @@ export var PriceBlotterCommodity: IDataSetConfiguration = {
  
          // Update % Change
          let percentChange: number = (priceChange / openPrice) * 100;
-         record["%Change"]= percentChange
+         record["PercentChange"]= percentChange
  
          // Update Year to date % Change
          let yearStart = record["YearStart"];
          let yearChange: number = price - yearStart
          let ytdPercentChange: number = (yearChange / yearStart) * 100;
-         record["YTD%Change"]= ytdPercentChange
+         record["YTDPercentChange"]= ytdPercentChange
  
          // Increment Volume by 1
          let volume = record["Volume"];

@@ -3,7 +3,7 @@ import * as Helper from "../../Helper"
 
 export var PriceBlotterCDSIndex: IDataSetConfiguration = {
     name: "Price Blotter CDSIndex",
-    primaryKey: "REDCode",
+    primaryKey: "RedCode",
     getSchema: (data) => {
         let schema = [],
             firstRow = Array.isArray(data) && data[0];
@@ -15,7 +15,7 @@ export var PriceBlotterCDSIndex: IDataSetConfiguration = {
                     schema.push({ title: Helper.capitalize(p), field: p, attributes: { class: "numberColumn" } });
                 }               
                 else {
-                    schema.push({ title: Helper.capitalize(p), field: p });
+                    schema.push({ title: Helper.capitalize(p), editable: false, field: p });
                 }
             }
         }
