@@ -20,10 +20,10 @@ export var PriceBlotterFX: IDataSetConfiguration = {
     setGridProperties: (grid: any) => {
         let behavior = grid.behavior;
 
-        //For all columns except primarykey we enable the editor
+        //Only Bid Offer Spread is editable
         behavior.dataModel.getCellEditorAt = function (columnIndex: any, rowIndex: any, declaredEditorName: any, options: any) {
             let editorName = declaredEditorName;
-            if (options.column.name !== PriceBlotterFX.primaryKey) {
+            if (options.column.name == "BidOfferSpread") {
                 editorName = 'textfield';
             }
             return grid.cellEditors.create(editorName, options);

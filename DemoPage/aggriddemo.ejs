@@ -12,14 +12,14 @@
     <!-- ag-Grid -->
     <script src="ExtLibs/agGrid/ag-grid.min.js"></script>
     <script src="ExtLibs/agGrid/ag-grid-enterprise.min.js"></script>
-   
+
 </head>
 
 <body>
     <nav class="navbar navbar-inverse" style="margin-bottom:5px;">
         <div class="topBar">
             <span>
-                &nbsp;&nbsp;  &nbsp;&nbsp;
+                &nbsp;&nbsp; &nbsp;&nbsp;
                 <img src="http://images8.webydo.com/92/9227175/3958/FB1B6AA0-1649-8F4A-7ED2-1F1B38CCFC1A.png" height="50">
                 <h2>&nbsp;&nbsp;AdaptableBlotter.JS - Demo Application&nbsp;&nbsp;</h2>
                 <img src="http://images8.webydo.com/92/9227175/3958/FB1B6AA0-1649-8F4A-7ED2-1F1B38CCFC1A.png" height="50">
@@ -30,6 +30,16 @@
             <a class="navbar-left">
 
             </a>
+
+            <!--
+            <div class="navbar-header">
+                <form class="navbar-form navbar-left">
+                    <a href="index.ejs" >
+                        <button class="btn btn-default" >Demo Home</button>
+                    </a>
+                </form>
+            </div>
+        -->
             <div class="navbar-header">
                 <a class="navbar-brand">Data Selector</a>
             </div>
@@ -37,6 +47,8 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <form class="navbar-form navbar-left">
+
+
                     <div class="form-group">
                         <select onchange="saveData()" class="form-control" id="dataset_select">
                             <option value="Select">Select a Dataset</option>

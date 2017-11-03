@@ -1,3 +1,32 @@
 {
-
+    "ConditionalStyle": {
+        "ConditionalStyleConditions": [
+            {
+                "Uid": "003fe11e-5840-4160-90a7-d83acc802cd6",
+                "ColumnId": "",
+                "Style": {
+                    "BackColor": "#ffffcc",
+                    "ForeColor": null,
+                    "FontWeight": 0,
+                    "FontStyle": 0,
+                    "FontSize": null
+                },
+                "ConditionalStyleScope": 1,
+                "Expression": {
+                    "ColumnDisplayValuesExpressions": [],
+                    "ColumnRawValuesExpressions": [],
+                    "UserFilters": [
+                        {
+                            "ColumnName": "OnTheRun",
+                            "UserFilterUids": [
+                                "Positive"
+                            ]
+                        }
+                    ],
+                    "RangeExpressions": []
+                },
+                "IsPredefined": false
+            }
+        ]
+    }
 }

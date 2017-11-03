@@ -17,6 +17,8 @@ export var TradeBlotterFX: IDataSetConfiguration = {
                     schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
                 } else if (p.includes('Amount')||p==='Rate') {
                     schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
+                } else if (p==='PnL') {
+                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: false, cellRenderer: HelperAgGrid.decimalPlaceRendereragGrid(2,4), cellClass: 'number-cell' });
                 } else if (p.includes("Date")) {
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: true, cellEditorParams: { useFormatter: true }, valueParser: HelperAgGrid.dateParseragGrid, valueFormatter : HelperAgGrid.shortDateFormatteragGrid });
                 } else {

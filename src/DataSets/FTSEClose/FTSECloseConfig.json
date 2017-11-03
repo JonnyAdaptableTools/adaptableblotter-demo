@@ -1,3 +1,58 @@
 {
-
+    "ConditionalStyle": {
+        "ConditionalStyleConditions": [
+            {
+                "Uid": "3920e172-adad-490d-b530-a5e534aafaf3",
+                "ColumnId": "ChangeOnDay",
+                "Style": {
+                    "BackColor": null,
+                    "ForeColor": "#008000",
+                    "FontWeight": 0,
+                    "FontStyle": 0,
+                    "FontSize": null
+                },
+                "ConditionalStyleScope": 0,
+                "Expression": {
+                    "ColumnDisplayValuesExpressions": [],
+                    "ColumnRawValuesExpressions": [],
+                    "UserFilters": [
+                        {
+                            "ColumnName": "ChangeOnDay",
+                            "UserFilterUids": [
+                                "Positive"
+                            ]
+                        }
+                    ],
+                    "RangeExpressions": []
+                },
+                "IsPredefined": false
+            },
+            {
+                "Uid": "e2463a3a-bd3f-422a-aeac-72ab65e447fe",
+                "ColumnId": "ChangeOnDay",
+                "Style": {
+                    "BackColor": null,
+                    "ForeColor": "#ff0000",
+                    "FontWeight": 0,
+                    "FontStyle": 0,
+                    "FontSize": null
+                },
+                "ConditionalStyleScope": 0,
+                "Expression": {
+                    "ColumnDisplayValuesExpressions": [],
+                    "ColumnRawValuesExpressions": [],
+                    "UserFilters": [
+                        {
+                            "ColumnName": "ChangeOnDay",
+                            "UserFilterUids": [
+                                "Negative"
+                            ]
+                        }
+                    ],
+                    "RangeExpressions": []
+                },
+                "IsPredefined": false
+            }
+        ]
+    }
 }
