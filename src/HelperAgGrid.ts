@@ -44,8 +44,12 @@ export function boolParseragGrid(params: any) {
     }
 }
 
-export function numberToBool(number: number): boolean {
-    return (number == 0) ? true : false;
+export function numberToBool(params: any) {
+    if ( params.value === 0) {
+        return 'false';
+    } else {
+        return 'true';
+    }
 }
 
 export function dateParseragGrid(params: any) {

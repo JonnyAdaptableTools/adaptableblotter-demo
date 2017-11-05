@@ -13,13 +13,15 @@ export var PriceBlotterBond: IDataSetConfiguration = {
         for (let p in firstRow) {
             if (firstRow.hasOwnProperty(p)) {
                 if (p === PriceBlotterBond.primaryKey) {
-                    schema.push({ title: Helper.capitalize(p), field: p});
+                    schema.push({ title: Helper.capitalize(p), field: p });
                 } else if (p === 'Price' || p === 'Bid' || p === 'Ask') {
                     schema.push({ title: Helper.capitalize(p), field: p, attributes: { class: "numberColumn" }, format: '{0:0.0000}' });
                 } else if (p.includes("Date")) {
-                    schema.push({ title: Helper.capitalize(p), field: p, format: "{0:dd MMMM yyyy}" }  );
-               } else if (p === 'BidOfferSpread') {
+                    schema.push({ title: Helper.capitalize(p), field: p, format: "{0:dd MMMM yyyy}" });
+                } else if (p === 'BidOfferSpread') {
                     schema.push({ title: Helper.capitalize(p), field: p, attributes: { class: "numberColumn" }, editor: HelperKendo.DecimalsEditorWith4DecimalsKendo });
+                } else if (p === 'RowId') {
+                    // do nothing!  schema.push({ headerName: Helper.capitalize(p), field: p, cellRenderer: twoDecimalPlaceCellRenderer });
                 } else {
                     schema.push({ title: Helper.capitalize(p), field: p });
                 }

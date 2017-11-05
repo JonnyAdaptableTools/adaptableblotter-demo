@@ -11,7 +11,7 @@ export var PriceBlotterBond: IDataSetConfiguration = {
 
         firstRow = (typeof firstRow === 'object') ? firstRow : {};
         for (let p in firstRow) {
-            if (firstRow.hasOwnProperty(p)) {
+            if (p!="RowId" && firstRow.hasOwnProperty(p)) {
                 schema.push({ name: p, header: Helper.capitalize(p) });
             }
         }

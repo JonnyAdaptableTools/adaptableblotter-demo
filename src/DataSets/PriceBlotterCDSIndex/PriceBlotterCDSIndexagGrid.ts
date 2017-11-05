@@ -17,7 +17,7 @@ export var PriceBlotterCDSIndex: IDataSetConfiguration = {
                 } else if (p.includes("Date")) {
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: false, cellEditorParams: { useFormatter: true }, valueParser: HelperAgGrid.dateParseragGrid, valueFormatter: HelperAgGrid.shortDateFormatteragGrid });
                 } else if (p === "OnTheRun") {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: false,  cellClass: 'bool-cell' });
+                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: false,  cellClass: 'bool-cell'  });
                 } else if (p.includes('Series') || p.includes('Markit')) {
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: false, cellClass: 'number-cell' });
                 } else if (p.includes('Spread')) {

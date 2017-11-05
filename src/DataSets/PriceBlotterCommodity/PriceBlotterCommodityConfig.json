@@ -1,34 +1,5 @@
 {
-    "Filter": {
-        "UserFilters": [
-            {
-                "Uid": "85b0def4-5a75-40c3-a5a8-fb3f8582d727",
-                "FriendlyName": "wank",
-                "Description": "([Day Low] > 5)",
-                "DataType": 1,
-                "Expression": {
-                    "ColumnDisplayValuesExpressions": [],
-                    "ColumnRawValuesExpressions": [],
-                    "UserFilters": [],
-                    "RangeExpressions": [
-                        {
-                            "ColumnName": "DayLow",
-                            "Ranges": [
-                                {
-                                    "Operand1": "5",
-                                    "Operand2": "",
-                                    "Operator": 1
-                                }
-                            ]
-                        }
-                    ]
-                },
-                "IsPredefined": false
-            }
-        ],
-        "ColumnFilters": []
-    },
-    "FlashingCell": {
+       "FlashingCell": {
         "FlashingColumns": [
             {
                 "IsLive": true,
@@ -116,7 +87,7 @@
             },
             {
                 "Uid": "2144a418-bc26-4437-bc46-01ac1f597658",
-                "ColumnId": "%Change",
+                "ColumnId": "PercentChange",
                 "Style": {
                     "BackColor": null,
                     "ForeColor": "#008000",
@@ -130,7 +101,7 @@
                     "ColumnRawValuesExpressions": [],
                     "UserFilters": [
                         {
-                            "ColumnName": "%Change",
+                            "ColumnName": "PercentChange",
                             "UserFilterUids": [
                                 "Positive"
                             ]
@@ -141,7 +112,7 @@
             },
             {
                 "Uid": "4fa4409f-3f50-4e39-90d4-5ac05f89a1fc",
-                "ColumnId": "%Change",
+                "ColumnId": "PercentChange",
                 "Style": {
                     "BackColor": null,
                     "ForeColor": "#ff0000",
@@ -155,7 +126,7 @@
                     "ColumnRawValuesExpressions": [],
                     "UserFilters": [
                         {
-                            "ColumnName": "%Change",
+                            "ColumnName": "PercentChange",
                             "UserFilterUids": [
                                 "Negative"
                             ]
@@ -166,7 +137,7 @@
             },
             {
                 "Uid": "f3460dd3-fa51-4d4f-bc6c-dd65c5b52cf4",
-                "ColumnId": "YTD%Change",
+                "ColumnId": "PercentChangeOnYear",
                 "Style": {
                     "BackColor": null,
                     "ForeColor": "#008000",
@@ -180,7 +151,7 @@
                     "ColumnRawValuesExpressions": [],
                     "UserFilters": [
                         {
-                            "ColumnName": "YTD%Change",
+                            "ColumnName": "PercentChangeOnYear",
                             "UserFilterUids": [
                                 "Positive"
                             ]
@@ -191,7 +162,7 @@
             },
             {
                 "Uid": "2ad6713a-8119-4a2f-80ef-0b8cb140de80",
-                "ColumnId": "YTD%Change",
+                "ColumnId": "PercentChangeOnYear",
                 "Style": {
                     "BackColor": null,
                     "ForeColor": "#ff0000",
@@ -205,7 +176,7 @@
                     "ColumnRawValuesExpressions": [],
                     "UserFilters": [
                         {
-                            "ColumnName": "YTD%Change",
+                            "ColumnName": "PercentChangeOnYear",
                             "UserFilterUids": [
                                 "Negative"
                             ]
