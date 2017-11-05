@@ -15,12 +15,9 @@ export var TradeBlotterCDS: IDataSetConfiguration = {
             if (firstRow.hasOwnProperty(p)) {
                 if (p === TradeBlotterCDS.primaryKey) {
                     schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
-                }
-                else if (p === 'Notional') {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell', cellRenderer: HelperAgGrid.currencyRendereragGrid });
                 } else if (p.includes("Date")) {
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: true, cellEditorParams: { useFormatter: true }, valueParser: HelperAgGrid.dateParseragGrid, valueFormatter : HelperAgGrid.shortDateFormatteragGrid });
-                } else if (p === 'Coupon'||p === 'RecoveryRate'||p === 'Tenor') {
+                } else if (p === 'Coupon'||p === 'RecoveryRate'||p === 'Tenor' || p==='Notional') {
                     schema.push({ headerName: Helper.capitalize(p), editable: true, field: p, cellClass: 'number-cell' });
                 } else {
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: true });

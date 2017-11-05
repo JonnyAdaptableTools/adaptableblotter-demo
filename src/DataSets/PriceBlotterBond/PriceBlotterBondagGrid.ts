@@ -4,7 +4,7 @@ import * as HelperAgGrid from "../../HelperAgGrid"
 
 export var PriceBlotterBond: IDataSetConfiguration = {
     name: "Price Blotter Bond",
-    primaryKey: "InstrumentId",
+    primaryKey: "Isin",
     groupingField: "Country",
     getSchema: (data) => {
         let schema = [],
@@ -14,15 +14,18 @@ export var PriceBlotterBond: IDataSetConfiguration = {
         for (let p in firstRow) {
             if (firstRow.hasOwnProperty(p)) {
                 if (p === PriceBlotterBond.primaryKey) {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
+                    schema.push({ headerName: Helper.capitalize(p), field: p});
                     } else if (p === 'Price' || p === 'Bid' || p === 'Ask') {
                         schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell', cellRenderer: HelperAgGrid.decimalPlaceRendereragGrid(2, 4) });
-                    } else if (p === 'Coupon' || p === 'Depth' || p === 'BidOfferSpread') {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
+                    } else if (p === 'Coupon' || p === 'Depth' ) {
+                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: false, cellClass: 'number-cell' });
                 } else if (p.includes("Date")) {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: true, cellEditorParams: { useFormatter: true }, valueParser: HelperAgGrid.dateParseragGrid, valueFormatter : HelperAgGrid.shortDateFormatteragGrid });
+                    } else if ( p === 'BidOfferSpread' || p==='Spread') {
+                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: true, cellClass: 'number-cell' });
+                } else if (p.includes("Date")) {
+                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: false, cellEditorParams: { useFormatter: true }, valueParser: HelperAgGrid.dateParseragGrid, valueFormatter : HelperAgGrid.shortDateFormatteragGrid });
                 } else {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: true });
+                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: false });
                 }
             }
         }

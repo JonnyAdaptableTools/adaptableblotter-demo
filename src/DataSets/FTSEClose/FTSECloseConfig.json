@@ -3,7 +3,7 @@
         "ConditionalStyleConditions": [
             {
                 "Uid": "3920e172-adad-490d-b530-a5e534aafaf3",
-                "ColumnId": "ChangeOnDay",
+                "ColumnId": "HighLowDifference",
                 "Style": {
                     "BackColor": null,
                     "ForeColor": "#008000",
@@ -17,7 +17,7 @@
                     "ColumnRawValuesExpressions": [],
                     "UserFilters": [
                         {
-                            "ColumnName": "ChangeOnDay",
+                            "ColumnName": "HighLowDifference",
                             "UserFilterUids": [
                                 "Positive"
                             ]
@@ -29,7 +29,7 @@
             },
             {
                 "Uid": "e2463a3a-bd3f-422a-aeac-72ab65e447fe",
-                "ColumnId": "ChangeOnDay",
+                "ColumnId": "HighLowDifference",
                 "Style": {
                     "BackColor": null,
                     "ForeColor": "#ff0000",
@@ -43,7 +43,7 @@
                     "ColumnRawValuesExpressions": [],
                     "UserFilters": [
                         {
-                            "ColumnName": "ChangeOnDay",
+                            "ColumnName": "HighLowDifference",
                             "UserFilterUids": [
                                 "Negative"
                             ]

@@ -4,7 +4,7 @@ import * as HelperKendo from "../../HelperKendo"
 
 export var PriceBlotterBond: IDataSetConfiguration = {
     name: "Price Blotter Bond",
-    primaryKey: "InstrumentId",
+    primaryKey: "Isin",
     getSchema: (data) => {
         let schema = [],
             firstRow = Array.isArray(data) && data[0];
@@ -13,7 +13,7 @@ export var PriceBlotterBond: IDataSetConfiguration = {
         for (let p in firstRow) {
             if (firstRow.hasOwnProperty(p)) {
                 if (p === PriceBlotterBond.primaryKey) {
-                    schema.push({ title: Helper.capitalize(p), field: p, attributes: { class: "numberColumn" } });
+                    schema.push({ title: Helper.capitalize(p), field: p});
                 } else if (p === 'Price' || p === 'Bid' || p === 'Ask') {
                     schema.push({ title: Helper.capitalize(p), field: p, attributes: { class: "numberColumn" }, format: '{0:0.0000}' });
                 } else if (p.includes("Date")) {

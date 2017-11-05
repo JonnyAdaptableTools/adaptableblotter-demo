@@ -29,7 +29,9 @@ export var TradeBlotterFX: IDataSetConfiguration = {
             return grid.cellEditors.create(editorName, options);
         }
         HelperHypergrid.FormatColumns([1, 2, 11], behavior, "shortDateFormat")
-        HelperHypergrid.FormatColumns([9],  behavior, "fourDPFormat")    },
+        HelperHypergrid.FormatColumns([9],  behavior, "fourDPFormat")    
+        HelperHypergrid.FormatColumns([5, 7], behavior, "twoDPFormat")
+    },
     tickData: (grid: any) => {
 
     },

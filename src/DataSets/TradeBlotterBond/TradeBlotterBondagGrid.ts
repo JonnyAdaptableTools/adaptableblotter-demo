@@ -15,15 +15,13 @@ export var TradeBlotterBond: IDataSetConfiguration = {
             if (firstRow.hasOwnProperty(p)) {
                 if (p === TradeBlotterBond.primaryKey) {
                     schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
-                }
-                else if (p === 'Notional') {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell', cellRenderer: HelperAgGrid.currencyRendereragGrid });
-                }
-                else if (p.includes("Date")) {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: true, cellEditorParams: { useFormatter: true }, valueParser: HelperAgGrid.dateParseragGrid, valueFormatter : HelperAgGrid.shortDateFormatteragGrid });
-                } else if (p.includes('TradedAt') || p.includes('Coupon')) {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });}
-                else {
+                } else if (p.includes("Date")) {
+                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: true, cellEditorParams: { useFormatter: true }, valueParser: HelperAgGrid.dateParseragGrid, valueFormatter: HelperAgGrid.shortDateFormatteragGrid });
+                } else if (p.includes('TradedAt') || p.includes('Coupon') || p === 'Notional') {
+                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: true, cellClass: 'number-cell' });
+                } else if (p.includes('Notional')){
+                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: true, cellClass: 'number-cell', cellRenderer: HelperAgGrid.decimalPlaceRendereragGrid(2, 2) });
+                } else {
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: true });
                 }
             }

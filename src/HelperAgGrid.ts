@@ -44,7 +44,7 @@ export function boolParseragGrid(params: any) {
     }
 }
 
-function numberToBool(number: number): boolean {
+export function numberToBool(number: number): boolean {
     return (number == 0) ? true : false;
 }
 
@@ -74,11 +74,11 @@ function stringToDate(date: string, format: string, delimiter: string) {
 
 export var decimalPlaceRendereragGrid = (minDigits: number, maxDigits: number) => function (params: any) {
     if (params.value) {
-        var fourDecimalPlaceFormatter = new Intl.NumberFormat('en-GB', {
+        var decimalPlaceFormatter = new Intl.NumberFormat('en-GB', {
             minimumFractionDigits: minDigits,
             maximumFractionDigits: maxDigits
         });
-        return fourDecimalPlaceFormatter.format(params.value)
+        return decimalPlaceFormatter.format(params.value)
     }
 }
 

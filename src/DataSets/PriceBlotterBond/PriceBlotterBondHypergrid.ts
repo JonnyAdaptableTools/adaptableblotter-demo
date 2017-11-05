@@ -4,7 +4,7 @@ import * as HelperHypergrid from "../../HelperHypergrid"
 
 export var PriceBlotterBond: IDataSetConfiguration = {
     name: "Price Blotter Bond",
-    primaryKey: "InstrumentId",
+    primaryKey: "Isin",
     getSchema: (data) => {
         let schema = [],
             firstRow = Array.isArray(data) && data[0];
@@ -24,16 +24,14 @@ export var PriceBlotterBond: IDataSetConfiguration = {
         // we prevent Bid, Ask and price from being editable as well
         behavior.dataModel.getCellEditorAt = function (columnIndex: any, rowIndex: any, declaredEditorName: any, options: any) {
             let editorName = declaredEditorName;
-            if (options.column.name !== PriceBlotterBond.primaryKey
-                && options.column.name !== "Bid"
-                && options.column.name !== "Ask"
-                && options.column.name !== "Price") {
+            if (options.column.name == "BidOfferSpread"
+                || options.column.name == "Spread") {
                 editorName = 'textfield';
             }
             return grid.cellEditors.create(editorName, options);
         }
-        HelperHypergrid.FormatColumns([5], behavior, "shortDateFormat")
-        HelperHypergrid.FormatColumns([9, 10, 11, 13],  behavior, "fourDPFormat")
+        HelperHypergrid.FormatColumns([9], behavior, "shortDateFormat")
+        HelperHypergrid.FormatColumns([3, 5, 6, 8],  behavior, "fourDPFormat")
     },
     tickData: (grid: any) => {
         let numberToAdd: number = Helper.generateRandomInt(1, 2) == 1 ? -0.5 : 0.5;

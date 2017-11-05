@@ -28,8 +28,8 @@ export var TradeBlotterCommodity: IDataSetConfiguration = {
             }
             return grid.cellEditors.create(editorName, options);
         }
-        HelperHypergrid.FormatColumns([5, 6, 8], behavior, "shortDateFormat")
-        HelperHypergrid.FormatColumns([3], behavior, "USDCurrencyFormat")
+        HelperHypergrid.FormatColumns([3, 7, 9], behavior, "shortDateFormat")
+        HelperHypergrid.FormatColumns([5], behavior, "twoDPFormat")
     },
     tickData: (grid: any) => {
 

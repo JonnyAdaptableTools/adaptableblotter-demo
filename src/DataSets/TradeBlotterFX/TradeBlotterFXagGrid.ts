@@ -14,11 +14,11 @@ export var TradeBlotterFX: IDataSetConfiguration = {
         for (let p in firstRow) {
             if (firstRow.hasOwnProperty(p)) {
                 if (p === TradeBlotterFX.primaryKey) {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
+                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: false,cellClass: 'number-cell' });
                 } else if (p.includes('Amount')||p==='Rate') {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
+                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: true,cellClass: 'number-cell' });
                 } else if (p==='PnL') {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: false, cellRenderer: HelperAgGrid.decimalPlaceRendereragGrid(2,4), cellClass: 'number-cell' });
+                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: true, cellRenderer: HelperAgGrid.decimalPlaceRendereragGrid(2,4), cellClass: 'number-cell' });
                 } else if (p.includes("Date")) {
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: true, cellEditorParams: { useFormatter: true }, valueParser: HelperAgGrid.dateParseragGrid, valueFormatter : HelperAgGrid.shortDateFormatteragGrid });
                 } else {

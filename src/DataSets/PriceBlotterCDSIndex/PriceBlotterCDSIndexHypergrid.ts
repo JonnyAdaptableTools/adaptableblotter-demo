@@ -23,15 +23,10 @@ export var PriceBlotterCDSIndex: IDataSetConfiguration = {
         //For all columns except primarykey we enable the editor
         behavior.dataModel.getCellEditorAt = function (columnIndex: any, rowIndex: any, declaredEditorName: any, options: any) {
             let editorName = declaredEditorName;
-            if (options.column.name !== PriceBlotterCDSIndex.primaryKey
-                && options.column.name !== "Markit3Y"
-                && options.column.name !== "Markit5Y"
-                && options.column.name !== "Markit7Y"
-                && options.column.name !== "Markit10Y"
-                && options.column.name !== "Maturity3Y"
-                && options.column.name !== "Maturity5Y"
-                && options.column.name !== "Maturity7Y"
-                && options.column.name !== "Maturity10Y") {
+            if (options.column.name == "Spread3Y"
+                || options.column.name == "Spread5Y"
+                || options.column.name == "Spread7Y"
+                || options.column.name == "Spread10Y") {
                 editorName = 'textfield';
             }
             return grid.cellEditors.create(editorName, options);
@@ -44,10 +39,10 @@ export var PriceBlotterCDSIndex: IDataSetConfiguration = {
     },
     manipulateInitialData(data: any[]) {
         Helper.MakeAllRecordsColumnsDateProperDates(data);
-        MakeMaturityColumnsProperDates(data);        
+        MakeMaturityColumnsProperDates(data);
     },
-    ActionWhenRecordUpdatedOrEdited(record:any){
-        
+    ActionWhenRecordUpdatedOrEdited(record: any) {
+
     }
 }
 
