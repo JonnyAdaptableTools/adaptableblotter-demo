@@ -1,10 +1,10 @@
 {
   "name": "adaptableblotter-demo",
-  "version": "1.2.5-beta.4",
+  "version": "1.2.5-beta.5",
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "adaptableblotter": "^1.2.5-beta.4",
+    "adaptableblotter": "^1.2.5-beta.6",
     "ag-grid": "^13.2.0",
     "isomorphic-fetch": "^2.2.1"
   },
