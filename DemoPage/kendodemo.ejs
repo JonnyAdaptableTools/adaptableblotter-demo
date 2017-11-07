@@ -32,6 +32,11 @@
             </span>
         </div>
 
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand">Data Selector</a>
+            </div>
+
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <form class="navbar-form navbar-left">
@@ -53,7 +58,7 @@
             localStorage.setItem(datasetElement.id, datasetElement.value);
         }
     </script>
-    <div id="content" style="margin:15px;"></div>
+    <div id="content"></div>
     <div id="grid"></div>
     <% if (htmlWebpackPlugin.options.harnessJs) { %>
         <script src="<%= htmlWebpackPlugin.options.harnessJs %>" type="text/javascript"></script>
