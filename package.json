@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "adaptableblotter": "^1.2.5-beta.6",
+    "adaptableblotter": "^1.2.5-beta.7",
     "ag-grid": "^13.2.0",
     "isomorphic-fetch": "^2.2.1"
   },
