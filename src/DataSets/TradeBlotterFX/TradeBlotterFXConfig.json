@@ -2,7 +2,6 @@
     "ConditionalStyle": {
         "ConditionalStyleConditions": [
             {
-                "Uid": "2d3ae3f9-6345-4d09-a33d-23ace281b437",
                 "ColumnId": "BaseAmount",
                 "Style": {
                     "BackColor": null,
@@ -28,7 +27,6 @@
                 "IsPredefined": false
             },
             {
-                "Uid": "48fd286b-ecbe-4008-9603-928ff36213f8",
                 "ColumnId": "BaseAmount",
                 "Style": {
                     "BackColor": null,
@@ -54,7 +52,6 @@
                 "IsPredefined": false
             },
             {
-                "Uid": "2b664fe6-69ce-427b-988b-5172f7e448b5",
                 "ColumnId": "SecondaryAmount",
                 "Style": {
                     "BackColor": null,
@@ -80,7 +77,6 @@
                 "IsPredefined": false
             },
             {
-                "Uid": "5a6c96a4-a993-4203-8c25-635defe0078b",
                 "ColumnId": "SecondaryAmount",
                 "Style": {
                     "BackColor": null,

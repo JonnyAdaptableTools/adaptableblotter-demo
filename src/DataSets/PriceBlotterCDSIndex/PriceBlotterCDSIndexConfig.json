@@ -2,7 +2,6 @@
     "ConditionalStyle": {
         "ConditionalStyleConditions": [
             {
-                "Uid": "8bbbc71d-8f01-46c8-ae81-a8c733c0d8ed",
                 "ColumnId": "Markit3Y",
                 "Style": {
                     "BackColor": "#99ffcc",
@@ -28,7 +27,6 @@
                 "IsPredefined": false
             },
             {
-                "Uid": "8bbbc71d-8f01-46c8-ae81-a8c733c0d8ed",
                 "ColumnId": "Markit5Y",
                 "Style": {
                     "BackColor": "#99ffcc",
@@ -54,7 +52,6 @@
                 "IsPredefined": false
             },
             {
-                "Uid": "8bbbc71d-8f01-46c8-ae81-a8c733c0d8ed",
                 "ColumnId": "Markit7Y",
                 "Style": {
                     "BackColor": "#99ffcc",
@@ -80,7 +77,6 @@
                 "IsPredefined": false
             },
             {
-                "Uid": "8bbbc71d-8f01-46c8-ae81-a8c733c0d8ed",
                 "ColumnId": "Markit10Y",
                 "Style": {
                     "BackColor": "#99ffcc",
@@ -106,7 +102,6 @@
                 "IsPredefined": false
             },
             {
-                "Uid": "b57a06bf-3902-4245-9fff-a596ccdf44cd",
                 "ColumnId": "",
                 "Style": {
                     "BackColor": null,

@@ -36,7 +36,6 @@
     "ConditionalStyle": {
         "ConditionalStyleConditions": [
             {
-                "Uid": "f72f6f63-3c4a-4ed1-87d0-faf0f62bf44d",
                 "ColumnId": "Change",
                 "Style": {
                     "BackColor": null,
@@ -61,7 +60,6 @@
                 }
             },
             {
-                "Uid": "d7a1b234-9fec-4792-a54c-e3538d82c696",
                 "ColumnId": "Change",
                 "Style": {
                     "BackColor": null,

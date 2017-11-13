@@ -2,7 +2,6 @@
     "ConditionalStyle": {
         "ConditionalStyleConditions": [
             {
-                "Uid": "3920e172-adad-490d-b530-a5e534aafaf3",
                 "ColumnId": "HighLowDifference",
                 "Style": {
                     "BackColor": null,
@@ -28,7 +27,6 @@
                 "IsPredefined": false
             },
             {
-                "Uid": "e2463a3a-bd3f-422a-aeac-72ab65e447fe",
                 "ColumnId": "HighLowDifference",
                 "Style": {
                     "BackColor": null,

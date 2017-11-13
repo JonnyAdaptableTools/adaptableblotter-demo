@@ -36,7 +36,6 @@
     "ConditionalStyle": {
         "ConditionalStyleConditions": [
             {
-                "Uid": "2144a418-bc26-4437-bc46-01ac1f599647",
                 "ColumnId": "Change",
                 "Style": {
                     "BackColor": null,
@@ -61,7 +60,6 @@
                 }
             },
             {
-                "Uid": "4fa4409f-3f50-4e39-90d4-5ac05f89b2g3",
                 "ColumnId": "Change",
                 "Style": {
                     "BackColor": null,
@@ -86,7 +84,6 @@
                 }
             },
             {
-                "Uid": "2144a418-bc26-4437-bc46-01ac1f597658",
                 "ColumnId": "PercentChange",
                 "Style": {
                     "BackColor": null,
@@ -111,7 +108,6 @@
                 }
             },
             {
-                "Uid": "4fa4409f-3f50-4e39-90d4-5ac05f89a1fc",
                 "ColumnId": "PercentChange",
                 "Style": {
                     "BackColor": null,
@@ -136,7 +132,6 @@
                 }
             },
             {
-                "Uid": "f3460dd3-fa51-4d4f-bc6c-dd65c5b52cf4",
                 "ColumnId": "PercentChangeOnYear",
                 "Style": {
                     "BackColor": null,
@@ -161,7 +156,6 @@
                 }
             },
             {
-                "Uid": "2ad6713a-8119-4a2f-80ef-0b8cb140de80",
                 "ColumnId": "PercentChangeOnYear",
                 "Style": {
                     "BackColor": null,
