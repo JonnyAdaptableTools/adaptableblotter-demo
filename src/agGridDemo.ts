@@ -54,7 +54,7 @@ export class agGridDemo implements IDemo {
                     userName: "Jonathan",
                     enableAuditLog: false,
                     enableRemoteConfigServer: false,
-                    blotterId: selectedConfig.name,
+                    blotterId: selectedConfig.name + process.env.packageVersion,
                     maxColumnValueItemsDisplayed: 1000,
                     predefinedConfigUrl: selectedConfig.name.replace(/ /g, "") + "Config.json"
                 }

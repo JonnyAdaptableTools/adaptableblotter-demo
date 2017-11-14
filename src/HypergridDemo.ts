@@ -37,24 +37,24 @@ export class HypergridDemo implements IDemo {
                     minimumFractionDigits: 0,
                     maximumFractionDigits: 2
                 }));
-               
+
                 this.grid.localization.add('fourDPFormat', new this.grid.localization.NumberFormatter('en-US', {
                     style: 'decimal',
                     minimumFractionDigits: 2,
                     maximumFractionDigits: 4
                 }));
 
-                
+
 
                 var shortDateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
                 this.grid.localization.add('shortDateFormat', new this.grid.localization.DateFormatter('en-EN', shortDateOptions));
-              
+
                 var longDateOptions = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'short' };
                 this.grid.localization.add('longDateFormat', new this.grid.localization.DateFormatter('en-EN', longDateOptions));
 
                 //Make the data to tick every 0.5s
                 setInterval(() =>
-                selectedConfig.tickData(this.grid), 500)
+                    selectedConfig.tickData(this.grid), 500)
 
                 //set all the properties such as editor etc....
                 selectedConfig.setGridProperties(this.grid)
@@ -72,9 +72,9 @@ export class HypergridDemo implements IDemo {
                     userName: "Jonathan",
                     enableAuditLog: false,
                     enableRemoteConfigServer: false,
-                    blotterId: selectedConfig.name,
+                    blotterId: selectedConfig.name + process.env.packageVersion,
                     maxColumnValueItemsDisplayed: 1000,
-                    predefinedConfigUrl : selectedConfig.name.replace(/ /g, "") + "Config.json"
+                    predefinedConfigUrl: selectedConfig.name.replace(/ /g, "") + "Config.json"
                 }
                 //tradeId is the primary for the datasource
                 //Jonathan is the username for the demo. Can be plugged to an authent service if required

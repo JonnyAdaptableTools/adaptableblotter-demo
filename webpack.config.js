@@ -36,6 +36,9 @@ module.exports = {
 
     plugins: [
         failPlugin,
+        new webpack.DefinePlugin({
+            'process.env.packageVersion':  JSON.stringify(PACKAGE.version)
+        }),
         new HtmlWebpackPlugin({
             chunks: [],
             filename: "hypergriddemo.html",
