@@ -1,0 +1,35 @@
+{
+    "devtools_port": 9090,
+    "startup_app": {
+        "name": "OpenFin with Adaptable Blotter",
+        "description": "OpenFin with Adaptable Blotter",
+        "applicationIcon": "http://images8.webydo.com/92/9227175/3958/FB1B6AA0-1649-8F4A-7ED2-1F1B38CCFC1A.png",
+        "url": "http://demo.adaptableblotter.com/",
+        "uuid": "openfin-adaptable-blotter-demo",
+        "autoShow": true,
+        "preload": [
+            {
+                "url": "http://demo.adaptableblotter.com/ExtLibs/OpenfinPlugins/fin.desktop.Excel.js"
+            }
+        ]
+    },
+    "runtime": {
+        "arguments": "",
+        "version": "7.*"
+    },
+    "splashScreenImage": "http://images8.webydo.com/92/9227175/3958/FB1B6AA0-1649-8F4A-7ED2-1F1B38CCFC1A.png",
+    "shortcut": {
+        "company": "Adaptable Tools",
+        "description": "Adaptable Blotter Demo",
+        "icon": "http://images8.webydo.com/92/9227175/3958/FB1B6AA0-1649-8F4A-7ED2-1F1B38CCFC1A.png",
+        "name": "Adaptable Blotter Demo"
+    },
+    "appAssets": [
+        {
+            "src": "http://demo.adaptableblotter.com/ExtLibs/OpenfinPlugins/add-in.zip",
+            "alias": "excel-api-addin",
+            "version": "1.7.1",
+            "forceDownload": true
+        }
+    ]
+}

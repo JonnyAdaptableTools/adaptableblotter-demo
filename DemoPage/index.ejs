@@ -76,6 +76,26 @@
               </button>
             </td>
           </tr>
+          <tr>
+            <td>
+              <button style="height:110px; width:220px" class="btn btn-default" onclick="launchOpenfin()">
+                <img src="https://openfin.co/wp-content/uploads/2017/01/OpenFin.png" alt="" width="118" height="48" />
+                <span>
+                  <h4>Run the demo in Openfin</h4>
+                </span>
+              </button>
+              <script>
+                function launchOpenfin() {
+                  if (document.URL.indexOf("beta") > -1) {
+                    location.href = 'https://install.openfin.co/download/?fileName=adaptable_blotter_openfin&config=http://beta.adaptableblotter.com/app-beta.json'
+                  }
+                  else {
+                    location.href = 'https://install.openfin.co/download/?fileName=adaptable_blotter_openfin&config=http://demo.adaptableblotter.com/app.json'
+                  }
+                }
+              </script>
+            </td>
+          </tr>
         </table>
         <p>
           <br/>
@@ -86,11 +106,12 @@
           and 500,000 flashing and data updates per second. </p>
         <p>
           <b>Multiple Blotters and Components (using Finsemble)</b>
-          <br/>This demo simulates a life-like trading application with 3 instances of the Adaptable Blotter (for Trade, Price and Position), a chart window and a news feed.
+          <br/>This demo simulates a life-like trading application with 3 instances of the Adaptable Blotter (for Trade, Price
+          and Position), a chart window and a news feed.
           <br/> By leveraging
           <a href="https://www.chartiq.com/finsemble/" target="_blank">Finsemble</a> and the
-          <a href="https://openfin.co" target="_blank">OpenFin</a> bus, the 3 Blotters are able to share data, updates and filters, and can also communicate 2-ways
-          with the 3rd party components.
+          <a href="https://openfin.co" target="_blank">OpenFin</a> bus, the 3 Blotters are able to share data, updates and filters, and can also communicate 2-ways with
+          the 3rd party components.
           <p>
             <button class="btn btn-default" onclick="location.href='http://beta.adaptableblotter.com/finsembledemo/Adaptable-Blotter-finsemble-beta-installer.zip' ">
               <img src="https://www.chartiq.com/wp-content/uploads/2017/05/Finsemble_LogoWhite-300x62.png" alt="" width="118" height="48"
@@ -100,7 +121,8 @@
               </span>
             </button>
             <p>
-              Read more on the features of this demo on the <a href="https://github.com/jonathannaim/finsemble-adaptableblotterdemo" target="_blank">GitHub</a> page and this 
+              Read more on the features of this demo on the
+              <a href="https://github.com/jonathannaim/finsemble-adaptableblotterdemo" target="_blank">GitHub</a> page and this
               <a href="https://www.linkedin.com/pulse/vive-la-html5-revolution-jonny-wolfson/" target="_blank">blog piece</a>.
             </p>
           </p>
