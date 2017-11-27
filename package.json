@@ -1,6 +1,6 @@
 {
   "name": "adaptableblotter-demo",
-  "version": "1.3.0-beta.1",
+  "version": "1.3.0-beta.2",
   "description": "",
   "main": "index.js",
   "dependencies": {
@@ -29,7 +29,7 @@
     "dev": "webpack-dev-server",
     "build": "webpack",
     "buildDataSets": "node buildJsonDataset.js",
-    "openfin" : "openfin -l -c app-dev.json"
+    "openfin": "openfin -l -c app-dev.json"
   },
   "repository": {
     "type": "git",
