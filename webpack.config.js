@@ -44,6 +44,7 @@ module.exports = {
             filename: "hypergriddemo.html",
             template: 'DemoPage/hypergriddemo.ejs',
             inject: false,
+            // 'harnessJs': PACKAGE.version + "/adaptableblotterhypergrid-bundle.js",
             'harnessJs': PACKAGE.version + "/adaptableblotterhypergrid-bundle.min.js",
             'demoJs': "hypergriddemo.js",
         }),
