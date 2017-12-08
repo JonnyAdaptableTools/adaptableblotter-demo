@@ -74,7 +74,11 @@ export class HypergridDemo implements IDemo {
                     enableRemoteConfigServer: false,
                     blotterId: selectedConfig.name + process.env.packageVersion,
                     maxColumnValueItemsDisplayed: 1000,
-                    predefinedConfigUrl: selectedConfig.name.replace(/ /g, "") + "Config.json"
+                    predefinedConfigUrl: selectedConfig.name.replace(/ /g, "") + "Config.json",
+                    iPushPullConfig: {
+                        api_key: "CbBaMaoqHVifScrYwKssGnGyNkv5xHOhQVGm3cYP",
+                        api_secret: "xYzE51kuHyyt9kQCvMe0tz0H2sDSjyEQcF5SOBlPQmcL9em0NqcCzyqLYj5fhpuZxQ8BiVcYl6zoOHeI6GYZj1TkUiiLVFoW3HUxiCdEUjlPS8Vl2YHUMEPD5qkLYnGj",
+                    }
                 }
                 //tradeId is the primary for the datasource
                 //Jonathan is the username for the demo. Can be plugged to an authent service if required
