@@ -121,9 +121,9 @@ export class HypergridDemo implements IDemo {
 var lightTheme = {
     font: '14px Helvetica Neue, Helvetica, Arial, sans-serif',
     color: '#003f59',
-    backgroundColor: 'white',
+    backgroundColor: '#ffffff',
     altbackground: '#e6f2f8',
-    foregroundSelectionColor: 'white',
+    foregroundSelectionColor: '#ffffff',
     backgroundSelectionColor: 'rgba(13, 106, 146, 0.5)',
 
     columnHeaderFont: '14px Helvetica Neue, Helvetica, Arial, sans-serif',
@@ -161,22 +161,22 @@ var lightTheme = {
 
 var darkTheme = {
     font: '14px Helvetica Neue, Helvetica, Arial, sans-serif',
-    color: 'white',
+    color: '#ffffff',
     backgroundColor: '#07071E',
     altbackground: '#07071E',
-    foregroundSelectionColor: 'white',
+    foregroundSelectionColor: '#ffffff',
     backgroundSelectionColor: 'rgba(61, 119, 254, 0.5)',
 
     columnHeaderFont: '14px Helvetica Neue, Helvetica, Arial, sans-serif',
-    columnHeaderColor: 'white',
+    columnHeaderColor: '#ffffff',
     columnHeaderBackgroundColor: '#07071E',
-    columnHeaderForegroundSelectionColor: 'white',
+    columnHeaderForegroundSelectionColor: '#ffffff',
     columnHeaderBackgroundSelectionColor: '#3D77FE',
 
     rowHeaderFont: '14px Helvetica Neue, Helvetica, Arial, sans-serif',
-    rowHeaderColor: 'white',
+    rowHeaderColor: '#ffffff',
     rowHeaderBackgroundColor: '#07071E',
-    rowHeaderForegroundSelectionColor: 'white',
+    rowHeaderForegroundSelectionColor: '#ffffff',
     rowHeaderBackgroundSelectionColor: '#3D77FE',
 
     backgroundColor2: 'rgb(201, 201, 201)',
