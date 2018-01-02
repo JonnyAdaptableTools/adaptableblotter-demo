@@ -6,11 +6,11 @@
                 "Style": {
                     "BackColor": null,
                     "ForeColor": "#008000",
-                    "FontWeight": 0,
-                    "FontStyle": 0,
+                    "FontWeight": "Normal",
+                    "FontStyle": "Normal",
                     "FontSize": null
                 },
-                "ConditionalStyleScope": 0,
+                "ConditionalStyleScope": "Column",
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
@@ -31,11 +31,11 @@
                 "Style": {
                     "BackColor": null,
                     "ForeColor": "#ff0000",
-                    "FontWeight": 0,
-                    "FontStyle": 0,
+                    "FontWeight": "Normal",
+                    "FontStyle": "Normal",
                     "FontSize": null
                 },
-                "ConditionalStyleScope": 0,
+                "ConditionalStyleScope": "Column",
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
@@ -56,11 +56,11 @@
                 "Style": {
                     "BackColor": null,
                     "ForeColor": "#008000",
-                    "FontWeight": 0,
-                    "FontStyle": 0,
+                    "FontWeight": "Normal",
+                    "FontStyle": "Normal",
                     "FontSize": null
                 },
-                "ConditionalStyleScope": 0,
+                "ConditionalStyleScope": "Column",
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
@@ -81,11 +81,11 @@
                 "Style": {
                     "BackColor": null,
                     "ForeColor": "#ff0000",
-                    "FontWeight": 0,
-                    "FontStyle": 0,
+                    "FontWeight": "Normal",
+                    "FontStyle": "Normal",
                     "FontSize": null
                 },
-                "ConditionalStyleScope": 0,
+                "ConditionalStyleScope": "Column",
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],

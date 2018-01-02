@@ -4,40 +4,28 @@
             {
                 "IsLive": true,
                 "ColumnName": "Ask",
-                "FlashingCellDuration": {
-                    "Name": "1/2 Second",
-                    "Duration": 500
-                },
+                "FlashingCellDuration": 500,
                 "UpBackColor": "#008000",
                 "DownBackColor": "#FF0000"
             },
             {
                 "IsLive": true,
                 "ColumnName": "Bid",
-                "FlashingCellDuration": {
-                    "Name": "1/2 Second",
-                    "Duration": 500
-                },
+                "FlashingCellDuration": 500,
                 "UpBackColor": "#008000",
                 "DownBackColor": "#FF0000"
             },
             {
                 "IsLive": true,
                 "ColumnName": "Price",
-                "FlashingCellDuration": {
-                    "Name": "1/2 Second",
-                    "Duration": 500
-                },
+                "FlashingCellDuration": 500,
                 "UpBackColor": "#008000",
                 "DownBackColor": "#FF0000"
             },
             {
                 "IsLive": true,
                 "ColumnName": "Spread",
-                "FlashingCellDuration": {
-                    "Name": "1/2 Second",
-                    "Duration": 500
-                },
+                "FlashingCellDuration": 500,
                 "UpBackColor": "#008000",
                 "DownBackColor": "#FF0000"
             }

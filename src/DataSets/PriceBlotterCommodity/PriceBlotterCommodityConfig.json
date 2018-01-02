@@ -4,30 +4,21 @@
             {
                 "IsLive": true,
                 "ColumnName": "Ask",
-                "FlashingCellDuration": {
-                    "Name": "1/2 Second",
-                    "Duration": 500
-                },
+                "FlashingCellDuration": 500,
                 "UpBackColor": "#008000",
                 "DownBackColor": "#FF0000"
             },
             {
                 "IsLive": true,
                 "ColumnName": "Bid",
-                "FlashingCellDuration": {
-                    "Name": "1/2 Second",
-                    "Duration": 500
-                },
+                "FlashingCellDuration": 500,
                 "UpBackColor": "#008000",
                 "DownBackColor": "#FF0000"
             },
             {
                 "IsLive": true,
                 "ColumnName": "Price",
-                "FlashingCellDuration": {
-                    "Name": "1/2 Second",
-                    "Duration": 500
-                },
+                "FlashingCellDuration": 500,
                 "UpBackColor": "#008000",
                 "DownBackColor": "#FF0000"
             }
@@ -40,11 +31,11 @@
                 "Style": {
                     "BackColor": null,
                     "ForeColor": "#008000",
-                    "FontWeight": 0,
-                    "FontStyle": 0,
+                    "FontWeight": "Normal",
+                    "FontStyle": "Normal",
                     "FontSize": null
                 },
-                "ConditionalStyleScope": 0,
+                "ConditionalStyleScope": "Column",
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
@@ -64,11 +55,11 @@
                 "Style": {
                     "BackColor": null,
                     "ForeColor": "#ff0000",
-                    "FontWeight": 0,
-                    "FontStyle": 0,
+                    "FontWeight": "Normal",
+                    "FontStyle": "Normal",
                     "FontSize": null
                 },
-                "ConditionalStyleScope": 0,
+                "ConditionalStyleScope": "Column",
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
@@ -88,11 +79,11 @@
                 "Style": {
                     "BackColor": null,
                     "ForeColor": "#008000",
-                    "FontWeight": 0,
-                    "FontStyle": 0,
+                    "FontWeight": "Normal",
+                    "FontStyle": "Normal",
                     "FontSize": null
                 },
-                "ConditionalStyleScope": 0,
+                "ConditionalStyleScope": "Column",
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
@@ -112,11 +103,11 @@
                 "Style": {
                     "BackColor": null,
                     "ForeColor": "#ff0000",
-                    "FontWeight": 0,
-                    "FontStyle": 0,
+                    "FontWeight": "Normal",
+                    "FontStyle": "Normal",
                     "FontSize": null
                 },
-                "ConditionalStyleScope": 0,
+                "ConditionalStyleScope": "Column",
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
@@ -136,11 +127,11 @@
                 "Style": {
                     "BackColor": null,
                     "ForeColor": "#008000",
-                    "FontWeight": 0,
-                    "FontStyle": 0,
+                    "FontWeight": "Normal",
+                    "FontStyle": "Normal",
                     "FontSize": null
                 },
-                "ConditionalStyleScope": 0,
+                "ConditionalStyleScope": "Column",
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
@@ -160,11 +151,11 @@
                 "Style": {
                     "BackColor": null,
                     "ForeColor": "#ff0000",
-                    "FontWeight": 0,
-                    "FontStyle": 0,
+                    "FontWeight": "Normal",
+                    "FontStyle": "Normal",
                     "FontSize": null
                 },
-                "ConditionalStyleScope": 0,
+                "ConditionalStyleScope": "Column",
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
