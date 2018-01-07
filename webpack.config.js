@@ -83,7 +83,6 @@ module.exports = {
         //this makes sure we package it in the dist folder and make it available for the webpack dev server
         // new CopyWebpackPlugin([{ context: 'node_modules/adaptableblotter/dist/adaptable-blotter-themes', from: '**/*', to: 'adaptable-blotter-themes' }]),
         new CopyWebpackPlugin([{ context: 'node_modules/adaptableblotter/dist', from: '*', to: PACKAGE.version + '/' }]),
-        new CopyWebpackPlugin([{ from: 'UserGuide/Adaptable_Blotter_User_Guide.pdf', to: '' }]),
         new CopyWebpackPlugin([{ from: 'ExtLibs/**/*', to: '' }]),
         new CopyWebpackPlugin([{ from: 'node_modules/adaptableblotter/LICENSE.md', to: '' }]),
         new CopyWebpackPlugin([{ from: 'DemoPage/*', to: '', flatten: true }]),
