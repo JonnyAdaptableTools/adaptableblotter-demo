@@ -1,6 +1,6 @@
 import { IDataSetConfiguration } from './IDataSetConfiguration';
 import { AvailableDatasetConfigs } from './DatasetConfigsKendo';
-import { IAdaptableBlotterOptions, IAdaptableBlotter } from '../node_modules/adaptableblotter/App_Scripts/Core/Interface/IAdaptableBlotter';
+import { IAdaptableBlotterOptions, IAdaptableBlotter } from '../node_modules/adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotter';
 import { IDemo } from './IDemo';
 import * as Helper from './Helper';
 
