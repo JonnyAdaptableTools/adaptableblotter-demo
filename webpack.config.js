@@ -110,6 +110,10 @@ module.exports = {
             '/adaptableblotter-config': {
                 target: 'http://127.0.0.1:3000',
                 secure: false
+            },
+            '/adaptableblotter-teamsharing': {
+                target: 'http://127.0.0.1:3000',
+                secure: false
             }
         }
     }
