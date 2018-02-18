@@ -1,12 +1,14 @@
 # adaptableblotter-demo
-Repository for the Adaptable Blotter demo application which showcases the powerful data-agnostic HTML5 AdaptableBlotter.JS grid.
+Repository for a demo that showcases the powerful, data-agnostic AdaptableBlotter.JS.
 
-AdaptableBlotter.JS offers - out of the box - incredibly powerful searching, filtering, sorting, styling and editing functionality. It also provides unparalleled validation and audit functions, vital for the current regulatory and compliance environment.
+AdaptableBlotter.JS is a powerful DataGrid add-on that integrates with the leading datagrid components and provides all the additional, rich functionality that financial and other advanced users expect from their grids and blotters.
 
-This demo shows AdaptableBlotter.JS using 3 underlying grid controls –Telerik's Kendo Grid (a commercial licenced product), OpenFin's Hypergrid (an open-source grid) and the ag-Grid (the latter in both grouped and non-grouped mode).  The blotters are using purely dummy data, included simply for demo purposes.
+It offers - out of the box - incredibly powerful searching, filtering, sorting, styling and editing functionality.  It also provides unparalleled validation and audit functions, vital in the current regulatory and compliance environment.  Try it out for yourself at http://demo.adaptableblotter.com.
 
-Adaptable Blotter licences are free for development use (and include both the .NET and .JS versions), but a paid-for annual end user licence is required for each production user. 
+Grid components supported included Telerik's Kendo Grid, the ag-Grid, OpenFin's Hypergrid and the Adaptable Grid by Adaptable Tools. And more grid components are being added all the time so contact us if you would like us to implement your favourite HTML5 grid control.
 
-Further information about AdaptableBlotter.JS, and full Help, is available at www.adaptabletools.com. 
+AdaptableBlotter.JS is fully data agnostic and can work with any data set you provide it with.  It is suitable for all data, all asset classes, all grid types, all locations and all use cases.
 
-Alternatively email the Adaptable Tools Support Team at support@adaptabletools.com.
+The Adaptable Blotter is free for development use, but a paid-for annual end user licence is required for commerical use. (This covers both AdaptableBlotter.NET and AdaptableBlotter.JS versions).  We also offer a free Community Licence for students in full time education, charities and open-source projects.  Please see the LICENSE.md file for more information or contact the Adaptable Tools Sales Team at sales@adaptabletools.com.
+
+Further information about AdaptableBlotter.JS, and full Help, is available at www.adaptabletools.com.  A list of features can be found at: https://tinyurl.com/ychndpef.  For all enquiries please email the Adaptable Tools Support Team at support@adaptabletools.com.
