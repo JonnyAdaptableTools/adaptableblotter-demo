@@ -39,10 +39,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilters": [
+                    "UserFilterExpressions": [
                         {
                             "ColumnName": "Change",
-                            "UserFilterUids": [
+                            "UserFilters": [
                                 "Positive"
                             ]
                         }
@@ -63,10 +63,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilters": [
+                    "UserFilterExpressions": [
                         {
                             "ColumnName": "Change",
-                            "UserFilterUids": [
+                            "UserFilters": [
                                 "Negative"
                             ]
                         }

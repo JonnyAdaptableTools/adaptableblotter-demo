@@ -14,10 +14,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilters": [
+                    "UserFilterExpressions": [
                         {
                             "ColumnName": "BaseAmount",
-                            "UserFilterUids": [
+                            "UserFilters": [
                                 "Positive"
                             ]
                         }
@@ -39,10 +39,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilters": [
+                    "UserFilterExpressions": [
                         {
                             "ColumnName": "BaseAmount",
-                            "UserFilterUids": [
+                            "UserFilters": [
                                 "Negative"
                             ]
                         }
@@ -64,10 +64,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilters": [
+                    "UserFilterExpressions": [
                         {
                             "ColumnName": "SecondaryAmount",
-                            "UserFilterUids": [
+                            "UserFilters": [
                                 "Positive"
                             ]
                         }
@@ -89,10 +89,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilters": [
+                    "UserFilterExpressions": [
                         {
                             "ColumnName": "SecondaryAmount",
-                            "UserFilterUids": [
+                            "UserFilters": [
                                 "Negative"
                             ]
                         }

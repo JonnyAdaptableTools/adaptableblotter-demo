@@ -39,10 +39,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilters": [
+                    "UserFilterExpressions": [
                         {
                             "ColumnName": "Change",
-                            "UserFilterUids": [
+                            "UserFilters": [
                                 "Positive"
                             ]
                         }
@@ -63,10 +63,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilters": [
+                    "UserFilterExpressions": [
                         {
                             "ColumnName": "Change",
-                            "UserFilterUids": [
+                            "UserFilters": [
                                 "Negative"
                             ]
                         }
@@ -87,10 +87,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilters": [
+                    "UserFilterExpressions": [
                         {
                             "ColumnName": "PercentChange",
-                            "UserFilterUids": [
+                            "UserFilters": [
                                 "Positive"
                             ]
                         }
@@ -111,10 +111,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilters": [
+                    "UserFilterExpressions": [
                         {
                             "ColumnName": "PercentChange",
-                            "UserFilterUids": [
+                            "UserFilters": [
                                 "Negative"
                             ]
                         }
@@ -135,10 +135,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilters": [
+                    "UserFilterExpressions": [
                         {
                             "ColumnName": "PercentChangeOnYear",
-                            "UserFilterUids": [
+                            "UserFilters": [
                                 "Positive"
                             ]
                         }
@@ -159,10 +159,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilters": [
+                    "UserFilterExpressions": [
                         {
                             "ColumnName": "PercentChangeOnYear",
-                            "UserFilterUids": [
+                            "UserFilters": [
                                 "Negative"
                             ]
                         }

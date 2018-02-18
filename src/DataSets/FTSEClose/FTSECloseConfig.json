@@ -14,10 +14,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilters": [
+                    "UserFilterExpressions": [
                         {
                             "ColumnName": "HighLowDifference",
-                            "UserFilterUids": [
+                            "UserFilters": [
                                 "Positive"
                             ]
                         }
@@ -39,10 +39,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilters": [
+                    "UserFilterExpressions": [
                         {
                             "ColumnName": "HighLowDifference",
-                            "UserFilterUids": [
+                            "UserFilters": [
                                 "Negative"
                             ]
                         }

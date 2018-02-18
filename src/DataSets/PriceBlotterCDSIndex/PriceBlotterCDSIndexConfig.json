@@ -14,11 +14,11 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilters": [
+                    "UserFilterExpressions": [
                         {
                             "ColumnName": "Markit3Y",
-                            "UserFilterUids": [
-                                "StringNonBlanks"
+                            "UserFilters": [
+                                "Non Blanks"
                             ]
                         }
                     ],
@@ -39,11 +39,11 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilters": [
+                    "UserFilterExpressions": [
                         {
                             "ColumnName": "Markit5Y",
-                            "UserFilterUids": [
-                                "StringNonBlanks"
+                            "UserFilters": [
+                                "Non Blanks"
                             ]
                         }
                     ],
@@ -64,11 +64,11 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilters": [
+                    "UserFilterExpressions": [
                         {
                             "ColumnName": "Markit7Y",
-                            "UserFilterUids": [
-                                "StringNonBlanks"
+                            "UserFilters": [
+                                "Non Blanks"
                             ]
                         }
                     ],
@@ -89,11 +89,11 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilters": [
+                    "UserFilterExpressions": [
                         {
                             "ColumnName": "Markit10Y",
-                            "UserFilterUids": [
-                                "StringNonBlanks"
+                            "UserFilters": [
+                                "Non Blanks"
                             ]
                         }
                     ],
@@ -121,7 +121,7 @@
                         }
                     ],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilters": [],
+                    "UserFilterExpressions": [],
                     "RangeExpressions": []
                 },
                 "IsPredefined": false
