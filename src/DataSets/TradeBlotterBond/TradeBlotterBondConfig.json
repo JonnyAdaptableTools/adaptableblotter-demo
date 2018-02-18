@@ -7,7 +7,7 @@
                     "ColumnDisplayValuesExpressions": [
                         {
                             "ColumnName": "Currency",
-                            "ColumnValues": [
+                            "ColumnDisplayValues": [
                                 "EUR",
                                 "GBP"
                             ]

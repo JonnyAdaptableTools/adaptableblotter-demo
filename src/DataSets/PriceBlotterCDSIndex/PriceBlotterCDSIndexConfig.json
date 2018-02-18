@@ -115,7 +115,7 @@
                     "ColumnDisplayValuesExpressions": [
                         {
                             "ColumnName": "OnTheRun",
-                            "ColumnValues": [
+                            "ColumnDisplayValues": [
                                 "1"
                             ]
                         }
