@@ -1,8 +1,9 @@
 import { IDataSetConfiguration } from './IDataSetConfiguration';
 import { AvailableDatasetConfigs } from './DatasetConfigsHypergrid';
-import { IAdaptableBlotterOptions, IAdaptableBlotter } from '../node_modules/adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotter';
+import {IAdaptableBlotter } from '../node_modules/adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotter';
 import { IDemo } from './IDemo';
 import * as Helper from './Helper';
+import { IAdaptableBlotterOptions } from 'adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotterOptions';
 
 export class HypergridDemo implements IDemo {
     private themeName = "";

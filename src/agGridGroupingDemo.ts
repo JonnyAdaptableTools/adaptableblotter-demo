@@ -1,10 +1,12 @@
 import { IDataSetConfiguration } from './IDataSetConfiguration';
 import { AvailableDatasetConfigs } from './DatasetConfigsagGrid';
-import { IAdaptableBlotterOptions, IAdaptableBlotter } from '../node_modules/adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotter';
+import {  IAdaptableBlotter } from '../node_modules/adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotter';
 import { IDemo } from './IDemo';
 import * as Helper from './Helper';
-import { GridOptions } from "ag-grid"
-import { Grid } from 'ag-grid/main';
+import { IAdaptableBlotterOptions } from 'adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotterOptions';
+import { Grid } from 'ag-grid/dist/lib/grid';
+import { GridOptions } from 'ag-grid/dist/lib/entities/gridOptions';
+
 
 export class agGridGroupingDemo implements IDemo {
     private themeName = "";

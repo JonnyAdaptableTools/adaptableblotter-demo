@@ -2,9 +2,12 @@ import { IDataSetConfiguration } from './IDataSetConfiguration';
 import { AvailableDatasetConfigs } from './DatasetConfigsagGrid';
 import { IDemo } from './IDemo';
 import * as Helper from './Helper';
-import { IAdaptableBlotter, IAdaptableBlotterOptions } from 'adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotter';
-import { GridOptions, Grid } from 'ag-grid';
-
+import { IAdaptableBlotter } from 'adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotter';
+import { IAdaptableBlotterOptions } from 'adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotterOptions';
+import { GridOptions } from 'ag-grid/dist/lib/entities/gridOptions';
+import { Grid } from 'ag-grid/dist/lib/grid';
+//import { Grid } from 'ag-grid/dist/lib/grid';
+//import { GridOptions } from 'ag-grid/dist/lib/entities/gridOptions';
 
 export class agGridDemo implements IDemo {
     private themeName = "";
@@ -28,7 +31,7 @@ export class agGridDemo implements IDemo {
                         //we do it twice as sometimes when the dataset is small columns that werent visible at all will become
                         //visible and won't be autosized
                       //  gridOptions.columnApi.autoSizeAllColumns("api");
-                        setTimeout(() => gridOptions.columnApi.autoSizeAllColumns("api"), 1);
+                    //    setTimeout(() => gridOptions.columnApi.autoSizeAllColumns("api"), 1);
 
                         gridOptions.api.addEventListener("cellEditingStopped", (params: any) => {
                             selectedConfig.ActionWhenRecordUpdatedOrEdited(params.node);
