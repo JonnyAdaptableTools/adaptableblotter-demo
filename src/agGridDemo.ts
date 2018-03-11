@@ -3,8 +3,9 @@ import { AvailableDatasetConfigs } from './DatasetConfigsagGrid';
 import { IAdaptableBlotterOptions, IAdaptableBlotter } from '../node_modules/adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotter';
 import { IDemo } from './IDemo';
 import * as Helper from './Helper';
-import { GridOptions } from "ag-grid"
-import { Grid } from 'ag-grid/main';
+import { GridOptions, Grid } from 'ag-grid';
+//import { GridOptions } from "ag-grid"
+//import { Grid } from 'ag-grid/main';
 
 export class agGridDemo implements IDemo {
     private themeName = "";
@@ -27,15 +28,15 @@ export class agGridDemo implements IDemo {
                     onGridReady: function () {
                         //we do it twice as sometimes when the dataset is small columns that werent visible at all will become
                         //visible and won't be autosized
-                        gridOptions.columnApi.autoSizeAllColumns();
-                        setTimeout(() => gridOptions.columnApi.autoSizeAllColumns(), 1);
+                      //  gridOptions.columnApi.autoSizeAllColumns("api");
+                        setTimeout(() => gridOptions.columnApi.autoSizeAllColumns("api"), 1);
 
                         gridOptions.api.addEventListener("cellEditingStopped", (params: any) => {
                             selectedConfig.ActionWhenRecordUpdatedOrEdited(params.node);
                         });
 
                         gridOptions.api.addEventListener("newColumnsLoaded", function (params: any) {
-                            gridOptions.columnApi.autoSizeAllColumns();
+                    //        gridOptions.columnApi.autoSizeAllColumns("api")
                         });
                     }
                 };
