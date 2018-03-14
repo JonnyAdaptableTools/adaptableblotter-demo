@@ -29,9 +29,9 @@ module.exports = {
     externals: {
         // require("jquery") is external and available
         //  on the global var jQuery
-        "ag-grid": "ag-grid",
-        "ag-grid/main": "ag-grid",
-      
+        "ag-grid/dist/lib/entities/gridOptions": "agGrid",
+        "ag-grid/dist/lib/grid": "agGrid",
+     
     },
 
     plugins: [
