@@ -31,7 +31,7 @@ module.exports = {
         //  on the global var jQuery
         "ag-grid": "ag-grid",
         "ag-grid/main": "ag-grid",
-
+      
     },
 
     plugins: [

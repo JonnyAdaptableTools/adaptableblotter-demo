@@ -6,8 +6,6 @@ import { IAdaptableBlotter } from 'adaptableblotter/dist/App_Scripts/Core/Interf
 import { IAdaptableBlotterOptions } from 'adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotterOptions';
 import { GridOptions } from 'ag-grid/dist/lib/entities/gridOptions';
 import { Grid } from 'ag-grid/dist/lib/grid';
-//import { Grid } from 'ag-grid/dist/lib/grid';
-//import { GridOptions } from 'ag-grid/dist/lib/entities/gridOptions';
 
 export class agGridDemo implements IDemo {
     private themeName = "";
