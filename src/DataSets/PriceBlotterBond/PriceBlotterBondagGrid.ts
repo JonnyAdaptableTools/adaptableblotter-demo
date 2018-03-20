@@ -5,7 +5,7 @@ import * as HelperAgGrid from "../../HelperAgGrid"
 export var PriceBlotterBond: IDataSetConfiguration = {
     name: "Price Blotter Bond",
     primaryKey: "Isin",
-    groupingField: "Country",
+    openGroupingField: "Country",
     getSchema: (data) => {
         let schema = [],
             firstRow = Array.isArray(data) && data[0];

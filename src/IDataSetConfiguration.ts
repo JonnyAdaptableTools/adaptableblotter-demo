@@ -3,8 +3,10 @@ export interface IDataSetConfiguration {
     name: string
     //Primary key from the data
     primaryKey: string
-    //When in group mode, data should be grouped by that field
-    groupingField?: string
+    //When in group mode, data should be grouped by that field when opened
+    openGroupingField?: string
+    //When in group mode, data can be grouped by that field if chosen in the columns panel to the side
+    availableGroupingFields?: string[]
     //if you need to manipulate the data before setting the datasource on the grid
     //One good example is for date columns. We want them to be Date objects which doesn;t exist in json
     manipulateInitialData: (data: any[]) => void

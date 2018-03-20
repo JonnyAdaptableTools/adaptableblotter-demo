@@ -1,6 +1,6 @@
 import { IDataSetConfiguration } from './IDataSetConfiguration';
 import { AvailableDatasetConfigs } from './DatasetConfigsagGrid';
-import {  IAdaptableBlotter } from '../node_modules/adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotter';
+import { IAdaptableBlotter } from '../node_modules/adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotter';
 import { IDemo } from './IDemo';
 import * as Helper from './Helper';
 import { IAdaptableBlotterOptions } from 'adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotterOptions';
@@ -19,11 +19,23 @@ export class agGridGroupingDemo implements IDemo {
         Helper.getDataFromJson(selectedConfig.name.replace(/ /g, "") + ".json").then(json => data = json)
             .then(data => selectedConfig.manipulateInitialData(data)).then(() => {
                 let schema = selectedConfig.getSchema(data)
-                if (selectedConfig.groupingField) {
-                    let schemaRecord = schema.find(x => x.field == selectedConfig.groupingField)
-                    if (schemaRecord) {
-                        schemaRecord.rowGroup = true;
+                if (selectedConfig.openGroupingField) {
+                    let schemaOpenGroupRecord = schema.find(x => x.field == selectedConfig.openGroupingField)
+                    if (schemaOpenGroupRecord) {
+                        schemaOpenGroupRecord.rowGroup = true;
+                        schemaOpenGroupRecord.hide = true;
+                        schemaOpenGroupRecord.enableRowGroup = true;
                     }
+                }
+                if (selectedConfig.availableGroupingFields) {
+                    selectedConfig.availableGroupingFields.forEach(f=>{
+                        let schemaAvailableGroupingRecord = schema.find(x => x.field == f)
+                        if (schemaAvailableGroupingRecord) {
+                            schemaAvailableGroupingRecord.hide = true;
+                            schemaAvailableGroupingRecord.enableRowGroup = true;
+                        }
+                    })
+                    
                 }
                 // let the grid know which columns and what data to use
                 var gridOptions: GridOptions = {
@@ -33,6 +45,7 @@ export class agGridGroupingDemo implements IDemo {
                     animateRows: true,
                     enableRangeSelection: true,
                     enableFilter: true,
+                    groupMultiAutoColumn: true,
                     onGridReady: function () {
                         //we do it twice as sometimes when the dataset is small columns that werent visible at all will become
                         //visible and won't be autosized
@@ -82,10 +95,10 @@ export class agGridGroupingDemo implements IDemo {
             this.themeName = this.adaptableblotter.AdaptableBlotterStore.TheStore.getState().Theme.CurrentTheme;
             var container = document.getElementById(this.gridContainer)
             if (this.themeName == "Slate" || this.themeName == "Cyborg" || this.themeName == "Darkly" || this.themeName == "Superhero") {
-                container.className = "ag-dark";
+                container.className = "ag-theme-dark";
             }
             else {
-                container.className = "ag-blue";
+                container.className = "ag-theme-blue";
             }
         }
     }
