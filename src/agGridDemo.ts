@@ -25,6 +25,7 @@ export class agGridDemo implements IDemo {
                     enableSorting: true,
                     enableRangeSelection: true,
                     enableFilter: true,
+                    enableColResize: true,
                     onGridReady: function () {
                         //we do it twice as sometimes when the dataset is small columns that werent visible at all will become
                         //visible and won't be autosized

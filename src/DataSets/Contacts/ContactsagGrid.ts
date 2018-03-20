@@ -4,7 +4,7 @@ import * as Helper from "../../Helper"
 export var Contacts: IDataSetConfiguration = {
     name: "Contacts",
     primaryKey: "ID",
-    openGroupingField: "Company",
+    // openGroupingField: "Company",
     getSchema: (data) => {
         let schema = [],
             firstRow = Array.isArray(data) && data[0];

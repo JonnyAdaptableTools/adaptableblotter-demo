@@ -1,12 +1,16 @@
+import { IColumn } from "adaptableblotter/dist/App_Scripts/Core/Interface/IColumn";
+
 export interface IDataSetConfiguration {
     //Name of the config. Predefined config, Data filename etc... have to match this name without the spaces
     name: string
     //Primary key from the data
     primaryKey: string
     //When in group mode, data should be grouped by that field when opened
-    openGroupingField?: string
+  //  openGroupingField?: string
     //When in group mode, data can be grouped by that field if chosen in the columns panel to the side
-    availableGroupingFields?: string[]
+  //  availableGroupingFields?: string[]
+    // Do we have any column groups?
+  //  columnGroupInfos?: IColumnGroupInfo[]
     //if you need to manipulate the data before setting the datasource on the grid
     //One good example is for date columns. We want them to be Date objects which doesn;t exist in json
     manipulateInitialData: (data: any[]) => void
@@ -21,3 +25,11 @@ export interface IDataSetConfiguration {
     // a good example is the computation of Bid and Ask when the Price is either updated or edited
     ActionWhenRecordUpdatedOrEdited: (record: any) => any
 }
+
+
+export interface IColumnGroupInfo {
+    groupName: string
+    openChildren: string[]
+    closedChildren: string[]
+}
+

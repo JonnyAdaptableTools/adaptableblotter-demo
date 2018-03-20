@@ -5,7 +5,7 @@ import * as HelperAgGrid from "../../HelperAgGrid"
 export var InternationalHolidays: IDataSetConfiguration = {
     name: "International Holidays",
     primaryKey: "Id",
-    openGroupingField: "Country",
+    // openGroupingField: "Country",
     getSchema: (data) => {
         let schema = [],
             firstRow = Array.isArray(data) && data[0];
