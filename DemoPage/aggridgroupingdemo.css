@@ -9,3 +9,7 @@ height: 100%
     .number-cell {
         text-align: right;
     }
+  
+    details{
+        margin: 10px;
+    }
