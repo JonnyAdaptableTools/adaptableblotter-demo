@@ -25,6 +25,7 @@ export class agGridDemo implements IDemo {
                     enableSorting: true,
                     enableRangeSelection: true,
                     enableFilter: true,
+                    enableColResize: true,
                     onGridReady: function () {
                         //we do it twice as sometimes when the dataset is small columns that werent visible at all will become
                         //visible and won't be autosized
@@ -78,10 +79,10 @@ export class agGridDemo implements IDemo {
             this.themeName = this.adaptableblotter.AdaptableBlotterStore.TheStore.getState().Theme.CurrentTheme;
             var container = document.getElementById(this.gridContainer)
             if (this.themeName == "Slate" || this.themeName == "Cyborg" || this.themeName == "Darkly" || this.themeName == "Superhero") {
-                container.className = "ag-dark";
+                container.className = "ag-theme-dark";
             }
             else {
-                container.className = "ag-blue";
+                container.className = "ag-theme-blue";
             }
         }
     }

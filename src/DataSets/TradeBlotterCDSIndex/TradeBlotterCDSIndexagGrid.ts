@@ -5,7 +5,7 @@ import * as HelperAgGrid from "../../HelperAgGrid"
 export var TradeBlotterCDSIndex: IDataSetConfiguration = {
     name: "Trade Blotter CDS Index",
     primaryKey: "TradeId",
-    groupingField: "Counterparty",
+    // openGroupingField: "Counterparty",
     getSchema: (data) => {
         let schema = [],
             firstRow = Array.isArray(data) && data[0];
