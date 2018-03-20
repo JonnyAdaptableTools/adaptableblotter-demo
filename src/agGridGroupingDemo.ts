@@ -78,7 +78,7 @@ export class agGridGroupingDemo implements IDemo {
                     animateRows: true,
                     enableRangeSelection: true,
                     enableFilter: true,
-                    groupMultiAutoColumn: true,
+                    groupMultiAutoColumn: false, // setting it to false until we fix issue: 209
                     groupUseEntireRow: false,
                     enableColResize: true,
                     onGridReady: function () {
