@@ -30,7 +30,7 @@ var password = arg.password;
 var config = {
     username: user,
     password: password, // optional, prompted if none given
-    host: "adaptableblotter.com",
+    host: "160.153.162.153", // use this now instead of "adaptableblotter.com",
     port: 21,
     localRoot: __dirname + "/dist",
     remoteRoot: "/",
