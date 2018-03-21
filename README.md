@@ -1,6 +1,8 @@
 # adaptableblotter-demo
 Repository for a demo that showcases the powerful, data-agnostic AdaptableBlotter.JS.
 
+You can run AdaptableBlotter.JS with a number of different dummy data sets.  And there is also an option to run the Blotter with ag-Grid grouping and aggregation functions.
+
 AdaptableBlotter.JS is a powerful DataGrid add-on that integrates with the leading datagrid components and provides all the additional, rich functionality that financial and other advanced users expect from their grids and blotters.
 
 It offers - out of the box - incredibly powerful searching, filtering, sorting, styling and editing functionality.  It also provides unparalleled validation and audit functions, vital in the current regulatory and compliance environment.  Try it out for yourself at http://demo.adaptableblotter.com.
