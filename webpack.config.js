@@ -84,6 +84,7 @@ module.exports = {
         // new CopyWebpackPlugin([{ context: 'node_modules/adaptableblotter/dist/adaptable-blotter-themes', from: '**/*', to: 'adaptable-blotter-themes' }]),
         new CopyWebpackPlugin([{ context: 'node_modules/adaptableblotter/dist', from: '*', to: PACKAGE.version + '/' }]),
         new CopyWebpackPlugin([{ from: 'ExtLibs/**/*', to: '' }]),
+        new CopyWebpackPlugin([{ from: 'images/*', to: '' }]),
         new CopyWebpackPlugin([{ from: 'node_modules/adaptableblotter/LICENSE.md', to: '' }]),
         new CopyWebpackPlugin([{ from: 'DemoPage/*', to: '', flatten: true }]),
         new CopyWebpackPlugin([{ from: 'DataSets/Json/*.json', to: '', flatten: true }]),
