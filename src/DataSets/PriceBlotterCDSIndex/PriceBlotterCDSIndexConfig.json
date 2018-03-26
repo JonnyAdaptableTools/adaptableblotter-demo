@@ -1,6 +1,6 @@
 {
     "ConditionalStyle": {
-        "ConditionalStyleConditions": [
+        "ConditionalStyles": [
             {
                 "ColumnId": "Markit3Y",
                 "Style": {
@@ -14,10 +14,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilterExpressions": [
+                    "FilterExpressions": [
                         {
                             "ColumnName": "Markit3Y",
-                            "UserFilters": [
+                            "Filters": [
                                 "Non Blanks"
                             ]
                         }
@@ -39,10 +39,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilterExpressions": [
+                    "FilterExpressions": [
                         {
                             "ColumnName": "Markit5Y",
-                            "UserFilters": [
+                            "Filters": [
                                 "Non Blanks"
                             ]
                         }
@@ -64,10 +64,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilterExpressions": [
+                    "FilterExpressions": [
                         {
                             "ColumnName": "Markit7Y",
-                            "UserFilters": [
+                            "Filters": [
                                 "Non Blanks"
                             ]
                         }
@@ -89,10 +89,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilterExpressions": [
+                    "FilterExpressions": [
                         {
                             "ColumnName": "Markit10Y",
-                            "UserFilters": [
+                            "Filters": [
                                 "Non Blanks"
                             ]
                         }
@@ -121,7 +121,7 @@
                         }
                     ],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilterExpressions": [],
+                    "FilterExpressions": [],
                     "RangeExpressions": []
                 },
                 "IsPredefined": false

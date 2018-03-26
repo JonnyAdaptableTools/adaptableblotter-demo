@@ -1,6 +1,6 @@
 {
     "FlashingCell": {
-        "FlashingColumns": [
+        "FlashingCells": [
             {
                 "IsLive": true,
                 "ColumnName": "Ask",
@@ -25,7 +25,7 @@
         ]
     },
     "ConditionalStyle": {
-        "ConditionalStyleConditions": [
+        "ConditionalStyles": [
             {
                 "ColumnId": "Change",
                 "Style": {
@@ -39,10 +39,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilterExpressions": [
+                    "FilterExpressions": [
                         {
                             "ColumnName": "Change",
-                            "UserFilters": [
+                            "Filters": [
                                 "Positive"
                             ]
                         }
@@ -63,10 +63,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilterExpressions": [
+                    "FilterExpressions": [
                         {
                             "ColumnName": "Change",
-                            "UserFilters": [
+                            "Filters": [
                                 "Negative"
                             ]
                         }

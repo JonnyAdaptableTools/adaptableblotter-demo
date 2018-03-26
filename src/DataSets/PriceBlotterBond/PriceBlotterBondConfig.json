@@ -1,6 +1,6 @@
 {
     "FlashingCell": {
-        "FlashingColumns": [
+        "FlashingCells": [
             {
                 "IsLive": true,
                 "ColumnName": "Ask",

@@ -1,6 +1,6 @@
 {
     "ConditionalStyle": {
-        "ConditionalStyleConditions": [
+        "ConditionalStyles": [
             {
                 "ColumnId": "BaseAmount",
                 "Style": {
@@ -14,10 +14,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilterExpressions": [
+                    "FilterExpressions": [
                         {
                             "ColumnName": "BaseAmount",
-                            "UserFilters": [
+                            "Filters": [
                                 "Positive"
                             ]
                         }
@@ -39,10 +39,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilterExpressions": [
+                    "FilterExpressions": [
                         {
                             "ColumnName": "BaseAmount",
-                            "UserFilters": [
+                            "Filters": [
                                 "Negative"
                             ]
                         }
@@ -64,10 +64,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilterExpressions": [
+                    "FilterExpressions": [
                         {
                             "ColumnName": "SecondaryAmount",
-                            "UserFilters": [
+                            "Filters": [
                                 "Positive"
                             ]
                         }
@@ -89,10 +89,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilterExpressions": [
+                    "FilterExpressions": [
                         {
                             "ColumnName": "SecondaryAmount",
-                            "UserFilters": [
+                            "Filters": [
                                 "Negative"
                             ]
                         }

@@ -1,6 +1,6 @@
 {
     "ConditionalStyle": {
-        "ConditionalStyleConditions": [
+        "ConditionalStyles": [
             {
                 "ColumnId": "HighLowDifference",
                 "Style": {
@@ -14,10 +14,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilterExpressions": [
+                    "FilterExpressions": [
                         {
                             "ColumnName": "HighLowDifference",
-                            "UserFilters": [
+                            "Filters": [
                                 "Positive"
                             ]
                         }
@@ -39,10 +39,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilterExpressions": [
+                    "FilterExpressions": [
                         {
                             "ColumnName": "HighLowDifference",
-                            "UserFilters": [
+                            "Filters": [
                                 "Negative"
                             ]
                         }

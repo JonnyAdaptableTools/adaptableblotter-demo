@@ -14,7 +14,7 @@
                         }
                     ],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilterExpressions": [],
+                    "FilterExpressions": [],
                     "RangeExpressions": []
                 },
                 "IsPredefined": true

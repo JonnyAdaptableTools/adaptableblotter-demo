@@ -1,6 +1,6 @@
 {
        "FlashingCell": {
-        "FlashingColumns": [
+        "FlashingCells": [
             {
                 "IsLive": true,
                 "ColumnName": "Ask",
@@ -25,7 +25,7 @@
         ]
     },
     "ConditionalStyle": {
-        "ConditionalStyleConditions": [
+        "ConditionalStyles": [
             {
                 "ColumnId": "Change",
                 "Style": {
@@ -39,10 +39,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilterExpressions": [
+                    "FilterExpressions": [
                         {
                             "ColumnName": "Change",
-                            "UserFilters": [
+                            "Filters": [
                                 "Positive"
                             ]
                         }
@@ -63,10 +63,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilterExpressions": [
+                    "FilterExpressions": [
                         {
                             "ColumnName": "Change",
-                            "UserFilters": [
+                            "Filters": [
                                 "Negative"
                             ]
                         }
@@ -87,10 +87,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilterExpressions": [
+                    "FilterExpressions": [
                         {
                             "ColumnName": "PercentChange",
-                            "UserFilters": [
+                            "Filters": [
                                 "Positive"
                             ]
                         }
@@ -111,10 +111,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilterExpressions": [
+                    "FilterExpressions": [
                         {
                             "ColumnName": "PercentChange",
-                            "UserFilters": [
+                            "Filters": [
                                 "Negative"
                             ]
                         }
@@ -135,10 +135,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilterExpressions": [
+                    "FilterExpressions": [
                         {
                             "ColumnName": "PercentChangeOnYear",
-                            "UserFilters": [
+                            "Filters": [
                                 "Positive"
                             ]
                         }
@@ -159,10 +159,10 @@
                 "Expression": {
                     "ColumnDisplayValuesExpressions": [],
                     "ColumnRawValuesExpressions": [],
-                    "UserFilterExpressions": [
+                    "FilterExpressions": [
                         {
                             "ColumnName": "PercentChangeOnYear",
-                            "UserFilters": [
+                            "Filters": [
                                 "Negative"
                             ]
                         }
