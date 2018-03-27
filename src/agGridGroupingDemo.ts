@@ -112,6 +112,7 @@ export class agGridGroupingDemo implements IDemo {
                     enableAuditLog: false,
                     enableRemoteConfigServer: false,
                     blotterId: "Northwind Orders" + process.env.packageVersion,
+                    modalContainer: "Page",
                     maxColumnValueItemsDisplayed: 1000,
                     predefinedConfigUrl: "NorthwindOrdersConfig.json"
                 }

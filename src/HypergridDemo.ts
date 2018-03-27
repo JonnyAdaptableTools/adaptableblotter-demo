@@ -75,6 +75,7 @@ export class HypergridDemo implements IDemo {
                     enableRemoteConfigServer: false,
                     blotterId: selectedConfig.name + process.env.packageVersion,
                     maxColumnValueItemsDisplayed: 1000,
+                    modalContainer: "Page",
                     predefinedConfigUrl: selectedConfig.name.replace(/ /g, "") + "Config.json",
                     iPushPullConfig: {
                         api_key: "CbBaMaoqHVifScrYwKssGnGyNkv5xHOhQVGm3cYP",

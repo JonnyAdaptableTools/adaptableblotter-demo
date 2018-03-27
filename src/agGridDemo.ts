@@ -58,6 +58,7 @@ export class agGridDemo implements IDemo {
                     enableAuditLog: false,
                     enableRemoteConfigServer: false,
                     blotterId: selectedConfig.name + process.env.packageVersion,
+                    modalContainer: "Page",
                     maxColumnValueItemsDisplayed: 1000,
                     predefinedConfigUrl: selectedConfig.name.replace(/ /g, "") + "Config.json",
                     iPushPullConfig: {
