@@ -35,7 +35,7 @@
         "CustomSorts": [
             {
                 "ColumnId": "Rating",
-                "CustomSortItems": [
+                "Values": [
                     "AAA",
                     "AA+",
                     "AA",
