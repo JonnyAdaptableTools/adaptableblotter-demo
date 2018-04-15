@@ -41,6 +41,8 @@ export class KendoDemo implements IDemo {
                 //set all the properties such as editor etc....
                 selectedConfig.setGridProperties(this.grid)
 
+                let config: any = selectedConfig.name.replace(/ /g, "") + "Config.json";
+
                 //create Adaptable Blotter
                 var container = document.getElementById(blotterContainer);
                 let blotterOptions: IAdaptableBlotterOptions = {
@@ -51,7 +53,7 @@ export class KendoDemo implements IDemo {
                     blotterId: selectedConfig.name + process.env.packageVersion,
                     modalContainer: "Page",
                     maxColumnValueItemsDisplayed: 1000,
-                    predefinedConfigUrl: selectedConfig.name.replace(/ /g, "") + "Config.json",
+                    predefinedConfig: config,
 
                     iPushPullConfig: {
                         api_key: "CbBaMaoqHVifScrYwKssGnGyNkv5xHOhQVGm3cYP",

@@ -104,6 +104,8 @@ export class agGridGroupingDemo implements IDemo {
                 //set all the properties such as editor etc....
                 //  selectedConfig.setGridProperties(gridOptions)
 
+                let config: any = "NorthwindOrdersConfig.json";
+
                 //create Adaptable Blotter
                 var container = document.getElementById(blotterContainer);
                 let blotterOptions: IAdaptableBlotterOptions = {
@@ -114,7 +116,7 @@ export class agGridGroupingDemo implements IDemo {
                     blotterId: "Northwind Orders" + process.env.packageVersion,
                     modalContainer: "Page",
                     maxColumnValueItemsDisplayed: 1000,
-                    predefinedConfigUrl: "NorthwindOrdersConfig.json"
+                    predefinedConfig: config
                 }
                 this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(gridOptions, container, eGridDiv, blotterOptions);
 

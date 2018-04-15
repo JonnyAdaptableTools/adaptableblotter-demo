@@ -50,6 +50,8 @@ export class agGridDemo implements IDemo {
                 //set all the properties such as editor etc....
                 selectedConfig.setGridProperties(gridOptions)
 
+                let config: any = selectedConfig.name.replace(/ /g, "") + "Config.json";
+
                 //create Adaptable Blotter
                 var container = document.getElementById(blotterContainer);
                 let blotterOptions: IAdaptableBlotterOptions = {
@@ -60,7 +62,7 @@ export class agGridDemo implements IDemo {
                     blotterId: selectedConfig.name + process.env.packageVersion,
                     modalContainer: "Grid",
                     maxColumnValueItemsDisplayed: 1000,
-                    predefinedConfigUrl: selectedConfig.name.replace(/ /g, "") + "Config.json",
+                    predefinedConfig: config,
                     iPushPullConfig: {
                         api_key: "CbBaMaoqHVifScrYwKssGnGyNkv5xHOhQVGm3cYP",
                         api_secret: "xYzE51kuHyyt9kQCvMe0tz0H2sDSjyEQcF5SOBlPQmcL9em0NqcCzyqLYj5fhpuZxQ8BiVcYl6zoOHeI6GYZj1TkUiiLVFoW3HUxiCdEUjlPS8Vl2YHUMEPD5qkLYnGj",
