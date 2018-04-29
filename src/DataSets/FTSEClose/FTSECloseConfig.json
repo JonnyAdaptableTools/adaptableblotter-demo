@@ -24,7 +24,7 @@
                     ],
                     "RangeExpressions": []
                 },
-                "IsPredefined": false
+                "IsReadOnly": true
             },
             {
                 "ColumnId": "HighLowDifference",
@@ -49,7 +49,7 @@
                     ],
                     "RangeExpressions": []
                 },
-                "IsPredefined": false
+                "IsReadOnly": true
             }
         ]
     }

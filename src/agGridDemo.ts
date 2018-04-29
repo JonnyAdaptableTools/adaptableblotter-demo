@@ -89,7 +89,7 @@ export class agGridDemo implements IDemo {
                 container.className = "ag-theme-blue";
             }
 
-            
+       //    this.adaptableblotter
         }
     }
 }

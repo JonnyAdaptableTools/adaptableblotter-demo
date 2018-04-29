@@ -7,7 +7,7 @@
                     "DisplayValueExpressions": [
                         {
                             "ColumnId": "Currency",
-                            "ColumnDisplayValues": [
+                            "DisplayValues": [
                                 "EUR",
                                 "GBP"
                             ]
@@ -17,7 +17,7 @@
                     "FilterExpressions": [],
                     "RangeExpressions": []
                 },
-                "IsPredefined": true
+                "IsReadOnly": true
             }
         ]
     }
