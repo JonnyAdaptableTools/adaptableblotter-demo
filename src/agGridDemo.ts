@@ -82,7 +82,7 @@ export class agGridDemo implements IDemo {
         if (this.themeName != this.adaptableblotter.AdaptableBlotterStore.TheStore.getState().Theme.CurrentTheme) {
             this.themeName = this.adaptableblotter.AdaptableBlotterStore.TheStore.getState().Theme.CurrentTheme;
             var container = document.getElementById(this.gridContainer)
-            if (this.themeName == "Slate" || this.themeName == "Cyborg" || this.themeName == "Darkly" || this.themeName == "Superhero") {
+            if (this.themeName == "Dark Theme" || this.themeName == "Cyborg" || this.themeName == "Darkly" || this.themeName == "Superhero") {
                 container.className = "ag-theme-dark";
             }
             else {

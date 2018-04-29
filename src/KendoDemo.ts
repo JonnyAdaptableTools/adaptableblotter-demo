@@ -74,7 +74,7 @@ export class KendoDemo implements IDemo {
         if (this.themeName != this.adaptableblotter.AdaptableBlotterStore.TheStore.getState().Theme.CurrentTheme) {
             this.themeName = this.adaptableblotter.AdaptableBlotterStore.TheStore.getState().Theme.CurrentTheme;
             var a_href = $('#kendotheme').attr('href');
-            if (this.themeName == "Slate" || this.themeName == "Cyborg" || this.themeName == "Darkly" || this.themeName == "Superhero") {
+            if (this.themeName == "Dark Theme" || this.themeName == "Slate" || this.themeName == "Cyborg" || this.themeName == "Darkly" || this.themeName == "Superhero") {
                 $('#kendotheme').attr('href', a_href.replace('blueopal', 'black'));
             }
             else {

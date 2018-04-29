@@ -112,7 +112,7 @@ export class HypergridDemo implements IDemo {
     public ThemeChange() {
         if (this.themeName != this.adaptableblotter.AdaptableBlotterStore.TheStore.getState().Theme.CurrentTheme) {
             this.themeName = this.adaptableblotter.AdaptableBlotterStore.TheStore.getState().Theme.CurrentTheme;
-            if (this.themeName == "Slate" || this.themeName == "Cyborg" || this.themeName == "Darkly" || this.themeName == "Superhero") {
+            if (this.themeName == "Dark Theme" || this.themeName == "Slate" || this.themeName == "Cyborg" || this.themeName == "Darkly" || this.themeName == "Superhero") {
                 this.grid.addProperties(darkTheme);
             }
             else {
