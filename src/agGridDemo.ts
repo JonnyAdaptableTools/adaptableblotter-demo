@@ -6,6 +6,7 @@ import { IAdaptableBlotter } from 'adaptableblotter/dist/App_Scripts/Core/Interf
 import { IAdaptableBlotterOptions } from 'adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotterOptions';
 import { GridOptions } from 'ag-grid/dist/lib/entities/gridOptions';
 import { Grid } from 'ag-grid/dist/lib/grid';
+import { Expression, IAdaptableBlotterObject } from 'adaptableblotter/dist/App_Scripts/Core/Api/AdaptableBlotterObjects';
 
 export class agGridDemo implements IDemo {
     private themeName = "";
@@ -87,6 +88,8 @@ export class agGridDemo implements IDemo {
             else {
                 container.className = "ag-theme-blue";
             }
+
+            
         }
     }
 }

@@ -12,11 +12,11 @@
                 },
                 "ConditionalStyleScope": "Column",
                 "Expression": {
-                    "ColumnDisplayValuesExpressions": [],
-                    "ColumnRawValuesExpressions": [],
+                    "DisplayValueExpressions": [],
+                    "RawValueExpressions": [],
                     "FilterExpressions": [
                         {
-                            "ColumnName": "HighLowDifference",
+                            "ColumnId": "HighLowDifference",
                             "Filters": [
                                 "Positive"
                             ]
@@ -37,11 +37,11 @@
                 },
                 "ConditionalStyleScope": "Column",
                 "Expression": {
-                    "ColumnDisplayValuesExpressions": [],
-                    "ColumnRawValuesExpressions": [],
+                    "DisplayValueExpressions": [],
+                    "RawValueExpressions": [],
                     "FilterExpressions": [
                         {
-                            "ColumnName": "HighLowDifference",
+                            "ColumnId": "HighLowDifference",
                             "Filters": [
                                 "Negative"
                             ]

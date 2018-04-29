@@ -3,24 +3,24 @@
         "FlashingCells": [
             {
                 "IsLive": true,
-                "ColumnName": "Ask",
+                "ColumnId": "Ask",
                 "FlashingCellDuration": 500,
-                "UpBackColor": "#008000",
-                "DownBackColor": "#FF0000"
+                "UpColor": "#008000",
+                "DownColor": "#FF0000"
             },
             {
                 "IsLive": true,
-                "ColumnName": "Bid",
+                "ColumnId": "Bid",
                 "FlashingCellDuration": 500,
-                "UpBackColor": "#008000",
-                "DownBackColor": "#FF0000"
+                "UpColor": "#008000",
+                "DownColor": "#FF0000"
             },
             {
                 "IsLive": true,
-                "ColumnName": "Price",
+                "ColumnId": "Price",
                 "FlashingCellDuration": 500,
-                "UpBackColor": "#008000",
-                "DownBackColor": "#FF0000"
+                "UpColor": "#008000",
+                "DownColor": "#FF0000"
             }
         ]
     },
@@ -37,11 +37,11 @@
                 },
                 "ConditionalStyleScope": "Column",
                 "Expression": {
-                    "ColumnDisplayValuesExpressions": [],
-                    "ColumnRawValuesExpressions": [],
+                    "DisplayValueExpressions": [],
+                    "RawValueExpressions": [],
                     "FilterExpressions": [
                         {
-                            "ColumnName": "Change",
+                            "ColumnId": "Change",
                             "Filters": [
                                 "Positive"
                             ]
@@ -61,11 +61,11 @@
                 },
                 "ConditionalStyleScope": "Column",
                 "Expression": {
-                    "ColumnDisplayValuesExpressions": [],
-                    "ColumnRawValuesExpressions": [],
+                    "DisplayValueExpressions": [],
+                    "RawValueExpressions": [],
                     "FilterExpressions": [
                         {
-                            "ColumnName": "Change",
+                            "ColumnId": "Change",
                             "Filters": [
                                 "Negative"
                             ]

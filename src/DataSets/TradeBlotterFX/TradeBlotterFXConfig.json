@@ -12,11 +12,11 @@
                 },
                 "ConditionalStyleScope": "Column",
                 "Expression": {
-                    "ColumnDisplayValuesExpressions": [],
-                    "ColumnRawValuesExpressions": [],
+                    "DisplayValueExpressions": [],
+                    "RawValueExpressions": [],
                     "FilterExpressions": [
                         {
-                            "ColumnName": "BaseAmount",
+                            "ColumnId": "BaseAmount",
                             "Filters": [
                                 "Positive"
                             ]
@@ -37,11 +37,11 @@
                 },
                 "ConditionalStyleScope": "Column",
                 "Expression": {
-                    "ColumnDisplayValuesExpressions": [],
-                    "ColumnRawValuesExpressions": [],
+                    "DisplayValueExpressions": [],
+                    "RawValueExpressions": [],
                     "FilterExpressions": [
                         {
-                            "ColumnName": "BaseAmount",
+                            "ColumnId": "BaseAmount",
                             "Filters": [
                                 "Negative"
                             ]
@@ -62,11 +62,11 @@
                 },
                 "ConditionalStyleScope": "Column",
                 "Expression": {
-                    "ColumnDisplayValuesExpressions": [],
-                    "ColumnRawValuesExpressions": [],
+                    "DisplayValueExpressions": [],
+                    "RawValueExpressions": [],
                     "FilterExpressions": [
                         {
-                            "ColumnName": "SecondaryAmount",
+                            "ColumnId": "SecondaryAmount",
                             "Filters": [
                                 "Positive"
                             ]
@@ -87,11 +87,11 @@
                 },
                 "ConditionalStyleScope": "Column",
                 "Expression": {
-                    "ColumnDisplayValuesExpressions": [],
-                    "ColumnRawValuesExpressions": [],
+                    "DisplayValueExpressions": [],
+                    "RawValueExpressions": [],
                     "FilterExpressions": [
                         {
-                            "ColumnName": "SecondaryAmount",
+                            "ColumnId": "SecondaryAmount",
                             "Filters": [
                                 "Negative"
                             ]

@@ -12,11 +12,11 @@
                 },
                 "ConditionalStyleScope": "Column",
                 "Expression": {
-                    "ColumnDisplayValuesExpressions": [],
-                    "ColumnRawValuesExpressions": [],
+                    "DisplayValueExpressions": [],
+                    "RawValueExpressions": [],
                     "FilterExpressions": [
                         {
-                            "ColumnName": "Markit3Y",
+                            "ColumnId": "Markit3Y",
                             "Filters": [
                                 "Non Blanks"
                             ]
@@ -37,11 +37,11 @@
                 },
                 "ConditionalStyleScope": "Column",
                 "Expression": {
-                    "ColumnDisplayValuesExpressions": [],
-                    "ColumnRawValuesExpressions": [],
+                    "DisplayValueExpressions": [],
+                    "RawValueExpressions": [],
                     "FilterExpressions": [
                         {
-                            "ColumnName": "Markit5Y",
+                            "ColumnId": "Markit5Y",
                             "Filters": [
                                 "Non Blanks"
                             ]
@@ -62,11 +62,11 @@
                 },
                 "ConditionalStyleScope": "Column",
                 "Expression": {
-                    "ColumnDisplayValuesExpressions": [],
-                    "ColumnRawValuesExpressions": [],
+                    "DisplayValueExpressions": [],
+                    "RawValueExpressions": [],
                     "FilterExpressions": [
                         {
-                            "ColumnName": "Markit7Y",
+                            "ColumnId": "Markit7Y",
                             "Filters": [
                                 "Non Blanks"
                             ]
@@ -87,11 +87,11 @@
                 },
                 "ConditionalStyleScope": "Column",
                 "Expression": {
-                    "ColumnDisplayValuesExpressions": [],
-                    "ColumnRawValuesExpressions": [],
+                    "DisplayValueExpressions": [],
+                    "RawValueExpressions": [],
                     "FilterExpressions": [
                         {
-                            "ColumnName": "Markit10Y",
+                            "ColumnId": "Markit10Y",
                             "Filters": [
                                 "Non Blanks"
                             ]
@@ -112,15 +112,15 @@
                 },
                 "ConditionalStyleScope": "Row",
                 "Expression": {
-                    "ColumnDisplayValuesExpressions": [
+                    "DisplayValueExpressions": [
                         {
-                            "ColumnName": "OnTheRun",
+                            "ColumnId": "OnTheRun",
                             "ColumnDisplayValues": [
                                 "1"
                             ]
                         }
                     ],
-                    "ColumnRawValuesExpressions": [],
+                    "RawValueExpressions": [],
                     "FilterExpressions": [],
                     "RangeExpressions": []
                 },
