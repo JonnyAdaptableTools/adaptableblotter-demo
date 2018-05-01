@@ -1,6 +1,6 @@
 {
   "name": "adaptableblotter-demo",
-  "version": "1.10.11",
+  "version": "1.11.0",
   "description": "",
   "main": "index.js",
   "dependencies": {
