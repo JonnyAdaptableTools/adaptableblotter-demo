@@ -71,7 +71,7 @@ export class agGridDemo implements IDemo {
                     modalContainer: "Grid",
                     maxColumnValueItemsDisplayed: 1000,
                     predefinedConfig: config,
-                    serverSearchOption: 'AdvancedSearch',
+                    serverSearchOption: 'None',
                     iPushPullConfig: {
                         api_key: "CbBaMaoqHVifScrYwKssGnGyNkv5xHOhQVGm3cYP",
                         api_secret: "xYzE51kuHyyt9kQCvMe0tz0H2sDSjyEQcF5SOBlPQmcL9em0NqcCzyqLYj5fhpuZxQ8BiVcYl6zoOHeI6GYZj1TkUiiLVFoW3HUxiCdEUjlPS8Vl2YHUMEPD5qkLYnGj",
@@ -81,7 +81,7 @@ export class agGridDemo implements IDemo {
 
                 //We subscribe to the AB theme change so we update the theme of the grid (only light or dark for demo)
                 this.adaptableblotter.AdaptableBlotterStore.TheStore.subscribe(() => { this.ThemeChange(); });
-                this.adaptableblotter.api.onSearchedChanged().Subscribe((s: IAdaptableBlotter, e: ISearchChangedEventArgs) => this.tet(s, e))
+                this.adaptableblotter.api.onSearchedChanged().Subscribe((s: IAdaptableBlotter, e: ISearchChangedEventArgs) => this.onBlotterSearchChanged(s, e))
          
             })
     }
@@ -108,13 +108,11 @@ export class agGridDemo implements IDemo {
 
     }
 
-    tet(arg0: IAdaptableBlotter, arg1: ISearchChangedEventArgs): any {
-        let helpme: IColumn 
-        let test: IColItem
-      let ot : RangeOperandType//= RangeOperandType.Value;
-
-         if(ot== "Value"){}
-              if (arg1.SearchChangedTrigger == 'QuickSearch') {
+    onBlotterSearchChanged(blotter: IAdaptableBlotter, eventArgs: ISearchChangedEventArgs): any {
+      
+      
+        
+              if (eventArgs.SearchChangedTrigger == 'QuickSearch') {
       //      alert("quick search")
        }
     }
