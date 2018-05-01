@@ -2,13 +2,20 @@ import { IDataSetConfiguration } from './IDataSetConfiguration';
 import { AvailableDatasetConfigs } from './DatasetConfigsagGrid';
 import { IDemo } from './IDemo';
 import * as Helper from './Helper';
-import { IAdaptableBlotter } from 'adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotter';
-import { IAdaptableBlotterOptions } from 'adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotterOptions';
 import { GridOptions } from 'ag-grid/dist/lib/entities/gridOptions';
 import { Grid } from 'ag-grid/dist/lib/grid';
-import { Expression, IAdaptableBlotterObject } from 'adaptableblotter/dist/App_Scripts/Core/Api/AdaptableBlotterObjects';
+import { IAdaptableBlotter } from 'adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotter';
+import { IAdaptableBlotterOptions } from 'adaptableblotter/dist/App_Scripts/Core/Api/Interface/IAdaptableBlotterOptions';
+import { Expression } from 'adaptableblotter/dist/App_Scripts/Core/Api/Expression';
+import { ISearchChangedEventArgs} from 'adaptableblotter/dist/App_Scripts/Core/Api/Interface/ServerSearch';
+import { IFormatColumn } from 'adaptableblotter/dist/App_Scripts/Core/Api/Interface/AdaptableBlotterObjects';
+import { IColumn } from 'adaptableblotter/dist/App_Scripts/Core/Interface/IColumn';
+import { IColItem } from 'adaptableblotter/dist/App_Scripts/View/UIInterfaces';
+import { RangeOperandType } from 'adaptableblotter/dist/App_Scripts/Core/Enums';
 
 export class agGridDemo implements IDemo {
+
+
     private themeName = "";
     private adaptableblotter: IAdaptableBlotter
     private grid: any
@@ -30,15 +37,15 @@ export class agGridDemo implements IDemo {
                     onGridReady: function () {
                         //we do it twice as sometimes when the dataset is small columns that werent visible at all will become
                         //visible and won't be autosized
-                      //  gridOptions.columnApi.autoSizeAllColumns("api");
-                    //    setTimeout(() => gridOptions.columnApi.autoSizeAllColumns("api"), 1);
+                        //  gridOptions.columnApi.autoSizeAllColumns("api");
+                        //    setTimeout(() => gridOptions.columnApi.autoSizeAllColumns("api"), 1);
 
                         gridOptions.api.addEventListener("cellEditingStopped", (params: any) => {
                             selectedConfig.ActionWhenRecordUpdatedOrEdited(params.node);
                         });
 
                         gridOptions.api.addEventListener("newColumnsLoaded", function (params: any) {
-                    //        gridOptions.columnApi.autoSizeAllColumns("api")
+                            //        gridOptions.columnApi.autoSizeAllColumns("api")
                         });
                     }
                 };
@@ -64,6 +71,7 @@ export class agGridDemo implements IDemo {
                     modalContainer: "Grid",
                     maxColumnValueItemsDisplayed: 1000,
                     predefinedConfig: config,
+                    serverSearchOption: 'AdvancedSearch',
                     iPushPullConfig: {
                         api_key: "CbBaMaoqHVifScrYwKssGnGyNkv5xHOhQVGm3cYP",
                         api_secret: "xYzE51kuHyyt9kQCvMe0tz0H2sDSjyEQcF5SOBlPQmcL9em0NqcCzyqLYj5fhpuZxQ8BiVcYl6zoOHeI6GYZj1TkUiiLVFoW3HUxiCdEUjlPS8Vl2YHUMEPD5qkLYnGj",
@@ -73,7 +81,8 @@ export class agGridDemo implements IDemo {
 
                 //We subscribe to the AB theme change so we update the theme of the grid (only light or dark for demo)
                 this.adaptableblotter.AdaptableBlotterStore.TheStore.subscribe(() => { this.ThemeChange(); });
-
+                this.adaptableblotter.api.onSearchedChanged().Subscribe((s: IAdaptableBlotter, e: ISearchChangedEventArgs) => this.tet(s, e))
+         
             })
     }
 
@@ -89,7 +98,24 @@ export class agGridDemo implements IDemo {
                 container.className = "ag-theme-blue";
             }
 
-       //    this.adaptableblotter
+            //   adaptableBlotterKendo
+            //    let test: IAdaptableBlotter
+
+            // let test: Expression = new Expression(null, )
+            //   test.DisplayValueExpressions
         }
+
+
+    }
+
+    tet(arg0: IAdaptableBlotter, arg1: ISearchChangedEventArgs): any {
+        let helpme: IColumn 
+        let test: IColItem
+      let ot : RangeOperandType//= RangeOperandType.Value;
+
+         if(ot== "Value"){}
+              if (arg1.SearchChangedTrigger == 'QuickSearch') {
+      //      alert("quick search")
+       }
     }
 }

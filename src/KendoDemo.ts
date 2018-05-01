@@ -3,7 +3,7 @@ import { AvailableDatasetConfigs } from './DatasetConfigsKendo';
 import { IAdaptableBlotter } from '../node_modules/adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotter';
 import { IDemo } from './IDemo';
 import * as Helper from './Helper';
-import { IAdaptableBlotterOptions } from 'adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotterOptions';
+import { IAdaptableBlotterOptions } from 'adaptableblotter/dist/App_Scripts/Core/Api/Interface/IAdaptableBlotterOptions';
 
 export class KendoDemo implements IDemo {
     private themeName = "";
@@ -80,6 +80,8 @@ export class KendoDemo implements IDemo {
             else {
                 $('#kendotheme').attr('href', a_href.replace('black', 'blueopal'));
             }
+
+          //  this.adaptableblotter.api.setDataSource()
         }
     }
 }

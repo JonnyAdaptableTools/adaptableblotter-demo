@@ -3,7 +3,7 @@ import { AvailableDatasetConfigs } from './DatasetConfigsHypergrid';
 import {IAdaptableBlotter } from '../node_modules/adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotter';
 import { IDemo } from './IDemo';
 import * as Helper from './Helper';
-import { IAdaptableBlotterOptions } from 'adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotterOptions';
+import { IAdaptableBlotterOptions } from 'adaptableblotter/dist/App_Scripts/Core/Api/Interface/IAdaptableBlotterOptions';
 
 export class HypergridDemo implements IDemo {
     private themeName = "";
@@ -166,16 +166,16 @@ var lightTheme = {
 var darkTheme = {
     font: '14px Helvetica Neue, Helvetica, Arial, sans-serif',
     color: '#ffffff',
-    backgroundColor: '#07071E',
-    altbackground: '#07071E',
+    backgroundColor: '#403E3E',
+    altbackground: '#302E2E',
     foregroundSelectionColor: '#ffffff',
-    backgroundSelectionColor: 'rgba(61, 119, 254, 0.5)',
+    backgroundSelectionColor: '#546465',
 
-    columnHeaderFont: '14px Helvetica Neue, Helvetica, Arial, sans-serif',
+     columnHeaderFont: '14px Helvetica Neue, Helvetica, Arial, sans-serif',
     columnHeaderColor: '#ffffff',
-    columnHeaderBackgroundColor: '#07071E',
+    columnHeaderBackgroundColor: '#626262',
     columnHeaderForegroundSelectionColor: '#ffffff',
-    columnHeaderBackgroundSelectionColor: '#3D77FE',
+    columnHeaderBackgroundSelectionColor: '#546465',
 
     rowHeaderFont: '14px Helvetica Neue, Helvetica, Arial, sans-serif',
     rowHeaderColor: '#ffffff',

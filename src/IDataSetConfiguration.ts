@@ -1,4 +1,3 @@
-import { IColumn } from "adaptableblotter/dist/App_Scripts/Core/Interface/IColumn";
 
 export interface IDataSetConfiguration {
     //Name of the config. Predefined config, Data filename etc... have to match this name without the spaces

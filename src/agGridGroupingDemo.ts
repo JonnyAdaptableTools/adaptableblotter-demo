@@ -3,10 +3,10 @@ import { AvailableDatasetConfigs } from './DatasetConfigsagGrid';
 import { IAdaptableBlotter } from '../node_modules/adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotter';
 import { IDemo } from './IDemo';
 import * as Helper from './Helper';
-import { IAdaptableBlotterOptions } from 'adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotterOptions';
 import { Grid } from 'ag-grid/dist/lib/grid';
 import { GridOptions } from 'ag-grid/dist/lib/entities/gridOptions';
 import * as HelperAgGrid from "./HelperAgGrid"
+import { IAdaptableBlotterOptions } from 'adaptableblotter/dist/App_Scripts/Core/Api/Interface/IAdaptableBlotterOptions';
 
 export class agGridGroupingDemo implements IDemo {
     private themeName = "";
