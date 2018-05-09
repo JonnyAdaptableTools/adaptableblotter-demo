@@ -84,12 +84,11 @@ export class HypergridDemo implements IDemo {
                         api_secret: "xYzE51kuHyyt9kQCvMe0tz0H2sDSjyEQcF5SOBlPQmcL9em0NqcCzyqLYj5fhpuZxQ8BiVcYl6zoOHeI6GYZj1TkUiiLVFoW3HUxiCdEUjlPS8Vl2YHUMEPD5qkLYnGj",
                     }
                 }
-                //tradeId is the primary for the datasource
-                //Jonathan is the username for the demo. Can be plugged to an authent service if required
+               
                 this.adaptableblotter = new (<any>window).adaptableblotterhypergrid.AdaptableBlotter(
-                    this.grid,
+                    blotterOptions,
                     container,
-                    blotterOptions
+                    this.grid
                 );
                 //alternate rows
                 var origgetCell = this.grid.behavior.dataModel.getCell;

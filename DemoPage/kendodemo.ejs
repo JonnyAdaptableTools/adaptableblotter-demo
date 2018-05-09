@@ -66,7 +66,7 @@
             localStorage.setItem(datasetElement.id, datasetElement.value);
         }
     </script>
-    <div id="content"></div>
+    <div id="adaptableBlotter"></div>
     <div id="grid"></div>
     <% if (htmlWebpackPlugin.options.harnessJs) { %>
         <script src="<%= htmlWebpackPlugin.options.harnessJs %>" type="text/javascript"></script>
@@ -75,7 +75,7 @@
                 <script src="<%= htmlWebpackPlugin.options.demoJs %>" type="text/javascript"></script>
                 <% } %>
                     <script>
-                        var blotter = new kendodemo.KendoDemo("grid", "content")
+                        var blotter = new kendodemo.KendoDemo("grid", "adaptableBlotter")
                     </script>
 
 </body>

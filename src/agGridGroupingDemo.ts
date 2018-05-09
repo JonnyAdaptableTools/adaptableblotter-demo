@@ -44,13 +44,13 @@ export class agGridGroupingDemo implements IDemo {
                         { headerName: "Order Date", field: "OrderDate", editable: true, columnGroupShow: 'closed', cellEditorParams: { useFormatter: true }, valueParser: HelperAgGrid.dateParseragGrid, valueFormatter: HelperAgGrid.shortDateFormatteragGrid },
                         { headerName: "Required Date", field: "RequiredDate", editable: true, columnGroupShow: 'closed', cellEditorParams: { useFormatter: true }, valueParser: HelperAgGrid.dateParseragGrid, valueFormatter: HelperAgGrid.shortDateFormatteragGrid },
                         { headerName: "Shipped Date", field: "ShippedDate", editable: true, columnGroupShow: 'closed', cellEditorParams: { useFormatter: true }, valueParser: HelperAgGrid.dateParseragGrid, valueFormatter: HelperAgGrid.shortDateFormatteragGrid },
-                         { headerName: "OrderCost", field: "OrderCost", cellClass: 'number-cell', cellRenderer: HelperAgGrid.currencyRendereragGrid, columnGroupShow: 'closed', editable: true , enableValue:true},
+                        { headerName: "OrderCost", field: "OrderCost", cellClass: 'number-cell', cellRenderer: HelperAgGrid.currencyRendereragGrid, columnGroupShow: 'closed', editable: true, enableValue: true },
                     ]
                 })
-                schema.push( { headerName: "Item Count", field: "ItemCount", cellClass: 'number-cell', columnGroupShow: 'closed', editable: false,  enableValue:true});
+                schema.push({ headerName: "Item Count", field: "ItemCount", cellClass: 'number-cell', columnGroupShow: 'closed', editable: false, enableValue: true });
                 schema.push({ headerName: "Employee", field: "Employee", filter: 'text', editable: true, enableRowGroup: true, hide: true });
                 schema.push({ headerName: "Ship Via", field: "ShipVia", filter: 'text', editable: true, enableRowGroup: true, hide: true });
-                schema.push({ headerName: "Freight", field: "Freight", cellClass: 'number-cell', cellRenderer: HelperAgGrid.currencyRendereragGrid, editable: false, enableValue:true});
+                schema.push({ headerName: "Freight", field: "Freight", cellClass: 'number-cell', cellRenderer: HelperAgGrid.currencyRendereragGrid, editable: false, enableValue: true });
 
                 // do a column group for shipping
                 schema.push({
@@ -118,7 +118,7 @@ export class agGridGroupingDemo implements IDemo {
                     maxColumnValueItemsDisplayed: 1000,
                     predefinedConfig: config
                 }
-                this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(gridOptions, container, eGridDiv, blotterOptions);
+                this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(blotterOptions, container, gridOptions, eGridDiv);
 
                 //We subscribe to the AB theme change so we update the theme of the grid (only light or dark for demo)
                 this.adaptableblotter.AdaptableBlotterStore.TheStore.subscribe(() => { this.ThemeChange(); });

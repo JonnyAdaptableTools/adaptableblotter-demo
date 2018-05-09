@@ -61,9 +61,10 @@ export class KendoDemo implements IDemo {
                     }
                 }
                 this.adaptableblotter = new (<any>window).adaptableblotterkendo.AdaptableBlotter(
-                    this.grid, 
+                    blotterOptions,
                     container, 
-                    blotterOptions);
+                     this.grid, 
+                    );
 
                 //We subscribe to the AB theme change so we update the theme of the grid (only light or dark for demo)
                 this.adaptableblotter.AdaptableBlotterStore.TheStore.subscribe(() => { this.ThemeChange(); });
