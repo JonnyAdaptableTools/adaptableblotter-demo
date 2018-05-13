@@ -12,8 +12,7 @@
                 },
                 "ConditionalStyleScope": "Column",
                 "Expression": {
-                    "DisplayValueExpressions": [],
-                    "RawValueExpressions": [],
+                    "ColumnValueExpressions": [],
                     "FilterExpressions": [
                         {
                             "ColumnId": "BaseAmount",
@@ -37,8 +36,7 @@
                 },
                 "ConditionalStyleScope": "Column",
                 "Expression": {
-                    "DisplayValueExpressions": [],
-                    "RawValueExpressions": [],
+                    "ColumnValueExpressions": [],
                     "FilterExpressions": [
                         {
                             "ColumnId": "BaseAmount",
@@ -62,8 +60,7 @@
                 },
                 "ConditionalStyleScope": "Column",
                 "Expression": {
-                    "DisplayValueExpressions": [],
-                    "RawValueExpressions": [],
+                    "ColumnValueExpressions": [],
                     "FilterExpressions": [
                         {
                             "ColumnId": "SecondaryAmount",
@@ -87,8 +84,7 @@
                 },
                 "ConditionalStyleScope": "Column",
                 "Expression": {
-                    "DisplayValueExpressions": [],
-                    "RawValueExpressions": [],
+                    "ColumnValueExpressions": [],
                     "FilterExpressions": [
                         {
                             "ColumnId": "SecondaryAmount",

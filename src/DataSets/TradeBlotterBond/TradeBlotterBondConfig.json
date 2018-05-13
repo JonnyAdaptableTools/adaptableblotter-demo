@@ -4,16 +4,15 @@
             {
                "Name": "Currency EUR+GBP",
                 "Expression": {
-                    "DisplayValueExpressions": [
+                    "ColumnValueExpressions": [
                         {
                             "ColumnId": "Currency",
-                            "DisplayValues": [
+                            "ColumnValues": [
                                 "EUR",
                                 "GBP"
                             ]
                         }
                     ],
-                    "RawValueExpressions": [],
                     "FilterExpressions": [],
                     "RangeExpressions": []
                 },

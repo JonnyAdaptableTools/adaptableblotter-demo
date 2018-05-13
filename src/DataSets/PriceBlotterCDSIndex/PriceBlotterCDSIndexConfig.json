@@ -1,5 +1,8 @@
 {
-    "ConditionalStyle": {
+    "Layout": {
+        "IncludeVendorState": true
+    },
+     "ConditionalStyle": {
         "ConditionalStyles": [
             {
                 "ColumnId": "Markit3Y",
@@ -12,8 +15,7 @@
                 },
                 "ConditionalStyleScope": "Column",
                 "Expression": {
-                    "DisplayValueExpressions": [],
-                    "RawValueExpressions": [],
+                    "ColumnValueExpressions": [],
                     "FilterExpressions": [
                         {
                             "ColumnId": "Markit3Y",
@@ -37,9 +39,8 @@
                 },
                 "ConditionalStyleScope": "Column",
                 "Expression": {
-                    "DisplayValueExpressions": [],
-                    "RawValueExpressions": [],
-                    "FilterExpressions": [
+                    "ColumnValueExpressions": [],
+                     "FilterExpressions": [
                         {
                             "ColumnId": "Markit5Y",
                             "Filters": [
@@ -62,8 +63,7 @@
                 },
                 "ConditionalStyleScope": "Column",
                 "Expression": {
-                    "DisplayValueExpressions": [],
-                    "RawValueExpressions": [],
+                    "ColumnValueExpressions": [],
                     "FilterExpressions": [
                         {
                             "ColumnId": "Markit7Y",
@@ -87,8 +87,7 @@
                 },
                 "ConditionalStyleScope": "Column",
                 "Expression": {
-                    "DisplayValueExpressions": [],
-                    "RawValueExpressions": [],
+                    "ColumnValueExpressions": [],
                     "FilterExpressions": [
                         {
                             "ColumnId": "Markit10Y",
@@ -112,15 +111,14 @@
                 },
                 "ConditionalStyleScope": "Row",
                 "Expression": {
-                    "DisplayValueExpressions": [
+                    "ColumnValueExpressions": [
                         {
                             "ColumnId": "OnTheRun",
-                            "DisplayValues": [
+                            "ColumnValues": [
                                 "1"
                             ]
                         }
                     ],
-                    "RawValueExpressions": [],
                     "FilterExpressions": [],
                     "RangeExpressions": []
                 },

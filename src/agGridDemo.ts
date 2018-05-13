@@ -97,14 +97,7 @@ export class agGridDemo implements IDemo {
             else {
                 container.className = "ag-theme-blue";
             }
-
-            //   adaptableBlotterKendo
-            //    let test: IAdaptableBlotter
-
-            // let test: Expression = new Expression(null, )
-            //   test.DisplayValueExpressions
         }
-
 
     }
 

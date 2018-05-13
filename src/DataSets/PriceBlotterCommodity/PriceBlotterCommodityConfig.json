@@ -37,8 +37,7 @@
                 },
                 "ConditionalStyleScope": "Column",
                 "Expression": {
-                    "DisplayValueExpressions": [],
-                    "RawValueExpressions": [],
+                    "ColumnValueExpressions": [],
                     "FilterExpressions": [
                         {
                             "ColumnId": "Change",
@@ -61,8 +60,7 @@
                 },
                 "ConditionalStyleScope": "Column",
                 "Expression": {
-                    "DisplayValueExpressions": [],
-                    "RawValueExpressions": [],
+                    "ColumnValueExpressions": [],
                     "FilterExpressions": [
                         {
                             "ColumnId": "Change",
@@ -85,8 +83,7 @@
                 },
                 "ConditionalStyleScope": "Column",
                 "Expression": {
-                    "DisplayValueExpressions": [],
-                    "RawValueExpressions": [],
+                    "ColumnValueExpressions": [],
                     "FilterExpressions": [
                         {
                             "ColumnId": "PercentChange",
@@ -109,8 +106,7 @@
                 },
                 "ConditionalStyleScope": "Column",
                 "Expression": {
-                    "DisplayValueExpressions": [],
-                    "RawValueExpressions": [],
+                    "ColumnValueExpressions": [],
                     "FilterExpressions": [
                         {
                             "ColumnId": "PercentChange",
@@ -133,8 +129,7 @@
                 },
                 "ConditionalStyleScope": "Column",
                 "Expression": {
-                    "DisplayValueExpressions": [],
-                    "RawValueExpressions": [],
+                    "ColumnValueExpressions": [],
                     "FilterExpressions": [
                         {
                             "ColumnId": "PercentChangeOnYear",
@@ -157,9 +152,8 @@
                 },
                 "ConditionalStyleScope": "Column",
                 "Expression": {
-                    "DisplayValueExpressions": [],
-                    "RawValueExpressions": [],
-                    "FilterExpressions": [
+                    "ColumnValueExpressions": [],
+                     "FilterExpressions": [
                         {
                             "ColumnId": "PercentChangeOnYear",
                             "Filters": [

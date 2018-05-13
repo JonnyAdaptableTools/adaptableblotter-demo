@@ -12,8 +12,7 @@
                 },
                 "ConditionalStyleScope": "Column",
                 "Expression": {
-                    "DisplayValueExpressions": [],
-                    "RawValueExpressions": [],
+                    "ColumnValueExpressions": [],
                     "FilterExpressions": [
                         {
                             "ColumnId": "HighLowDifference",
@@ -37,9 +36,8 @@
                 },
                 "ConditionalStyleScope": "Column",
                 "Expression": {
-                    "DisplayValueExpressions": [],
-                    "RawValueExpressions": [],
-                    "FilterExpressions": [
+                    "ColumnValueExpressions": [],
+                     "FilterExpressions": [
                         {
                             "ColumnId": "HighLowDifference",
                             "Filters": [

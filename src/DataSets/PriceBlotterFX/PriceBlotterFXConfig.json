@@ -37,8 +37,7 @@
                 },
                 "ConditionalStyleScope": "Column",
                 "Expression": {
-                    "DisplayValueExpressions": [],
-                    "RawValueExpressions": [],
+                    "ColumnValueExpressions": [],
                     "FilterExpressions": [
                         {
                             "ColumnId": "Change",
@@ -61,8 +60,7 @@
                 },
                 "ConditionalStyleScope": "Column",
                 "Expression": {
-                    "DisplayValueExpressions": [],
-                    "RawValueExpressions": [],
+                    "ColumnValueExpressions": [],
                     "FilterExpressions": [
                         {
                             "ColumnId": "Change",
