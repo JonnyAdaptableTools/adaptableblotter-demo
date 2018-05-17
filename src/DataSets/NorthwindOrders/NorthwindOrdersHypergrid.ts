@@ -29,7 +29,7 @@ export var NorthwindOrders: IDataSetConfiguration = {
             return grid.cellEditors.create(editorName, options);
         }
          
-        HelperHypergrid.FormatColumns([5, 6,7], behavior, "shortDateFormat")
+        HelperHypergrid.FormatColumns([7,8,9], behavior, "shortDateFormat")
     },
     tickData: (grid: any) => {
 
