@@ -23,7 +23,7 @@
                     ],
                     "RangeExpressions": []
                 },
-                "IsReadOnly": true
+                "IsReadOnly": false
             },
             {
                 "ColumnId": "BaseAmount",
@@ -47,7 +47,7 @@
                     ],
                     "RangeExpressions": []
                 },
-                "IsReadOnly": true
+                "IsReadOnly": false
             },
             {
                 "ColumnId": "SecondaryAmount",
@@ -71,7 +71,7 @@
                     ],
                     "RangeExpressions": []
                 },
-                "IsReadOnly": true
+                "IsReadOnly": false
             },
             {
                 "ColumnId": "SecondaryAmount",
@@ -95,7 +95,7 @@
                     ],
                     "RangeExpressions": []
                 },
-                "IsReadOnly": true
+                "IsReadOnly": false
             }
         ]
     }
