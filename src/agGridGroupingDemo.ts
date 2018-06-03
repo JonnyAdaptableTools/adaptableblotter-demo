@@ -116,7 +116,8 @@ export class agGridGroupingDemo implements IDemo {
                     blotterId: "Northwind Orders" + process.env.packageVersion,
                     modalContainer: "Page",
                     maxColumnValueItemsDisplayed: 1000,
-                    predefinedConfig: config
+                    predefinedConfig: config,
+                    columnValuesOnlyInQueries: false
                 }
                 this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(blotterOptions, container, gridOptions, eGridDiv);
 
