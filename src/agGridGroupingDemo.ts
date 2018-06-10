@@ -117,7 +117,8 @@ export class agGridGroupingDemo implements IDemo {
                     modalContainer: "Page",
                     maxColumnValueItemsDisplayed: 1000,
                     predefinedConfig: config,
-                    columnValuesOnlyInQueries: false
+                    columnValuesOnlyInQueries: false,
+                    includeVendorStateInLayouts: false
                 }
                 this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(blotterOptions, container, gridOptions, eGridDiv);
 
