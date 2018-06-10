@@ -1,24 +1,17 @@
-import { IDataSetConfiguration } from './IDataSetConfiguration';
 import { AvailableDatasetConfigs } from './DatasetConfigsagGrid';
 import { IDemo } from './IDemo';
 import * as Helper from './Helper';
 import { GridOptions } from 'ag-grid/dist/lib/entities/gridOptions';
 import { Grid } from 'ag-grid/dist/lib/grid';
-import { IAdaptableBlotter } from 'adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotter';
 import { IAdaptableBlotterOptions } from 'adaptableblotter/dist/App_Scripts/Core/Api/Interface/IAdaptableBlotterOptions';
-import { Expression } from 'adaptableblotter/dist/App_Scripts/Core/Api/Expression';
 import { ISearchChangedEventArgs} from 'adaptableblotter/dist/App_Scripts/Core/Api/Interface/ServerSearch';
-import { IFormatColumn } from 'adaptableblotter/dist/App_Scripts/Core/Api/Interface/AdaptableBlotterObjects';
-import { IColumn } from 'adaptableblotter/dist/App_Scripts/Core/Interface/IColumn';
-import { IColItem } from 'adaptableblotter/dist/App_Scripts/View/UIInterfaces';
-import { RangeOperandType } from 'adaptableblotter/dist/App_Scripts/Core/Enums';
+import { IAdaptableBlotter } from 'adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotter';
 
 export class agGridDemo implements IDemo {
 
 
     private themeName = "";
     private adaptableblotter: IAdaptableBlotter
-    private grid: any
     constructor(private gridContainer: string, private blotterContainer: string) {
         let selectedConfig = Helper.manageDomDataSetSelectAndReturnSelectDataset(AvailableDatasetConfigs)
         if (!selectedConfig) { return }
@@ -84,6 +77,7 @@ export class agGridDemo implements IDemo {
                 this.adaptableblotter.AdaptableBlotterStore.TheStore.subscribe(() => { this.ThemeChange(); });
                 this.adaptableblotter.api.onSearchedChanged().Subscribe((s: IAdaptableBlotter, e: ISearchChangedEventArgs) => this.onBlotterSearchChanged(s, e))
          
+             //   this.adaptableblotter.api.
             })
     }
 
