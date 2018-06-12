@@ -55,12 +55,14 @@ export class agGridDemo implements IDemo {
 
                 //create Adaptable Blotter
                 var container = document.getElementById(blotterContainer);
+               // let blotterId: string = (selectedConfig.name + process.env.packageVersion).replace(/\s/g, "")
+                let blotterId: string = (selectedConfig.name).replace(/\s/g, "")
                 let blotterOptions: IAdaptableBlotterOptions = {
                     primaryKey: selectedConfig.primaryKey,
                     userName: "Jonathan",
                     enableAuditLog: false,
                     enableRemoteConfigServer: false,
-                    blotterId: selectedConfig.name + process.env.packageVersion,
+                    blotterId: blotterId,
                     modalContainer: "Grid",
                     maxColumnValueItemsDisplayed: 1000,
                     predefinedConfig: config,
