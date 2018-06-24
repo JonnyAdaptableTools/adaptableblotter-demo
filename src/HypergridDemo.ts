@@ -1,6 +1,6 @@
 import { IDataSetConfiguration } from './IDataSetConfiguration';
 import { AvailableDatasetConfigs } from './DatasetConfigsHypergrid';
-import {IAdaptableBlotter } from '../node_modules/adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotter';
+import { IAdaptableBlotter } from '../node_modules/adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotter';
 import { IDemo } from './IDemo';
 import * as Helper from './Helper';
 import { IAdaptableBlotterOptions } from 'adaptableblotter/dist/App_Scripts/Core/Api/Interface/IAdaptableBlotterOptions';
@@ -72,6 +72,7 @@ export class HypergridDemo implements IDemo {
                 var container = document.getElementById(blotterContainer);
                 let blotterOptions: IAdaptableBlotterOptions = {
                     primaryKey: selectedConfig.primaryKey,
+                    vendorGrid: this.grid,
                     userName: "Jonathan",
                     enableAuditLog: false,
                     enableRemoteConfigServer: false,
@@ -86,12 +87,9 @@ export class HypergridDemo implements IDemo {
                         api_secret: "xYzE51kuHyyt9kQCvMe0tz0H2sDSjyEQcF5SOBlPQmcL9em0NqcCzyqLYj5fhpuZxQ8BiVcYl6zoOHeI6GYZj1TkUiiLVFoW3HUxiCdEUjlPS8Vl2YHUMEPD5qkLYnGj",
                     }
                 }
-               
-                this.adaptableblotter = new (<any>window).adaptableblotterhypergrid.AdaptableBlotter(
-                    blotterOptions,
-                    container,
-                    this.grid
-                );
+
+                this.adaptableblotter = new (<any>window).adaptableblotterhypergrid.AdaptableBlotter(blotterOptions);
+                this.adaptableblotter.Render();
                 //alternate rows
                 var origgetCell = this.grid.behavior.dataModel.getCell;
                 this.grid.behavior.dataModel.getCell = function (config: any, declaredRendererName: any) {
@@ -172,7 +170,7 @@ var darkTheme = {
     foregroundSelectionColor: '#ffffff',
     backgroundSelectionColor: '#546465',
 
-     columnHeaderFont: '14px Helvetica Neue, Helvetica, Arial, sans-serif',
+    columnHeaderFont: '14px Helvetica Neue, Helvetica, Arial, sans-serif',
     columnHeaderColor: '#ffffff',
     columnHeaderBackgroundColor: '#626262',
     columnHeaderForegroundSelectionColor: '#ffffff',

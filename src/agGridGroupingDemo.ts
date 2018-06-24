@@ -110,6 +110,7 @@ export class agGridGroupingDemo implements IDemo {
                 var container = document.getElementById(blotterContainer);
                 let blotterOptions: IAdaptableBlotterOptions = {
                     primaryKey: "OrderId",
+                    vendorGrid: gridOptions,
                     userName: "Jonathan",
                     enableAuditLog: false,
                     enableRemoteConfigServer: false,
@@ -120,7 +121,8 @@ export class agGridGroupingDemo implements IDemo {
                     columnValuesOnlyInQueries: false,
                     includeVendorStateInLayouts: false
                 }
-                this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(blotterOptions, container, gridOptions, eGridDiv);
+                this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(blotterOptions);
+                this.adaptableblotter.Render();
 
                 //We subscribe to the AB theme change so we update the theme of the grid (only light or dark for demo)
                 this.adaptableblotter.AdaptableBlotterStore.TheStore.subscribe(() => { this.ThemeChange(); });

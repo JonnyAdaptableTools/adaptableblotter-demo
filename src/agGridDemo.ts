@@ -4,7 +4,7 @@ import * as Helper from './Helper';
 import { GridOptions } from 'ag-grid/dist/lib/entities/gridOptions';
 import { Grid } from 'ag-grid/dist/lib/grid';
 import { IAdaptableBlotterOptions } from 'adaptableblotter/dist/App_Scripts/Core/Api/Interface/IAdaptableBlotterOptions';
-import { ISearchChangedEventArgs} from 'adaptableblotter/dist/App_Scripts/Core/Api/Interface/ServerSearch';
+import { ISearchChangedEventArgs } from 'adaptableblotter/dist/App_Scripts/Core/Api/Interface/ServerSearch';
 import { IAdaptableBlotter } from 'adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotter';
 
 export class agGridDemo implements IDemo {
@@ -55,10 +55,11 @@ export class agGridDemo implements IDemo {
 
                 //create Adaptable Blotter
                 var container = document.getElementById(blotterContainer);
-               // let blotterId: string = (selectedConfig.name + process.env.packageVersion).replace(/\s/g, "")
+                // let blotterId: string = (selectedConfig.name + process.env.packageVersion).replace(/\s/g, "")
                 let blotterId: string = (selectedConfig.name).replace(/\s/g, "")
                 let blotterOptions: IAdaptableBlotterOptions = {
                     primaryKey: selectedConfig.primaryKey,
+                    vendorGrid: gridOptions,
                     userName: "Jonathan",
                     enableAuditLog: false,
                     enableRemoteConfigServer: false,
@@ -74,13 +75,13 @@ export class agGridDemo implements IDemo {
                         api_secret: "xYzE51kuHyyt9kQCvMe0tz0H2sDSjyEQcF5SOBlPQmcL9em0NqcCzyqLYj5fhpuZxQ8BiVcYl6zoOHeI6GYZj1TkUiiLVFoW3HUxiCdEUjlPS8Vl2YHUMEPD5qkLYnGj",
                     }
                 }
-                this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(blotterOptions, container,gridOptions,  eGridDiv);
-
+                this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(blotterOptions);
+                this.adaptableblotter.Render();
                 //We subscribe to the AB theme change so we update the theme of the grid (only light or dark for demo)
                 this.adaptableblotter.AdaptableBlotterStore.TheStore.subscribe(() => { this.ThemeChange(); });
                 this.adaptableblotter.api.onSearchedChanged().Subscribe((s: IAdaptableBlotter, e: ISearchChangedEventArgs) => this.onBlotterSearchChanged(s, e))
-         
-             //   this.adaptableblotter.api.
+
+                //   this.adaptableblotter.api.
             })
     }
 
@@ -100,11 +101,11 @@ export class agGridDemo implements IDemo {
     }
 
     onBlotterSearchChanged(blotter: IAdaptableBlotter, eventArgs: ISearchChangedEventArgs): any {
-      
-      
-        
-              if (eventArgs.SearchChangedTrigger == 'QuickSearch') {
-      //      alert("quick search")
-       }
+
+
+
+        if (eventArgs.SearchChangedTrigger == 'QuickSearch') {
+            //      alert("quick search")
+        }
     }
 }

@@ -47,6 +47,7 @@ export class KendoDemo implements IDemo {
                 var container = document.getElementById(blotterContainer);
                 let blotterOptions: IAdaptableBlotterOptions = {
                     primaryKey: selectedConfig.primaryKey,
+                    vendorGrid: this.grid,
                     userName: "Jonathan",
                     enableAuditLog: false,
                     enableRemoteConfigServer: false,
@@ -61,11 +62,8 @@ export class KendoDemo implements IDemo {
                         api_secret: "xYzE51kuHyyt9kQCvMe0tz0H2sDSjyEQcF5SOBlPQmcL9em0NqcCzyqLYj5fhpuZxQ8BiVcYl6zoOHeI6GYZj1TkUiiLVFoW3HUxiCdEUjlPS8Vl2YHUMEPD5qkLYnGj",
                     }
                 }
-                this.adaptableblotter = new (<any>window).adaptableblotterkendo.AdaptableBlotter(
-                    blotterOptions,
-                    container, 
-                     this.grid, 
-                    );
+                this.adaptableblotter = new (<any>window).adaptableblotterkendo.AdaptableBlotter(blotterOptions);
+                this.adaptableblotter.Render();
 
                 //We subscribe to the AB theme change so we update the theme of the grid (only light or dark for demo)
                 this.adaptableblotter.AdaptableBlotterStore.TheStore.subscribe(() => { this.ThemeChange(); });
@@ -83,7 +81,7 @@ export class KendoDemo implements IDemo {
                 $('#kendotheme').attr('href', a_href.replace('black', 'blueopal'));
             }
 
-          //  this.adaptableblotter.api.setDataSource()
+            //  this.adaptableblotter.api.setDataSource()
         }
     }
 }
