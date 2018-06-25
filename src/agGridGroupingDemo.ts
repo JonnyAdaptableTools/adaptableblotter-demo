@@ -88,7 +88,7 @@ export class agGridGroupingDemo implements IDemo {
                     }
                 };
                 var eGridDiv = document.getElementById(gridContainer);
-                 new Grid(eGridDiv, gridOptions);
+                new Grid(eGridDiv, gridOptions);
 
                 //set all the properties such as editor etc....
                 //  selectedConfig.setGridProperties(gridOptions)
@@ -99,6 +99,7 @@ export class agGridGroupingDemo implements IDemo {
                 let blotterOptions: IAdaptableBlotterOptions = {
                     primaryKey: "OrderId",
                     vendorGrid: gridOptions,
+                    vendorGridName: 'agGrid',
                     userName: "Jonathan",
                     enableAuditLog: false,
                     enableRemoteConfigServer: false,

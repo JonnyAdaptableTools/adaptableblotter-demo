@@ -48,6 +48,7 @@ export class KendoDemo implements IDemo {
                 let blotterOptions: IAdaptableBlotterOptions = {
                     primaryKey: selectedConfig.primaryKey,
                     vendorGrid: this.grid,
+                    vendorGridName: 'Kendo',
                     userName: "Jonathan",
                     enableAuditLog: false,
                     enableRemoteConfigServer: false,
