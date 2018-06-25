@@ -11,18 +11,12 @@ import { IAdaptableBlotterOptions } from 'adaptableblotter/dist/App_Scripts/Core
 export class agGridGroupingDemo implements IDemo {
     private themeName = "";
     private adaptableblotter: IAdaptableBlotter
-    private grid: any
-    constructor(private gridContainer: string, private blotterContainer: string) {
-
-        // hardcode the data
-        let datat: any = Helper.getDataFromJson("NorthwindOrders.json")
-
+    constructor(private gridContainer: string, blotterContainer: string) {
 
         let data: any[]
         Helper.getDataFromJson("NorthwindOrders.json").then(json => data = json)
             .then(data => Helper.MakeAllRecordsColumnsDateProperDates(data)).then(() => {
                 var schema = []
-
 
                 // do a column group for Customer
                 schema.push({
@@ -67,9 +61,6 @@ export class agGridGroupingDemo implements IDemo {
                 schema.push({ headerName: "Ship Country", field: "ShipCountry", filter: 'text', editable: true, rowGroup: true, enableRowGroup: true, hide: true });
 
 
-
-
-
                 // let the grid know which columns and what data to use
                 var gridOptions: GridOptions = {
                     columnDefs: schema,
@@ -97,9 +88,7 @@ export class agGridGroupingDemo implements IDemo {
                     }
                 };
                 var eGridDiv = document.getElementById(gridContainer);
-                var grid = new Grid(eGridDiv, gridOptions);
-
-
+                 new Grid(eGridDiv, gridOptions);
 
                 //set all the properties such as editor etc....
                 //  selectedConfig.setGridProperties(gridOptions)
@@ -107,7 +96,6 @@ export class agGridGroupingDemo implements IDemo {
                 let config: any = "NorthwindOrdersConfig.json";
 
                 //create Adaptable Blotter
-                var container = document.getElementById(blotterContainer);
                 let blotterOptions: IAdaptableBlotterOptions = {
                     primaryKey: "OrderId",
                     vendorGrid: gridOptions,
@@ -138,7 +126,7 @@ export class agGridGroupingDemo implements IDemo {
                 container.className = "ag-theme-dark";
             }
             else {
-                container.className = "ag-theme-blue";
+                container.className = "ag-theme-balham";
             }
         }
     }
