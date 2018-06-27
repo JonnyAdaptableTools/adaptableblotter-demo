@@ -1,5 +1,3 @@
-import { IDataSetConfiguration } from './IDataSetConfiguration';
-import { AvailableDatasetConfigs } from './DatasetConfigsagGrid';
 import { IAdaptableBlotter } from '../node_modules/adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotter';
 import { IDemo } from './IDemo';
 import * as Helper from './Helper';
@@ -11,7 +9,7 @@ import { IAdaptableBlotterOptions } from 'adaptableblotter/dist/App_Scripts/Core
 export class agGridGroupingDemo implements IDemo {
     private themeName = "";
     private adaptableblotter: IAdaptableBlotter
-    constructor(private gridContainer: string, blotterContainer: string) {
+    constructor(private gridContainer: string) {
 
         let data: any[]
         Helper.getDataFromJson("NorthwindOrders.json").then(json => data = json)
@@ -78,11 +76,10 @@ export class agGridGroupingDemo implements IDemo {
                         gridOptions.columnApi.autoSizeAllColumns("api");
                         setTimeout(() => gridOptions.columnApi.autoSizeAllColumns("api"), 1);
 
-                        gridOptions.api.addEventListener("cellEditingStopped", (params: any) => {
-                            //    selectedConfig.ActionWhenRecordUpdatedOrEdited(params.node);
+                        gridOptions.api.addEventListener("cellEditingStopped", () => {
                         });
 
-                        gridOptions.api.addEventListener("newColumnsLoaded", function (params: any) {
+                        gridOptions.api.addEventListener("newColumnsLoaded", function () {
                             gridOptions.columnApi.autoSizeAllColumns("api");
                         });
                     }
