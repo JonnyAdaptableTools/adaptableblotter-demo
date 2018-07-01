@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>AdaptableBlotter.JS ag-Grid Demo</title>
+    <title>Adaptable Blotter ag-Grid Demo</title>
     <!--CSS for the demo-->
     <link href="aggriddemo.css" rel="stylesheet" />
     <link href="demo.css" rel="stylesheet" />
@@ -19,48 +19,31 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse" style="margin-bottom:5px;">
+    <nav  style="margin-bottom:0px;">
         <div class="topBar">
-            <span>
-                &nbsp;&nbsp; &nbsp;&nbsp;
-                <img src="../images/AdaptableBlotter.png" height="50">
-                <h2>&nbsp;&nbsp;AdaptableBlotter.JS - Demo&nbsp;&nbsp;</h2>
-                <img src="../images/AdaptableBlotter.png" height="50">
-            </span>
-        </div>
-        <div class="container-fluid">
-              <div class="navbar-header">
-                <a class="navbar-brand" href="http://demo.adaptableblotter.com" target="_self">Home</a>
-                <div class="navbar-brand">&nbsp;&nbsp;&nbsp;&nbsp;Data Selector: </div>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                   <form class="navbar-form navbar-left">
-
-
-                    <div class="form-group">
-                     <select onchange="saveData()" class="form-control" id="dataset_select">
-                            <option value="Select">Select a Dataset</option>
+            <form class="navbar-form navbar-left">
+                <span>
+                    <a href="http://demo.adaptableblotter.com" target="_self">Home</a>
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <img src="../images/AdaptableBlotter.png" height="50"> &nbsp;&nbsp;
+                            <h4>&nbsp;&nbsp;AdaptableBlotter.JS Demo&nbsp;&nbsp;</h4>
+                       
+                        <select onchange="saveData()" class="form-control" id="dataset_select">
+                            <option value="Select">Select Dataset:</option>
                         </select>
-                    </div>
-                    <button class="btn btn-default" onclick="window.location.reload()">Regenerate Blotter</button>
-                        
-                </form>
-                <div class="collapse navbar-collapse" align="right" vertical-align="bottom">
-                    <br/>
-                    <a href="https://adaptabletools.zendesk.com/hc/en-us" target="_blank">Adaptable Blotter Help</a>
-                </div>
-            </div>
-
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
+                    </span>
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="https://adaptabletools.zendesk.com/hc/en-us" target="_blank">Help</a>
+                    </span>
+                </span>
+            </form>
+         </div>
+     </nav>
     <script>
         function saveData() {
             var datasetElement = document.getElementById("dataset_select");
             localStorage.setItem(datasetElement.id, datasetElement.value);
+            window.location.reload();
         }
     </script>
     <!-- Adaptable Blotter div for react and dashboard -->

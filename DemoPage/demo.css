@@ -1,11 +1,11 @@
 
     div.topBar {
         background-color: white;
-        height: 50px;
+        height: 65px;
         text-align: left;          
     }
     
-    h2 {
+    h4 {
         display: inline;
         vertical-align: middle
     }

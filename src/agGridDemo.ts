@@ -6,6 +6,8 @@ import { Grid } from 'ag-grid/dist/lib/grid';
 import { IAdaptableBlotterOptions } from 'adaptableblotter/dist/App_Scripts/Core/Api/Interface/IAdaptableBlotterOptions';
 import { ISearchChangedEventArgs } from 'adaptableblotter/dist/App_Scripts/Core/Api/Interface/ServerSearch';
 import { IAdaptableBlotter } from 'adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotter';
+import { ColumnController } from 'ag-grid/dist/lib/columnController/columnController';
+import { HeightScaler } from 'ag-grid/dist/lib/rendering/heightScaler';
 
 export class agGridDemo implements IDemo {
 
@@ -30,21 +32,22 @@ export class agGridDemo implements IDemo {
                     onGridReady: function () {
                         //we do it twice as sometimes when the dataset is small columns that werent visible at all will become
                         //visible and won't be autosized
-                        //  gridOptions.columnApi.autoSizeAllColumns("api");
-                        //    setTimeout(() => gridOptions.columnApi.autoSizeAllColumns("api"), 1);
+                          gridOptions.columnApi.autoSizeAllColumns("api");
+                            setTimeout(() => gridOptions.columnApi.autoSizeAllColumns("api"), 1);
 
                         gridOptions.api.addEventListener("cellEditingStopped", (params: any) => {
                             selectedConfig.ActionWhenRecordUpdatedOrEdited(params.node);
                         });
 
                         gridOptions.api.addEventListener("newColumnsLoaded", function (params: any) {
-                            //        gridOptions.columnApi.autoSizeAllColumns("api")
+                                    gridOptions.columnApi.autoSizeAllColumns("api")
                         });
                     }
                 };
                 var eGridDiv = document.getElementById(gridContainer);
                  new Grid(eGridDiv, gridOptions);
 
+            
                 //Make the data to tick every 0.5s
                 setInterval(() =>
                     selectedConfig.tickData(gridOptions), 500)
