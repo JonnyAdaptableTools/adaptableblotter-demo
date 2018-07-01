@@ -44,12 +44,10 @@ export class KendoDemo implements IDemo {
                 let config: any = selectedConfig.name.replace(/ /g, "") + "Config.json";
 
                 //create Adaptable Blotter
-                var container = document.getElementById(blotterContainer);
-                let blotterOptions: IAdaptableBlotterOptions = {
+                 let blotterOptions: IAdaptableBlotterOptions = {
                     primaryKey: selectedConfig.primaryKey,
                     vendorGrid: this.grid,
-                    vendorGridName: 'Kendo',
-                    userName: "Jonathan",
+                     userName: "Jonathan",
                     enableAuditLog: false,
                     enableRemoteConfigServer: false,
                     blotterId: selectedConfig.name + process.env.packageVersion,
@@ -64,8 +62,7 @@ export class KendoDemo implements IDemo {
                     }
                 }
                 this.adaptableblotter = new (<any>window).adaptableblotterkendo.AdaptableBlotter(blotterOptions);
-                this.adaptableblotter.Render();
-
+               
                 //We subscribe to the AB theme change so we update the theme of the grid (only light or dark for demo)
                 this.adaptableblotter.AdaptableBlotterStore.TheStore.subscribe(() => { this.ThemeChange(); });
             })

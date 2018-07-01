@@ -69,11 +69,9 @@ export class HypergridDemo implements IDemo {
                 let config: any = selectedConfig.name.replace(/ /g, "") + "Config.json";
 
                 //create Adaptable Blotter
-                var container = document.getElementById(blotterContainer);
                 let blotterOptions: IAdaptableBlotterOptions = {
                     primaryKey: selectedConfig.primaryKey,
                     vendorGrid: this.grid,
-                    vendorGridName: 'Hypergrid',
                     userName: "Jonathan",
                     enableAuditLog: false,
                     enableRemoteConfigServer: false,
@@ -90,7 +88,6 @@ export class HypergridDemo implements IDemo {
                 }
 
                 this.adaptableblotter = new (<any>window).adaptableblotterhypergrid.AdaptableBlotter(blotterOptions);
-                this.adaptableblotter.Render();
                 //alternate rows
                 var origgetCell = this.grid.behavior.dataModel.getCell;
                 this.grid.behavior.dataModel.getCell = function (config: any, declaredRendererName: any) {
