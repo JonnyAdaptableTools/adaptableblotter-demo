@@ -67,7 +67,8 @@ export class HypergridDemo implements IDemo {
                 });
 
                 let config: any = selectedConfig.name.replace(/ /g, "") + "Config.json";
-
+                let blotterId: string = (selectedConfig.name).replace(/\s/g, "")
+               
                 //create Adaptable Blotter
                 let blotterOptions: IAdaptableBlotterOptions = {
                     primaryKey: selectedConfig.primaryKey,
@@ -75,7 +76,7 @@ export class HypergridDemo implements IDemo {
                     userName: "Jonathan",
                     enableAuditLog: false,
                     enableRemoteConfigServer: false,
-                    blotterId: selectedConfig.name + process.env.packageVersion,
+                    blotterId: blotterId,
                     maxColumnValueItemsDisplayed: 1000,
                     modalContainer: "Page",
                     predefinedConfig: config,

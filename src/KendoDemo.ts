@@ -42,7 +42,8 @@ export class KendoDemo implements IDemo {
                 selectedConfig.setGridProperties(this.grid)
 
                 let config: any = selectedConfig.name.replace(/ /g, "") + "Config.json";
-
+                let blotterId: string = (selectedConfig.name).replace(/\s/g, "")
+               
                 //create Adaptable Blotter
                  let blotterOptions: IAdaptableBlotterOptions = {
                     primaryKey: selectedConfig.primaryKey,
@@ -50,7 +51,7 @@ export class KendoDemo implements IDemo {
                      userName: "Jonathan",
                     enableAuditLog: false,
                     enableRemoteConfigServer: false,
-                    blotterId: selectedConfig.name + process.env.packageVersion,
+                    blotterId: blotterId,
                     modalContainer: "Page",
                     maxColumnValueItemsDisplayed: 1000,
                     predefinedConfig: config,
