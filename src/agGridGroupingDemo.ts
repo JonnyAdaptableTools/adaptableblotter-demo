@@ -73,15 +73,15 @@ export class agGridGroupingDemo implements IDemo {
                     onGridReady: function () {
                         //we do it twice as sometimes when the dataset is small columns that werent visible at all will become
                         //visible and won't be autosized
-                        gridOptions.columnApi.autoSizeAllColumns("api");
-                        setTimeout(() => gridOptions.columnApi.autoSizeAllColumns("api"), 1);
+                  //      gridOptions.columnApi.autoSizeAllColumns("api");
+                  //      setTimeout(() => gridOptions.columnApi.autoSizeAllColumns("api"), 1);
 
                         gridOptions.api.addEventListener("cellEditingStopped", () => {
                         });
 
-                        gridOptions.api.addEventListener("newColumnsLoaded", function () {
-                            gridOptions.columnApi.autoSizeAllColumns("api");
-                        });
+                 //       gridOptions.api.addEventListener("newColumnsLoaded", function () {
+                 //           gridOptions.columnApi.autoSizeAllColumns("api");
+                 //       });
                     }
                 };
                 var eGridDiv = document.getElementById(gridContainer);
