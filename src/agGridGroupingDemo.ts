@@ -73,15 +73,15 @@ export class agGridGroupingDemo implements IDemo {
                     onGridReady: function () {
                         //we do it twice as sometimes when the dataset is small columns that werent visible at all will become
                         //visible and won't be autosized
-                  //      gridOptions.columnApi.autoSizeAllColumns("api");
-                  //      setTimeout(() => gridOptions.columnApi.autoSizeAllColumns("api"), 1);
+                        gridOptions.columnApi.autoSizeAllColumns();
+                        setTimeout(() => gridOptions.columnApi.autoSizeAllColumns(), 1);
 
                         gridOptions.api.addEventListener("cellEditingStopped", () => {
                         });
 
-                 //       gridOptions.api.addEventListener("newColumnsLoaded", function () {
-                 //           gridOptions.columnApi.autoSizeAllColumns("api");
-                 //       });
+                        gridOptions.api.addEventListener("newColumnsLoaded", function () {
+                            gridOptions.columnApi.autoSizeAllColumns();
+                        });
                     }
                 };
                 var eGridDiv = document.getElementById(gridContainer);
@@ -107,7 +107,7 @@ export class agGridGroupingDemo implements IDemo {
                     includeVendorStateInLayouts: false
                 }
                 this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(blotterOptions);
-               
+
                 //We subscribe to the AB theme change so we update the theme of the grid (only light or dark for demo)
                 this.adaptableblotter.AdaptableBlotterStore.TheStore.subscribe(() => { this.ThemeChange(); });
             })
