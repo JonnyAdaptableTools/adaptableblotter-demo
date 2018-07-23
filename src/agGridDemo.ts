@@ -79,7 +79,7 @@ export class agGridDemo implements IDemo {
                 this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(blotterOptions);
                 //We subscribe to the AB theme change so we update the theme of the grid (only light or dark for demo)
                 this.adaptableblotter.AdaptableBlotterStore.TheStore.subscribe(() => { this.ThemeChange(); });
-                this.adaptableblotter.api.onSearchedChanged().Subscribe((s: IAdaptableBlotter, e: ISearchChangedEventArgs) => this.onBlotterSearchChanged(s, e))
+            //    this.adaptableblotter.api.onSearchedChanged().Subscribe((s: IAdaptableBlotter, e: ISearchChangedEventArgs) => this.onBlotterSearchChanged(s, e))
 
                 //   this.adaptableblotter.api.
             })
@@ -100,12 +100,4 @@ export class agGridDemo implements IDemo {
 
     }
 
-    onBlotterSearchChanged(blotter: IAdaptableBlotter, eventArgs: ISearchChangedEventArgs): any {
-
-
-
-        if (eventArgs.SearchChangedTrigger == 'QuickSearch') {
-            //      alert("quick search")
-        }
-    }
 }
