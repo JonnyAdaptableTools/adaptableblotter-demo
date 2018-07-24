@@ -104,7 +104,8 @@ export class agGridGroupingDemo implements IDemo {
                     maxColumnValueItemsDisplayed: 1000,
                     predefinedConfig: config,
                     columnValuesOnlyInQueries: false,
-                    includeVendorStateInLayouts: false
+                    includeVendorStateInLayouts: false,
+                    getDistinctColumnValues: null
                 }
                 this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(blotterOptions);
 
