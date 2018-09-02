@@ -3,11 +3,7 @@ import { IDemo } from './IDemo';
 import * as Helper from './Helper';
 import { GridOptions } from 'ag-grid/dist/lib/entities/gridOptions';
 import { Grid } from 'ag-grid/dist/lib/grid';
-import { IAdaptableBlotterOptions } from 'adaptableblotter/dist/App_Scripts/Core/Api/Interface/IAdaptableBlotterOptions';
-import { ISearchChangedEventArgs } from 'adaptableblotter/dist/App_Scripts/Core/Api/Interface/ServerSearch';
-import { IAdaptableBlotter } from 'adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotter';
-import { ColumnController } from 'ag-grid/dist/lib/columnController/columnController';
-import { HeightScaler } from 'ag-grid/dist/lib/rendering/heightScaler';
+import { IAdaptableBlotter, IAdaptableBlotterOptions } from 'adaptableblotter/types'
 
 export class agGridDemo implements IDemo {
 

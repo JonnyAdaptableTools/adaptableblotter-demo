@@ -1,4 +1,4 @@
-import {IAdaptableBlotter} from '../node_modules/adaptableblotter/dist/App_Scripts/Core/Interface/IAdaptableBlotter';
+import { IAdaptableBlotter } from 'adaptableblotter/types'
 export interface IDemo{
     ThemeChange(blotter: IAdaptableBlotter, grid: any) : void
 }
