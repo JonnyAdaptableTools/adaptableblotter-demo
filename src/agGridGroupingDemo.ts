@@ -10,6 +10,7 @@ export class agGridGroupingDemo implements IDemo {
     private adaptableblotter: IAdaptableBlotter
     constructor(private gridContainer: string) {
 
+        
         let data: any[]
         Helper.getDataFromJson("NorthwindOrders.json").then(json => data = json)
             .then(data => Helper.MakeAllRecordsColumnsDateProperDates(data)).then(() => {
