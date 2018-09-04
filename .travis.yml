@@ -23,6 +23,6 @@ deploy:
       on:
         tags: true
         all_branches: true
-       
+        condition: "! $TRAVIS_TAG =~ .*beta.*$"
 after_deploy:
   - node slack.js --slack ${SLACK} --tag ${TRAVIS_TAG}
