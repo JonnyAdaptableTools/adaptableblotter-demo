@@ -57,7 +57,7 @@ export class agGridDemo implements IDemo {
                 let blotterOptions: IAdaptableBlotterOptions = {
                     primaryKey: selectedConfig.primaryKey,
                     vendorGrid: gridOptions,
-                   userName: "Demo User",
+                   userName: "Demo",
                     enableAuditLog: false,
                     enableRemoteConfigServer: false,
                     blotterId: blotterId,
