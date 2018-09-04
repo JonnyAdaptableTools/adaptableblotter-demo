@@ -4,7 +4,6 @@ import { IDemo } from './IDemo';
 import * as Helper from './Helper';
 import { IAdaptableBlotter, IAdaptableBlotterOptions } from 'adaptableblotter/types'
 
-
 export class KendoDemo implements IDemo {
     private themeName = "";
     private adaptableblotter: IAdaptableBlotter
