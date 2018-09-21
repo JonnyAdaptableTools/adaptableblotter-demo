@@ -1,10 +1,9 @@
 import { IDataSetConfiguration } from './IDataSetConfiguration';
 import { AvailableDatasetConfigs } from './DatasetConfigsKendo';
-import { IDemo } from './IDemo';
 import * as Helper from './Helper';
 import { IAdaptableBlotter, IAdaptableBlotterOptions } from 'adaptableblotter/types'
 
-export class KendoDemo implements IDemo {
+export class KendoDemo  {
     private themeName = "";
     private adaptableblotter: IAdaptableBlotter
     private grid: any
@@ -57,6 +56,7 @@ export class KendoDemo implements IDemo {
                     columnValuesOnlyInQueries: false,
                     includeVendorStateInLayouts: false,
                     getColumnValues: null,
+                    useDefaultVendorGridThemes: true,
                     iPushPullConfig: {
                         api_key: "CbBaMaoqHVifScrYwKssGnGyNkv5xHOhQVGm3cYP",
                         api_secret: "xYzE51kuHyyt9kQCvMe0tz0H2sDSjyEQcF5SOBlPQmcL9em0NqcCzyqLYj5fhpuZxQ8BiVcYl6zoOHeI6GYZj1TkUiiLVFoW3HUxiCdEUjlPS8Vl2YHUMEPD5qkLYnGj",
@@ -73,7 +73,7 @@ export class KendoDemo implements IDemo {
         if (this.themeName != this.adaptableblotter.AdaptableBlotterStore.TheStore.getState().Theme.CurrentTheme) {
             this.themeName = this.adaptableblotter.AdaptableBlotterStore.TheStore.getState().Theme.CurrentTheme;
             var a_href = $('#kendotheme').attr('href');
-            if (this.themeName == "Dark Theme" || this.themeName == "Slate" || this.themeName == "Cyborg" || this.themeName == "Darkly" || this.themeName == "Superhero") {
+            if (this.themeName == "Dark Theme" ) {
                 $('#kendotheme').attr('href', a_href.replace('blueopal', 'black'));
             }
             else {

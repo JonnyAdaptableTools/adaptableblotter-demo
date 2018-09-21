@@ -1,11 +1,10 @@
-import { IDemo } from './IDemo';
 import * as Helper from './Helper';
 import { Grid } from 'ag-grid/dist/lib/grid';
 import { GridOptions } from 'ag-grid/dist/lib/entities/gridOptions';
 import * as HelperAgGrid from "./HelperAgGrid"
 import { IAdaptableBlotter, IAdaptableBlotterOptions } from 'adaptableblotter/types'
 
-export class agGridGroupingDemo implements IDemo {
+export class agGridGroupingDemo  {
     private themeName = "";
     private adaptableblotter: IAdaptableBlotter
     constructor(private gridContainer: string) {
@@ -105,7 +104,8 @@ export class agGridGroupingDemo implements IDemo {
                     predefinedConfig: config,
                     columnValuesOnlyInQueries: false,
                     includeVendorStateInLayouts: false,
-                    getColumnValues: null
+                    getColumnValues: null,
+                    useDefaultVendorGridThemes: true,
                 }
                 this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(blotterOptions);
 

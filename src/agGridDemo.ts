@@ -1,16 +1,14 @@
 import { AvailableDatasetConfigs } from './DatasetConfigsagGrid';
-import { IDemo } from './IDemo';
 import * as Helper from './Helper';
 import { GridOptions } from 'ag-grid/dist/lib/entities/gridOptions';
 import { Grid } from 'ag-grid/dist/lib/grid';
 import { IAdaptableBlotter, IAdaptableBlotterOptions } from 'adaptableblotter/types'
 
-export class agGridDemo implements IDemo {
-
+export class agGridDemo  {
 
     private themeName = "";
     private adaptableblotter: IAdaptableBlotter
-    constructor(private gridContainer: string, private blotterContainer: string) {
+    constructor() {
         let selectedConfig = Helper.manageDomDataSetSelectAndReturnSelectDataset(AvailableDatasetConfigs)
         if (!selectedConfig) { return }
         let data: any[]
@@ -28,22 +26,21 @@ export class agGridDemo implements IDemo {
                     onGridReady: function () {
                         //we do it twice as sometimes when the dataset is small columns that werent visible at all will become
                         //visible and won't be autosized
-                          gridOptions.columnApi.autoSizeAllColumns();
-                            setTimeout(() => gridOptions.columnApi.autoSizeAllColumns(), 1);
+                        gridOptions.columnApi.autoSizeAllColumns();
+                        setTimeout(() => gridOptions.columnApi.autoSizeAllColumns(), 1);
 
                         gridOptions.api.addEventListener("cellEditingStopped", (params: any) => {
                             selectedConfig.ActionWhenRecordUpdatedOrEdited(params.node);
                         });
 
                         gridOptions.api.addEventListener("newColumnsLoaded", function (params: any) {
-                                    gridOptions.columnApi.autoSizeAllColumns()
+                            gridOptions.columnApi.autoSizeAllColumns()
                         });
                     }
                 };
-                var eGridDiv = document.getElementById(gridContainer);
-                 new Grid(eGridDiv, gridOptions);
+                var eGridDiv = document.getElementById("grid");
+                new Grid(eGridDiv, gridOptions);
 
-            
                 //Make the data to tick every 0.5s
                 setInterval(() =>
                     selectedConfig.tickData(gridOptions), 500)
@@ -57,7 +54,7 @@ export class agGridDemo implements IDemo {
                 let blotterOptions: IAdaptableBlotterOptions = {
                     primaryKey: selectedConfig.primaryKey,
                     vendorGrid: gridOptions,
-                   userName: "Demo",
+                    userName: "Demo",
                     enableAuditLog: false,
                     enableRemoteConfigServer: false,
                     blotterId: blotterId,
@@ -68,6 +65,7 @@ export class agGridDemo implements IDemo {
                     columnValuesOnlyInQueries: false,
                     includeVendorStateInLayouts: false,
                     getColumnValues: null,
+                    useDefaultVendorGridThemes: true,
                     iPushPullConfig: {
                         api_key: "CbBaMaoqHVifScrYwKssGnGyNkv5xHOhQVGm3cYP",
                         api_secret: "xYzE51kuHyyt9kQCvMe0tz0H2sDSjyEQcF5SOBlPQmcL9em0NqcCzyqLYj5fhpuZxQ8BiVcYl6zoOHeI6GYZj1TkUiiLVFoW3HUxiCdEUjlPS8Vl2YHUMEPD5qkLYnGj",
@@ -76,9 +74,6 @@ export class agGridDemo implements IDemo {
                 this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(blotterOptions);
                 //We subscribe to the AB theme change so we update the theme of the grid (only light or dark for demo)
                 this.adaptableblotter.AdaptableBlotterStore.TheStore.subscribe(() => { this.ThemeChange(); });
-            //    this.adaptableblotter.api.onSearchedChanged().Subscribe((s: IAdaptableBlotter, e: ISearchChangedEventArgs) => this.onBlotterSearchChanged(s, e))
-
-                //   this.adaptableblotter.api.
             })
     }
 
@@ -86,12 +81,12 @@ export class agGridDemo implements IDemo {
     public ThemeChange() {
         if (this.themeName != this.adaptableblotter.AdaptableBlotterStore.TheStore.getState().Theme.CurrentTheme) {
             this.themeName = this.adaptableblotter.AdaptableBlotterStore.TheStore.getState().Theme.CurrentTheme;
-            var container = document.getElementById(this.gridContainer)
+            var container = document.getElementById("grid")
             if (this.themeName == "Dark Theme" || this.themeName == "Cyborg" || this.themeName == "Darkly" || this.themeName == "Superhero") {
                 container.className = "ag-theme-dark";
             }
             else {
-                container.className = "ag-theme-blue";
+                container.className = "ag-theme-balham";
             }
         }
 

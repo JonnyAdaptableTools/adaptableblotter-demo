@@ -8,7 +8,6 @@
     <link href="aggriddemo.css" rel="stylesheet" />
     <link href="demo.css" rel="stylesheet" />
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="ExtLibs/bootstrap/css/bootstrap.min.css">
     <!-- ag-Grid -->
     <script src="ExtLibs/agGrid/ag-grid.min.js"></script>
     <script src="ExtLibs/agGrid/ag-grid-enterprise.min.js"></script>
@@ -50,7 +49,7 @@
     <div id="adaptableBlotter"></div>
     <p></p>
     <!-- Grid div -->
-    <div id="grid" class="ag-blue"></div>
+    <div id="grid" class="ag-balham"></div>
     <% if (htmlWebpackPlugin.options.harnessJs) { %>
         <script src="<%= htmlWebpackPlugin.options.harnessJs %>" type="text/javascript"></script>
         <% } %>
@@ -58,7 +57,7 @@
                 <script src="<%= htmlWebpackPlugin.options.demoJs %>" type="text/javascript"></script>
                 <% } %>
                     <script>
-                        var blotter = new aggriddemo.agGridDemo("grid", "adaptableBlotter")
+                        var blotter = new aggriddemo.agGridDemo()
                     </script>
 </body>
 
