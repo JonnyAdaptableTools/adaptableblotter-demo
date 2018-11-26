@@ -2,7 +2,7 @@ import { IDataSetConfiguration } from './IDataSetConfiguration';
 import { AvailableDatasetConfigs } from './DatasetConfigsKendo';
 import * as Helper from './Helper';
 import { IAdaptableBlotter, IAdaptableBlotterOptions } from 'adaptableblotter/types'
-
+// Note this is not currently used because we are re-doing Kendo when its more up to date
 export class KendoDemo  {
     private themeName = "";
     private adaptableblotter: IAdaptableBlotter
