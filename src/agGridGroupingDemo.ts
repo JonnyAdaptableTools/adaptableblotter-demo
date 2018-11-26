@@ -98,7 +98,7 @@ export class agGridGroupingDemo  {
                     userName: "Jonathan",
                     enableAuditLog: false,
                     enableRemoteConfigServer: false,
-                    blotterId: "Northwind Orders" + process.env.packageVersion,
+                    blotterId: "Northwind Orders",// + process.env.packageVersion -- this causes a bug!!!,
                     modalContainer: "Page",
                     maxColumnValueItemsDisplayed: 1000,
                     predefinedConfig: config,
