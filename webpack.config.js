@@ -11,7 +11,6 @@ module.exports = {
         'index': ["./index.js"],
         hypergriddemo: "./src/HypergridDemo.ts",
         aggriddemo: "./src/agGridDemo.ts",
-        kendodemo: "./src/KendoDemo.ts",
         aggridgroupingdemo: "./src/agGridGroupingDemo.ts",
     },
     output: {
@@ -44,19 +43,10 @@ module.exports = {
             filename: "hypergriddemo.html",
             template: 'DemoPage/hypergriddemo.ejs',
             inject: false,
-            // 'harnessJs': PACKAGE.version + "/adaptableblotterhypergrid-bundle.js",
-            'harnessJs': PACKAGE.version + "/adaptableblotterhypergrid-bundle.min.js",
+           'harnessJs': PACKAGE.version + "/adaptableblotterhypergrid-bundle.min.js",
             'demoJs': "hypergriddemo.js",
         }),
-        new HtmlWebpackPlugin({
-            chunks: [],
-            filename: "kendodemo.html",
-            template: 'DemoPage/kendodemo.ejs',
-            inject: false,
-            'harnessJs': PACKAGE.version + "/adaptableblotterkendo-bundle.min.js",
-            'demoJs': "kendodemo.js"
-        }),
-        new HtmlWebpackPlugin({
+         new HtmlWebpackPlugin({
             chunks: [],
             filename: "aggriddemo.html",
             template: 'DemoPage/aggriddemo.ejs',
