@@ -22,6 +22,7 @@ export class agGridDemo  {
                     enableSorting: true,
                     enableRangeSelection: true,
                     enableFilter: true,
+                    floatingFilter: true,
                     enableColResize: true,
                     onGridReady: function () {
                         //we do it twice as sometimes when the dataset is small columns that werent visible at all will become
