@@ -5,9 +5,9 @@
   "main": "index.js",
   "dependencies": {
     "@types/isomorphic-fetch": "0.0.34",
-    "adaptableblotter": "^2.7.2",
-    "ag-grid": "^18.1.2",
-    "ag-grid-enterprise": "^18.1.1",
+    "adaptableblotter": "^2.8.1",
+    "ag-grid-community": "^19.1.4",
+    "ag-grid-enterprise": "^19.1.4",
     "isomorphic-fetch": "^2.2.1",
     "prop-types": "^15.6.2",
     "react": "^16.4.2"
