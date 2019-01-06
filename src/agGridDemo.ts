@@ -54,8 +54,7 @@ export class agGridDemo  {
                 let blotterId: string = (selectedConfig.name).replace(/\s/g, "")
                 let blotterOptions: IAdaptableBlotterOptions = {
                    
-                   
-                   
+                    predefinedConfig: config,
                     primaryKey: selectedConfig.primaryKey,
                     vendorGrid: gridOptions,
                     userName: "Demo",
