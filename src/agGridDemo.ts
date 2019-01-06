@@ -1,7 +1,7 @@
 import { AvailableDatasetConfigs } from './DatasetConfigsagGrid';
 import * as Helper from './Helper';
-import { GridOptions } from 'ag-grid/dist/lib/entities/gridOptions';
-import { Grid } from 'ag-grid/dist/lib/grid';
+import { GridOptions } from 'ag-grid-community/dist/lib/entities/gridOptions';
+import { Grid } from 'ag-grid-community/dist/lib/grid';
 import { IAdaptableBlotter, IAdaptableBlotterOptions } from 'adaptableblotter/types'
 
 export class agGridDemo  {
@@ -53,24 +53,14 @@ export class agGridDemo  {
                 //create Adaptable Blotter
                 let blotterId: string = (selectedConfig.name).replace(/\s/g, "")
                 let blotterOptions: IAdaptableBlotterOptions = {
+                   
+                   
+                   
                     primaryKey: selectedConfig.primaryKey,
                     vendorGrid: gridOptions,
                     userName: "Demo",
-                    enableAuditLog: false,
-                    enableRemoteConfigServer: false,
-                    blotterId: blotterId,
-                    modalContainer: "Grid",
-                    maxColumnValueItemsDisplayed: 1000,
-                    predefinedConfig: config,
-                    serverSearchOption: 'None',
-                    columnValuesOnlyInQueries: false,
-                    includeVendorStateInLayouts: false,
-                    getColumnValues: null,
-                    useDefaultVendorGridThemes: true,
-                    iPushPullConfig: {
-                        api_key: "CbBaMaoqHVifScrYwKssGnGyNkv5xHOhQVGm3cYP",
-                        api_secret: "xYzE51kuHyyt9kQCvMe0tz0H2sDSjyEQcF5SOBlPQmcL9em0NqcCzyqLYj5fhpuZxQ8BiVcYl6zoOHeI6GYZj1TkUiiLVFoW3HUxiCdEUjlPS8Vl2YHUMEPD5qkLYnGj",
-                    }
+                    blotterId: blotterId
+                   
                 }
                 this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(blotterOptions);
                 //We subscribe to the AB theme change so we update the theme of the grid (only light or dark for demo)

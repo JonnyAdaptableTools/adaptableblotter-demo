@@ -72,20 +72,8 @@ export class HypergridDemo  {
                     primaryKey: selectedConfig.primaryKey,
                     vendorGrid: this.grid,
                     userName: "Jonathan",
-                    enableAuditLog: false,
-                    enableRemoteConfigServer: false,
                     blotterId: blotterId,
-                    maxColumnValueItemsDisplayed: 1000,
-                    modalContainer: "Page",
-                    predefinedConfig: config,
-                    columnValuesOnlyInQueries: false,
-                    includeVendorStateInLayouts: false,
-                    getColumnValues: null,
-                    useDefaultVendorGridThemes: true,
-                    iPushPullConfig: {
-                        api_key: "CbBaMaoqHVifScrYwKssGnGyNkv5xHOhQVGm3cYP",
-                        api_secret: "xYzE51kuHyyt9kQCvMe0tz0H2sDSjyEQcF5SOBlPQmcL9em0NqcCzyqLYj5fhpuZxQ8BiVcYl6zoOHeI6GYZj1TkUiiLVFoW3HUxiCdEUjlPS8Vl2YHUMEPD5qkLYnGj",
-                    }
+                   
                 }
 
                 this.adaptableblotter = new (<any>window).adaptableblotterhypergrid.AdaptableBlotter(blotterOptions);
@@ -107,3 +95,4 @@ export class HypergridDemo  {
     }
 
 }
+

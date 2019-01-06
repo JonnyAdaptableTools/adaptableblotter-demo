@@ -1,6 +1,6 @@
 import * as Helper from './Helper';
-import { Grid } from 'ag-grid/dist/lib/grid';
-import { GridOptions } from 'ag-grid/dist/lib/entities/gridOptions';
+import { Grid } from 'ag-grid-community/dist/lib/grid';
+import { GridOptions } from 'ag-grid-community/dist/lib/entities/gridOptions';
 import * as HelperAgGrid from "./HelperAgGrid"
 import { IAdaptableBlotter, IAdaptableBlotterOptions } from 'adaptableblotter/types'
 
@@ -96,16 +96,8 @@ export class agGridGroupingDemo  {
                     primaryKey: "OrderId",
                     vendorGrid: gridOptions,
                     userName: "Jonathan",
-                    enableAuditLog: false,
-                    enableRemoteConfigServer: false,
                     blotterId: "Northwind Orders",// + process.env.packageVersion -- this causes a bug!!!,
-                    modalContainer: "Page",
-                    maxColumnValueItemsDisplayed: 1000,
-                    predefinedConfig: config,
-                    columnValuesOnlyInQueries: false,
-                    includeVendorStateInLayouts: false,
-                    getColumnValues: null,
-                    useDefaultVendorGridThemes: true,
+                   
                 }
                 this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(blotterOptions);
 
