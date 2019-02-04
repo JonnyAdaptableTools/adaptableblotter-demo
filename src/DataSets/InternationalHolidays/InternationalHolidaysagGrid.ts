@@ -18,7 +18,7 @@ export var InternationalHolidays: IDataSetConfiguration = {
                 } else if (p.includes("Date")) {
                     schema.push({ headerName: Helper.capitalize(p), field: p, editable: true, cellEditorParams: { useFormatter: true }, valueParser: HelperAgGrid.dateParseragGrid, valueFormatter : HelperAgGrid.shortDateFormatteragGrid });
                 } else {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: true });
+                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: true,  enableRowGroup: true });
                 }
             }
         }
