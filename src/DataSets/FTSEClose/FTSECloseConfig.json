@@ -64,8 +64,7 @@
 			"SmartEdit",
 			"ColumnChooser",
 			"BulkUpdate"
-		],
-		"Zoom": "0.9"
+		]
 		},
     "Chart": {
         "ChartDefinitions": [
