@@ -13,6 +13,7 @@ import { TradeBlotterCDS } from "./DataSets/TradeBlotterCDS/TradeBlotterCDSHyper
 import { TradeBlotterCDSIndex } from "./DataSets/TradeBlotterCDSIndex/TradeBlotterCDSIndexHypergrid";
 import { TradeBlotterCommodity } from "./DataSets/TradeBlotterCommodity/TradeBlotterCommodityHypergrid";
 import { TradeBlotterFX } from "./DataSets/TradeBlotterFX/TradeBlotterFXHypergrid";
+import { Swaps } from "./DataSets/Swaps/SwapsHypergrid";
 
 
 export var AvailableDatasetConfigs = new Map<string, IDataSetConfiguration>([
@@ -29,6 +30,7 @@ export var AvailableDatasetConfigs = new Map<string, IDataSetConfiguration>([
     [TradeBlotterCDS.name, TradeBlotterCDS],
     [TradeBlotterCDSIndex.name, TradeBlotterCDSIndex],
     [TradeBlotterCommodity.name, TradeBlotterCommodity],
-    [TradeBlotterFX.name, TradeBlotterFX]
+    [TradeBlotterFX.name, TradeBlotterFX],
+    [Swaps.name, Swaps],
 ]);
 

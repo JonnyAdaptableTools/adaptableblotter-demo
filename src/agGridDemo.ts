@@ -24,6 +24,21 @@ export class agGridDemo {
                     enableFilter: true,
                     floatingFilter: true,
                     enableColResize: true,
+                    suppressMenuHide: true,
+                    suppressColumnVirtualisation: false,
+                    sideBar: true, // this puts in filters and columns by default
+                    columnTypes: { // not required but helpful for column data type identification
+                      "abColDefNumber": {},
+                      "abColDefString": {},
+                      "abColDefBoolean": {},
+                      "abColDefDate": {},
+                      "abColDefObject": {},
+                    }
+
+
+
+
+                    
                     onGridReady: function () {
                         //we do it twice as sometimes when the dataset is small columns that werent visible at all will become
                         //visible and won't be autosized
