@@ -33,12 +33,7 @@ export class agGridDemo {
                       "abColDefBoolean": {},
                       "abColDefDate": {},
                       "abColDefObject": {},
-                    }
-
-
-
-
-                    
+                    },
                     onGridReady: function () {
                         //we do it twice as sometimes when the dataset is small columns that werent visible at all will become
                         //visible and won't be autosized
