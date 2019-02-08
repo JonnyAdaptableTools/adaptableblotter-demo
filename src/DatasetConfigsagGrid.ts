@@ -13,7 +13,8 @@ import { TradeBlotterCDSIndex } from "./DataSets/TradeBlotterCDSIndex/TradeBlott
 import { TradeBlotterCommodity } from "./DataSets/TradeBlotterCommodity/TradeBlotterCommodityagGrid";
 import { TradeBlotterFX } from "./DataSets/TradeBlotterFX/TradeBlotterFXagGrid";
 import { Swaps } from "./DataSets/Swaps/SwapsagGrid";
-import { TradeBlotterBond } from "./DataSets/TradeBlotterBond/TradeBlotterBondHypergrid";
+import { TradeBlotterBond } from "./DataSets/TradeBlotterBond/TradeBlotterBondagGrid";
+
 
 
 export var AvailableDatasetConfigs = new Map<string, IDataSetConfiguration>([

@@ -47,6 +47,8 @@ export class agGridDemo {
                         gridOptions.api.addEventListener("newColumnsLoaded", function (params: any) {
                             gridOptions.columnApi.autoSizeAllColumns()
                         });
+
+                        gridOptions.api.closeToolPanel();
                     }
                 };
                 var eGridDiv = document.getElementById("grid");
@@ -82,6 +84,8 @@ export class agGridDemo {
 
                 }
                 this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(blotterOptions);
+          
+               
             })
     }
 
