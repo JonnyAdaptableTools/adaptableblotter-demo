@@ -69,7 +69,6 @@
     "Chart": {
         "ChartDefinitions": [
             {
-                "AdditionalColumnValues": [],
                 "ChartProperties": {
                     "ChartCrosshairsMode": "None",
                     "ChartSize": "Small",
@@ -116,6 +115,12 @@
                             ]
                         }
                     ]
+                },
+                "XSegmentColumnId": "",
+                "XSegmentExpression": {
+                    "ColumnValueExpressions": [],
+                    "FilterExpressions": [],
+                    "RangeExpressions": []
                 },
                 "YAxisColumnIds": [
                     "Open",
