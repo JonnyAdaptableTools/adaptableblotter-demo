@@ -4,7 +4,7 @@ import { GridOptions } from 'ag-grid-community/dist/lib/entities/gridOptions';
 import { Grid } from 'ag-grid-community/dist/lib/grid';
 import { IAdaptableBlotter, IAdaptableBlotterOptions } from 'adaptableblotter/types'
 
-export class agGridDemo  {
+export class agGridDemo {
 
     private themeName = "";
     private adaptableblotter: IAdaptableBlotter
@@ -24,6 +24,16 @@ export class agGridDemo  {
                     enableFilter: true,
                     floatingFilter: true,
                     enableColResize: true,
+                    suppressMenuHide: true,
+                    suppressColumnVirtualisation: false,
+                    sideBar: true, // this puts in filters and columns by default
+                    columnTypes: { // not required but helpful for column data type identification
+                      "abColDefNumber": {},
+                      "abColDefString": {},
+                      "abColDefBoolean": {},
+                      "abColDefDate": {},
+                      "abColDefObject": {},
+                    },
                     onGridReady: function () {
                         //we do it twice as sometimes when the dataset is small columns that werent visible at all will become
                         //visible and won't be autosized
@@ -37,6 +47,8 @@ export class agGridDemo  {
                         gridOptions.api.addEventListener("newColumnsLoaded", function (params: any) {
                             gridOptions.columnApi.autoSizeAllColumns()
                         });
+
+                        gridOptions.api.closeToolPanel();
                     }
                 };
                 var eGridDiv = document.getElementById("grid");
@@ -53,33 +65,28 @@ export class agGridDemo  {
                 //create Adaptable Blotter
                 let blotterId: string = (selectedConfig.name).replace(/\s/g, "")
                 let blotterOptions: IAdaptableBlotterOptions = {
-                   
+
                     predefinedConfig: config,
                     primaryKey: selectedConfig.primaryKey,
                     vendorGrid: gridOptions,
                     userName: "Demo",
-                    blotterId: blotterId
-                   
+                    blotterId: blotterId,
+                    layoutOptions: {
+                        includeVendorStateInLayouts: true,
+                        autoSaveLayouts: true,
+                    },
+                    iPushPullConfig: {
+                        api_key: "CbBaMaoqHVifScrYwKssGnGyNkv5xHOhQVGm3cYP",
+                        api_secret: "xYzE51kuHyyt9kQCvMe0tz0H2sDSjyEQcF5SOBlPQmcL9em0NqcCzyqLYj5fhpuZxQ8BiVcYl6zoOHeI6GYZj1TkUiiLVFoW3HUxiCdEUjlPS8Vl2YHUMEPD5qkLYnGj",
+                        api_url: "https://www.ipushpull.com/api/1.0",
+                        hsts: false,
+                    },
+
                 }
                 this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(blotterOptions);
-                //We subscribe to the AB theme change so we update the theme of the grid (only light or dark for demo)
-                this.adaptableblotter.AdaptableBlotterStore.TheStore.subscribe(() => { this.ThemeChange(); });
+          
+               
             })
-    }
-
-
-    public ThemeChange() {
-        if (this.themeName != this.adaptableblotter.AdaptableBlotterStore.TheStore.getState().Theme.CurrentTheme) {
-            this.themeName = this.adaptableblotter.AdaptableBlotterStore.TheStore.getState().Theme.CurrentTheme;
-            var container = document.getElementById("grid")
-            if (this.themeName == "Dark Theme" || this.themeName == "Cyborg" || this.themeName == "Darkly" || this.themeName == "Superhero") {
-                container.className = "ag-theme-dark";
-            }
-            else {
-                container.className = "ag-theme-balham";
-            }
-        }
-
     }
 
 }

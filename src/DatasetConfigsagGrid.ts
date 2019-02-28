@@ -1,4 +1,3 @@
-import { TradeBlotterBond } from "./DataSets/TradeBlotterBond/TradeBlotterBondagGrid";
 import { IDataSetConfiguration } from "./IDataSetConfiguration";
 import { Contacts } from "./DataSets/Contacts/ContactsagGrid";
 import { BugTracker } from "./DataSets/BugTracker/BugTrackeragGrid";
@@ -13,22 +12,26 @@ import { TradeBlotterCDS } from "./DataSets/TradeBlotterCDS/TradeBlotterCDSagGri
 import { TradeBlotterCDSIndex } from "./DataSets/TradeBlotterCDSIndex/TradeBlotterCDSIndexagGrid";
 import { TradeBlotterCommodity } from "./DataSets/TradeBlotterCommodity/TradeBlotterCommodityagGrid";
 import { TradeBlotterFX } from "./DataSets/TradeBlotterFX/TradeBlotterFXagGrid";
+import { Swaps } from "./DataSets/Swaps/SwapsagGrid";
+import { TradeBlotterBond } from "./DataSets/TradeBlotterBond/TradeBlotterBondagGrid";
+
 
 
 export var AvailableDatasetConfigs = new Map<string, IDataSetConfiguration>([
-    [Contacts.name, Contacts],
+  [Contacts.name, Contacts],
   //  [BugTracker.name, BugTracker],
-    [FTSEClose.name, FTSEClose],
-    [InternationalHolidays.name, InternationalHolidays],
-    [NorthwindOrders.name, NorthwindOrders],
-    [PriceBlotterBond.name, PriceBlotterBond],
-    [PriceBlotterCDSIndex.name, PriceBlotterCDSIndex],
-    [PriceBlotterCommodity.name, PriceBlotterCommodity],
-    [PriceBlotterFX.name, PriceBlotterFX],
-    [TradeBlotterBond.name, TradeBlotterBond],
-    [TradeBlotterCDS.name, TradeBlotterCDS],
-    [TradeBlotterCDSIndex.name, TradeBlotterCDSIndex],
-    [TradeBlotterCommodity.name, TradeBlotterCommodity],
-    [TradeBlotterFX.name, TradeBlotterFX]
+  [FTSEClose.name, FTSEClose],
+  [InternationalHolidays.name, InternationalHolidays],
+  [NorthwindOrders.name, NorthwindOrders],
+  [PriceBlotterBond.name, PriceBlotterBond],
+  [PriceBlotterCDSIndex.name, PriceBlotterCDSIndex],
+  [PriceBlotterCommodity.name, PriceBlotterCommodity],
+  [PriceBlotterFX.name, PriceBlotterFX],
+  [TradeBlotterBond.name, TradeBlotterBond],
+  [TradeBlotterCDS.name, TradeBlotterCDS],
+  [TradeBlotterCDSIndex.name, TradeBlotterCDSIndex],
+  [TradeBlotterCommodity.name, TradeBlotterCommodity],
+  [TradeBlotterFX.name, TradeBlotterFX],
+  [Swaps.name, Swaps],
 ]);
 

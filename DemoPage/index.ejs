@@ -10,193 +10,198 @@
 <body>
   <div class="container-fluid">
     <p>
-      <img src="../images/AdaptableBlotter.png" alt="" width="300" height="176"
-      />
+      <img src="../images/AdaptableBlotter.png" alt="" width="300" height="176" />
     </p>
     <% if (htmlWebpackPlugin.options.version) { %>
-      <h2>AdaptableBlotter.JS Demos</h2>
-      <i>Version:
-        <%= htmlWebpackPlugin.options.version %>&nbsp;&nbsp;(
-          <%= htmlWebpackPlugin.options.versiondate %>)
-      </i>
-      <% } %>
-        <p/>
-        <p>
-          <b>The Adaptable Blotter</b>
-          <br/> AdaptableBlotter.JS is a powerful DataGrid add-on that provides, out of the box, all the functionality that financial
-          and other advanced users require to be productive.
-        </p>
-        <p> AdaptableBlotter.JS can be integrated with a number of different underlying HTML5 grids, both vendor and open source.
-        </p>
-        <p>
-          <b>Any Dataset, Any Grid type, Any Desk, Any Location</b>
-          <br/>Adaptable Blotter.JS is fully data-agnostic and can work with any data set you provide it with.
-          <br/> This demo contains 2 instances of AdaptableBlotter.JS: OpenFin's Hypergrid, and the ag-Grid.
-        </p>
-        <p>For each grid you can select from 13 different randomised dummy data sets to mimic different life-like use cases
-          of the Adaptable Blotter.&nbsp;&nbsp;Each dummy data set ships with its own predefined searches, styles, custom
-          sorts, filters etc. as apppropriate.
-        </p>
-        <p>
-          <i> Click a button to begin your demo...</i>
-        </p>
-        <table style="border-spacing: 20px 5px;border-collapse: separate;">
-          <tr>
-            <td align="center">
-              <img src="../images/agGrid.png" alt="" width="118" height="48" />
-            </td>
-            <td align="center">
-              <img src="../images/OpenFin.jpg" alt="" width="150" height="70" />
-            </td>
-            <!--
+    <h2>AdaptableBlotter.JS Demos</h2>
+    <i>Version:
+      <%= htmlWebpackPlugin.options.version %>&nbsp;&nbsp;(
+      <%= htmlWebpackPlugin.options.versiondate %>)
+    </i>
+    <% } %>
+    <p />
+    <p>
+      <b>The Adaptable Blotter</b>
+      <br /> AdaptableBlotter.JS is a powerful DataGrid add-on that provides, out of the box, all the functionality
+      that financial and other advanced users require to be productive and efficient. And which usually needs to be built on a bespoke basis for
+      each project.
+      <br />AdaptableBlotter.JS can be integrated with a number of different underlying HTML5 grids, both vendor and
+      open source.
+    </p>
+    <p>
+      <b>Any Dataset, Any Grid type, Any Desk, Any Location</b>
+      <br />Adaptable Blotter.JS is fully data-agnostic and can work with any data set you provide it with.
+      <br />This demo contains 2 instances of AdaptableBlotter.JS: OpenFin's Hypergrid, and the ag-Grid.
+      <br />For each grid you can select from 13 different randomised dummy data sets to mimic different life-like use
+      cases
+      of the Adaptable Blotter.
+      <br />Each dummy data set ships with its own predefined searches, styles, custom
+      sorts, filters etc. as apppropriate.<br />
+      <b>Note: </b>These dummy grids all ship with all functions present;
+      however when you create your own instances of the Adaptable Blotter for your own projects you will be able to use
+      the Entitlements in Predefined Configuration to manage permissioning (by user and by team).
+    </p>
+    <p>
+      <i> Click a button to begin your demo...</i>
+    </p>
+    <table style="border-spacing: 20px 5px;border-collapse: separate;">
+      <tr>
+        <td align="center">
+          <img src="../images/agGrid.png" alt="" width="118" height="48" />
+        </td>
+        <td align="center">
+          <img src="../images/OpenFin.jpg" alt="" width="150" height="70" />
+        </td>
+        <!--
             <td align="center">
               <img src="../images/telerik.png" alt="" width="118"
                 height="48" />
             </td>
           -->
-          </tr>
-          <tr>
-            <td>
-              <button style="height:70px; width:220px" class="btn btn-default" onclick="location.href='aggriddemo.html' ">
-                <span>
-                  <h4>Run ag-Grid Demo</h4>
-                </span>
-              </button>
-            </td>
-            <td>
-              <button style="height:70px; width:220px" class="btn btn-default" onclick="location.href='hypergriddemo.html' ">
-                <span>
-                  <h4>Run Hypergrid Demo</h4>
-                </span>
-              </button>
-            </td>
-            <td></td>
-               </tr>
-        </table>
-        <br/>
-        <b>Grouping Demo</b>
-        <br/>AdaptableBlotter.JS does not provide any grouping or aggregation capabilities itself. But we do guarantee that if
-        the underlying grid offers these capabilities, then they will run as normal when the Adaptable Blotter add-on is
-        installed.
-        <br/> Click the button below to launch ag-Grid in full grouping and aggreagation mode and see how that all the Adaptable
-        Blotter functions continue to work even when you have multiple columns groups, row groups and aggregated columns.</p>
-        <button style="height:80px; width:220px" class="btn btn-default" onclick="location.href='aggridgroupingdemo.html' ">
-          <span>
-            <h4>Run ag-Grid</h4>
-            <h4>Grouping Demo</h4>
-          </span>
-        </button>
+      </tr>
+      <tr>
+        <td>
+          <button style="height:70px; width:220px" class="btn btn-default" onclick="location.href='aggriddemo.html' ">
+            <span>
+              <h4>Run ag-Grid Demo</h4>
+            </span>
+          </button>
+        </td>
+        <td>
+          <button style="height:70px; width:220px" class="btn btn-default" onclick="location.href='hypergriddemo.html' ">
+            <span>
+              <h4>Run Hypergrid Demo</h4>
+            </span>
+          </button>
+        </td>
+        <td></td>
+      </tr>
+    </table>
+    <br />
+    <b>Grouping Demo</b>
+    <br />AdaptableBlotter.JS does not provide any grouping or aggregation capabilities itself. But we do guarantee
+    that if
+    the underlying grid offers these capabilities, then they will run as normal when the Adaptable Blotter add-on is
+    installed.
+    <br /> Click button below to launch ag-Grid in full grouping and aggreagation mode and see how all the
+    Adaptable Blotter functions continue to work even when you have multiple columns groups, row groups and aggregated columns.</p>
+    <button style="height:80px; width:220px" class="btn btn-default" onclick="location.href='aggridgroupingdemo.html' ">
+      <span>
+        <h4>Run Grouping Demo</h4>
+      </span>
+    </button>
 
 
-        <br/>
-        <br/>
+    <br />
+    <br />
 
 
-        <b>Performance</b>
-        <br/>This demo is designed to allow you to evaluate AdaptableBlotter.JS running under 'normal' conditions. Use
-        <a href="https://perf.adaptableblotter.com" target="_blank">Performance Monitor</a>
-        to test AdaptableBlotter.JS under more extreme conditions of multiple conditions and searches, tens of thousands of rows,
-        and 500,000 flashing and data updates per second. </p>
-        <div id="launcherOpenfin">
-          <p>
-            <b>OpenFin Demo (featuring 'Live Updates')</b>
-            <br/>This demo shows AdaptableBlotter.JS running in the
-            <a href="https://openfin.co" target="_blank">OpenFin</a> container. One exciting feature this provides is, that after exporting to Excel, any changes subsequently
-            made to your report data in the Blotter, will automatically update in Excel.
-            <br/> Click the button to download the installer. You will need to launch the download executable that will install
-            locally the required components and launch the demo automtically. It will also create a shorcut in your windows
-            menu under 'Adaptable Tools'
-          </p>
-          <p>
-            <table style="border-spacing: 20px 5px;border-collapse: separate;">
-              <tr>
-                <td>
-                  <button style="height:70; width:220px" class="btn btn-default" onclick="launchOpenfin()">
-                    <span>
-                      <h4>Run
-                        <img src="../images/openfin_small.jpg" alt="" width="90" height="24" /> demo</h4>
-                    </span>
-                  </button>
-                  <script>
-                    function launchOpenfin() {
-                      if (document.URL.indexOf("beta") > -1) {
-                        location.href = 'https://install.openfin.co/download/?fileName=adaptable_blotter_openfin&config=http://beta.adaptableblotter.com/app-beta.json'
-                      }
-                      else {
-                        location.href = 'https://install.openfin.co/download/?fileName=adaptable_blotter_openfin&config=http://demo.adaptableblotter.com/app-demo.json'
-                      }
-                    }
-                  </script>
-                </td>
-              </tr>
-            </table>
-          </p>
-        </div>
-        <script>
-          if (isRunningInOpenfin()) {
-            document.getElementById("launcherOpenfin").style.visibility = "collapse"
-          }
-          function isRunningInOpenfin() {
-            return 'fin' in window && 'desktop' in fin;
-          }
-        </script>
-        <p>
-          <b>Multiple Blotters and Components (using Finsemble)</b>
-          <br/>This demo simulates a life-like trading application with 3 instances of the Adaptable Blotter (for Trade, Price
-          and Position), a chart window and a news feed.
-          <br/> By leveraging the
-          <a href="https://www.chartiq.com/finsemble/" target="_blank">Finsemble</a> framework, the 3 Blotters are able to share data, updates and filters, and can also communicate 2-ways
-          with the 3rd party components.
-        </p>
+    <b>Performance</b>
+    <br />This demo is designed to allow you to evaluate AdaptableBlotter.JS running under 'normal' conditions. Use
+    <a href="https://perf.adaptableblotter.com" target="_blank">Performance Monitor</a>
+    to test AdaptableBlotter.JS under more extreme conditions of multiple conditions and searches, tens of thousands of
+    rows,
+    and 500,000 flashing and data updates per second. </p>
+    <div id="launcherOpenfin">
+      <p>
+        <b>OpenFin Demo (featuring 'Live Updates')</b>
+        <br />This demo shows AdaptableBlotter.JS running in the
+        <a href="https://openfin.co" target="_blank">OpenFin</a> container. One exciting feature this provides is, that
+        after exporting to Excel, any changes subsequently
+        made to your report data in the Blotter, will automatically update in Excel.
+        <br /> Click the button to download the installer. You will need to launch the download executable that will
+        install
+        locally the required components and launch the demo automtically. It will also create a shorcut in your windows
+        menu under 'Adaptable Tools'
+      </p>
+      <p>
         <table style="border-spacing: 20px 5px;border-collapse: separate;">
           <tr>
             <td>
-              <button class="btn btn-default" onclick="location.href='https://beta.adaptableblotter.com/finsembledemo/Adaptable-Blotter-finsemble-beta-installer.zip' ">
-                <img src="../images/chartiq.png" alt="" width="118" height="48"
-                />
+              <button style="height:70; width:220px" class="btn btn-default" onclick="launchOpenfin()">
                 <span>
-                  <h4>Multi-Blotter Demo</h4>
+                  <img src="../images/openfin_small.jpg" alt="" width="90" height="24" />
+                  <h4>Run OpenFin demo</h4>
                 </span>
               </button>
+              <script>
+                function launchOpenfin() {
+                  if (document.URL.indexOf("beta") > -1) {
+                    location.href = 'https://install.openfin.co/download/?fileName=adaptable_blotter_openfin&config=http://beta.adaptableblotter.com/app-beta.json'
+                  }
+                  else {
+                    location.href = 'https://install.openfin.co/download/?fileName=adaptable_blotter_openfin&config=http://demo.adaptableblotter.com/app-demo.json'
+                  }
+                }
+              </script>
             </td>
           </tr>
         </table>
-        <p>
-          Read more on the features of this demo on the
-          <a href="https://github.com/jonnyadaptabletools/finsemble-adaptableblotterdemo" target="_blank">GitHub</a> page and this
-          <a href="https://www.linkedin.com/pulse/vive-la-html5-revolution-jonny-wolfson/" target="_blank">blog piece</a>.
-        </p>
-        <p>
-          <b>Installation and Integration</b>
-          <br/>For information on installing and running AdaptableBlotter.JS please read our
-          <a href="https://adaptabletools.zendesk.com/hc/en-us/articles/360015218212-Integration" target="_blank">Installation Help</a>.
-        </p>
-        <p>
-          <b>Help</b>
-          <br/>If you require further information please visit our
-          <a href="http://adaptabletools.com" target="_blank">Website</a> or use the
-          <a href="https://adaptabletools.zendesk.com/hc/en-us" target="_blank">Online Help</a>.
-        </p>
-        <p>
-          <b>Further Information</b>
-          <br/>This
-          <a href="https://tinyurl.com/y7uw8kw6" target="_blank">folder</a> contains a list of all the features in AdaptableBlotter.JS, an Executive Summary, brochures, presentations
-          and much more.
-        </p>
-        <p>
-          <b>Licence and Pricing</b>
-          <br/> The Adaptable Blotter is free for development (and proof of concept) use. And we also offer a free Community Licence
-          for students in full time education, charities and open-source projects.
-          <br/> For all other usage, an annual licence must be purchased. (This licence covers both AdaptableBlotter.NET and AdaptableBlotter.JS
-          versions, and offers regular updates and full support).
-          <br/> For more information please see the LICENSE file or contact
-          <a href="mailto:support@adaptabletools.com">Adaptable Tools Support</a>.
-        </p>
-        <p>
-          <b>Source Code</b>
-          <br/> The Repository for the AdaptableBlotter.JS Demo is located in
-          <a a href="https://github.com/jonnyadaptabletools/adaptableblotter-demo" target="_blank">Github</a>.
-        </p>
+      </p>
+    </div>
+    <script>
+      if (isRunningInOpenfin()) {
+        document.getElementById("launcherOpenfin").style.visibility = "collapse"
+      }
+      function isRunningInOpenfin() {
+        return 'fin' in window && 'desktop' in fin;
+      }
+    </script>
+    <p>
+      <b>Multiple Blotters and Components (using Finsemble)</b>
+      <br />This demo simulates a life-like trading application with 3 instances of the Adaptable Blotter (for Trade,
+      Price
+      and Position), a chart window and a news feed.
+      <br /> By leveraging the
+      <a href="https://www.chartiq.com/finsemble/" target="_blank">Finsemble</a> framework, the 3 Blotters are able to
+      share data, updates and filters, and can also communicate 2-ways
+      with the 3rd party components.
+    </p>
+    <table style="border-spacing: 20px 5px;border-collapse: separate;">
+      <tr>
+        <td>
+          <button class="btn btn-default" onclick="location.href='https://beta.adaptableblotter.com/finsembledemo/Adaptable-Blotter-finsemble-beta-installer.zip' ">
+            <img src="../images/chartiq.png" alt="" width="118" height="48" />
+            <span>
+              <h4>Multi-Blotter Demo</h4>
+            </span>
+          </button>
+        </td>
+      </tr>
+    </table>
+    <p>
+      Read more on the features of this demo on the
+      <a href="https://github.com/jonnyadaptabletools/finsemble-adaptableblotterdemo" target="_blank">GitHub</a> page
+      and this
+      <a href="https://www.linkedin.com/pulse/vive-la-html5-revolution-jonny-wolfson/" target="_blank">blog piece</a>.
+    </p>
+    <p>
+      <b>Installation and Integration</b>
+      <br />For information on installing and running AdaptableBlotter.JS please read our
+      <a href="https://adaptabletools.zendesk.com/hc/en-us/articles/360015218212-Integration" target="_blank">Installation
+        Help</a>.
+    </p>
+    <p>
+      <b>Help</b>
+      <br />If you require further information please visit our
+      <a href="http://adaptabletools.com" target="_blank">Website</a> or use the
+      <a href="https://adaptabletools.zendesk.com/hc/en-us" target="_blank">Online Help</a>.
+    </p>
+    <p>
+      <b>Licence and Pricing</b>
+      <br /> The Adaptable Blotter is free for development (and proof of concept) use. And we also offer a free
+      Community Licence
+      for students in full time education, charities and open-source projects.
+      <br /> For all other usage, an <b>annual licence must be purchased</b>. (This licence covers both AdaptableBlotter.NET
+      and AdaptableBlotter.JS versions, and includes 12 monthly updates and full support).
+      <br /> For more information please see the LICENSE file or contact
+      <a href="mailto:support@adaptabletools.com">Adaptable Tools Support</a>.
+    </p>
+    <p>
+      <b>Source Code</b>
+      <br /> The Repository for the AdaptableBlotter.JS Demo is located in
+      <a a href="https://github.com/jonnyadaptabletools/adaptableblotter-demo" target="_blank">Github</a>.
+    </p>
   </div>
 </body>
 

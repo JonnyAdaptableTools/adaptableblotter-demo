@@ -37,7 +37,7 @@
                 "ConditionalStyleScope": "Column",
                 "Expression": {
                     "ColumnValueExpressions": [],
-                     "FilterExpressions": [
+                    "FilterExpressions": [
                         {
                             "ColumnId": "HighLowDifference",
                             "Filters": [
@@ -50,5 +50,89 @@
                 "IsReadOnly": true
             }
         ]
+    },
+    "Dashboard": {
+		"VisibleToolbars": [
+			"QuickSearch",
+			"Chart",
+			"Layout"
+		],
+		"VisibleButtons": [
+			"About",
+			"Dashboard",
+			"AdvancedSearch",
+			"SmartEdit",
+			"ColumnChooser",
+			"BulkUpdate"
+		]
+		},
+    "Chart": {
+        "ChartDefinitions": [
+            {
+                "ChartProperties": {
+                    "ChartCrosshairsMode": "None",
+                    "ChartSize": "Small",
+                    "ChartType": "Column",
+                    "EnableCategoryHighlighting": false,
+                    "EnableCrosshairsAnnotations": false,
+                    "EnableFinalValueAnnotations": false,
+                    "EnableItemHighlighting": false,
+                    "EnableSeriesHighlighting": false,
+                    "EnableTransitions": false,
+                    "SpanCrossHairsToData": false,
+                    "SubTitleAlignment": "Center",
+                    "TitleAlignment": "Center",
+                    "ToolTipType": "Default",
+                    "XAxisAngle": "Horizontal",
+                    "XAxisGap": 0.5,
+                    "XAxisLabelColor": "",
+                    "XAxisLabelVisibility": "visible",
+                    "XAxisTitle": "",
+                    "XAxisTitleColor": "",
+                    "YAxisLabelColor": "",
+                    "YAxisLabelLocation": "OutsideLeft",
+                    "YAxisLabelVisibility": "visible",
+                    "YAxisTitle": "",
+                    "YAxisTitleColor": ""
+                },
+                "SubTitle": "October 2017",
+                "Title": "FTSE Data",
+                "XAxisColumnId": "CloseDate",
+                "XAxisExpression": {
+                    "ColumnValueExpressions": [],
+                    "FilterExpressions": [],
+                    "RangeExpressions": [
+                        {
+                            "ColumnId": "CloseDate",
+                            "Ranges": [
+                                {
+                                    "Operand1": "2017-10-17",
+                                    "Operand1Type": "Value",
+                                    "Operand2": "",
+                                    "Operand2Type": "Value",
+                                    "Operator": "GreaterThan"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "XSegmentColumnId": "",
+                "XSegmentExpression": {
+                    "ColumnValueExpressions": [],
+                    "FilterExpressions": [],
+                    "RangeExpressions": []
+                },
+                "YAxisColumnIds": [
+                    "Open",
+                    "Close",
+                    "High",
+                    "Low"
+                ],
+                "YAxisTotal": "Sum"
+            }
+        ],
+        "CurrentChartDefinition": "FTSE Data",
+        "RefreshRate": 1,
+        "ShowModal": false
     }
 }
