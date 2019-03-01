@@ -71,6 +71,7 @@ export class agGridDemo {
                     vendorGrid: gridOptions,
                     userName: "Demo",
                     blotterId: blotterId,
+                    licenceKey: 'xs2543-as6b8esw3-e94fyjzc7a',
                     layoutOptions: {
                         includeVendorStateInLayouts: true,
                         autoSaveLayouts: true,
