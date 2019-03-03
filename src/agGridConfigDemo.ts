@@ -58,10 +58,68 @@ export class agGridConfigDemo {
                     userName: "Jonathan",
                     blotterId: "Config Demo",
                     licenceKey: Helper.getdemolicencekey(),
-
+                    predefinedConfig: json
                 }
                 this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(blotterOptions);
             })
+
+
+            let json = {
+       
+                "ConditionalStyle": {
+                    "ConditionalStyles": [
+                        {
+                            "ColumnId": "ChangeOnOrder",
+                            "Style": {
+                                "BackColor": null as any,
+                                "ForeColor": "#008000",
+                                "FontWeight": "Normal",
+                                "FontStyle": "Normal",
+                                "FontSize": null as any
+                            },
+                            "ConditionalStyleScope": "Column",
+                            "Expression": {
+                                "ColumnValueExpressions": [{}],
+                                "FilterExpressions": [
+                                    {
+                                        "ColumnId": "ChangeOnOrder",
+                                        "Filters": [
+                                            "Positive"
+                                        ]
+                                    }
+                                ],
+                                "RangeExpressions": [{}]
+                            },
+                            "IsReadOnly": true
+                        },
+                        {
+                            "ColumnId": "ChangeOnOrder",
+                            "Style": {
+                                "BackColor": null,
+                                "ForeColor": "#ff0000",
+                                "FontWeight": "Normal",
+                                "FontStyle": "Normal",
+                                "FontSize": null
+                            },
+                            "ConditionalStyleScope": "Column",
+                            "Expression": {
+                                "ColumnValueExpressions": [],
+                                "FilterExpressions": [
+                                    {
+                                        "ColumnId": "ChangeOnOrder",
+                                        "Filters": [
+                                            "Negative"
+                                        ]
+                                    }
+                                ],
+                                "RangeExpressions": []
+                            },
+                            "IsReadOnly": true
+                        }
+                    ]
+                },
+            }
+        
     }
 
 

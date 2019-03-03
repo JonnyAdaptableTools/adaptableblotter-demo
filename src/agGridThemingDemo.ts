@@ -4,14 +4,14 @@ import { GridOptions } from 'ag-grid-community/dist/lib/entities/gridOptions';
 import * as HelperAgGrid from "./HelperAgGrid"
 import { IAdaptableBlotter, IAdaptableBlotterOptions } from 'adaptableblotter/types'
 
-export class agGridChartingDemo {
-     private adaptableblotter: IAdaptableBlotter
+export class agGridThemingDemo {
+    private adaptableblotter: IAdaptableBlotter
     constructor() {
 
         let data: any[]
         Helper.getDataFromJson("NorthwindOrders.json").then(json => data = json)
             .then(data => Helper.MakeAllRecordsColumnsDateProperDates(data)).then(() => {
-                 // let the grid know which columns and what data to use
+                // let the grid know which columns and what data to use
                 var gridOptions: GridOptions = {
                     columnDefs: HelperAgGrid.getBasicNorthwindColumnSchema(),
                     rowData: data,
@@ -43,7 +43,7 @@ export class agGridChartingDemo {
                 let grid = new Grid(eGridDiv, gridOptions);
 
 
-               // HelperAgGrid.startTickingDataagGrid(gridOptions);
+                // HelperAgGrid.startTickingDataagGrid(gridOptions);
 
                 //set all the properties such as editor etc....
                 //  selectedConfig.setGridProperties(gridOptions)
@@ -55,14 +55,38 @@ export class agGridChartingDemo {
                     primaryKey: "OrderId",
                     vendorGrid: gridOptions,
                     userName: "Jonathan",
-                    blotterId: "Charting Demo",
+                    blotterId: "Theming Demo",
                     licenceKey: Helper.getdemolicencekey(),
-
+                    predefinedConfig: json
                 }
                 this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(blotterOptions);
             })
+
+
+        let json = {
+            "Theme": {
+                "CurrentTheme": "Dark Theme"
+            },
+            "Dashboard": {
+                "VisibleToolbars": [
+                    "SmartEdit",
+                    "Export",
+                    "BulkUpdate",
+                ],
+                "VisibleButtons": [
+                    "About",
+                    "Dashboard",
+                    "QuickSearch",
+                    "QuickSearch",
+                    "ColumnChooser",
+                    "AdvancedSearch"
+                ],
+                "Zoom": "0.9",
+                "DashboardVisibility": "Minimised",
+                "ShowSystemStatusButton": false
+            }
+        }
+
     }
-
-
 
 }

@@ -15,7 +15,7 @@ module.exports = {
         aggriddemo: "./src/agGridDemo.ts",
         aggridbasicdemo: "./src/agGridBasicDemo.ts",
         aggridconfigdemo: "./src/agGridConfigDemo.ts",
-        aggridchartingdemo: "./src/agGridChartingDemo.ts",
+        aggridthemingdemo: "./src/agGridThemingDemo.ts",
         aggridgroupingdemo: "./src/agGridGroupingDemo.ts",
     },
     output: {
@@ -93,11 +93,11 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             chunks: [],
-            filename: "aggridchartingdemo.html",
-            template: 'DemoPage/aggridchartingdemo.ejs',
+            filename: "aggridthemingdemo.html",
+            template: 'DemoPage/aggridthemingdemo.ejs',
             inject: false,
             'harnessJs': PACKAGE.version + "/adaptableblotteraggrid-bundle.min.js",
-            'demoJs': "aggridchartingdemo.js",
+            'demoJs': "aggridthemingdemo.js",
         }),
         new HtmlWebpackPlugin({
             chunks: [],
