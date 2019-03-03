@@ -71,7 +71,6 @@
             {
                 "ChartProperties": {
                     "ChartCrosshairsMode": "None",
-                    "ChartSize": "Small",
                     "ChartType": "Column",
                     "EnableCategoryHighlighting": false,
                     "EnableCrosshairsAnnotations": false,
@@ -116,13 +115,7 @@
                         }
                     ]
                 },
-                "XSegmentColumnId": "",
-                "XSegmentExpression": {
-                    "ColumnValueExpressions": [],
-                    "FilterExpressions": [],
-                    "RangeExpressions": []
-                },
-                "YAxisColumnIds": [
+                   "YAxisColumnIds": [
                     "Open",
                     "Close",
                     "High",

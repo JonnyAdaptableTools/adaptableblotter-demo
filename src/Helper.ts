@@ -31,9 +31,9 @@ const checkStatus = (response: Response) => {
 };
 
 export function ConvertExcelDate(dateToConvert: number) {
-    if (dateToConvert.toString()==""){
-   return null;
-    
+    if (dateToConvert.toString() == "") {
+        return null;
+
     }
     var result = new Date();
     result.setTime((dateToConvert - 25569) * 24 * 3600 * 1000);
@@ -94,5 +94,9 @@ export function checkPriceIsPostive(numberToCheck: number): number {
         numberToCheck = numberToCheck + 2;
     }
     return numberToCheck;
+}
+
+export function getdemolicencekey(): string {
+    return 'xs2543-as6b8esw3-e94fyjzc7a';
 }
 

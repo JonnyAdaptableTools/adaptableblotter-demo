@@ -12,9 +12,6 @@ export var NorthwindOrders: IDataSetConfiguration = {
   //   columnGroupInfos:[{groupName: "Pricing", openChildren:["CustomerReference",  "ContactName", "CompanyName"], closedChildren:[]}],
 // add ship in a minute
 
-/*
-     
-*/
     
     getSchema: (data) => {
         let schema = [],
@@ -24,11 +21,11 @@ export var NorthwindOrders: IDataSetConfiguration = {
         for (let p in firstRow) {
             if (firstRow.hasOwnProperty(p)) {
                 if (p === NorthwindOrders.primaryKey) {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell' });
+                    schema.push({ headerName: Helper.capitalize(p), field: p, cellClass: 'number-cell', filter: true, sortable: true  });
                 }      else if (p.includes("Date")) {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: true, cellEditorParams: { useFormatter: true }, valueParser: HelperAgGrid.dateParseragGrid, valueFormatter : HelperAgGrid.shortDateFormatteragGrid });
+                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: true, cellEditorParams: { useFormatter: true }, valueParser: HelperAgGrid.dateParseragGrid, valueFormatter : HelperAgGrid.shortDateFormatteragGrid, filter: true, sortable: true  });
                  } else {
-                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: true });
+                    schema.push({ headerName: Helper.capitalize(p), field: p, editable: true, filter: true, sortable: true });
                 }
             }
         }

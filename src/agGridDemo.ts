@@ -1,8 +1,8 @@
 import { AvailableDatasetConfigs } from './DatasetConfigsagGrid';
 import * as Helper from './Helper';
-import { GridOptions } from 'ag-grid-community/dist/lib/entities/gridOptions';
 import { Grid } from 'ag-grid-community/dist/lib/grid';
-import { IAdaptableBlotter, IAdaptableBlotterOptions } from 'adaptableblotter/types'
+import { GridOptions } from 'ag-grid-community/dist/lib/entities/gridOptions';
+import { IAdaptableBlotter, IAdaptableBlotterOptions } from 'adaptableblotter/types';
 
 export class agGridDemo {
 
@@ -19,11 +19,8 @@ export class agGridDemo {
                 var gridOptions: GridOptions = {
                     columnDefs: selectedConfig.getSchema(data),
                     rowData: data,
-                    enableSorting: true,
                     enableRangeSelection: true,
-                    enableFilter: true,
                     floatingFilter: true,
-                    enableColResize: true,
                     suppressMenuHide: true,
                     suppressColumnVirtualisation: false,
                     sideBar: true, // this puts in filters and columns by default
@@ -71,7 +68,7 @@ export class agGridDemo {
                     vendorGrid: gridOptions,
                     userName: "Demo",
                     blotterId: blotterId,
-                    licenceKey: 'xs2543-as6b8esw3-e94fyjzc7a',
+                    licenceKey: Helper.getdemolicencekey(),
                     layoutOptions: {
                         includeVendorStateInLayouts: true,
                         autoSaveLayouts: true,

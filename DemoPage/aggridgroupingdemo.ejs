@@ -5,17 +5,12 @@
     <meta charset="utf-8" />
     <title>AdaptableBlotter.JS ag-Grid Demo with grouping</title>
     <!--CSS for the demo-->
-    <link href="aggridgroupingdemo.css" rel="stylesheet" />
+    <link href="aggriddemo.css" rel="stylesheet" />
     <link href="demo.css" rel="stylesheet" />
      <!-- ag-Grid -->
      <script src="ExtLibs/agGrid/ag-grid-community.min.js"></script>
      <script src="ExtLibs/agGrid/ag-grid-enterprise.min.js"></script>
  
-     <!--  remove angular and ipushpull dependencies?
-     <script src="ExtLibs/angular/angular.min.js"></script>
-     <script src="ExtLibs/iPushPull/ng-ipushpull-standalone.js"></script>
- -->
-
 </head>
 
 <body>
@@ -72,7 +67,7 @@
                 <script src="<%= htmlWebpackPlugin.options.demoJs %>" type="text/javascript"></script>
                 <% } %>
                     <script>
-                        var blotter = new aggridgroupingdemo.agGridGroupingDemo("grid", "adaptableBlotter")
+                        var blotter = new aggridgroupingdemo.agGridGroupingDemo()
                     </script>
 </body>
 

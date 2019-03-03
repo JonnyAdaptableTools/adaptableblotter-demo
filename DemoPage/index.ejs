@@ -9,89 +9,120 @@
 
 <body>
   <div class="container-fluid">
-    <p>
-      <img src="../images/AdaptableBlotter.png" alt="" width="300" height="176" />
-    </p>
-    <% if (htmlWebpackPlugin.options.version) { %>
-    <h2>AdaptableBlotter.JS Demos</h2>
-    <i>Version:
-      <%= htmlWebpackPlugin.options.version %>&nbsp;&nbsp;(
-      <%= htmlWebpackPlugin.options.versiondate %>)
-    </i>
-    <% } %>
-    <p />
+    <table>
+      <tr>
+        <td>
+          <img src="../images/AdaptableBlotter.png" alt="" width="300" height="176" />
+        </td>
+        <td style="align-items: baseline">
+          &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+        </td>
+        <td>
+          <% if (htmlWebpackPlugin.options.version) { %>
+          <h2>AdaptableBlotter.JS Demos</h2>
+          <i>Version:
+            <%= htmlWebpackPlugin.options.version %>&nbsp;&nbsp;(
+            <%= htmlWebpackPlugin.options.versiondate %>)
+          </i>
+          <% } %>
+        </td>
+    </table>
+
+
     <p>
       <b>The Adaptable Blotter</b>
       <br /> AdaptableBlotter.JS is a powerful DataGrid add-on that provides, out of the box, all the functionality
-      that financial and other advanced users require to be productive and efficient. And which usually needs to be built on a bespoke basis for
-      each project.
+      that financial and other advanced users require to be productive and efficient. And which usually needs to be
+      built on a bespoke basis for each project.
       <br />AdaptableBlotter.JS can be integrated with a number of different underlying HTML5 grids, both vendor and
       open source.
-    </p>
-    <p>
-      <b>Any Dataset, Any Grid type, Any Desk, Any Location</b>
+      <br />AdaptableBlotter.JS works with any dataset, any Grid type, any Desk, and in any Location</b>
       <br />Adaptable Blotter.JS is fully data-agnostic and can work with any data set you provide it with.
-      <br />This demo contains 2 instances of AdaptableBlotter.JS: OpenFin's Hypergrid, and the ag-Grid.
-      <br />For each grid you can select from 13 different randomised dummy data sets to mimic different life-like use
-      cases
-      of the Adaptable Blotter.
-      <br />Each dummy data set ships with its own predefined searches, styles, custom
-      sorts, filters etc. as apppropriate.<br />
-      <b>Note: </b>These dummy grids all ship with all functions present;
-      however when you create your own instances of the Adaptable Blotter for your own projects you will be able to use
-      the Entitlements in Predefined Configuration to manage permissioning (by user and by team).
+      <br />
     </p>
-    <p>
-      <i> Click a button to begin your demo...</i>
+
+    <b>Basic Demo</b>
+    <br />This demo contains 2 instances of AdaptableBlotter.JS hosting dummy data from Microsoft's famous Northwind
+    database:
+    <li>the <b>ag-Grid</b> (in our opinion by the far best HTML5 GridControl on the market today and very highly
+      recommended) </li>
+    <li> the <b>Hypergrid</b> (the best of the canvas-based grids) </li>
     </p>
     <table style="border-spacing: 20px 5px;border-collapse: separate;">
       <tr>
-        <td align="center">
-          <img src="../images/agGrid.png" alt="" width="118" height="48" />
-        </td>
-        <td align="center">
-          <img src="../images/OpenFin.jpg" alt="" width="150" height="70" />
-        </td>
-        <!--
-            <td align="center">
-              <img src="../images/telerik.png" alt="" width="118"
-                height="48" />
-            </td>
-          -->
-      </tr>
-      <tr>
         <td>
-          <button style="height:70px; width:220px" class="btn btn-default" onclick="location.href='aggriddemo.html' ">
+          <button style="height:70px; width:220px" class="btn btn-default"
+            onclick="location.href='aggridbasicdemo.html' ">
             <span>
+              <img src="../images/agGrid.png" alt="" width="56" height="24" />
               <h4>Run ag-Grid Demo</h4>
             </span>
           </button>
         </td>
         <td>
-          <button style="height:70px; width:220px" class="btn btn-default" onclick="location.href='hypergriddemo.html' ">
+          <button style="height:70px; width:220px" class="btn btn-default"
+            onclick="location.href='hypergridbasicdemo.html' ">
             <span>
+              <img src="../images/OpenFin.jpg" alt="" width="50" height="24" />
               <h4>Run Hypergrid Demo</h4>
             </span>
           </button>
         </td>
-        <td></td>
       </tr>
     </table>
     <br />
+
+    <b>Config Demo</b>
+    <br />
+    You can ship the applications you create using the Adaptable Blotter with <b><a
+        href="https://adaptabletools.zendesk.com/hc/en-us/sections/360003312052-Predefined-Config"
+        target="_blank">Predefined Configuration</a></b>. <br />
+    These are styles, searches, reports, layouts etc. that you create at design time so they are ready for your users to
+    use from day 1.
+    This demo contains runs ag-Grid using the same data as in the basic demo above but with some additional predefined configuration.<br />
+    Note: Predefined Configuration also includes permissions: it allows you to ship the Adaptable Blotter to your users
+    with the <a href="https://adaptabletools.zendesk.com/hc/en-us/articles/360005168831-Permissions"
+      target="_blank">Entitlements</a>
+    and permissions you need to ensure users only have access to the functionality they require.
+    <br />
+    <br />
+    <button style="height:60px; width:200px" class="btn btn-default" onclick="location.href='aggridconfigdemo.html' ">
+      <span>
+        <h4>Run Config Demo</h4>
+      </span>
+    </button>
+    <br />
+    <br />
+
+    <b>Charting Demo</b>
+    <br />We have teamed up with <a href="https://www.infragistics.com/products/ignite-ui-react/react/components/categorychart.html"
+    target="_blank">Infragistics</a> to offer Charting.
+    This demo contains runs Hypergrid using the same data as in the basic demo above but with some prebuilt charts.
+    
+    <br />
+    <br />
+    <button style="height:60px; width:200px" class="btn btn-default" onclick="location.href='hypergridchartingdemo.html' ">
+      <span>
+        <h4>Run Charting Demo</h4>
+      </span>
+    </button>
+    <br />
+    <br />
+
+
     <b>Grouping Demo</b>
-    <br />AdaptableBlotter.JS does not provide any grouping or aggregation capabilities itself. But we do guarantee
-    that if
-    the underlying grid offers these capabilities, then they will run as normal when the Adaptable Blotter add-on is
+    <br />AdaptableBlotter.JS does not provide grouping or aggregation capabilities itself. But we do guarantee
+    that whre the underlying grid offers these capabilities, then they will run as normal when the Adaptable Blotter
+    add-on is
     installed.
     <br /> Click button below to launch ag-Grid in full grouping and aggreagation mode and see how all the
-    Adaptable Blotter functions continue to work even when you have multiple columns groups, row groups and aggregated columns.</p>
-    <button style="height:80px; width:220px" class="btn btn-default" onclick="location.href='aggridgroupingdemo.html' ">
+    Adaptable Blotter functions continue to work even when you have multiple columns groups, row groups and aggregated
+    columns.</p>
+    <button style="height:60px; width:200px" class="btn btn-default" onclick="location.href='aggridgroupingdemo.html' ">
       <span>
         <h4>Run Grouping Demo</h4>
       </span>
     </button>
-
-
     <br />
     <br />
 
@@ -118,7 +149,7 @@
         <table style="border-spacing: 20px 5px;border-collapse: separate;">
           <tr>
             <td>
-              <button style="height:70; width:220px" class="btn btn-default" onclick="launchOpenfin()">
+              <button style="height:60px; width:200px" class="btn btn-default" onclick="launchOpenfin()">
                 <span>
                   <img src="../images/openfin_small.jpg" alt="" width="90" height="24" />
                   <h4>Run OpenFin demo</h4>
@@ -160,7 +191,8 @@
     <table style="border-spacing: 20px 5px;border-collapse: separate;">
       <tr>
         <td>
-          <button class="btn btn-default" onclick="location.href='https://beta.adaptableblotter.com/finsembledemo/Adaptable-Blotter-finsemble-beta-installer.zip' ">
+          <button class="btn btn-default"
+            onclick="location.href='https://beta.adaptableblotter.com/finsembledemo/Adaptable-Blotter-finsemble-beta-installer.zip' ">
             <img src="../images/chartiq.png" alt="" width="118" height="48" />
             <span>
               <h4>Multi-Blotter Demo</h4>
@@ -177,9 +209,10 @@
     </p>
     <p>
       <b>Installation and Integration</b>
-      <br />For information on installing and running AdaptableBlotter.JS please read our
-      <a href="https://adaptabletools.zendesk.com/hc/en-us/articles/360015218212-Integration" target="_blank">Installation
-        Help</a>.
+      <br />For information on installing and running AdaptableBlotter.JS please read the
+      <a href="https://adaptabletools.zendesk.com/hc/en-us/sections/360003306071-Integration"
+        target="_blank">Integration</a>
+      section in our Help.
     </p>
     <p>
       <b>Help</b>
@@ -192,7 +225,8 @@
       <br /> The Adaptable Blotter is free for development (and proof of concept) use. And we also offer a free
       Community Licence
       for students in full time education, charities and open-source projects.
-      <br /> For all other usage, an <b>annual licence must be purchased</b>. (This licence covers both AdaptableBlotter.NET
+      <br /> For all other usage, an <b>annual licence must be purchased</b>. (This licence covers both
+      AdaptableBlotter.NET
       and AdaptableBlotter.JS versions, and includes 12 monthly updates and full support).
       <br /> For more information please see the LICENSE file or contact
       <a href="mailto:support@adaptabletools.com">Adaptable Tools Support</a>.

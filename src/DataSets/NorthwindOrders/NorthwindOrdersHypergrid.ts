@@ -28,8 +28,8 @@ export var NorthwindOrders: IDataSetConfiguration = {
             }
             return grid.cellEditors.create(editorName, options);
         }
-         
-        HelperHypergrid.FormatColumns([7,8,9], behavior, "shortDateFormat")
+
+        HelperHypergrid.FormatColumns([7, 8, 9], behavior, "shortDateFormat")
     },
     tickData: (grid: any) => {
 
@@ -37,7 +37,7 @@ export var NorthwindOrders: IDataSetConfiguration = {
     manipulateInitialData(data: any[]) {
         Helper.MakeAllRecordsColumnsDateProperDates(data);
     },
-    ActionWhenRecordUpdatedOrEdited(record:any){
-        
+    ActionWhenRecordUpdatedOrEdited(record: any) {
+
     }
 }

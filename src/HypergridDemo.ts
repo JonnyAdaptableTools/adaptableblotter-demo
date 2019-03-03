@@ -73,7 +73,7 @@ export class HypergridDemo  {
                     vendorGrid: this.grid,
                     userName: "Jonathan",
                     blotterId: blotterId,
-                   
+                    licenceKey: 'xs2543-as6b8esw3-e94fyjzc7a',
                 }
 
                 this.adaptableblotter = new (<any>window).adaptableblotterhypergrid.AdaptableBlotter(blotterOptions);

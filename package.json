@@ -5,13 +5,13 @@
   "main": "index.js",
   "dependencies": {
     "@types/isomorphic-fetch": "0.0.34",
-    "adaptableblotter": "^3.2.8-beta.58",
+    "adaptableblotter": "^3.2.8-beta.68",
     "ag-grid-community": "^20.1.0",
     "ag-grid-enterprise": "^20.1.0",
     "fin-hypergrid-data-source-base": "^0.4.11",
     "isomorphic-fetch": "^2.2.1",
     "prop-types": "^15.6.2",
-    "react": "^16.7.0"
+    "react": "^16.4.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
