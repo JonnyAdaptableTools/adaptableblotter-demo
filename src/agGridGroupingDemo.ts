@@ -10,44 +10,13 @@ export class agGridGroupingDemo {
         let data: any[]
         Helper.getDataFromJson("NorthwindOrders.json").then(json => data = json)
             .then(data => Helper.MakeAllRecordsColumnsDateProperDates(data)).then(() => {
-                 // let the grid know which columns and what data to use
-                var gridOptions: GridOptions = {
-                    columnDefs: HelperAgGrid.getGroupingNorthwindColumnSchema(),
-                    rowData: data,
-                    animateRows: true,
-                    enableRangeSelection: true,
-                    groupMultiAutoColumn: false, // setting it to false until we fix issue: 209
-                    groupUseEntireRow: false,
-                    floatingFilter: true,
-                    onGridReady: function () {
-                        //we do it twice as sometimes when the dataset is small columns that werent visible at all will become
-                        //visible and won't be autosized
-                        gridOptions.columnApi.autoSizeAllColumns();
-                        setTimeout(() => gridOptions.columnApi.autoSizeAllColumns(), 1);
-
-                        gridOptions.api.addEventListener("cellEditingStopped", () => {
-                        });
-
-                        gridOptions.api.addEventListener("newColumnsLoaded", function () {
-                            gridOptions.columnApi.autoSizeAllColumns();
-                        });
-                    }
-                };
+                var gridOptions = HelperAgGrid.getGroupedGridOptions(data);
                 var eGridDiv = document.getElementById("grid");
-                new Grid(eGridDiv, gridOptions);
-
-                let config: any = "NorthwindOrdersConfig.json";
-
-                //create Adaptable Blotter
-                let blotterOptions: IAdaptableBlotterOptions = {
-                    primaryKey: "OrderId",
-                    vendorGrid: gridOptions,
-                    userName: "Jonathan",
-                    blotterId: "Northwind Grouping",
-                    licenceKey: Helper.getdemolicencekey(),
-
-                }
-                this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(blotterOptions);
+                let grid = new Grid(eGridDiv, gridOptions);
+                // HelperAgGrid.startTickingDataagGrid(gridOptions);
+                let configUrl = 'src/configs/groupingconfig.json';
+                let blotterOptions: IAdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptions(gridOptions, "Grouping Demo", configUrl);
+                   this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(blotterOptions);
 
             })
     }

@@ -1,4 +1,6 @@
 import * as Helper from './Helper';
+import { GridOptions } from 'ag-grid-community/dist/lib/entities/gridOptions';
+import { IAdaptableBlotterOptions } from 'adaptableblotter/types';
 
 var currencyFormatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -111,22 +113,100 @@ export function startTickingDataagGrid(gridOptions: any) {
 
 }
 
+export function getGridOptions(data: any): GridOptions{
+let gridOptions: GridOptions = {
+    columnDefs: getBasicNorthwindColumnSchema(),
+    rowData: data,
+    animateRows: true,
+    enableRangeSelection: true,
+    floatingFilter: true,
+      sideBar: true,
+    columnTypes: { // not required but helpful for column data type identification
+        abColDefNumber: {},
+        abColDefString: {},
+        abColDefBoolean: {},
+        abColDefDate: {},
+        abColDefObject: {},
+    },
+    onGridReady: function () {
+        //we do it twice as sometimes when the dataset is small columns that werent visible at all will become
+        //visible and won't be autosized
+        gridOptions.columnApi.autoSizeAllColumns();
+        setTimeout(() => gridOptions.columnApi.autoSizeAllColumns(), 1);
+
+        gridOptions.api.addEventListener("cellEditingStopped", () => {
+        });
+
+        gridOptions.api.addEventListener("newColumnsLoaded", function () {
+            gridOptions.columnApi.autoSizeAllColumns();
+        });
+    }
+};
+return gridOptions;
+}
+export function getGroupedGridOptions(data: any): GridOptions{
+let gridOptions: GridOptions = {
+    columnDefs: getGroupingNorthwindColumnSchema(),
+    rowData: data,
+    animateRows: true,
+    enableRangeSelection: true,
+    floatingFilter: true,
+      sideBar: true,
+    columnTypes: { // not required but helpful for column data type identification
+        abColDefNumber: {},
+        abColDefString: {},
+        abColDefBoolean: {},
+        abColDefDate: {},
+        abColDefObject: {},
+    },
+    onGridReady: function () {
+        //we do it twice as sometimes when the dataset is small columns that werent visible at all will become
+        //visible and won't be autosized
+        gridOptions.columnApi.autoSizeAllColumns();
+        setTimeout(() => gridOptions.columnApi.autoSizeAllColumns(), 1);
+
+        gridOptions.api.addEventListener("cellEditingStopped", () => {
+        });
+
+        gridOptions.api.addEventListener("newColumnsLoaded", function () {
+            gridOptions.columnApi.autoSizeAllColumns();
+        });
+    }
+};
+return gridOptions;
+}
+
+export function getAadaptableBlotterOptions(gridOptions: GridOptions, blotterId: string, configUrl: string): IAdaptableBlotterOptions{
+let blotterOptions: IAdaptableBlotterOptions = {
+    primaryKey: "OrderId",
+    vendorGrid: gridOptions,
+    userName: "Jonathan",
+    blotterId: blotterId,
+    licenceKey: Helper.getdemolicencekey(),
+    predefinedConfig: configUrl,
+    layoutOptions: {
+        includeVendorStateInLayouts: true,
+        autoSaveLayouts: true,
+      },
+}
+return blotterOptions;
+}
 
 export function getBasicNorthwindColumnSchema(): any[] {
     var schema = []
     schema.push({ headerName: "Order Id", field: "OrderId", editable: true, cellClass: 'number-cell', filter: true, sortable: true, type: 'abColDefNumber', });
-    schema.push({ headerName: "Customer Reference", field: "CustomerReference", editable: true, filter: true, sortable: true, type: 'abColDefString', });
-    schema.push({ headerName: "Company Name", field: "CompanyName", editable: true, filter: true, sortable: true, type: 'abColDefString', });
-    schema.push({ headerName: "Contact Name", field: "ContactName", filter: true, sortable: true, type: 'abColDefString', });
+    schema.push({ headerName: "Cust. Ref", field: "CustomerReference", editable: true, filter: true, sortable: true, type: 'abColDefString', });
+    schema.push({ headerName: "Company", field: "CompanyName", editable: true, filter: true, sortable: true, enableRowGroup: true, type: 'abColDefString', });
+    schema.push({ headerName: "Contact", field: "ContactName", filter: true, sortable: true, enableRowGroup: true, type: 'abColDefString', });
     schema.push({ headerName: "Order Date", field: "OrderDate", editable: true, cellEditorParams: { useFormatter: true }, valueParser: dateParseragGrid, valueFormatter: shortDateFormatteragGrid, filter: true, sortable: true, type: 'abColDefDate', });
-    schema.push({ headerName: "Required Date", field: "RequiredDate", editable: true, cellEditorParams: { useFormatter: true }, valueParser: dateParseragGrid, valueFormatter: shortDateFormatteragGrid, filter: true, sortable: true, type: 'abColDefDate', });
-  schema.push({ headerName: "Invoiced Cost", field: "InvoicedCost", cellClass: 'number-cell', cellRenderer: currencyRendereragGrid, editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "Rqd Date", field: "RequiredDate", editable: true, cellEditorParams: { useFormatter: true }, valueParser: dateParseragGrid, valueFormatter: shortDateFormatteragGrid, filter: true, sortable: true, type: 'abColDefDate', });
+    schema.push({ headerName: "Invoiced", field: "InvoicedCost", cellClass: 'number-cell', cellRenderer: currencyRendereragGrid, editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
     schema.push({ headerName: "Order Cost", field: "OrderCost", cellClass: 'number-cell', cellRenderer: currencyRendereragGrid, editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
     schema.push({ headerName: "Package Cost", field: "PackageCost", cellClass: 'number-cell', cellRenderer: currencyRendereragGrid, editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
     schema.push({ headerName: "Item Cost", field: "ItemCost", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
     schema.push({ headerName: "Item Count", field: "ItemCount", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
     schema.push({ headerName: "Change Last Order", field: "ChangeLastOrder", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-    schema.push({ headerName: "Employee", field: "Employee", filter: 'text', editable: true, sortable: true, type: 'abColDefString', });
+    schema.push({ headerName: "Employee", field: "Employee", filter: 'text', editable: true, sortable: true, enableRowGroup: true, type: 'abColDefString', });
     schema.push({ headerName: "Ship Via", field: "ShipVia", filter: 'text', editable: true, sortable: true, type: 'abColDefString', });
     schema.push({ headerName: "Freight", field: "Freight", cellClass: 'number-cell', cellRenderer: currencyRendereragGrid, editable: true, sortable: true, type: 'abColDefNumber', });
     schema.push({ headerName: "Ship Name", field: "ShipName", columnGroupShow: 'open', editable: true, sortable: true, type: 'abColDefString', });
@@ -135,9 +215,6 @@ export function getBasicNorthwindColumnSchema(): any[] {
     schema.push({ headerName: "Ship Postal Code", field: "ShipPostalCode", sortable: true, type: 'abColDefString', });
     schema.push({ headerName: "Ship Country", field: "ShipCountry", filter: 'text', editable: true, sortable: true, type: 'abColDefString', });
     schema.push({ headerName: "Shipped Date", field: "ShippedDate", editable: true, cellEditorParams: { useFormatter: true }, valueParser: dateParseragGrid, valueFormatter: shortDateFormatteragGrid, filter: true, sortable: true, type: 'abColDefDate', });
-    schema.push({ headerName: "Arrive On Time", field: "ArriveOnTime", editable: true, cellRenderer: (params:any) => {
-        return `<input type='checkbox' ${params.value == 'TRUE'? 'checked' : ''} />`;
-    }, filter: true, sortable: true, type: 'abColDefBoolean', });
     return schema;
 }
 
@@ -164,7 +241,7 @@ export function getGroupingNorthwindColumnSchema(): any[] {
             { headerName: "Required Date", field: "RequiredDate", editable: true, columnGroupShow: 'closed', cellEditorParams: { useFormatter: true }, valueParser: dateParseragGrid, valueFormatter: shortDateFormatteragGrid, filter: true, sortable: true },
             { headerName: "Shipped Date", field: "ShippedDate", editable: true, columnGroupShow: 'closed', cellEditorParams: { useFormatter: true }, valueParser: dateParseragGrid, valueFormatter: shortDateFormatteragGrid, filter: true, sortable: true },
             { headerName: "OrderCost", field: "OrderCost", cellClass: 'number-cell', cellRenderer: currencyRendereragGrid, columnGroupShow: 'closed', editable: true, enableValue: true, filter: true, sortable: true },
-           { headerName: "Package Cost", field: "PackageCost", cellClass: 'number-cell', cellRenderer: currencyRendereragGrid, editable: true, filter: true, sortable: true, type: 'abColDefNumber', },
+            { headerName: "Package Cost", field: "PackageCost", cellClass: 'number-cell', cellRenderer: currencyRendereragGrid, editable: true, filter: true, sortable: true, type: 'abColDefNumber', },
         ]
     })
     schema.push({ headerName: "Item Cost", field: "ItemCount", cellClass: 'number-cell', columnGroupShow: 'closed', editable: true, enableValue: true, filter: true, sortable: true });
