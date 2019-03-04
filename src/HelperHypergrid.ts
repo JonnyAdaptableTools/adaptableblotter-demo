@@ -62,7 +62,7 @@ export function setNorthwindHyperGridProperties(grid: any): void {
     grid.addProperties({ renderFalsy: true });
     grid.addProperties({ editOnKeydown: false });
 
-    FormatColumns([10, 11, 12], behavior, "shortDateFormat")
+    FormatColumns([11, 12, 13], behavior, "shortDateFormat")
 
-    FormatColumns([5, 7, 9], behavior, "fourDPFormat")
+    FormatColumns([5, 7, 9, 10], behavior, "fourDPFormat")
 }

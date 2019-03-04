@@ -120,11 +120,12 @@ export function getBasicNorthwindColumnSchema(): any[] {
     schema.push({ headerName: "Contact Name", field: "ContactName", filter: true, sortable: true, type: 'abColDefString', });
     schema.push({ headerName: "Order Date", field: "OrderDate", editable: true, cellEditorParams: { useFormatter: true }, valueParser: dateParseragGrid, valueFormatter: shortDateFormatteragGrid, filter: true, sortable: true, type: 'abColDefDate', });
     schema.push({ headerName: "Required Date", field: "RequiredDate", editable: true, cellEditorParams: { useFormatter: true }, valueParser: dateParseragGrid, valueFormatter: shortDateFormatteragGrid, filter: true, sortable: true, type: 'abColDefDate', });
-    schema.push({ headerName: "Invoiced Cost", field: "InvoicedCost", cellClass: 'number-cell', cellRenderer: currencyRendereragGrid, editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+  schema.push({ headerName: "Invoiced Cost", field: "InvoicedCost", cellClass: 'number-cell', cellRenderer: currencyRendereragGrid, editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
     schema.push({ headerName: "Order Cost", field: "OrderCost", cellClass: 'number-cell', cellRenderer: currencyRendereragGrid, editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "Package Cost", field: "PackageCost", cellClass: 'number-cell', cellRenderer: currencyRendereragGrid, editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
     schema.push({ headerName: "Item Cost", field: "ItemCost", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
     schema.push({ headerName: "Item Count", field: "ItemCount", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-    schema.push({ headerName: "Change On Order", field: "ChangeOnOrder", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "Change Last Order", field: "ChangeLastOrder", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
     schema.push({ headerName: "Employee", field: "Employee", filter: 'text', editable: true, sortable: true, type: 'abColDefString', });
     schema.push({ headerName: "Ship Via", field: "ShipVia", filter: 'text', editable: true, sortable: true, type: 'abColDefString', });
     schema.push({ headerName: "Freight", field: "Freight", cellClass: 'number-cell', cellRenderer: currencyRendereragGrid, editable: true, sortable: true, type: 'abColDefNumber', });
@@ -134,6 +135,9 @@ export function getBasicNorthwindColumnSchema(): any[] {
     schema.push({ headerName: "Ship Postal Code", field: "ShipPostalCode", sortable: true, type: 'abColDefString', });
     schema.push({ headerName: "Ship Country", field: "ShipCountry", filter: 'text', editable: true, sortable: true, type: 'abColDefString', });
     schema.push({ headerName: "Shipped Date", field: "ShippedDate", editable: true, cellEditorParams: { useFormatter: true }, valueParser: dateParseragGrid, valueFormatter: shortDateFormatteragGrid, filter: true, sortable: true, type: 'abColDefDate', });
+    schema.push({ headerName: "Arrive On Time", field: "ArriveOnTime", editable: true, cellRenderer: (params:any) => {
+        return `<input type='checkbox' ${params.value == 'TRUE'? 'checked' : ''} />`;
+    }, filter: true, sortable: true, type: 'abColDefBoolean', });
     return schema;
 }
 
@@ -160,6 +164,7 @@ export function getGroupingNorthwindColumnSchema(): any[] {
             { headerName: "Required Date", field: "RequiredDate", editable: true, columnGroupShow: 'closed', cellEditorParams: { useFormatter: true }, valueParser: dateParseragGrid, valueFormatter: shortDateFormatteragGrid, filter: true, sortable: true },
             { headerName: "Shipped Date", field: "ShippedDate", editable: true, columnGroupShow: 'closed', cellEditorParams: { useFormatter: true }, valueParser: dateParseragGrid, valueFormatter: shortDateFormatteragGrid, filter: true, sortable: true },
             { headerName: "OrderCost", field: "OrderCost", cellClass: 'number-cell', cellRenderer: currencyRendereragGrid, columnGroupShow: 'closed', editable: true, enableValue: true, filter: true, sortable: true },
+           { headerName: "Package Cost", field: "PackageCost", cellClass: 'number-cell', cellRenderer: currencyRendereragGrid, editable: true, filter: true, sortable: true, type: 'abColDefNumber', },
         ]
     })
     schema.push({ headerName: "Item Cost", field: "ItemCount", cellClass: 'number-cell', columnGroupShow: 'closed', editable: true, enableValue: true, filter: true, sortable: true });
@@ -167,6 +172,7 @@ export function getGroupingNorthwindColumnSchema(): any[] {
     schema.push({ headerName: "Employee", field: "Employee", filter: 'text', editable: true, enableRowGroup: true, hide: true, sortable: true });
     schema.push({ headerName: "Ship Via", field: "ShipVia", filter: 'text', editable: true, enableRowGroup: true, hide: true, sortable: true });
     schema.push({ headerName: "Freight", field: "Freight", cellClass: 'number-cell', cellRenderer: currencyRendereragGrid, editable: true, enableValue: true, sortable: true });
+    schema.push({ headerName: "Arrived On Time", field: "ArrivedOnTime", editable: true, cellEditorParams: { useFormatter: true }, valueParser: dateParseragGrid, valueFormatter: shortDateFormatteragGrid, filter: true, sortable: true, type: 'abColDefBoolean', });
 
     // do a column group for shipping
     schema.push({
