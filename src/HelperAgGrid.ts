@@ -237,9 +237,9 @@ export function getGroupingNorthwindColumnSchema(): any[] {
 
 export function getWorldStatsSchema(): any[] {
     var schema = []
-    schema.push({ headerName: "Country", field: "Country", editable: true, filter: true, sortable: true, type: 'abColDefString', });
-    schema.push({ headerName: "Code", field: "Code", editable: true, filter: true, sortable: true, enableRowGroup: true, type: 'abColDefString', });
-    schema.push({ headerName: "Region", field: "Region", filter: true, sortable: true, enableRowGroup: true, type: 'abColDefString', });
+     schema.push({ headerName: "Country", field: "Country", editable: true, filter: true, sortable: true, type: 'abColDefString', });
+     schema.push({ headerName: "Code", field: "Code", editable: true, filter: true, sortable: true, enableRowGroup: true, type: 'abColDefString', });
+     schema.push({ headerName: "Region", field: "Region", filter: true, sortable: true, enableRowGroup: true, type: 'abColDefString', });
      schema.push({ headerName: "Population Total", field: "Population Total", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
      schema.push({ headerName: "Population Density", field: "Population Density", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
      schema.push({ headerName: "Population Growth (%)", field: "Population Growth (%)", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
@@ -271,7 +271,7 @@ export function getWorldStatsSchema(): any[] {
      schema.push({ headerName: "Mobile Phones", field: "Mobile Phones", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
      schema.push({ headerName: "Armed Forces (% labor force)", field: "Armed Forces (% labor force)", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
      schema.push({ headerName: "Armed Forces Total", field: "Armed Forces Total", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-   
+
 
       return schema;
 }
