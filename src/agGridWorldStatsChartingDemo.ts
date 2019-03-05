@@ -24,7 +24,7 @@ export class agGridWorldStatsChartingDemo {
 
             let json = {
                 "Theme": {
-                    "CurrentTheme": "Dark Theme"
+                    "CurrentTheme": "Light Theme"
                 },
                 "Dashboard": {
                     "VisibleToolbars": [
@@ -46,13 +46,13 @@ export class agGridWorldStatsChartingDemo {
                     "CurrentChartName": "",
                     "ChartDefinitions": [
                         {
-                            "Description": "By Country",
+                            "Description": "For Most Populated Countries",
                             "Name": "Population Total",
-                            "XAxisColumnId": "Country",
+                            "XAxisColumnId": "Code",
                             "XAxisExpression": {
-                                "ColumnValueExpressions": [],
-                                "FilterExpressions": [],
-                                "RangeExpressions": []
+                                "ColumnValueExpressions": [{}],
+                                "FilterExpressions": [{}],
+                                "RangeExpressions": [{}]
                             },
                             "YAxisColumnIds": [
                                 "Population Total"
@@ -62,13 +62,13 @@ export class agGridWorldStatsChartingDemo {
                                 "CalloutsInterval": 1,
                                 "CalloutsType": "None",
                                 "ChartType": "Column",
-                                "CrosshairAnnotationEnabled": false,
-                                "CrosshairDisplayMode": "None",
-                                "CrosshairSnapToData": false,
+                                "CrosshairAnnotationEnabled": true,
+                                "CrosshairDisplayMode": "Both",
+                                "CrosshairSnapToData": true,
                                 "EnableCategoryHighlighting": false,
                                 "EnableFinalValueAnnotations": false,
                                 "EnableItemHighlighting": false,
-                                "EnableSeriesHighlighting": false,
+                                "EnableSeriesHighlighting": true,
                                 "EnableTransitions": false,
                                 "MarkerType": "Default",
                                 "SeriesThickness": 1,
@@ -82,9 +82,10 @@ export class agGridWorldStatsChartingDemo {
                                 "XAxisLabelLocation": "OutsideBottom",
                                 "XAxisLabelVisibility": "visible",
                                 "XAxisOverlap": 1,
-                                "XAxisTitle": "",
+                                "XAxisTitle": " ",
                                 "XAxisTitleColor": "",
                                 "YAxisInverted": false,
+                                "XAxisIntervalValue": 1,
                                 "YAxisIsLogarithmic": false,
                                 "YAxisLabelColor": "",
                                 "YAxisLabelLocation": "OutsideRight",
@@ -97,11 +98,11 @@ export class agGridWorldStatsChartingDemo {
                         {
                             "Description": "By Country",
                             "Name": "Population Stats",
-                            "XAxisColumnId": "Country",
+                            "XAxisColumnId": "Code",
                             "XAxisExpression": {
-                                "ColumnValueExpressions": [],
-                                "FilterExpressions": [],
-                                "RangeExpressions": []
+                                "ColumnValueExpressions": [{}],
+                                "FilterExpressions": [{}],
+                                "RangeExpressions": [{}]
                             },
                             "YAxisColumnIds": [
                                 "Population Urban (%)",
@@ -122,7 +123,7 @@ export class agGridWorldStatsChartingDemo {
                                 "EnableItemHighlighting": false,
                                 "EnableSeriesHighlighting": false,
                                 "EnableTransitions": false,
-                                "MarkerType": "Default",
+                                "MarkerType": "Circle",
                                 "SeriesThickness": 1,
                                 "SubTitleAlignment": "Center",
                                 "TitleAlignment": "Center",
@@ -130,11 +131,12 @@ export class agGridWorldStatsChartingDemo {
                                 "XAxisAngle": "Horizontal",
                                 "XAxisGap": 0.5,
                                 "XAxisInverted": false,
+                                "XAxisIntervalValue": 1,
                                 "XAxisLabelColor": "",
                                 "XAxisLabelLocation": "OutsideBottom",
                                 "XAxisLabelVisibility": "visible",
                                 "XAxisOverlap": 1,
-                                "XAxisTitle": "",
+                                "XAxisTitle": " ",
                                 "XAxisTitleColor": "",
                                 "YAxisInverted": false,
                                 "YAxisIsLogarithmic": false,
@@ -147,13 +149,13 @@ export class agGridWorldStatsChartingDemo {
                             }
                         },
                         {
-                            "Description": "GDP & Debt per Capita by country",
+                            "Description": "GDP vs. Debt per Capita for Biggest Countries",
                             "Name": "Global Finances",
-                            "XAxisColumnId": "Country",
+                            "XAxisColumnId": "Code",
                             "XAxisExpression": {
-                                "ColumnValueExpressions": [],
-                                "FilterExpressions": [],
-                                "RangeExpressions": []
+                                "ColumnValueExpressions": [{}],
+                                "FilterExpressions": [{}],
+                                "RangeExpressions": [{}]
                             },
                             "YAxisColumnIds": [
                                 "GDP per Capita",
@@ -163,11 +165,11 @@ export class agGridWorldStatsChartingDemo {
                             "ChartProperties": {
                                 "CalloutsInterval": 1,
                                 "CalloutsType": "None",
-                                "ChartType": "Line",
+                                "ChartType": "Column",
                                 "CrosshairAnnotationEnabled": false,
                                 "CrosshairDisplayMode": "None",
                                 "CrosshairSnapToData": false,
-                                "EnableCategoryHighlighting": false,
+                                "EnableCategoryHighlighting": true,
                                 "EnableFinalValueAnnotations": false,
                                 "EnableItemHighlighting": false,
                                 "EnableSeriesHighlighting": false,
@@ -176,18 +178,19 @@ export class agGridWorldStatsChartingDemo {
                                 "SeriesThickness": 1,
                                 "SubTitleAlignment": "Center",
                                 "TitleAlignment": "Center",
-                                "ToolTipType": "Item",
+                                "ToolTipType": "Category",
                                 "XAxisAngle": "Horizontal",
                                 "XAxisGap": 0.5,
                                 "XAxisInverted": false,
+                                "XAxisIntervalValue": 1,
                                 "XAxisLabelColor": "",
                                 "XAxisLabelLocation": "OutsideBottom",
                                 "XAxisLabelVisibility": "visible",
-                                "XAxisOverlap": 1,
-                                "XAxisTitle": "",
+                                "XAxisOverlap": 0,
+                                "XAxisTitle": " ",
                                 "XAxisTitleColor": "",
                                 "YAxisInverted": false,
-                                "YAxisIsLogarithmic": false,
+                                "YAxisIsLogarithmic": true,
                                 "YAxisLabelColor": "",
                                 "YAxisLabelLocation": "OutsideRight",
                                 "YAxisLabelScale": "Linear",
@@ -197,44 +200,46 @@ export class agGridWorldStatsChartingDemo {
                             }
                         },
                         {
-                            "Description": "Oil, Nuclear, Renewable, Coal and Water",
-                            "Name": "Electricity Production (Europe)",
-                            "XAxisColumnId": "Country",
+                            "Description": "By Source: Oil, Nuclear, Renewable, Coal and Water",
+                            "Name": "Electricity Production",
+                            "XAxisColumnId": "Code",
                             "XAxisExpression": {
                                 "ColumnValueExpressions": [
                                     {
                                         "ColumnId": "Country",
                                         "ColumnDisplayValues": [
-                                            "Germany",
-                                            "France",
-                                            "Austria",
-                                            "Belgium",
-                                            "Italy",
-                                            "Netherlands",
-                                            "Norway",
                                             "Poland",
-                                            "Russian",
-                                            "Sweden",
+                                            "Australia",
                                             "Spain",
-                                            "Switzerland",
-                                            "Turkey",
-                                            "United Kingdom"
+                                            "Mexico",
+                                            "Italy",
+                                            "United Kingdom",
+                                            "Brazil",
+                                            "France",
+                                            "Germany",
+                                            "Canada",
+                                            "Japan",
+                                            "India",
+                                            "Russian",
+                                            "United States",
+                                            "China",
                                         ],
                                         "ColumnRawValues": [
-                                            "Germany",
-                                            "France",
-                                            "Austria",
-                                            "Belgium",
-                                            "Italy",
-                                            "Netherlands",
-                                            "Norway",
                                             "Poland",
-                                            "Russian",
-                                            "Sweden",
+                                            "Australia",
                                             "Spain",
-                                            "Switzerland",
-                                            "Turkey",
-                                            "United Kingdom"
+                                            "Mexico",
+                                            "Italy",
+                                            "United Kingdom",
+                                            "Brazil",
+                                            "France",
+                                            "Germany",
+                                            "Canada",
+                                            "Japan",
+                                            "India",
+                                            "Russian",
+                                            "United States",
+                                            "China",
                                         ]
                                     }
                                 ],
@@ -243,8 +248,8 @@ export class agGridWorldStatsChartingDemo {
                             },
                             "YAxisColumnIds": [
                                 "Electricity Oil",
-                                "Electricity Nuclear",
                                 "Electricity Renewable",
+                                "Electricity Nuclear",
                                 "Electricity Coal (kWh)",
                                 "Electricity Water"
                             ],
@@ -252,11 +257,11 @@ export class agGridWorldStatsChartingDemo {
                             "ChartProperties": {
                                 "CalloutsInterval": 1,
                                 "CalloutsType": "None",
-                                "ChartType": "Line",
+                                "ChartType": "Column",
                                 "CrosshairAnnotationEnabled": false,
                                 "CrosshairDisplayMode": "None",
                                 "CrosshairSnapToData": false,
-                                "EnableCategoryHighlighting": false,
+                                "EnableCategoryHighlighting": true,
                                 "EnableFinalValueAnnotations": false,
                                 "EnableItemHighlighting": false,
                                 "EnableSeriesHighlighting": false,
@@ -269,11 +274,12 @@ export class agGridWorldStatsChartingDemo {
                                 "XAxisAngle": "Horizontal",
                                 "XAxisGap": 0.5,
                                 "XAxisInverted": false,
+                                "XAxisIntervalValue": 1,
                                 "XAxisLabelColor": "",
                                 "XAxisLabelLocation": "OutsideBottom",
                                 "XAxisLabelVisibility": "visible",
-                                "XAxisOverlap": 1,
-                                "XAxisTitle": "",
+                                "XAxisOverlap": 0,
+                                "XAxisTitle": " ",
                                 "XAxisTitleColor": "",
                                 "YAxisInverted": false,
                                 "YAxisIsLogarithmic": false,
@@ -281,7 +287,7 @@ export class agGridWorldStatsChartingDemo {
                                 "YAxisLabelLocation": "OutsideRight",
                                 "YAxisLabelScale": "Linear",
                                 "YAxisLabelVisibility": "visible",
-                                "YAxisTitle": "",
+                                "YAxisTitle": " Electricity (Billion of kWh)",
                                 "YAxisTitleColor": ""
                             }
                         }
