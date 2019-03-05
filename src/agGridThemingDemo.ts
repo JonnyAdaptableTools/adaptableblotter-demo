@@ -12,12 +12,13 @@ export class agGridThemingDemo {
         let data: any[]
         Helper.getDataFromJson("NorthwindOrders.json").then(json => data = json)
             .then(data => Helper.MakeAllRecordsColumnsDateProperDates(data)).then(() => {
-                var gridOptions = HelperAgGrid.getGridOptions(data);
+                var columndefs = HelperAgGrid.getBasicNorthwindColumnSchema();
+                var gridOptions = HelperAgGrid.getGridOptions(columndefs, data);
                 var eGridDiv = document.getElementById("grid");
                 let grid = new Grid(eGridDiv, gridOptions);
                 // HelperAgGrid.startTickingDataagGrid(gridOptions);
                 let configUrl = 'src/configs/themeconfig.json';
-                let blotterOptions: IAdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptions(gridOptions,"Theming Demo",  configUrl);
+                let blotterOptions: IAdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptions(gridOptions,"OrderId", "Theming Demo",  configUrl);
                 this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(blotterOptions);
             })
 

@@ -34,7 +34,7 @@ export class HypergridChartingDemo  {
                     userName: "Jonathan",
                     blotterId: "Charting Demo",
                     licenceKey: Helper.getdemolicencekey(),
-                    predefinedConfig: json
+                    predefinedConfig:  'src/configs/northwindcharts.json'
                 }
 
                 this.adaptableblotter = new (<any>window).adaptableblotterhypergrid.AdaptableBlotter(blotterOptions);
@@ -52,27 +52,7 @@ export class HypergridChartingDemo  {
               })
     
 
-    let json = {
-       
-        "Dashboard": {
-            "VisibleToolbars": [
-                "AdvancedSearch",
-                "Layout",
-                "QuickSearch",
-                "Chart"
-            ],
-            "VisibleButtons": [
-                "About",
-                "Dashboard",
-                "QuickSearch",
-                "SmartEdit",
-                "ColumnChooser",
-                "BulkUpdate"
-            ],
-            "Zoom": "1"
-        }
-    }
-
+   
 }
 
 }

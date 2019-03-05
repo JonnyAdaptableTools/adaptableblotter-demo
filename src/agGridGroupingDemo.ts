@@ -10,12 +10,13 @@ export class agGridGroupingDemo {
         let data: any[]
         Helper.getDataFromJson("NorthwindOrders.json").then(json => data = json)
             .then(data => Helper.MakeAllRecordsColumnsDateProperDates(data)).then(() => {
-                var gridOptions = HelperAgGrid.getGroupedGridOptions(data);
+                var columndefs = HelperAgGrid.getGroupingNorthwindColumnSchema();
+                var gridOptions = HelperAgGrid.getGridOptions(columndefs, data);
                 var eGridDiv = document.getElementById("grid");
                 let grid = new Grid(eGridDiv, gridOptions);
                 // HelperAgGrid.startTickingDataagGrid(gridOptions);
                 let configUrl = 'src/configs/groupingconfig.json';
-                let blotterOptions: IAdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptions(gridOptions, "Grouping Demo", configUrl);
+                let blotterOptions: IAdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptions(gridOptions,"OrderId",  "Grouping Demo", configUrl);
                    this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(blotterOptions);
 
             })
