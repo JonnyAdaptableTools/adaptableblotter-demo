@@ -133,6 +133,7 @@ module.exports = {
         new CopyWebpackPlugin([{ from: 'DemoPage/*', to: '', flatten: true }]),
         new CopyWebpackPlugin([{ from: 'DataSets/Json/*.json', to: '', flatten: true }]),
         new CopyWebpackPlugin([{ from: 'src/DataSets/**/*.json', to: '', flatten: true }]),
+        new CopyWebpackPlugin([{ from: 'src/configs/*.json', to: '', flatten: true }]),
         new CopyWebpackPlugin([{ from: 'app*.json', to: '', flatten: true }])
     ],
     module: {
