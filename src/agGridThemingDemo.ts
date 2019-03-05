@@ -18,13 +18,77 @@ export class agGridThemingDemo {
                 let grid = new Grid(eGridDiv, gridOptions);
                 // HelperAgGrid.startTickingDataagGrid(gridOptions);
                 let configUrl = 'src/configs/themeconfig.json';
-                let blotterOptions: IAdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptions(gridOptions,"OrderId", "Theming Demo",  configUrl);
+                let blotterOptions: IAdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptions(gridOptions, "OrderId", "Theming Demo", json);
                 this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(blotterOptions);
             })
 
 
-       
+        let json = {
+            "Theme": {
+                "CurrentTheme": "Dark Theme"
+            },
+            "Dashboard": {
+                "VisibleToolbars": [
+                    "SmartEdit",
+                    "Export",
+                    "BulkUpdate"
+                ],
+                "VisibleButtons": [
+                    "About",
+                    "Dashboard",
+                    "QuickSearch",
+                    "ColumnChooser",
+                    "AdvancedSearch"
+                ],
+                "Zoom": "0.9",
+                "DashboardVisibility": "Minimised",
+                "ShowSystemStatusButton": false
+            },
+            "Layout": {
+                "CurrentLayout": "Orders View",
+                "Layouts": [
+                    {
+                        "Columns": [
+                            "OrderId",
+                            "OrderDate",
+                            "CustomerReference",
+                            "CompanyName",
+                            "ContactName",
+                            "RequiredDate",
+                            "InvoicedCost",
+                            "OrderCost",
+                            "PackageCost",
+                            "ItemCost",
+                            "ItemCount",
+                            "ChangeLastOrder"
+                        ],
+                        "GridSorts": [],
+                        "Name": "Orders View"
+                    },
+                    {
+                        "Columns": [
+                            "OrderId",
+                            "ShipVia",
+                            "Freight",
+                            "ShipName",
+                            "ShipAddress",
+                            "ShipCity",
+                            "ShipPostalCode",
+                            "ShipCountry",
+                            "ShippedDate",
+                            "CustomerReference"
+                        ],
+                        "GridSorts": [
+                            {
+                                "Column": "ShipName",
+                                "SortOrder": "Ascending"
+                            }
+                        ],
+                        "Name": "Shipping View"
+                    }
+                ]
+            }
 
+        }
     }
-
 }

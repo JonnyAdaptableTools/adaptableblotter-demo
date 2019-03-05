@@ -145,14 +145,14 @@ let gridOptions: GridOptions = {
 return gridOptions;
 }
 
-export function getAadaptableBlotterOptions(gridOptions: GridOptions, pk: string,  blotterId: string, configUrl: string): IAdaptableBlotterOptions{
+export function getAadaptableBlotterOptions(gridOptions: GridOptions, pk: string,  blotterId: string, config: any): IAdaptableBlotterOptions{
 let blotterOptions: IAdaptableBlotterOptions = {
     primaryKey: pk,
     vendorGrid: gridOptions,
     userName: "Jonathan",
     blotterId: blotterId,
     licenceKey: Helper.getdemolicencekey(),
-    predefinedConfig: configUrl,
+    predefinedConfig: config,
     layoutOptions: {
         includeVendorStateInLayouts: true,
         autoSaveLayouts: true,

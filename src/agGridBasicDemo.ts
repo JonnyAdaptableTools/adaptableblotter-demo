@@ -18,10 +18,12 @@ export class agGridBasicDemo {
                 var eGridDiv = document.getElementById("grid");
                 let grid = new Grid(eGridDiv, gridOptions);
                 // HelperAgGrid.startTickingDataagGrid(gridOptions);
-                let configUrl = 'src/configs/basicconfig.json';
-                let blotterOptions: IAdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptions(gridOptions, "OrderId", "Blotter Demo", configUrl);
+              //  let configUrl = 'src/configs/basicconfig.json';
+                let blotterOptions: IAdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptions(gridOptions, "OrderId", "Blotter Demo", json);
                 this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(blotterOptions);
             })
+
+            let json={}
     }
 
 
