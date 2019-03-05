@@ -113,52 +113,56 @@ export function startTickingDataagGrid(gridOptions: any) {
 
 }
 
-export function getGridOptions(columndefs: any, data: any): GridOptions{
-let gridOptions: GridOptions = {
-    columnDefs: columndefs,
-    rowData: data,
-    animateRows: true,
-    enableRangeSelection: true,
-    floatingFilter: true,
-      sideBar: true,
-    columnTypes: { // not required but helpful for column data type identification
-        abColDefNumber: {},
-        abColDefString: {},
-        abColDefBoolean: {},
-        abColDefDate: {},
-        abColDefObject: {},
-    },
-    onGridReady: function () {
-        //we do it twice as sometimes when the dataset is small columns that werent visible at all will become
-        //visible and won't be autosized
-        gridOptions.columnApi.autoSizeAllColumns();
-        setTimeout(() => gridOptions.columnApi.autoSizeAllColumns(), 1);
-
-        gridOptions.api.addEventListener("cellEditingStopped", () => {
-        });
-
-        gridOptions.api.addEventListener("newColumnsLoaded", function () {
+export function getGridOptions(columndefs: any, data: any): GridOptions {
+    let gridOptions: GridOptions = {
+        columnDefs: columndefs,
+        rowData: data,
+        animateRows: true,
+        enableRangeSelection: true,
+        floatingFilter: true,
+        sideBar: true,
+        columnTypes: { // not required but helpful for column data type identification
+            abColDefNumber: {},
+            abColDefString: {},
+            abColDefBoolean: {},
+            abColDefDate: {},
+            abColDefObject: {},
+        },
+        onGridReady: function () {
+            //we do it twice as sometimes when the dataset is small columns that werent visible at all will become
+            //visible and won't be autosized
             gridOptions.columnApi.autoSizeAllColumns();
-        });
-    }
-};
-return gridOptions;
+            setTimeout(() => gridOptions.columnApi.autoSizeAllColumns(), 1);
+
+            gridOptions.api.addEventListener("cellEditingStopped", () => {
+            });
+
+            gridOptions.api.addEventListener("newColumnsLoaded", function () {
+                gridOptions.columnApi.autoSizeAllColumns();
+            });
+        }
+    };
+    return gridOptions;
 }
 
-export function getAadaptableBlotterOptions(gridOptions: GridOptions, pk: string,  blotterId: string, config: any): IAdaptableBlotterOptions{
-let blotterOptions: IAdaptableBlotterOptions = {
-    primaryKey: pk,
-    vendorGrid: gridOptions,
-    userName: "Jonathan",
-    blotterId: blotterId,
-    licenceKey: Helper.getdemolicencekey(),
-    predefinedConfig: config,
-    layoutOptions: {
-        includeVendorStateInLayouts: true,
-        autoSaveLayouts: true,
-      },
-}
-return blotterOptions;
+export function getAadaptableBlotterOptions(gridOptions: GridOptions, pk: string, blotterId: string, config: any): IAdaptableBlotterOptions {
+    let blotterOptions: IAdaptableBlotterOptions = {
+        primaryKey: pk,
+        vendorGrid: gridOptions,
+        userName: "Jonathan",
+        blotterId: blotterId,
+        licenceKey: Helper.getdemolicencekey(),
+        predefinedConfig: config,
+        layoutOptions: {
+            includeVendorStateInLayouts: true,
+            autoSaveLayouts: true,
+        },
+        chartOptions: {
+            displayOnStartUp: true,
+            showModal: false,
+        },
+    }
+    return blotterOptions;
 }
 
 export function getBasicNorthwindColumnSchema(): any[] {
@@ -240,40 +244,40 @@ export function getWorldStatsSchema(): any[] {
     schema.push({ headerName: "Country", field: "Country", editable: true, filter: true, sortable: true, type: 'abColDefString', });
     schema.push({ headerName: "Code", field: "Code", editable: true, filter: true, sortable: true, enableRowGroup: true, type: 'abColDefString', });
     schema.push({ headerName: "Region", field: "Region", filter: true, sortable: true, enableRowGroup: true, type: 'abColDefString', });
-     schema.push({ headerName: "Population Total", field: "Population Total", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-     schema.push({ headerName: "Population Density", field: "Population Density", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-     schema.push({ headerName: "Population Growth (%)", field: "Population Growth (%)", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-     schema.push({ headerName: "Population Urban (%)", field: "Population Urban (%)", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-     schema.push({ headerName: "Birth Rate", field: "Birth Rate", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-     schema.push({ headerName: "Death Rate", field: "Death Rate", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-     schema.push({ headerName: "Life Expectancy", field: "Life Expectancy", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-     schema.push({ headerName: "Land Area", field: "Land Area", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-     schema.push({ headerName: "GDP", field: "GDP", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-     schema.push({ headerName: "GDP per Capita", field: "GDP per Capita", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-     schema.push({ headerName: "GDP Growth (%)", field: "GDP Growth (%)", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-     schema.push({ headerName: "Trade (% of GDP)", field: "Trade (% of GDP)", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-     schema.push({ headerName: "Debt Total", field: "Debt Total", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-     schema.push({ headerName: "Debt per Capita", field: "Debt per Capita", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-     schema.push({ headerName: "Debt per GDP (%)", field: "Debt per GDP (%)", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-     schema.push({ headerName: "Internet Users", field: "Internet Users", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-     schema.push({ headerName: "Internet Rate", field: "Internet Rate", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-     schema.push({ headerName: "Electricity Production (kWh)", field: "Electricity Production (kWh)", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-     schema.push({ headerName: "Electricity Coal (kWh)", field: "Electricity Coal (kWh)", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-     schema.push({ headerName: "Electricity Water", field: "Electricity Water", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-     schema.push({ headerName: "Electricity Gas", field: "Electricity Gas", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-     schema.push({ headerName: "Electricity Nuclear", field: "Electricity Nuclear", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-     schema.push({ headerName: "Electricity Oil", field: "Electricity Oil", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-     schema.push({ headerName: "Electricity Renewable", field: "Electricity Renewable", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-     schema.push({ headerName: "Roads Density", field: "Roads Density", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-     schema.push({ headerName: "Air Passengers", field: "Air Passengers", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-     schema.push({ headerName: "Motor Vehicles", field: "Motor Vehicles", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-     schema.push({ headerName: "Hospital Beds", field: "Hospital Beds", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-     schema.push({ headerName: "Mobile Phones", field: "Mobile Phones", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-     schema.push({ headerName: "Armed Forces (% labor force)", field: "Armed Forces (% labor force)", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-     schema.push({ headerName: "Armed Forces Total", field: "Armed Forces Total", cellClass: 'number-cell',  editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-   
+    schema.push({ headerName: "Population Total", field: "Population Total", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "Population Density", field: "Population Density", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "Population Growth (%)", field: "Population Growth (%)", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "Population Urban (%)", field: "Population Urban (%)", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "Birth Rate", field: "Birth Rate", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "Death Rate", field: "Death Rate", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "Life Expectancy", field: "Life Expectancy", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "Land Area", field: "Land Area", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "GDP", field: "GDP", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "GDP per Capita", field: "GDP per Capita", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "GDP Growth (%)", field: "GDP Growth (%)", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "Trade (% of GDP)", field: "Trade (% of GDP)", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "Debt Total", field: "Debt Total", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "Debt per Capita", field: "Debt per Capita", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "Debt per GDP (%)", field: "Debt per GDP (%)", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "Internet Users", field: "Internet Users", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "Internet Rate", field: "Internet Rate", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "Electricity Production (kWh)", field: "Electricity Production (kWh)", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "Electricity Coal (kWh)", field: "Electricity Coal (kWh)", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "Electricity Water", field: "Electricity Water", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "Electricity Gas", field: "Electricity Gas", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "Electricity Nuclear", field: "Electricity Nuclear", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "Electricity Oil", field: "Electricity Oil", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "Electricity Renewable", field: "Electricity Renewable", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "Roads Density", field: "Roads Density", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "Air Passengers", field: "Air Passengers", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "Motor Vehicles", field: "Motor Vehicles", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "Hospital Beds", field: "Hospital Beds", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "Mobile Phones", field: "Mobile Phones", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "Armed Forces (% labor force)", field: "Armed Forces (% labor force)", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "Armed Forces Total", field: "Armed Forces Total", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
 
-      return schema;
+
+    return schema;
 }
 
 
