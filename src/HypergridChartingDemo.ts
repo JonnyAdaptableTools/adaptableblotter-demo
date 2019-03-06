@@ -34,7 +34,11 @@ export class HypergridChartingDemo {
                     userName: "Jonathan",
                     blotterId: "Charting Demo",
                     licenceKey: Helper.getdemolicencekey(),
-                    predefinedConfig: json
+                    predefinedConfig: json,
+                    chartOptions: {
+                        displayOnStartUp: true,
+                        showModal: false,
+                    },
                 }
 
                 this.adaptableblotter = new (<any>window).adaptableblotterhypergrid.AdaptableBlotter(blotterOptions);
