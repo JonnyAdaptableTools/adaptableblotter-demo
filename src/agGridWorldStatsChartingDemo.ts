@@ -55,7 +55,7 @@ export class agGridWorldStatsChartingDemo {
                                 "RangeExpressions": [{}]
                             },
                             "YAxisColumnIds": [
-                                "Population Total"
+                                "Population"
                             ],
                             "YAxisTotal": "Sum",
                             "ChartProperties": {
@@ -68,7 +68,7 @@ export class agGridWorldStatsChartingDemo {
                                 "EnableCategoryHighlighting": false,
                                 "EnableFinalValueAnnotations": false,
                                 "EnableItemHighlighting": false,
-                                "EnableSeriesHighlighting": true,
+                                "EnableSeriesHighlighting": false,
                                 "EnableTransitions": false,
                                 "MarkerType": "Default",
                                 "SeriesThickness": 1,
@@ -105,7 +105,7 @@ export class agGridWorldStatsChartingDemo {
                                 "RangeExpressions": [{}]
                             },
                             "YAxisColumnIds": [
-                                "Population Urban (%)",
+                                "Urbanization (%)",
                                 "Birth Rate",
                                 "Death Rate",
                                 "Life Expectancy"
@@ -144,12 +144,12 @@ export class agGridWorldStatsChartingDemo {
                                 "YAxisLabelLocation": "OutsideRight",
                                 "YAxisLabelScale": "Linear",
                                 "YAxisLabelVisibility": "visible",
-                                "YAxisTitle": "",
+                                "YAxisTitle": " ",
                                 "YAxisTitleColor": ""
                             }
                         },
                         {
-                            "Description": "GDP vs. Debt per Capita for Biggest Countries",
+                            "Description": "GDP per Capita (K) vs. Debt per Capita (K)",
                             "Name": "Global Finances",
                             "XAxisColumnId": "Code",
                             "XAxisExpression": {
@@ -158,8 +158,8 @@ export class agGridWorldStatsChartingDemo {
                                 "RangeExpressions": [{}]
                             },
                             "YAxisColumnIds": [
-                                "GDP per Capita",
-                                "Debt per Capita"
+                                "GDP per Capita (K)",
+                                "Debt per Capita (K)"
                             ],
                             "YAxisTotal": "Sum",
                             "ChartProperties": {
@@ -172,7 +172,7 @@ export class agGridWorldStatsChartingDemo {
                                 "EnableCategoryHighlighting": true,
                                 "EnableFinalValueAnnotations": false,
                                 "EnableItemHighlighting": false,
-                                "EnableSeriesHighlighting": false,
+                                "EnableSeriesHighlighting": true,
                                 "EnableTransitions": false,
                                 "MarkerType": "Default",
                                 "SeriesThickness": 1,
@@ -195,12 +195,12 @@ export class agGridWorldStatsChartingDemo {
                                 "YAxisLabelLocation": "OutsideRight",
                                 "YAxisLabelScale": "Linear",
                                 "YAxisLabelVisibility": "visible",
-                                "YAxisTitle": "",
+                                "YAxisTitle": " Thousands of USA Dollars",
                                 "YAxisTitleColor": ""
                             }
                         },
                         {
-                            "Description": "By Source: Oil, Nuclear, Renewable, Coal and Water",
+                            "Description": "By Source: Coal, Renewable, Nuclear, Water, and Gas",
                             "Name": "Electricity Production",
                             "XAxisColumnId": "Code",
                             "XAxisExpression": {
@@ -208,38 +208,38 @@ export class agGridWorldStatsChartingDemo {
                                     {
                                         "ColumnId": "Country",
                                         "ColumnDisplayValues": [
-                                            "Poland",
-                                            "Australia",
-                                            "Spain",
-                                            "Mexico",
-                                            "Italy",
-                                            "United Kingdom",
-                                            "Brazil",
-                                            "France",
-                                            "Germany",
-                                            "Canada",
-                                            "Japan",
-                                            "India",
-                                            "Russian",
                                             "United States",
                                             "China",
+                                            "Russian",
+                                            "India",
+                                            "Japan",
+                                            "Canada",
+                                            "Germany",
+                                            "France",
+                                            "Brazil",
+                                            "United Kingdom",
+                                            "Italy",
+                                            "Mexico",
+                                            "Spain",
+                                            "Australia",
+                                            "Poland",
                                         ],
                                         "ColumnRawValues": [
-                                            "Poland",
-                                            "Australia",
-                                            "Spain",
-                                            "Mexico",
-                                            "Italy",
-                                            "United Kingdom",
-                                            "Brazil",
-                                            "France",
-                                            "Germany",
-                                            "Canada",
-                                            "Japan",
-                                            "India",
-                                            "Russian",
                                             "United States",
                                             "China",
+                                            "Russian",
+                                            "India",
+                                            "Japan",
+                                            "Canada",
+                                            "Germany",
+                                            "France",
+                                            "Brazil",
+                                            "United Kingdom",
+                                            "Italy",
+                                            "Mexico",
+                                            "Spain",
+                                            "Australia",
+                                            "Poland",
                                         ]
                                     }
                                 ],
@@ -247,11 +247,11 @@ export class agGridWorldStatsChartingDemo {
                                 "RangeExpressions": [{}]
                             },
                             "YAxisColumnIds": [
-                                "Electricity Oil",
-                                "Electricity Renewable",
-                                "Electricity Nuclear",
-                                "Electricity Coal (kWh)",
-                                "Electricity Water"
+                                "Coal %",
+                                "Renewable %",
+                                "Nuclear %",
+                                "Water %",
+                                "Gas %"
                             ],
                             "YAxisTotal": "Sum",
                             "ChartProperties": {
@@ -270,9 +270,9 @@ export class agGridWorldStatsChartingDemo {
                                 "SeriesThickness": 1,
                                 "SubTitleAlignment": "Center",
                                 "TitleAlignment": "Center",
-                                "ToolTipType": "Item",
+                                "ToolTipType": "Category",
                                 "XAxisAngle": "Horizontal",
-                                "XAxisGap": 0.5,
+                                "XAxisGap": 0.25,
                                 "XAxisInverted": false,
                                 "XAxisIntervalValue": 1,
                                 "XAxisLabelColor": "",
@@ -287,7 +287,7 @@ export class agGridWorldStatsChartingDemo {
                                 "YAxisLabelLocation": "OutsideRight",
                                 "YAxisLabelScale": "Linear",
                                 "YAxisLabelVisibility": "visible",
-                                "YAxisTitle": " Electricity (Billion of kWh)",
+                                "YAxisTitle": " % of Electricity Production",
                                 "YAxisTitleColor": ""
                             }
                         }
