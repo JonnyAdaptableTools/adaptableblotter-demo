@@ -43,7 +43,7 @@ export class agGridWorldStatsChartingDemo {
                     "Zoom": "0.9"
                 },
                 "Chart": {
-                    "CurrentChartName": "",
+                    "CurrentChartName": "Population Stats",
                     "ChartDefinitions": [
                         {
                             "Description": "For Most Populated Countries",
