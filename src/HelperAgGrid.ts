@@ -185,7 +185,8 @@ export function getBasicNorthwindColumnSchema(): any[] {
     schema.push({ headerName: "Ship Name", field: "ShipName", columnGroupShow: 'open', editable: true, sortable: true, type: 'abColDefString', });
     schema.push({ headerName: "Ship Address", field: "ShipAddress", editable: true, sortable: true, type: 'abColDefString', });
     schema.push({ headerName: "Ship City", field: "ShipCity", sortable: true, type: 'abColDefString', });
-    schema.push({ headerName: "Ship Postal Code", field: "ShipPostalCode", sortable: true, type: 'abColDefString', });
+   // schema.push({ headerName: "Ship Postal Code", field: "ShipPostalCode", sortable: true, type: 'abColDefString', });
+    schema.push({ headerName: "Ship Region", field: "ShipRegion", filter: 'text', editable: true, sortable: true, type: 'abColDefString', });
     schema.push({ headerName: "Ship Country", field: "ShipCountry", filter: 'text', editable: true, sortable: true, type: 'abColDefString', });
     schema.push({ headerName: "Shipped Date", field: "ShippedDate", editable: true, cellEditorParams: { useFormatter: true }, valueParser: dateParseragGrid, valueFormatter: shortDateFormatteragGrid, filter: true, sortable: true, type: 'abColDefDate', });
     return schema;

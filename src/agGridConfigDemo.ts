@@ -104,7 +104,6 @@ export class agGridConfigDemo {
                             "ShipName",
                             "ShipAddress",
                             "ShipCity",
-                            "ShipPostalCode",
                             "ShipCountry",
                             "ShippedDate",
                             "CustomerReference"

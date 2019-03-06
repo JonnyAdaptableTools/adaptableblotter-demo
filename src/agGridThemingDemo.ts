@@ -73,7 +73,6 @@ export class agGridThemingDemo {
                             "ShipName",
                             "ShipAddress",
                             "ShipCity",
-                            "ShipPostalCode",
                             "ShipCountry",
                             "ShippedDate",
                             "CustomerReference"
