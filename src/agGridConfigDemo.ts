@@ -3,6 +3,8 @@ import { Grid } from 'ag-grid-community/dist/lib/grid';
 import { GridOptions } from 'ag-grid-community/dist/lib/entities/gridOptions';
 import * as HelperAgGrid from "./HelperAgGrid"
 import { IAdaptableBlotter, IAdaptableBlotterOptions } from 'adaptableblotter/types'
+import { IColumnValueExpression } from 'adaptableblotter/dist/App_Scripts/Utilities/Interface/Expression/IColumnValueExpression';
+import { IRangeExpression } from 'adaptableblotter/dist/App_Scripts/Utilities/Interface/Expression/IRangeExpression';
 
 export class agGridConfigDemo {
     private adaptableblotter: IAdaptableBlotter
@@ -22,102 +24,110 @@ export class agGridConfigDemo {
                 this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(blotterOptions);
             })
 
-        let json = {
-            "ConditionalStyle": {
-                "ConditionalStyles": [
-                    {
-                        "ColumnId": "ChangeLastOrder",
-                        "Style": {
-                            "BackColor": null as any,
-                            "ForeColor": "#008000",
-                            "FontWeight": "Normal",
-                            "FontStyle": "Normal",
-                            "FontSize": null as any
-                        },
-                        "ConditionalStyleScope": "Column",
-                        "Expression": {
-                            "ColumnValueExpressions": [{}],
-                            "FilterExpressions": [
-                                {
-                                    "ColumnId": "ChangeLastOrder",
-                                    "Filters": [
-                                        "Positive"
-                                    ]
-                                }
-                            ],
-                            "RangeExpressions": [{}]
-                        },
-                        "IsReadOnly": true
-                    },
-                    {
-                        "ColumnId": "ChangeLastOrder",
-                        "Style": {
-                            "BackColor": null,
-                            "ForeColor": "#ff0000",
-                            "FontWeight": "Normal",
-                            "FontStyle": "Normal",
-                            "FontSize": null
-                        },
-                        "ConditionalStyleScope": "Column",
-                        "Expression": {
-                            "ColumnValueExpressions": [],
-                            "FilterExpressions": [
-                                {
-                                    "ColumnId": "ChangeLastOrder",
-                                    "Filters": [
-                                        "Negative"
-                                    ]
-                                }
-                            ],
-                            "RangeExpressions": []
-                        },
-                        "IsReadOnly": true
-                    }
-                ]
-            },
-            "Layout": {
-                "CurrentLayout": "Orders View",
-                "Layouts": [
-                    {
-                        "Columns": [
-                            "OrderId",
-                            "OrderDate",
-                            "CustomerReference",
-                            "CompanyName",
-                            "ContactName",
-                            "RequiredDate",
-                            "InvoicedCost",
-                            "ChangeLastOrder",
-                            "OrderCost",
-                            "PackageCost",
-                            "ItemCost",
-                            "ItemCount"
-                        ],
-                        "GridSorts": [],
-                        "Name": "Orders View"
-                    },
-                    {
-                        "Columns": [
-                            "OrderId",
-                            "ShipVia",
-                            "Freight",
-                            "ShipName",
-                            "ShipAddress",
-                            "ShipCity",
-                            "ShipCountry",
-                            "ShippedDate",
-                            "CustomerReference"
-                        ],
-                        "GridSorts": [
-                            {
-                                "Column": "ShipName",
-                                "SortOrder": "Ascending"
-                            }
-                        ],
-                        "Name": "Shipping View"
-                    }
-                ]
-            }
-        }
     }
 }
+
+let json = {
+    Dashboard: {
+        VisibleToolbars: [
+            "SmartEdit",
+            "Export",
+            "Layout"
+        ],
+        VisibleButtons: [
+            "Dashboard",
+            "QuickSearch",
+            "ColumnChooser",
+            "AdvancedSearch"
+        ],
+        Zoom: 0.9,
+        UseSingleColourForButtons: true,
+        ShowSystemStatusButton: false
+    },
+    ConditionalStyle: {
+        ConditionalStyles: [
+            {
+                ColumnId: "ChangeLastOrder",
+                Style: {
+                    ForeColor: "#008000",
+                },
+                ConditionalStyleScope: "Column",
+                Expression: {
+                    ColumnValueExpressions: [] as IColumnValueExpression[],
+                    FilterExpressions: [
+                        {
+                            ColumnId: "ChangeLastOrder",
+                            Filters: [
+                                "Positive"
+                            ]
+                        }
+                    ],
+                    RangeExpressions: [] as IRangeExpression[]
+                },
+            },
+            {
+                ColumnId: "ChangeLastOrder",
+                Style: {
+                    ForeColor: "#ff0000",
+                },
+                ConditionalStyleScope: "Column",
+                Expression: {
+                    ColumnValueExpressions: [] as IColumnValueExpression[],
+                    FilterExpressions: [
+                        {
+                            ColumnId: "ChangeLastOrder",
+                            Filters: [
+                                "Negative"
+                            ]
+                        }
+                    ],
+                    RangeExpressions: [] as IRangeExpression[]
+                },
+            }
+        ]
+    },
+    Layout: {
+        CurrentLayout: "Orders View",
+        Layouts: [
+            {
+                Columns: [
+                    "OrderId",
+                    "OrderDate",
+                    "CustomerReference",
+                    "CompanyName",
+                    "ContactName",
+                    "RequiredDate",
+                    "InvoicedCost",
+                    "ChangeLastOrder",
+                    "OrderCost",
+                    "PackageCost",
+                    "ItemCost",
+                    "ItemCount"
+                ],
+                GridSorts: [],
+                Name: "Orders View"
+            },
+            {
+                Columns: [
+                    "OrderId",
+                    "ShipVia",
+                    "Freight",
+                    "ShipName",
+                    "ShipAddress",
+                    "ShipCity",
+                    "ShipCountry",
+                    "ShippedDate",
+                    "CustomerReference"
+                ],
+                GridSorts: [
+                    {
+                        "Column": "ShipName",
+                        "SortOrder": "Ascending"
+                    }
+                ],
+                Name: "Shipping View"
+            }
+        ]
+    }
+}
+

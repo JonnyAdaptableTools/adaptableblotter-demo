@@ -21,73 +21,74 @@ export class agGridThemingDemo {
                 let blotterOptions: IAdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptions(gridOptions, "OrderId", "Theming Demo", json);
                 this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(blotterOptions);
             })
-
-
-        let json = {
-            "Theme": {
-                "CurrentTheme": "Dark Theme"
-            },
-            "Dashboard": {
-                "VisibleToolbars": [
-                    "SmartEdit",
-                    "Export",
-                    "BulkUpdate"
-                ],
-                "VisibleButtons": [
-                    "About",
-                    "Dashboard",
-                    "QuickSearch",
-                    "ColumnChooser",
-                    "AdvancedSearch"
-                ],
-                "Zoom": "0.9",
-                "DashboardVisibility": "Minimised",
-                "ShowSystemStatusButton": false
-            },
-            "Layout": {
-                "CurrentLayout": "Orders View",
-                "Layouts": [
-                    {
-                        "Columns": [
-                            "OrderId",
-                            "OrderDate",
-                            "CustomerReference",
-                            "CompanyName",
-                            "ContactName",
-                            "RequiredDate",
-                            "InvoicedCost",
-                            "OrderCost",
-                            "PackageCost",
-                            "ItemCost",
-                            "ItemCount",
-                            "ChangeLastOrder"
-                        ],
-                        "GridSorts": [],
-                        "Name": "Orders View"
-                    },
-                    {
-                        "Columns": [
-                            "OrderId",
-                            "ShipVia",
-                            "Freight",
-                            "ShipName",
-                            "ShipAddress",
-                            "ShipCity",
-                            "ShipCountry",
-                            "ShippedDate",
-                            "CustomerReference"
-                        ],
-                        "GridSorts": [
-                            {
-                                "Column": "ShipName",
-                                "SortOrder": "Ascending"
-                            }
-                        ],
-                        "Name": "Shipping View"
-                    }
-                ]
-            }
-
-        }
     }
 }
+
+let json = {
+    Theme: {
+        CurrentTheme: "Dark Theme"
+    },
+    Dashboard: {
+        VisibleToolbars: [
+            "SmartEdit",
+            "Export",
+            "BulkUpdate"
+        ],
+        VisibleButtons: [
+            "About",
+            "Dashboard",
+            "QuickSearch",
+            "ColumnChooser",
+            "AdvancedSearch"
+        ],
+        Zoom: "0.9",
+        UseSingleColourForButtons: true,
+        DashboardVisibility: "Minimised",
+        ShowSystemStatusButton: false
+    },
+    Layout: {
+        CurrentLayout: "Orders View",
+        Layouts: [
+            {
+                Columns: [
+                    "OrderId",
+                    "OrderDate",
+                    "CustomerReference",
+                    "CompanyName",
+                    "ContactName",
+                    "RequiredDate",
+                    "InvoicedCost",
+                    "OrderCost",
+                    "PackageCost",
+                    "ItemCost",
+                    "ItemCount",
+                    "ChangeLastOrder"
+                ],
+                GridSorts: [],
+                Name: "Orders View"
+            },
+            {
+                Columns: [
+                    "OrderId",
+                    "ShipVia",
+                    "Freight",
+                    "ShipName",
+                    "ShipAddress",
+                    "ShipCity",
+                    "ShipCountry",
+                    "ShippedDate",
+                    "CustomerReference"
+                ],
+                GridSorts: [
+                    {
+                        "Column": "ShipName",
+                        "SortOrder": "Ascending"
+                    }
+                ],
+                Name: "Shipping View"
+            }
+        ]
+    }
+
+}
+

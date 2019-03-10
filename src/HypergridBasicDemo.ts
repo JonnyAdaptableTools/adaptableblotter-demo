@@ -48,18 +48,18 @@ export class HypergridBasicDemo  {
                     return origgetCell.call(this.grid.behavior.dataModel, config, declaredRendererName)
                 };
               })
-    
+            }}
 
     let json = {
        
-        "Dashboard": {
-            "VisibleToolbars": [
+        Dashboard: {
+            VisibleToolbars: [
                 "AdvancedSearch",
                 "Layout",
                 "QuickSearch",
                 "Chart"
             ],
-            "VisibleButtons": [
+            VisibleButtons: [
                 "About",
                 "Dashboard",
                 "QuickSearch",
@@ -67,10 +67,7 @@ export class HypergridBasicDemo  {
                 "ColumnChooser",
                 "BulkUpdate"
             ],
-            "Zoom": "1"
+            Zoom: "1"
         }
     }
 
-}
-
-}
