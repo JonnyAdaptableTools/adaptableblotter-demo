@@ -1,19 +1,19 @@
-import { TradeBlotterBond } from "./DataSets/TradeBlotterBond/TradeBlotterBondHypergrid";
+import { TradeBlotterBond } from "./DataSets/Old/TradeBlotterBond/TradeBlotterBondHypergrid";
 import { IDataSetConfiguration } from "./IDataSetConfiguration";
-import { Contacts } from "./DataSets/Contacts/ContactsHypergrid";
-import { BugTracker } from "./DataSets/BugTracker/BugTrackerHypergrid";
-import { FTSEClose } from "./DataSets/FTSEClose/FTSECloseHypergrid";
-import { InternationalHolidays } from "./DataSets/InternationalHolidays/InternationalHolidaysHypergrid";
-import { NorthwindOrders } from "./DataSets/NorthwindOrders/NorthwindOrdersHypergrid";
-import { PriceBlotterBond } from "./DataSets/PriceBlotterBond/PriceBlotterBondHypergrid";
-import { PriceBlotterCDSIndex } from "./DataSets/PriceBlotterCDSIndex/PriceBlotterCDSIndexHypergrid";
-import { PriceBlotterCommodity } from "./DataSets/PriceBlotterCommodity/PriceBlotterCommodityHypergrid";
-import { PriceBlotterFX } from "./DataSets/PriceBlotterFX/PriceBlotterFXHypergrid";
-import { TradeBlotterCDS } from "./DataSets/TradeBlotterCDS/TradeBlotterCDSHypergrid";
-import { TradeBlotterCDSIndex } from "./DataSets/TradeBlotterCDSIndex/TradeBlotterCDSIndexHypergrid";
-import { TradeBlotterCommodity } from "./DataSets/TradeBlotterCommodity/TradeBlotterCommodityHypergrid";
-import { TradeBlotterFX } from "./DataSets/TradeBlotterFX/TradeBlotterFXHypergrid";
-import { Swaps } from "./DataSets/Swaps/SwapsHypergrid";
+import { Contacts } from "./DataSets/Old/Contacts/ContactsHypergrid";
+import { BugTracker } from "./DataSets/Old/BugTracker/BugTrackerHypergrid";
+import { FTSEClose } from "./DataSets/Old/FTSEClose/FTSECloseHypergrid";
+import { InternationalHolidays } from "./DataSets/Old/InternationalHolidays/InternationalHolidaysHypergrid";
+import { NorthwindOrders } from "./DataSets/Old/NorthwindOrders/NorthwindOrdersHypergrid";
+import { PriceBlotterBond } from "./DataSets/Old/PriceBlotterBond/PriceBlotterBondHypergrid";
+import { PriceBlotterCDSIndex } from "./DataSets/Old/PriceBlotterCDSIndex/PriceBlotterCDSIndexHypergrid";
+import { PriceBlotterCommodity } from "./DataSets/Old/PriceBlotterCommodity/PriceBlotterCommodityHypergrid";
+import { PriceBlotterFX } from "./DataSets/Old/PriceBlotterFX/PriceBlotterFXHypergrid";
+import { TradeBlotterCDS } from "./DataSets/Old/TradeBlotterCDS/TradeBlotterCDSHypergrid";
+import { TradeBlotterCDSIndex } from "./DataSets/Old/TradeBlotterCDSIndex/TradeBlotterCDSIndexHypergrid";
+import { TradeBlotterCommodity } from "./DataSets/Old/TradeBlotterCommodity/TradeBlotterCommodityHypergrid";
+import { TradeBlotterFX } from "./DataSets/Old/TradeBlotterFX/TradeBlotterFXHypergrid";
+import { Swaps } from "./DataSets/Old/Swaps/SwapsHypergrid";
 
 
 export var AvailableDatasetConfigs = new Map<string, IDataSetConfiguration>([

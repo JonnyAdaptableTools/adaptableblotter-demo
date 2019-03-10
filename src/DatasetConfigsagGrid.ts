@@ -1,19 +1,19 @@
 import { IDataSetConfiguration } from "./IDataSetConfiguration";
-import { Contacts } from "./DataSets/Contacts/ContactsagGrid";
-import { BugTracker } from "./DataSets/BugTracker/BugTrackeragGrid";
-import { FTSEClose } from "./DataSets/FTSEClose/FTSECloseagGrid";
-import { InternationalHolidays } from "./DataSets/InternationalHolidays/InternationalHolidaysagGrid";
-import { NorthwindOrders } from "./DataSets/NorthwindOrders/NorthwindOrdersagGrid";
-import { PriceBlotterBond } from "./DataSets/PriceBlotterBond/PriceBlotterBondagGrid";
-import { PriceBlotterCDSIndex } from "./DataSets/PriceBlotterCDSIndex/PriceBlotterCDSIndexagGrid";
-import { PriceBlotterCommodity } from "./DataSets/PriceBlotterCommodity/PriceBlotterCommodityagGrid";
-import { PriceBlotterFX } from "./DataSets/PriceBlotterFX/PriceBlotterFXagGrid";
-import { TradeBlotterCDS } from "./DataSets/TradeBlotterCDS/TradeBlotterCDSagGrid";
-import { TradeBlotterCDSIndex } from "./DataSets/TradeBlotterCDSIndex/TradeBlotterCDSIndexagGrid";
-import { TradeBlotterCommodity } from "./DataSets/TradeBlotterCommodity/TradeBlotterCommodityagGrid";
-import { TradeBlotterFX } from "./DataSets/TradeBlotterFX/TradeBlotterFXagGrid";
-import { Swaps } from "./DataSets/Swaps/SwapsagGrid";
-import { TradeBlotterBond } from "./DataSets/TradeBlotterBond/TradeBlotterBondagGrid";
+import { Contacts } from "./DataSets/Old/Contacts/ContactsagGrid";
+import { BugTracker } from "./DataSets/Old/BugTracker/BugTrackeragGrid";
+import { FTSEClose } from "./DataSets/Old/FTSEClose/FTSECloseagGrid";
+import { InternationalHolidays } from "./DataSets/Old/InternationalHolidays/InternationalHolidaysagGrid";
+import { NorthwindOrders } from "./DataSets/Old/NorthwindOrders/NorthwindOrdersagGrid";
+import { PriceBlotterBond } from "./DataSets/Old/PriceBlotterBond/PriceBlotterBondagGrid";
+import { PriceBlotterCDSIndex } from "./DataSets/Old/PriceBlotterCDSIndex/PriceBlotterCDSIndexagGrid";
+import { PriceBlotterCommodity } from "./DataSets/Old/PriceBlotterCommodity/PriceBlotterCommodityagGrid";
+import { PriceBlotterFX } from "./DataSets/Old/PriceBlotterFX/PriceBlotterFXagGrid";
+import { TradeBlotterCDS } from "./DataSets/Old/TradeBlotterCDS/TradeBlotterCDSagGrid";
+import { TradeBlotterCDSIndex } from "./DataSets/Old/TradeBlotterCDSIndex/TradeBlotterCDSIndexagGrid";
+import { TradeBlotterCommodity } from "./DataSets/Old/TradeBlotterCommodity/TradeBlotterCommodityagGrid";
+import { TradeBlotterFX } from "./DataSets/Old/TradeBlotterFX/TradeBlotterFXagGrid";
+import { Swaps } from "./DataSets/Old/Swaps/SwapsagGrid";
+import { TradeBlotterBond } from "./DataSets/Old/TradeBlotterBond/TradeBlotterBondagGrid";
 
 
 

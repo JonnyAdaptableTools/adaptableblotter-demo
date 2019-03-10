@@ -32,7 +32,7 @@ export class HypergridBasicDemo  {
                     userName: "Jonathan",
                     blotterId: "Basic Demo",
                     licenceKey: Helper.getdemolicencekey(),
-                  //  predefinedConfig: json
+                  //  predefinedConfig: json // no config in this basic demo?
                 }
 
                 this.adaptableblotter = new (<any>window).adaptableblotterhypergrid.AdaptableBlotter(blotterOptions);
