@@ -5,6 +5,7 @@ import * as HelperAgGrid from "./HelperAgGrid"
 import { IAdaptableBlotter, IAdaptableBlotterOptions } from 'adaptableblotter/types'
 import { IColumnValueExpression } from 'adaptableblotter/dist/App_Scripts/Utilities/Interface/Expression/IColumnValueExpression';
 import { IRangeExpression } from 'adaptableblotter/dist/App_Scripts/Utilities/Interface/Expression/IRangeExpression';
+import { IFilterExpression } from 'adaptableblotter/dist/App_Scripts/Utilities/Interface/Expression/IFilterExpression';
 
 export class agGridConfigDemo {
     private adaptableblotter: IAdaptableBlotter
@@ -82,6 +83,33 @@ let json = {
                         }
                     ],
                     RangeExpressions: [] as IRangeExpression[]
+                },
+            },
+            {
+                Style: {
+
+                    BackColor: "#ffffcc",
+                    FontStyle: "Italic",
+                    ForeColor: "#000000"
+                },
+                ConditionalStyleScope: "Row",
+                Expression: {
+                    ColumnValueExpressions: [] as IColumnValueExpression[],
+                    FilterExpressions: [] as IFilterExpression[],
+                    RangeExpressions: [
+                        {
+                            ColumnId: "InvoicedCost",
+                            Ranges: [
+                                {
+                                    Operand1: "2000",
+                                    Operand1Type: "Value",
+                                    Operand2: "",
+                                    Operand2Type: "Value",
+                                    Operator: "GreaterThan"
+                                }
+                            ]
+                        }
+                    ],
                 },
             }
         ]
