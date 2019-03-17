@@ -45,6 +45,41 @@ let json = {
         UseSingleColourForButtons: true,
         ShowSystemStatusButton: false
     },
+    Export: {
+        CurrentReport: "High Freight",
+        Reports: [
+            {
+                Name: "High Freight",
+                ReportColumnScope: "BespokeColumns",
+                ReportRowScope: "ExpressionRows",
+                ColumnIds: [
+                    "OrderId",
+                    "Freight",
+                    "Employee",
+                    "PackageCost",
+                    "InvoicedCost"
+                ],
+                Expression: {
+                    ColumnValueExpressions: [] as IColumnValueExpression[],
+                    FilterExpressions: [] as IFilterExpression[],
+                    RangeExpressions: [
+                        {
+                            ColumnId: "Freight",
+                            Ranges: [
+                                {
+                                    Operand1: "500",
+                                    Operand1Type: "Value",
+                                    Operand2: "",
+                                    Operand2Type: "Value",
+                                    Operator: "GreaterThan"
+                                }
+                            ]
+                        }
+                    ],
+                },
+            }
+        ]
+    },
     ConditionalStyle: {
         ConditionalStyles: [
             {

@@ -97,6 +97,6 @@ export function checkPriceIsPostive(numberToCheck: number): number {
 }
 
 export function getdemolicencekey(): string {
-    return 'xs2543-as6b8esw3-e94fyjzc7a';
+    return 'abc5834e-as6b8ejw3-e94syjze8a';
 }
 
