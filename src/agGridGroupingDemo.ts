@@ -10,7 +10,8 @@ export class agGridGroupingDemo {
         let data: any[]
         Helper.getDataFromJson("NorthwindOrders.json").then(json => data = json)
             .then(data => Helper.MakeAllRecordsColumnsDateProperDates(data)).then(() => {
-                var columndefs = HelperAgGrid.getGroupingNorthwindColumnSchema();
+                HelperAgGrid.setUpAgGridLicence();
+                  var columndefs = HelperAgGrid.getGroupingNorthwindColumnSchema();
                 var gridOptions = HelperAgGrid.getGridOptions(columndefs, data);
                 var eGridDiv = document.getElementById("grid");
                 let grid = new Grid(eGridDiv, gridOptions);

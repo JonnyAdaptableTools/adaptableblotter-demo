@@ -13,7 +13,7 @@ export class agGridWorldStatsChartingDemo {
         let data: any[]
         Helper.getDataFromJson("worldstats.json").then(json => data = json)
             .then(data => Helper.MakeAllRecordsColumnsDateProperDates(data)).then(() => {
-
+                HelperAgGrid.setUpAgGridLicence();
                 var columndefs = HelperAgGrid.getWorldStatsSchema();
                 var gridOptions = HelperAgGrid.getGridOptions(columndefs, data);
                 var eGridDiv = document.getElementById("grid");

@@ -12,7 +12,8 @@ export class agGridThemingDemo {
         let data: any[]
         Helper.getDataFromJson("NorthwindOrders.json").then(json => data = json)
             .then(data => Helper.MakeAllRecordsColumnsDateProperDates(data)).then(() => {
-                var columndefs = HelperAgGrid.getBasicNorthwindColumnSchema();
+                HelperAgGrid.setUpAgGridLicence();
+                 var columndefs = HelperAgGrid.getBasicNorthwindColumnSchema();
                 var gridOptions = HelperAgGrid.getGridOptions(columndefs, data);
                 var eGridDiv = document.getElementById("grid");
                 let grid = new Grid(eGridDiv, gridOptions);
