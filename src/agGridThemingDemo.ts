@@ -45,50 +45,6 @@ let json = {
         UseSingleColourForButtons: true,
         DashboardVisibility: "Minimised",
         ShowSystemStatusButton: false
-    },
-    Layout: {
-        CurrentLayout: "Orders View",
-        Layouts: [
-            {
-                Columns: [
-                    "OrderId",
-                    "OrderDate",
-                    "CustomerReference",
-                    "CompanyName",
-                    "ContactName",
-                    "RequiredDate",
-                    "InvoicedCost",
-                    "OrderCost",
-                    "PackageCost",
-                    "ItemCost",
-                    "ItemCount",
-                    "ChangeLastOrder"
-                ],
-                GridSorts: [],
-                Name: "Orders View"
-            },
-            {
-                Columns: [
-                    "OrderId",
-                    "ShipVia",
-                    "Freight",
-                    "ShipName",
-                    "ShipAddress",
-                    "ShipCity",
-                    "ShipCountry",
-                    "ShippedDate",
-                    "CustomerReference"
-                ],
-                GridSorts: [
-                    {
-                        "Column": "ShipName",
-                        "SortOrder": "Ascending"
-                    }
-                ],
-                Name: "Shipping View"
-            }
-        ]
     }
-
 }
 

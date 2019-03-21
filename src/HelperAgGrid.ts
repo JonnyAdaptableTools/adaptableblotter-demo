@@ -190,6 +190,7 @@ export function getBasicNorthwindColumnSchema(): any[] {
     schema.push({ headerName: "Cust. Ref", field: "CustomerReference", editable: true, filter: true, sortable: true, type: 'abColDefString', });
     schema.push({ headerName: "Company", field: "CompanyName", editable: true, filter: true, sortable: true, enableRowGroup: true, type: 'abColDefString', });
     schema.push({ headerName: "Contact", field: "ContactName", filter: true, sortable: true, enableRowGroup: true, type: 'abColDefString', });
+    schema.push({ headerName: "Employee", field: "Employee", filter: 'text', editable: true, sortable: true, enableRowGroup: true, type: 'abColDefString', });
     schema.push({ headerName: "Order Date", field: "OrderDate", editable: true, cellEditorParams: { useFormatter: true }, valueParser: dateParseragGrid, valueFormatter: shortDateFormatteragGrid, filter: true, sortable: true, type: 'abColDefDate', });
     schema.push({ headerName: "Rqd Date", field: "RequiredDate", editable: true, cellEditorParams: { useFormatter: true }, valueParser: dateParseragGrid, valueFormatter: shortDateFormatteragGrid, filter: true, sortable: true, type: 'abColDefDate', });
     schema.push({ headerName: "Invoiced", field: "InvoicedCost", cellClass: 'number-cell', cellRenderer: currencyRendereragGrid, editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
@@ -198,7 +199,6 @@ export function getBasicNorthwindColumnSchema(): any[] {
     schema.push({ headerName: "Item Cost", field: "ItemCost", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
     schema.push({ headerName: "Item Count", field: "ItemCount", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
     schema.push({ headerName: "Change Last Order", field: "ChangeLastOrder", cellClass: 'number-cell', editable: true, filter: true, sortable: true, type: 'abColDefNumber', });
-    schema.push({ headerName: "Employee", field: "Employee", filter: 'text', editable: true, sortable: true, enableRowGroup: true, type: 'abColDefString', });
     schema.push({ headerName: "Ship Via", field: "ShipVia", filter: 'text', editable: true, sortable: true, type: 'abColDefString', });
     schema.push({ headerName: "Freight", field: "Freight", cellClass: 'number-cell', cellRenderer: currencyRendereragGrid, editable: true, sortable: true, type: 'abColDefNumber', });
     schema.push({ headerName: "Ship Name", field: "ShipName", columnGroupShow: 'open', editable: true, sortable: true, type: 'abColDefString', });

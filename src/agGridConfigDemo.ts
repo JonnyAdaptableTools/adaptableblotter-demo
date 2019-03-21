@@ -45,6 +45,9 @@ let json = {
         UseSingleColourForButtons: true,
         ShowSystemStatusButton: false
     },
+    SmartEdit: {
+        SmartEditValue: 10
+    },
     Export: {
         CurrentReport: "High Freight",
         Reports: [
@@ -77,6 +80,18 @@ let json = {
                         }
                     ],
                 },
+            }
+        ]
+    },
+    CustomSort: {
+        Customsorts: [
+            {
+                ColumnId: "Employee",
+                SortedValues: [
+                    "Margaret Peacock",
+                    "Steven Buchanan",
+                    "Janet Leverling"
+                ]
             }
         ]
     },
