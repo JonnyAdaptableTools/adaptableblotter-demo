@@ -5,6 +5,7 @@ import * as HelperAgGrid from "./HelperAgGrid"
 import { IAdaptableBlotter, IAdaptableBlotterOptions } from 'adaptableblotter/types'
 import { IRangeExpression } from 'adaptableblotter/dist/App_Scripts/Utilities/Interface/Expression/IRangeExpression';
 import { IFilterExpression } from 'adaptableblotter/dist/App_Scripts/Utilities/Interface/Expression/IFilterExpression';
+import { IColumnValueExpression } from 'adaptableblotter/dist/App_Scripts/Utilities/Interface/Expression/IColumnValueExpression';
 
 export class agGridWorldStatsChartingDemo {
     private adaptableblotter: IAdaptableBlotter
@@ -51,13 +52,14 @@ let json = {
         CurrentChartName: "Population Stats",
         ChartDefinitions: [
             {
+                ChartType: "CategoryChart",
                 Description: "For Most Populated Countries",
                 Name: "Population Total",
                 XAxisColumnId: "Code",
                 XAxisExpression: {
-                    ColumnValueExpressions: [],
-                    FilterExpressions: [],
-                    RangeExpressions: []
+                    ColumnValueExpressions: [] as IColumnValueExpression[],
+                    FilterExpressions: [] as IFilterExpression[],
+                    RangeExpressions: [] as IRangeExpression[]
                 },
                 YAxisColumnIds: [
                     "Population"
@@ -101,6 +103,7 @@ let json = {
                 }
             },
             {
+                ChartType: "CategoryChart",
                 Description: "By Country",
                 Name: "Population Stats",
                 XAxisColumnId: "Code",
@@ -154,13 +157,14 @@ let json = {
                 }
             },
             {
+                ChartType: "CategoryChart",
                 Description: "GDP per Capita (K) vs. Debt per Capita (K)",
                 Name: "Global Finances",
                 XAxisColumnId: "Code",
                 XAxisExpression: {
-                    ColumnValueExpressions: [],
-                    FilterExpressions: [],
-                    RangeExpressions: []
+                    ColumnValueExpressions: [] as IColumnValueExpression[],
+                    FilterExpressions: [] as IFilterExpression[],
+                    RangeExpressions: [] as IRangeExpression[]
                 },
                 YAxisColumnIds: [
                     "GDP per Capita (K)",
@@ -168,7 +172,7 @@ let json = {
                 ],
                 YAxisTotal: "Sum",
                 ChartProperties: {
-            CalloutsInterval: 1,
+                    CalloutsInterval: 1,
                     CalloutsType: "None",
                     ChartType: "Column",
                     CrosshairAnnotationEnabled: false,
@@ -205,6 +209,7 @@ let json = {
                 }
             },
             {
+                ChartType: "CategoryChart",
                 Description: "By Source: Coal, Renewable, Nuclear, Water, and Gas",
                 Name: "Electricity Production",
                 XAxisColumnId: "Code",
