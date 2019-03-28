@@ -11,16 +11,16 @@ export class agGridGroupingDemo {
         Helper.getDataFromJson("NorthwindOrders.json").then(json => data = json)
             .then(data => Helper.MakeAllRecordsColumnsDateProperDates(data)).then(() => {
                 HelperAgGrid.setUpAgGridLicence();
-                  var columndefs = HelperAgGrid.getGroupingNorthwindColumnSchema();
+                var columndefs = HelperAgGrid.getGroupingNorthwindColumnSchema();
                 var gridOptions = HelperAgGrid.getGridOptions(columndefs, data);
                 var eGridDiv = document.getElementById("grid");
                 let grid = new Grid(eGridDiv, gridOptions);
-                // HelperAgGrid.startTickingDataagGrid(gridOptions);
-                let configUrl = 'src/configs/groupingconfig.json';
-                let blotterOptions: IAdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptions(gridOptions,"OrderId",  "Grouping Demo", configUrl);
-                   this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(blotterOptions);
+                let blotterOptions: IAdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptions(gridOptions, "OrderId", "Grouping Demo", json);
+                this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(blotterOptions);
 
             })
+
+        let json = {}
     }
 
 }

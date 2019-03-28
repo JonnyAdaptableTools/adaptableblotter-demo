@@ -124,6 +124,7 @@ export function getGridOptions(columndefs: any, data: any): GridOptions {
         animateRows: true,
         enableRangeSelection: true,
         floatingFilter: true,
+        suppressAggFuncInHeader: true,
         sideBar: {
             toolPanels: [
                 {
@@ -222,9 +223,9 @@ export function getGroupingNorthwindColumnSchema(): any[] {
         headerName: "Customer Info",
         marryChildren: true,
         children: [
-            { headerName: "Customer Reference", field: "CustomerReference", columnGroupShow: 'open', editable: true, filter: true, sortable: true },
-            { headerName: "Company Name", field: "CompanyName", columnGroupShow: 'closed', editable: true, filter: true, sortable: true },
-            { headerName: "Contact Name", field: "ContactName", columnGroupShow: 'closed', filter: true, sortable: true },
+            { headerName: "Customer Reference", field: "CustomerReference", columnGroupShow: 'open', editable: true, filter: true, sortable: true, type: 'abColDefString', },
+            { headerName: "Company Name", field: "CompanyName", columnGroupShow: 'closed', editable: true, filter: true, sortable: true, type: 'abColDefString', },
+            { headerName: "Contact Name", field: "ContactName", columnGroupShow: 'closed', filter: true, sortable: true, type: 'abColDefString', },
         ]
     })
 
@@ -233,32 +234,32 @@ export function getGroupingNorthwindColumnSchema(): any[] {
         headerName: "Order",
         marryChildren: true,
         children: [
-            { headerName: "Order Id", field: "OrderId", editable: true, columnGroupShow: 'open', cellClass: 'number-cell', filter: true, sortable: true },
-            { headerName: "Order Date", field: "OrderDate", editable: true, columnGroupShow: 'closed', cellEditorParams: { useFormatter: true }, valueParser: dateParseragGrid, valueFormatter: shortDateFormatteragGrid, filter: true, sortable: true },
-            { headerName: "Required Date", field: "RequiredDate", editable: true, columnGroupShow: 'closed', cellEditorParams: { useFormatter: true }, valueParser: dateParseragGrid, valueFormatter: shortDateFormatteragGrid, filter: true, sortable: true },
-            { headerName: "Shipped Date", field: "ShippedDate", editable: true, columnGroupShow: 'closed', cellEditorParams: { useFormatter: true }, valueParser: dateParseragGrid, valueFormatter: shortDateFormatteragGrid, filter: true, sortable: true },
-            { headerName: "OrderCost", field: "OrderCost", cellClass: 'number-cell', cellRenderer: currencyRendereragGrid, columnGroupShow: 'closed', editable: true, enableValue: true, filter: true, sortable: true },
-            { headerName: "Package Cost", field: "PackageCost", cellClass: 'number-cell', cellRenderer: currencyRendereragGrid, editable: true, filter: true, sortable: true, type: 'abColDefNumber', },
+            { headerName: "Order Id", field: "OrderId", editable: true, columnGroupShow: 'open', cellClass: 'number-cell', filter: true, sortable: true, type: 'abColDefNumber', },
+            { headerName: "Order Date", field: "OrderDate", editable: true, columnGroupShow: 'closed', cellEditorParams: { useFormatter: true }, valueParser: dateParseragGrid, valueFormatter: shortDateFormatteragGrid, filter: true, sortable: true, type: 'abColDefDate', },
+            { headerName: "Required Date", field: "RequiredDate", editable: true, columnGroupShow: 'closed', cellEditorParams: { useFormatter: true }, valueParser: dateParseragGrid, valueFormatter: shortDateFormatteragGrid, filter: true, sortable: true, type: 'abColDefDate', },
+            { headerName: "Shipped Date", field: "ShippedDate", editable: true, columnGroupShow: 'closed', cellEditorParams: { useFormatter: true }, valueParser: dateParseragGrid, valueFormatter: shortDateFormatteragGrid, filter: true, sortable: true, type: 'abColDefDate', },
+            { headerName: "OrderCost", field: "OrderCost", cellClass: 'number-cell', cellRenderer: currencyRendereragGrid, columnGroupShow: 'closed', editable: true, enableValue: true, filter: true, sortable: true, aggFunc: 'sum', type: 'abColDefNumber', },
+            { headerName: "Package Cost", field: "PackageCost", cellClass: 'number-cell', cellRenderer: currencyRendereragGrid, editable: true, filter: true, sortable: true, type: 'abColDefNumber', aggFunc: 'sum', },
         ]
     })
-    schema.push({ headerName: "Item Cost", field: "ItemCount", cellClass: 'number-cell', columnGroupShow: 'closed', editable: true, enableValue: true, filter: true, sortable: true });
-    schema.push({ headerName: "Item Count", field: "ItemCount", cellClass: 'number-cell', columnGroupShow: 'closed', editable: true, enableValue: true, filter: true, sortable: true });
-    schema.push({ headerName: "Employee", field: "Employee", filter: 'text', editable: true, enableRowGroup: true, hide: true, sortable: true });
-    schema.push({ headerName: "Ship Via", field: "ShipVia", filter: 'text', editable: true, enableRowGroup: true, hide: true, sortable: true });
-    schema.push({ headerName: "Freight", field: "Freight", cellClass: 'number-cell', cellRenderer: currencyRendereragGrid, editable: true, enableValue: true, sortable: true });
+    schema.push({ headerName: "Item Cost", field: "ItemCost", cellClass: 'number-cell', columnGroupShow: 'closed', editable: true, enableValue: true, filter: true, sortable: true, type: 'abColDefNumber', });
+    schema.push({ headerName: "Item Count", field: "ItemCount", cellClass: 'number-cell', columnGroupShow: 'closed', editable: true, enableValue: true, filter: true, sortable: true, aggFunc: 'sum', type: 'abColDefNumber', });
+    schema.push({ headerName: "Employee", field: "Employee", filter: 'text', editable: true, enableRowGroup: true, hide: true, sortable: true, type: 'abColDefString', });
+    schema.push({ headerName: "Ship Via", field: "ShipVia", filter: 'text', editable: true, enableRowGroup: true, hide: true, sortable: true, type: 'abColDefString', });
+    schema.push({ headerName: "Freight", field: "Freight", cellClass: 'number-cell', cellRenderer: currencyRendereragGrid, editable: true, enableValue: true, sortable: true, type: 'abColDefNumber', });
     schema.push({ headerName: "Arrived On Time", field: "ArrivedOnTime", editable: true, cellEditorParams: { useFormatter: true }, valueParser: dateParseragGrid, valueFormatter: shortDateFormatteragGrid, filter: true, sortable: true, type: 'abColDefBoolean', });
 
     // do a column group for shipping
     schema.push({
         headerName: "Shipping Details",
         children: [
-            { headerName: "Ship Name", field: "ShipName", columnGroupShow: 'open', editable: true, sortable: true },
-            { headerName: "Ship Address", field: "ShipAddress", columnGroupShow: 'closed', editable: true, sortable: true },
-            { headerName: "Ship City", field: "ShipCity", columnGroupShow: 'closed', sortable: true },
-            { headerName: "Ship Postal Code", field: "ShipPostalCode", columnGroupShow: 'closed', sortable: true },
+            { headerName: "Ship Name", field: "ShipName", columnGroupShow: 'open', editable: true, sortable: true, type: 'abColDefString', },
+            { headerName: "Ship Address", field: "ShipAddress", columnGroupShow: 'closed', editable: true, sortable: true, type: 'abColDefString', },
+            { headerName: "Ship City", field: "ShipCity", columnGroupShow: 'closed', sortable: true, type: 'abColDefString', },
+            { headerName: "Ship Postal Code", field: "ShipPostalCode", columnGroupShow: 'closed', sortable: true, type: 'abColDefString', },
         ]
     })
-    schema.push({ headerName: "Ship Country", field: "ShipCountry", filter: 'text', editable: true, rowGroup: true, enableRowGroup: true, hide: true, sortable: true });
+    schema.push({ headerName: "Ship Country", field: "ShipCountry", filter: 'text', editable: true, rowGroup: true, enableRowGroup: true, hide: true, sortable: true, type: 'abColDefString', });
 
     return schema;
 }
