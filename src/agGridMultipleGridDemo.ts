@@ -24,7 +24,6 @@ export class agGridMultipleGridDemo {
         let abName1: string = 'adaptableBlotter1';
         let vendorGridName1: string = 'grid1';
         let eGridDiv1 = document.getElementById(vendorGridName1);
-        console.log(eGridDiv1);
         let grid1 = new Grid(eGridDiv1, gridOptions1);
         let blotterOptions1: IAdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptionsWithDivNames(gridOptions1, "OrderId", "Multiple 1", json1, vendorGridName1, abName1);
         this.adaptableblotter1 = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(blotterOptions1);
@@ -34,7 +33,6 @@ export class agGridMultipleGridDemo {
         let abName2: string = 'adaptableBlotter2';
         let vendorGridName2: string = 'grid2';
         let eGridDiv2 = document.getElementById(vendorGridName2);
-        console.log(eGridDiv2);
         let grid2 = new Grid(eGridDiv2, gridOptions2);
         let blotterOptions2: IAdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptionsWithDivNames(gridOptions2, "OrderId", "Multiple 2", json2, vendorGridName2, abName2);
         this.adaptableblotter2 = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(blotterOptions2);
