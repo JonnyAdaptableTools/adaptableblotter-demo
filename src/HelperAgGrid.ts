@@ -189,6 +189,30 @@ export function getAadaptableBlotterOptions(gridOptions: GridOptions, pk: string
     return blotterOptions;
 }
 
+export function getAadaptableBlotterOptionsWithDivNames(gridOptions: GridOptions, pk: string, blotterId: string, config: any, gridName: string, abName: string): IAdaptableBlotterOptions {
+    let blotterOptions: IAdaptableBlotterOptions = {
+        primaryKey: pk,
+        vendorGrid: gridOptions,
+        userName: "Jonathan",
+        blotterId: blotterId,
+        licenceKey: Helper.getdemolicencekey(),
+        predefinedConfig: config,
+        layoutOptions: {
+            includeVendorStateInLayouts: true,
+            autoSaveLayouts: true,
+        },
+        containerOptions:{
+            vendorContainer: gridName,
+            adaptableBlotterContainer: abName,
+        },
+        chartOptions: {
+            displayOnStartUp: true,
+            showModal: false,
+        },
+    }
+    return blotterOptions;
+}
+
 export function getBasicNorthwindColumnSchema(): any[] {
     var schema = []
     schema.push({ headerName: "Order Id", field: "OrderId", editable: true, cellClass: 'number-cell', filter: true, sortable: true, type: 'abColDefNumber', });

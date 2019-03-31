@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>AdaptableBlotter.JS multiple ag-Grid Demo</title>
+    <!--CSS for the demo-->
+    <link href="aggriddemo.css" rel="stylesheet" />
+    <link href="demo.css" rel="stylesheet" />
+    <!-- ag-Grid -->
+    <script src="ExtLibs/agGrid/ag-grid-community.min.js"></script>
+    <script src="ExtLibs/agGrid/ag-grid-enterprise.min.js"></script>
+</head>
+
+<body>
+    <nav style="margin-bottom:0px;">
+        <span>
+            &nbsp;&nbsp; &nbsp;&nbsp;
+            <img src="../images/AdaptableBlotter.png" height="50">
+            &nbsp;&nbsp; &nbsp;&nbsp;
+            <h4>A demo of AdaptableBlotter.JS with 2 grids.</h4>
+        </span>
+    </nav>
+
+    <script>
+        function saveData() {
+            var datasetElement = document.getElementById("dataset_select");
+            localStorage.setItem(datasetElement.id, datasetElement.value);
+        }
+    </script>
+
+    <table>
+        <tr>
+            <td style="width:800px" >
+                <div id="adaptableBlotter1" style="width:750px"></div>
+                <p></p>
+                <div id="grid1" class="ag-balham" style="width:750px; height: 600px"></div>
+            </td>
+            <td style="width:800px" >
+                <div id="adaptableBlotter2" style="width:750px"></div>
+                <p></p>
+                <div id="grid2" class="ag-balham" style="width:750px; height: 600px"></div>
+        </tr>
+    </table>
+
+<span style="width:800px">
+    
+
+</span>
+
+    <% if (htmlWebpackPlugin.options.harnessJs) { %>
+    <script src="<%= htmlWebpackPlugin.options.harnessJs %>" type="text/javascript"></script>
+    <% } %>
+    <% if (htmlWebpackPlugin.options.demoJs) { %>
+    <script src="<%= htmlWebpackPlugin.options.demoJs %>" type="text/javascript"></script>
+    <% } %>
+    <script>
+        agGrid.LicenseManager.setLicenseKey("Traders_Tools_Limited__Adaptable_Blotter_Demo_5Devs_1Deployment_20_March_2020__MTU4NDY2MjQwMDAwMA==9a2ec141c65fbb00f9348cdb5f93ffbb");
+        var blotter = new aggridmultiplegriddemo.agGridMultipleGridDemo()
+    </script>
+</body>
+
+</html>

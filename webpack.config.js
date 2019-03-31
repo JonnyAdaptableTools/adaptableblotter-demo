@@ -18,6 +18,7 @@ module.exports = {
         aggridthemingdemo: "./src/agGridThemingDemo.ts",
         aggridworldstatschartingdemo: "./src/aggridworldstatschartingdemo.ts",
         aggridgroupingdemo: "./src/agGridGroupingDemo.ts",
+        aggridmultiplegriddemo: "./src/agGridMultipleGridDemo.ts",
     },
     output: {
         path: __dirname + '/dist',
@@ -115,6 +116,14 @@ module.exports = {
             inject: false,
             'harnessJs': PACKAGE.version + "/adaptableblotteraggrid-bundle.min.js",
             'demoJs': "aggridgroupingdemo.js",
+        }),
+        new HtmlWebpackPlugin({
+            chunks: [],
+            filename: "aggridmultiplegriddemo.html",
+            template: 'DemoPage/aggridmultiplegriddemo.ejs',
+            inject: false,
+            'harnessJs': PACKAGE.version + "/adaptableblotteraggrid-bundle.min.js",
+            'demoJs': "aggridmultiplegriddemo.js",
         }),
         new HtmlWebpackPlugin({
             chunks: [],
