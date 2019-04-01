@@ -300,8 +300,25 @@ let json = {
                     YAxisTitle: " % of Electricity Production",
                     YAxisTitleColor: ""
                 }
+            },
+            {
+                ChartType: "PieChart",
+                Description: "",
+                Name: "Population by Continent",
+                PrimaryColumnId: "Region",
+                SecondaryColumnId: "Population",
+                SecondaryColumnOperation: "Sum",
+                VisibleRowsOnly: true,
+                ChartProperties: {
+                    OthersCategoryThreshold: 1,
+                    OthersCategoryType: "Number",
+                    PieChartLabelPosition: "BestFit",
+                    ShowAsDoughnut: true,
+                    SliceLabelsMapping: "ValueAndName",
+                    SliceLegendMapping: "ValueAndName",
+                    SliceValuesMapping: "Value"
+                }
             }
         ]
     }
 }
-
