@@ -184,6 +184,7 @@ export function getAadaptableBlotterOptions(gridOptions: GridOptions, pk: string
         chartOptions: {
             displayOnStartUp: true,
             showModal: false,
+            pieChartMaxItems: 50
         },
     }
     return blotterOptions;
@@ -208,6 +209,7 @@ export function getAadaptableBlotterOptionsWithDivNames(gridOptions: GridOptions
         chartOptions: {
             displayOnStartUp: true,
             showModal: false,
+            pieChartMaxItems: 50
         },
     }
     return blotterOptions;

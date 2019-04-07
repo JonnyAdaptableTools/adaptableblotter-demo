@@ -41,6 +41,7 @@ export class HypergridChartingDemo {
                     chartOptions: {
                         displayOnStartUp: true,
                         showModal: false,
+                        pieChartMaxItems: 50
                     },
                 }
 

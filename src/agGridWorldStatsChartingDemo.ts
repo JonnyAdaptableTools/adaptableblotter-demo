@@ -304,17 +304,35 @@ let json = {
             {
                 ChartType: "PieChart",
                 Description: "",
-                Name: "Population by Continent",
-                PrimaryColumnId: "Region",
+                Name: "Population Pie Chart",
+                PrimaryColumnId: "Country",
                 SecondaryColumnId: "Population",
                 SecondaryColumnOperation: "Sum",
                 VisibleRowsOnly: true,
                 ChartProperties: {
-                    OthersCategoryThreshold: 1,
-                    OthersCategoryType: "Number",
+                    OthersCategoryThreshold: 2,
+                    OthersCategoryType: "Percent",
                     PieChartLabelPosition: "BestFit",
                     ShowAsDoughnut: true,
                     SliceLabelsMapping: "ValueAndName",
+                    SliceLegendMapping: "ValueAndName",
+                    SliceValuesMapping: "Value"
+                }
+            },
+            {
+                ChartType: "PieChart",
+                Description: "Land Area by Region",
+                Name: "Continental Land Mass",
+                PrimaryColumnId: "Region",
+                SecondaryColumnId: "Land Area",
+                SecondaryColumnOperation: "Sum",
+                VisibleRowsOnly: true,
+                ChartProperties: {
+                    OthersCategoryThreshold: 2,
+                    OthersCategoryType: "Percent",
+                    PieChartLabelPosition: "BestFit",
+                    ShowAsDoughnut: false,
+                    SliceLabelsMapping: "Name",
                     SliceLegendMapping: "ValueAndName",
                     SliceValuesMapping: "Value"
                 }
@@ -322,3 +340,4 @@ let json = {
         ]
     }
 }
+
