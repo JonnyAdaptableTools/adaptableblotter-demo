@@ -83,11 +83,12 @@ let json = {
         CurrentChartName: "Employee Sales",
         ChartDefinitions: [
             {
+                ChartType: "CategoryChart",
                 Description: "",
                 Name: "Employee Sales",
                 XAxisColumnId: "Employee",
                 XAxisExpression: {
-                    ColumnValueExpressions: []as IColumnValueExpression[],
+                    ColumnValueExpressions: [] as IColumnValueExpression[],
                     FilterExpressions: [] as IFilterExpression[],
                     RangeExpressions: [] as IRangeExpression[]
                 },
@@ -99,7 +100,7 @@ let json = {
                 ChartProperties: {
                     CalloutsInterval: 1,
                     CalloutsType: "None",
-                    ChartType: "Column",
+                    CategoryChartType: "Column",
                     CrosshairAnnotationEnabled: false,
                     CrosshairDisplayMode: "None",
                     CrosshairSnapToData: false,
@@ -131,8 +132,25 @@ let json = {
                     YAxisTitle: "",
                     YAxisTitleColor: ""
                 }
+            },
+            {
+                ChartType: "PieChart",
+                Description: "",
+                Name: "Employee Items Sold",
+                PrimaryColumnId: "Employee",
+                SecondaryColumnId: "ItemCost",
+                SecondaryColumnOperation: "Sum",
+                VisibleRowsOnly: true,
+                ChartProperties: {
+                    OthersCategoryThreshold: 2,
+                    OthersCategoryType: "Percent",
+                    PieChartLabelPosition: "BestFit",
+                    ShowAsDoughnut: true,
+                    SliceLabelsMapping: "Name",
+                    SliceLegendMapping: "ValueAndName",
+                    SliceValuesMapping: "Value"
+                }
             }
         ]
     }
 }
-

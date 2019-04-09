@@ -68,7 +68,7 @@ let json = {
                 ChartProperties: {
                     CalloutsInterval: 1,
                     CalloutsType: "None",
-                    ChartType: "Column",
+                    CategoryChartType: "Column",
                     CrosshairAnnotationEnabled: true,
                     CrosshairDisplayMode: "Both",
                     CrosshairSnapToData: true,
@@ -122,7 +122,7 @@ let json = {
                 ChartProperties: {
                     CalloutsInterval: 1,
                     CalloutsType: "None",
-                    ChartType: "Line",
+                    CategoryChartType: "Line",
                     CrosshairAnnotationEnabled: false,
                     CrosshairDisplayMode: "None",
                     CrosshairSnapToData: false,
@@ -174,7 +174,7 @@ let json = {
                 ChartProperties: {
                     CalloutsInterval: 1,
                     CalloutsType: "None",
-                    ChartType: "Column",
+                    CategoryChartType: "Column",
                     CrosshairAnnotationEnabled: false,
                     CrosshairDisplayMode: "None",
                     CrosshairSnapToData: false,
@@ -267,7 +267,7 @@ let json = {
                 ChartProperties: {
                     CalloutsInterval: 1,
                     CalloutsType: "None",
-                    ChartType: "Column",
+                    CategoryChartType: "Column",
                     CrosshairAnnotationEnabled: false,
                     CrosshairDisplayMode: "None",
                     CrosshairSnapToData: false,
