@@ -55,6 +55,7 @@ let json = {
                 ChartType: "CategoryChart",
                 Description: "For Most Populated Countries",
                 Name: "Population Total",
+                VisibleRowsOnly: true,
                 XAxisColumnId: "Code",
                 XAxisExpression: {
                     ColumnValueExpressions: [] as IColumnValueExpression[],
@@ -106,6 +107,7 @@ let json = {
                 ChartType: "CategoryChart",
                 Description: "By Country",
                 Name: "Population Stats",
+                VisibleRowsOnly: true,
                 XAxisColumnId: "Code",
                 XAxisExpression: {
                     ColumnValueExpressions: [],
@@ -160,6 +162,7 @@ let json = {
                 ChartType: "CategoryChart",
                 Description: "GDP per Capita (K) vs. Debt per Capita (K)",
                 Name: "Global Finances",
+                VisibleRowsOnly: true,
                 XAxisColumnId: "Code",
                 XAxisExpression: {
                     ColumnValueExpressions: [] as IColumnValueExpression[],
@@ -212,6 +215,7 @@ let json = {
                 ChartType: "CategoryChart",
                 Description: "By Source: Coal, Renewable, Nuclear, Water, and Gas",
                 Name: "Electricity Production",
+                VisibleRowsOnly: true,
                 XAxisColumnId: "Code",
                 XAxisExpression: {
                     ColumnValueExpressions: [

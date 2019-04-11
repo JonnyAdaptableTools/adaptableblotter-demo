@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "@types/isomorphic-fetch": "0.0.34",
-    "adaptableblotter": "^3.3.4-beta.25",
+    "adaptableblotter": "^3.3.4-beta.33",
     "ag-grid-community": "^20.1.0",
     "ag-grid-enterprise": "^20.1.0",
     "fin-hypergrid-data-source-base": "^0.4.11",

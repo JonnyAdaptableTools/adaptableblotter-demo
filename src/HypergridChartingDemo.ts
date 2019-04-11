@@ -86,6 +86,7 @@ let json = {
                 ChartType: "CategoryChart",
                 Description: "",
                 Name: "Employee Sales",
+                VisibleRowsOnly: true,
                 XAxisColumnId: "Employee",
                 XAxisExpression: {
                     ColumnValueExpressions: [] as IColumnValueExpression[],
