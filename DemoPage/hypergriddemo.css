@@ -1,14 +1,20 @@
-﻿.hypergrid-container {
-    position: relative;
-    height: 75vh;
+﻿html,
+body,
+#__next {
+  height: 100%;
 }
 
-.finbar-horizontal div.thumb{
-    background-color: black !important;
-    height: 17px !important;
+.hypergrid-container {
+  position: relative;
+  height: 75vh;
 }
 
-.finbar-vertical div.thumb{
-    background-color: black !important;
-    width: 17px !important;
+.finbar-horizontal div.thumb {
+  background-color: black !important;
+  height: 17px !important;
+}
+
+.finbar-vertical div.thumb {
+  background-color: black !important;
+  width: 17px !important;
 }

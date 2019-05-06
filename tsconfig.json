@@ -1,11 +1,22 @@
-﻿{
-    "compilerOptions": {
-        "sourceMap": true,
-        "noImplicitAny": true,
-        "declaration": true,
-        "module": "commonjs",
-        "target": "es6",
-        "jsx": "react"
-    },
-  "include": ["src/**/*"]
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "lib": ["dom", "es2017"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "preserveConstEnums": true,
+    "removeComments": false,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "target": "esnext"
+  },
+  "include": ["./**/*.ts", "./**/*.tsx"],
+  "exclude": ["node_modules", "lib", ".next"]
 }

@@ -1,17 +1,19 @@
-html, body {
-height: 100%
+html,
+body,
+#__next {
+  height: 100%;
 }
 
-#grid{
-    height: 80%
+#grid {
+  height: 80%;
 }
 
-    .number-cell {
-        text-align: right;
-    }
-    .bool-cell {
-        text-align: center;
-    }
-    .home-button{
-        margin: 5
-    }
+.number-cell {
+  text-align: right;
+}
+.bool-cell {
+  text-align: center;
+}
+.home-button {
+  margin: 5;
+}

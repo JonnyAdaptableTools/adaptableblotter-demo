@@ -169,7 +169,7 @@ export function getGridOptions(columndefs: any, data: any): GridOptions {
     return gridOptions;
 }
 
-export function getAadaptableBlotterOptions(gridOptions: GridOptions, pk: string, blotterId: string, config: any): IAdaptableBlotterOptions {
+export function getAdaptableBlotterOptions(gridOptions: GridOptions, pk: string, blotterId: string, config: any): IAdaptableBlotterOptions {
     let blotterOptions: IAdaptableBlotterOptions = {
         primaryKey: pk,
         vendorGrid: gridOptions,
