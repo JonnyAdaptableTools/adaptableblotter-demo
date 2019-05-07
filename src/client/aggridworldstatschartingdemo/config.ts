@@ -1,3 +1,6 @@
+
+
+
 export default {
   Theme: {
     CurrentTheme: 'Light Theme'
@@ -23,9 +26,9 @@ export default {
         VisibleRowsOnly: true,
         XAxisColumnId: 'Code',
         XAxisExpression: {
-          ColumnValueExpressions: [] as IColumnValueExpression[],
-          FilterExpressions: [] as IFilterExpression[],
-          RangeExpressions: [] as IRangeExpression[]
+          ColumnValueExpressions: [] ,
+          FilterExpressions: [] ,
+          RangeExpressions: [] 
         },
         YAxisColumnIds: ['Population'],
         YAxisTotal: 'Sum',
@@ -40,9 +43,9 @@ export default {
         VisibleRowsOnly: true,
         XAxisColumnId: 'Code',
         XAxisExpression: {
-          ColumnValueExpressions: [] as IColumnValueExpression[],
-          FilterExpressions: [] as IFilterExpression[],
-          RangeExpressions: [] as IRangeExpression[]
+          ColumnValueExpressions: [] ,
+          FilterExpressions: [] ,
+          RangeExpressions: [] 
         },
         YAxisColumnIds: [
           'Urbanization (%)',
@@ -60,9 +63,9 @@ export default {
         VisibleRowsOnly: true,
         XAxisColumnId: 'Code',
         XAxisExpression: {
-          ColumnValueExpressions: [] as IColumnValueExpression[],
-          FilterExpressions: [] as IFilterExpression[],
-          RangeExpressions: [] as IRangeExpression[]
+          ColumnValueExpressions: [] ,
+          FilterExpressions: [] ,
+          RangeExpressions: [] 
         },
         YAxisColumnIds: ['GDP per Capita (K)', 'Debt per Capita (K)'],
         YAxisTotal: 'Sum',
@@ -116,8 +119,8 @@ export default {
               ]
             }
           ],
-          FilterExpressions: [] as IFilterExpression[],
-          RangeExpressions: [] as IRangeExpression[]
+          FilterExpressions: [] ,
+          RangeExpressions: [] 
         },
         YAxisColumnIds: [
           'Coal %',

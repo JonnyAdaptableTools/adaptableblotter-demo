@@ -58,9 +58,9 @@ let json = {
                 VisibleRowsOnly: true,
                 XAxisColumnId: "Code",
                 XAxisExpression: {
-                    ColumnValueExpressions: [] as IColumnValueExpression[],
-                    FilterExpressions: [] as IFilterExpression[],
-                    RangeExpressions: [] as IRangeExpression[]
+                    ColumnValueExpressions: [] ,
+                    FilterExpressions: [] ,
+                    RangeExpressions: [] 
                 },
                 YAxisColumnIds: [
                     "Population"
@@ -77,9 +77,9 @@ let json = {
                 VisibleRowsOnly: true,
                 XAxisColumnId: "Code",
                 XAxisExpression: {
-                    ColumnValueExpressions: [] as IColumnValueExpression[],
-                    FilterExpressions: [] as IFilterExpression[],
-                    RangeExpressions: [] as IRangeExpression[]
+                    ColumnValueExpressions: [] ,
+                    FilterExpressions: [] ,
+                    RangeExpressions: [] 
                 },
                 YAxisColumnIds: [
                     "Urbanization (%)",
@@ -98,9 +98,9 @@ let json = {
                 VisibleRowsOnly: true,
                 XAxisColumnId: "Code",
                 XAxisExpression: {
-                    ColumnValueExpressions: [] as IColumnValueExpression[],
-                    FilterExpressions: [] as IFilterExpression[],
-                    RangeExpressions: [] as IRangeExpression[]
+                    ColumnValueExpressions: [] ,
+                    FilterExpressions: [] ,
+                    RangeExpressions: [] 
                 },
                 YAxisColumnIds: [
                     "GDP per Capita (K)",
@@ -157,8 +157,8 @@ let json = {
                             ]
                         }
                     ],
-                    FilterExpressions: [] as IFilterExpression[],
-                    RangeExpressions: [] as IRangeExpression[]
+                    FilterExpressions: [] ,
+                    RangeExpressions: [] 
                 },
                 YAxisColumnIds: [
                     "Coal %",

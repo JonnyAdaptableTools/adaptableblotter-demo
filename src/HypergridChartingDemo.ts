@@ -89,9 +89,9 @@ let json = {
                 VisibleRowsOnly: true,
                 XAxisColumnId: "Employee",
                 XAxisExpression: {
-                    ColumnValueExpressions: [] as IColumnValueExpression[],
-                    FilterExpressions: [] as IFilterExpression[],
-                    RangeExpressions: [] as IRangeExpression[]
+                    ColumnValueExpressions: [] ,
+                    FilterExpressions: [] ,
+                    RangeExpressions: [] 
                 },
                 YAxisColumnIds: [
                     "InvoicedCost",

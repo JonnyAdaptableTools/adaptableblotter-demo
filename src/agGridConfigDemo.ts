@@ -63,8 +63,8 @@ let json = {
                     "InvoicedCost"
                 ],
                 Expression: {
-                    ColumnValueExpressions: [] as IColumnValueExpression[],
-                    FilterExpressions: [] as IFilterExpression[],
+                    ColumnValueExpressions: [],
+                    FilterExpressions: [],
                     RangeExpressions: [
                         {
                             ColumnId: "Freight",
@@ -104,7 +104,7 @@ let json = {
                 },
                 ConditionalStyleScope: "Column",
                 Expression: {
-                    ColumnValueExpressions: [] as IColumnValueExpression[],
+                    ColumnValueExpressions: [],
                     FilterExpressions: [
                         {
                             ColumnId: "ChangeLastOrder",
@@ -113,7 +113,7 @@ let json = {
                             ]
                         }
                     ],
-                    RangeExpressions: [] as IRangeExpression[]
+                    RangeExpressions: [] 
                 },
             },
             {
@@ -123,7 +123,7 @@ let json = {
                 },
                 ConditionalStyleScope: "Column",
                 Expression: {
-                    ColumnValueExpressions: [] as IColumnValueExpression[],
+                    ColumnValueExpressions: [],
                     FilterExpressions: [
                         {
                             ColumnId: "ChangeLastOrder",
@@ -132,7 +132,7 @@ let json = {
                             ]
                         }
                     ],
-                    RangeExpressions: [] as IRangeExpression[]
+                    RangeExpressions: [] 
                 },
             },
             {
@@ -144,8 +144,8 @@ let json = {
                 },
                 ConditionalStyleScope: "Row",
                 Expression: {
-                    ColumnValueExpressions: [] as IColumnValueExpression[],
-                    FilterExpressions: [] as IFilterExpression[],
+                    ColumnValueExpressions: [],
+                    FilterExpressions: [],
                     RangeExpressions: [
                         {
                             ColumnId: "InvoicedCost",

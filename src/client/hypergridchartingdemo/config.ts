@@ -1,8 +1,5 @@
-import { IColumnValueExpression } from 'adaptableblotter/Utilities/Interface/Expression/IColumnValueExpression';
 
-import { IFilterExpression } from 'adaptableblotter/Utilities/Interface/Expression/IFilterExpression';
 
-import { IRangeExpression } from 'adaptableblotter/Utilities/Interface/Expression/IRangeExpression';
 
 export default {
   Dashboard: {
@@ -26,9 +23,9 @@ export default {
         VisibleRowsOnly: true,
         XAxisColumnId: 'Employee',
         XAxisExpression: {
-          ColumnValueExpressions: [] as IColumnValueExpression[],
-          FilterExpressions: [] as IFilterExpression[],
-          RangeExpressions: [] as IRangeExpression[]
+          ColumnValueExpressions: [] ,
+          FilterExpressions: [] ,
+          RangeExpressions: [] 
         },
         YAxisColumnIds: ['InvoicedCost', 'OrderCost'],
         YAxisTotal: 'Sum',

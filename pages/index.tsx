@@ -194,15 +194,9 @@ export default () => {
             </LinkButton>
           </td>
           <td>
-            <button
-              style={{ height: 45, width: 150 }}
-              className="btn btn-default"
-              onClick={() =>
-                (location.href = 'aggridworldstatschartingdemo.html')
-              }
-            >
-              <h5>World Stats Charts</h5>
-            </button>
+            <LinkButton href="/aggridworldstatschartingdemo" prefetch>
+              <h5>World Charts</h5>
+            </LinkButton>
           </td>
         </tr>
       </table>
@@ -220,15 +214,9 @@ export default () => {
       <table style={{ borderSpacing: '20px 5px', borderCollapse: 'separate' }}>
         <tr>
           <td>
-            <button
-              style={{ height: 45, width: 150 }}
-              className="btn btn-default"
-              onClick={() => (location.href = 'aggridgroupingdemo.html')}
-            >
-              <span>
-                <h5>Grouping Demo</h5>
-              </span>
-            </button>
+            <LinkButton href="/aggridgroupingdemo" prefetch>
+              <h5>Grouping Demo</h5>
+            </LinkButton>
           </td>
         </tr>
       </table>

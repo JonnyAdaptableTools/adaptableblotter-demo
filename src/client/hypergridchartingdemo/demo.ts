@@ -22,9 +22,9 @@ import {
 
 import data from '../../../DataSets/Json/NorthwindOrders.json';
 
-// import jsonConfig from './config';
+ import jsonConfig from './config';
 
-const jsonConfig = {}; // TODO see why the config in the file is not rendering any chart
+//const jsonConfig = {}; // TODO see why the config in the file is not rendering any chart
 
 export class Demo {
   private adaptableblotter: IAdaptableBlotter;
