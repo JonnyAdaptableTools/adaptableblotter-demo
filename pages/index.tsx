@@ -220,6 +220,8 @@ export default () => {
           </td>
         </tr>
       </table>
+
+      {/* 
       <p />
       <b>2 Grid Demo</b>
       <br />
@@ -241,6 +243,7 @@ export default () => {
           </td>
         </tr>
       </table>
+      */}
       <p />
       <b>Performance</b>
       <br />
