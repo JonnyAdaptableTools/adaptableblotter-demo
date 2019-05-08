@@ -86,9 +86,9 @@ export function roundTo4Dp(val: number): number {
 }
 export function getRandomItem(array: any[], max?: number): any {
   if (max) {
-    return array[this.generateRandomInt(0, Math.min(max, array.length - 1))];
+    return array[generateRandomInt(0, Math.min(max, array.length - 1))];
   } else {
-    return array[this.generateRandomInt(0, array.length - 1)];
+    return array[generateRandomInt(0, array.length - 1)];
   }
 }
 
@@ -101,5 +101,5 @@ export function checkPriceIsPostive(numberToCheck: number): number {
 }
 
 export function getdemolicencekey(): string {
-  return 'inf5835u-yt5a4evp1-r1oq9nclf1'; //, ‘Demo Site Licence’;
+  return process.env.VALID_BLOTTER_LICENSE as string;
 }
