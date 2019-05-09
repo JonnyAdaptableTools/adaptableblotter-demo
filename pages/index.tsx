@@ -118,7 +118,7 @@ export default () => {
         target="_blank"
       >
         Entitlements
-      </a>
+      </a>{' '}
       and permissions you need to ensure users only have access to the
       functionality they require.
       <br />
@@ -248,10 +248,10 @@ export default () => {
       <br />
       <p>
         This demo is designed to allow you to evaluate AdaptableBlotter.JS
-        running under 'normal' conditions. Use
+        running under 'normal' conditions. Use{' '}
         <a href="https://perf.adaptableblotter.com" target="_blank">
           Performance Monitor
-        </a>
+        </a>{' '}
         to test AdaptableBlotter.JS under more extreme conditions of multiple
         conditions and searches, tens of thousands of rows, and 500,000 flashing
         and data updates per second.{' '}
@@ -264,7 +264,7 @@ export default () => {
           <a href="https://youtu.be/6Pf7BDUoe0I" target="_blank">
             video
           </a>{' '}
-          shows AdaptableBlotter.JS running in the
+          shows AdaptableBlotter.JS running in the{' '}
           <a href="https://openfin.co" target="_blank">
             OpenFin
           </a>{' '}
@@ -321,7 +321,7 @@ export default () => {
         simulates a life-like trading application with 3 instances of the
         Adaptable Blotter (for Trade, Price and Position), a chart window and a
         news feed.
-        <br /> By leveraging the
+        <br /> By leveraging the{' '}
         <a href="https://www.chartiq.com/finsemble/" target="_blank">
           Finsemble
         </a>{' '}
@@ -343,7 +343,7 @@ export default () => {
     </table>
     */}
       <p>
-        Read more on the features of this demo at this
+        Read more on the features of this demo at this{' '}
         <a
           href="https://www.linkedin.com/pulse/vive-la-html5-revolution-jonny-wolfson/"
           target="_blank"
@@ -356,7 +356,7 @@ export default () => {
         <b>Installation and Integration</b>
         <br />
         For information on installing and running AdaptableBlotter.JS please
-        read the
+        read the{' '}
         <a
           href="https://adaptabletools.zendesk.com/hc/en-us/sections/360003854892-Integration"
           target="_blank"
@@ -368,11 +368,11 @@ export default () => {
       <p>
         <b>Help</b>
         <br />
-        If you require further information please visit our
+        If you require further information please visit our{' '}
         <a href="http://adaptabletools.com" target="_blank">
           Website
         </a>{' '}
-        or use the
+        or use the{' '}
         <a href="https://adaptabletools.zendesk.com/hc/en-us" target="_blank">
           Online Help
         </a>
@@ -390,12 +390,12 @@ export default () => {
         If you would like to do a POC using the Adaptable Blotter, please get in
         touch.
         <br />
-        For more information please see the LICENSE file or contact
+        For more information please see the LICENSE file or contact{' '}
         <a href="mailto:support@adaptabletools.com">Adaptable Tools Support</a>.
       </p>
       <p>
         <b>Source Code</b>
-        <br /> The Repository for the AdaptableBlotter.JS Demo is located in
+        <br /> The Repository for the AdaptableBlotter.JS Demo is located in{' '}
         <a
           href="https://github.com/jonnyadaptabletools/adaptableblotter-demo"
           target="_blank"
