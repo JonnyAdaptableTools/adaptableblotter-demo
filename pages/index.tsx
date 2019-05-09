@@ -16,7 +16,7 @@ const LinkButton = ({
   prefetch
 }: {
   href: string;
-  prefetch: boolean;
+  prefetch?: boolean;
   children: ReactNode;
 }) => {
   return (
@@ -220,7 +220,6 @@ export default () => {
           </td>
         </tr>
       </table>
-
       {/* 
       <p />
       <b>2 Grid Demo</b>

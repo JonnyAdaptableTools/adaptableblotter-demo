@@ -245,7 +245,7 @@ ModelManifest.xml
 .fake/
 
 # Ignores compiled TypeScript files
-/dist/**/*.*
+/dist
 
 .next
 .env
