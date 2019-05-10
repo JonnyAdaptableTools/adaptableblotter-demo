@@ -1,0 +1,10 @@
+.npmrc
+node_modules/
+.vscode/
+.next
+.awcache
+dist
+.env
+**/*.d.ts
+ExtLibs
+DataSets
