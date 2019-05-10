@@ -201,6 +201,9 @@ export default () => {
         </tr>
       </table>
       <p />
+
+
+      
       <b>Grouping Demo</b>
       <br />
       AdaptableBlotter.JS does not provide grouping or aggregation capabilities
