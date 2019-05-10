@@ -9,7 +9,7 @@ import {
   setUpAgGridLicence,
   getWorldStatsSchema,
   getGridOptions,
-  getAdaptableBlotterOptions
+  getAdaptableBlotterOptions,
 } from '../../HelperAgGrid';
 
 import AdaptableBlotter from 'adaptableblotter/agGrid';

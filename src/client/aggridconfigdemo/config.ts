@@ -1,4 +1,3 @@
-
 export default {
   Dashboard: {
     VisibleToolbars: ['SmartEdit', 'Export', 'Layout'],
@@ -6,14 +5,14 @@ export default {
       'Dashboard',
       'QuickSearch',
       'ColumnChooser',
-      'AdvancedSearch'
+      'AdvancedSearch',
     ],
     Zoom: 0.9,
     UseSingleColourForButtons: true,
-    ShowSystemStatusButton: false
+    ShowSystemStatusButton: false,
   },
   SmartEdit: {
-    SmartEditValue: 10
+    SmartEditValue: 10,
   },
   Export: {
     CurrentReport: 'High Freight',
@@ -27,11 +26,11 @@ export default {
           'Freight',
           'Employee',
           'PackageCost',
-          'InvoicedCost'
+          'InvoicedCost',
         ],
         Expression: {
-          ColumnValueExpressions: [] ,
-          FilterExpressions: [] ,
+          ColumnValueExpressions: [],
+          FilterExpressions: [],
           RangeExpressions: [
             {
               ColumnId: 'Freight',
@@ -41,69 +40,73 @@ export default {
                   Operand1Type: 'Value',
                   Operand2: '',
                   Operand2Type: 'Value',
-                  Operator: 'GreaterThan'
-                }
-              ]
-            }
-          ]
-        }
-      }
-    ]
+                  Operator: 'GreaterThan',
+                },
+              ],
+            },
+          ],
+        },
+      },
+    ],
   },
   CustomSort: {
     Customsorts: [
       {
         ColumnId: 'Employee',
-        SortedValues: ['Margaret Peacock', 'Steven Buchanan', 'Janet Leverling']
-      }
-    ]
+        SortedValues: [
+          'Margaret Peacock',
+          'Steven Buchanan',
+          'Janet Leverling',
+        ],
+      },
+    ],
   },
   ConditionalStyle: {
     ConditionalStyles: [
       {
         ColumnId: 'ChangeLastOrder',
         Style: {
-          ForeColor: '#008000'
+          ForeColor: '#008000',
         },
         ConditionalStyleScope: 'Column',
         Expression: {
-          ColumnValueExpressions: [] ,
+          ColumnValueExpressions: [],
           FilterExpressions: [
             {
               ColumnId: 'ChangeLastOrder',
-              Filters: ['Positive']
-            }
+              Filters: ['Positive'],
+            },
           ],
-          RangeExpressions: [] 
-        }
+          RangeExpressions: [],
+        },
       },
       {
         ColumnId: 'ChangeLastOrder',
         Style: {
-          ForeColor: '#ff0000'
+          ForeColor: '#ff0000',
         },
         ConditionalStyleScope: 'Column',
         Expression: {
-          ColumnValueExpressions: [] ,
+          ColumnValueExpressions: [],
           FilterExpressions: [
             {
               ColumnId: 'ChangeLastOrder',
-              Filters: ['Negative']
-            }
+              Filters: ['Negative'],
+            },
           ],
-          RangeExpressions: [] 
-        }
+          RangeExpressions: [],
+        },
       },
       {
         Style: {
           BackColor: '#ffffcc',
           FontStyle: 'Italic',
-          ForeColor: '#000000'
+          ForeColor: '#000000',
         },
         ConditionalStyleScope: 'Row',
         Expression: {
-          ColumnValueExpressions: [] ,
-          FilterExpressions: [] ,
+          ColumnValueExpressions: [],
+          FilterExpressions: [],
           RangeExpressions: [
             {
               ColumnId: 'InvoicedCost',
@@ -113,14 +116,14 @@ export default {
                   Operand1Type: 'Value',
                   Operand2: '',
                   Operand2Type: 'Value',
-                  Operator: 'GreaterThan'
-                }
-              ]
-            }
-          ]
-        }
-      }
-    ]
+                  Operator: 'GreaterThan',
+                },
+              ],
+            },
+          ],
+        },
+      },
+    ],
   },
   Layout: {
     CurrentLayout: 'Orders View',
@@ -138,10 +141,10 @@ export default {
           'OrderCost',
           'PackageCost',
           'ItemCost',
-          'ItemCount'
+          'ItemCount',
         ],
         GridSorts: [],
-        Name: 'Orders View'
+        Name: 'Orders View',
       },
       {
         Columns: [
@@ -153,16 +156,16 @@ export default {
           'ShipCity',
           'ShipCountry',
           'ShippedDate',
-          'CustomerReference'
+          'CustomerReference',
         ],
         GridSorts: [
           {
             Column: 'ShipName',
-            SortOrder: 'Ascending'
-          }
+            SortOrder: 'Ascending',
+          },
         ],
-        Name: 'Shipping View'
-      }
-    ]
-  }
+        Name: 'Shipping View',
+      },
+    ],
+  },
 };

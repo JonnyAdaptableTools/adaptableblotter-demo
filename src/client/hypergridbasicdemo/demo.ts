@@ -2,7 +2,7 @@ import AdaptableBlotter from 'adaptableblotter/Hypergrid';
 
 import {
   getSchema,
-  setNorthwindHyperGridProperties
+  setNorthwindHyperGridProperties,
 } from '../../HelperHypergrid';
 
 import * as Helper from '../../Helper';
@@ -17,11 +17,10 @@ import '../../../DemoPage/hypergriddemo.css';
 
 import {
   IAdaptableBlotter,
-  IAdaptableBlotterOptions
+  IAdaptableBlotterOptions,
 } from 'adaptableblotter/types';
 
 import data from '../../../DataSets/Json/NorthwindOrders.json';
-
 
 export class Demo {
   private adaptableblotter: IAdaptableBlotter;
@@ -31,7 +30,7 @@ export class Demo {
     let schema: any = getSchema(data);
     this.grid = new fin.Hypergrid('#grid', {
       data: data,
-      schema: schema
+      schema: schema,
     });
 
     setNorthwindHyperGridProperties(this.grid);
@@ -52,8 +51,8 @@ export class Demo {
       chartOptions: {
         displayOnStartUp: true,
         showModal: false,
-        pieChartMaxItems: 50
-      }
+        pieChartMaxItems: 50,
+      },
     };
 
     this.adaptableblotter = new AdaptableBlotter(blotterOptions);

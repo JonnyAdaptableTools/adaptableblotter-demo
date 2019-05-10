@@ -6,7 +6,7 @@ const DynamicComponent = dynamic(
   () => import('../../src/client/hypergridbasicdemo'),
   {
     loading: () => null,
-    ssr: false
+    ssr: false,
   }
 );
 
@@ -17,7 +17,7 @@ export default () => {
       description={
         <div>
           <h4>AdaptableBlotter.JS - Basic Demo (Hypergrid)</h4>
-          </div>
+        </div>
       }
     >
       <DynamicComponent />

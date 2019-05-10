@@ -8,7 +8,7 @@ import {
   setUpAgGridLicence,
   getBasicNorthwindColumnSchema,
   getGridOptions,
-  getAdaptableBlotterOptions
+  getAdaptableBlotterOptions,
 } from '../../HelperAgGrid';
 
 import AdaptableBlotter from 'adaptableblotter/agGrid';

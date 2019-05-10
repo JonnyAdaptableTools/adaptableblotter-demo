@@ -1,12 +1,10 @@
+div.topBar {
+  background-color: white;
+  height: 65px;
+  text-align: left;
+}
 
-    div.topBar {
-        background-color: white;
-        height: 65px;
-        text-align: left;          
-    }
-    
-    h4 {
-        display: inline;
-        vertical-align: middle
-    }
-
+h4 {
+  display: inline;
+  vertical-align: middle;
+}

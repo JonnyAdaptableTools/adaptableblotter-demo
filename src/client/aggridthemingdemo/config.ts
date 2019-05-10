@@ -1,24 +1,19 @@
-
 export default {
   Theme: {
-    CurrentTheme: "Dark Theme"
+    CurrentTheme: 'Dark Theme',
   },
   Dashboard: {
-    VisibleToolbars: [
-      "SmartEdit",
-      "Export",
-      "BulkUpdate"
-    ],
+    VisibleToolbars: ['SmartEdit', 'Export', 'BulkUpdate'],
     VisibleButtons: [
-      "About",
-      "Dashboard",
-      "QuickSearch",
-      "ColumnChooser",
-      "AdvancedSearch"
+      'About',
+      'Dashboard',
+      'QuickSearch',
+      'ColumnChooser',
+      'AdvancedSearch',
     ],
-    Zoom: "0.9",
+    Zoom: '0.9',
     UseSingleColourForButtons: true,
-    DashboardVisibility: "Minimised",
-    ShowSystemStatusButton: false
-  }
+    DashboardVisibility: 'Minimised',
+    ShowSystemStatusButton: false,
+  },
 };

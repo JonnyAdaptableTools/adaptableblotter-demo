@@ -6,7 +6,7 @@ const DynamicComponent = dynamic(
   () => import('../../src/client/aggridthemingdemo'),
   {
     loading: () => null,
-    ssr: false
+    ssr: false,
   }
 );
 
@@ -18,7 +18,8 @@ export default () => {
         <div>
           <h4>AdaptableBlotter.JS - Predefined Config Demo</h4>
           <p>
-            Blotter with a Dark Theme and the Dashboard minimised (and a different default set of toolbars).
+            Blotter with a Dark Theme and the Dashboard minimised (and a
+            different default set of toolbars).
           </p>
         </div>
       }

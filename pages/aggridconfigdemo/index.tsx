@@ -6,7 +6,7 @@ const DynamicComponent = dynamic(
   () => import('../../src/client/aggridconfigdemo'),
   {
     loading: () => null,
-    ssr: false
+    ssr: false,
   }
 );
 

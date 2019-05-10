@@ -1,11 +1,11 @@
 ﻿{
-    "compilerOptions": {
-        "sourceMap": true,
-        "noImplicitAny": true,
-        "declaration": true,
-        "module": "commonjs",
-        "target": "es6",
-        "jsx": "react"
-    },
+  "compilerOptions": {
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "declaration": true,
+    "module": "commonjs",
+    "target": "es6",
+    "jsx": "react"
+  },
   "include": ["src/**/*"]
 }

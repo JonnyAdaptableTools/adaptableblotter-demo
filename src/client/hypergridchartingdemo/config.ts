@@ -1,6 +1,3 @@
-
-
-
 export default {
   Dashboard: {
     VisibleToolbars: ['SmartEdit', 'Export', 'Chart', 'Theme'],
@@ -9,9 +6,9 @@ export default {
       'Dashboard',
       'QuickSearch',
       'ColumnChooser',
-      'AdvancedSearch'
+      'AdvancedSearch',
     ],
-    Zoom: '0.9'
+    Zoom: '0.9',
   },
   Chart: {
     CurrentChartName: 'Employee Sales',
@@ -23,9 +20,9 @@ export default {
         VisibleRowsOnly: true,
         XAxisColumnId: 'Employee',
         XAxisExpression: {
-          ColumnValueExpressions: [] ,
-          FilterExpressions: [] ,
-          RangeExpressions: [] 
+          ColumnValueExpressions: [],
+          FilterExpressions: [],
+          RangeExpressions: [],
         },
         YAxisColumnIds: ['InvoicedCost', 'OrderCost'],
         YAxisTotal: 'Sum',
@@ -62,8 +59,8 @@ export default {
           YAxisLabelScale: 'Linear',
           YAxisLabelVisibility: 'visible',
           YAxisTitle: '',
-          YAxisTitleColor: ''
-        }
+          YAxisTitleColor: '',
+        },
       },
       {
         ChartType: 'PieChart',
@@ -80,9 +77,9 @@ export default {
           ShowAsDoughnut: true,
           SliceLabelsMapping: 'Name',
           SliceLegendMapping: 'ValueAndName',
-          SliceValuesMapping: 'Value'
-        }
-      }
-    ]
-  }
+          SliceValuesMapping: 'Value',
+        },
+      },
+    ],
+  },
 };

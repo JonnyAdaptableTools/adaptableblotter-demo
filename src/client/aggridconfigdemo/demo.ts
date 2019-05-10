@@ -14,7 +14,7 @@ import '../../../DemoPage/aggriddemo.css';
 
 import {
   IAdaptableBlotter,
-  IAdaptableBlotterOptions
+  IAdaptableBlotterOptions,
 } from 'adaptableblotter/types';
 
 import data from '../../../DataSets/Json/NorthwindOrders.json';

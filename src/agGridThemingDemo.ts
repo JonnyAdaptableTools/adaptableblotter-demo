@@ -1,51 +1,56 @@
 import * as Helper from './Helper';
 import { Grid } from 'ag-grid-community/dist/lib/grid';
 import { GridOptions } from 'ag-grid-community/dist/lib/entities/gridOptions';
-import * as HelperAgGrid from "./HelperAgGrid"
-import { IAdaptableBlotter, IAdaptableBlotterOptions } from 'adaptableblotter/types'
+import * as HelperAgGrid from './HelperAgGrid';
+import {
+  IAdaptableBlotter,
+  IAdaptableBlotterOptions,
+} from 'adaptableblotter/types';
 
 export class agGridThemingDemo {
-    private adaptableblotter: IAdaptableBlotter
-    constructor() {
-
-
-        let data: any[]
-        Helper.getDataFromJson("NorthwindOrders.json").then(json => data = json)
-            .then(data => Helper.MakeAllRecordsColumnsDateProperDates(data)).then(() => {
-                HelperAgGrid.setUpAgGridLicence();
-                 var columndefs = HelperAgGrid.getBasicNorthwindColumnSchema();
-                var gridOptions = HelperAgGrid.getGridOptions(columndefs, data);
-                var eGridDiv = document.getElementById("grid");
-                let grid = new Grid(eGridDiv, gridOptions);
-                // HelperAgGrid.startTickingDataagGrid(gridOptions);
-                let configUrl = 'src/configs/themeconfig.json';
-                let blotterOptions: IAdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptions(gridOptions, "OrderId", "Theming Demo", json);
-                this.adaptableblotter = new (<any>window).adaptableblotteraggrid.AdaptableBlotter(blotterOptions);
-            })
-    }
+  private adaptableblotter: IAdaptableBlotter;
+  constructor() {
+    let data: any[];
+    Helper.getDataFromJson('NorthwindOrders.json')
+      .then(json => (data = json))
+      .then(data => Helper.MakeAllRecordsColumnsDateProperDates(data))
+      .then(() => {
+        HelperAgGrid.setUpAgGridLicence();
+        var columndefs = HelperAgGrid.getBasicNorthwindColumnSchema();
+        var gridOptions = HelperAgGrid.getGridOptions(columndefs, data);
+        var eGridDiv = document.getElementById('grid');
+        let grid = new Grid(eGridDiv, gridOptions);
+        // HelperAgGrid.startTickingDataagGrid(gridOptions);
+        let configUrl = 'src/configs/themeconfig.json';
+        let blotterOptions: IAdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptions(
+          gridOptions,
+          'OrderId',
+          'Theming Demo',
+          json
+        );
+        this.adaptableblotter = new (<any>(
+          window
+        )).adaptableblotteraggrid.AdaptableBlotter(blotterOptions);
+      });
+  }
 }
 
 let json = {
-    Theme: {
-        CurrentTheme: "Dark Theme"
-    },
-    Dashboard: {
-        VisibleToolbars: [
-            "SmartEdit",
-            "Export",
-            "BulkUpdate"
-        ],
-        VisibleButtons: [
-            "About",
-            "Dashboard",
-            "QuickSearch",
-            "ColumnChooser",
-            "AdvancedSearch"
-        ],
-        Zoom: "0.9",
-        UseSingleColourForButtons: true,
-        DashboardVisibility: "Minimised",
-        ShowSystemStatusButton: false
-    }
-}
-
+  Theme: {
+    CurrentTheme: 'Dark Theme',
+  },
+  Dashboard: {
+    VisibleToolbars: ['SmartEdit', 'Export', 'BulkUpdate'],
+    VisibleButtons: [
+      'About',
+      'Dashboard',
+      'QuickSearch',
+      'ColumnChooser',
+      'AdvancedSearch',
+    ],
+    Zoom: '0.9',
+    UseSingleColourForButtons: true,
+    DashboardVisibility: 'Minimised',
+    ShowSystemStatusButton: false,
+  },
+};

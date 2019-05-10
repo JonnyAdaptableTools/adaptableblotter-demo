@@ -1,9 +1,6 @@
-
-
-
 export default {
   Theme: {
-    CurrentTheme: 'Light Theme'
+    CurrentTheme: 'Light Theme',
   },
   Dashboard: {
     VisibleToolbars: ['SmartEdit', 'Export', 'Chart', 'Theme'],
@@ -12,9 +9,9 @@ export default {
       'Dashboard',
       'QuickSearch',
       'ColumnChooser',
-      'AdvancedSearch'
+      'AdvancedSearch',
     ],
-    Zoom: '0.9'
+    Zoom: '0.9',
   },
   Chart: {
     CurrentChartName: 'Population Stats',
@@ -26,15 +23,15 @@ export default {
         VisibleRowsOnly: true,
         XAxisColumnId: 'Code',
         XAxisExpression: {
-          ColumnValueExpressions: [] ,
-          FilterExpressions: [] ,
-          RangeExpressions: [] 
+          ColumnValueExpressions: [],
+          FilterExpressions: [],
+          RangeExpressions: [],
         },
         YAxisColumnIds: ['Population'],
         YAxisTotal: 'Sum',
         ChartProperties: {
-          CategoryChartType: 'Column'
-        }
+          CategoryChartType: 'Column',
+        },
       },
       {
         ChartType: 'CategoryChart',
@@ -43,18 +40,18 @@ export default {
         VisibleRowsOnly: true,
         XAxisColumnId: 'Code',
         XAxisExpression: {
-          ColumnValueExpressions: [] ,
-          FilterExpressions: [] ,
-          RangeExpressions: [] 
+          ColumnValueExpressions: [],
+          FilterExpressions: [],
+          RangeExpressions: [],
         },
         YAxisColumnIds: [
           'Urbanization (%)',
           'Birth Rate',
           'Death Rate',
-          'Life Expectancy'
+          'Life Expectancy',
         ],
         YAxisTotal: 'Sum',
-        ChartProperties: {}
+        ChartProperties: {},
       },
       {
         ChartType: 'CategoryChart',
@@ -63,15 +60,15 @@ export default {
         VisibleRowsOnly: true,
         XAxisColumnId: 'Code',
         XAxisExpression: {
-          ColumnValueExpressions: [] ,
-          FilterExpressions: [] ,
-          RangeExpressions: [] 
+          ColumnValueExpressions: [],
+          FilterExpressions: [],
+          RangeExpressions: [],
         },
         YAxisColumnIds: ['GDP per Capita (K)', 'Debt per Capita (K)'],
         YAxisTotal: 'Sum',
         ChartProperties: {
-          CategoryChartType: 'Column'
-        }
+          CategoryChartType: 'Column',
+        },
       },
       {
         ChartType: 'CategoryChart',
@@ -98,7 +95,7 @@ export default {
                 'Mexico',
                 'Spain',
                 'Australia',
-                'Poland'
+                'Poland',
               ],
               ColumnRawValues: [
                 'United States',
@@ -115,24 +112,24 @@ export default {
                 'Mexico',
                 'Spain',
                 'Australia',
-                'Poland'
-              ]
-            }
+                'Poland',
+              ],
+            },
           ],
-          FilterExpressions: [] ,
-          RangeExpressions: [] 
+          FilterExpressions: [],
+          RangeExpressions: [],
         },
         YAxisColumnIds: [
           'Coal %',
           'Renewable %',
           'Nuclear %',
           'Water %',
-          'Gas %'
+          'Gas %',
         ],
         YAxisTotal: 'Sum',
         ChartProperties: {
-          CategoryChartType: 'Column'
-        }
+          CategoryChartType: 'Column',
+        },
       },
       {
         ChartType: 'PieChart',
@@ -142,7 +139,7 @@ export default {
         SecondaryColumnId: 'Population',
         SecondaryColumnOperation: 'Sum',
         VisibleRowsOnly: true,
-        ChartProperties: {}
+        ChartProperties: {},
       },
       {
         ChartType: 'PieChart',
@@ -153,9 +150,9 @@ export default {
         SecondaryColumnOperation: 'Sum',
         VisibleRowsOnly: true,
         ChartProperties: {
-          ShowAsDoughnut: false
-        }
-      }
-    ]
-  }
+          ShowAsDoughnut: false,
+        },
+      },
+    ],
+  },
 };

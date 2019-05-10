@@ -13,7 +13,7 @@ const versiondate = new Date().toISOString().slice(0, 10);
 const LinkButton = ({
   href,
   children,
-  prefetch
+  prefetch,
 }: {
   href: string;
   prefetch?: boolean;
@@ -201,9 +201,6 @@ export default () => {
         </tr>
       </table>
       <p />
-
-
-      
       <b>Grouping Demo</b>
       <br />
       AdaptableBlotter.JS does not provide grouping or aggregation capabilities

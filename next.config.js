@@ -8,7 +8,7 @@ const withTypescript = require('@zeit/next-typescript');
 
 let nextConfig = withCSS(
   Object.assign({}, withImages(), {
-    cssModules: false
+    cssModules: false,
   })
 );
 nextConfig = withTypescript(withFonts(nextConfig));
@@ -24,8 +24,8 @@ module.exports = Object.assign({}, nextConfig, {
       // Read the .env file
       new Dotenv({
         path: path.join(__dirname, '.env'),
-        systemvars: false
-      })
+        systemvars: false,
+      }),
     ];
 
     if (typeof nextConfig.webpack === 'function') {
@@ -33,5 +33,5 @@ module.exports = Object.assign({}, nextConfig, {
     }
 
     return config;
-  }
+  },
 });
