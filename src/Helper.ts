@@ -63,6 +63,7 @@ export function manageDomDataSetSelectAndReturnSelectDataset(
     c.value = x.name;
     select.options.add(c);
   });
+
   let currentDataSet = localStorage.getItem('dataset_select');
   if (!currentDataSet || currentDataSet == 'Select') {
     return null;

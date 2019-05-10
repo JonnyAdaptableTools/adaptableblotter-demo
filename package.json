@@ -25,9 +25,24 @@
     "next-fonts": "^0.17.0",
     "next-images": "^1.1.1",
     "typescript": "^3.4.5",
-    "webpack": "^4.30.0"
+    "webpack": "^4.30.0",
+    "husky": ">=1",
+    "lint-staged": ">=8",
+    "prettier": "^1.17.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "packages/**/*.{js,jsx,ts,tsx,json,css,scss}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "scripts": {
+    "pretty": "prettier --write \"packages/**/*.{js,jsx,ts,tsx,json,css,scss}\"",
     "buildDataSets": "node buildJsonDataset.js",
     "openfin": "openfin -l -c app-dev.json",
     "dev": "next",
