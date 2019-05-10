@@ -36,13 +36,13 @@
     }
   },
   "lint-staged": {
-    "packages/**/*.{js,jsx,ts,tsx,json,css,scss}": [
+    "**/*.{js,jsx,ts,tsx,json,css,scss}": [
       "prettier --write",
       "git add"
     ]
   },
   "scripts": {
-    "pretty": "prettier --write \"packages/**/*.{js,jsx,ts,tsx,json,css,scss}\"",
+    "pretty": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss}\"",
     "buildDataSets": "node buildJsonDataset.js",
     "openfin": "openfin -l -c app-dev.json",
     "dev": "next",
