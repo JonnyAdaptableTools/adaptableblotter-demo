@@ -9,7 +9,10 @@ class MyDocument extends Document {
   render() {
     return (
       <Html className="ab--theme-light">
-        <body>
+        <Head>
+          <style>{`body { margin: 0 } /* custom! */`}</style>
+        </Head>
+        <body className="custom_class">
           <Main />
           <NextScript />
         </body>
