@@ -1,6 +1,8 @@
 import * as Helper from '../../Helper';
 
 import { Grid } from 'ag-grid-community/dist/lib/grid';
+import 'adaptableblotter/base.css';
+import 'adaptableblotter/themes/light.css';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-balham.css';
 
@@ -13,9 +15,6 @@ import {
 
 import AdaptableBlotter from 'adaptableblotter/agGrid';
 import { IAdaptableBlotterOptions } from 'adaptableblotter/types';
-
-import 'adaptableblotter/base.css';
-import 'adaptableblotter/themes/light.css';
 
 import '../../../DemoPage/aggriddemo.css';
 
