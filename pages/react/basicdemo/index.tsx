@@ -1,12 +1,15 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 
-const DynamicComponent = dynamic(() => import('./index-demo'), {
-  loading: () => null,
-  ssr: false,
-});
+const DynamicComponent = dynamic(
+  () => import('../../../src/client/react/basic-demo/index-demo'),
+  {
+    loading: () => null,
+    ssr: false,
+  }
+);
 
-import ReactDemoPage from '../ReactDemoPage';
+import ReactDemoPage from '../../../src/ReactDemoPage';
 
 export default () => {
   return (
