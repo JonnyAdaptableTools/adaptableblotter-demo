@@ -21,7 +21,6 @@ import '../../../DemoPage/aggriddemo.css';
 
 import json from '../../../DataSets/Json/NorthwindOrders.json';
 
-console.log(process.env.TEST);
 export class Demo {
   constructor() {
     Helper.MakeAllRecordsColumnsDateProperDates(json);

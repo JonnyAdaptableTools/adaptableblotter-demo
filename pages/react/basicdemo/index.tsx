@@ -14,8 +14,14 @@ export default () => {
       pageTitle={'AdaptableBlotter.JS React ag-Grid Demo'}
       description={
         <h4>
-          A demo of AdaptableBlotter.JS integrating with React and ag-Grid with
-          NO predefined configuration.
+          A demo of AdaptableBlotter.JS instantiated using the{' '}
+          <a
+            href="https://github.com/JonnyAdaptableTools/adaptableblotter/blob/master/packages/adaptableblotter-react-aggrid/"
+            target="_blank"
+          >
+            React Wrapper
+          </a>{' '}
+          (adaptableblotter-react-aggrid)
         </h4>
       }
     >
