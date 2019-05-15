@@ -1,0 +1,4 @@
+#__next {
+  display: flex;
+  flex-flow: column;
+}

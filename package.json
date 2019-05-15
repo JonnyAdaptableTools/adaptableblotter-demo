@@ -20,15 +20,17 @@
     "@types/react": "^16.8.15",
     "@types/react-dom": "^16.8.4",
     "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
     "@zeit/next-typescript": "^1.1.1",
     "dotenv-webpack": "^1.7.0",
-    "next-fonts": "^0.17.0",
-    "next-images": "^1.1.1",
-    "typescript": "^3.4.5",
-    "webpack": "^4.30.0",
     "husky": ">=1",
     "lint-staged": ">=8",
-    "prettier": "^1.17.0"
+    "next-fonts": "^0.17.0",
+    "next-images": "^1.1.1",
+    "node-sass": "^4.12.0",
+    "prettier": "^1.17.0",
+    "typescript": "^3.4.5",
+    "webpack": "^4.30.0"
   },
   "husky": {
     "hooks": {

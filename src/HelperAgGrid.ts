@@ -72,9 +72,7 @@ export function dateParseragGrid(params: any) {
 }
 
 export function setUpAgGridLicence(): void {
-  LicenseManager.setLicenseKey(
-    'Traders_Tools_Limited__Adaptable_Blotter_Demo_5Devs_1Deployment_20_March_2020__MTU4NDY2MjQwMDAwMA==9a2ec141c65fbb00f9348cdb5f93ffbb'
-  );
+  LicenseManager.setLicenseKey(process.env.AG_GRID_LICENSE);
 }
 
 function stringToDate(date: string, format: string, delimiter: string) {
