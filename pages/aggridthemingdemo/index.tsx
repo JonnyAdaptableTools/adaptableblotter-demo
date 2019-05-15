@@ -16,7 +16,7 @@ export default () => {
       pageTitle={'AdaptableBlotter.JS ag-Grid Theming Demo'}
       description={
         <div>
-          <h4>AdaptableBlotter.JS - Predefined Config Demo</h4>
+          <h4>AdaptableBlotter.JS - Theming Demo</h4>
           <p>
             Blotter with a Dark Theme and the Dashboard minimised (and a
             different default set of toolbars).
