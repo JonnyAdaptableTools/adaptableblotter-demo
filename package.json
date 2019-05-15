@@ -6,6 +6,7 @@
   "dependencies": {
     "@types/isomorphic-fetch": "0.0.34",
     "adaptableblotter": "^3.4.1-beta.23",
+    "adaptableblotter-react-aggrid": "^3.4.0-canary.1",
     "ag-grid-community": "^20.2.0",
     "ag-grid-enterprise": "^20.2.0",
     "fin-hypergrid-data-source-base": "^0.4.11",
