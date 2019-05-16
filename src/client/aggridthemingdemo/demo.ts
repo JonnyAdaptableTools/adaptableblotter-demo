@@ -1,12 +1,10 @@
 import * as Helper from '../../Helper';
 
-import { Grid } from 'ag-grid-community/dist/lib/grid';
 import 'adaptableblotter/base.css';
 import 'adaptableblotter/themes/dark.css';
 
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-balham-dark.css';
-import '../../../DemoPage/aggriddemo.css';
 
 import AdaptableBlotter from 'adaptableblotter/agGrid';
 import { IAdaptableBlotterOptions } from 'adaptableblotter/types';
@@ -18,25 +16,28 @@ import config from './config';
 import { HelperAgGrid } from '../../HelperAgGrid';
 
 export class Demo {
-  private helperAgGrid: HelperAgGrid;
+  // private helperAgGrid: HelperAgGrid;
+
+  private blotter: AdaptableBlotter;
 
   constructor() {
-    this.helperAgGrid = new HelperAgGrid();
-    Helper.MakeAllRecordsColumnsDateProperDates(json);
-    this.helperAgGrid.setUpAgGridLicence();
+    let helperAgGrid = new HelperAgGrid();
+    helperAgGrid.setUpAgGridLicence();
 
-    const columndefs = this.helperAgGrid.getBasicNorthwindColumnSchema();
+    let rowData = JSON.parse(JSON.stringify(json));
+    Helper.MakeAllRecordsColumnsDateProperDates(rowData);
 
-    const gridOptions = this.helperAgGrid.getGridOptions(columndefs, json);
-    new Grid(document.getElementById('grid')!, gridOptions);
+    const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
 
-    const blotterOptions: IAdaptableBlotterOptions = this.helperAgGrid.getAdaptableBlotterOptions(
+    let gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
+
+    const blotterOptions: IAdaptableBlotterOptions = helperAgGrid.getAdaptableBlotterOptions(
       gridOptions,
       'OrderId',
       'Theming Demo',
       config
     );
 
-    new AdaptableBlotter(blotterOptions);
+    this.blotter = new AdaptableBlotter(blotterOptions);
   }
 }

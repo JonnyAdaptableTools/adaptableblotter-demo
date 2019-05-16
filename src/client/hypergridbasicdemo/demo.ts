@@ -22,6 +22,8 @@ import {
 
 import data from '../../../DataSets/Json/NorthwindOrders.json';
 
+import jsonConfig from './config';
+
 export class Demo {
   private adaptableblotter: IAdaptableBlotter;
   private grid: any;
@@ -45,14 +47,10 @@ export class Demo {
     let blotterOptions: IAdaptableBlotterOptions = {
       primaryKey: 'OrderId',
       vendorGrid: this.grid,
-      userName: 'Jonathan',
+      userName: 'Demo User',
       blotterId: 'Basic Demo',
       licenceKey: Helper.getdemolicencekey(),
-      chartOptions: {
-        displayOnStartUp: true,
-        showModal: false,
-        pieChartMaxItems: 50,
-      },
+      predefinedConfig: jsonConfig,
     };
 
     this.adaptableblotter = new AdaptableBlotter(blotterOptions);

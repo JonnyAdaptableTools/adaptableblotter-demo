@@ -43,7 +43,7 @@ export class HypergridChartingDemo {
         let blotterOptions: IAdaptableBlotterOptions = {
           primaryKey: 'OrderId',
           vendorGrid: this.grid,
-          userName: 'Jonathan',
+          userName: 'Demo User',
           blotterId: 'Charting Demo',
           licenceKey: Helper.getdemolicencekey(),
           predefinedConfig: json,

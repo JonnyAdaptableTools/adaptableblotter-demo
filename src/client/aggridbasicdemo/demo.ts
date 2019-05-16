@@ -19,12 +19,14 @@ export class Demo {
 
   constructor() {
     this.helperAgGrid = new HelperAgGrid();
-    Helper.MakeAllRecordsColumnsDateProperDates(json);
     this.helperAgGrid.setUpAgGridLicence();
+
+    let rowData = JSON.parse(JSON.stringify(json));
+    Helper.MakeAllRecordsColumnsDateProperDates(rowData);
 
     const columndefs = this.helperAgGrid.getBasicNorthwindColumnSchema();
 
-    const gridOptions = this.helperAgGrid.getGridOptions(columndefs, json);
+    const gridOptions = this.helperAgGrid.getGridOptions(columndefs, rowData);
     new Grid(document.getElementById('grid')!, gridOptions);
 
     const blotterOptions: IAdaptableBlotterOptions = this.helperAgGrid.getAdaptableBlotterOptions(

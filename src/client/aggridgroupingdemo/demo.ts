@@ -14,7 +14,7 @@ import {
   IAdaptableBlotterOptions,
 } from 'adaptableblotter/types';
 
-import data from '../../../DataSets/Json/NorthwindOrders.json';
+import json from '../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../HelperAgGrid';
 
 export class Demo {
@@ -23,21 +23,20 @@ export class Demo {
 
   constructor() {
     this.helperAgGrid = new HelperAgGrid();
-    Helper.MakeAllRecordsColumnsDateProperDates(data);
     this.helperAgGrid.setUpAgGridLicence();
 
     const columndefs = this.helperAgGrid.getGroupingNorthwindColumnSchema();
+    let rowData = JSON.parse(JSON.stringify(json));
+    Helper.MakeAllRecordsColumnsDateProperDates(rowData);
 
-    const gridOptions = this.helperAgGrid.getGridOptions(columndefs, data);
-    const gridDiv = document.getElementById('grid');
+    const gridOptions = this.helperAgGrid.getGridOptions(columndefs, rowData);
 
-    new Grid(gridDiv, gridOptions);
     let blotterOptions: IAdaptableBlotterOptions = this.helperAgGrid.getAdaptableBlotterOptions(
       gridOptions,
       'OrderId',
       'Grouping Demo',
       {}
     );
-    this.adaptableblotter = new AdaptableBlotter(blotterOptions);
+    new AdaptableBlotter(blotterOptions);
   }
 }

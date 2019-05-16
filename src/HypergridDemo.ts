@@ -106,7 +106,7 @@ export class HypergridDemo {
         let blotterOptions: IAdaptableBlotterOptions = {
           primaryKey: selectedConfig.primaryKey,
           vendorGrid: this.grid,
-          userName: 'Jonathan',
+          userName: 'Demo User',
           blotterId: blotterId,
           licenceKey: 'xs2543-as6b8esw3-e94fyjzc7a',
         };

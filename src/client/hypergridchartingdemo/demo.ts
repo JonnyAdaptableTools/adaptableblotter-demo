@@ -49,8 +49,8 @@ export class Demo {
     let blotterOptions: IAdaptableBlotterOptions = {
       primaryKey: 'OrderId',
       vendorGrid: this.grid,
-      userName: 'Jonathan',
-      blotterId: 'Charting Demo',
+      userName: 'Demo User',
+      blotterId: 'Basic Charting Demo',
       licenceKey: Helper.getdemolicencekey(),
       predefinedConfig: jsonConfig,
       chartOptions: {

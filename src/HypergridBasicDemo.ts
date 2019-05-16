@@ -37,7 +37,7 @@ export class HypergridBasicDemo {
         let blotterOptions: IAdaptableBlotterOptions = {
           primaryKey: 'OrderId',
           vendorGrid: this.grid,
-          userName: 'Jonathan',
+          userName: 'Demo User',
           blotterId: 'Basic Demo',
           licenceKey: Helper.getdemolicencekey(),
           //  predefinedConfig: json // no config in this basic demo?

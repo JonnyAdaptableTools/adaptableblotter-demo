@@ -8,9 +8,11 @@ function convertXlsToJson(filename) {
   xls('./DataSets/' + filename, function(err, data) {
     if (err) throw err;
     //console.log(JSON.stringify(convertToJSON(data)));
+    let json = convertToJSON(data);
+    let stringifyJson = JSON.stringify(json);
     fs.writeFile(
       './DataSets/Json/' + filename.replace('.xlsx', '.json'),
-      JSON.stringify(convertToJSON(data)),
+      stringifyJson,
       { encoding: 'utf8' },
       function(err) {
         if (err) {
