@@ -35,7 +35,7 @@ const adaptableBlotterOptions: IAdaptableBlotterOptions = {
   primaryKey: 'OrderId',
   userName: 'demo user',
   blotterId: 'basic demo',
-  licenceKey: process.env.ENTERPRISE_LICENSE,
+  licenceKey: process.env.VALID_BLOTTER_LICENSE,
 };
 
 export default () => (

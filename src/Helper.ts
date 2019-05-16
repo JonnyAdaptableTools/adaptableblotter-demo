@@ -101,6 +101,6 @@ export function checkPriceIsPostive(numberToCheck: number): number {
   return numberToCheck;
 }
 
-export function getdemolicencekey(): string {
-  return process.env.ENTERPRISE_LICENSE as string;
+export function getdemolicencekey(): any {
+  return process.env.VALID_BLOTTER_LICENSE;
 }

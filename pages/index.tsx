@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useEffect } from 'react';
 import Link from 'next/link';
 
 import logo from '../images/AdaptableBlotter.png';
@@ -29,6 +29,11 @@ const LinkButton = ({
 };
 
 export default () => {
+  useEffect(() => {
+    document.documentElement.classList.remove('ab--theme-dark');
+    document.documentElement.classList.add('ab--theme-light');
+  });
+
   return (
     <div className="container-fluid">
       <table>
