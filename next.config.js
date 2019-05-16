@@ -1,22 +1,15 @@
-// next.config.js
 const path = require('path');
+
 const Dotenv = require('dotenv-webpack');
+
 const withCSS = require('@zeit/next-css');
-const withImages = require('next-images');
-const withFonts = require('next-fonts');
 const withSass = require('@zeit/next-sass');
 const withTypescript = require('@zeit/next-typescript');
+const withImages = require('next-images');
+const withFonts = require('next-fonts');
+const withPlugins = require('next-compose-plugins');
 
-let nextConfig = withSass(
-  withCSS(
-    Object.assign({}, withImages(), {
-      cssModules: false,
-    })
-  )
-);
-nextConfig = withTypescript(withFonts(nextConfig));
-
-module.exports = Object.assign({}, nextConfig, {
+const withApp = Object.assign({
   pageExtensions: ['jsx', 'js', 'tsx', 'ts'],
   webpack: (config, options) => {
     config.plugins = config.plugins || [];
@@ -39,10 +32,22 @@ module.exports = Object.assign({}, nextConfig, {
       './node_modules/react-dom'
     );
 
-    if (typeof nextConfig.webpack === 'function') {
-      return nextConfig.webpack(config, options);
-    }
-
     return config;
   },
 });
+
+module.exports = withPlugins(
+  [
+    [withImages],
+    [
+      withCSS,
+      {
+        cssModules: false,
+      },
+    ],
+    [withSass],
+    [withFonts],
+    [withTypescript],
+  ],
+  withApp
+);

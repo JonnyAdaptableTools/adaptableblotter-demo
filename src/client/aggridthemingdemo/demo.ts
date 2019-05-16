@@ -11,6 +11,8 @@ import '../../../DemoPage/aggriddemo.css';
 import AdaptableBlotter from 'adaptableblotter/agGrid';
 import { IAdaptableBlotterOptions } from 'adaptableblotter/types';
 
+import '../../../DemoPage/aggriddemo.css';
+
 import json from '../../../DataSets/Json/NorthwindOrders.json';
 import config from './config';
 import { HelperAgGrid } from '../../HelperAgGrid';

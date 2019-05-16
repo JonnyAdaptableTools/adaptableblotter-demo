@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
 
-import logo from '../../../images/AdaptableBlotter.png';
+import logo from '../../images/AdaptableBlotter.png';
 
 import './index.css';
 

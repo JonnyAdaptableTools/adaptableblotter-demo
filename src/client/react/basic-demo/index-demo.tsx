@@ -14,23 +14,22 @@ import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-balham.css';
 import 'ag-grid-community/dist/styles/ag-theme-balham-dark.css';
 
-import '../../../DemoPage/aggriddemo.css';
-import json from '../../../DataSets/Json/NorthwindOrders.json';
+import { LicenseManager } from 'ag-grid-enterprise';
+import '../../../../DemoPage/aggriddemo.css';
+import json from '../../../../DataSets/Json/NorthwindOrders.json';
 
-import * as Helper from '../../../src/Helper';
+import { HelperAgGrid } from '../../../HelperAgGrid';
+import * as Helper from '../../../Helper';
 
-import {
-  setUpAgGridLicence,
-  getBasicNorthwindColumnSchema,
-  getGridOptions,
-} from '../../../src/HelperAgGrid';
-
+const helperAgGrid = new HelperAgGrid();
+helperAgGrid.setUpAgGridLicence();
 Helper.MakeAllRecordsColumnsDateProperDates(json);
-setUpAgGridLicence();
 
-const columndefs = getBasicNorthwindColumnSchema();
+LicenseManager.setLicenseKey(process.env.AG_GRID_LICENSE as string);
 
-const gridOptions = getGridOptions(columndefs, json);
+const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
+
+const gridOptions = helperAgGrid.getGridOptions(columndefs, json);
 
 const adaptableBlotterOptions: IAdaptableBlotterOptions = {
   primaryKey: 'OrderId',

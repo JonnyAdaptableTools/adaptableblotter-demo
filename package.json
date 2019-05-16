@@ -6,12 +6,13 @@
   "dependencies": {
     "@types/isomorphic-fetch": "0.0.34",
     "adaptableblotter": "^3.4.1-beta.23",
+    "adaptableblotter-react-aggrid": "^3.4.0-canary.1",
     "ag-grid-community": "^20.2.0",
     "ag-grid-enterprise": "^20.2.0",
     "fin-hypergrid-data-source-base": "^0.4.11",
     "isomorphic-fetch": "^2.2.1",
     "next": "8.0.4",
-    "prop-types": "^15.6.2",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
@@ -25,8 +26,10 @@
     "dotenv-webpack": "^1.7.0",
     "husky": ">=1",
     "lint-staged": ">=8",
+    "next-compose-plugins": "^2.2.0",
     "next-fonts": "^0.17.0",
     "next-images": "^1.1.1",
+    "next-transpile-modules": "^2.3.1",
     "node-sass": "^4.12.0",
     "prettier": "^1.17.0",
     "typescript": "^3.4.5",
@@ -48,7 +51,7 @@
     "buildDataSets": "node buildJsonDataset.js",
     "openfin": "openfin -l -c app-dev.json",
     "dev": "next",
-    "build": "next build && next export -o dist"
+    "build": "node --max-old-space-size=4096 ./node_modules/.bin/next build && node --max-old-space-size=4096 ./node_modules/.bin/next export -o dist"
   },
   "repository": {
     "type": "git",
