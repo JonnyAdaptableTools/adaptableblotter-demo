@@ -1,6 +1,7 @@
 import React from 'react';
 import AgGridDemoPage from '../../src/AgGridDemoPage';
 import dynamic from 'next/dynamic';
+import ThemeDemoPage from '../../src/client/aggridthemingdemo/ThemeDemoPage';
 
 const DynamicComponent = dynamic(
   () => import('../../src/client/aggridthemingdemo'),
@@ -12,7 +13,7 @@ const DynamicComponent = dynamic(
 
 export default () => {
   return (
-    <AgGridDemoPage
+    <ThemeDemoPage
       pageTitle={'AdaptableBlotter.JS ag-Grid Theming Demo'}
       description={
         <div>
@@ -25,6 +26,6 @@ export default () => {
       }
     >
       <DynamicComponent />
-    </AgGridDemoPage>
+    </ThemeDemoPage>
   );
 };

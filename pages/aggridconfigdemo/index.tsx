@@ -1,6 +1,7 @@
 import React from 'react';
 import AgGridDemoPage from '../../src/AgGridDemoPage';
 import dynamic from 'next/dynamic';
+import ConfigDemoPage from '../../src/client/aggridconfigdemo/ConfigDemoPage';
 
 const DynamicComponent = dynamic(
   () => import('../../src/client/aggridconfigdemo'),
@@ -12,7 +13,7 @@ const DynamicComponent = dynamic(
 
 export default () => {
   return (
-    <AgGridDemoPage
+    <ConfigDemoPage
       pageTitle={'AdaptableBlotter.JS ag-Grid Config Demo'}
       description={
         <div>
@@ -25,6 +26,6 @@ export default () => {
       }
     >
       <DynamicComponent />
-    </AgGridDemoPage>
+    </ConfigDemoPage>
   );
 };
