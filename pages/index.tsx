@@ -32,23 +32,25 @@ export default () => {
   return (
     <div className="container-fluid">
       <table>
-        <tr>
-          <td>
-            <img src={logo} width="225" height="132" />
-          </td>
-          <td style={{ alignItems: 'baseline' }}>
-            &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;
-          </td>
+        <tbody>
+          <tr>
+            <td>
+              <img src={logo} width="225" height="132" />
+            </td>
+            <td style={{ alignItems: 'baseline' }}>
+              &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;
+            </td>
 
-          <td>
-            <h2>AdaptableBlotter.JS Demos</h2>
-            <i>
-              Version:
-              {version}&nbsp;&nbsp;({versiondate})
-            </i>
-          </td>
-        </tr>
+            <td>
+              <h2>AdaptableBlotter.JS Demos</h2>
+              <i>
+                Version:
+                {version}&nbsp;&nbsp;({versiondate})
+              </i>
+            </td>
+          </tr>
+        </tbody>
       </table>
       <p>
         <b>The Adaptable Blotter</b>
@@ -81,18 +83,20 @@ export default () => {
       </li>
       <p />
       <table style={{ borderSpacing: '20px 5px', borderCollapse: 'separate' }}>
-        <tr>
-          <td>
-            <LinkButton prefetch href={'/aggridbasicdemo'}>
-              <h5>ag-Grid Demo</h5>
-            </LinkButton>
-          </td>
-          <td>
-            <LinkButton href="/hypergridbasicdemo">
-              <h5>Hypergrid Demo</h5>
-            </LinkButton>
-          </td>
-        </tr>
+        <tbody>
+          <tr>
+            <td>
+              <LinkButton prefetch href={'/aggridbasicdemo'}>
+                <h5>ag-Grid Demo</h5>
+              </LinkButton>
+            </td>
+            <td>
+              <LinkButton href="/hypergridbasicdemo">
+                <h5>Hypergrid Demo</h5>
+              </LinkButton>
+            </td>
+          </tr>
+        </tbody>
       </table>
       <br />
       <b>Config / Theming Demo</b>
@@ -153,18 +157,20 @@ export default () => {
       </li>
       <p />
       <table style={{ borderSpacing: '20px 5px', borderCollapse: 'separate' }}>
-        <tr>
-          <td>
-            <LinkButton href="/aggridconfigdemo" prefetch>
-              <h5>Config Demo</h5>
-            </LinkButton>
-          </td>
-          <td>
-            <LinkButton href="/aggridthemingdemo" prefetch>
-              <h5>Theming Demo</h5>
-            </LinkButton>
-          </td>
-        </tr>
+        <tbody>
+          <tr>
+            <td>
+              <LinkButton href="/aggridconfigdemo" prefetch>
+                <h5>Config Demo</h5>
+              </LinkButton>
+            </td>
+            <td>
+              <LinkButton href="/aggridthemingdemo" prefetch>
+                <h5>Theming Demo</h5>
+              </LinkButton>
+            </td>
+          </tr>
+        </tbody>
       </table>
       <br />
       <b>Charting Demos</b>
@@ -187,18 +193,20 @@ export default () => {
       </li>
       <p />
       <table style={{ borderSpacing: '20px 5px', borderCollapse: 'separate' }}>
-        <tr>
-          <td>
-            <LinkButton href="/hypergridchartingdemo" prefetch>
-              <h5>Basic Charts</h5>
-            </LinkButton>
-          </td>
-          <td>
-            <LinkButton href="/aggridworldstatschartingdemo" prefetch>
-              <h5>World Charts</h5>
-            </LinkButton>
-          </td>
-        </tr>
+        <tbody>
+          <tr>
+            <td>
+              <LinkButton href="/hypergridchartingdemo" prefetch>
+                <h5>Basic Charts</h5>
+              </LinkButton>
+            </td>
+            <td>
+              <LinkButton href="/aggridworldstatschartingdemo" prefetch>
+                <h5>World Charts</h5>
+              </LinkButton>
+            </td>
+          </tr>
+        </tbody>
       </table>
       <p />
       <b>Grouping Demo</b>
@@ -212,13 +220,15 @@ export default () => {
       to work even when you have multiple columns groups, row groups and
       aggregated columns.
       <table style={{ borderSpacing: '20px 5px', borderCollapse: 'separate' }}>
-        <tr>
-          <td>
-            <LinkButton href="/aggridgroupingdemo" prefetch>
-              <h5>Grouping Demo</h5>
-            </LinkButton>
-          </td>
-        </tr>
+        <tbody>
+          <tr>
+            <td>
+              <LinkButton href="/aggridgroupingdemo" prefetch>
+                <h5>Grouping Demo</h5>
+              </LinkButton>
+            </td>
+          </tr>
+        </tbody>
       </table>
       {/* 
       <p />
@@ -279,7 +289,8 @@ export default () => {
       </p>
       <p>
         <table style="border-spacing: 20px 5px;border-collapse: separate;">
-          <tr>
+          <tbody>
+           <tr>
             <td>
               <button style="height:45px; width:150px" class="btn btn-default">
                  <span>
@@ -298,6 +309,7 @@ export default () => {
               </script>
             </td>
           </tr>
+           </tbody>
         </table>
               */}
         </p>
@@ -330,7 +342,8 @@ export default () => {
       </p>
       {/*
     <table style="border-spacing: 20px 5px;border-collapse: separate;">
-      <tr>
+      <tbody>
+       <tr>
         <td>
           <button style="height:45px; width:150px" class="btn btn-default" target="_blank"
             onclick="location.href='https://beta.adaptableblotter.com/finsembledemo/Adaptable-Blotter-finsemble-beta-installer.zip' ">
@@ -340,6 +353,7 @@ export default () => {
           </button>
         </td>
       </tr>
+       </tbody>
     </table>
     */}
       <p>
