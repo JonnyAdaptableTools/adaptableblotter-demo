@@ -74,6 +74,25 @@ export default () => {
         set you provide it with.
         <br />
       </p>
+      <b>Integration</b>
+      <br />
+      It is trivial to set up the Adaptable Blotter and can be done with a
+      single line of code.
+      <br />
+      See this{' '}
+      <a href="https://yg0we.codesandbox.io/" target="_blank">
+        Live Example
+      </a>{' '}
+      and download it and experiment with it yourself using this{' '}
+      <a
+        href="https://codesandbox.io/s/adaptableblotterbasic-yg0we"
+        target="_blank"
+      >
+        Sandbox
+      </a>
+      .
+      <br />
+      <p />
       <b>Basic Demo</b>
       <br />
       This demo contains 2 instances of AdaptableBlotter.JS hosting dummy Sales
@@ -362,12 +381,19 @@ export default () => {
     </table>
     */}
       <p>
-        Read more on the features of this demo at this{' '}
+        Read more on the features of this demo{' '}
         <a
           href="https://www.linkedin.com/pulse/vive-la-html5-revolution-jonny-wolfson/"
           target="_blank"
         >
-          blog piece
+          here
+        </a>
+        &nbsp;and&nbsp;
+        <a
+          href="https://blog.chartiq.com/adapatable_tools_and_finsemble"
+          target="_blank"
+        >
+          here
         </a>
         .
       </p>
@@ -399,17 +425,19 @@ export default () => {
       </p>
       <p>
         <b>Licence and Pricing</b>
-        <br /> The Adaptable Blotter is free for development (and evaluation)
-        use. And we also offer a free Community Licence for students in full
-        time education, charities and open-source projects.
-        <br /> For all other usage, an <b>annual licence must be purchased</b>.
-        (This licence covers both AdaptableBlotter.NET and AdaptableBlotter.JS
-        versions, and includes 12 monthly updates and full support).
         <br />
-        If you would like to do a POC using the Adaptable Blotter, please get in
-        touch.
+        The Adaptable Blotter is free for evaluation use. We also seek to make
+        it available for use by charities, open-source projects and students in
+        full time education.
         <br />
-        For more information please see the LICENSE file or contact{' '}
+        For all other usage and, access to the full range of features, an annual
+        licence must be purchased. This includes monthly updates together with
+        ongoing support.
+        <br />
+        We also provide support for more formal trials, and offer a range of
+        licence alternatives depending on desired usage.
+        <br />
+        To find out more about becoming an Adaptable Blotter user, please email{' '}
         <a href="mailto:support@adaptabletools.com">Adaptable Tools Support</a>.
       </p>
       <p>
