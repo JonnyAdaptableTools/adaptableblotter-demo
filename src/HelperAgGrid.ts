@@ -132,25 +132,7 @@ export class HelperAgGrid {
       enableRangeSelection: true,
       floatingFilter: true,
       suppressAggFuncInHeader: true,
-      sideBar: {
-        toolPanels: [
-          {
-            id: 'columns',
-            labelDefault: 'Columns',
-            labelKey: 'columns',
-            iconKey: 'columns',
-            toolPanel: 'agColumnsToolPanel',
-          },
-          {
-            id: 'filters',
-            labelDefault: 'Filters',
-            labelKey: 'filters',
-            iconKey: 'filter',
-            toolPanel: 'agFiltersToolPanel',
-          },
-        ],
-        defaultToolPanel: '',
-      },
+      sideBar: true,
       suppressMenuHide: true,
       columnTypes: {
         // not required but helpful for column data type identification
