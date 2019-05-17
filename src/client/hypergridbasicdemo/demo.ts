@@ -20,7 +20,7 @@ import {
   IAdaptableBlotterOptions,
 } from 'adaptableblotter/types';
 
-import data from '../../../DataSets/Json/NorthwindOrders.json';
+import json from '../../../DataSets/Json/NorthwindOrders.json';
 
 import jsonConfig from './config';
 
@@ -28,10 +28,12 @@ export class Demo {
   private adaptableblotter: IAdaptableBlotter;
   private grid: any;
   constructor() {
-    Helper.MakeAllRecordsColumnsDateProperDates(data);
-    let schema: any = getSchema(data);
+    let rowData = JSON.parse(JSON.stringify(json));
+    Helper.MakeAllRecordsColumnsDateProperDates(rowData);
+    let schema: any = getSchema(rowData);
+
     this.grid = new fin.Hypergrid('#grid', {
-      data: data,
+      data: rowData,
       schema: schema,
     });
 
