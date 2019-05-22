@@ -294,17 +294,26 @@ export default () => {
         <p>
           <b>OpenFin Demo (featuring 'Live Updates')</b>
           <br />
-          This{' '}
+          <b>
+            <a
+              href="https://install.openfin.co/download/?fileName=adaptable_blotter_openfin&config=http://demo.adaptableblotter.com/app-demo.json"
+              target="_blank"
+            >
+              Download OpenFin demo
+            </a>
+          </b>{' '}
+          to see the Adaptable Blotter running inside OpenFin. (The link will
+          download the OpenFin installer - click the exe to run thhis demo page
+          inside OpenFin).
+          <br />
+          One exciting feature this provides is, that after exporting to Excel,
+          any changes subsequently made to your report data in the Blotter, will
+          automatically update in Excel (see this{' '}
           <a href="https://youtu.be/6Pf7BDUoe0I" target="_blank">
             video
           </a>{' '}
-          shows AdaptableBlotter.JS running in the{' '}
-          <a href="https://openfin.co" target="_blank">
-            OpenFin
-          </a>{' '}
-          container. One exciting feature this provides is, that after exporting
-          to Excel, any changes subsequently made to your report data in the
-          Blotter, will automatically update in Excel.
+          for more details).
+          <br />
           {/*
         <br /> Click the button to download the installer. You will need to launch the download executable that will
         install
