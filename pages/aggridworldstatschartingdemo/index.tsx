@@ -12,7 +12,7 @@ const DynamicComponent = dynamic(
 );
 
 export default () => {
-  let configJson = JSON.stringify(config, null, '\t');
+  let configJson = JSON.stringify(config, null, 2);
   return (
     <AgGridDemoPage
       pageTitle={'AdaptableBlotter.JS World Stats Charting Demo'}
@@ -44,6 +44,7 @@ export default () => {
         'vendorGrid: gridOptions,\n' +
         "userName: 'Demo User',\n" +
         "blotterId: 'Basic Demo', \n" +
+        'predefinedConfig: predefinedConfig' +
         'chartOptions: { \n' +
         'displayOnStartUp: true, \n' +
         'showModal: false, \n' +

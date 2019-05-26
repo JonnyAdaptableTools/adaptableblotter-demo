@@ -30,6 +30,7 @@ export default ({
         <a href="aggridthemingdemo">Theme</a>
         <a href="aggriddashboarddemo">Dashboard</a>
         <a href="aggridworldstatschartingdemo">Charts</a>
+        <a href="aggridentitlementsdemo">Entitlements</a>
       </div>
 
       <div className="main">

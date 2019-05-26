@@ -1,9 +1,10 @@
 import React from 'react';
 import AgGridDemoPage from '../../src/AgGridDemoPage';
 import dynamic from 'next/dynamic';
+import config from '../../src/client/aggridentitlementsdemo/config';
 
 const DynamicComponent = dynamic(
-  () => import('../../src/client/aggridbasicdemo'),
+  () => import('../../src/client/aggridentitlementsdemo'),
   {
     loading: () => null,
     ssr: false,
@@ -11,20 +12,17 @@ const DynamicComponent = dynamic(
 );
 
 export default () => {
+  let configJson = JSON.stringify(config, null, 2);
   return (
     <AgGridDemoPage
-      pageTitle={'AdaptableBlotter.JS basic ag-Grid Demo'}
+      pageTitle={'Entitlements (Permissions) Demo'}
       description={
         <div>
-          <h4>Basic ag-Grid Demo</h4>
-          <p>The Adaptable Blotter offers 30 functions out of the box.</p>
-          <p>
-            This example no Predefined Configuration and no overriden Blotter
-            objects.
-          </p>
+          <h4>Entitlements</h4>
+          <p>We can set Entitlements (todo://)</p>
         </div>
       }
-      config={<p>[No Config Supplied]</p>}
+      config={configJson}
       blotterOptions={
         "primaryKey: 'OrderId',\n" +
         'vendorGrid: gridOptions,\n' +

@@ -12,7 +12,7 @@ const DynamicComponent = dynamic(
 );
 
 export default () => {
-  let configJson = JSON.stringify(config, null, '\t');
+  let configJson = JSON.stringify(config, null, 2);
 
   return (
     <AgGridDemoPage
