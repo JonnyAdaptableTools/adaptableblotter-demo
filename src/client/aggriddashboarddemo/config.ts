@@ -1,8 +1,7 @@
 export default {
   Dashboard: {
-    VisibleToolbars: ['SmartEdit', 'Export', 'BulkUpdate'],
+    VisibleToolbars: ['SmartEdit', 'Export', 'BulkUpdate', 'Chart'],
     VisibleButtons: [
-      'About',
       'Dashboard',
       'QuickSearch',
       'ColumnChooser',
