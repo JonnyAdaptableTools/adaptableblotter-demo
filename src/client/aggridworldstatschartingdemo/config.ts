@@ -1,16 +1,6 @@
 export default {
-  Theme: {
-    CurrentTheme: 'Light Theme',
-  },
   Dashboard: {
-    VisibleToolbars: ['SmartEdit', 'Export', 'Chart', 'Theme'],
-    VisibleButtons: [
-      'About',
-      'Dashboard',
-      'QuickSearch',
-      'ColumnChooser',
-      'AdvancedSearch',
-    ],
+    VisibleToolbars: ['SmartEdit', 'Export', 'Chart'],
     Zoom: '0.9',
   },
   Chart: {

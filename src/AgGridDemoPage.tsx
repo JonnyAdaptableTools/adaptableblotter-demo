@@ -29,7 +29,7 @@ export default ({
         <a href="aggridbasicdemo">Basic</a>
         <a href="aggridthemingdemo">Theme</a>
         <a href="aggriddashboarddemo">Dashboard</a>
-        <a href="#">Contact</a>
+        <a href="aggridworldstatschartingdemo">Charts</a>
       </div>
 
       <div className="main">

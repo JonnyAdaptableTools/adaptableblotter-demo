@@ -25,8 +25,7 @@ export default () => {
         <a href="aggridbasicdemo">Basic</a>
         <a href="aggridthemingdemo">Theme</a>
         <a href="aggriddashboarddemo">Dashboard</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
+        <a href="aggridworldstatschartingdemo">Charts</a>
       </div>
 
       <div className="main">
@@ -36,7 +35,7 @@ export default () => {
           {version}&nbsp;&nbsp;({versiondate})
         </i>
         <p>Will explain about the demos</p>
-        <img src={logo} width="225" height="132" />
+        <img src={logo} width="54" height="34" />
       </div>
     </div>
   );

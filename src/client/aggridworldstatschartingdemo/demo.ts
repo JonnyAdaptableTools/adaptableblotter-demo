@@ -13,7 +13,7 @@ import { IAdaptableBlotterOptions } from 'adaptableblotter/types';
 import '../../../DemoPage/aggriddemo.css';
 
 import json from '../../../DataSets/Json/worldstats.json';
-import config from './config';
+import predefinedConfig from './config';
 import { HelperAgGrid } from '../../HelperAgGrid';
 
 export class Demo {
@@ -28,12 +28,19 @@ export class Demo {
     const gridOptions = this.helperAgGrid.getGridOptions(columndefs, json);
     new Grid(document.getElementById('grid')!, gridOptions);
 
-    const blotterOptions: IAdaptableBlotterOptions = this.helperAgGrid.getAdaptableBlotterOptions(
-      gridOptions,
-      'Country',
-      'World Stats Charting Demo',
-      config
-    );
+    const blotterOptions: IAdaptableBlotterOptions = {
+      primaryKey: 'OrderId',
+      vendorGrid: gridOptions,
+      userName: 'Demo User',
+      blotterId: 'World Charts Demo',
+      licenceKey: Helper.getdemolicencekey(),
+      predefinedConfig: predefinedConfig,
+      chartOptions: {
+        displayOnStartUp: true,
+        showModal: false,
+        pieChartMaxItems: 50,
+      },
+    };
 
     new AdaptableBlotter(blotterOptions);
   }
