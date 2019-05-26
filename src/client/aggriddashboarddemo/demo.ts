@@ -39,7 +39,7 @@ export class Demo {
       primaryKey: 'OrderId',
       vendorGrid: gridOptions,
       userName: 'Demo User',
-      blotterId: 'Theming Demo',
+      blotterId: 'Dashboard Demo',
       licenceKey: Helper.getdemolicencekey(),
       predefinedConfig: predefinedConfig,
     };

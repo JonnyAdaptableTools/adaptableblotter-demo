@@ -1,7 +1,7 @@
 import React from 'react';
 import AgGridDemoPage from '../../src/AgGridDemoPage';
 import dynamic from 'next/dynamic';
-import ThemeDemoPage from '../../src/client/aggridthemingdemo/ThemeDemoPage';
+import config from '../../src/client/aggridthemingdemo/config';
 
 const DynamicComponent = dynamic(
   () => import('../../src/client/aggridthemingdemo'),
@@ -12,20 +12,31 @@ const DynamicComponent = dynamic(
 );
 
 export default () => {
+  let configJson = JSON.stringify(config, null, '\t');
+
   return (
-    <ThemeDemoPage
+    <AgGridDemoPage
       pageTitle={'AdaptableBlotter.JS ag-Grid Theming Demo'}
       description={
-        <div>
-          <h4>AdaptableBlotter.JS - Theming Demo</h4>
-          <p>
-            Blotter with a Dark Theme and the Dashboard minimised (and a
-            different default set of toolbars).
-          </p>
-        </div>
+        <p>
+          <b>Setting the Thme</b>
+          This example shows the Adaptable Blotter with the 'Dark Theme'
+          selected.
+          <br />
+          This theme can be changed by selecting a new value from the Theme
+          dropdown in the Toolbar (which we have made visible)
+        </p>
+      }
+      config={configJson}
+      blotterOptions={
+        "primaryKey: 'OrderId',\n" +
+        'vendorGrid: gridOptions,\n' +
+        "userName: 'Demo User',\n" +
+        "blotterId: 'Basic Demo', \n" +
+        'predefinedConfig: predefinedConfig'
       }
     >
       <DynamicComponent />
-    </ThemeDemoPage>
+    </AgGridDemoPage>
   );
 };

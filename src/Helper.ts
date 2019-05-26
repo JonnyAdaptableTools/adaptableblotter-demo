@@ -1,4 +1,4 @@
-import { IDataSetConfiguration } from './IDataSetConfiguration';
+import { IDataSetConfiguration } from './old/IDataSetConfiguration';
 import * as fetch from 'isomorphic-fetch';
 
 export function capitalize(input: string) {
@@ -69,9 +69,7 @@ export function manageDomDataSetSelectAndReturnSelectDataset(
     return null;
   }
   select.value = currentDataSet;
-  let selectedConfig: IDataSetConfiguration = AvailableDatasetConfigs.get(
-    currentDataSet
-  );
+  let selectedConfig: any = AvailableDatasetConfigs.get(currentDataSet);
   return selectedConfig;
 }
 

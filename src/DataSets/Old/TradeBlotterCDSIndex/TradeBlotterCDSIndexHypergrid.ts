@@ -1,4 +1,4 @@
-import { IDataSetConfiguration } from "../../../IDataSetConfiguration";
+import { IDataSetConfiguration } from "../../../old/IDataSetConfiguration";
 import * as Helper from "../../../Helper"
 import * as HelperHypergrid from "../../../HelperHypergrid"
 

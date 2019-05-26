@@ -17,7 +17,7 @@ import {
 
 import json from '../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../HelperAgGrid';
-import jsonConfig from './config';
+import predefinedConfig from './config';
 
 export class Demo {
   private adaptableblotter: IAdaptableBlotter;
@@ -34,12 +34,14 @@ export class Demo {
 
     const gridOptions = this.helperAgGrid.getGridOptions(columndefs, rowData);
 
-    let blotterOptions: IAdaptableBlotterOptions = this.helperAgGrid.getAdaptableBlotterOptions(
-      gridOptions,
-      'OrderId',
-      'Config Demo',
-      jsonConfig
-    );
+    const blotterOptions: IAdaptableBlotterOptions = {
+      primaryKey: 'OrderId',
+      vendorGrid: gridOptions,
+      userName: 'Demo User',
+      blotterId: 'Config Demo',
+      licenceKey: Helper.getdemolicencekey(),
+      predefinedConfig: predefinedConfig,
+    };
     this.adaptableblotter = new AdaptableBlotter(blotterOptions);
   }
 }

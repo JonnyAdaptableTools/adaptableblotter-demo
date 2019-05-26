@@ -15,10 +15,18 @@ export default () => {
     <AgGridDemoPage
       pageTitle={'AdaptableBlotter.JS basic ag-Grid Demo'}
       description={
-        <h4>
+        <p>
           A demo of AdaptableBlotter.JS integrating with ag-Grid with NO
-          predefined configuration.
-        </h4>
+          predefined configuration and NO non-default Blotter Options set.
+        </p>
+      }
+      config={<p>[No Config Supplied]</p>}
+      blotterOptions={
+        "primaryKey: 'OrderId',\n" +
+        'vendorGrid: gridOptions,\n' +
+        "userName: 'Demo User',\n" +
+        "blotterId: 'Basic Demo', \n" +
+        'predefinedConfig: predefinedConfig'
       }
     >
       <DynamicComponent />

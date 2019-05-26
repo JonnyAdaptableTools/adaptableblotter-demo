@@ -1,9 +1,9 @@
-import * as Helper from './Helper';
+import * as Helper from '../Helper';
 import {
   IAdaptableBlotter,
   IAdaptableBlotterOptions,
 } from 'adaptableblotter/types';
-import { getSchema, setNorthwindHyperGridProperties } from './HelperHypergrid';
+import { getSchema, setNorthwindHyperGridProperties } from '../HelperHypergrid';
 import { IColumnValueExpression } from 'adaptableblotter/dist/App_Scripts/Utilities/Interface/Expression/IColumnValueExpression';
 import { IFilterExpression } from 'adaptableblotter/dist/App_Scripts/Utilities/Interface/Expression/IFilterExpression';
 import { IRangeExpression } from 'adaptableblotter/dist/App_Scripts/Utilities/Interface/Expression/IRangeExpression';

@@ -1,7 +1,7 @@
-import * as Helper from './Helper';
+import * as Helper from '../Helper';
 import { Grid } from 'ag-grid-community/dist/lib/grid';
 import { GridOptions } from 'ag-grid-community/dist/lib/entities/gridOptions';
-import * as HelperAgGrid from './HelperAgGrid';
+import * as HelperAgGrid from '../HelperAgGrid';
 import {
   IAdaptableBlotter,
   IAdaptableBlotterOptions,

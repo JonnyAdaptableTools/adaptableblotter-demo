@@ -1,4 +1,4 @@
-import { IDataSetConfiguration } from "../../../IDataSetConfiguration";
+import { IDataSetConfiguration } from "../../../old/IDataSetConfiguration";
 import * as Helper from "../../../Helper"
 
 export var BugTracker: IDataSetConfiguration = {

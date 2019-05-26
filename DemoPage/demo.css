@@ -1,10 +1,61 @@
-div.topBar {
-  background-color: white;
-  height: 65px;
-  text-align: left;
+h5 {
+  font-weight: bold;
+  font-size: 16px;
+  color: #f9f9f9;
+  padding: 4px 4px 4px 20px;
 }
 
-h4 {
-  display: inline;
-  vertical-align: middle;
+.demodescription {
+  background-color: #f7f7f7;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.config {
+  background-color: #f5f5f5;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 20px;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #245a96;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 4px 4px 4px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #f1f1f1;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #818181;
+}
+
+.main {
+  margin-left: 170px; /* Same as the width of the sidenav */
+  margin-top: 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
 }
