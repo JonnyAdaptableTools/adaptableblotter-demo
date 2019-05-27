@@ -1,12 +1,87 @@
-import React, { ReactNode } from 'react';
-import Head from 'next/head';
+import React, { useEffect, useState, ReactNode } from 'react';
+import copy from 'copy-to-clipboard';
+import MainPage, { MainPageProps } from './MainPage';
 
-type TypeProps = {
-  pageTitle: string;
-  description: ReactNode;
-  children: ReactNode;
-  config: any;
-  blotterOptions: any;
+const arrowRight = (
+  <svg width="24" height="24" viewBox="0 0 24 24">
+    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+  </svg>
+);
+
+export type AgGridDemoPageProps = {
+  config?: any;
+  blotterOptions?: any;
+  description: any;
+} & MainPageProps;
+
+const CopyToClibpoard = ({ value }: { value: string }) => {
+  const [showFeedback, setShowFeedback] = useState(false);
+
+  useEffect(() => {
+    if (showFeedback) {
+      setTimeout(() => {
+        setShowFeedback(false);
+      }, 2000);
+    }
+  }, [showFeedback]);
+
+  return (
+    <a
+      href="#"
+      onClick={e => {
+        e.preventDefault();
+        copy(value);
+        setShowFeedback(true);
+      }}
+      style={{
+        display: 'inline-block',
+        transition: 'opacity 0.3s',
+        opacity: showFeedback ? 0.8 : 1,
+      }}
+    >
+      {' '}
+      {showFeedback ? 'DONE!' : '- Click to copy to clipboard'}
+    </a>
+  );
+};
+
+const Snippet = ({
+  title,
+  children,
+}: {
+  title: ReactNode;
+  children: string;
+}) => {
+  const [expanded, setExpanded] = useState(true);
+  if (!children) {
+    return null;
+  }
+  return (
+    <div className="config">
+      <div
+        title={`Click to ${expanded ? 'collapse' : 'expand'}`}
+        onClick={() => {
+          setExpanded(!expanded);
+        }}
+        style={{
+          display: 'inline-block',
+          position: 'relative',
+          top: 4,
+          userSelect: 'none',
+          cursor: 'pointer',
+          marginRight: 10,
+          transition: 'transform 0.2s',
+          transform: !expanded ? 'rotate(0deg)' : 'rotate(90deg)',
+          transformOrigin: 'center',
+        }}
+      >
+        {arrowRight}
+      </div>
+      {title} <CopyToClibpoard value={children} />
+      <br />
+      {expanded ? <pre>{children}</pre> : null}
+    </div>
+  );
 };
 
 export default ({
@@ -15,45 +90,22 @@ export default ({
   description,
   config,
   blotterOptions,
-}: TypeProps) => {
+}: AgGridDemoPageProps) => {
   return (
-    <>
-      <Head>
-        <title>{pageTitle}</title>
-      </Head>
+    <MainPage pageTitle={pageTitle}>
+      <div className="demodescription">{description} </div>
+      <div id="adaptableBlotter" />
+      <p />
+      <div
+        id="grid"
+        className="ag-theme-balham"
+        style={{ height: '500px', marginRight: '50px' }}
+      />
 
-      <div className="sidenav">
-        <img src="_next/static/images/AdaptableBlotter.png" />
-        <h5>Demos</h5>
-        <a href="">Home</a>
-        <a href="aggridbasicdemo">Basic</a>
-        <a href="aggridthemingdemo">Theme</a>
-        <a href="aggriddashboarddemo">Dashboard</a>
-        <a href="aggridworldstatschartingdemo">Charts</a>
-        <a href="aggridentitlementsdemo">Entitlements</a>
-      </div>
+      {children}
 
-      <div className="main">
-        <div className="demodescription">{description} </div>
-        <div id="adaptableBlotter" />
-        <p />
-        <div
-          id="grid"
-          className="ag-theme-balham"
-          style={{ height: '500px', marginRight: '50px' }}
-        />
-        {children}
-        <div className="config">
-          <b>Predefined Config</b>
-          <br />
-          <pre>{config}</pre>
-        </div>
-        <div className="config">
-          <b>Blotter Options</b>
-          <br />
-          <pre>{blotterOptions}</pre>
-        </div>
-      </div>
-    </>
+      <Snippet title={<b>Predefined Config</b>}>{config}</Snippet>
+      <Snippet title={<b>Blotter Options</b>}>{blotterOptions}</Snippet>
+    </MainPage>
   );
 };

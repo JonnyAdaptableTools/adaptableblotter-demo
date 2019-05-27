@@ -1,11 +1,14 @@
 import { useEffect } from 'react';
 
-import { Demo } from './demo';
+import demo from './demo';
 
-export default () => {
+export default (props: { onReady?: (config: any) => void }) => {
   useEffect(() => {
-    new Demo();
-  }, []);
+    const result = demo();
 
+    if (props.onReady) {
+      props.onReady(result);
+    }
+  }, []);
   return null;
 };
