@@ -1,10 +1,10 @@
 import React from 'react';
-import AgGridDemoPage from '../../src/AgGridDemoPage';
+import AgGridDemoPage from '../../../src/AgGridDemoPage';
 import dynamic from 'next/dynamic';
-import config from '../../src/client/aggriddashboardbuttonsdemo/config';
+import config from '../../../src/client/aggriddashboardbuttonsdemo/config';
 
 const DynamicComponent = dynamic(
-  () => import('../../src/client/aggriddashboardbuttonsdemo'),
+  () => import('../../../src/client/aggriddashboardbuttonsdemo'),
   {
     loading: () => null,
     ssr: false,
