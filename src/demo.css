@@ -1,3 +1,19 @@
+html,
+body,
+#__next {
+  height: 100%;
+}
+
+.number-cell {
+  text-align: right;
+}
+.bool-cell {
+  text-align: center;
+}
+.home-button {
+  margin: 5;
+}
+
 h5 {
   font-weight: bold;
   font-size: 16px;
@@ -24,35 +40,13 @@ h5 {
   margin-top: 20px;
   padding: 10px;
   font-family: 'Courier New', Courier, monospace;
-}
-
-.sidenav {
-  height: 100%;
-  width: 200px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #245a96;
-  overflow-x: hidden;
-  padding-top: 20px;
-}
-
-.sidenav a {
-  padding: 4px 4px 4px 20px;
-  text-decoration: none;
-  font-size: 16px;
-  color: #f1f1f1;
-  display: block;
-}
-
-.sidenav a:hover {
-  color: #818181;
+  position: relative;
 }
 
 .main {
-  margin-left: 210px; /* Same as the width of the sidenav plus 10 to have a margin */
   margin-top: 10px;
+  flex: 1;
+  overflow: auto;
 }
 
 @media screen and (max-height: 450px) {
