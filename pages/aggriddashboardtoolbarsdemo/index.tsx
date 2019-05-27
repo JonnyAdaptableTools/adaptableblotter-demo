@@ -1,10 +1,10 @@
 import React from 'react';
 import AgGridDemoPage from '../../src/AgGridDemoPage';
 import dynamic from 'next/dynamic';
-import config from '../../src/client/aggriddashboarddemo/config';
+import config from '../../src/client/aggriddashboardtoolbarsdemo/config';
 
 const DynamicComponent = dynamic(
-  () => import('../../src/client/aggriddashboarddemo'),
+  () => import('../../src/client/aggriddashboardtoolbarsdemo'),
   {
     loading: () => null,
     ssr: false,
@@ -19,7 +19,7 @@ export default () => {
       pageTitle={'AdaptableBlotter.JS ag-Grid Dashboard Demo'}
       description={
         <div>
-          <h4>Configuring the Dashboard</h4>
+          <h4>Configuring Dashboard Toolbars</h4>
           <p>
             You are able to set up the Dashboard (through Dashboard Predefined
             Config) so that it shows only the toolbars and buttons you wish,

@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
+import Sidebar from './Sidebar';
 
 type TypeProps = {
   pageTitle: string;
@@ -22,16 +23,7 @@ export default ({
         <title>{pageTitle}</title>
       </Head>
 
-      <div className="sidenav">
-        <img src="_next/static/images/AdaptableBlotter.png" />
-        <h5>Demos</h5>
-        <a href="">Home</a>
-        <a href="aggridbasicdemo">Basic</a>
-        <a href="aggridthemingdemo">Theme</a>
-        <a href="aggriddashboarddemo">Dashboard</a>
-        <a href="aggridworldstatschartingdemo">Charts</a>
-        <a href="aggridentitlementsdemo">Entitlements</a>
-      </div>
+      <Sidebar />
 
       <div className="main">
         <div className="demodescription">{description} </div>

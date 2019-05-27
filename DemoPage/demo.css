@@ -12,6 +12,10 @@ h5 {
   margin-bottom: 10px;
   padding: 10px;
 }
+.ab--theme-dark .demodescription {
+  background: black;
+  color: white;
+}
 
 .config {
   background-color: #f5f5f5;
@@ -24,7 +28,7 @@ h5 {
 
 .sidenav {
   height: 100%;
-  width: 160px;
+  width: 200px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -47,7 +51,7 @@ h5 {
 }
 
 .main {
-  margin-left: 170px; /* Same as the width of the sidenav */
+  margin-left: 210px; /* Same as the width of the sidenav plus 10 to have a margin */
   margin-top: 10px;
 }
 

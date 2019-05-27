@@ -1,5 +1,4 @@
-import React, { ReactNode, useEffect } from 'react';
-import Link from 'next/link';
+import React, { useEffect } from 'react';
 
 import logo from '../images/AdaptableBlotter.png';
 import PACKAGE from '../package.json';
@@ -8,6 +7,7 @@ import 'adaptableblotter/base.css';
 import 'adaptableblotter/themes/light.css';
 
 import '../DemoPage/demo.css';
+import Sidebar from '../src/Sidebar';
 
 const version = PACKAGE.version;
 const versiondate = new Date().toISOString().slice(0, 10);
@@ -20,14 +20,7 @@ export default () => {
 
   return (
     <div>
-      <div className="sidenav">
-        <a href="">Home</a>
-        <a href="aggridbasicdemo">Basic</a>
-        <a href="aggridthemingdemo">Theme</a>
-        <a href="aggriddashboarddemo">Dashboard</a>
-        <a href="aggridworldstatschartingdemo">Charts</a>
-        <a href="aggridentitlementsdemo">Entitlements</a>
-      </div>
+      <Sidebar />
 
       <div className="main">
         <h2>Home Page</h2>
