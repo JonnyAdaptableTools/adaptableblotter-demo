@@ -92,8 +92,7 @@ export default ({
   blotterOptions,
 }: AgGridDemoPageProps) => {
   return (
-    <MainPage pageTitle={pageTitle}>
-      <div className="demodescription">{description} </div>
+    <MainPage pageTitle={pageTitle} description={description}>
       <div
         id="adaptableBlotter"
         style={{ marginLeft: '20px', marginRight: '40px' }}

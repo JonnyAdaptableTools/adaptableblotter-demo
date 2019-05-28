@@ -7,9 +7,10 @@ import Sidebar from '../Sidebar';
 export type MainPageProps = {
   pageTitle: string;
   children?: ReactNode;
+  description?: ReactNode;
 };
 
-export default ({ pageTitle, children }: MainPageProps) => {
+export default ({ pageTitle, children, description }: MainPageProps) => {
   return (
     <div
       style={{
@@ -25,7 +26,12 @@ export default ({ pageTitle, children }: MainPageProps) => {
 
       <Sidebar />
 
-      <div className="main">{children}</div>
+      <div className="main">
+        {description ? (
+          <div className="demodescription">{description}</div>
+        ) : null}
+        {children}
+      </div>
     </div>
   );
 };

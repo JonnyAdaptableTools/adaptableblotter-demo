@@ -7,7 +7,7 @@
 }
 
 .sidenav a {
-  padding: 4px 4px 4px 20px;
+  padding: 4px 4px 4px 0px;
   text-decoration: none;
   font-size: 16px;
   color: #f1f1f1;
@@ -16,4 +16,8 @@
 
 .sidenav a:hover {
   color: #818181;
+}
+
+.sidenav-category-content {
+  padding-left: 30px;
 }
