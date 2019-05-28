@@ -2,9 +2,11 @@ export default {
   Dashboard: {
     VisibleButtons: [
       'Dashboard',
-      'QuickSearch',
       'ColumnChooser',
-      'AdvancedSearch',
+      'Chart',
+      'SmartEdit',
+      'Alert',
+      'Reminder',
     ],
     UseSingleColourForButtons: false,
     ShowSystemStatusButton: false,

@@ -28,9 +28,9 @@ export default () => {
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
 
   const blotterOptions: IAdaptableBlotterOptions = {
-    primaryKey: 'OrderId',
+    primaryKey: 'Country',
     userName: 'Demo User',
-    blotterId: 'World Charts Demo',
+    blotterId: 'Category Charts Demo',
     licenceKey: Helper.getdemolicencekey(),
     chartOptions: {
       displayOnStartUp: true,

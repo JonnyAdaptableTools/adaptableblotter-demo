@@ -28,16 +28,10 @@ export default () => {
         <br />
         <br />
         <p>
+          <b>Background</b> <br />
           The Adaptable Blotter is the market leading HTML5 DataGrid Solution.
-        </p>
-        <p>
-          It sits on top of (and integrates with) a number of HTML5 vendor
-          DataGrids including ag-Grid.{' '}
-        </p>
-        <p>
-          <b>The Adaptable Blotter</b>
-          <br /> AdaptableBlotter.JS is a powerful DataGrid add-on that
-          provides, out of the box, all the functionality that financial and
+          <br />
+          It provides, out of the box, all the functionality that financial and
           other advanced users require to be productive and efficient. And which
           usually needs to be built on a bespoke basis for each project.
           <br />
@@ -50,6 +44,10 @@ export default () => {
           Adaptable Blotter.JS is fully data-agnostic and can work with any data
           set you provide it with.
           <br />
+          <p>
+            It sits on top of (and integrates with) a number of HTML5 vendor
+            DataGrids including ag-Grid.{' '}
+          </p>
         </p>
         <b>Integration</b>
         <br />
@@ -69,6 +67,51 @@ export default () => {
         </a>
         .
         <br />
+        <p>
+          <b>Help</b>
+          <br />
+          If you require further information please visit our{' '}
+          <a href="http://adaptabletools.com" target="_blank">
+            Website
+          </a>{' '}
+          or use the{' '}
+          <a href="https://adaptabletools.zendesk.com/hc/en-us" target="_blank">
+            Online Help
+          </a>
+          .
+        </p>
+        <p>
+          <b>Licence and Pricing</b>
+          <br />
+          The Adaptable Blotter is free for evaluation use. We also seek to make
+          it available for use by charities, open-source projects and students
+          in full time education.
+          <br />
+          For all other usage and, access to the full range of features, an
+          annual licence must be purchased. This includes monthly updates
+          together with ongoing support.
+          <br />
+          We also provide support for more formal trials, and offer a range of
+          licence alternatives depending on desired usage.
+          <br />
+          To find out more about becoming an Adaptable Blotter user, please
+          email{' '}
+          <a href="mailto:support@adaptabletools.com">
+            Adaptable Tools Support
+          </a>
+          .
+        </p>
+        <p>
+          <b>Source Code</b>
+          <br /> The Repository for the AdaptableBlotter.JS Demo is located in{' '}
+          <a
+            href="https://github.com/jonnyadaptabletools/adaptableblotter-demo"
+            target="_blank"
+          >
+            Github
+          </a>
+          .
+        </p>
       </div>
     </MainPage>
   );

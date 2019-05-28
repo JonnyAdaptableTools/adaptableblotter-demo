@@ -40,36 +40,31 @@ const DemoBox = ({ href, children }: { href: string; children: ReactNode }) => {
 export default () => {
   return (
     <MainPage
-      pageTitle={'AdaptableBlotter.JS ag-Grid Dashboard demos'}
+      pageTitle={'Chart demos'}
       description={
         <div>
-          <h4>Dashboard</h4>
+          <h4>Chart</h4>
           <p>
-            You are able to set up the Dashboard (the area above the actual
-            grid) so that it has exactly the look and feel that best matches
-            your requirements.
+            The Adaptable Blotter contains powerful charting capabilities
+            (courtesy of Infragistics).
           </p>
           <p>
-            You are able to specify which buttons are toolbars are visible, how
-            the dashboard displays, what colours are shown and much more.
+            These examples show the Category and Pie (Doughnut) charts but other
+            types are coming soon.
           </p>
           <p>
-            This is all done through Dashboard Predefined Config. See the
-            examples in this section to find out more.
+            All charts are 'live', so that they update in line with changes to
+            the underlying data, and they are based on visible (not all) rows so
+            will update as you filter the Grid.
           </p>
         </div>
       }
     >
       <Grid>
-        <DemoBox href="/dashboard/aggriddashboardtoolbarsdemo">
-          Dashboard buttons demo
+        <DemoBox href="/charts/aggridcategorychartsdemo">
+          Category Charts demo
         </DemoBox>
-        <DemoBox href="/dashboard/aggriddashboardtoolbarsdemo">
-          Dashboard toolbars demo
-        </DemoBox>
-        <DemoBox href="/dashboard/aggriddashboardvisibilitydemo">
-          Dashboard visibility demo
-        </DemoBox>
+        <DemoBox href="/charts/aggridpiechartsdemo">Pie Charts demo</DemoBox>
       </Grid>
     </MainPage>
   );

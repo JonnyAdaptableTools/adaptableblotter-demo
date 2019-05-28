@@ -121,28 +121,6 @@ export default {
           CategoryChartType: 'Column',
         },
       },
-      {
-        ChartType: 'PieChart',
-        Description: '',
-        Name: 'Population Pie Chart',
-        PrimaryColumnId: 'Country',
-        SecondaryColumnId: 'Population',
-        SecondaryColumnOperation: 'Sum',
-        VisibleRowsOnly: true,
-        ChartProperties: {},
-      },
-      {
-        ChartType: 'PieChart',
-        Description: 'Land Area by Region',
-        Name: 'Continental Land Mass',
-        PrimaryColumnId: 'Region',
-        SecondaryColumnId: 'Land Area',
-        SecondaryColumnOperation: 'Sum',
-        VisibleRowsOnly: true,
-        ChartProperties: {
-          ShowAsDoughnut: false,
-        },
-      },
     ],
   },
 };
