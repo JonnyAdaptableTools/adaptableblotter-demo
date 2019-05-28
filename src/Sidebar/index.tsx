@@ -96,6 +96,20 @@ export default () => (
           <a>Grouping</a>
         </Link>
       </Category>
+      <Category
+        title={
+          <Link href="/search">
+            <a>Search</a>
+          </Link>
+        }
+      >
+        <Link href="/search/aggridadvancedsearchdemo">
+          <a>Advanced Search</a>
+        </Link>
+        <Link href="/search/aggridquicksearchdemo">
+          <a>Quick Search</a>
+        </Link>
+      </Category>
     </div>
   </div>
 );
