@@ -1,18 +1,10 @@
 import React from 'react';
-import AgGridDemoPage from '../../src/AgGridDemoPage';
-import dynamic from 'next/dynamic';
-
-const DynamicComponent = dynamic(
-  () => import('../../src/client/aggridbasicdemo'),
-  {
-    loading: () => null,
-    ssr: false,
-  }
-);
+import DynamicDemoPage from '../../src/DynamicDemoPage';
 
 export default () => {
   return (
-    <AgGridDemoPage
+    <DynamicDemoPage
+      demo={import('../../src/client/aggridbasicdemo')}
       pageTitle={'AdaptableBlotter.JS basic ag-Grid Demo'}
       description={
         <div>
@@ -24,16 +16,6 @@ export default () => {
           </p>
         </div>
       }
-      config={<p>[No Config Supplied]</p>}
-      blotterOptions={
-        "primaryKey: 'OrderId',\n" +
-        'vendorGrid: gridOptions,\n' +
-        "userName: 'Demo User',\n" +
-        "blotterId: 'Basic Demo', \n" +
-        'predefinedConfig: predefinedConfig'
-      }
-    >
-      <DynamicComponent />
-    </AgGridDemoPage>
+    />
   );
 };

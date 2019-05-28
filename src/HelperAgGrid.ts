@@ -126,8 +126,6 @@ export class HelperAgGrid {
 
   public getGridOptions(columndefs: any, data: any): GridOptions {
     let gridOptions: GridOptions = {
-      columnDefs: columndefs,
-      rowData: data,
       animateRows: true,
       enableRangeSelection: true,
       floatingFilter: true,
@@ -142,6 +140,8 @@ export class HelperAgGrid {
         abColDefDate: {},
         abColDefObject: {},
       },
+      columnDefs: columndefs,
+      rowData: data,
       onGridReady: function() {
         //we do it twice as sometimes when the dataset is small columns that werent visible at all will become
         //visible and won't be autosized
@@ -273,17 +273,6 @@ export class HelperAgGrid {
       type: 'abColDefDate',
     });
     schema.push({
-      headerName: 'Rqd Date',
-      field: 'RequiredDate',
-      editable: true,
-      cellEditorParams: { useFormatter: true },
-      valueParser: this.dateParseragGrid,
-      valueFormatter: this.shortDateFormatteragGrid,
-      filter: true,
-      sortable: true,
-      type: 'abColDefDate',
-    });
-    schema.push({
       headerName: 'Invoiced',
       field: 'InvoicedCost',
       cellClass: 'number-cell',
@@ -366,28 +355,6 @@ export class HelperAgGrid {
       type: 'abColDefString',
     });
     schema.push({
-      headerName: 'Ship Address',
-      field: 'ShipAddress',
-      editable: true,
-      sortable: true,
-      type: 'abColDefString',
-    });
-    schema.push({
-      headerName: 'Ship City',
-      field: 'ShipCity',
-      sortable: true,
-      type: 'abColDefString',
-    });
-    // schema.push({ headerName: "Ship Postal Code", field: "ShipPostalCode", sortable: true, type: 'abColDefString', });
-    schema.push({
-      headerName: 'Ship Region',
-      field: 'ShipRegion',
-      filter: 'text',
-      editable: true,
-      sortable: true,
-      type: 'abColDefString',
-    });
-    schema.push({
       headerName: 'Ship Country',
       field: 'ShipCountry',
       filter: 'text',
@@ -459,19 +426,6 @@ export class HelperAgGrid {
           filter: true,
           sortable: true,
           type: 'abColDefNumber',
-        },
-        {
-          headerName: 'Required Date',
-          field: 'RequiredDate',
-          editable: true,
-          columnGroupShow: 'closed',
-          cellEditorParams: { useFormatter: true },
-          valueParser: this.dateParseragGrid,
-          valueFormatter: this.shortDateFormatteragGrid,
-          enableValue: false,
-          filter: true,
-          sortable: true,
-          type: 'abColDefDate',
         },
         {
           headerName: 'Order Date',
@@ -558,16 +512,6 @@ export class HelperAgGrid {
       type: 'abColDefString',
     });
     schema.push({
-      headerName: 'Ship Via',
-      field: 'ShipVia',
-      filter: 'text',
-      editable: true,
-      enableRowGroup: true,
-      hide: true,
-      sortable: true,
-      type: 'abColDefString',
-    });
-    schema.push({
       headerName: 'Freight',
       field: 'Freight',
       cellClass: 'number-cell',
@@ -602,24 +546,10 @@ export class HelperAgGrid {
           type: 'abColDefString',
         },
         {
-          headerName: 'Ship Address',
-          field: 'ShipAddress',
+          headerName: 'Ship Via',
+          field: 'ShipVia',
           columnGroupShow: 'closed',
           editable: true,
-          sortable: true,
-          type: 'abColDefString',
-        },
-        {
-          headerName: 'Ship City',
-          field: 'ShipCity',
-          columnGroupShow: 'closed',
-          sortable: true,
-          type: 'abColDefString',
-        },
-        {
-          headerName: 'Ship Postal Code',
-          field: 'ShipPostalCode',
-          columnGroupShow: 'closed',
           sortable: true,
           type: 'abColDefString',
         },

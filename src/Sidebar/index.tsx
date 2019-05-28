@@ -36,17 +36,23 @@ export default () => (
       <Link href="/aggridconfigdemo">
         <a>Custom config</a>
       </Link>
-      <Link href="/dashboard/aggriddashboardbuttonsdemo">
-        <a>Dashboard</a>
+      <Link href="/dashboard/aggriddashboardtoolbarsdemo">
+        <a>Dashboard Toolbars</a>
       </Link>
       <Link href="/dashboard/aggriddashboardbuttonsdemo">
-        <a>Dashboard second demo</a>
+        <a>Dashboard Buttons</a>
+      </Link>
+      <Link href="/dashboard/aggriddashboardvisibilitydemo">
+        <a>Dashboard Visibility</a>
       </Link>
       <Link href="/aggridworldstatschartingdemo">
         <a>Charts</a>
       </Link>
       <Link href="/aggridentitlementsdemo">
         <a>Entitlements</a>
+      </Link>
+      <Link href="/aggridgroupingdemo">
+        <a>Grouping</a>
       </Link>
     </div>
   </div>

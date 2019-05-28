@@ -1,44 +1,46 @@
 import * as Helper from '../../Helper';
 
-import { Grid } from 'ag-grid-community/dist/lib/grid';
+import AdaptableBlotter from 'adaptableblotter/agGrid';
 import 'adaptableblotter/base.css';
 import 'adaptableblotter/themes/light.css';
+
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-balham.css';
-
-import AdaptableBlotter from 'adaptableblotter/agGrid';
-import { IAdaptableBlotterOptions } from 'adaptableblotter/types';
+import { cloneDeep } from 'lodash';
 
 import '../../../DemoPage/aggriddemo.css';
+
+import { IAdaptableBlotterOptions } from 'adaptableblotter/types';
 
 import json from '../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../HelperAgGrid';
 import predefinedConfig from './config';
 
-export class Demo {
-  private helperAgGrid: HelperAgGrid;
+export default () => {
+  let helperAgGrid = new HelperAgGrid();
+  helperAgGrid.setUpAgGridLicence();
 
-  constructor() {
-    this.helperAgGrid = new HelperAgGrid();
-    this.helperAgGrid.setUpAgGridLicence();
+  let rowData = JSON.parse(JSON.stringify(json));
+  Helper.MakeAllRecordsColumnsDateProperDates(rowData);
 
-    let rowData = JSON.parse(JSON.stringify(json));
-    Helper.MakeAllRecordsColumnsDateProperDates(rowData);
+  const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
 
-    const columndefs = this.helperAgGrid.getBasicNorthwindColumnSchema();
+  const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
 
-    const gridOptions = this.helperAgGrid.getGridOptions(columndefs, rowData);
-    new Grid(document.getElementById('grid')!, gridOptions);
+  const blotterOptions: IAdaptableBlotterOptions = {
+    primaryKey: 'OrderId',
+    userName: 'Demo User',
+    blotterId: 'Basic Demo',
+    licenceKey: Helper.getdemolicencekey(),
+    vendorGrid: gridOptions,
+    predefinedConfig: predefinedConfig,
+  };
 
-    const blotterOptions: IAdaptableBlotterOptions = {
-      primaryKey: 'OrderId',
-      vendorGrid: gridOptions,
-      userName: 'Demo User',
-      blotterId: 'Basic Demo',
-      licenceKey: Helper.getdemolicencekey(),
-      predefinedConfig: predefinedConfig,
-    };
+  const blotterOptionsClone = cloneDeep(blotterOptions);
+  new AdaptableBlotter(blotterOptions);
 
-    new AdaptableBlotter(blotterOptions);
-  }
-}
+  return {
+    predefinedConfig,
+    blotterOptions: blotterOptionsClone,
+  };
+};

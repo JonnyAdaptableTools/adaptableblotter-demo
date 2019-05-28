@@ -1,25 +1,18 @@
 import React from 'react';
-import AgGridDemoPage from '../../src/AgGridDemoPage';
-import dynamic from 'next/dynamic';
-import config from '../../src/client/aggridworldstatschartingdemo/config';
-
-const DynamicComponent = dynamic(
-  () => import('../../src/client/aggridworldstatschartingdemo'),
-  {
-    loading: () => null,
-    ssr: false,
-  }
-);
+import DynamicDemoPage from '../../src/DynamicDemoPage';
 
 export default () => {
-  let configJson = JSON.stringify(config, null, 2);
   return (
-    <AgGridDemoPage
+    <DynamicDemoPage
+      demo={import('../../src/client/aggridworldstatschartingdemo')}
       pageTitle={'AdaptableBlotter.JS World Stats Charting Demo'}
       description={
         <div>
           <h4>Charts</h4>
-          <p>The Adaptable Blotter has powerful charting capabilities.</p>
+          <p>
+            The Adaptable Blotter has powerful charting capabilities (courtesy
+            of Infragistics).
+          </p>
           <p>
             In this example we have used Chart Predefined Config to create 5
             initial Charts (3 Category and 2 Pie).
@@ -38,21 +31,6 @@ export default () => {
           </p>
         </div>
       }
-      config={configJson}
-      blotterOptions={
-        "primaryKey: 'OrderId',\n" +
-        'vendorGrid: gridOptions,\n' +
-        "userName: 'Demo User',\n" +
-        "blotterId: 'Basic Demo', \n" +
-        'predefinedConfig: predefinedConfig' +
-        'chartOptions: { \n' +
-        'displayOnStartUp: true, \n' +
-        'showModal: false, \n' +
-        'pieChartMaxItems: 50, \n' +
-        '} \n'
-      }
-    >
-      <DynamicComponent />
-    </AgGridDemoPage>
+    />
   );
 };

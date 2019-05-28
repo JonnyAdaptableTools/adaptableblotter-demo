@@ -94,12 +94,15 @@ export default ({
   return (
     <MainPage pageTitle={pageTitle}>
       <div className="demodescription">{description} </div>
-      <div id="adaptableBlotter" />
+      <div
+        id="adaptableBlotter"
+        style={{ marginLeft: '20px', marginRight: '40px' }}
+      />
       <p />
       <div
         id="grid"
         className="ag-theme-balham"
-        style={{ height: '500px', marginRight: '50px' }}
+        style={{ height: '500px', marginLeft: '20px', marginRight: '40px' }}
       />
 
       {children}

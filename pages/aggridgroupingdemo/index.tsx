@@ -1,23 +1,13 @@
 import React from 'react';
-import AgGridDemoPage from '../../src/AgGridDemoPage';
-import dynamic from 'next/dynamic';
-
-const DynamicComponent = dynamic(
-  () => import('../../src/client/aggridgroupingdemo'),
-  {
-    loading: () => null,
-    ssr: false,
-  }
-);
+import DynamicDemoPage from '../../src/DynamicDemoPage';
 
 export default () => {
   return (
-    <AgGridDemoPage
-      pageTitle={'AdaptableBlotter.JS grouping ag-Grid Demo'}
+    <DynamicDemoPage
+      demo={import('../../src/client/aggridgroupingdemo')}
+      pageTitle={'AdaptableBlotter.JS ag-Grid Grouping Demo'}
       description={
-        <details>
-          <summary>Demo details...</summary>
-
+        <div>
           <h4>
             A demo of AdaptableBlotter.JS integrating with the first-rate
             grouping (both column and row) and pivoting capabilities of ag-Grid.
@@ -50,10 +40,8 @@ export default () => {
             mode.
             <br />
           </p>
-        </details>
+        </div>
       }
-    >
-      <DynamicComponent />
-    </AgGridDemoPage>
+    />
   );
 };

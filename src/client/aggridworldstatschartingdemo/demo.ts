@@ -1,47 +1,51 @@
 import * as Helper from '../../Helper';
 
-import { Grid } from 'ag-grid-community/dist/lib/grid';
+import AdaptableBlotter from 'adaptableblotter/agGrid';
 import 'adaptableblotter/base.css';
 import 'adaptableblotter/themes/light.css';
+
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-balham.css';
-import 'ag-grid-community/dist/styles/ag-theme-balham-dark.css';
-
-import AdaptableBlotter from 'adaptableblotter/agGrid';
-import { IAdaptableBlotterOptions } from 'adaptableblotter/types';
+import { cloneDeep } from 'lodash';
 
 import '../../../DemoPage/aggriddemo.css';
 
+import { IAdaptableBlotterOptions } from 'adaptableblotter/types';
+
 import json from '../../../DataSets/Json/worldstats.json';
-import predefinedConfig from './config';
 import { HelperAgGrid } from '../../HelperAgGrid';
+import predefinedConfig from './config';
 
-export class Demo {
-  private helperAgGrid: HelperAgGrid;
-  constructor() {
-    this.helperAgGrid = new HelperAgGrid();
-    Helper.MakeAllRecordsColumnsDateProperDates(json);
-    this.helperAgGrid.setUpAgGridLicence();
+export default () => {
+  let helperAgGrid = new HelperAgGrid();
+  helperAgGrid.setUpAgGridLicence();
 
-    const columndefs = this.helperAgGrid.getWorldStatsSchema();
+  let rowData = JSON.parse(JSON.stringify(json));
+  Helper.MakeAllRecordsColumnsDateProperDates(rowData);
 
-    const gridOptions = this.helperAgGrid.getGridOptions(columndefs, json);
-    new Grid(document.getElementById('grid')!, gridOptions);
+  const columndefs = helperAgGrid.getWorldStatsSchema();
 
-    const blotterOptions: IAdaptableBlotterOptions = {
-      primaryKey: 'OrderId',
-      vendorGrid: gridOptions,
-      userName: 'Demo User',
-      blotterId: 'World Charts Demo',
-      licenceKey: Helper.getdemolicencekey(),
-      predefinedConfig: predefinedConfig,
-      chartOptions: {
-        displayOnStartUp: true,
-        showModal: false,
-        pieChartMaxItems: 50,
-      },
-    };
+  const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
 
-    new AdaptableBlotter(blotterOptions);
-  }
-}
+  const blotterOptions: IAdaptableBlotterOptions = {
+    primaryKey: 'OrderId',
+    userName: 'Demo User',
+    blotterId: 'World Charts Demo',
+    licenceKey: Helper.getdemolicencekey(),
+    chartOptions: {
+      displayOnStartUp: true,
+      showModal: false,
+      pieChartMaxItems: 50,
+    },
+    vendorGrid: gridOptions,
+    predefinedConfig: predefinedConfig,
+  };
+
+  const blotterOptionsClone = cloneDeep(blotterOptions);
+  new AdaptableBlotter(blotterOptions);
+
+  return {
+    predefinedConfig,
+    blotterOptions: blotterOptionsClone,
+  };
+};
