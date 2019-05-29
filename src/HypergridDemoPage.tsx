@@ -6,7 +6,7 @@ import logo from '../images/AdaptableBlotter.png';
 type TypeProps = {
   pageTitle: string;
   description: ReactNode;
-  children: ReactNode;
+  children?: ReactNode;
 };
 
 export default ({ pageTitle, children, description }: TypeProps) => {

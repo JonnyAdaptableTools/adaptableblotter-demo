@@ -1,14 +1,14 @@
 import React from 'react';
 import HypergridDemoPage from '../../src/HypergridDemoPage';
 import dynamic from 'next/dynamic';
-
+/*
 const DynamicComponent = dynamic(
   () => import('../../src/client/hypergridchartingdemo'),
   {
     loading: () => null,
     ssr: false,
   }
-);
+);*/
 
 export default () => {
   return (
@@ -23,8 +23,6 @@ export default () => {
           </p>
         </div>
       }
-    >
-      <DynamicComponent />
-    </HypergridDemoPage>
+    />
   );
 };
