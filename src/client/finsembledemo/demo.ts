@@ -1,18 +1,18 @@
 import * as Helper from '../../Helper';
 
 import AdaptableBlotter from 'adaptableblotter/agGrid';
-import './node_modules/adaptableblotter/base.css';
-import './node_modules/adaptableblotter/themes/light.css';
+import 'adaptableblotter/base.css';
+import 'adaptableblotter/themes/light.css';
 
-import './node_modules/ag-grid-community/dist/styles/ag-grid.css';
-import './node_modules/ag-grid-community/dist/styles/ag-theme-balham.css';
+import 'ag-grid-community/dist/styles/ag-grid.css';
+import 'ag-grid-community/dist/styles/ag-theme-balham.css';
 import { cloneDeep } from 'lodash';
 
 import '../../../DemoPage/aggriddemo.css';
 
 import { IAdaptableBlotterOptions } from 'adaptableblotter/types';
 
-import json from '../../../../DataSets/Json/NorthwindOrders.json';
+import json from '../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../HelperAgGrid';
 import predefinedConfig from './config';
 
@@ -30,7 +30,7 @@ export default () => {
   const blotterOptions: IAdaptableBlotterOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    blotterId: 'Basic Demo',
+    blotterId: 'Advanced Search Demo',
     licenceKey: Helper.getdemolicencekey(),
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
