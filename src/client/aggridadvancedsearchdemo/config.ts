@@ -5,17 +5,42 @@ export default {
         Expression: {
           ColumnValueExpressions: [
             {
-              ColumnDisplayValues: ['Janet Leverling', 'Margaret Peacock'],
+              ColumnDisplayValues: [
+                'Janet Leverling',
+                'Margaret Peacock',
+                'Robert King',
+              ],
               ColumnId: 'Employee',
-              ColumnRawValues: ['Janet Leverling', 'Margaret Peacock'],
+              ColumnRawValues: [],
             },
           ],
-          FilterExpressions: [],
-          RangeExpressions: [],
+          FilterExpressions: [
+            {
+              ColumnId: 'OrderDate',
+              Filters: ['This Year'],
+            },
+          ],
+          RangeExpressions: [
+            {
+              ColumnId: 'InvoicedCost',
+              Ranges: [
+                {
+                  Operand1: '300',
+                  Operand1Type: 'Value',
+                  Operand2: '',
+                  Operand2Type: 'Value',
+                  Operator: 'GreaterThan',
+                },
+              ],
+            },
+          ],
         },
-        Name: 'Top Employees',
+        Name: 'Team Best Orders',
       },
     ],
-    CurrentAdvancedSearch: 'Top Employees',
+    CurrentAdvancedSearch: 'Team Best Orders',
+  },
+  Dashboard: {
+    VisibleToolbars: ['AdvancedSearch'],
   },
 };
