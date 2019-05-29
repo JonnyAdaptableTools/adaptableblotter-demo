@@ -12,7 +12,7 @@ import '../../../DemoPage/aggriddemo.css';
 
 import { IAdaptableBlotterOptions } from 'adaptableblotter/types';
 
-import json from '../../../DataSets/Json/worldstats.json';
+import json from '../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../HelperAgGrid';
 import predefinedConfig from './config';
 
@@ -23,20 +23,15 @@ export default () => {
   let rowData = JSON.parse(JSON.stringify(json));
   Helper.MakeAllRecordsColumnsDateProperDates(rowData);
 
-  const columndefs = helperAgGrid.getWorldStatsSchema();
+  const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
 
   const blotterOptions: IAdaptableBlotterOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    blotterId: 'World Charts Demo',
+    blotterId: 'Quick Search Demo',
     licenceKey: Helper.getdemolicencekey(),
-    chartOptions: {
-      displayOnStartUp: true,
-      showModal: false,
-      pieChartMaxItems: 50,
-    },
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };

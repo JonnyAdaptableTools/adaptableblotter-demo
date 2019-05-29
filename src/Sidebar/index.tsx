@@ -21,7 +21,7 @@ const Category = ({
 
 export default () => (
   <div className="sidenav">
-    <div style={{ position: 'relative', marginBottom: 140 }}>
+    <div style={{ position: 'relative' }}>
       <Link href="/">
         <a>
           <img
@@ -37,8 +37,8 @@ export default () => (
         </a>
       </Link>
     </div>
-    <div style={{ padding: '10px 20px' }}>
-      <h3 style={{ color: 'white', fontWeight: 300 }}>Demos</h3>
+    <div style={{ padding: '10px 20px', marginTop: '70px' }}>
+      <h3 style={{ color: 'white', fontWeight: 200 }}>Demos</h3>
       <Link href="/">
         <a>Home</a>
       </Link>
@@ -54,29 +54,62 @@ export default () => (
       <Category
         title={
           <Link href="/dashboard">
-            <a>Dashboard Demos</a>
+            <a>Dashboard</a>
           </Link>
         }
       >
         <Link href="/dashboard/aggriddashboardtoolbarsdemo">
-          <a>Dashboard Toolbars</a>
+          <a>Toolbars</a>
         </Link>
         <Link href="/dashboard/aggriddashboardbuttonsdemo">
-          <a>Dashboard Buttons</a>
+          <a>Buttons</a>
         </Link>
         <Link href="/dashboard/aggriddashboardvisibilitydemo">
-          <a>Dashboard Visibility</a>
+          <a>Visibility</a>
         </Link>
       </Category>
-      <Link href="/aggridworldstatschartingdemo">
-        <a>Charts</a>
-      </Link>
-      <Link href="/aggridentitlementsdemo">
-        <a>Entitlements</a>
-      </Link>
-      <Link href="/aggridgroupingdemo">
-        <a>Grouping</a>
-      </Link>
+      <Category
+        title={
+          <Link href="/charts">
+            <a>Charts</a>
+          </Link>
+        }
+      >
+        <Link href="/charts/aggridcategorychartsdemo">
+          <a>Category Charts</a>
+        </Link>
+        <Link href="/charts/aggridpiechartsdemo">
+          <a>Pie Charts</a>
+        </Link>
+      </Category>
+      <Category
+        title={
+          <Link href="/misc">
+            <a>Misc</a>
+          </Link>
+        }
+      >
+        <Link href="/misc/aggridentitlementsdemo">
+          <a>Entitlements</a>
+        </Link>
+        <Link href="/misc/aggridgroupingdemo">
+          <a>Grouping</a>
+        </Link>
+      </Category>
+      <Category
+        title={
+          <Link href="/search">
+            <a>Search</a>
+          </Link>
+        }
+      >
+        <Link href="/search/aggridadvancedsearchdemo">
+          <a>Advanced Search</a>
+        </Link>
+        <Link href="/search/aggridquicksearchdemo">
+          <a>Quick Search</a>
+        </Link>
+      </Category>
     </div>
   </div>
 );

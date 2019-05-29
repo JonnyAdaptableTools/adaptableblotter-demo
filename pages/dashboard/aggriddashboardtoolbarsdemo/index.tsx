@@ -8,13 +8,22 @@ export default () => {
       pageTitle={'AdaptableBlotter.JS ag-Grid Dashboard Toolbars Demo'}
       description={
         <div>
-          <h4>Configuring Dashboard Toolbars</h4>
+          <h4>Dashboard Toolbars</h4>
           <p>
-            You are able to set up the Dashboard (through Dashboard Predefined
-            Config) so that it shows only the toolbars you wish, with the look
-            and feel that best matches your requirements.
+            The Dashboard ships with 13 toolbars. They each provide quick access
+            to a given Function together with dropdowns and buttons as required.
+            Plus a 'configure' button to open the main popup window for that
+            Function.
           </p>
-          <p>This example has a few toolbars - todo...</p>
+          <p>
+            By default the Quick Search, Layout, Export and Column Filter
+            toolbars are shown but you can make a different selection - through
+            Dashboard Predefined Config.
+          </p>
+          <p>
+            In this example we have selected the 'Smart Edit, 'Alert, 'Bulk
+            Update' and 'Chart' toolbars.
+          </p>
         </div>
       }
     />

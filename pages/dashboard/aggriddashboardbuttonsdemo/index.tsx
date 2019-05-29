@@ -1,49 +1,31 @@
 import React from 'react';
-import AgGridDemoPage from '../../../src/AgGridDemoPage';
-import dynamic from 'next/dynamic';
-import config from '../../../src/client/aggriddashboardbuttonsdemo/config';
-
-const DynamicComponent = dynamic(
-  () => import('../../../src/client/aggriddashboardbuttonsdemo'),
-  {
-    loading: () => null,
-    ssr: false,
-  }
-);
+import DynamicDemoPage from '../../../src/DynamicDemoPage';
 
 export default () => {
-  let configJson = JSON.stringify(config, null, 2);
-
   return (
-    <AgGridDemoPage
-      pageTitle={'AdaptableBlotter.JS ag-Grid Dashboard Demo'}
+    <DynamicDemoPage
+      demo={import('../../../src/client/aggriddashboardbuttonsdemo')}
+      pageTitle={'AdaptableBlotter.JS ag-Grid Dashboard Buttons Demo'}
       description={
         <div>
-          <h4>Configuring Dashboard Buttons</h4>
+          <h4>Dashboard Buttons</h4>
           <p>
-            You are able to set up the Dashboard (through Dashboard Predefined
-            Config) so that it shows only the toolbars and buttons you wish,
-            with the look and feel that best matches your requirements.
+            As part of Dashboard Predefined Config you can specify which buttons
+            and dropdowns are visible in the 'Home' toolbar (the one on the
+            left).
           </p>
           <p>
-            This example has the Adaptable Blotter Dashboard minimised on
-            startup. On opening it you will see that we are using the
-            non-default set of toolbars and buttons. Plus we have set{' '}
-            <i>Use Single Colour for All Dashboard Buttons</i> property to false
-            so that we see the more colourful set of toolbars.
+            In this example we have set the 'Dashboard', 'ColumnChooser',
+            'Chart', 'SmartEdit', 'Alert' and 'Reminder' buttons to be visible.
+          </p>
+          <p>
+            Plus we have set <i>Use Single Colour for All Dashboard Buttons</i>{' '}
+            property to false so that we see the more colourful set of toolbars,
+            and chosen to hide the <i>About</i> button and the <i>Columns</i>{' '}
+            and <i>Toolbars</i> dropdowns.
           </p>
         </div>
       }
-      config={configJson}
-      blotterOptions={
-        "primaryKey: 'OrderId',\n" +
-        'vendorGrid: gridOptions,\n' +
-        "userName: 'Demo User',\n" +
-        "blotterId: 'Basic Demo', \n" +
-        'predefinedConfig: predefinedConfig'
-      }
-    >
-      <DynamicComponent />
-    </AgGridDemoPage>
+    />
   );
 };

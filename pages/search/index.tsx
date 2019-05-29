@@ -40,35 +40,22 @@ const DemoBox = ({ href, children }: { href: string; children: ReactNode }) => {
 export default () => {
   return (
     <MainPage
-      pageTitle={'AdaptableBlotter.JS ag-Grid Dashboard demos'}
+      pageTitle={'Search demos'}
       description={
         <div>
-          <h4>Dashboard</h4>
-          <p>
-            You are able to set up the Dashboard (the area above the actual
-            grid) so that it has exactly the look and feel that best matches
-            your requirements.
-          </p>
-          <p>
-            You are able to specify which buttons are toolbars are visible, how
-            the dashboard displays, what colours are shown and much more.
-          </p>
-          <p>
-            This is all done through Dashboard Predefined Config. See the
-            examples in this section to find out more.
-          </p>
+          <h4>Search</h4>
+          <p>Quick Search</p>
+          <p>Advanced Search</p>
+          <p>User Filter</p>
         </div>
       }
     >
       <Grid>
-        <DemoBox href="/dashboard/aggriddashboardbuttonsdemo">
-          Dashboard buttons demo
+        <DemoBox href="/search/aggridadvancedsearchdemo">
+          Advanced Search demo
         </DemoBox>
-        <DemoBox href="/dashboard/aggriddashboardtoolbarsdemo">
-          Dashboard toolbars demo
-        </DemoBox>
-        <DemoBox href="/dashboard/aggriddashboardvisibilitydemo">
-          Dashboard visibility demo
+        <DemoBox href="/search/aggridquicksearchdemo">
+          Quick Search demo
         </DemoBox>
       </Grid>
     </MainPage>
