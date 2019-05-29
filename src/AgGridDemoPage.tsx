@@ -93,16 +93,9 @@ export default ({
 }: AgGridDemoPageProps) => {
   return (
     <MainPage pageTitle={pageTitle} description={description}>
-      <div
-        id="adaptableBlotter"
-        style={{ marginLeft: '20px', marginRight: '40px' }}
-      />
+      <div id="adaptableBlotter" />
       <p />
-      <div
-        id="grid"
-        className="ag-theme-balham"
-        style={{ height: '570px', marginLeft: '20px', marginRight: '40px' }}
-      />
+      <div id="grid" className="ag-theme-balham" style={{ height: 570 }} />
 
       {children}
 

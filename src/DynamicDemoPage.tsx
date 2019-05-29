@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import AgGridDemoPage, { AgGridDemoPageProps } from './AgGridDemoPage';
 import dynamic from 'next/dynamic';
 

@@ -6,23 +6,7 @@ import { ReactNode } from 'react-redux';
 import logo from '../../images/AdaptableBlotter.png';
 
 import './index.scss';
-
-const minBoxWidth = 220;
-
-const Grid = ({ children }: { children: ReactNode }) => {
-  return (
-    <div
-      style={{
-        display: 'grid',
-        padding: 20,
-        gridGap: 20,
-        gridTemplateColumns: `repeat(auto-fit, minmax(${minBoxWidth}px, 1fr))`,
-      }}
-    >
-      {children}
-    </div>
-  );
-};
+import GridLayout from '../../src/components/GridLayout';
 
 const DemoBox = ({ href, children }: { href: string; children: ReactNode }) => {
   return (
@@ -50,10 +34,10 @@ export default () => {
         </div>
       }
     >
-      <Grid>
+      <GridLayout>
         <DemoBox href="/partners/openfindemo">OpenFin demo</DemoBox>
         <DemoBox href="/partners/finsembledemo">Finsemble demo</DemoBox>
-      </Grid>
+      </GridLayout>
     </MainPage>
   );
 };

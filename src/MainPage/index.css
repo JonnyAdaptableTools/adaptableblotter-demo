@@ -1,0 +1,49 @@
+html,
+body,
+#__next {
+  height: 100%;
+}
+
+.number-cell {
+  text-align: right;
+}
+.bool-cell {
+  text-align: center;
+}
+.home-button {
+  margin: 5;
+}
+
+h5 {
+  font-weight: bold;
+  font-size: 16px;
+  color: #f9f9f9;
+  padding: 4px 4px 4px 20px;
+}
+
+.demodescription {
+  background-color: #f7f7f7;
+  margin-bottom: 10px;
+  padding: 7px;
+}
+.ab--theme-dark .demodescription {
+  background: #272b30;
+  color: white;
+}
+
+.config {
+  background-color: #f5f5f5;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 20px;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  position: relative;
+}
+
+.main {
+  margin-top: 10px;
+  padding: 20px;
+  flex: 1;
+  overflow: auto;
+}

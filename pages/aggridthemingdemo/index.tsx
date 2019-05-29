@@ -7,14 +7,18 @@ export default () => {
       demo={import('../../src/client/aggridthemingdemo')}
       pageTitle={'AdaptableBlotter.JS ag-Grid Theming Demo'}
       description={
-        <p>
-          <b>Setting the Thme</b>
-          This example shows the Adaptable Blotter with the 'Dark Theme'
-          selected.
-          <br />
-          This theme can be changed by selecting a new value from the Theme
-          dropdown in the Toolbar (which we have made visible)
-        </p>
+        <>
+          <p>
+            <b>Setting the Theme</b>
+          </p>
+          <p>
+            This example shows the Adaptable Blotter with the 'Dark Theme'
+            selected.
+            <br />
+            This theme can be changed by selecting a new value from the Theme
+            dropdown in the Toolbar (which we have made visible)
+          </p>
+        </>
       }
     />
   );

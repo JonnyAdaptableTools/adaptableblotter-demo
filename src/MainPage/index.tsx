@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
 
-import '../demo.css';
+import './index.css';
 import Sidebar from '../Sidebar';
 
 export type MainPageProps = {
