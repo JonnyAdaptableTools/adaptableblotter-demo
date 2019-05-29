@@ -40,7 +40,7 @@ export default () => {
           market-leading ag-Grid.
           <br />
           Adaptable Blotter.JS is fully data-agnostic and can work with any data
-          set you provide it with, for any Desk or team, and in any Location
+          set you provide it, for any Desk or team, and in any Location
           <br />
         </p>
         <p>
