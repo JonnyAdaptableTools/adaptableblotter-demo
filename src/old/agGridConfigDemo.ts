@@ -182,7 +182,7 @@ let json = {
           'ItemCost',
           'ItemCount',
         ],
-        GridSorts: [],
+        ColumnSorts: [],
         Name: 'Orders View',
       },
       {
@@ -195,7 +195,7 @@ let json = {
           'ShippedDate',
           'CustomerReference',
         ],
-        GridSorts: [
+        ColumnSorts: [
           {
             Column: 'ShipName',
             SortOrder: 'Ascending',

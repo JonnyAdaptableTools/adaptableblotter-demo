@@ -142,7 +142,7 @@ export default {
           'ItemCost',
           'ItemCount',
         ],
-        GridSorts: [],
+        ColumnSorts: [],
         Name: 'Orders View',
       },
       {
@@ -155,7 +155,7 @@ export default {
           'ShippedDate',
           'CustomerReference',
         ],
-        GridSorts: [
+        ColumnSorts: [
           {
             Column: 'ShipName',
             SortOrder: 'Ascending',

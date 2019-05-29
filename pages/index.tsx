@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 
-import logo from '../images/AdaptableBlotter.png';
 import PACKAGE from '../package.json';
 
 import 'adaptableblotter/base.css';
@@ -29,44 +28,41 @@ export default () => {
         <br />
         <p>
           <b>Background</b> <br />
-          The Adaptable Blotter is the market leading HTML5 DataGrid Solution.
+          The Adaptable Blotter is the most advanced and powerful HTML5 DataGrid
+          Solution on the market today.
           <br />
           It provides, out of the box, all the functionality that financial and
           other advanced users require to be productive and efficient. And which
           usually needs to be built on a bespoke basis for each project.
           <br />
-          AdaptableBlotter.JS can be integrated with a number of different
-          underlying HTML5 grids, both vendor and open source.
-          <br />
-          AdaptableBlotter.JS works with any dataset, any Grid type, any Desk,
-          and in any Location
+          AdaptableBlotter.JS sits on top of (and integrates with) a number of
+          HTML5 vendor DataGrids both vendor and open source including the
+          market-leading ag-Grid.
           <br />
           Adaptable Blotter.JS is fully data-agnostic and can work with any data
-          set you provide it with.
+          set you provide it with, for any Desk or team, and in any Location
           <br />
-          <p>
-            It sits on top of (and integrates with) a number of HTML5 vendor
-            DataGrids including ag-Grid.{' '}
-          </p>
         </p>
-        <b>Integration</b>
-        <br />
-        It is trivial to set up the Adaptable Blotter and can be done with a
-        single line of code.
-        <br />
-        See this{' '}
-        <a href="https://yg0we.codesandbox.io/" target="_blank">
-          Live Example
-        </a>{' '}
-        and download it and experiment with it yourself using this{' '}
-        <a
-          href="https://codesandbox.io/s/adaptableblotterbasic-yg0we"
-          target="_blank"
-        >
-          Sandbox
-        </a>
-        .
-        <br />
+        <p>
+          <b>Integration</b>
+          <br />
+          It is trivial to set up the Adaptable Blotter and can be done with a
+          single line of code.
+          <br />
+          See this{' '}
+          <a href="https://yg0we.codesandbox.io/" target="_blank">
+            Live Example
+          </a>{' '}
+          and download it and experiment with it yourself using this{' '}
+          <a
+            href="https://codesandbox.io/s/adaptableblotterbasic-yg0we"
+            target="_blank"
+          >
+            Sandbox
+          </a>
+          .
+          <br />
+        </p>
         <p>
           <b>Help</b>
           <br />
@@ -83,23 +79,23 @@ export default () => {
         <p>
           <b>Licence and Pricing</b>
           <br />
-          The Adaptable Blotter is free for evaluation use. We also seek to make
-          it available for use by charities, open-source projects and students
-          in full time education.
+          The Adaptable Blotter is free for evaluation use via the Community
+          Edition (which is also available for use by charities, open-source
+          projects and students in full time education). This gives full access
+          to all features in the Adaptable Blotter but state cannot be saved or
+          pre-loaded.
           <br />
-          For all other usage and, access to the full range of features, an
-          annual licence must be purchased. This includes monthly updates
-          together with ongoing support.
+          For all other usage a commerical annual licence must be purchased,
+          which provides full state management capabilities. A commercial
+          licence also guarantees quarterly updates together with full ongoing
+          support.
           <br />
-          We also provide support for more formal trials, and offer a range of
-          licence alternatives depending on desired usage.
+          We also provide support for more formal trials and POCs, and offer a
+          range of tailored licence alternatives depending on desired usage.
           <br />
           To find out more about becoming an Adaptable Blotter user, please
           email{' '}
-          <a href="mailto:support@adaptabletools.com">
-            Adaptable Tools Support
-          </a>
-          .
+          <a href="mailto:sales@adaptabletools.com">Adaptable Tools Sales</a>.
         </p>
         <p>
           <b>Source Code</b>
@@ -111,6 +107,13 @@ export default () => {
             Github
           </a>
           .
+          <br />
+          We welcome - and value - the many contributions and pull requests we
+          receive from the development community; if you want to get involved in
+          the project please contact email{' '}
+          <a href="mailto:support@adaptabletools.com">
+            Adaptable Tools Support
+          </a>
         </p>
       </div>
     </MainPage>

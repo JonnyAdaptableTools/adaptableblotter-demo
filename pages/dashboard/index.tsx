@@ -61,7 +61,7 @@ export default () => {
       }
     >
       <Grid>
-        <DemoBox href="/dashboard/aggriddashboardtoolbarsdemo">
+        <DemoBox href="/dashboard/aggriddashboardbuttonsdemo">
           Dashboard buttons demo
         </DemoBox>
         <DemoBox href="/dashboard/aggriddashboardtoolbarsdemo">
