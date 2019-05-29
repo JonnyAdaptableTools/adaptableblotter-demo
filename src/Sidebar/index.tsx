@@ -34,6 +34,7 @@ export default () => {
             <img
               src={logo}
               style={{
+                padding: 10,
                 maxWidth: '100%',
                 background: 'white',
                 position: 'absolute',
