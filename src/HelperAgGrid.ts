@@ -128,7 +128,7 @@ export class HelperAgGrid {
     let gridOptions: GridOptions = {
       animateRows: true,
       enableRangeSelection: true,
-      floatingFilter: true,
+      floatingFilter: false,
       suppressAggFuncInHeader: true,
       sideBar: true,
       suppressMenuHide: true,
@@ -148,6 +148,7 @@ export class HelperAgGrid {
         gridOptions.columnApi!.autoSizeAllColumns();
         setTimeout(() => gridOptions.columnApi!.autoSizeAllColumns(), 1);
 
+        gridOptions.api!.closeToolPanel();
         gridOptions.api!.addEventListener('cellEditingStopped', () => {});
 
         gridOptions.api!.addEventListener('newColumnsLoaded', function() {
