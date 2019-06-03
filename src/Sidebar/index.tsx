@@ -99,7 +99,24 @@ export default () => {
             <a>Quick Filter</a>
           </Link>
           <Link href="/search/aggriddatasourcedemo">
-            <a>Data Source</a>
+            <a>Data Source Selector</a>
+          </Link>
+        </Category>
+        <Category
+          title={
+            <Link href="/edit">
+              <a>Edit</a>
+            </Link>
+          }
+        >
+          <Link href="/edit/aggridsmarteditdemo">
+            <a>Smart Edit</a>
+          </Link>
+          <Link href="/edit/aggridbulkupdatedemo">
+            <a>Bulk Update</a>
+          </Link>
+          <Link href="/edit/aggridshortcutdemo">
+            <a>Shortcut</a>
           </Link>
         </Category>
         <Category

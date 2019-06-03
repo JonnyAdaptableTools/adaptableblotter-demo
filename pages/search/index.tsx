@@ -54,6 +54,10 @@ export default () => {
               <b>Quick Filter:</b> The area under the Column Header is called
               the Quick Filter, which is a shortcut to the Column Filter.
             </li>
+            <li>
+              <b>Data Source Selector:</b> Dropdown populated through Config
+              that lists items that can be used as part of Server Search.
+            </li>
           </ul>
           Click on the buttons below to see a demo for each search function.
         </div>
@@ -75,7 +79,9 @@ export default () => {
         <DemoBox href="/search/aggridquickfilterdemo">
           Quick Filter demo
         </DemoBox>
-        <DemoBox href="/search/aggriddatasourcedemo">Data Source demo</DemoBox>
+        <DemoBox href="/search/aggriddatasourcedemo">
+          Data Source Selector demo
+        </DemoBox>
       </GridLayout>
     </MainPage>
   );

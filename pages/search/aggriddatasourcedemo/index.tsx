@@ -8,21 +8,32 @@ export default () => {
       pageTitle={'Data Source Demo'}
       description={
         <div>
-          <h4>Data Source</h4>
-          <p>To do</p>
-          <p>To</p>
-          <p>In this example to do</p>
+          <h4>Data Source Selector</h4>
+          <p>
+            Data Sources are lists of 'hard coded' names provided by you in
+            Predefined Config to enable you to run Searches on the Server..
+          </p>
+          <p>
+            When a Data Source is selected, the SearchedChanged event fires
+            allowing you to perform serach on the server and return data to the
+            Adaptable Blotter via the API.
+          </p>
+          <p>
+            In this example we have created 4 Data Sources and we also listen to
+            SearchedChanged and fire details to the console. Note: a release in
+            the near future will provide parameterised queries for Data Sources.
+          </p>
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360005167931-Advanced-Search"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360005167971-Data-Source-Selector"
               target="_blank"
             >
               User Guide
             </a>
             ,{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028900991-Advanced-Search-Config"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028587352-DataSource-Config"
               target="_blank"
             >
               Predefined Config
@@ -36,25 +47,18 @@ export default () => {
             </a>
             ,{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360009004951-Advanced-Search-FAQ"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029055431-Data-Source-Selector-FAQ"
               target="_blank"
             >
               FAQ
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360005113032-Queries"
-              target="_blank"
-            >
-              Queries
             </a>{' '}
             and{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028637652-Advanced-Search-Videos"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360024888631-Server-Searching"
               target="_blank"
             >
-              Videos
-            </a>
+              Server Search
+            </a>{' '}
             .
           </p>
         </div>
