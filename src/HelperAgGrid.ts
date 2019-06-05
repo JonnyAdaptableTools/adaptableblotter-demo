@@ -219,161 +219,45 @@ export class HelperAgGrid {
 
   public getBasicNorthwindColumnSchema(): any[] {
     var schema = [];
-    schema.push({
-      headerName: 'Order Id',
-      field: 'OrderId',
-      editable: true,
-      cellClass: 'number-cell',
-      filter: true,
-      sortable: true,
-      type: 'abColDefNumber',
-    });
-    schema.push({
-      headerName: 'Cust. Ref',
-      field: 'CustomerReference',
-      editable: true,
-      filter: true,
-      sortable: true,
-      type: 'abColDefString',
-    });
-    schema.push({
-      headerName: 'Contact',
-      field: 'ContactName',
-      filter: true,
-      sortable: true,
-      enableRowGroup: true,
-      type: 'abColDefString',
-    });
-    schema.push({
-      headerName: 'Employee',
-      field: 'Employee',
-      filter: 'text',
-      editable: true,
-      sortable: true,
-      enableRowGroup: true,
-      type: 'abColDefString',
-    });
-    schema.push({
-      headerName: 'Order Date',
-      field: 'OrderDate',
-      editable: true,
-      cellEditorParams: { useFormatter: true },
-      valueParser: this.dateParseragGrid,
-      valueFormatter: this.shortDateFormatteragGrid,
-      filter: true,
-      sortable: true,
-      type: 'abColDefDate',
-    });
-    schema.push({
-      headerName: 'Invoiced',
-      field: 'InvoicedCost',
-      cellClass: 'number-cell',
-      cellRenderer: this.currencyRendereragGrid,
-      editable: true,
-      filter: true,
-      sortable: true,
-      type: 'abColDefNumber',
-    });
-    schema.push({
-      headerName: 'Order Cost',
-      field: 'OrderCost',
-      cellClass: 'number-cell',
-      cellRenderer: this.currencyRendereragGrid,
-      editable: true,
-      filter: true,
-      sortable: true,
-      type: 'abColDefNumber',
-    });
-    schema.push({
-      headerName: 'Package Cost',
-      field: 'PackageCost',
-      cellClass: 'number-cell',
-      cellRenderer: this.currencyRendereragGrid,
-      editable: true,
-      filter: true,
-      sortable: true,
-      type: 'abColDefNumber',
-    });
-    schema.push({
-      headerName: 'Item Cost',
-      field: 'ItemCost',
-      cellClass: 'number-cell',
-      editable: true,
-      filter: true,
-      sortable: true,
-      type: 'abColDefNumber',
-    });
-    schema.push({
-      headerName: 'Item Count',
-      field: 'ItemCount',
-      cellClass: 'number-cell',
-      editable: true,
-      filter: true,
-      sortable: true,
-      type: 'abColDefNumber',
-    });
-    schema.push({
-      headerName: 'Company',
-      field: 'CompanyName',
-      editable: true,
-      filter: true,
-      sortable: true,
-      enableRowGroup: true,
-      type: 'abColDefString',
-    });
-    schema.push({
-      headerName: 'Change Last Order',
-      field: 'ChangeLastOrder',
-      cellClass: 'number-cell',
-      editable: true,
-      filter: true,
-      sortable: true,
-      type: 'abColDefNumber',
-    });
-    schema.push({
-      headerName: 'Ship Via',
-      field: 'ShipVia',
-      filter: 'text',
-      editable: true,
-      sortable: true,
-      type: 'abColDefString',
-    });
-    schema.push({
-      headerName: 'Freight',
-      field: 'Freight',
-      cellClass: 'number-cell',
-      cellRenderer: this.currencyRendereragGrid,
-      editable: true,
-      sortable: true,
-      type: 'abColDefNumber',
-    });
-    schema.push({
-      headerName: 'Ship Name',
-      field: 'ShipName',
-      columnGroupShow: 'open',
-      editable: true,
-      sortable: true,
-      type: 'abColDefString',
-    });
-    schema.push({
-      headerName: 'Ship Country',
-      field: 'ShipCountry',
-      filter: 'text',
-      editable: true,
-      sortable: true,
-      type: 'abColDefString',
-    });
-    schema.push({
-      headerName: 'Shipped Date',
-      field: 'ShippedDate',
-      editable: true,
-      cellEditorParams: { useFormatter: true },
-      valueParser: this.dateParseragGrid,
-      valueFormatter: this.shortDateFormatteragGrid,
-      filter: true,
-      sortable: true,
-      type: 'abColDefDate',
-    });
+    schema.push(this.getOrderColumnDef());
+    schema.push(this.getCustRefDef());
+    schema.push(this.getContactDef());
+    schema.push(this.getEmployeeDef());
+    schema.push(this.getOrderDateDef());
+    schema.push(this.getInvoicedDef());
+    schema.push(this.getOrderCostDef());
+    schema.push(this.getPackageCostDef());
+    schema.push(this.getItemCostDef());
+    schema.push(this.getItemCountDef());
+    schema.push(this.getCompanyDef());
+    schema.push(this.getChangeLastOrderDef());
+    schema.push(this.getShipViaDef());
+    schema.push(this.getFreightDef());
+    schema.push(this.getShipNameDef());
+    schema.push(this.getShipCountryDef());
+    schema.push(this.getShippedDateDef());
+    return schema;
+  }
+
+  public getConditionalstyleNorthwindColumnSchema(): any[] {
+    var schema = [];
+    schema.push(this.getOrderColumnDef());
+    schema.push(this.getCustRefDef());
+    schema.push(this.getContactDef());
+    schema.push(this.getChangeLastOrderDef());
+    schema.push(this.getEmployeeDef());
+    schema.push(this.getOrderDateDef());
+    schema.push(this.getInvoicedDef());
+    schema.push(this.getOrderCostDef());
+    schema.push(this.getPackageCostDef());
+    schema.push(this.getItemCostDef());
+    schema.push(this.getItemCountDef());
+    schema.push(this.getCompanyDef());
+    schema.push(this.getShipViaDef());
+    schema.push(this.getFreightDef());
+    schema.push(this.getShipNameDef());
+    schema.push(this.getShipCountryDef());
+    schema.push(this.getShippedDateDef());
     return schema;
   }
 
@@ -888,5 +772,195 @@ export class HelperAgGrid {
     });
 
     return schema;
+  }
+
+  private getOrderColumnDef(): any {
+    return {
+      headerName: 'Order Id',
+      field: 'OrderId',
+      editable: true,
+      cellClass: 'number-cell',
+      filter: true,
+      sortable: true,
+      type: 'abColDefNumber',
+    };
+  }
+  private getCustRefDef(): any {
+    return {
+      headerName: 'Cust. Ref',
+      field: 'CustomerReference',
+      editable: true,
+      filter: true,
+      sortable: true,
+      type: 'abColDefString',
+    };
+  }
+  private getContactDef(): any {
+    return {
+      headerName: 'Contact',
+      field: 'ContactName',
+      filter: true,
+      sortable: true,
+      enableRowGroup: true,
+      type: 'abColDefString',
+    };
+  }
+  private getEmployeeDef(): any {
+    return {
+      headerName: 'Employee',
+      field: 'Employee',
+      filter: 'text',
+      editable: true,
+      sortable: true,
+      enableRowGroup: true,
+      type: 'abColDefString',
+    };
+  }
+  private getOrderDateDef(): any {
+    return {
+      headerName: 'Order Date',
+      field: 'OrderDate',
+      editable: true,
+      cellEditorParams: { useFormatter: true },
+      valueParser: this.dateParseragGrid,
+      valueFormatter: this.shortDateFormatteragGrid,
+      filter: true,
+      sortable: true,
+      type: 'abColDefDate',
+    };
+  }
+  private getInvoicedDef(): any {
+    return {
+      headerName: 'Invoiced',
+      field: 'InvoicedCost',
+      cellClass: 'number-cell',
+      cellRenderer: this.currencyRendereragGrid,
+      editable: true,
+      filter: true,
+      sortable: true,
+      type: 'abColDefNumber',
+    };
+  }
+  private getOrderCostDef(): any {
+    return {
+      headerName: 'Order Cost',
+      field: 'OrderCost',
+      cellClass: 'number-cell',
+      cellRenderer: this.currencyRendereragGrid,
+      editable: true,
+      filter: true,
+      sortable: true,
+      type: 'abColDefNumber',
+    };
+  }
+  private getPackageCostDef(): any {
+    return {
+      headerName: 'Package Cost',
+      field: 'PackageCost',
+      cellClass: 'number-cell',
+      cellRenderer: this.currencyRendereragGrid,
+      editable: true,
+      filter: true,
+      sortable: true,
+      type: 'abColDefNumber',
+    };
+  }
+  private getItemCostDef(): any {
+    return {
+      headerName: 'Item Cost',
+      field: 'ItemCost',
+      cellClass: 'number-cell',
+      editable: true,
+      filter: true,
+      sortable: true,
+      type: 'abColDefNumber',
+    };
+  }
+  private getItemCountDef(): any {
+    return {
+      headerName: 'Item Count',
+      field: 'ItemCount',
+      cellClass: 'number-cell',
+      editable: true,
+      filter: true,
+      sortable: true,
+      type: 'abColDefNumber',
+    };
+  }
+  private getCompanyDef(): any {
+    return {
+      headerName: 'Company',
+      field: 'CompanyName',
+      editable: true,
+      filter: true,
+      sortable: true,
+      enableRowGroup: true,
+      type: 'abColDefString',
+    };
+  }
+  private getShipViaDef(): any {
+    return {
+      headerName: 'Ship Via',
+      field: 'ShipVia',
+      filter: 'text',
+      editable: true,
+      sortable: true,
+      type: 'abColDefString',
+    };
+  }
+  private getFreightDef(): any {
+    return {
+      headerName: 'Freight',
+      field: 'Freight',
+      cellClass: 'number-cell',
+      cellRenderer: this.currencyRendereragGrid,
+      editable: true,
+      sortable: true,
+      type: 'abColDefNumber',
+    };
+  }
+  private getShipNameDef(): any {
+    return {
+      headerName: 'Ship Name',
+      field: 'ShipName',
+      columnGroupShow: 'open',
+      editable: true,
+      sortable: true,
+      type: 'abColDefString',
+    };
+  }
+  private getChangeLastOrderDef(): any {
+    return {
+      headerName: 'Change Last Order',
+      field: 'ChangeLastOrder',
+      cellClass: 'number-cell',
+      editable: true,
+      filter: true,
+      sortable: true,
+      type: 'abColDefNumber',
+    };
+  }
+  private getShipCountryDef(): any {
+    return {
+      headerName: 'Ship Country',
+      field: 'ShipCountry',
+      filter: 'text',
+      editable: true,
+      sortable: true,
+      type: 'abColDefString',
+    };
+  }
+  private getShippedDateDef(): any {
+    return {
+      headerName: 'Shipped Date',
+      field: 'ShippedDate',
+      editable: true,
+      cellEditorParams: { useFormatter: true },
+      valueParser: this.dateParseragGrid,
+      valueFormatter: this.shortDateFormatteragGrid,
+      filter: true,
+      sortable: true,
+      type: 'abColDefDate',
+    };
   }
 }

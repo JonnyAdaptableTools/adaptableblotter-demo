@@ -53,9 +53,6 @@ export default () => {
         <Link href="/aggridbasicdemo">
           <a>Basic</a>
         </Link>
-        <Link href="/aggridthemingdemo">
-          <a>Theme</a>
-        </Link>
         <Link href="/aggridconfigdemo">
           <a>Custom config</a>
         </Link>
@@ -123,6 +120,20 @@ export default () => {
           </Link>
           <Link href="/edit/aggridcellvalidationdemo">
             <a>Cell Validation</a>
+          </Link>
+        </Category>
+        <Category
+          title={
+            <Link href="/style">
+              <a>Styling</a>
+            </Link>
+          }
+        >
+          <Link href="/style/aggridthemingdemo">
+            <a>Theme</a>
+          </Link>
+          <Link href="/style/aggridconditionalstyledemo">
+            <a>Conditional Style</a>
           </Link>
         </Category>
         <Category
