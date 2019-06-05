@@ -9,12 +9,28 @@ export default () => {
       description={
         <div>
           <h4>Pie Charts</h4>
+          <p>Pie Charts enable you to see your data in a segmented way.</p>
           <p>
-            This example has the Chart Options with overriden values. We have
-            set <i>displayOnStartUp</i> to be true so you see the currently
-            selected chart when the page loads. And we have set <i>showModal</i>{' '}
-            to be false so that the chart appears above the grid (and not in a
-            popup).
+            When there are many values in each segment the Adaptable Blotter
+            will automatically group them for you.
+          </p>
+          <p>
+            You are able to sort and position the values how you want, and you
+            can use 'Others' to group small items into a single segment (and see
+            as % or value).
+          </p>
+          <p>
+            Note: In this example the{' '}
+            <a
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028584692-Chart-Options"
+              target="_blank"
+            >
+              Chart Options
+            </a>{' '}
+            has overriden values. We set <i>displayOnStartUp</i> to true so you
+            see the currently selected chart when the page loads, and{' '}
+            <i>showModal</i> to false so that the chart appears above the grid
+            (and not in a popup).
           </p>
         </div>
       }

@@ -44,13 +44,20 @@ export default () => {
               target="_blank"
             >
               Blotter API
-            </a>{' '}
-            and{' '}
+            </a>
+            ,{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360009005151-Quick-Search-FAQ"
               target="_blank"
             >
               FAQ
+            </a>{' '}
+            and{' '}
+            <a
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028952711-Quick-Search-Videos"
+              target="_blank"
+            >
+              Videos
             </a>
             .
           </p>

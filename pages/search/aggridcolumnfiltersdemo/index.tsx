@@ -4,25 +4,26 @@ import DynamicDemoPage from '../../../src/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/aggridadvancedsearchdemo')}
-      pageTitle={'Advanced Search Demo'}
+      demo={import('../../../src/client/aggridcolumnfiltersdemo')}
+      pageTitle={'Column Filters Demo'}
       description={
         <div>
-          <h4>Advanced Search</h4>
+          <h4>Column Filters</h4>
           <p>
-            Advanced Search is a very powerful function that can run searches
-            across mutliple columns which can then be named, saved and re-used.
+            Each (filterable) column has a filters tab in the Column Menu (the
+            second option). Alternatively you can click on the filter icon next
+            to the filter bar if its showing.
           </p>
           <p>
-            It uses the Adaptable Blotter Query (used in many Functions) that
-            allows selections to be performed on a mix of Column Values, Filters
-            and Ranges.
+            You can create a Column Filter by selecting column values and
+            filters (items in the long list) and / or create a range (e.g. > 15)
+            by using the operator dropdown at the top.
           </p>
           <p>
-            In this example we are searching for any rows where the Invoiced
-            Cost is over $350 (<i>Range</i>), for Orders this year (
-            <i>Filter</i>) where the Employee is Janet, Margaret or Robert (
-            <i>Column Values</i>).
+            In this example we create filters on 3 columns: Employee (3
+            selected), Order Date ('This Year' filter) and Invoiced ('Between
+            10-300' range). Edit / clear filters in the individual columns or
+            via the Column Filter toolbar.
           </p>
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}

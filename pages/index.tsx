@@ -43,6 +43,24 @@ export default () => {
           set, for any Desk, in any team, at any Location
           <br />
         </p>
+        <p>
+          <b>Functions</b> <br />
+          The Adaptable Blotter contains a large number of functions each of
+          which corresponds to a particular Grid action (e.g. Advanced Search,
+          Bulk Update, Pie Chart etc.)
+          <br />
+        </p>
+        <p>
+          <b>The Demos</b> <br />
+          When you release an application using the Adaptable Blotter you will
+          typically ship it with Predefined Config - state that you have created
+          at design time (eg. searches, layouts, styles, entitlements etc.)
+          <br />
+          The demos on this site each demonstrate one of the functions in the
+          Adaptable Blotter. They include a small amount of Predefined Config
+          relevant to that function in order to illustrate the potential usage.
+          <br />
+        </p>
 
         <p>
           <b>Integration</b>

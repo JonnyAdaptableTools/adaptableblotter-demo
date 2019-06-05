@@ -4,25 +4,29 @@ import DynamicDemoPage from '../../../src/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/aggridadvancedsearchdemo')}
-      pageTitle={'Advanced Search Demo'}
+      demo={import('../../../src/client/aggriduserfiltersdemo')}
+      pageTitle={'User Filters Demo'}
       description={
         <div>
-          <h4>Advanced Search</h4>
+          <h4>User Filters</h4>
           <p>
-            Advanced Search is a very powerful function that can run searches
-            across mutliple columns which can then be named, saved and re-used.
+            User Filters are, essentially, saved and named Column Filters that
+            you can re-use throughout the application.
           </p>
           <p>
-            It uses the Adaptable Blotter Query (used in many Functions) that
-            allows selections to be performed on a mix of Column Values, Filters
-            and Ranges.
+            By creating a User Filter, you are able to define a particular set
+            of column data that has specific meaning to you and then use it not
+            only as a column filter, but also in queries more generally.
           </p>
           <p>
-            In this example we are searching for any rows where the Invoiced
-            Cost is over $350 (<i>Range</i>), for Orders this year (
-            <i>Filter</i>) where the Employee is Janet, Margaret or Robert (
-            <i>Column Values</i>).
+            In this example we create 2 User Filters: <i>My Team</i> in the
+            'Employee' column that we then re-use a Column Filter, and{' '}
+            <i>Small Invoices</i> on the 'Invoiced' Column that we re-use in a
+            Conditional Style.{' '}
+          </p>
+          <p>
+            We use both the User Filters in the 'Team Small Invoices' Report
+            which is the currently selected Export.
           </p>
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}

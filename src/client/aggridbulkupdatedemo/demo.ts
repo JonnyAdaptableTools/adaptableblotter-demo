@@ -1,5 +1,4 @@
 import * as Helper from '../../Helper';
-
 import AdaptableBlotter from 'adaptableblotter/agGrid';
 import 'adaptableblotter/base.css';
 import 'adaptableblotter/themes/light.css';
@@ -11,6 +10,7 @@ import 'ag-grid-community/dist/styles/ag-theme-balham-dark.css';
 import { cloneDeep } from 'lodash';
 import '../../../DemoPage/aggriddemo.css';
 import { IAdaptableBlotterOptions } from 'adaptableblotter/types';
+
 import json from '../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../HelperAgGrid';
 import predefinedConfig from './config';
@@ -29,7 +29,7 @@ export default () => {
   const blotterOptions: IAdaptableBlotterOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    blotterId: 'Theme Demo',
+    blotterId: 'Bulk Update Demo',
     licenceKey: Helper.getdemolicencekey(),
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,

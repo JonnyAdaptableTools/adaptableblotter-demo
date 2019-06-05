@@ -78,6 +78,52 @@ export default () => {
         </Category>
         <Category
           title={
+            <Link href="/search">
+              <a>Search</a>
+            </Link>
+          }
+        >
+          <Link href="/search/aggridquicksearchdemo">
+            <a>Quick Search</a>
+          </Link>
+          <Link href="/search/aggridadvancedsearchdemo">
+            <a>Advanced Search</a>
+          </Link>
+          <Link href="/search/aggridcolumnfiltersdemo">
+            <a>Column Filters</a>
+          </Link>
+          <Link href="/search/aggriduserfiltersdemo">
+            <a>User Filters</a>
+          </Link>
+          <Link href="/search/aggridquickfilterdemo">
+            <a>Quick Filter</a>
+          </Link>
+          <Link href="/search/aggriddatasourcedemo">
+            <a>Data Source Selector</a>
+          </Link>
+        </Category>
+        <Category
+          title={
+            <Link href="/edit">
+              <a>Edit</a>
+            </Link>
+          }
+        >
+          <Link href="/edit/aggridsmarteditdemo">
+            <a>Smart Edit</a>
+          </Link>
+          <Link href="/edit/aggridbulkupdatedemo">
+            <a>Bulk Update</a>
+          </Link>
+          <Link href="/edit/aggridshortcutdemo">
+            <a>Shortcut</a>
+          </Link>
+          <Link href="/edit/aggridplusminusdemo">
+            <a>Plus Minus</a>
+          </Link>
+        </Category>
+        <Category
+          title={
             <Link href="/charts">
               <a>Charts</a>
             </Link>
@@ -102,20 +148,6 @@ export default () => {
           </Link>
           <Link href="/misc/aggridgroupingdemo">
             <a>Grouping</a>
-          </Link>
-        </Category>
-        <Category
-          title={
-            <Link href="/search">
-              <a>Search</a>
-            </Link>
-          }
-        >
-          <Link href="/search/aggridadvancedsearchdemo">
-            <a>Advanced Search</a>
-          </Link>
-          <Link href="/search/aggridquicksearchdemo">
-            <a>Quick Search</a>
           </Link>
         </Category>
       </div>
