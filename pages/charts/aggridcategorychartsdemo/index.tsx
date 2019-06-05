@@ -9,7 +9,18 @@ export default () => {
       description={
         <div>
           <h4>Category Charts</h4>
-          <p>To do</p>
+          <p>
+            Category Charts enable you to see your data in a number of formats
+            eg. column, line, waterfall, etc.
+          </p>
+          <p>
+            There are a huge number of options available for you to style the
+            charts how you want and whether to see annotations, call outs etc.
+          </p>
+          <p>
+            By default all charts are live so as you change the data in the grid
+            the chart will update automatically.
+          </p>
         </div>
       }
     />

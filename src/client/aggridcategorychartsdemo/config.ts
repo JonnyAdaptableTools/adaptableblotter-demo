@@ -58,6 +58,7 @@ export default {
         YAxisTotal: 'Sum',
         ChartProperties: {
           CategoryChartType: 'Column',
+          XAxisOverlap: 0,
         },
       },
       {
