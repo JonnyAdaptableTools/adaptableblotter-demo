@@ -49,6 +49,10 @@ export default () => {
               <b>Flashing Cell:</b> Have cells flash briefly when their contents
               change (using colours and duration you specify)
             </li>
+            <li>
+              <b>Percent Bar:</b> Show numeric columns as a bar, that is filled
+              according to the cell value as a %.
+            </li>
           </ul>
           Click on the buttons below to see a demo for each edit function.
         </div>
@@ -65,6 +69,7 @@ export default () => {
         <DemoBox href="/style/aggridflashingcelldemo">
           Flashing Cell demo
         </DemoBox>
+        <DemoBox href="/style/aggridpercentbardemo">Percent Bar demo</DemoBox>
       </GridLayout>
     </MainPage>
   );

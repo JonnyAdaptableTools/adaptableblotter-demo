@@ -267,6 +267,28 @@ export class HelperAgGrid {
     return schema;
   }
 
+  public getPercentBarNorthwindColumnSchema(): any[] {
+    var schema = [];
+    schema.push(this.getOrderColumnDef());
+    schema.push(this.getCustRefDef());
+    schema.push(this.getChangeLastOrderDef());
+    schema.push(this.getContactDef());
+    schema.push(this.getInvoicedDef());
+    schema.push(this.getEmployeeDef());
+    schema.push(this.getItemCostDef());
+    schema.push(this.getOrderDateDef());
+    schema.push(this.getOrderCostDef());
+    schema.push(this.getPackageCostDef());
+    schema.push(this.getItemCountDef());
+    schema.push(this.getCompanyDef());
+    schema.push(this.getShipViaDef());
+    schema.push(this.getFreightDef());
+    schema.push(this.getShipNameDef());
+    schema.push(this.getShipCountryDef());
+    schema.push(this.getShippedDateDef());
+    return schema;
+  }
+
   public getFlashingCellColumnSchema(): any[] {
     var schema = [];
     schema.push(this.getOrderColumnDef());
