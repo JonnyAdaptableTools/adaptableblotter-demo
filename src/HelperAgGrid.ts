@@ -124,7 +124,11 @@ export class HelperAgGrid {
           let newInvoicedCost = newOrderCost - packageCost;
           trade.setDataValue('InvoicedCost', newInvoicedCost);
           let incdec: number = Helper.generateRandomInt(1, 2) == 1 ? -1 : 1;
-          trade.setDataValue('ChangeLastOrder', incdec);
+          let changeLastOrder = gridOptions.api.getValue(
+            'ChangeLastOrder',
+            trade
+          );
+          trade.setDataValue('ChangeLastOrder', incdec + changeLastOrder);
         });
       }
     }, 400);

@@ -10,6 +10,13 @@ export default {
   FlashingCell: {
     FlashingCells: [
       {
+        ColumnId: 'ChangeLastOrder',
+        DownColor: '#FF0000',
+        FlashingCellDuration: 500,
+        IsLive: true,
+        UpColor: '#008000',
+      },
+      {
         ColumnId: 'ItemCost',
         DownColor: '#FF0000',
         FlashingCellDuration: 500,
