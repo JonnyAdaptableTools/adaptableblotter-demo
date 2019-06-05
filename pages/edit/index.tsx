@@ -49,6 +49,9 @@ export default () => {
               <b>Plus Minus:</b> Set up 'nudge' rules for numeric columns to
               respond when the '+' or '-' keys are pressed.
             </li>
+            <li>
+              <b>Cell Validation:</b> to do
+            </li>
           </ul>
           Click on the buttons below to see a demo for each edit function.
         </div>
@@ -59,6 +62,9 @@ export default () => {
         <DemoBox href="/edit/aggridbulkupdatedemo">Bulk Update demo</DemoBox>
         <DemoBox href="/edit/aggridshortcutdemo">Shortcut demo</DemoBox>
         <DemoBox href="/edit/aggridplusminusdemo">Plus Minus demo</DemoBox>
+        <DemoBox href="/edit/aggridcellvalidationdemo">
+          Cell Validation demo
+        </DemoBox>
       </GridLayout>
     </MainPage>
   );

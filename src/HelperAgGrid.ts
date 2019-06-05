@@ -237,15 +237,6 @@ export class HelperAgGrid {
       type: 'abColDefString',
     });
     schema.push({
-      headerName: 'Company',
-      field: 'CompanyName',
-      editable: true,
-      filter: true,
-      sortable: true,
-      enableRowGroup: true,
-      type: 'abColDefString',
-    });
-    schema.push({
       headerName: 'Contact',
       field: 'ContactName',
       filter: true,
@@ -320,6 +311,15 @@ export class HelperAgGrid {
       filter: true,
       sortable: true,
       type: 'abColDefNumber',
+    });
+    schema.push({
+      headerName: 'Company',
+      field: 'CompanyName',
+      editable: true,
+      filter: true,
+      sortable: true,
+      enableRowGroup: true,
+      type: 'abColDefString',
     });
     schema.push({
       headerName: 'Change Last Order',
