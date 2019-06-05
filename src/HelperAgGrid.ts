@@ -94,9 +94,9 @@ export class HelperAgGrid {
     return formatedDate;
   }
 
-  private startTickingDataagGrid(gridOptions: any) {
+  public startTickingDataagGrid(gridOptions: any) {
     setInterval(() => {
-      let orderId = Helper.generateRandomInt(11020, 11060);
+      let orderId = Helper.generateRandomInt(11101, 11142);
       if (gridOptions != null && gridOptions.api != null) {
         gridOptions.api.forEachNode((rowNode: any, index: number) => {
           if (rowNode.group) {
@@ -119,9 +119,15 @@ export class HelperAgGrid {
           let itemCount = gridOptions.api.getValue('ItemCount', trade);
           let newOrderCost = itemCount * newItemCost;
           trade.setDataValue('OrderCost', newOrderCost);
+
+          let packageCost = gridOptions.api.getValue('PackageCost', trade);
+          let newInvoicedCost = newOrderCost - packageCost;
+          trade.setDataValue('InvoicedCost', newInvoicedCost);
+          let incdec: number = Helper.generateRandomInt(1, 2) == 1 ? -1 : 1;
+          trade.setDataValue('ChangeLastOrder', incdec);
         });
       }
-    }, 500);
+    }, 400);
   }
 
   public getGridOptions(columndefs: any, data: any): GridOptions {
@@ -252,6 +258,28 @@ export class HelperAgGrid {
     schema.push(this.getPackageCostDef());
     schema.push(this.getItemCostDef());
     schema.push(this.getItemCountDef());
+    schema.push(this.getCompanyDef());
+    schema.push(this.getShipViaDef());
+    schema.push(this.getFreightDef());
+    schema.push(this.getShipNameDef());
+    schema.push(this.getShipCountryDef());
+    schema.push(this.getShippedDateDef());
+    return schema;
+  }
+
+  public getFlashingCellColumnSchema(): any[] {
+    var schema = [];
+    schema.push(this.getOrderColumnDef());
+    schema.push(this.getCustRefDef());
+    schema.push(this.getInvoicedDef());
+    schema.push(this.getOrderCostDef());
+    schema.push(this.getPackageCostDef());
+    schema.push(this.getItemCostDef());
+    schema.push(this.getItemCountDef());
+    schema.push(this.getChangeLastOrderDef());
+    schema.push(this.getEmployeeDef());
+    schema.push(this.getContactDef());
+    schema.push(this.getOrderDateDef());
     schema.push(this.getCompanyDef());
     schema.push(this.getShipViaDef());
     schema.push(this.getFreightDef());

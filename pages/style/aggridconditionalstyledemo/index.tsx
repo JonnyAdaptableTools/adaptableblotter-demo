@@ -16,10 +16,10 @@ export default () => {
           <p>
             Rules work at either column or row level; when the rule is met the
             column / row is styled according to the style set out in the rule.
-            Alternatively you can specify a css style name (which you provide);
+            Alternatively you can specify a css style name (which you provide).
           </p>
           <p>
-            This example has 4 Conditional Styles: (1 and 2) The 'Change Last
+            This example has 4 Conditional Styles: (1, 2) The 'Change Last
             Order' column is green when positive and red when negative; (3) Any
             row where the 'Item Cost' column is > 80 has a yellow background and
             italic foreground; and (4) the font is bold where the 'Package Cost'

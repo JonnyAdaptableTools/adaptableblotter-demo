@@ -135,6 +135,12 @@ export default () => {
           <Link href="/style/aggridconditionalstyledemo">
             <a>Conditional Style</a>
           </Link>
+          <Link href="/style/aggridformatcolumndemo">
+            <a>Format Column</a>
+          </Link>
+          <Link href="/style/aggridflashingcelldemo">
+            <a>Flashing Cell</a>
+          </Link>
         </Category>
         <Category
           title={

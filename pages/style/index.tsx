@@ -34,12 +34,20 @@ export default () => {
           </p>
           <ul>
             <li>
-              <b>Theme:</b> Update contiguous numeric cells using a mathmatical
-              operation.
+              <b>Theme:</b> Style the entire grid with our Light or Dark themes,
+              or with a theme that you provide yourself.
             </li>
             <li>
-              <b>Conditional Style:</b> Update contiguous cells in a column to
-              all contain the same value.
+              <b>Conditional Style:</b> Style cells, columns and rows in
+              striking ways when their data matches rules that you create.
+            </li>
+            <li>
+              <b>Format Column:</b> Style an entire column so that it has a
+              distinctive look.
+            </li>
+            <li>
+              <b>Flashing Cell:</b> Have cells flash briefly when their contents
+              change (using colours and duration you specify)
             </li>
           </ul>
           Click on the buttons below to see a demo for each edit function.
@@ -50,6 +58,12 @@ export default () => {
         <DemoBox href="/style/aggridthemingdemo">Theming demo</DemoBox>
         <DemoBox href="/style/aggridconditionalstyledemo">
           Conditional Style demo
+        </DemoBox>
+        <DemoBox href="/style/aggridcformatcolumndemo">
+          Format Column demo
+        </DemoBox>
+        <DemoBox href="/style/aggridflashingcelldemo">
+          Flashing Cell demo
         </DemoBox>
       </GridLayout>
     </MainPage>
