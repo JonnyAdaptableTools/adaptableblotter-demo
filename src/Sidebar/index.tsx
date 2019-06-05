@@ -118,6 +118,9 @@ export default () => {
           <Link href="/edit/aggridshortcutdemo">
             <a>Shortcut</a>
           </Link>
+          <Link href="/edit/aggridplusminusdemo">
+            <a>Plus Minus</a>
+          </Link>
         </Category>
         <Category
           title={

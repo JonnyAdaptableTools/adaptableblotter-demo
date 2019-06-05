@@ -4,7 +4,7 @@ export default {
       {
         ColumnType: 'Number',
         IsDynamic: false,
-        ShortcutKey: 'M',
+        ShortcutKey: 'K',
         ShortcutOperation: 'Multiply',
         ShortcutResult: '1000',
       },
