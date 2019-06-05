@@ -46,7 +46,9 @@ export default () => {
         </Link>
       </div>
       <div style={{ padding: '10px 20px', marginTop: 90, flex: 1 }}>
-        <h3 style={{ color: 'white', fontWeight: 200 }}>Demos</h3>
+        <h3 style={{ color: 'white', fontWeight: 200, marginTop: '35px' }}>
+          Demos
+        </h3>
         <Link href="/">
           <a>Home</a>
         </Link>
@@ -183,7 +185,7 @@ export default () => {
         }}
       >
         <button
-          style={{ padding: 8, cursor: 'pointer' }}
+          style={{ padding: 8, cursor: 'pointer', marginBottom: '20px' }}
           onClick={() => {
             localStorage.clear();
             window.location.href = window.location.href;
