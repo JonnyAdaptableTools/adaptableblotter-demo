@@ -34,11 +34,13 @@ export default () => {
           </p>
           <ul>
             <li>
-              <b>Custom Sort:</b> Update contiguous numeric cells using a
-              mathmatical operation.
+              <b>Custom Sort:</b> Create your own sort orders for columns (e.g.
+              Ratings, Tenors, Sectors) where the default alphabetical sort
+              doesnt make sense.
             </li>
             <li>
-              <b>Column Category:</b> to do
+              <b>Column Category:</b> Group columns together logically to help
+              you to manipulate grids with very large numbers of columns.
             </li>
           </ul>
           Click on the buttons below to see a demo for each edit function.

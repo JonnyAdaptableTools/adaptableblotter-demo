@@ -54,7 +54,7 @@ export default () => {
               according to the cell value as a %.
             </li>
           </ul>
-          Click on the buttons below to see a demo for each edit function.
+          Click on the buttons below to see a demo for each styling function.
         </div>
       }
     >
