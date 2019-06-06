@@ -30,13 +30,14 @@ export default () => {
           <h4>Misc</h4>
           <p>line on entitlements</p>
           <p>line on grouping</p>
-          <p>to do</p>
+          <p>line on audit</p>
         </div>
       }
     >
       <GridLayout>
         <DemoBox href="/misc/aggridentitlementsdemo">Entitlements demo</DemoBox>
         <DemoBox href="/misc/aggridgroupingdemo">Grouping demo</DemoBox>
+        <DemoBox href="/misc/aggridauditdemo">Audit demo</DemoBox>
       </GridLayout>
     </MainPage>
   );

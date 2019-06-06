@@ -221,6 +221,20 @@ export default () => {
             <a>Grouping</a>
           </Link>
         </Category>
+        <Category
+          title={
+            <Link href="/partners">
+              <a>Partners</a>
+            </Link>
+          }
+        >
+          <Link href="/partners/finsembledemo">
+            <a>Finsemble</a>
+          </Link>
+          <Link href="/partners/openfindemo">
+            <a>OpenFin</a>
+          </Link>
+        </Category>
       </div>
       <div
         style={{
