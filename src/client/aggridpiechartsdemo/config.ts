@@ -1,7 +1,10 @@
 export default {
   Dashboard: {
-    VisibleToolbars: ['Alert', 'Export', 'Chart'],
+    VisibleToolbars: ['Chart'],
     Zoom: '0.9',
+  },
+  Theme: {
+    CurrentTheme: 'Dark Theme',
   },
   Chart: {
     CurrentChartName: 'Population Pie Chart',

@@ -48,6 +48,10 @@ export default () => {
               of a button.
             </li>
             <li>
+              <b>Alert:</b> Be notified as soon as data changes that you need to
+              know about.
+            </li>
+            <li>
               <b>Cell Summary:</b> See the summarised contents of groups of
               numeric cells using many different mathematical operations.
             </li>
@@ -63,6 +67,7 @@ export default () => {
         </DemoBox>
         <DemoBox href="/gridmanagement/aggridexportdemo">Export demo</DemoBox>
         <DemoBox href="/gridmanagement/aggridlayoutdemo">Layout demo</DemoBox>
+        <DemoBox href="/gridmanagement/aggridalertdemo">Alert demo</DemoBox>
         <DemoBox href="/gridmanagement/aggridcellsummarydemo">
           Cell Summary demo
         </DemoBox>

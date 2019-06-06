@@ -94,7 +94,10 @@ export class HelperAgGrid {
     return formatedDate;
   }
 
-  public startTickingDataagGrid(gridOptions: any) {
+  public startTickingDataagGrid(
+    gridOptions: any,
+    includeItemCount: boolean = false
+  ) {
     setInterval(() => {
       let orderId = Helper.generateRandomInt(11101, 11142);
       if (gridOptions != null && gridOptions.api != null) {
@@ -106,29 +109,39 @@ export class HelperAgGrid {
           if (rowOrderId != orderId) {
             return;
           }
-
-          let numberToAdd: number =
-            Helper.generateRandomInt(1, 2) == 1 ? -0.5 : 0.5;
           let trade = rowNode;
-          let columnName = 'ItemCost';
-          let initialItemCost = gridOptions.api.getValue(columnName, trade);
-          let newItemCost = Helper.roundTo4Dp(initialItemCost + numberToAdd);
+          if (!includeItemCount) {
+            let numberToAdd: number =
+              Helper.generateRandomInt(1, 2) == 1 ? -0.5 : 0.5;
 
-          trade.setDataValue(columnName, newItemCost);
+            let columnName = 'ItemCost';
+            let initialItemCost = gridOptions.api.getValue(columnName, trade);
+            let newItemCost = Helper.roundTo4Dp(initialItemCost + numberToAdd);
 
-          let itemCount = gridOptions.api.getValue('ItemCount', trade);
-          let newOrderCost = itemCount * newItemCost;
-          trade.setDataValue('OrderCost', newOrderCost);
+            trade.setDataValue(columnName, newItemCost);
 
-          let packageCost = gridOptions.api.getValue('PackageCost', trade);
-          let newInvoicedCost = newOrderCost - packageCost;
-          trade.setDataValue('InvoicedCost', newInvoicedCost);
-          let incdec: number = Helper.generateRandomInt(1, 2) == 1 ? -1 : 1;
-          let changeLastOrder = gridOptions.api.getValue(
-            'ChangeLastOrder',
-            trade
-          );
-          trade.setDataValue('ChangeLastOrder', incdec + changeLastOrder);
+            let itemCount = gridOptions.api.getValue('ItemCount', trade);
+            let newOrderCost = itemCount * newItemCost;
+            trade.setDataValue('OrderCost', newOrderCost);
+
+            let packageCost = gridOptions.api.getValue('PackageCost', trade);
+            let newInvoicedCost = newOrderCost - packageCost;
+            trade.setDataValue('InvoicedCost', newInvoicedCost);
+            let incdec: number = Helper.generateRandomInt(1, 2) == 1 ? -1 : 1;
+            let changeLastOrder = gridOptions.api.getValue(
+              'ChangeLastOrder',
+              trade
+            );
+            trade.setDataValue('ChangeLastOrder', incdec + changeLastOrder);
+          } else {
+            let numberToAdd: number = Helper.generateRandomInt(1, 20);
+            let itemCount = gridOptions.api.getValue('ItemCount', trade);
+            if (numberToAdd != 19) {
+              trade.setDataValue('ItemCount', itemCount + 1);
+            } else {
+              trade.setDataValue('ItemCount', itemCount * 3);
+            }
+          }
         });
       }
     }, 400);
