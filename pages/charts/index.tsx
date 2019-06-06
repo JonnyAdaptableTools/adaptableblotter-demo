@@ -30,7 +30,14 @@ export default () => {
           <h4>Chart</h4>
           <p>
             The Adaptable Blotter contains powerful charting capabilities
-            (courtesy of Infragistics).
+            (courtesy of our partner{' '}
+            <a
+              href=" https://www.infragistics.com/products/ignite-ui-react"
+              target="_blank"
+            >
+              Infragistics
+            </a>
+            ).
           </p>
           <p>
             These examples show the Category and Pie (Doughnut) charts but other

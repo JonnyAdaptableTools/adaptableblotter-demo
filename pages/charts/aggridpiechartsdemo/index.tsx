@@ -9,7 +9,11 @@ export default () => {
       description={
         <div>
           <h4>Pie Charts</h4>
-          <p>Pie Charts enable you to see your data in a segmented way.</p>
+          <p>
+            Pie Charts enable you to see your data in a segmented way. You can
+            run pie charts either through the Charting Wizard or through a
+            Column Header menu.
+          </p>
           <p>
             When there are many values in each segment the Adaptable Blotter
             will automatically group them for you.
