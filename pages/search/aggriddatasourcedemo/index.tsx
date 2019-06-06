@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'Data Source Demo'}
       description={
         <div>
-          <h4>Data Source Selector</h4>
+          <h4>AdaptableBlotter.JS - Data Source Selector Demo</h4>
           <p>
             Data Sources are lists of 'hard coded' names provided by you in
             Predefined Config to enable you to run Searches on the Server..

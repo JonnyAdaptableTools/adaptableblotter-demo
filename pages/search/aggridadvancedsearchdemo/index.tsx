@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'Advanced Search Demo'}
       description={
         <div>
-          <h4>Advanced Search</h4>
+          <h4>AdaptableBlotter.JS - Advanced Search Demo</h4>
           <p>
             Advanced Search is a very powerful function that can run searches
             across mutliple columns which can then be named, saved and re-used.

@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'AdaptableBlotter.JS ag-Grid Pie Charts Demo'}
       description={
         <div>
-          <h4>Pie Charts</h4>
+          <h4>AdaptableBlotter.JS - Pie Charts Demo</h4>
           <p>
             Pie Charts enable you to see your data in a segmented way. You can
             run pie charts either through the Charting Wizard or through a

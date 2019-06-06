@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'Quick Filters Demo'}
       description={
         <div>
-          <h4>Quick Filter</h4>
+          <h4>AdaptableBlotter.JS - Quick Filter Demo</h4>
           <p>
             The quick filter is the bar underneath the Column Header. If its set
             to visible in the underlying grid (for ag-Grid:

@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'Quick Search Demo'}
       description={
         <div>
-          <h4>Quick Search</h4>
+          <h4>AdaptableBlotter.JS - Quick Search Demo</h4>
           <p>
             Quick Search enables you to quickly find matching text across all{' '}
             <b>visible</b> columns. You can use wildcards like '*' (starts with)

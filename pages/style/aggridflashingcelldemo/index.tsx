@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'Flashing Cell Demo'}
       description={
         <div>
-          <h4>Flashing Cell</h4>
+          <h4>AdaptableBlotter.JS - Flashing Cells Demo</h4>
           <p>Flashing cells briefly appear when cell values' change.</p>
           <p>
             By default they flash for half a second, with a green flash for a

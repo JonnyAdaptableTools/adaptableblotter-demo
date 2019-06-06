@@ -9,8 +9,7 @@ export default () => {
       description={
         <div>
           <h4>
-            A demo of AdaptableBlotter.JS integrating with the first-rate
-            grouping (both column and row) and pivoting capabilities of ag-Grid.
+            <h4>AdaptableBlotter.JS - Grouping Demo</h4>
           </h4>
           <p>
             The following properties have been set for the columns in the

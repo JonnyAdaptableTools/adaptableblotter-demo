@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'AdaptableBlotter.JS ag-Grid Category Charts Demo'}
       description={
         <div>
-          <h4>Category Charts</h4>
+          <h4>AdaptableBlotter.JS - Category Charts Demo</h4>
           <p>
             Category Charts enable you to see your data in a number of formats
             eg. column, line, waterfall, etc.

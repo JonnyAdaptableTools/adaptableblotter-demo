@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'Percent Bar Demo'}
       description={
         <div>
-          <h4>Percent Bar</h4>
+          <h4>AdaptableBlotter.JS - Percent Bar Demo</h4>
           <p>
             Create Percent Bars to see numeric data as bar, where the cell is
             filled as a % of its value against the maximum value for the column.

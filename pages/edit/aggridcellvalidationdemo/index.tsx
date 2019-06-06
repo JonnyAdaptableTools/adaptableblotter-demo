@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'Cell Validation Demo'}
       description={
         <div>
-          <h4>Cell Validation</h4>
+          <h4>AdaptableBlotter.JS - Cell Validation Demo</h4>
           <p>
             Use Cell Validation to create rules that will disallow edits (or
             show warnings) if the data changes in ways that you wish to prevent

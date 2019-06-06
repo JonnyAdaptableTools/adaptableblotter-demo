@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'Shortcut Demo'}
       description={
         <div>
-          <h4>Shortcut</h4>
+          <h4>AdaptableBlotter.JS - Keyboard Shortcuts Demo</h4>
           <p>
             Use Shortcuts to avoid fat finger issues and speed data entry for
             numeric and date columns.

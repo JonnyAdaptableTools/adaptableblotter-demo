@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'Column Info Demo'}
       description={
         <div>
-          <h4>Column Info</h4>
+          <h4>AdaptableBlotter.JS - Column Info Demo</h4>
           <p>
             Column Info function provides quick at a glance summary of any
             objects (e.g. sorts, filters or styles) associated with any Column.

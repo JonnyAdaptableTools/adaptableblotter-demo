@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'Plus Minus Demo'}
       description={
         <div>
-          <h4>Plus Minus</h4>
+          <h4>AdaptableBlotter.JS - Plus Minus Demo</h4>
           <p>
             Plus Minus function allows you to creage 'Nude Rules' which react to
             the '+' or '-' keys being pressed in numeric cells.

@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'AdaptableBlotter.JS ag-Grid Dashboard Visibility Demo'}
       description={
         <div>
-          <h4>Dashboard Visbility</h4>
+          <h4>AdaptableBlotter.JS - Dashboard Visibility Demo</h4>
           <p>
             You can specify - through Predefined Config - the visibility and
             size of the Dashboard. You can set the Visibility to be Visible

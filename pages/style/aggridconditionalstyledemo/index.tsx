@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'Conditional Style Demo'}
       description={
         <div>
-          <h4>Conditional Style</h4>
+          <h4>AdaptableBlotter.JS - Conditional Style Demo</h4>
           <p>
             Conditional Styles allow you to create rules that decide how columns
             and rows are styled.

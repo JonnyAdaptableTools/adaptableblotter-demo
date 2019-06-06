@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'Format Column Demo'}
       description={
         <div>
-          <h4>Format Column</h4>
+          <h4>AdaptableBlotter.JS - Format Column Demo</h4>
           <p>
             Format Column allow you to style an entire column. Unlike
             Conditional Styles, the Format Column style is always applied,

@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'AdaptableBlotter.JS ag-Grid Dashboard Buttons Demo'}
       description={
         <div>
-          <h4>Dashboard Buttons</h4>
+          <h4>AdaptableBlotter.JS - Dashboard Buttons Demo</h4>
           <p>
             As part of Dashboard Predefined Config you can specify which buttons
             and dropdowns are visible in the 'Home' toolbar (the one on the

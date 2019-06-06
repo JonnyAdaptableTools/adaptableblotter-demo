@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'Custom Sort Demo'}
       description={
         <div>
-          <h4>Custom Sort</h4>
+          <h4>AdaptableBlotter.JS - Custom Sort Demo</h4>
           <p>
             Custom Sort function allows you to specify a custom sort order when
             a column is sorted (as opposed to the default alphabetical or

@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'AdaptableBlotter.JS ag-Grid Theming Demo'}
       description={
         <>
-          <h4>Theme Demo</h4>
+          <h4>AdaptableBlotter.JS - Theming Demo</h4>
           <p>
             You can style and theme the Adaptable Blotter so that it matches
             precisely your corporate styles and colours.

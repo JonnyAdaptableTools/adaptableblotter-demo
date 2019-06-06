@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'Export Demo'}
       description={
         <div>
-          <h4>Export</h4>
+          <h4>AdaptableBlotter.JS - Export and Reports Demo</h4>
           <p>
             You can export your data from the Grid via Reports. There are 3
             which ship with the Blotter (All Rows, All Visible Rows, Selected

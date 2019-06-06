@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'AdaptableBlotter.JS basic ag-Grid Demo'}
       description={
         <div>
-          <h4>Basic ag-Grid Demo</h4>
+          <h4>AdaptableBlotter.JS - Basic Demo</h4>
           <p>
             The Adaptable Blotter offers more than 30 functions to allow you to
             search, filter, edit, audit, export and style your data in

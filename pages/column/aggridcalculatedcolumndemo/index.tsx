@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'Calculated Column Demo'}
       description={
         <div>
-          <h4>Calculated Column</h4>
+          <h4>AdaptableBlotter.JS - Calculated Column Demo</h4>
           <p>
             Calculated columns are custom columns that you create (at design or
             run time) where the value is now in the bound dataset but is{' '}
