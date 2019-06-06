@@ -52,6 +52,10 @@ export default () => {
               <b>Column Category:</b> Group columns together logically to help
               you to manipulate grids with very large numbers of columns.
             </li>
+            <li>
+              <b>Column Info:</b> Find out all the objects associated with a
+              column with a single lookup.
+            </li>
           </ul>
           Click on the buttons below to see a demo for each edit function.
         </div>
@@ -68,6 +72,7 @@ export default () => {
         <DemoBox href="/column/aggridcolumncategorydemo">
           Column Category demo
         </DemoBox>
+        <DemoBox href="/column/aggridcolumninfodemo">Column Info demo</DemoBox>
       </GridLayout>
     </MainPage>
   );
