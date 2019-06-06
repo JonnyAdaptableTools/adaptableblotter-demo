@@ -44,6 +44,11 @@ export default () => {
               in the Grid.
             </li>
             <li>
+              <b>Free Text Column:</b> Create your own column where you can
+              insert your own values (e.g. comments) that are stored separately
+              from the Data Source.
+            </li>
+            <li>
               <b>Column Category:</b> Group columns together logically to help
               you to manipulate grids with very large numbers of columns.
             </li>
@@ -56,6 +61,9 @@ export default () => {
         <DemoBox href="/column/aggridcustomsortdemo">Custom Sort demo</DemoBox>
         <DemoBox href="/column/aggridcalculatedcolumndemo">
           Calculated Column demo
+        </DemoBox>
+        <DemoBox href="/column/aggridfreetextcolumndemo">
+          Free Text Column demo
         </DemoBox>
         <DemoBox href="/column/aggridcolumncategorydemo">
           Column Category demo
