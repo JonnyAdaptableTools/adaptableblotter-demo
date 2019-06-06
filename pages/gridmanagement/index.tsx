@@ -43,6 +43,11 @@ export default () => {
               System or Custom reports and schedule them if you would like.
             </li>
             <li>
+              <b>Layout:</b> Create views (column grouping, visibility, order,
+              sorts) so you can see the subset of columns you need at the click
+              of a button.
+            </li>
+            <li>
               <b>Cell Summary:</b> See the summarised contents of groups of
               numeric cells using many different mathematical operations.
             </li>
@@ -56,7 +61,8 @@ export default () => {
         <DemoBox href="/gridmanagement/aggridcustomsortdemo">
           Custom Sort demo
         </DemoBox>
-        <DemoBox href="/gridmanagement/aggridexportdemo">Exports demo</DemoBox>
+        <DemoBox href="/gridmanagement/aggridexportdemo">Export demo</DemoBox>
+        <DemoBox href="/gridmanagement/aggridlayoutdemo">Layout demo</DemoBox>
         <DemoBox href="/gridmanagement/aggridcellsummarydemo">
           Cell Summary demo
         </DemoBox>
