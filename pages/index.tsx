@@ -57,8 +57,14 @@ export default () => {
           at design time (eg. searches, layouts, styles, entitlements etc.)
           <br />
           The demos on this site each demonstrate one of the functions in the
-          Adaptable Blotter. They include a small amount of Predefined Config
-          relevant to that function in order to illustrate the potential usage.
+          Adaptable Blotter (using the excellent{' '}
+          <a href=" https://www.ag-grid.com/" target="_blank">
+            ag-Grid
+          </a>{' '}
+          as the underlying grid control). <br />
+          Each demo also includes a small amount of Predefined Config relevant
+          to that function in order to illustrate the potential usage (which you
+          can see printed out underneath the demo).
           <br />
         </p>
 
@@ -78,6 +84,30 @@ export default () => {
             target="_blank"
           >
             Sandbox
+          </a>
+          .
+          <br />
+        </p>
+        <p>
+          <b>Framework Wrappers</b>
+          <br />
+          All the examples in this demo use the 'vanilla' JavaScript version of
+          the Adaptable Blotter.
+          <br />
+          However, for those who prefer to implement the tool using a JavaScript
+          Framework / Library we provide 2 options: a{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360024888851-React-Wrapper"
+            target="_blank"
+          >
+            React Wrapper
+          </a>{' '}
+          and a{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360024888791-Angular-Wrapper"
+            target="_blank"
+          >
+            Angular Wrapper
           </a>
           .
           <br />
