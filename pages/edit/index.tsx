@@ -50,7 +50,8 @@ export default () => {
               respond when the '+' or '-' keys are pressed.
             </li>
             <li>
-              <b>Cell Validation:</b> to do
+              <b>Cell Validation:</b> Create rules to prevent (or show warnings)
+              when particular cell edits take place.
             </li>
           </ul>
           Click on the buttons below to see a demo for each edit function.

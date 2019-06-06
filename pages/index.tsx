@@ -37,7 +37,7 @@ export default () => {
           <br />
           AdaptableBlotter.JS sits on top of (and integrates with) a number of
           HTML5 vendor DataGrids both vendor and open source including the
-          market-leading ag-Grid.
+          market-leading ag-Grid (which we are using for these demos).
           <br />
           Adaptable Blotter.JS is fully data-agnostic and can work with any data
           set, for any Desk, in any team, at any Location

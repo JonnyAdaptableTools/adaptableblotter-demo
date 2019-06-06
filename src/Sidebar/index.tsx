@@ -149,6 +149,20 @@ export default () => {
         </Category>
         <Category
           title={
+            <Link href="/column">
+              <a>Columns</a>
+            </Link>
+          }
+        >
+          <Link href="/column/aggridcustomsortdemo">
+            <a>Custom Sort</a>
+          </Link>
+          <Link href="/column/aggridcolumncategorydemo">
+            <a>Column Category</a>
+          </Link>
+        </Category>
+        <Category
+          title={
             <Link href="/charts">
               <a>Charts</a>
             </Link>
