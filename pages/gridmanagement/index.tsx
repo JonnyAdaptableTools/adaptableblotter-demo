@@ -42,6 +42,10 @@ export default () => {
               <b>Export:</b> Send grid data to a number of destinations using
               System or Custom reports and schedule them if you would like.
             </li>
+            <li>
+              <b>Cell Summary:</b> See the summarised contents of groups of
+              numeric cells using many different mathematical operations.
+            </li>
           </ul>
           Click on the buttons below to see a demos for our Grid Management
           functions.
@@ -53,6 +57,9 @@ export default () => {
           Custom Sort demo
         </DemoBox>
         <DemoBox href="/gridmanagement/aggridexportdemo">Exports demo</DemoBox>
+        <DemoBox href="/gridmanagement/aggridcellsummarydemo">
+          Cell Summary demo
+        </DemoBox>
       </GridLayout>
     </MainPage>
   );
