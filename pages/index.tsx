@@ -57,11 +57,13 @@ export default () => {
           at design time (eg. searches, layouts, styles, entitlements etc.)
           <br />
           The demos on this site each demonstrate one of the functions in the
-          Adaptable Blotter (using the excellent{' '}
+          Adaptable Blotter.
+          <br /> Each demo uses the excellent{' '}
           <a href=" https://www.ag-grid.com/" target="_blank">
             ag-Grid
           </a>{' '}
-          as the underlying grid control). <br />
+          as the underlying grid control, and dummy data from the famous
+          Microsoft Northwind database (Orders table). <br />
           Each demo also includes a small amount of Predefined Config relevant
           to that function in order to illustrate the potential usage (which you
           can see printed out underneath the demo).

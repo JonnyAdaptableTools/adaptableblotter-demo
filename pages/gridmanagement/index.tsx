@@ -1,0 +1,59 @@
+import React from 'react';
+import MainPage from '../../src/MainPage';
+import Link from 'next/link';
+import { ReactNode } from 'react-redux';
+
+import logo from '../../images/AdaptableBlotter.png';
+
+import './index.scss';
+import GridLayout from '../../src/components/GridLayout';
+
+const DemoBox = ({ href, children }: { href: string; children: ReactNode }) => {
+  return (
+    <Link href={href}>
+      <a>
+        <div className="demo-box">
+          <img src={logo} style={{ maxWidth: '80%' }} />
+          <div>{children}</div>
+        </div>
+      </a>
+    </Link>
+  );
+};
+
+export default () => {
+  return (
+    <MainPage
+      pageTitle={'Grid Management demos'}
+      description={
+        <div>
+          <h4>Grid Management Functions</h4>
+          <p>
+            There are a many functions in the Adaptable Blotter which let you
+            set up the Grid and columns exactly how you want:
+          </p>
+          <ul>
+            <li>
+              <b>Custom Sort:</b> Create your own sort orders for columns (e.g.
+              Ratings, Tenors, Sectors) where the default alphabetical sort
+              doesnt make sense.
+            </li>
+            <li>
+              <b>Export:</b> Send grid data to a number of destinations using
+              System or Custom reports and schedule them if you would like.
+            </li>
+          </ul>
+          Click on the buttons below to see a demos for our Grid Management
+          functions.
+        </div>
+      }
+    >
+      <GridLayout>
+        <DemoBox href="/gridmanagement/aggridcustomsortdemo">
+          Custom Sort demo
+        </DemoBox>
+        <DemoBox href="/gridmanagement/aggridexportdemo">Exports demo</DemoBox>
+      </GridLayout>
+    </MainPage>
+  );
+};

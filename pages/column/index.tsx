@@ -34,11 +34,6 @@ export default () => {
           </p>
           <ul>
             <li>
-              <b>Custom Sort:</b> Create your own sort orders for columns (e.g.
-              Ratings, Tenors, Sectors) where the default alphabetical sort
-              doesnt make sense.
-            </li>
-            <li>
               <b>Calculated Column:</b> Create your own custom columns where the
               value is derived - dynamically - from the values in other columns
               in the Grid.
@@ -62,7 +57,6 @@ export default () => {
       }
     >
       <GridLayout>
-        <DemoBox href="/column/aggridcustomsortdemo">Custom Sort demo</DemoBox>
         <DemoBox href="/column/aggridcalculatedcolumndemo">
           Calculated Column demo
         </DemoBox>

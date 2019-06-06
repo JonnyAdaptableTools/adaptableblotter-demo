@@ -58,23 +58,7 @@ export default () => {
         <Link href="/aggridconfigdemo">
           <a>Custom config</a>
         </Link>
-        <Category
-          title={
-            <Link href="/dashboard">
-              <a>Dashboard</a>
-            </Link>
-          }
-        >
-          <Link href="/dashboard/aggriddashboardtoolbarsdemo">
-            <a>Toolbars</a>
-          </Link>
-          <Link href="/dashboard/aggriddashboardbuttonsdemo">
-            <a>Buttons</a>
-          </Link>
-          <Link href="/dashboard/aggriddashboardvisibilitydemo">
-            <a>Visibility</a>
-          </Link>
-        </Category>
+
         <Category
           title={
             <Link href="/search">
@@ -154,9 +138,6 @@ export default () => {
             </Link>
           }
         >
-          <Link href="/column/aggridcustomsortdemo">
-            <a>Custom Sort</a>
-          </Link>
           <Link href="/column/aggridcalculatedcolumndemo">
             <a>Calculated Column</a>
           </Link>
@@ -184,6 +165,39 @@ export default () => {
             <a>Pie Charts</a>
           </Link>
         </Category>
+        <Category
+          title={
+            <Link href="/gridmanagement">
+              <a>Grid Management</a>
+            </Link>
+          }
+        >
+          <Link href="/gridmanagement/aggridcustomsortdemo">
+            <a>Custom Sort</a>
+          </Link>
+          <Link href="/gridmanagement/aggridexportdemo">
+            <a>Export</a>
+          </Link>
+        </Category>
+
+        <Category
+          title={
+            <Link href="/dashboard">
+              <a>Dashboard</a>
+            </Link>
+          }
+        >
+          <Link href="/dashboard/aggriddashboardtoolbarsdemo">
+            <a>Toolbars</a>
+          </Link>
+          <Link href="/dashboard/aggriddashboardbuttonsdemo">
+            <a>Buttons</a>
+          </Link>
+          <Link href="/dashboard/aggriddashboardvisibilitydemo">
+            <a>Visibility</a>
+          </Link>
+        </Category>
+
         <Category
           title={
             <Link href="/misc">
