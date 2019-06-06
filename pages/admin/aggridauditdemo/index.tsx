@@ -5,10 +5,10 @@ export default () => {
   return (
     <DynamicDemoPage
       demo={import('../../../src/client/aggridauditdemo')}
-      pageTitle={'Audit Demo'}
+      pageTitle={'Audit Log Demo'}
       description={
         <div>
-          <h4>AdaptableBlotter.JS - Audit Demo</h4>
+          <h4>AdaptableBlotter.JS - Audit Log Demo</h4>
           <p>
             Every event, mouse click, user action, cell edit etc. is auditable
             by the Adaptable Blotter and available for you to listen to and

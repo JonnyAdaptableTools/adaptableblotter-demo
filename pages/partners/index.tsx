@@ -24,7 +24,7 @@ const DemoBox = ({ href, children }: { href: string; children: ReactNode }) => {
 export default () => {
   return (
     <MainPage
-      pageTitle={'Misc demos'}
+      pageTitle={'Partners'}
       description={
         <div>
           <h4>Partners</h4>

@@ -209,15 +209,18 @@ export default () => {
 
         <Category
           title={
-            <Link href="/misc">
-              <a>Misc</a>
+            <Link href="/admin">
+              <a>Admin</a>
             </Link>
           }
         >
-          <Link href="/misc/aggridentitlementsdemo">
+          <Link href="/admin/aggridentitlementsdemo">
             <a>Entitlements</a>
           </Link>
-          <Link href="/misc/aggridgroupingdemo">
+          <Link href="/admin/aggridauditdemo">
+            <a>Audit Log</a>
+          </Link>
+          <Link href="/admin/aggridgroupingdemo">
             <a>Grouping</a>
           </Link>
         </Category>
