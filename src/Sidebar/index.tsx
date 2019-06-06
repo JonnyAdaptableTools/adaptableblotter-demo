@@ -157,6 +157,9 @@ export default () => {
           <Link href="/column/aggridcustomsortdemo">
             <a>Custom Sort</a>
           </Link>
+          <Link href="/column/aggridcalculatedcolumndemo">
+            <a>Calculated Column</a>
+          </Link>
           <Link href="/column/aggridcolumncategorydemo">
             <a>Column Category</a>
           </Link>

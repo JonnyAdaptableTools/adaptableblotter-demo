@@ -39,6 +39,11 @@ export default () => {
               doesnt make sense.
             </li>
             <li>
+              <b>Calculated Column:</b> Create your own custom columns where the
+              value is derived - dynamically - from the values in other columns
+              in the Grid.
+            </li>
+            <li>
               <b>Column Category:</b> Group columns together logically to help
               you to manipulate grids with very large numbers of columns.
             </li>
@@ -49,6 +54,9 @@ export default () => {
     >
       <GridLayout>
         <DemoBox href="/column/aggridcustomsortdemo">Custom Sort demo</DemoBox>
+        <DemoBox href="/column/aggridcalculatedcolumndemo">
+          Calculated Column demo
+        </DemoBox>
         <DemoBox href="/column/aggridcolumncategorydemo">
           Column Category demo
         </DemoBox>
