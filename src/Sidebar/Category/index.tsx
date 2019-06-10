@@ -12,6 +12,7 @@ const store = (global as any).localStorage || {
 const useExpanded = (defaultValue: boolean, key: string) => {
   key = `expandstate-${key}`;
   const storageValue = store.getItem(key) || null;
+
   const currentValue =
     storageValue == null ? defaultValue : JSON.parse(storageValue);
 
