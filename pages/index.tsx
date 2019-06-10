@@ -18,7 +18,7 @@ export default () => {
 
   return (
     <MainPage pageTitle="AdaptableBlotter Demos">
-      <div style={{ padding: 20 }}>
+      <div style={{ padding: 21 }}>
         <h3>Adaptable Blotter Demos</h3>
         <i>
           Version:&nbsp;
