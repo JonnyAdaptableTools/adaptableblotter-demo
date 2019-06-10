@@ -1,7 +1,7 @@
 const path = require('path');
 
 const Dotenv = require('dotenv-webpack');
-const withTM = require('next-transpile-modules');
+// const withTM = require('next-transpile-modules');
 
 const withCSS = require('@zeit/next-css');
 const withSass = require('@zeit/next-sass');
@@ -48,12 +48,12 @@ module.exports = withPlugins(
     ],
     [withSass],
     [withFonts],
-    [
-      withTM,
-      {
-        transpileModules: ['igniteui-react-core', 'igniteui-react-charts'],
-      },
-    ],
+    // [
+    //   withTM,
+    //   {
+    //     transpileModules: ['igniteui-react-core', 'igniteui-react-charts'],
+    //   },
+    // ],
     [withTypescript],
   ],
   withApp
