@@ -10,17 +10,19 @@ export default () => {
         <div>
           <h4>AdaptableBlotter.JS - Audit Log Demo</h4>
           <p>
-            Every event, mouse click, user action, cell edit etc. is auditable
-            by the Adaptable Blotter and available for you to listen to and
-            review.
+            Every grid event, mouse click, user action, cell edit etc. is
+            auditable by the Adaptable Blotter and available for you to listen
+            to and review - perfect for Support Teams or for data playback.
           </p>
           <p>
-            You can choose to send any (or all) of Cell Edit, User State,
-            Function Applied and Internal State changes to the Audit Log.{' '}
+            You can choose to send any (or all) of <b>Cell Edit</b>,{' '}
+            <b>User State</b>, <b>Function Applied</b> and <b>Internal State</b>{' '}
+            changes to the Audit Log.{' '}
           </p>
           <p>
-            And you can choose what the Audit Log do with the messages: stream
-            to an HTTP Channel, log to the Console or fire an event.
+            And you can decide how the Audit Log will make these messages
+            available: stream to an HTTP Channel, log to the Console or fire an
+            event.
           </p>
           <p>
             This example fires Cell Edit, User State and Function Applied events

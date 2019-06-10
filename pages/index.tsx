@@ -36,8 +36,11 @@ export default () => {
           usually needs to be built on a bespoke basis for each project.
           <br />
           AdaptableBlotter.JS sits on top of (and integrates with) a number of
-          HTML5 vendor DataGrids both vendor and open source including the
-          market-leading ag-Grid (which we are using for these demos).
+          HTML5 vendor DataGrids both vendor and open source including the{' '}
+          <a href="https://www.ag-grid.com/" target="_blank">
+            market-leading ag-Grid
+          </a>{' '}
+          (which we are using for these demos).
           <br />
           Adaptable Blotter.JS is fully data-agnostic and can work with any data
           set, for any Desk, in any team, at any Location
@@ -45,29 +48,46 @@ export default () => {
         </p>
         <p>
           <b>Functions</b> <br />
-          The Adaptable Blotter contains a large number of functions each of
-          which corresponds to a particular Grid action (e.g. Advanced Search,
-          Bulk Update, Pie Chart etc.)
+          The Adaptable Blotter contains a large number of 'functions' each of
+          which corresponds to a particular DataGrid use case (e.g. Advanced
+          Search, Bulk Update, Pie Chart etc.) <br />
+          This site contains a bespoke demo for most of the functions in the
+          Adaptable Blotter.
           <br />
         </p>
         <p>
           <b>The Demos</b> <br />
           When you release an application using the Adaptable Blotter you will
-          typically ship it with Predefined Config - state that you have created
-          at design time (eg. searches, layouts, styles, entitlements etc.)
+          typically ship it with{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/categories/360001777392-Predefined-Config"
+            target="_blank"
+          >
+            Predefined Config
+          </a>{' '}
+          - state that you have created at design time (eg. searches, layouts,
+          styles, entitlements etc.)
           <br />
-          The demos on this site each demonstrate one of the functions in the
-          Adaptable Blotter.
-          <br /> Each demo uses the excellent{' '}
-          <a href=" https://www.ag-grid.com/" target="_blank">
+          You will also set up the Options you need for your Blotter using the{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/categories/360001777412-Blotter-Options"
+            target="_blank"
+          >
+            IAdaptableBlotterOptions
+          </a>{' '}
+          object.
+          <br />
+          Each of these demos includes a small amount of Predefined Config
+          relevant to that function in order to illustrate the potential usage,
+          and adds non-default Blotter Options that are required (you can see
+          both of these printed out underneath the demo).
+          <br />
+          The demos use the excellent{' '}
+          <a href="https://www.ag-grid.com/" target="_blank">
             ag-Grid
           </a>{' '}
           as the underlying grid control, and dummy data from the famous
           Microsoft Northwind database (Orders table). <br />
-          Each demo also includes a small amount of Predefined Config relevant
-          to that function in order to illustrate the potential usage (which you
-          can see printed out underneath the demo).
-          <br />
         </p>
 
         <p>
@@ -76,18 +96,25 @@ export default () => {
           It is trivial to set up the Adaptable Blotter and can be done with a
           single line of code.
           <br />
-          See this{' '}
+          See our{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/sections/360003854892-Integration"
+            target="_blank"
+          >
+            Integtration Help Pages
+          </a>{' '}
+          for more information and also this{' '}
           <a href="https://yg0we.codesandbox.io/" target="_blank">
             Live Example
           </a>{' '}
-          and download it and experiment with it yourself using this{' '}
+          (which you can download and experiment with it yourself using this{' '}
           <a
             href="https://codesandbox.io/s/adaptableblotterbasic-yg0we"
             target="_blank"
           >
             Sandbox
           </a>
-          .
+          ).
           <br />
         </p>
         <p>

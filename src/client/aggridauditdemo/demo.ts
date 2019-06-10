@@ -32,8 +32,6 @@ export default () => {
     userName: 'Demo User',
     blotterId: 'Audit Log Demo',
     licenceKey: Helper.getdemolicencekey(),
-    vendorGrid: gridOptions,
-    predefinedConfig: predefinedConfig,
     auditOptions: {
       auditUserStateChanges: {
         auditToConsole: true,
@@ -45,6 +43,8 @@ export default () => {
         auditToConsole: true,
       },
     },
+    vendorGrid: gridOptions,
+    predefinedConfig: predefinedConfig,
   };
 
   const blotterOptionsClone = cloneDeep(blotterOptions);

@@ -20,7 +20,7 @@ export default () => {
           <p>
             Try it: highlight a group of cells and see the value change in the
             Cell Summmary toolbar. Click the 'info' button to see results of all
-            operations and change selected one using the dropdown.
+            operations or change the selected one by using the dropdown.
           </p>
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
