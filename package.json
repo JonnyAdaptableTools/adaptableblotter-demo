@@ -54,7 +54,7 @@
     "buildDataSets": "node buildJsonDataset.js",
     "openfin": "openfin -l -c app-dev.json",
     "dev": "next",
-    "build": "node --max-old-space-size=4096 ./node_modules/.bin/next build && node --max-old-space-size=4096 ./node_modules/.bin/next export -o dist && cp _headers dist"
+    "build": "node --max-old-space-size=4096 ./node_modules/.bin/next build && node --max-old-space-size=4096 ./node_modules/.bin/next export -o dist && cp _headers dist && cp .nvmrc dist"
   },
   "repository": {
     "type": "git",
