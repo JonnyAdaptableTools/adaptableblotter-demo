@@ -762,27 +762,10 @@
   resolved "https://registry.yarnpkg.com/@types/anymatch/-/anymatch-1.3.1.tgz#336badc1beecb9dacc38bea2cf32adf627a8421a"
   integrity sha512-/+CRPXpBDpo2RK9C68N3b2cOvO0Cf5B9aPijHsoDQTHivnGSObdOF2BRQOYjojWTDy6nQvMjmqRXIxH55VjxxA==
 
-"@types/deep-diff@0.0.31":
-  version "0.0.31"
-  resolved "https://registry.yarnpkg.com/@types/deep-diff/-/deep-diff-0.0.31.tgz#0632b274d1db23cb80f0c1d4e4254c3392fd8219"
-  integrity sha512-9t14b0HjrvzFEhHZ4ffs/HY6U/PjGEPZYEc/sFG/uTZh27YRpeZXyUpTZP5kyPUMb5Orn969puL8KXTwGtLs7w==
-
 "@types/isomorphic-fetch@0.0.34":
   version "0.0.34"
   resolved "https://registry.yarnpkg.com/@types/isomorphic-fetch/-/isomorphic-fetch-0.0.34.tgz#3c3483e606c041378438e951464f00e4e60706d6"
   integrity sha1-PDSD5gbAQTeEOOlRRk8A5OYHBtY=
-
-"@types/lodash@^4.14.110":
-  version "4.14.132"
-  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.132.tgz#8ce45ca8745ff2e004fac0de0ab46f61e390ffa0"
-  integrity sha512-RNUU1rrh85NgUJcjOOr96YXr+RHwInGbaQCZmlitqOaCKXffj8bh+Zxwuq5rjDy5OgzFldDVoqk4pyLEDiwxIw==
-
-"@types/mathjs@4.4.1":
-  version "4.4.1"
-  resolved "https://registry.yarnpkg.com/@types/mathjs/-/mathjs-4.4.1.tgz#ce876a823848486f3675f8573e93f2d282feba19"
-  integrity sha512-i6Y5yEo9aUD+6Pbh8WDDMpth6IvBVYvm6SKpsMxlraeuhN1ei182TLzU/EL5viQbFMzgOSqOhmXi87mwXsoQaw==
-  dependencies:
-    decimal.js "^10.0.0"
 
 "@types/next-server@*":
   version "8.1.1"
@@ -821,22 +804,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/node-schedule@^1.2.3":
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/@types/node-schedule/-/node-schedule-1.2.3.tgz#614ba775c4c9b200e5f939a4eeef6727eb0ed6b7"
-  integrity sha512-pmuGe7xlx4hnUnOeGk2G46xxGKesF8reddLPiQu0tEIOQePMjDezjaOXFLfRPFBDWm03Aj8FoqPTuFxQt9LDaw==
-  dependencies:
-    "@types/node" "*"
-
 "@types/node@*":
   version "12.0.2"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.0.2.tgz#3452a24edf9fea138b48fad4a0a028a683da1e40"
   integrity sha512-5tabW/i+9mhrfEOUcLDu2xBPsHJ+X5Orqy9FKpale3SjDA17j5AEpYq5vfy3oAeAHGcvANRCO3NV3d2D6q3NiA==
-
-"@types/node@^9.6.22":
-  version "9.6.48"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-9.6.48.tgz#06e765bda1fef91b075c58d540207e8b37dbdc1f"
-  integrity sha512-velR2CyDrHC1WFheHr5Jm25mdCMs0BXJRp6u0zf8PF9yeOy4Xff5sJeusWS7xOmhAoezlSq8LJ0+9M5H7YkTdw==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -848,21 +819,7 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.1.tgz#f1a11e7babb0c3cad68100be381d1e064c68f1f6"
   integrity sha512-CFzn9idOEpHrgdw8JsoTkaDDyRWk1jrzIV8djzcgpq0y9tG4B4lFT+Nxh52DVpDXV+n4+NPNv7M1Dj5uMp6XFg==
 
-"@types/react-bootstrap-typeahead@^3.2.0":
-  version "3.4.5"
-  resolved "https://registry.yarnpkg.com/@types/react-bootstrap-typeahead/-/react-bootstrap-typeahead-3.4.5.tgz#94ea5a90b611e238fa8c3467eb1e3172427b1053"
-  integrity sha512-waTJZ1QER+bUUmNXqLw2QwJxe/G2EfjYuSLg6BURUe2rEkBTKRTmjiCrVBfRQ2JqqoaC7ScYEasm/DPw3lkvCA==
-  dependencies:
-    "@types/react" "*"
-
-"@types/react-bootstrap@0.0.49":
-  version "0.0.49"
-  resolved "https://registry.yarnpkg.com/@types/react-bootstrap/-/react-bootstrap-0.0.49.tgz#07861c206757dd9bd79eceec27ed642cf747b87f"
-  integrity sha1-B4YcIGdX3ZvXns7sJ+1kLPdHuH8=
-  dependencies:
-    "@types/react" "*"
-
-"@types/react-dom@^16.8.3", "@types/react-dom@^16.8.4":
+"@types/react-dom@^16.8.4":
   version "16.8.4"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-16.8.4.tgz#7fb7ba368857c7aa0f4e4511c4710ca2c5a12a88"
   integrity sha512-eIRpEW73DCzPIMaNBDP5pPIpK1KXyZwNgfxiVagb5iGiz6da+9A5hslSX6GAQKdO7SayVCS/Fr2kjqprgAvkfA==
@@ -877,15 +834,7 @@
     "@types/react" "*"
     "@types/webpack" "*"
 
-"@types/react-redux@^4.4.40":
-  version "4.4.47"
-  resolved "https://registry.yarnpkg.com/@types/react-redux/-/react-redux-4.4.47.tgz#12af1677116e08d413fe2620d0a85560c8a0536e"
-  integrity sha512-wyFTmLtEymHCjOmVVvsbNqJaGM9Q0x6sZTQfz4XkDj06P8Xe+ys9wKSQHx2Jt9J5Mi7HZnGcJaMFktn60sXluw==
-  dependencies:
-    "@types/react" "*"
-    redux "^3.6.0"
-
-"@types/react@*", "@types/react@^16.8.10", "@types/react@^16.8.15":
+"@types/react@*", "@types/react@^16.8.15":
   version "16.8.18"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.18.tgz#fe66fb748b0b6ca9709d38b87b2d1356d960a511"
   integrity sha512-lUXdKzRqWR4FebR5tGHkLCqnvQJS4fdXKCBrNGGbglqZg2gpU+J82pMONevQODUotATs9fc9k66bx3/St8vReg==
@@ -1262,22 +1211,11 @@ acorn@^6.0.5:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.1.1.tgz#7d25ae05bb8ad1f9b699108e1094ecd7884adc1f"
   integrity sha512-jPTiwtOxaHNaAPg/dmrJ/beuzLRnXtB0kQPQ8JpotKJgTB6rX6c8mlf315941pyjBSaPg8NHXS9fhP4u17DpGA==
 
-adaptableblotter-react-aggrid@^3.4.0-canary.1:
-  version "3.4.8"
-  resolved "https://registry.yarnpkg.com/adaptableblotter-react-aggrid/-/adaptableblotter-react-aggrid-3.4.8.tgz#5edd3aa72be362031b09e29f418aba1e35aece5d"
-  integrity sha512-xx6Gd+EGNejDt2TpdkPymaVidY5LWtEb1/TeNOGfXaG8ga5pQ4cIziPgK4Xe+Sn0GvA6I3ewoH817ddNUcF40Q==
+adaptableblotter-react-aggrid@^4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/adaptableblotter-react-aggrid/-/adaptableblotter-react-aggrid-4.0.4.tgz#d0f20a0ac01381ec3eca24d2194239e47652fce0"
+  integrity sha512-6MONdAzu+Q5NG4ypNEmahcPi/YOtm5OSMSf6ma6UZGh3iypOsCCym4e16Ud/d8zdMqrAoFeLTHeSBg3umQ9VXQ==
   dependencies:
-    "@types/deep-diff" "0.0.31"
-    "@types/isomorphic-fetch" "0.0.34"
-    "@types/lodash" "^4.14.110"
-    "@types/mathjs" "4.4.1"
-    "@types/node" "^9.6.22"
-    "@types/node-schedule" "^1.2.3"
-    "@types/react" "^16.8.10"
-    "@types/react-bootstrap" "0.0.49"
-    "@types/react-bootstrap-typeahead" "^3.2.0"
-    "@types/react-dom" "^16.8.3"
-    "@types/react-redux" "^4.4.40"
     babel-polyfill "^6.26.0"
     babel-runtime "^6.26.0"
     bootswatch "^3.3.7"
@@ -1297,24 +1235,14 @@ adaptableblotter-react-aggrid@^3.4.0-canary.1:
     react-redux "^5.1.1"
     redux "^3.6.0"
     redux-devtools-extension "^2.13.5"
-    resize-observer-polyfill "^1.5.1"
+    tslib "^1.9.3"
+    uuid "^3.3.2"
 
-adaptableblotter@^3.4.1-beta.48:
-  version "3.4.1-beta.48"
-  resolved "https://registry.yarnpkg.com/adaptableblotter/-/adaptableblotter-3.4.1-beta.48.tgz#432b5c4d255615d3b9424d939ed23c6dc62d50c0"
-  integrity sha512-6alChC7AtyU3St5Irvg+OHqt4ocBGx3KEzFWnQjMTuwFhmpdKsbmE2X1MCGvlCU5vdaPeYsXTk5pO5SiaxIXaA==
+adaptableblotter@^4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/adaptableblotter/-/adaptableblotter-4.0.4.tgz#8ec129ecc3a03af4c9ed60f07c8e481c410a07b2"
+  integrity sha512-53gwNEkgOzQTGTYt5NESuyq+SCSUhPgpPw6Xlm/g/OVozdCfYRjzRYQDMCnU9/BHYNsj/6wAnqCNoPTyBKpdJQ==
   dependencies:
-    "@types/deep-diff" "0.0.31"
-    "@types/isomorphic-fetch" "0.0.34"
-    "@types/lodash" "^4.14.110"
-    "@types/mathjs" "4.4.1"
-    "@types/node" "^9.6.22"
-    "@types/node-schedule" "^1.2.3"
-    "@types/react" "^16.8.10"
-    "@types/react-bootstrap" "0.0.49"
-    "@types/react-bootstrap-typeahead" "^3.2.0"
-    "@types/react-dom" "^16.8.3"
-    "@types/react-redux" "^4.4.40"
     babel-polyfill "^6.26.0"
     babel-runtime "^6.26.0"
     bootswatch "^3.3.7"
@@ -1336,16 +1264,18 @@ adaptableblotter@^3.4.1-beta.48:
     react-redux "^5.1.1"
     redux "^3.6.0"
     redux-devtools-extension "^2.13.5"
+    tslib "^1.9.3"
+    uuid "^3.3.2"
 
-ag-grid-community@^20.2.0:
-  version "20.2.0"
-  resolved "https://registry.yarnpkg.com/ag-grid-community/-/ag-grid-community-20.2.0.tgz#22f26d53e309b51a156878d180c9ec6f16bc6403"
-  integrity sha512-3oAzg58lenhpyIfZ6dBp6cCE+PEoh0N+OSci2+k5fHROn8PMrginAkygONDd068E2NC+qfmDNRkU2WjPgiH/BA==
+ag-grid-community@^21.0.0:
+  version "21.0.1"
+  resolved "https://registry.yarnpkg.com/ag-grid-community/-/ag-grid-community-21.0.1.tgz#8cf6096de7e9ae6144bf5aced89b03814ea7b034"
+  integrity sha512-wqm6W39kImPonjRxHvnt/L6roJLxPXSopXF4pvcE1paxN7S25HNsBgTOB1uaLlQ4/xt3xSpccPbTDqVUnSxrmQ==
 
-ag-grid-enterprise@^20.2.0:
-  version "20.2.0"
-  resolved "https://registry.yarnpkg.com/ag-grid-enterprise/-/ag-grid-enterprise-20.2.0.tgz#dbc2c4f6d3c097661911fe40c18dcac775dac04d"
-  integrity sha512-3Nd2RPjK1/HKAQ6/4TO7ZgoW0bGWsKmp03tfqO1uT4WMn6VeNBTcALdSMfkzuvEfcDbmLzTSuguxDyOJbJ7q5w==
+ag-grid-enterprise@^21.0.0:
+  version "21.0.1"
+  resolved "https://registry.yarnpkg.com/ag-grid-enterprise/-/ag-grid-enterprise-21.0.1.tgz#a84796a25c9754c2535c9ea47d3146e57e0b2960"
+  integrity sha512-C1R6bk+zltxMlZSddzaS5Go7ZfEieYTngfxbxJxldehvUFXxY3rRM3PA9NJyNVDQmks6T3Zm7jxkdw9RNUxItA==
 
 ajv-errors@^1.0.0:
   version "1.0.1"
@@ -2421,7 +2351,7 @@ decamelize@^1.1.1, decamelize@^1.1.2:
   resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
   integrity sha1-9lNNFRSCabIDUue+4m9QH5oZEpA=
 
-decimal.js@10.2.0, decimal.js@^10.0.0:
+decimal.js@10.2.0:
   version "10.2.0"
   resolved "https://registry.yarnpkg.com/decimal.js/-/decimal.js-10.2.0.tgz#39466113a9e036111d02f82489b5fd6b0b5ed231"
   integrity sha512-vDPw+rDgn3bZe1+F/pyEwb1oMG2XTlRVgAa6B4KccTEpYgF8w6eQllVbQcfIJnZyvzFtFpxnpGtx8dd7DJp/Rw==
@@ -5810,11 +5740,6 @@ require-main-filename@^1.0.1:
   resolved "https://registry.yarnpkg.com/require-main-filename/-/require-main-filename-1.0.1.tgz#97f717b69d48784f5f526a6c5aa8ffdda055a4d1"
   integrity sha1-l/cXtp1IeE9fUmpsWqj/3aBVpNE=
 
-resize-observer-polyfill@^1.5.1:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
-  integrity sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==
-
 resolve-from@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/resolve-from/-/resolve-from-3.0.0.tgz#b22c7af7d9d6881bc8b6e653335eebcb0a188748"
@@ -6616,7 +6541,7 @@ trim-right@^1.0.1:
   dependencies:
     glob "^7.1.2"
 
-tslib@^1.9.0:
+tslib@^1.9.0, tslib@^1.9.3:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
   integrity sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
