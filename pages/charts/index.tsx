@@ -5,7 +5,7 @@ import { ReactNode } from 'react-redux';
 
 import logo from '../../images/AdaptableBlotter.png';
 
-import './index.scss';
+import './index.css';
 import GridLayout from '../../src/components/GridLayout';
 
 const DemoBox = ({ href, children }: { href: string; children: ReactNode }) => {
