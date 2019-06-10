@@ -1,0 +1,84 @@
+.sidebar {
+  height: 100%;
+  z-index: 1;
+  position: relative;
+  background-color: #245a96;
+  overflow-x: hidden;
+  a {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #f1f1f1;
+    display: block;
+    fill: currentColor;
+
+    &,
+    &:focus,
+    &:active,
+    &:hover {
+      color: #f1f1f1;
+    }
+  }
+
+  .active-link {
+    &,
+    &:focus,
+    &:hover,
+    &:active {
+      color: #245a96;
+      background: white;
+    }
+  }
+  .sidebar-category-title.sidebar-category-title--active {
+    &,
+    & a,
+    & a:focus,
+    & a:hover,
+    & a:active {
+      color: #245a96;
+      background: white;
+    }
+  }
+}
+.sidebar .sidebar-category-title.sidebar-category-title--active,
+.sidebar .active-link,
+.sidebar .active-link:focus,
+.sidebar .active-link:hover,
+.sidebar .active-link:active {
+  color: #245a96;
+  background: white;
+}
+
+.sidebar .sidebar-category.sidebar-category {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.sidebar-category-title {
+  display: flex;
+  flex-flow: row;
+}
+.sidebar-category > .sidebar-category-title {
+  padding-left: 20px;
+  color: #f1f1f1;
+}
+.sidebar-category-content > a {
+  padding-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}
+
+.sidebar .sidebar-container {
+  padding: 10px 0px;
+}
+.sidebar .sidebar-container > * {
+  padding: 4px 20px;
+}

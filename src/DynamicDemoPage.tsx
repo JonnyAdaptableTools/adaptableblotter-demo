@@ -35,9 +35,7 @@ export default (props: { demo: any } & AgGridDemoPageProps) => {
   return (
     <AgGridDemoPage
       {...pageProps}
-      config={
-        predefinedConfig ? JSON.stringify(predefinedConfig, null, 2) : null
-      }
+      config={predefinedConfig}
       blotterOptions={blotterOptions}
     >
       <DynamicComponent
