@@ -2,6 +2,8 @@ import React, { ReactNode, ReactElement, useState } from 'react';
 import { withRouter } from 'next/router';
 import ArrowDown from './arrow-down.tsx';
 import ArrowRight from './arrow-right.tsx';
+
+const preventDefault = e => e.preventDefault();
 const Category = withRouter(
   ({
     router,
@@ -17,6 +19,7 @@ const Category = withRouter(
     const Arrow = expanded ? ArrowDown : ArrowRight;
     const icon = (
       <Arrow
+        onMouseDown={preventDefault}
         onClick={() => {
           setExpanded(!expanded);
         }}
