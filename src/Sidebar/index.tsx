@@ -1,4 +1,4 @@
-import React, { ReactNode, ReactElement } from 'react';
+import React from 'react';
 import NextLink from 'next/link';
 import { withRouter } from 'next/router';
 
@@ -6,6 +6,16 @@ import Category from './Category';
 
 import './index.scss';
 import Logo from './Logo';
+
+if (global.console) {
+  const log = global.console.log;
+  global.console.log = (...args: any[]) => {
+    if ((global as any).ConsoleLog) {
+      (global as any).ConsoleLog(...args);
+    }
+    return log(...args);
+  };
+}
 
 const Link = withRouter(
   ({
@@ -22,7 +32,6 @@ const Link = withRouter(
       children = React.cloneElement(children, {
         className: 'active-link',
         active: true,
-        key: 'anchor',
       });
     }
 

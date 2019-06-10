@@ -26,6 +26,7 @@
     "@zeit/next-sass": "^1.0.1",
     "@zeit/next-typescript": "^1.1.1",
     "dotenv-webpack": "^1.7.0",
+    "excel": "^1.0.0",
     "husky": ">=1",
     "lint-staged": ">=8",
     "next-compose-plugins": "^2.2.0",

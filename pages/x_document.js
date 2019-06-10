@@ -12,8 +12,8 @@ class MyDocument extends Document {
         <Head>
           <style>{`body { margin: 0 } /* custom! */`}</style>
         </Head>
-        <body className="custom_class">
-          <Main />
+        <body className="">
+          <Main key="main" />
           <NextScript />
         </body>
       </Html>
