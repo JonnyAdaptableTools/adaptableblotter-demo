@@ -1,15 +1,9 @@
 export default {
   Dashboard: {
-    VisibleToolbars: ['SmartEdit', 'Export', 'Layout'],
-    VisibleButtons: [
-      'Dashboard',
-      'QuickSearch',
-      'ColumnChooser',
-      'AdvancedSearch',
-    ],
+    VisibleToolbars: ['SmartEdit', 'Export', 'Layout', 'QuickSearch'],
+    VisibleButtons: ['Dashboard', 'ColumnChooser', 'AdvancedSearch'],
     Zoom: 0.9,
-    UseSingleColourForButtons: true,
-    ShowSystemStatusButton: false,
+    UseSingleColourForButtons: false,
   },
   SmartEdit: {
     SmartEditValue: 10,
@@ -164,5 +158,27 @@ export default {
         Name: 'Shipping View',
       },
     ],
+  },
+  FormatColumn: {
+    FormatColumns: [
+      {
+        ColumnId: 'OrderId',
+        Style: {
+          BackColor: '#d4fb79',
+          ForeColor: '#8b0000',
+          FontWeight: 'Normal',
+          FontStyle: 'Normal',
+          ClassName: '',
+        },
+      },
+    ],
+  },
+  QuickSearch: {
+    QuickSearchText: 'g*',
+    DisplayAction: 'ShowRowAndHighlightCell',
+    Style: {
+      BackColor: '#ffff00',
+      ForeColor: '#8b0000',
+    },
   },
 };

@@ -26,9 +26,10 @@ export default () => {
             functionality that they require.
           </p>
           <p>
-            This is a very basic example with no Predefined Configuration (or
-            Entitlements) and no overriden Blotter objects. So all the
-            functionality is available in a default way.
+            This basic example has no Predefined Configuration (or Entitlements)
+            and no overriden Blotter objects. So all the functionality (e.g. 30
+            functions, Column Header, Quick Filter etc.) is available in a
+            default way.
           </p>
         </div>
       }

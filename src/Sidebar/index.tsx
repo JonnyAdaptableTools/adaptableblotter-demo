@@ -56,7 +56,7 @@ export default () => {
           <a>Basic</a>
         </Link>
         <Link href="/aggridconfigdemo">
-          <a>Custom config</a>
+          <a>Advanced</a>
         </Link>
 
         <Category
