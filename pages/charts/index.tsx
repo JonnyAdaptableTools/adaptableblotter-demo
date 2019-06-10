@@ -48,6 +48,11 @@ export default () => {
             the underlying data, and they are based on visible (not all) rows so
             will update as you filter the Grid.
           </p>
+          <p>
+            You can also access Pie Charts through the Column Header menu which
+            will show you a Pie Chart for all visible values in that column
+            (with summary rounding where applicable).
+          </p>
         </div>
       }
     >
@@ -56,6 +61,9 @@ export default () => {
           Category Charts demo
         </DemoBox>
         <DemoBox href="/charts/aggridpiechartsdemo">Pie Charts demo</DemoBox>
+        <DemoBox href="/charts/aggridpiechartscolumndemo">
+          Pie Charts (Column) demo
+        </DemoBox>
       </GridLayout>
     </MainPage>
   );

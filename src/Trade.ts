@@ -19,7 +19,6 @@
   bloombergAsk: number;
   bloombergBid: number;
   percentChange: number;
-  bookingGuid: string;
   lastUpdated: Date;
   lastUpdatedBy: string;
 }

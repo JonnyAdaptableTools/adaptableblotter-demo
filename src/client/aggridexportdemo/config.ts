@@ -52,7 +52,7 @@ export default {
         ColumnIds: [
           'OrderId',
           'ChangeLastOrder',
-          'Contact',
+          'ContactName',
           'InvoicedCost',
           'ItemCost',
           'ItemCount',

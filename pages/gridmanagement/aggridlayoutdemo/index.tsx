@@ -19,11 +19,12 @@ export default () => {
             (e.g. grouping) and save automatially when changed.
           </p>
           <p>
-            This example has 2 layouts: 'Orders View' and 'Shipping View' which
-            sorts on 'Ship Name' column. You can alternate between them in the
-            Layout toolbar. And you can create your own layout and group by a
-            column and you will see that the layout, including the grouping,
-            persists automatically.
+            This example has 2 layouts: 'Orders View' and 'Shipping View'. You
+            can alternate between them in the Layout toolbar. And you can create
+            your own layout and group by a column and you will see that the
+            layout, including the grouping, persists automatically. (Note that
+            the Shipping View Layout sorts on 'Ship Name' column which uses a
+            Custom Sort).
           </p>
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}

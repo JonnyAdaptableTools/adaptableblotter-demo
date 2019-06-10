@@ -45,4 +45,12 @@ export default {
       },
     ],
   },
+  CustomSort: {
+    CustomSorts: [
+      {
+        ColumnId: 'ShipName',
+        SortedValues: ["La maison d'Asie", 'Que Delícia', 'Santé Gourmet'],
+      },
+    ],
+  },
 };

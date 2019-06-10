@@ -164,6 +164,9 @@ export default () => {
           <Link href="/charts/aggridpiechartsdemo">
             <a>Pie Charts</a>
           </Link>
+          <Link href="/charts/aggridpiechartscolumndemo">
+            <a>Pie Charts (Column)</a>
+          </Link>
         </Category>
         <Category
           title={
