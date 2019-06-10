@@ -1,5 +1,6 @@
 import React from 'react';
 import NextLink from 'next/link';
+
 import { withRouter } from 'next/router';
 
 import Category from './Category';
