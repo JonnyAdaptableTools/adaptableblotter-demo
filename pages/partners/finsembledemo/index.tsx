@@ -1,7 +1,7 @@
 import React from 'react';
 
 import MainPage from '../../../src/MainPage';
-//import finsembleDemoImage from '../../../images/FinsembleDemo.png';
+import finsembleDemoImage from '../../../images/finsembledemopage.png';
 
 export default () => {
   return (
@@ -31,11 +31,11 @@ export default () => {
         that shows 3 Adaptable Blotters running inside Finsemble.
       </p>
       <p>
-        <br />
+        <br /> <img src={finsembleDemoImage} style={{ maxWidth: '70%' }} />
         {/*
           <img src={'../../../images/FinsembleDemo.png'} style={{ maxWidth: '70%' }} />
       
-        <img src={finsembleDemoImage} style={{ maxWidth: '70%' }} />
+      
               */}
       </p>
     </MainPage>
