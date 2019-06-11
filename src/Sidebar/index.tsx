@@ -63,6 +63,7 @@ export default () => {
           }}
         >
           <button
+            title="Clear all state from all demos to return to original predefined config"
             style={{
               padding: '2px 4px',
               cursor: 'pointer',
