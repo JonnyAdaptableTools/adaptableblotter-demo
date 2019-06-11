@@ -1,5 +1,6 @@
 import React, { useEffect, useState, ReactNode } from 'react';
 import copy from 'copy-to-clipboard';
+import { cloneDeepWith } from 'lodash';
 import MainPage, { MainPageProps } from './MainPage';
 
 const arrowRight = (
@@ -91,6 +92,16 @@ export default ({
   config,
   blotterOptions,
 }: AgGridDemoPageProps) => {
+  if (config) {
+    const removeUuid = (value: any): any => {
+      if (value && value.Uuid) {
+        delete value.Uuid;
+      }
+    };
+    config = cloneDeepWith(config, removeUuid);
+    config = JSON.stringify(config, null, 2);
+  }
+
   return (
     <MainPage pageTitle={pageTitle} description={description}>
       <div id="adaptableBlotter" style={{ marginRight: 30 }} />

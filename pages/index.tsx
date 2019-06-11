@@ -11,11 +11,6 @@ const version = PACKAGE.version;
 const versiondate = new Date().toISOString().slice(0, 10);
 
 export default () => {
-  useEffect(() => {
-    document.documentElement.classList.remove('ab--theme-dark');
-    document.documentElement.classList.add('ab--theme-light');
-  });
-
   return (
     <MainPage pageTitle="AdaptableBlotter Demos">
       <div style={{ padding: 20 }}>

@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import AgGridDemoPage, { AgGridDemoPageProps } from './AgGridDemoPage';
 import dynamic from 'next/dynamic';
 
@@ -35,9 +35,7 @@ export default (props: { demo: any } & AgGridDemoPageProps) => {
   return (
     <AgGridDemoPage
       {...pageProps}
-      config={
-        predefinedConfig ? JSON.stringify(predefinedConfig, null, 2) : null
-      }
+      config={predefinedConfig}
       blotterOptions={blotterOptions}
     >
       <DynamicComponent

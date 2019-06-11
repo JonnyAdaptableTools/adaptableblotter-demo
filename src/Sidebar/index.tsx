@@ -1,54 +1,82 @@
-import React, { ReactNode } from 'react';
-import Link from 'next/link';
+import React from 'react';
+import NextLink from 'next/link';
 
-import logo from '../../images/AdaptableBlotter.png';
-import './index.css';
+import { withRouter } from 'next/router';
 
-const Category = ({
-  children,
-  title,
-}: {
-  children: ReactNode;
-  title: ReactNode;
-}) => {
-  return (
-    <div className="sidenav-category">
-      {title}
-      <div className="sidenav-category-content">{children}</div>
-    </div>
-  );
-};
+import Category from './Category';
+
+import './index.scss';
+import Logo from './Logo';
+
+if (global.console) {
+  const log = global.console.log;
+  global.console.log = (...args: any[]) => {
+    if ((global as any).ConsoleLog) {
+      (global as any).ConsoleLog(...args);
+    }
+    return log(...args);
+  };
+}
+
+const Link = withRouter(
+  ({
+    router,
+    href,
+    children,
+  }: {
+    router: any;
+    href: string;
+    children: any;
+  }) => {
+    const active = router.pathname === href;
+    if (active) {
+      children = React.cloneElement(children, {
+        className: 'active-link',
+        active: true,
+      });
+    }
+
+    return <NextLink href={href}>{children}</NextLink>;
+  }
+);
 
 export default () => {
   return (
     <div
-      className="sidenav"
+      className="sidebar"
       style={{
         display: 'flex',
         flexFlow: 'column',
       }}
     >
-      <div style={{ position: 'relative' }}>
-        <Link href="/">
-          <a>
-            <img
-              src={logo}
-              style={{
-                padding: 10,
-                maxWidth: '100%',
-                background: 'white',
-                position: 'absolute',
-                top: 0,
-                left: 0,
-              }}
-            />
-          </a>
-        </Link>
-      </div>
-      <div style={{ padding: '10px 20px', marginTop: 90, flex: 1 }}>
-        <h3 style={{ color: 'white', fontWeight: 200, marginTop: '35px' }}>
+      <Logo />
+      <div className="sidebar-container" style={{ flex: 1, overflow: 'auto' }}>
+        <h3 style={{ color: 'white', fontWeight: 200, marginTop: 20 }}>
           Demos
         </h3>
+        <div
+          style={{
+            padding: '10px 20px',
+            display: 'inline-flex',
+            justifyContent: 'center',
+            flexFlow: 'row',
+          }}
+        >
+          <button
+            title="Clear all state from all demos to return to original predefined config"
+            style={{
+              padding: '2px 4px',
+              cursor: 'pointer',
+              marginBottom: '20px',
+            }}
+            onClick={() => {
+              localStorage.clear();
+              window.location.href = window.location.href;
+            }}
+          >
+            Clear state
+          </button>
+        </div>
         <Link href="/">
           <a>Home</a>
         </Link>
@@ -244,24 +272,6 @@ export default () => {
             <a>OpenFin</a>
           </Link>
         </Category>
-      </div>
-      <div
-        style={{
-          padding: '10px 20px',
-          display: 'flex',
-          justifyContent: 'center',
-          flexFlow: 'row',
-        }}
-      >
-        <button
-          style={{ padding: 8, cursor: 'pointer', marginBottom: '20px' }}
-          onClick={() => {
-            localStorage.clear();
-            window.location.href = window.location.href;
-          }}
-        >
-          Clear state
-        </button>
       </div>
     </div>
   );
