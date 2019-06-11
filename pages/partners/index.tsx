@@ -3,12 +3,26 @@ import MainPage from '../../src/MainPage';
 import Link from 'next/link';
 import { ReactNode } from 'react-redux';
 
-import finsembleDemoImage from '../../images/FinsembleDemo.png';
-import openfinDemoImage from '../../images/OpenFinDemo.png';
+import logo from '../../images/AdaptableBlotter.png';
+//import finsembleDemoImage from '../../images/FinsembleDemo.png';
+//import openfinDemoImage from '../../images/OpenFinDemo.png';
 import './index.scss';
 import GridLayout from '../../src/components/GridLayout';
 
-const DemoBox = ({
+const DemoBox = ({ href, children }: { href: string; children: ReactNode }) => {
+  return (
+    <Link href={href}>
+      <a>
+        <div className="demo-box">
+          <img src={logo} style={{ maxWidth: '80%' }} />
+          <div>{children}</div>
+        </div>
+      </a>
+    </Link>
+  );
+};
+
+const NewDemoBox = ({
   href,
   children,
   imageName,
@@ -66,7 +80,7 @@ const TempFinsembleDemoBox = ({
             }}
           >
             <img
-              src={finsembleDemoImage}
+              //  src={finsembleDemoImage}
               style={{
                 width: '80%',
                 height: '50%',
@@ -103,7 +117,7 @@ const TempOpenFinDemoBox = ({
             }}
           >
             <img
-              src={openfinDemoImage}
+              //  src={openfinDemoImage}
               style={{
                 width: '80%',
                 height: '50%',
@@ -146,18 +160,18 @@ export default () => {
       }
     >
       <GridLayout>
-        <TempFinsembleDemoBox
+        <DemoBox
           href="/partners/finsembledemo"
-          imageName={finsembleDemoImage}
+          //  imageName={finsembleDemoImage}
         >
           Finsemble demo
-        </TempFinsembleDemoBox>{' '}
-        <TempOpenFinDemoBox
+        </DemoBox>{' '}
+        <DemoBox
           href="/partners/openfindemo"
-          imageName={openfinDemoImage}
+          //   imageName={openfinDemoImage}
         >
           OpenFin demo
-        </TempOpenFinDemoBox>
+        </DemoBox>
       </GridLayout>
     </MainPage>
   );
