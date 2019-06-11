@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { ReactNode } from 'react-redux';
 
 import finsembleDemoImage from '../../images/FinsembleDemo.png';
-import opefinDemoImage from '../../images/OpenFinDemo.png';
+import openfinDemoImage from '../../images/OpenFinDemo.png';
 import './index.scss';
 import GridLayout from '../../src/components/GridLayout';
 
@@ -30,6 +30,80 @@ const DemoBox = ({
           >
             <img
               src={imageName}
+              style={{
+                width: '80%',
+                height: '50%',
+              }}
+            />
+          </div>
+          <br />
+          <div style={{ textAlign: 'center' }}>
+            <h4> {children}</h4>
+          </div>
+        </div>
+      </a>
+    </Link>
+  );
+};
+const TempFinsembleDemoBox = ({
+  href,
+  children,
+  imageName,
+}: {
+  href: string;
+  children: ReactNode;
+  imageName: string;
+}) => {
+  return (
+    <Link href={href}>
+      <a>
+        <div className="demo-box">
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <img
+              src={finsembleDemoImage}
+              style={{
+                width: '80%',
+                height: '50%',
+              }}
+            />
+          </div>
+          <br />
+          <div style={{ textAlign: 'center' }}>
+            <h4> {children}</h4>
+          </div>
+        </div>
+      </a>
+    </Link>
+  );
+};
+const TempOpenFinDemoBox = ({
+  href,
+  children,
+  imageName,
+}: {
+  href: string;
+  children: ReactNode;
+  imageName: string;
+}) => {
+  return (
+    <Link href={href}>
+      <a>
+        <div className="demo-box">
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <img
+              src={openfinDemoImage}
               style={{
                 width: '80%',
                 height: '50%',
@@ -75,7 +149,7 @@ export default () => {
         <DemoBox href="/partners/finsembledemo" imageName={finsembleDemoImage}>
           Finsemble demo
         </DemoBox>{' '}
-        <DemoBox href="/partners/openfindemo" imageName={opefinDemoImage}>
+        <DemoBox href="/partners/openfindemo" imageName={openfinDemoImage}>
           OpenFin demo
         </DemoBox>
       </GridLayout>
