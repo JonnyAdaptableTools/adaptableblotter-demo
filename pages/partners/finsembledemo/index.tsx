@@ -1,7 +1,7 @@
 import React from 'react';
 
 import MainPage from '../../../src/MainPage';
-import finsembleDemoImage from '../../../images/FinsembleDemo.png';
+//import finsembleDemoImage from '../../../images/FinsembleDemo.png';
 
 export default () => {
   return (
@@ -32,47 +32,12 @@ export default () => {
       </p>
       <p>
         <br />
-        <img src={finsembleDemoImage} style={{ maxWidth: '70%' }} />
         {/*
-        <br /> Click the button to download the installer. You will need to launch the download executable that will
-        install
-        locally the required components and launch the demo automtically. 
-      </p>
-      <p>
-        <table style="border-spacing: 20px 5px;border-collapse: separate;">
-          <tbody>
-           <tr>
-            <td>
-              <button style="height:45px; width:150px" class="btn btn-default">
-                 <span>
-                  <h5>Run OpenFin demo</h5>
-                </span>
-              </button>
-              <script>
-                function launchOpenfin() {
-                  if (document.URL.indexOf("beta") > -1) {
-                    location.href = 'https://install.openfin.co/download/?fileName=adaptable_blotter_openfin&config=http://beta.adaptableblotter.com/app-beta.json'
-                  }
-                  else {
-                    location.href = 'https://install.openfin.co/download/?fileName=adaptable_blotter_openfin&config=http://demo.adaptableblotter.com/app-demo.json'
-                  }
-                }
-              </script>
-            </td>
-          </tr>
-           </tbody>
-        </table>
+          <img src={'../../../images/FinsembleDemo.png'} style={{ maxWidth: '70%' }} />
+      
+        <img src={finsembleDemoImage} style={{ maxWidth: '70%' }} />
               */}
       </p>
-      {/*
-    <script>
-      if (isRunningInOpenfin()) {
-        document.getElementById("launcherOpenfin").style.visibility = "collapse"
-      }
-      function isRunningInOpenfin() {
-        return 'fin' in window && 'desktop' in fin;
-      }
-    </script>*/}
     </MainPage>
   );
 };

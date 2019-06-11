@@ -1,7 +1,7 @@
 import React from 'react';
 
 import MainPage from '../../../src/MainPage';
-import opefinDemoImage from '../../../images/OpenFinDemo.png';
+//import opefinDemoImage from '../../../images/OpenFinDemo.png';
 
 export default () => {
   return (
@@ -56,8 +56,13 @@ export default () => {
         </p>
         <p>
           <br />
-          <img src={opefinDemoImage} style={{ maxWidth: '70%' }} />
+
           {/*
+          want to put this image on the page but it doenst seem to let me build if i do that (though it works locally!)
+<img src={opefinDemoImage} style={{ maxWidth: '70%' }} />
+
+
+
         <br /> Click the button to download the installer. You will need to launch the download executable that will
         install
         locally the required components and launch the demo automtically. 
