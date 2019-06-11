@@ -146,12 +146,18 @@ export default () => {
       }
     >
       <GridLayout>
-        <DemoBox href="/partners/finsembledemo" imageName={finsembleDemoImage}>
+        <TempFinsembleDemoBox
+          href="/partners/finsembledemo"
+          imageName={finsembleDemoImage}
+        >
           Finsemble demo
-        </DemoBox>{' '}
-        <DemoBox href="/partners/openfindemo" imageName={openfinDemoImage}>
+        </TempFinsembleDemoBox>{' '}
+        <TempOpenFinDemoBox
+          href="/partners/openfindemo"
+          imageName={openfinDemoImage}
+        >
           OpenFin demo
-        </DemoBox>
+        </TempOpenFinDemoBox>
       </GridLayout>
     </MainPage>
   );
