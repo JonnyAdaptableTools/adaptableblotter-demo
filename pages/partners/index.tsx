@@ -4,8 +4,8 @@ import Link from 'next/link';
 import { ReactNode } from 'react-redux';
 
 import logo from '../../images/AdaptableBlotter.png';
-//import finsembleDemoImage from '../../images/FinsembleDemo.png';
-//import openfinDemoImage from '../../images/OpenFinDemo.png';
+import finsembleDemoImage from '../../images/FinsembleDemo.png';
+import openfinDemoImage from '../../images/OpenFinDemo.png';
 import './index.scss';
 import GridLayout from '../../src/components/GridLayout';
 
@@ -160,18 +160,15 @@ export default () => {
       }
     >
       <GridLayout>
-        <DemoBox
+        <NewDemoBox
           href="/partners/finsembledemo"
-          //  imageName={finsembleDemoImage}
+          imageName={finsembleDemoImage}
         >
           Finsemble demo
-        </DemoBox>{' '}
-        <DemoBox
-          href="/partners/openfindemo"
-          //   imageName={openfinDemoImage}
-        >
+        </NewDemoBox>{' '}
+        <NewDemoBox href="/partners/openfindemo" imageName={openfinDemoImage}>
           OpenFin demo
-        </DemoBox>
+        </NewDemoBox>
       </GridLayout>
     </MainPage>
   );
