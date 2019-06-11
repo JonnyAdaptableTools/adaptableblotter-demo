@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { ReactNode } from 'react-redux';
 
 import logo from '../../images/AdaptableBlotter.png';
-import finsembleDemoImage from '../../images/FinsembleDemo.png';
+import finsembleDemoImage from '../../images/FinsembleDemo2.png';
 import openfinDemoImage from '../../images/OpenFinDemo.png';
 import './index.scss';
 import GridLayout from '../../src/components/GridLayout';
