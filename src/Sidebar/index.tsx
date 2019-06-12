@@ -298,6 +298,9 @@ export default () => {
           <Link href="/partners/openfindemo">
             <a>OpenFin</a>
           </Link>
+          <Link href="/partners/ipushpulldemo">
+            <a>iPushPull</a>
+          </Link>
         </Category>
       </div>
     </div>

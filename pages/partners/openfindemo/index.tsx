@@ -53,7 +53,7 @@ export default () => {
         <p>
           <iframe
             width="840"
-            height="630"
+            height="480"
             src="https://www.youtube.com/embed/6Pf7BDUoe0I"
           ></iframe>
           {/*

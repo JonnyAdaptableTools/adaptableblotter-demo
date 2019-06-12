@@ -5,6 +5,7 @@ import { ReactNode } from 'react-redux';
 
 import finsembleDemoImage from '../../images/finsembledemopage.png';
 import openfinDemoImage from '../../images/openfindemopage.png';
+import ipushpullDemoImage from '../../images/ipushpulldemopage.png';
 import './index.scss';
 import GridLayout from '../../src/components/GridLayout';
 
@@ -68,6 +69,11 @@ export default () => {
             'Live Updates' so that data exported to Excel updates in real time
             as the Blotter ticks or is edited.
           </p>
+          <p>
+            <b>iPushPull</b>: Export Blotter data to Excel (with Live Updates)
+            or Symphony and elsewhere by using the services of our partner
+            iPushPull.
+          </p>
         </div>
       }
     >
@@ -77,6 +83,9 @@ export default () => {
         </DemoBox>{' '}
         <DemoBox href="/partners/openfindemo" imageName={openfinDemoImage}>
           OpenFin demo
+        </DemoBox>
+        <DemoBox href="/partners/ipushpulldemo" imageName={ipushpullDemoImage}>
+          iPushPull demo
         </DemoBox>
       </GridLayout>
     </MainPage>

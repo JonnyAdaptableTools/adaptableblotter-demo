@@ -3,6 +3,6 @@ export default {
     VisibleButtons: ['Calendar'],
   },
   Calendar: {
-    CurrentCalendar: 'france',
+    CurrentCalendar: 'France',
   },
 };
