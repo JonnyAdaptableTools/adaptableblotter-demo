@@ -77,15 +77,25 @@ export default () => {
             Clear state
           </button>
         </div>
+
         <Link href="/">
           <a>Home</a>
         </Link>
-        <Link href="/aggridbasicdemo">
-          <a>Basic</a>
-        </Link>
-        <Link href="/aggridconfigdemo">
-          <a>Advanced</a>
-        </Link>
+
+        <Category
+          title={
+            <Link href="/config">
+              <a>Predefined Config</a>
+            </Link>
+          }
+        >
+          <Link href="/config/aggridnoconfigdemo">
+            <a>No Config</a>
+          </Link>
+          <Link href="/config/aggridpredefinedconfigdemo">
+            <a>With Config</a>
+          </Link>
+        </Category>
 
         <Category
           title={
