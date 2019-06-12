@@ -225,10 +225,18 @@ export default () => {
           <Link href="/gridmanagement/aggridcellsummarydemo">
             <a>Cell Summary</a>
           </Link>
-          <Link href="/gridmanagement/aggridalertdemo">
+        </Category>
+        <Category
+          title={
+            <Link href="/alertsmessages">
+              <a>Alerts and Messages</a>
+            </Link>
+          }
+        >
+          <Link href="/alertsmessages/aggridalertdemo">
             <a>Alert</a>
           </Link>
-          <Link href="/gridmanagement/aggridreminderdemo">
+          <Link href="/alertsmessages/aggridreminderdemo">
             <a>Reminder</a>
           </Link>
         </Category>
