@@ -22,7 +22,7 @@ export default () => {
         .
       </p>
       <p>
-        You need to be an existing iPushPull user and attach your user
+        You need to be an existing iPushPull user and fill in your user
         credentials in the{' '}
         <a
           href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028898751-iPushPull-Options"
