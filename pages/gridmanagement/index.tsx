@@ -56,6 +56,11 @@ export default () => {
               to see summary information about the grid, your licence and the
               Options you have set.
             </li>
+            <li>
+              <b>Calendar:</b> Select which Holiday Calendar you wish the
+              Adaptable Blotter to use when calculating Working Days (in
+              Filters, Queries etc).
+            </li>
           </ul>
           Click on the buttons below to see a demo for our Grid Management
           functions.
@@ -73,6 +78,9 @@ export default () => {
         </DemoBox>
         <DemoBox href="/gridmanagement/aggridgridinfodemo">
           Grid Info demo
+        </DemoBox>
+        <DemoBox href="/gridmanagement/aggridcalendardemo">
+          Calendar demo
         </DemoBox>
       </GridLayout>
     </MainPage>

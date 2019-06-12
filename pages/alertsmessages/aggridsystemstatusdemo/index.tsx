@@ -28,8 +28,14 @@ export default () => {
             ).
           </p>
           <p>
-            You set System Status messages through code using the Adaptable
-            Blotter API. In this example we set an error message as follows:{' '}
+            You set System Status messages through code using the{' '}
+            <a
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028899471-System-Status-API"
+              target="_blank"
+            >
+              Adaptable Blotter API
+            </a>
+            . In this example we set an error message as follows:{' '}
             <i>
               blotter.api.systemStatusApi.setRedSystemStatus('Server about to
               restart');

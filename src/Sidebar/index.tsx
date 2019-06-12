@@ -228,6 +228,9 @@ export default () => {
           <Link href="/gridmanagement/aggridgridinfodemo">
             <a>Grid Info</a>
           </Link>
+          <Link href="/gridmanagement/aggridcalendardemo">
+            <a>Calendar</a>
+          </Link>
         </Category>
         <Category
           title={
