@@ -16,13 +16,15 @@ export default () => {
           </p>
           <p>
             In this example we have set the 'Dashboard', 'ColumnChooser',
-            'Chart', 'SmartEdit', 'Alert' and 'Reminder' buttons to be visible.
+            'Chart', 'SmartEdit', 'Alert' and 'Reminder' buttons to be visible
+            and chosen to hide the <i>About</i> and <i>System Status</i>{' '}
+            buttons.
           </p>
           <p>
             Plus we have set <i>Use Single Colour for All Dashboard Buttons</i>{' '}
             property to false so that we see the more colourful set of toolbars,
-            and chosen to hide the <i>About</i> button and the <i>Columns</i>{' '}
-            and <i>Toolbars</i> dropdowns.
+            and we have opted to hide the <i>Columns</i> and <i>Toolbars</i>{' '}
+            dropdowns.
           </p>
         </div>
       }

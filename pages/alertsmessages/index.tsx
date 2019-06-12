@@ -38,7 +38,17 @@ export default () => {
               <b>Reminder:</b> Set up scheduled notifications so you can be
               reminded of important actions.
             </li>
+            <li>
+              <b>System Status:</b> Have your users be notified automatically
+              when something happens to the System (or Server) that they need to
+              know.
+            </li>
           </ul>
+          <p>
+            {' '}
+            Note: there is also the Audit Log which streams all actions in the
+            Adaptable Blotter to a destination of your choice.
+          </p>
           Click on the buttons below to see a demo for our Alert and Messaging
           functions.
         </div>
@@ -48,6 +58,9 @@ export default () => {
         <DemoBox href="/alertsmessages/aggridalertdemo">Alert demo</DemoBox>
         <DemoBox href="/alertsmessages/aggridreminderdemo">
           Reminder demo
+        </DemoBox>
+        <DemoBox href="/alertsmessages/aggridsystemstatusdemo">
+          System Status demo
         </DemoBox>
       </GridLayout>
     </MainPage>

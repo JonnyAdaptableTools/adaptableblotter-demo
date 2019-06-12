@@ -26,6 +26,10 @@ export default () => {
             via the Column Filter toolbar.
           </p>
           <p>
+            Note: You can show / hide the Quick Filter bar through the Column
+            Menu or by clicking the last button in the Column Filter toolbar.
+          </p>
+          <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360005167931-Advanced-Search"

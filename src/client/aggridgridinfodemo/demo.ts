@@ -1,4 +1,5 @@
 import * as Helper from '../../Helper';
+
 import AdaptableBlotter from 'adaptableblotter/agGrid';
 import 'adaptableblotter/base.css';
 import 'adaptableblotter/themes/light.css';
@@ -30,7 +31,7 @@ export default () => {
   const blotterOptions: IAdaptableBlotterOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    blotterId: 'Reminder Demo',
+    blotterId: 'Grid Info Demo',
     licenceKey: Helper.getdemolicencekey(),
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,

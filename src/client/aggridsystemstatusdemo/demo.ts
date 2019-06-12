@@ -1,4 +1,5 @@
 import * as Helper from '../../Helper';
+
 import AdaptableBlotter from 'adaptableblotter/agGrid';
 import 'adaptableblotter/base.css';
 import 'adaptableblotter/themes/light.css';
@@ -30,14 +31,17 @@ export default () => {
   const blotterOptions: IAdaptableBlotterOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    blotterId: 'Reminder Demo',
+    blotterId: 'System Status Demo',
     licenceKey: Helper.getdemolicencekey(),
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };
 
   const blotterOptionsClone = cloneDeep(blotterOptions);
-  new AdaptableBlotter(blotterOptions);
+  let adaptableblotter = new AdaptableBlotter(blotterOptions);
+  adaptableblotter.api.systemStatusApi.setRedSystemStatus(
+    'Server about to restart'
+  );
 
   return {
     predefinedConfig,

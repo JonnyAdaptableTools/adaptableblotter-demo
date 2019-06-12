@@ -51,6 +51,11 @@ export default () => {
               <b>Cell Summary:</b> See the summarised contents of groups of
               numeric cells using many different mathematical operations.
             </li>
+            <li>
+              <b>Grid Info:</b> Click in the 'info' button in the Home Toolbar
+              to see summary information about the grid, your licence and the
+              Options you have set.
+            </li>
           </ul>
           Click on the buttons below to see a demo for our Grid Management
           functions.
@@ -65,6 +70,9 @@ export default () => {
         <DemoBox href="/gridmanagement/aggridlayoutdemo">Layout demo</DemoBox>
         <DemoBox href="/gridmanagement/aggridcellsummarydemo">
           Cell Summary demo
+        </DemoBox>
+        <DemoBox href="/gridmanagement/aggridgridinfodemo">
+          Grid Info demo
         </DemoBox>
       </GridLayout>
     </MainPage>
