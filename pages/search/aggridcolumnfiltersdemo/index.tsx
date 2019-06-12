@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'Column Filters Demo'}
       description={
         <div>
-          <h4>AdaptableBlotter.JS - Column Filters Demo</h4>
+          <h4>Column Filters Demo</h4>
           <p>
             Each (filterable) column has a filters tab in the Column Menu (the
             second option). Alternatively you can click on the filter icon next

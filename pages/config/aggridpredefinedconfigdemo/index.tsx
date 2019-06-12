@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'AdaptableBlotter.JS Predefined Config Demo'}
       description={
         <div>
-          <h4>AdaptableBlotter.JS - Predefined Config Demo</h4>
+          <h4>Predefined Config Demo</h4>
           <p>
             Typically you will pre-ship your Adaptable Blotter with 'Predefined
             Config' - ie objects that you have created at design time for your

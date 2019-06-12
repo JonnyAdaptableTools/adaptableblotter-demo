@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'Reminder Demo'}
       description={
         <div>
-          <h4>AdaptableBlotter.JS - Reminder Demo</h4>
+          <h4>Reminder Demo</h4>
           <p>
             Create scheduled reminders so you dont forget to do important grid
             actions.

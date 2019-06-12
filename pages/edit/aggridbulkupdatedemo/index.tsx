@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'Bulk Update Demo'}
       description={
         <div>
-          <h4>AdaptableBlotter.JS - Bulk Update Demo</h4>
+          <h4>Bulk Update Demo</h4>
           <p>
             The Bulk Update function allows you to update multiple, contiguous
             cells to hold the same value.

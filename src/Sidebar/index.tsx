@@ -267,6 +267,23 @@ export default () => {
             <a>Visibility</a>
           </Link>
         </Category>
+        <Category
+          title={
+            <Link href="/partners">
+              <a>Partners</a>
+            </Link>
+          }
+        >
+          <Link href="/partners/finsembledemo">
+            <a>Finsemble</a>
+          </Link>
+          <Link href="/partners/openfindemo">
+            <a>OpenFin</a>
+          </Link>
+          <Link href="/partners/ipushpulldemo">
+            <a>iPushPull</a>
+          </Link>
+        </Category>
 
         <Category
           title={
@@ -285,21 +302,22 @@ export default () => {
             <a>Grouping</a>
           </Link>
         </Category>
+
         <Category
           title={
-            <Link href="/partners">
-              <a>Partners</a>
+            <Link href="/queryoptions">
+              <a>Query Options</a>
             </Link>
           }
         >
-          <Link href="/partners/finsembledemo">
-            <a>Finsemble</a>
+          <Link href="/queryoptions/aggridserverlookupsdemo">
+            <a>Server Lookups</a>
           </Link>
-          <Link href="/partners/openfindemo">
-            <a>OpenFin</a>
+          <Link href="/queryoptions/aggridignorecasequeriesdemo">
+            <a>Ignore Case</a>
           </Link>
-          <Link href="/partners/ipushpulldemo">
-            <a>iPushPull</a>
+          <Link href="/queryoptions/aggridmaxitemsqueriesdemo">
+            <a>Max Items Displayed</a>
           </Link>
         </Category>
       </div>

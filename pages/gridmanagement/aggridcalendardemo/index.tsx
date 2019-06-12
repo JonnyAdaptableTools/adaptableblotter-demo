@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'Calendar Demo'}
       description={
         <div>
-          <h4>AdaptableBlotter.JS - Calendar Demo</h4>
+          <h4>Calendar Demo</h4>
           <p>
             Some functionality in the Adaptable Blotter (e.g. Filters or
             Queries) requires knowledge of the user's when calculating Next or

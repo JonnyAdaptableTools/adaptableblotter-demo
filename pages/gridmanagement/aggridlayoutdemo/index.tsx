@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'Layout Demo'}
       description={
         <div>
-          <h4>AdaptableBlotter.JS - Layouts (Views) Demo</h4>
+          <h4>Layouts (Views) Demo</h4>
           <p>
             Use Layouts to manage sets of column visibility, order, sorting and
             grouping.

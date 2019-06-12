@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'Grid Info Demo'}
       description={
         <div>
-          <h4>AdaptableBlotter.JS - Grid Info Demo</h4>
+          <h4>Grid Info Demo</h4>
           <p>
             The Grid Info button (the button in the Home Toolbar with the info
             sign) provides at a glace summary information about your instance of

@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'AdaptableBlotter.JS ag-Grid Entitlements Demo'}
       description={
         <div>
-          <h4>AdaptableBlotter.JS - Entitlements Demo</h4>
+          <h4>Entitlements Demo</h4>
           <p>
             As well as allowing you create objects for users to have access to
             when the system starts for the first time, Predefined Config also

@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'AdaptableBlotter.JS No Config Demo'}
       description={
         <div>
-          <h4>AdaptableBlotter.JS - No Config Demo</h4>
+          <h4>No Config Demo</h4>
           <p>
             The Adaptable Blotter offers more than 30 functions to allow you to
             search, filter, edit, audit, export and style your data in

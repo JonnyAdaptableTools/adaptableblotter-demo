@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'Cell Summary Demo'}
       description={
         <div>
-          <h4>AdaptableBlotter.JS - Cell Summary Demo</h4>
+          <h4>Cell Summary Demo</h4>
           <p>
             Use Cell Summary to see summary information about a group of
             selected cells using a variety of mathematical operations.

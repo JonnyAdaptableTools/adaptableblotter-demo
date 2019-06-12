@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'Reminder Demo'}
       description={
         <div>
-          <h4>AdaptableBlotter.JS - System Status Demo</h4>
+          <h4>System Status Demo</h4>
           <p>
             The System Status button in the Home Toolbar is provided for you to
             show messages to your Users at run-time if something important has
