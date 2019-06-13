@@ -29,7 +29,7 @@ export default () => {
   const blotterOptions: IAdaptableBlotterOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    blotterId: 'Basic Demo',
+    blotterId: 'No Config Demo',
     licenceKey: Helper.getdemolicencekey(),
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,

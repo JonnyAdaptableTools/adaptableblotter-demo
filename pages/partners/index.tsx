@@ -3,26 +3,13 @@ import MainPage from '../../src/MainPage';
 import Link from 'next/link';
 import { ReactNode } from 'react-redux';
 
-import logo from '../../images/AdaptableBlotter.png';
-//import finsembleDemoImage from '../../images/FinsembleDemo.png';
-//import openfinDemoImage from '../../images/OpenFinDemo.png';
+import finsembleDemoImage from '../../images/finsembledemopage.png';
+import openfinDemoImage from '../../images/openfindemopage.png';
+import ipushpullDemoImage from '../../images/ipushpulldemopage.png';
 import './index.scss';
 import GridLayout from '../../src/components/GridLayout';
 
-const DemoBox = ({ href, children }: { href: string; children: ReactNode }) => {
-  return (
-    <Link href={href}>
-      <a>
-        <div className="demo-box">
-          <img src={logo} style={{ maxWidth: '80%' }} />
-          <div>{children}</div>
-        </div>
-      </a>
-    </Link>
-  );
-};
-
-const NewDemoBox = ({
+const DemoBox = ({
   href,
   children,
   imageName,
@@ -44,80 +31,6 @@ const NewDemoBox = ({
           >
             <img
               src={imageName}
-              style={{
-                width: '80%',
-                height: '50%',
-              }}
-            />
-          </div>
-          <br />
-          <div style={{ textAlign: 'center' }}>
-            <h4> {children}</h4>
-          </div>
-        </div>
-      </a>
-    </Link>
-  );
-};
-const TempFinsembleDemoBox = ({
-  href,
-  children,
-  imageName,
-}: {
-  href: string;
-  children: ReactNode;
-  imageName: string;
-}) => {
-  return (
-    <Link href={href}>
-      <a>
-        <div className="demo-box">
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <img
-              //  src={finsembleDemoImage}
-              style={{
-                width: '80%',
-                height: '50%',
-              }}
-            />
-          </div>
-          <br />
-          <div style={{ textAlign: 'center' }}>
-            <h4> {children}</h4>
-          </div>
-        </div>
-      </a>
-    </Link>
-  );
-};
-const TempOpenFinDemoBox = ({
-  href,
-  children,
-  imageName,
-}: {
-  href: string;
-  children: ReactNode;
-  imageName: string;
-}) => {
-  return (
-    <Link href={href}>
-      <a>
-        <div className="demo-box">
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <img
-              //  src={openfinDemoImage}
               style={{
                 width: '80%',
                 height: '50%',
@@ -156,21 +69,23 @@ export default () => {
             'Live Updates' so that data exported to Excel updates in real time
             as the Blotter ticks or is edited.
           </p>
+          <p>
+            <b>iPushPull</b>: Export Blotter data to Excel (with Live Updates)
+            or Symphony and elsewhere by using the services of our partner
+            iPushPull.
+          </p>
         </div>
       }
     >
       <GridLayout>
-        <DemoBox
-          href="/partners/finsembledemo"
-          //  imageName={finsembleDemoImage}
-        >
+        <DemoBox href="/partners/finsembledemo" imageName={finsembleDemoImage}>
           Finsemble demo
         </DemoBox>{' '}
-        <DemoBox
-          href="/partners/openfindemo"
-          //   imageName={openfinDemoImage}
-        >
+        <DemoBox href="/partners/openfindemo" imageName={openfinDemoImage}>
           OpenFin demo
+        </DemoBox>
+        <DemoBox href="/partners/ipushpulldemo" imageName={ipushpullDemoImage}>
+          iPushPull demo
         </DemoBox>
       </GridLayout>
     </MainPage>

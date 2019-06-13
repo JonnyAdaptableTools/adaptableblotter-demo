@@ -1,5 +1,4 @@
 import * as Helper from '../../Helper';
-
 import AdaptableBlotter from 'adaptableblotter/agGrid';
 import 'adaptableblotter/base.css';
 import 'adaptableblotter/themes/light.css';
@@ -26,7 +25,6 @@ export default () => {
   const columndefs = helperAgGrid.getFlashingCellColumnSchema();
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
-  helperAgGrid.startTickingDataagGrid(gridOptions, true);
 
   const blotterOptions: IAdaptableBlotterOptions = {
     primaryKey: 'OrderId',

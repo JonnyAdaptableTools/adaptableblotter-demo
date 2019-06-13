@@ -1,14 +1,14 @@
 import React from 'react';
-import DynamicDemoPage from '../../src/DynamicDemoPage';
+import DynamicDemoPage from '../../../src/DynamicDemoPage';
 
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../src/client/aggridconfigdemo')}
-      pageTitle={'AdaptableBlotter.JS Advanced Demo'}
+      demo={import('../../../src/client/aggridpredefinedconfigdemo')}
+      pageTitle={'AdaptableBlotter.JS Predefined Config Demo'}
       description={
         <div>
-          <h4>AdaptableBlotter.JS - Advanced Demo</h4>
+          <h4>Predefined Config Demo</h4>
           <p>
             Typically you will pre-ship your Adaptable Blotter with 'Predefined
             Config' - ie objects that you have created at design time for your

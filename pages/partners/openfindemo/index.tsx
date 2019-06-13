@@ -1,7 +1,6 @@
 import React from 'react';
 
 import MainPage from '../../../src/MainPage';
-//import opefinDemoImage from '../../../images/OpenFinDemo.png';
 
 export default () => {
   return (
@@ -13,7 +12,7 @@ export default () => {
         <p>
           The Adaptable Blotter runs in the Broswer or Electron with all
           functionality available for users (depending on their{' '}
-          <a href="../admin/aggridentitlementsdemo/">Entitlements</a> ).
+          <a href="../admin/aggridentitlementsdemo/">Entitlements</a>).
         </p>
         <p>
           However if you are running the Adaptable Blotter inside the popular{' '}
@@ -30,14 +29,7 @@ export default () => {
           reflected in Excel also.
         </p>
         <p>
-          See this{' '}
-          <a href="https://youtu.be/6Pf7BDUoe0I" target="_blank">
-            video
-          </a>{' '}
-          that shows Live Updates in action.
-        </p>
-        <p>
-          Or try it for yourself:{' '}
+          Try it for yourself:{' '}
           <b>
             <a
               href="https://install.openfin.co/download/?fileName=adaptable_blotter_openfin&config=http://demo.adaptableblotter.com/app-demo.json"
@@ -50,18 +42,22 @@ export default () => {
           data to Excel.{' '}
         </p>
         <p>
-          The link will download the OpenFin installer - click the exe to run
+          (The link will download the OpenFin installer - click the exe to run
           this demo page inside OpenFin. It will also create a shorcut in your
-          windows menu under 'Adaptable Tools'.
+          windows menu under 'Adaptable Tools').
         </p>
         <p>
-          <br />
-
+          Alternatively watch the video below to see how OpenFin and the
+          Adaptable Blotter work together.
+        </p>
+        <p>
+          <iframe
+            width="840"
+            height="480"
+            src="https://www.youtube.com/embed/6Pf7BDUoe0I"
+          ></iframe>
           {/*
-          want to put this image on the page but it doenst seem to let me build if i do that (though it works locally!)
-<img src={opefinDemoImage} style={{ maxWidth: '70%' }} />
-
-
+         
 
         <br /> Click the button to download the installer. You will need to launch the download executable that will
         install

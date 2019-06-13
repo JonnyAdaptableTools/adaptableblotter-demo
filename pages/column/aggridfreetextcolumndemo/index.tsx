@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'Free Text Column Demo'}
       description={
         <div>
-          <h4>AdaptableBlotter.JS - Free Text Column Demo</h4>
+          <h4>Free Text Column Demo</h4>
           <p>
             Free Text columns are similar to calculated columns in that they are
             not part of the Grid's datasource but are created by you and stored

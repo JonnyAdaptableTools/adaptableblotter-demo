@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'Alert Demo'}
       description={
         <div>
-          <h4>AdaptableBlotter.JS - Alerts Demo</h4>
+          <h4>Alerts Demo</h4>
           <p>Create alerts when data changes in way you need to know about.</p>
           <p>
             You can create alerts to appear in response to a wide variety of

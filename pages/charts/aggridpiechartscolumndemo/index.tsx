@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'Pie Charts Column Demo'}
       description={
         <div>
-          <h4>AdaptableBlotter.JS - Pie Charts (Column) Demo</h4>
+          <h4>Pie Charts (Column) Demo</h4>
           <p>
             You can see a pie (or doughnut) chart view of a single column by
             clicking 'See as Pie Chart' in the Column Header Menu.

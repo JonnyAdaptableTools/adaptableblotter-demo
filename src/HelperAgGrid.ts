@@ -264,6 +264,19 @@ export class HelperAgGrid {
     return schema;
   }
 
+  public getShortNorthwindColumnSchema(): any[] {
+    var schema = [];
+    schema.push(this.getOrderColumnDef());
+    schema.push(this.getCustRefDef());
+    schema.push(this.getContactDef());
+    schema.push(this.getEmployeeDef());
+    schema.push(this.getCompanyDef());
+    schema.push(this.getOrderDateDef());
+    schema.push(this.getInvoicedDef());
+    schema.push(this.getOrderCostDef());
+    return schema;
+  }
+
   public getConditionalstyleNorthwindColumnSchema(): any[] {
     var schema = [];
     schema.push(this.getOrderColumnDef());

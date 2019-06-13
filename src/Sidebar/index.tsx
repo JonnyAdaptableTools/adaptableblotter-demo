@@ -77,15 +77,25 @@ export default () => {
             Clear state
           </button>
         </div>
+
         <Link href="/">
           <a>Home</a>
         </Link>
-        <Link href="/aggridbasicdemo">
-          <a>Basic</a>
-        </Link>
-        <Link href="/aggridconfigdemo">
-          <a>Advanced</a>
-        </Link>
+
+        <Category
+          title={
+            <Link href="/config">
+              <a>Predefined Config</a>
+            </Link>
+          }
+        >
+          <Link href="/config/aggridnoconfigdemo">
+            <a>No Config</a>
+          </Link>
+          <Link href="/config/aggridpredefinedconfigdemo">
+            <a>With Config</a>
+          </Link>
+        </Category>
 
         <Category
           title={
@@ -215,11 +225,28 @@ export default () => {
           <Link href="/gridmanagement/aggridcellsummarydemo">
             <a>Cell Summary</a>
           </Link>
-          <Link href="/gridmanagement/aggridalertdemo">
+          <Link href="/gridmanagement/aggridgridinfodemo">
+            <a>Grid Info</a>
+          </Link>
+          <Link href="/gridmanagement/aggridcalendardemo">
+            <a>Calendar</a>
+          </Link>
+        </Category>
+        <Category
+          title={
+            <Link href="/alertsmessages">
+              <a>Alerts and Messages</a>
+            </Link>
+          }
+        >
+          <Link href="/alertsmessages/aggridalertdemo">
             <a>Alert</a>
           </Link>
-          <Link href="/gridmanagement/aggridreminderdemo">
+          <Link href="/alertsmessages/aggridreminderdemo">
             <a>Reminder</a>
+          </Link>
+          <Link href="/alertsmessages/aggridsystemstatusdemo">
+            <a>System Status</a>
           </Link>
         </Category>
 
@@ -240,6 +267,23 @@ export default () => {
             <a>Visibility</a>
           </Link>
         </Category>
+        <Category
+          title={
+            <Link href="/partners">
+              <a>Partners</a>
+            </Link>
+          }
+        >
+          <Link href="/partners/finsembledemo">
+            <a>Finsemble</a>
+          </Link>
+          <Link href="/partners/openfindemo">
+            <a>OpenFin</a>
+          </Link>
+          <Link href="/partners/ipushpulldemo">
+            <a>iPushPull</a>
+          </Link>
+        </Category>
 
         <Category
           title={
@@ -258,18 +302,22 @@ export default () => {
             <a>Grouping</a>
           </Link>
         </Category>
+
         <Category
           title={
-            <Link href="/partners">
-              <a>Partners</a>
+            <Link href="/queryoptions">
+              <a>Query Options</a>
             </Link>
           }
         >
-          <Link href="/partners/finsembledemo">
-            <a>Finsemble</a>
+          <Link href="/queryoptions/aggridserverlookupsdemo">
+            <a>Server Lookups</a>
           </Link>
-          <Link href="/partners/openfindemo">
-            <a>OpenFin</a>
+          <Link href="/queryoptions/aggridignorecasequeriesdemo">
+            <a>Ignore Case</a>
+          </Link>
+          <Link href="/queryoptions/aggridmaxitemsqueriesdemo">
+            <a>Max Items Displayed</a>
           </Link>
         </Category>
       </div>

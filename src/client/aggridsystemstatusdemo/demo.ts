@@ -23,21 +23,24 @@ export default () => {
   let rowData = JSON.parse(JSON.stringify(json));
   Helper.MakeAllRecordsColumnsDateProperDates(rowData);
 
-  const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
+  const columndefs = helperAgGrid.getFlashingCellColumnSchema();
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
 
   const blotterOptions: IAdaptableBlotterOptions = {
     primaryKey: 'OrderId',
-    vendorGrid: gridOptions,
     userName: 'Demo User',
-    blotterId: 'Config Demo',
+    blotterId: 'System Status Demo',
     licenceKey: Helper.getdemolicencekey(),
+    vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };
 
   const blotterOptionsClone = cloneDeep(blotterOptions);
-  new AdaptableBlotter(blotterOptions);
+  let adaptableblotter = new AdaptableBlotter(blotterOptions);
+  adaptableblotter.api.systemStatusApi.setRedSystemStatus(
+    'Server about to restart'
+  );
 
   return {
     predefinedConfig,

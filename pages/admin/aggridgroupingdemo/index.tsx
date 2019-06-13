@@ -9,7 +9,7 @@ export default () => {
       description={
         <div>
           <h4>
-            <h4>AdaptableBlotter.JS - Grouping Demo</h4>
+            <h4>Grouping Demo</h4>
           </h4>
           <p>
             The following properties have been set for the columns in the

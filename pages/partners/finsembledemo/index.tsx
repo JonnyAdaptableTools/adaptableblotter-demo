@@ -1,7 +1,6 @@
 import React from 'react';
 
 import MainPage from '../../../src/MainPage';
-//import finsembleDemoImage from '../../../images/FinsembleDemo.png';
 
 export default () => {
   return (
@@ -24,19 +23,23 @@ export default () => {
         experience.
       </p>
       <p>
-        We have a demo coming soon but in the meantime see this{' '}
-        <a href="https://www.youtube.com/watch?v=amhRqx1FFsc" target="_blank">
-          video
-        </a>{' '}
-        that shows 3 Adaptable Blotters running inside Finsemble.
+        We have a demo coming soon but in the meantime here are a couple of
+        videos that show how Finsemble enables multiple Adaptable Blotters to
+        share state, data and events. .
       </p>
       <p>
-        <br />
-        {/*
-          <img src={'../../../images/FinsembleDemo.png'} style={{ maxWidth: '70%' }} />
-      
-        <img src={finsembleDemoImage} style={{ maxWidth: '70%' }} />
-              */}
+        <iframe
+          width="840"
+          height="630"
+          src="https://www.youtube.com/embed/Xz4IUPeYW8c"
+        ></iframe>
+      </p>
+      <p>
+        <iframe
+          width="840"
+          height="630"
+          src="https://www.youtube.com/embed/amhRqx1FFsc"
+        ></iframe>
       </p>
     </MainPage>
   );

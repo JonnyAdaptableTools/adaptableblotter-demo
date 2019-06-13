@@ -16,7 +16,7 @@ export default () => {
       pageTitle={'Adaptable Blotter Hypergrid Charting Demo'}
       description={
         <div>
-          <h4>AdaptableBlotter.JS - Charting Demo (Hypergrid)</h4>
+          <h4>Charting Demo (Hypergrid)</h4>
           <p>
             One Category Chart showing Employee Sales and one Pie Chart showing
             Employee Items Sold.

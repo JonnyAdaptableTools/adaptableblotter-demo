@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'User Filters Demo'}
       description={
         <div>
-          <h4>AdaptableBlotter.JS - User Filters Demo</h4>
+          <h4>User Filters Demo</h4>
           <p>
             User Filters are, essentially, saved and named Column Filters that
             you can re-use throughout the application.

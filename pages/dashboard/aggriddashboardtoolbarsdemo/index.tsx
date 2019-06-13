@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'AdaptableBlotter.JS ag-Grid Dashboard Toolbars Demo'}
       description={
         <div>
-          <h4>AdaptableBlotter.JS - Dashboard Toolbars Demo</h4>
+          <h4>Dashboard Toolbars Demo</h4>
           <p>
             The Dashboard ships with 13 toolbars. They each provide quick access
             to a given Function together with dropdowns and buttons as required.

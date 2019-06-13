@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'Column Filters Demo'}
       description={
         <div>
-          <h4>AdaptableBlotter.JS - Column Filters Demo</h4>
+          <h4>Column Filters Demo</h4>
           <p>
             Each (filterable) column has a filters tab in the Column Menu (the
             second option). Alternatively you can click on the filter icon next
@@ -24,6 +24,10 @@ export default () => {
             selected), Order Date ('This Year' filter) and Invoiced ('Between
             10-300' range). Edit / clear filters in the individual columns or
             via the Column Filter toolbar.
+          </p>
+          <p>
+            Note: You can show / hide the Quick Filter bar through the Column
+            Menu or by clicking the last button in the Column Filter toolbar.
           </p>
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}

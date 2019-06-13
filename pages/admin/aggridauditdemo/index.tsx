@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'Audit Log Demo'}
       description={
         <div>
-          <h4>AdaptableBlotter.JS - Audit Log Demo</h4>
+          <h4>Audit Log Demo</h4>
           <p>
             Every grid event, mouse click, user action, cell edit etc. is
             auditable by the Adaptable Blotter and available for you to listen

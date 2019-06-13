@@ -1,14 +1,14 @@
 import React from 'react';
-import DynamicDemoPage from '../../src/DynamicDemoPage';
+import DynamicDemoPage from '../../../src/DynamicDemoPage';
 
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../src/client/aggridbasicdemo')}
-      pageTitle={'AdaptableBlotter.JS basic ag-Grid Demo'}
+      demo={import('../../../src/client/aggridnoconfigdemo')}
+      pageTitle={'AdaptableBlotter.JS No Config Demo'}
       description={
         <div>
-          <h4>AdaptableBlotter.JS - Basic Demo</h4>
+          <h4>No Config Demo</h4>
           <p>
             The Adaptable Blotter offers more than 30 functions to allow you to
             search, filter, edit, audit, export and style your data in
@@ -26,10 +26,10 @@ export default () => {
             functionality that they require.
           </p>
           <p>
-            This basic example has no Predefined Configuration (or Entitlements)
-            and no overriden Blotter objects. So all the functionality (e.g. 30
-            functions, Column Header, Quick Filter etc.) is available in a
-            default way.
+            This basic example has <b>no</b> Predefined Configuration (or
+            Entitlements) and no overriden Blotter objects. So all the
+            functionality (e.g. 30 functions, Column Header, Quick Filter etc.)
+            is available in a default way.
           </p>
         </div>
       }

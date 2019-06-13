@@ -52,15 +52,17 @@ export default () => {
               numeric cells using many different mathematical operations.
             </li>
             <li>
-              <b>Alert:</b> Be notified as soon as data changes that you need to
-              know about.
+              <b>Grid Info:</b> Click in the 'info' button in the Home Toolbar
+              to see summary information about the grid, your licence and the
+              Options you have set.
             </li>
             <li>
-              <b>Reminder:</b> Set up scheduled notifications so you can be
-              reminded of important actions.
+              <b>Calendar:</b> Select which Holiday Calendar you wish the
+              Adaptable Blotter to use when calculating Working Days (in
+              Filters, Queries etc).
             </li>
           </ul>
-          Click on the buttons below to see a demos for our Grid Management
+          Click on the buttons below to see a demo for our Grid Management
           functions.
         </div>
       }
@@ -74,9 +76,11 @@ export default () => {
         <DemoBox href="/gridmanagement/aggridcellsummarydemo">
           Cell Summary demo
         </DemoBox>
-        <DemoBox href="/gridmanagement/aggridalertdemo">Alert demo</DemoBox>
-        <DemoBox href="/gridmanagement/aggridreminderdemo">
-          Reminder demo
+        <DemoBox href="/gridmanagement/aggridgridinfodemo">
+          Grid Info demo
+        </DemoBox>
+        <DemoBox href="/gridmanagement/aggridcalendardemo">
+          Calendar demo
         </DemoBox>
       </GridLayout>
     </MainPage>

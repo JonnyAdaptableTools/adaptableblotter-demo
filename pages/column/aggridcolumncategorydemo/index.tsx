@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'Column Category Demo'}
       description={
         <div>
-          <h4>AdaptableBlotter.JS - Column Category Demo</h4>
+          <h4>Column Category Demo</h4>
           <p>
             Column Categories are used when you have a very large number of
             columns that you want to manipulate more easily.
