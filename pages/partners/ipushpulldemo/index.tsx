@@ -38,7 +38,7 @@ export default () => {
         you will be able to export to iPushPull.
       </p>
       <p>
-        The video below shows how to export to / from iPushPull using the
+        The videos below show how to export to / from iPushPull using the
         Adaptable Blotter.
       </p>
       <p>
@@ -46,6 +46,12 @@ export default () => {
           width="840"
           height="480"
           src="https://www.youtube.com/embed/_YK4T4xvnTU"
+        ></iframe>
+        <br />
+        <iframe
+          width="840"
+          height="480"
+          src="https://www.youtube.com/embed/HUm9dzdX9dE"
         ></iframe>
       </p>
     </MainPage>
