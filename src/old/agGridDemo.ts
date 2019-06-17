@@ -4,7 +4,7 @@ import { Grid } from 'ag-grid-community/dist/lib/grid';
 import { GridOptions } from 'ag-grid-community/dist/lib/entities/gridOptions';
 import {
   IAdaptableBlotter,
-  IAdaptableBlotterOptions,
+  AdaptableBlotterOptions,
 } from 'adaptableblotter/types';
 
 export class agGridDemo {

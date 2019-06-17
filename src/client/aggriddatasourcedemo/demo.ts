@@ -11,7 +11,7 @@ import { cloneDeep } from 'lodash';
 import '../../../DemoPage/aggriddemo.css';
 
 import {
-  IAdaptableBlotterOptions,
+  AdaptableBlotterOptions,
   ISearchChangedEventArgs,
 } from 'adaptableblotter/types';
 

@@ -17,7 +17,7 @@ import '../../../DemoPage/hypergriddemo.css';
 
 import {
   IAdaptableBlotter,
-  IAdaptableBlotterOptions,
+  AdaptableBlotterOptions,
 } from 'adaptableblotter/types';
 
 import json from '../../../DataSets/Json/NorthwindOrders.json';

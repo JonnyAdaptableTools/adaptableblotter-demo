@@ -68,7 +68,7 @@ export default () => {
             href="https://adaptabletools.zendesk.com/hc/en-us/categories/360001777412-Blotter-Options"
             target="_blank"
           >
-            IAdaptableBlotterOptions
+            AdaptableBlotterOptions
           </a>{' '}
           object.
           <br />

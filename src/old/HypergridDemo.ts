@@ -3,7 +3,7 @@ import { AvailableDatasetConfigs } from './DatasetConfigsHypergrid';
 import * as Helper from '../Helper';
 import {
   IAdaptableBlotter,
-  IAdaptableBlotterOptions,
+  AdaptableBlotterOptions,
 } from 'adaptableblotter/types';
 
 export class HypergridDemo {
