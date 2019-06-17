@@ -189,7 +189,7 @@ export class HelperAgGrid {
     pk: string,
     blotterId: string,
     config: any
-  ): IAdaptableBlotterOptions {
+  ): AdaptableBlotterOptions {
     let blotterOptions: AdaptableBlotterOptions = {
       primaryKey: pk,
       vendorGrid: gridOptions,
@@ -217,7 +217,7 @@ export class HelperAgGrid {
     config: any,
     gridName: string,
     abName: string
-  ): IAdaptableBlotterOptions {
+  ): AdaptableBlotterOptions {
     let blotterOptions: AdaptableBlotterOptions = {
       primaryKey: pk,
       vendorGrid: gridOptions,

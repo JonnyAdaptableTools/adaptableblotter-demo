@@ -4,7 +4,7 @@ import { GridOptions } from 'ag-grid-community/dist/lib/entities/gridOptions';
 import * as HelperAgGrid from '../HelperAgGrid';
 import {
   IAdaptableBlotter,
-  IAdaptableBlotterOptions,
+  AdaptableBlotterOptions,
 } from 'adaptableblotter/types';
 
 export class agGridMultipleGridDemo {
@@ -25,7 +25,7 @@ export class agGridMultipleGridDemo {
         let vendorGridName1: string = 'grid1';
         let eGridDiv1 = document.getElementById(vendorGridName1);
         let grid1 = new Grid(eGridDiv1, gridOptions1);
-        let blotterOptions1: IAdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptionsWithDivNames(
+        let blotterOptions1: AdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptionsWithDivNames(
           gridOptions1,
           'OrderId',
           'Multiple 1',
@@ -43,7 +43,7 @@ export class agGridMultipleGridDemo {
         let vendorGridName2: string = 'grid2';
         let eGridDiv2 = document.getElementById(vendorGridName2);
         let grid2 = new Grid(eGridDiv2, gridOptions2);
-        let blotterOptions2: IAdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptionsWithDivNames(
+        let blotterOptions2: AdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptionsWithDivNames(
           gridOptions2,
           'OrderId',
           'Multiple 2',

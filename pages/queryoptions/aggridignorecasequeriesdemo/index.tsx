@@ -19,7 +19,7 @@ export default () => {
             the <b>ignoreCaseInQueries</b> property of{' '}
             <a href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028584632-Query-Options">
               Query Options
-            </a>
+            </a>{' '}
             to be <i>false</i> (the default if not set is <i>true</i>).
           </p>
           <p>
