@@ -1,3 +1,6 @@
+import { PredefinedConfig } from 'adaptableblotter/types';
+import { PieChartDefinition } from 'adaptableblotter/App_Scripts/PredefinedConfig/RunTimeState/ChartState';
+
 export default {
   Dashboard: {
     VisibleToolbars: ['SmartEdit', 'Export', 'Chart', 'Theme'],
@@ -82,4 +85,4 @@ export default {
       },
     ],
   },
-};
+} as PredefinedConfig;

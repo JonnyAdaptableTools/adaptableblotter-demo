@@ -24,7 +24,7 @@ export class agGridWorldStatsChartingDemo {
         var eGridDiv = document.getElementById('grid');
         let grid = new Grid(eGridDiv, gridOptions);
         ///   let configUrl = 'src/configs/worldstatscharts.json';
-        let blotterOptions: IAdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptions(
+        let blotterOptions: AdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptions(
           gridOptions,
           'Country',
           'World Stats Charting Demo',

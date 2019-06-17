@@ -1,3 +1,5 @@
+import { PredefinedConfig } from 'adaptableblotter/types';
+
 export default {
   AdvancedSearch: {
     AdvancedSearches: [
@@ -18,4 +20,4 @@ export default {
     ],
     CurrentAdvancedSearch: 'Top Employees',
   },
-};
+} as PredefinedConfig;

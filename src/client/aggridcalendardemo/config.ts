@@ -1,3 +1,5 @@
+import { PredefinedConfig } from 'adaptableblotter/types';
+
 export default {
   Dashboard: {
     VisibleButtons: ['Calendar'],
@@ -5,4 +7,4 @@ export default {
   Calendar: {
     CurrentCalendar: 'France',
   },
-};
+} as PredefinedConfig;

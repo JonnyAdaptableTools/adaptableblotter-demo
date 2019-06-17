@@ -1,3 +1,5 @@
+import { PredefinedConfig } from 'adaptableblotter/types';
+
 export default {
   Shortcut: {
     Shortcuts: [
@@ -20,4 +22,4 @@ export default {
   Dashboard: {
     VisibleButtons: ['Shortcut'],
   },
-};
+} as PredefinedConfig;

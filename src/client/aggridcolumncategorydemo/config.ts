@@ -1,3 +1,5 @@
+import { PredefinedConfig } from 'adaptableblotter/types';
+
 export default {
   Dashboard: {
     VisibleButtons: ['ColumnChooser', 'ColumnCategory'],
@@ -33,8 +35,7 @@ export default {
         ],
 
         Name: 'Orders',
-        VendorGridInfo: null,
       },
     ],
   },
-};
+} as PredefinedConfig;

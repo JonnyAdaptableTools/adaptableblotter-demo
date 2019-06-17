@@ -30,7 +30,7 @@ export default () => {
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
 
-  const blotterOptions: IAdaptableBlotterOptions = {
+  const blotterOptions: AdaptableBlotterOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     blotterId: 'Data Source Demo',

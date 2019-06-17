@@ -22,7 +22,7 @@ export class agGridThemingDemo {
         let grid = new Grid(eGridDiv, gridOptions);
         // HelperAgGrid.startTickingDataagGrid(gridOptions);
         let configUrl = 'src/configs/themeconfig.json';
-        let blotterOptions: IAdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptions(
+        let blotterOptions: AdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptions(
           gridOptions,
           'OrderId',
           'Theming Demo',

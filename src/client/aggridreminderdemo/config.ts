@@ -1,3 +1,5 @@
+import { PredefinedConfig } from 'adaptableblotter/types';
+
 export default {
   Dashboard: {
     VisibleButtons: ['Reminder'],
@@ -15,9 +17,8 @@ export default {
           DaysOfWeek: [1, 2, 3, 4, 5],
           Hour: 17,
           Minute: 30,
-          OneOffDate: null,
         },
       },
     ],
   },
-};
+} as PredefinedConfig;

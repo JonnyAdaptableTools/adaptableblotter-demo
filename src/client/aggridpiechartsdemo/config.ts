@@ -1,3 +1,5 @@
+import { PredefinedConfig } from 'adaptableblotter/types';
+
 export default {
   Dashboard: {
     VisibleToolbars: ['Chart'],
@@ -17,7 +19,6 @@ export default {
         SecondaryColumnId: 'Population',
         SecondaryColumnOperation: 'Sum',
         VisibleRowsOnly: true,
-        ChartProperties: {},
       },
       {
         ChartType: 'PieChart',
@@ -33,4 +34,4 @@ export default {
       },
     ],
   },
-};
+} as PredefinedConfig;

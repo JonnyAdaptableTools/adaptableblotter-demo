@@ -1,3 +1,5 @@
+import { PredefinedConfig } from 'adaptableblotter/types';
+
 export default {
   Dashboard: {
     VisibleButtons: ['CellValidation'],
@@ -70,4 +72,4 @@ export default {
       },
     ],
   },
-};
+} as PredefinedConfig;

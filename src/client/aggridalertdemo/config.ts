@@ -1,3 +1,5 @@
+import { PredefinedConfig } from 'adaptableblotter/types';
+
 export default {
   Dashboard: {
     VisibleToolbars: ['Alert'],
@@ -41,4 +43,4 @@ export default {
       },
     ],
   },
-};
+} as PredefinedConfig;

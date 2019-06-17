@@ -9,7 +9,7 @@ import 'ag-grid-community/dist/styles/ag-theme-balham.css';
 import 'ag-grid-community/dist/styles/ag-theme-balham-dark.css';
 import { cloneDeep } from 'lodash';
 import '../../../DemoPage/aggriddemo.css';
-import { IAdaptableBlotterOptions } from 'adaptableblotter/types';
+import { AdaptableBlotterOptions } from 'adaptableblotter/types';
 import json from '../../../DataSets/Json/worldstats.json';
 import { HelperAgGrid } from '../../HelperAgGrid';
 import predefinedConfig from './config';
@@ -25,7 +25,7 @@ export default () => {
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
 
-  const blotterOptions: IAdaptableBlotterOptions = {
+  const blotterOptions: AdaptableBlotterOptions = {
     primaryKey: 'Country',
     userName: 'Demo User',
     blotterId: 'Category Charts Demo',

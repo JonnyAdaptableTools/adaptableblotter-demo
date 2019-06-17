@@ -1,3 +1,5 @@
+import { PredefinedConfig } from 'adaptableblotter/types';
+
 export default {
   ColumnFilter: {
     ColumnFilters: [
@@ -58,4 +60,4 @@ export default {
   Dashboard: {
     VisibleToolbars: ['ColumnFilter'],
   },
-};
+} as PredefinedConfig;

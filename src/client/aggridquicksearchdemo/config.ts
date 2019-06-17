@@ -1,3 +1,5 @@
+import { PredefinedConfig } from 'adaptableblotter/types';
+
 export default {
   QuickSearch: {
     QuickSearchText: 'g*',
@@ -7,4 +9,4 @@ export default {
       ForeColor: '#8b0000',
     },
   },
-};
+} as PredefinedConfig;

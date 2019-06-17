@@ -1,3 +1,5 @@
+import { PredefinedConfig } from 'adaptableblotter/types';
+
 export default {
   Dashboard: {
     VisibleButtons: ['ConditionalStyle'],
@@ -66,4 +68,4 @@ export default {
       },
     ],
   },
-};
+} as PredefinedConfig;

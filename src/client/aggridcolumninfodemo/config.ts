@@ -1,3 +1,5 @@
+import { PredefinedConfig } from 'adaptableblotter/types';
+
 export default {
   Dashboard: {
     VisibleButtons: ['ColumnInfo'],
@@ -98,4 +100,4 @@ export default {
       },
     ],
   },
-};
+} as PredefinedConfig;

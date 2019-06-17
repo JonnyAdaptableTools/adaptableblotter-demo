@@ -1,3 +1,5 @@
+import { PredefinedConfig } from 'adaptableblotter/types';
+
 export default {
   Dashboard: {
     VisibleToolbars: ['SmartEdit', 'Export', 'Chart'],
@@ -124,4 +126,4 @@ export default {
       },
     ],
   },
-};
+} as PredefinedConfig;

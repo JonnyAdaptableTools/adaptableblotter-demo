@@ -40,7 +40,7 @@ export class HypergridChartingDemo {
         });
 
         //create Adaptable Blotter
-        let blotterOptions: IAdaptableBlotterOptions = {
+        let blotterOptions: AdaptableBlotterOptions = {
           primaryKey: 'OrderId',
           vendorGrid: this.grid,
           userName: 'Demo User',

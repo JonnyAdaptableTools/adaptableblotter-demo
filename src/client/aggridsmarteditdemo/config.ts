@@ -1,3 +1,5 @@
+import { PredefinedConfig } from 'adaptableblotter/types';
+
 export default {
   SmartEdit: {
     SmartEditValue: 100,
@@ -18,4 +20,4 @@ export default {
     VisibleToolbars: ['SmartEdit'],
     UseSingleColourForButtons: false,
   },
-};
+} as PredefinedConfig;

@@ -1,3 +1,5 @@
+import { PredefinedConfig } from 'adaptableblotter/types';
+
 export default {
   Theme: {
     CurrentTheme: 'Dark Theme',
@@ -39,4 +41,4 @@ export default {
       },
     ],
   },
-};
+} as PredefinedConfig;

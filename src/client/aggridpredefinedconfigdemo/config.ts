@@ -1,3 +1,5 @@
+import { PredefinedConfig } from 'adaptableblotter/types';
+
 export default {
   Dashboard: {
     VisibleToolbars: ['SmartEdit', 'Export', 'Layout', 'QuickSearch'],
@@ -181,4 +183,4 @@ export default {
       ForeColor: '#8b0000',
     },
   },
-};
+} as PredefinedConfig;

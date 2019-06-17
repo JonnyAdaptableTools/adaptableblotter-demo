@@ -1,3 +1,5 @@
+import { PredefinedConfig } from 'adaptableblotter/types';
+
 export default {
   Dashboard: {
     VisibleButtons: ['CustomSort'],
@@ -19,4 +21,4 @@ export default {
       },
     ],
   },
-};
+} as PredefinedConfig;

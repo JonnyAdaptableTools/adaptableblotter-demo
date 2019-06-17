@@ -25,7 +25,7 @@ export class agGridConfigDemo {
         let grid = new Grid(eGridDiv, gridOptions);
         // HelperAgGrid.startTickingDataagGrid(gridOptions);
         //  let configUrl = 'src/configs/configconfig.json';
-        let blotterOptions: IAdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptions(
+        let blotterOptions: AdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptions(
           gridOptions,
           'OrderId',
           'Config Demo',

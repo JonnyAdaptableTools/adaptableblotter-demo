@@ -73,7 +73,7 @@ export class agGridDemo {
 
         //create Adaptable Blotter
         let blotterId: string = selectedConfig.name.replace(/\s/g, '');
-        let blotterOptions: IAdaptableBlotterOptions = {
+        let blotterOptions: AdaptableBlotterOptions = {
           predefinedConfig: config,
           primaryKey: selectedConfig.primaryKey,
           vendorGrid: gridOptions,

@@ -20,7 +20,7 @@ export class agGridGroupingDemo {
         var gridOptions = HelperAgGrid.getGridOptions(columndefs, data);
         var eGridDiv = document.getElementById('grid');
         let grid = new Grid(eGridDiv, gridOptions);
-        let blotterOptions: IAdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptions(
+        let blotterOptions: AdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptions(
           gridOptions,
           'OrderId',
           'Grouping Demo',

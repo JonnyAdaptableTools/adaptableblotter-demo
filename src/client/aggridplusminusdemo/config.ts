@@ -1,3 +1,5 @@
+import { PredefinedConfig } from 'adaptableblotter/types';
+
 export default {
   PlusMinus: {
     PlusMinusRules: [
@@ -44,4 +46,4 @@ export default {
   Dashboard: {
     VisibleButtons: ['PlusMinus'],
   },
-};
+} as PredefinedConfig;

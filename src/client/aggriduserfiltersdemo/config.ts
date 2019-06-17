@@ -1,3 +1,5 @@
+import { PredefinedConfig } from 'adaptableblotter/types';
+
 export default {
   UserFilter: {
     UserFilters: [
@@ -91,7 +93,6 @@ export default {
     CurrentReport: 'Team Small Invoices',
     Reports: [
       {
-        AutoExport: null,
         ColumnIds: [],
         Expression: {
           ColumnValueExpressions: [],
@@ -116,4 +117,4 @@ export default {
   Dashboard: {
     VisibleToolbars: ['ColumnFilter', 'Export'],
   },
-};
+} as PredefinedConfig;

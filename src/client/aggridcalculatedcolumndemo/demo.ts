@@ -9,7 +9,7 @@ import 'ag-grid-community/dist/styles/ag-theme-balham.css';
 import 'ag-grid-community/dist/styles/ag-theme-balham-dark.css';
 import { cloneDeep } from 'lodash';
 import '../../../DemoPage/aggriddemo.css';
-import { IAdaptableBlotterOptions } from 'adaptableblotter/types';
+import { AdaptableBlotterOptions } from 'adaptableblotter/types';
 
 import json from '../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../HelperAgGrid';
@@ -26,7 +26,7 @@ export default () => {
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
 
-  const blotterOptions: IAdaptableBlotterOptions = {
+  const blotterOptions: AdaptableBlotterOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     blotterId: 'Calculated Column Demo',
