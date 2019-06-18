@@ -1,3 +1,5 @@
+import { PredefinedConfig } from 'adaptableblotter/types';
+
 export default {
   Dashboard: {
     VisibleButtons: ['PercentBar'],
@@ -36,4 +38,4 @@ export default {
       },
     ],
   },
-};
+} as PredefinedConfig;

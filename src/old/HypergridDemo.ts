@@ -3,7 +3,7 @@ import { AvailableDatasetConfigs } from './DatasetConfigsHypergrid';
 import * as Helper from '../Helper';
 import {
   IAdaptableBlotter,
-  IAdaptableBlotterOptions,
+  AdaptableBlotterOptions,
 } from 'adaptableblotter/types';
 
 export class HypergridDemo {
@@ -103,7 +103,7 @@ export class HypergridDemo {
         let blotterId: string = selectedConfig.name.replace(/\s/g, '');
 
         //create Adaptable Blotter
-        let blotterOptions: IAdaptableBlotterOptions = {
+        let blotterOptions: AdaptableBlotterOptions = {
           primaryKey: selectedConfig.primaryKey,
           vendorGrid: this.grid,
           userName: 'Demo User',

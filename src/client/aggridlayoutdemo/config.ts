@@ -1,3 +1,5 @@
+import { PredefinedConfig } from 'adaptableblotter/types';
+
 export default {
   Dashboard: {
     VisibleToolbars: ['Layout'],
@@ -53,4 +55,4 @@ export default {
       },
     ],
   },
-};
+} as PredefinedConfig;

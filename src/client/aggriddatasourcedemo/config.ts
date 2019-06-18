@@ -1,3 +1,5 @@
+import { PredefinedConfig } from 'adaptableblotter/types';
+
 export default {
   DataSource: {
     DataSources: [
@@ -23,4 +25,4 @@ export default {
   Dashboard: {
     VisibleToolbars: ['DataSource'],
   },
-};
+} as PredefinedConfig;

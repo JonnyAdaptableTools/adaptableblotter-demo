@@ -17,7 +17,7 @@ export default () => {
           <p>
             It contains 2 tabs: <b>Grid Properties</b> which provides licence,
             column and row information for the grid, and <b>Blotter Options</b>{' '}
-            which displays your IAdaptableBlotterOptions values.
+            which displays your AdaptableBlotterOptions values.
           </p>
           <p>
             You can turn this off by setting <i>ShowAboutButton</i> to false in

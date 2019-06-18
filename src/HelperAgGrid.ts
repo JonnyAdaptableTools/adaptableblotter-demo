@@ -1,6 +1,6 @@
 import * as Helper from './Helper';
 import { GridOptions } from 'ag-grid-community/dist/lib/entities/gridOptions';
-import { IAdaptableBlotterOptions } from 'adaptableblotter/types';
+import { AdaptableBlotterOptions } from 'adaptableblotter/types';
 import { LicenseManager } from 'ag-grid-enterprise';
 import { ITrade } from './Trade';
 import { ColDef } from 'ag-grid-community';
@@ -189,8 +189,8 @@ export class HelperAgGrid {
     pk: string,
     blotterId: string,
     config: any
-  ): IAdaptableBlotterOptions {
-    let blotterOptions: IAdaptableBlotterOptions = {
+  ): AdaptableBlotterOptions {
+    let blotterOptions: AdaptableBlotterOptions = {
       primaryKey: pk,
       vendorGrid: gridOptions,
       userName: 'Demo User',
@@ -217,8 +217,8 @@ export class HelperAgGrid {
     config: any,
     gridName: string,
     abName: string
-  ): IAdaptableBlotterOptions {
-    let blotterOptions: IAdaptableBlotterOptions = {
+  ): AdaptableBlotterOptions {
+    let blotterOptions: AdaptableBlotterOptions = {
       primaryKey: pk,
       vendorGrid: gridOptions,
       userName: 'Demo User',

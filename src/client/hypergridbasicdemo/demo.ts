@@ -17,7 +17,7 @@ import '../../../DemoPage/hypergriddemo.css';
 
 import {
   IAdaptableBlotter,
-  IAdaptableBlotterOptions,
+  AdaptableBlotterOptions,
 } from 'adaptableblotter/types';
 
 import json from '../../../DataSets/Json/NorthwindOrders.json';
@@ -46,7 +46,7 @@ export class Demo {
     });
 
     //create Adaptable Blotter
-    let blotterOptions: IAdaptableBlotterOptions = {
+    let blotterOptions: AdaptableBlotterOptions = {
       primaryKey: 'OrderId',
       vendorGrid: this.grid,
       userName: 'Demo User',

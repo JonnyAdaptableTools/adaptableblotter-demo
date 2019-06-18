@@ -1,3 +1,5 @@
+import { PredefinedConfig } from 'adaptableblotter/types';
+
 export default {
   AdvancedSearch: {
     AdvancedSearches: [
@@ -43,4 +45,4 @@ export default {
   Dashboard: {
     VisibleToolbars: ['AdvancedSearch'],
   },
-};
+} as PredefinedConfig;

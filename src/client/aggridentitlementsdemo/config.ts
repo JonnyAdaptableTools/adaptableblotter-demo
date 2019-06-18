@@ -1,3 +1,5 @@
+import { PredefinedConfig } from 'adaptableblotter/types';
+
 export default {
   Dashboard: {
     VisibleToolbars: ['Export', 'Layout'],
@@ -57,7 +59,6 @@ export default {
     CurrentReport: 'My Team Big Invoice',
     Reports: [
       {
-        AutoExport: null,
         ColumnIds: [],
         Expression: {
           ColumnValueExpressions: [
@@ -92,4 +93,4 @@ export default {
       },
     ],
   },
-};
+} as PredefinedConfig;

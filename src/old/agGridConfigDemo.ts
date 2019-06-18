@@ -4,7 +4,7 @@ import { GridOptions } from 'ag-grid-community/dist/lib/entities/gridOptions';
 import * as HelperAgGrid from '../HelperAgGrid';
 import {
   IAdaptableBlotter,
-  IAdaptableBlotterOptions,
+  AdaptableBlotterOptions,
 } from 'adaptableblotter/types';
 import { IColumnValueExpression } from 'adaptableblotter/dist/App_Scripts/Utilities/Interface/Expression/IColumnValueExpression';
 import { IRangeExpression } from 'adaptableblotter/dist/App_Scripts/Utilities/Interface/Expression/IRangeExpression';
@@ -25,7 +25,7 @@ export class agGridConfigDemo {
         let grid = new Grid(eGridDiv, gridOptions);
         // HelperAgGrid.startTickingDataagGrid(gridOptions);
         //  let configUrl = 'src/configs/configconfig.json';
-        let blotterOptions: IAdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptions(
+        let blotterOptions: AdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptions(
           gridOptions,
           'OrderId',
           'Config Demo',

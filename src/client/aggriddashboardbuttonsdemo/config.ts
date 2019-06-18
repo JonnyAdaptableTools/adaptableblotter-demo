@@ -1,3 +1,5 @@
+import { PredefinedConfig } from 'adaptableblotter/types';
+
 export default {
   Dashboard: {
     VisibleButtons: [
@@ -15,4 +17,4 @@ export default {
     ShowToolbarsDropdown: false,
     HomeToolbarTitle: 'Changed in Config',
   },
-};
+} as PredefinedConfig;

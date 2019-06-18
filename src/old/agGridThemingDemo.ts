@@ -4,7 +4,7 @@ import { GridOptions } from 'ag-grid-community/dist/lib/entities/gridOptions';
 import * as HelperAgGrid from '../HelperAgGrid';
 import {
   IAdaptableBlotter,
-  IAdaptableBlotterOptions,
+  AdaptableBlotterOptions,
 } from 'adaptableblotter/types';
 
 export class agGridThemingDemo {
@@ -22,7 +22,7 @@ export class agGridThemingDemo {
         let grid = new Grid(eGridDiv, gridOptions);
         // HelperAgGrid.startTickingDataagGrid(gridOptions);
         let configUrl = 'src/configs/themeconfig.json';
-        let blotterOptions: IAdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptions(
+        let blotterOptions: AdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptions(
           gridOptions,
           'OrderId',
           'Theming Demo',

@@ -1,3 +1,5 @@
+import { PredefinedConfig } from 'adaptableblotter/types';
+
 export default {
   Dashboard: {
     VisibleButtons: ['ColumnChooser', 'FreeTextColumn'],
@@ -38,4 +40,4 @@ export default {
       },
     ],
   },
-};
+} as PredefinedConfig;

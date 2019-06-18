@@ -4,7 +4,7 @@ import { Grid } from 'ag-grid-community/dist/lib/grid';
 import { GridOptions } from 'ag-grid-community/dist/lib/entities/gridOptions';
 import {
   IAdaptableBlotter,
-  IAdaptableBlotterOptions,
+  AdaptableBlotterOptions,
 } from 'adaptableblotter/types';
 
 export class agGridDemo {
@@ -73,7 +73,7 @@ export class agGridDemo {
 
         //create Adaptable Blotter
         let blotterId: string = selectedConfig.name.replace(/\s/g, '');
-        let blotterOptions: IAdaptableBlotterOptions = {
+        let blotterOptions: AdaptableBlotterOptions = {
           predefinedConfig: config,
           primaryKey: selectedConfig.primaryKey,
           vendorGrid: gridOptions,

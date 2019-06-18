@@ -1,7 +1,7 @@
 import * as Helper from '../Helper';
 import {
   IAdaptableBlotter,
-  IAdaptableBlotterOptions,
+  AdaptableBlotterOptions,
 } from 'adaptableblotter/types';
 import { getSchema, setNorthwindHyperGridProperties } from '../HelperHypergrid';
 
@@ -34,7 +34,7 @@ export class HypergridBasicDemo {
         });
 
         //create Adaptable Blotter
-        let blotterOptions: IAdaptableBlotterOptions = {
+        let blotterOptions: AdaptableBlotterOptions = {
           primaryKey: 'OrderId',
           vendorGrid: this.grid,
           userName: 'Demo User',

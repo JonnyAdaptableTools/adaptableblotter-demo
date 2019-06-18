@@ -4,7 +4,7 @@ import { GridOptions } from 'ag-grid-community/dist/lib/entities/gridOptions';
 import * as HelperAgGrid from '../HelperAgGrid';
 import {
   IAdaptableBlotter,
-  IAdaptableBlotterOptions,
+  AdaptableBlotterOptions,
 } from 'adaptableblotter/types';
 import { IRangeExpression } from 'adaptableblotter/dist/App_Scripts/Utilities/Interface/Expression/IRangeExpression';
 import { IFilterExpression } from 'adaptableblotter/dist/App_Scripts/Utilities/Interface/Expression/IFilterExpression';
@@ -24,7 +24,7 @@ export class agGridWorldStatsChartingDemo {
         var eGridDiv = document.getElementById('grid');
         let grid = new Grid(eGridDiv, gridOptions);
         ///   let configUrl = 'src/configs/worldstatscharts.json';
-        let blotterOptions: IAdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptions(
+        let blotterOptions: AdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptions(
           gridOptions,
           'Country',
           'World Stats Charting Demo',
