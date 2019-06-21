@@ -21,9 +21,9 @@ const useExpanded = (defaultValue: boolean, key: string) => {
   return [
     expanded,
     (value: boolean) => {
-      setExpanded(value);
       requestAnimationFrame(() => {
         store.setItem(key, JSON.stringify(value));
+        setExpanded(value);
       });
     },
   ];
