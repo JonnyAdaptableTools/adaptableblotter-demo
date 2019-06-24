@@ -34,14 +34,14 @@ export default () => {
             </a>
             ,{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028900991-Advanced-Search-Config"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_runtimestate_advancedsearchstate_.advancedsearchstate.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028585192-Advanced-Search-API"
+              href="https://api.adaptableblotter.com/interfaces/_api_interface_iadvancedsearchapi_.iadvancedsearchapi.html"
               target="_blank"
             >
               Blotter API

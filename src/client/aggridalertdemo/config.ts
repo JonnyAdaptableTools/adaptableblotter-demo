@@ -9,11 +9,6 @@ export default {
     AlertDefinitions: [
       {
         ColumnId: 'InvoicedCost',
-        Expression: {
-          ColumnValueExpressions: [],
-          FilterExpressions: [],
-          RangeExpressions: [],
-        },
         MessageType: 'Warning',
         Range: {
           Operand1: '2000',
@@ -26,11 +21,6 @@ export default {
       },
       {
         ColumnId: 'ItemCount',
-        Expression: {
-          ColumnValueExpressions: [],
-          FilterExpressions: [],
-          RangeExpressions: [],
-        },
         MessageType: 'Info',
         Range: {
           Operand1: '100',
