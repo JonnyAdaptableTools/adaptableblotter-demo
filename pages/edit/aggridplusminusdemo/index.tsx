@@ -4,7 +4,7 @@ import DynamicDemoPage from '../../../src/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/aggridplusminusdemo')}
+      demo={import('../../../src/client/edit/aggridplusminusdemo')}
       pageTitle={'Plus Minus Demo'}
       description={
         <div>

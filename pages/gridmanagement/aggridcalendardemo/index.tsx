@@ -4,7 +4,7 @@ import DynamicDemoPage from '../../../src/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/aggridcalendardemo')}
+      demo={import('../../../src/client/grid/aggridcalendardemo')}
       pageTitle={'Calendar Demo'}
       description={
         <div>

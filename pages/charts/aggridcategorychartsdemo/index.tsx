@@ -4,7 +4,7 @@ import DynamicDemoPage from '../../../src/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/aggridcategorychartsdemo')}
+      demo={import('../../../src/client/charts/aggridcategorychartsdemo')}
       pageTitle={'AdaptableBlotter.JS ag-Grid Category Charts Demo'}
       description={
         <div>

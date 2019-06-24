@@ -4,7 +4,7 @@ import DynamicDemoPage from '../../../src/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/aggridshortcutdemo')}
+      demo={import('../../../src/client/edit/aggridshortcutdemo')}
       pageTitle={'Shortcut Demo'}
       description={
         <div>

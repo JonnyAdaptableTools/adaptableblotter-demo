@@ -4,7 +4,7 @@ import DynamicDemoPage from '../../../src/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/aggridpercentbardemo')}
+      demo={import('../../../src/client/style/aggridpercentbardemo')}
       pageTitle={'Percent Bar Demo'}
       description={
         <div>

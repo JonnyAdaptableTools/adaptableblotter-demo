@@ -4,7 +4,7 @@ import DynamicDemoPage from '../../../src/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/aggridflashingcelldemo')}
+      demo={import('../../../src/client/style/aggridflashingcelldemo')}
       pageTitle={'Flashing Cell Demo'}
       description={
         <div>

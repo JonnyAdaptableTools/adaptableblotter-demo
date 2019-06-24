@@ -4,7 +4,7 @@ import DynamicDemoPage from '../../../src/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/aggridpredefinedconfigdemo')}
+      demo={import('../../../src/client/config/aggridpredefinedconfigdemo')}
       pageTitle={'AdaptableBlotter.JS Predefined Config Demo'}
       description={
         <div>

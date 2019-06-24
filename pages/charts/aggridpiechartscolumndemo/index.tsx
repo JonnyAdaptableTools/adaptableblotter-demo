@@ -4,7 +4,7 @@ import DynamicDemoPage from '../../../src/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/aggridpiechartscolumndemo')}
+      demo={import('../../../src/client/charts/aggridpiechartscolumndemo')}
       pageTitle={'Pie Charts Column Demo'}
       description={
         <div>

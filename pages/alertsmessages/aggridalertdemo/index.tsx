@@ -4,7 +4,7 @@ import DynamicDemoPage from '../../../src/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/aggridalertdemo')}
+      demo={import('../../../src/client/alerts/aggridalertdemo')}
       pageTitle={'Alert Demo'}
       description={
         <div>

@@ -4,7 +4,7 @@ import DynamicDemoPage from '../../../src/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/aggridcustomsortdemo')}
+      demo={import('../../../src/client/grid/aggridcustomsortdemo')}
       pageTitle={'Custom Sort Demo'}
       description={
         <div>

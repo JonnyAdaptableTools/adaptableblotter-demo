@@ -4,7 +4,9 @@ import DynamicDemoPage from '../../../src/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/aggridignorecasequeriesdemo')}
+      demo={import(
+        '../../../src/client/queryoptions/aggridignorecasequeriesdemo'
+      )}
       pageTitle={'AdaptableBlotter.JS ag-Grid Ignore Case in Queries Demo'}
       description={
         <div>

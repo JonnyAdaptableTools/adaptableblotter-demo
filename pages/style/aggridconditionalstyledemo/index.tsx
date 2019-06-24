@@ -4,7 +4,7 @@ import DynamicDemoPage from '../../../src/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/aggridconditionalstyledemo')}
+      demo={import('../../../src/client/style/aggridconditionalstyledemo')}
       pageTitle={'Conditional Style Demo'}
       description={
         <div>

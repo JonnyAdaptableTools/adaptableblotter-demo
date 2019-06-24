@@ -4,7 +4,7 @@ import DynamicDemoPage from '../../../src/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/aggridcellvalidationdemo')}
+      demo={import('../../../src/client/edit/aggridcellvalidationdemo')}
       pageTitle={'Cell Validation Demo'}
       description={
         <div>

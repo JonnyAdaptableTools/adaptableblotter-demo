@@ -4,7 +4,7 @@ import DynamicDemoPage from '../../../src/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/aggridsmarteditdemo')}
+      demo={import('../../../src/client/edit/aggridsmarteditdemo')}
       pageTitle={'Bulk Update Demo'}
       description={
         <div>

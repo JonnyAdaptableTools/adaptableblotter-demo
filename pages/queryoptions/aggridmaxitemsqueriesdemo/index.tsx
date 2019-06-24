@@ -4,7 +4,9 @@ import DynamicDemoPage from '../../../src/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/aggridmaxitemsqueriesdemo')}
+      demo={import(
+        '../../../src/client/queryoptions/aggridmaxitemsqueriesdemo'
+      )}
       pageTitle={'AdaptableBlotter.JS ag-Grid Max Items in Queries Demo'}
       description={
         <div>
