@@ -49,6 +49,10 @@ export default () => {
               ag-Grid column banding, pivoting, aggregration and grouping
               functionality is all applied.
             </li>
+            <li>
+              <b>Master Detail Demo:</b> The Adaptable Blotter supports Master /
+              Detail grids where the underlying vendor grid offers it.
+            </li>
           </ul>
           Click on the buttons below to see a demo for each administrative task.
         </div>
@@ -60,6 +64,9 @@ export default () => {
         </DemoBox>
         <DemoBox href="/admin/aggridauditdemo">Audit Log demo</DemoBox>
         <DemoBox href="/admin/aggridgroupingdemo">Grouping demo</DemoBox>
+        <DemoBox href="/admin/aggridmasterdetaildemo">
+          Master Detail demo
+        </DemoBox>
       </GridLayout>
     </MainPage>
   );

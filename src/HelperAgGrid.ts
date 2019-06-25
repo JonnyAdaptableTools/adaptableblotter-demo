@@ -856,6 +856,154 @@ export class HelperAgGrid {
     return schema;
   }
 
+  public geBondPricerSchema(): any[] {
+    var schema = [];
+    schema.push({
+      headerName: 'Isin',
+      field: 'Isin',
+      editable: true,
+      filter: true,
+      sortable: true,
+      type: 'abColDefString',
+    });
+    schema.push({
+      headerName: 'Issuer',
+      field: 'IssuerTicker',
+      filter: true,
+      sortable: true,
+      enableRowGroup: true,
+      type: 'abColDefString',
+    });
+
+    schema.push({
+      headerName: 'Sector',
+      field: 'Sector',
+      filter: true,
+      sortable: true,
+      enableRowGroup: true,
+      type: 'abColDefString',
+    });
+    schema.push({
+      headerName: 'Price',
+      field: 'Price',
+      cellClass: 'number-cell',
+      editable: true,
+      filter: true,
+      sortable: true,
+      type: 'abColDefNumber',
+    });
+    schema.push({
+      headerName: 'B/O Spread',
+      field: 'BidOfferSpread',
+      cellClass: 'number-cell',
+      editable: true,
+      filter: true,
+      sortable: true,
+      type: 'abColDefNumber',
+    });
+    schema.push({
+      headerName: 'Bid',
+      field: 'Bid',
+      cellClass: 'number-cell',
+      editable: true,
+      filter: true,
+      sortable: true,
+      type: 'abColDefNumber',
+    });
+    schema.push({
+      headerName: 'Ask',
+      field: 'Ask',
+      cellClass: 'number-cell',
+      editable: true,
+      filter: true,
+      sortable: true,
+      type: 'abColDefNumber',
+    });
+    schema.push({
+      headerName: 'Rating',
+      field: 'Rating',
+      filter: true,
+      sortable: true,
+      enableRowGroup: true,
+      type: 'abColDefString',
+    });
+
+    schema.push({
+      headerName: 'Instrument',
+      field: 'Instrument',
+      editable: true,
+      filter: true,
+      sortable: true,
+      enableRowGroup: true,
+      type: 'abColDefString',
+    });
+    schema.push({
+      headerName: 'Coupon',
+      field: 'Coupon',
+      cellClass: 'number-cell',
+      editable: true,
+      filter: true,
+      sortable: true,
+      type: 'abColDefNumber',
+    });
+
+    schema.push({
+      headerName: 'Maturity Date',
+      field: 'MaturityDate',
+      editable: true,
+      cellEditorParams: { useFormatter: true },
+      valueParser: this.dateParseragGrid,
+      valueFormatter: this.shortDateFormatteragGrid,
+      filter: true,
+      sortable: true,
+      type: 'abColDefDate',
+    });
+    schema.push({
+      headerName: 'Currency',
+      field: 'Currency',
+      filter: true,
+      sortable: true,
+      enableRowGroup: true,
+      type: 'abColDefString',
+    });
+    schema.push({
+      headerName: 'Tier',
+      field: 'Tier',
+      filter: true,
+      sortable: true,
+      enableRowGroup: true,
+      type: 'abColDefString',
+    });
+    schema.push({
+      headerName: 'Depth',
+      field: 'Depth',
+      cellClass: 'number-cell',
+      editable: true,
+      filter: true,
+      sortable: true,
+      type: 'abColDefNumber',
+    });
+    schema.push({
+      headerName: 'Spread',
+      field: 'Spread',
+      cellClass: 'number-cell',
+      editable: true,
+      filter: true,
+      sortable: true,
+      type: 'abColDefNumber',
+    });
+
+    schema.push({
+      headerName: 'Country',
+      field: 'Country',
+      filter: true,
+      sortable: true,
+      enableRowGroup: true,
+      type: 'abColDefString',
+    });
+    return schema;
+  }
+
   private getOrderColumnDef(): any {
     return {
       headerName: 'Order Id',

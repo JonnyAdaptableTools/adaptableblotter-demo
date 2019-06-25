@@ -301,6 +301,9 @@ export default () => {
           <Link href="/admin/aggridgroupingdemo">
             <a>Grouping</a>
           </Link>
+          <Link href="/admin/aggridmasterdetaildemo">
+            <a>Master Detail</a>
+          </Link>
         </Category>
 
         <Category
@@ -318,6 +321,17 @@ export default () => {
           </Link>
           <Link href="/queryoptions/aggridmaxitemsqueriesdemo">
             <a>Max Items Displayed</a>
+          </Link>
+        </Category>
+        <Category
+          title={
+            <Link href="/examples">
+              <a>Examples</a>
+            </Link>
+          }
+        >
+          <Link href="/examples/bondpricerdemo">
+            <a>Bond Pricer Demo</a>
           </Link>
         </Category>
       </div>
