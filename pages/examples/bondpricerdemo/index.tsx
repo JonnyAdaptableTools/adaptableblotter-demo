@@ -4,7 +4,7 @@ import DynamicDemoPage from '../../../src/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/bondpricerdemo')}
+      demo={import('../../../src/client/examples/bondpricerdemo')}
       pageTitle={'Bond Pricer Demo'}
       description={
         <div>

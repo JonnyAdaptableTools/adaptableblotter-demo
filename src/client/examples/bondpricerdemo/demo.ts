@@ -1,33 +1,35 @@
-import * as Helper from '../../Helper';
-
+import * as Helper from '../../../Helper';
 import AdaptableBlotter from 'adaptableblotter/agGrid';
 import 'adaptableblotter/base.css';
 import 'adaptableblotter/themes/light.css';
+import 'adaptableblotter/themes/dark.css';
 
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-balham.css';
+import 'ag-grid-community/dist/styles/ag-theme-balham-dark.css';
 import { cloneDeep } from 'lodash';
-
-import '../../../DemoPage/aggriddemo.css';
-
+import '../../../../DemoPage/aggriddemo.css';
 import { AdaptableBlotterOptions } from 'adaptableblotter/types';
 
-import { HelperAgGrid } from '../../HelperAgGrid';
-import { DummyDataHelper } from '../../DummyDataHelper';
+import json from '../../../../DataSets/Json/PriceBlotterBond.json';
+import { HelperAgGrid } from '../../../HelperAgGrid';
 import predefinedConfig from './config';
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
 
-  let dummyDataHelper = new DummyDataHelper();
+  let rowData = JSON.parse(JSON.stringify(json));
+  Helper.MakeAllRecordsColumnsDateProperDates(rowData);
 
-  const gridOptions = dummyDataHelper.getMasterGridOptionsFootball();
+  const columndefs = helperAgGrid.geBondPricerSchema();
+
+  const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
 
   const blotterOptions: AdaptableBlotterOptions = {
-    primaryKey: 'OrderId',
+    primaryKey: 'Isin',
     userName: 'Demo User',
-    blotterId: 'Grouping Demo',
+    blotterId: 'Bond Pricer Demo',
     licenceKey: Helper.getdemolicencekey(),
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,

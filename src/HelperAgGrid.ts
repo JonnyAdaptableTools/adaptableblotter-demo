@@ -3,9 +3,19 @@ import { GridOptions } from 'ag-grid-community/dist/lib/entities/gridOptions';
 import { AdaptableBlotterOptions } from 'adaptableblotter/types';
 import { LicenseManager } from 'ag-grid-enterprise';
 import { ITrade } from './Trade';
-import { ColDef } from 'ag-grid-community';
 
 export class HelperAgGrid {
+  private decimalPlaceRendereragGrid = (minDigits: number, maxDigits: number) =>
+    function(params: any) {
+      if (params.value) {
+        var decimalPlaceFormatter = new Intl.NumberFormat('en-GB', {
+          minimumFractionDigits: minDigits,
+          maximumFractionDigits: maxDigits,
+        });
+        return decimalPlaceFormatter.format(params.value);
+      }
+    };
+
   private currencyFormatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
@@ -891,6 +901,7 @@ export class HelperAgGrid {
       filter: true,
       sortable: true,
       type: 'abColDefNumber',
+      cellRenderer: this.decimalPlaceRendereragGrid(2, 4),
     });
     schema.push({
       headerName: 'B/O Spread',
@@ -909,6 +920,7 @@ export class HelperAgGrid {
       filter: true,
       sortable: true,
       type: 'abColDefNumber',
+      cellRenderer: this.decimalPlaceRendereragGrid(2, 4),
     });
     schema.push({
       headerName: 'Ask',
@@ -918,6 +930,7 @@ export class HelperAgGrid {
       filter: true,
       sortable: true,
       type: 'abColDefNumber',
+      cellRenderer: this.decimalPlaceRendereragGrid(2, 4),
     });
     schema.push({
       headerName: 'Rating',
