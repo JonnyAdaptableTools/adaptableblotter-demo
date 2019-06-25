@@ -4,6 +4,8 @@ export interface IFootballTeam {
   name: string;
   country: string;
   stadium: string;
+  capacity: number;
+  manager: string;
   yearEstablished: number;
   squad: IFootballPlayer[];
 }
@@ -14,7 +16,7 @@ export interface IFootballPlayer {
   position: string;
 }
 
-export class DummyDataHelper {
+export class FootballDataHelper {
   public getMasterGridOptionsFootball(): GridOptions {
     return {
       columnDefs: this.getFootballTeamSchema(),
@@ -47,7 +49,7 @@ export class DummyDataHelper {
   public getFootballTeamSchema(): ColDef[] {
     var schema: any[] = [];
     schema.push({
-      headerName: 'Name',
+      headerName: 'Team',
       field: 'name',
       editable: false,
       filter: false,
@@ -62,11 +64,26 @@ export class DummyDataHelper {
       type: 'abColDefString',
     });
     schema.push({
+      headerName: 'Manager',
+      field: 'manager',
+      editable: false,
+      filter: true,
+      type: 'abColDefString',
+    });
+    schema.push({
       headerName: 'Stadium',
       field: 'stadium',
       editable: false,
       filter: true,
       type: 'abColDefString',
+    });
+    schema.push({
+      headerName: 'Capacity',
+      field: 'capacity',
+      editable: false,
+      filter: true,
+      cellClass: 'number-cell',
+      type: 'abColDefNumber',
     });
     schema.push({
       headerName: 'Year Established',
@@ -130,17 +147,30 @@ export class DummyDataHelper {
       name: 'Liverpool',
       country: 'England',
       stadium: 'Anfield',
+      capacity: 48000,
       yearEstablished: 1896,
+      manager: 'Juergen Klopp',
+
       squad: [
+        {
+          age: 26,
+          name: 'Alisson Becker',
+          position: 'Goalkeeper',
+        },
+        {
+          age: 27,
+          name: 'Virgil van Dijk',
+          position: 'Defender',
+        },
+        {
+          age: 29,
+          name: 'Jordan Henderson',
+          position: 'Midfielder',
+        },
         {
           age: 32,
           name: 'Mo Salah',
           position: 'Striker',
-        },
-        {
-          age: 43,
-          name: 'Alisson',
-          position: 'Goalkeeper',
         },
       ],
     };
@@ -150,17 +180,29 @@ export class DummyDataHelper {
       name: 'Barcelona',
       country: 'Spain',
       stadium: 'Nou Camp',
+      capacity: 99354,
       yearEstablished: 1875,
+      manager: 'Ernesto Valverde',
       squad: [
         {
-          age: 32,
-          name: 'Messi',
-          position: 'Striker',
+          age: 27,
+          name: 'Marc-André ter Stegen',
+          position: 'Goalkeeper',
         },
         {
           age: 32,
-          name: 'Coutinho',
+          name: 'Gerard Piqué',
+          position: 'Defender',
+        },
+        {
+          age: 27,
+          name: 'Phillipe Coutinho',
           position: 'Midfielder',
+        },
+        {
+          age: 32,
+          name: 'Lionel Messi',
+          position: 'Striker',
         },
       ],
     };

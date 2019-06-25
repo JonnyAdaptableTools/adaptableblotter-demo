@@ -13,21 +13,21 @@ import '../../../../DemoPage/aggriddemo.css';
 import { AdaptableBlotterOptions } from 'adaptableblotter/types';
 
 import { HelperAgGrid } from '../../../HelperAgGrid';
-import { DummyDataHelper } from '../../../DummyDataHelper';
+import { FootballDataHelper } from '../../../FootballDataHelper';
 import predefinedConfig from './config';
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
 
-  let dummyDataHelper = new DummyDataHelper();
+  let footballDataHelper = new FootballDataHelper();
 
-  const gridOptions = dummyDataHelper.getMasterGridOptionsFootball();
+  const gridOptions = footballDataHelper.getMasterGridOptionsFootball();
 
   const blotterOptions: AdaptableBlotterOptions = {
-    primaryKey: 'OrderId',
+    primaryKey: 'name',
     userName: 'Demo User',
-    blotterId: 'Grouping Demo',
+    blotterId: 'Master Detail Demo',
     licenceKey: Helper.getdemolicencekey(),
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
