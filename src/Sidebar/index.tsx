@@ -323,7 +323,7 @@ export default () => {
             <a>Max Items Displayed</a>
           </Link>
         </Category>
-        {/*
+        {/* 
         <Category
           title={
             <Link href="/examples">
@@ -334,8 +334,10 @@ export default () => {
           <Link href="/examples/bondpricerdemo">
             <a>Bond Pricer Demo</a>
           </Link>
+         
+          
         </Category>
-        */}
+         */}
       </div>
     </div>
   );

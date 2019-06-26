@@ -37,12 +37,18 @@ export default () => {
               <b>Bond Pricer:</b> To Do tol
             </li>
           </ul>
+          <ul>
+            <li>
+              <b>FX :</b> To Do tol
+            </li>
+          </ul>
           Click on the buttons below to see the relevant demo.
         </div>
       }
     >
       <GridLayout>
         <DemoBox href="/examples/bondpricerdemo">Bond Pricer demo</DemoBox>
+        <DemoBox href="/examples/fxdemo">FX demo</DemoBox>
       </GridLayout>
     </MainPage>
   );

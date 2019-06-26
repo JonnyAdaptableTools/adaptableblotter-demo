@@ -55,7 +55,7 @@ export default () => {
           When you release an application using the Adaptable Blotter you will
           typically ship it with{' '}
           <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/categories/360001777392-Predefined-Config"
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029289152-Predefined-Config"
             target="_blank"
           >
             Predefined Config
@@ -68,7 +68,7 @@ export default () => {
             href="https://adaptabletools.zendesk.com/hc/en-us/categories/360001777412-Blotter-Options"
             target="_blank"
           >
-            AdaptableBlotterOptions
+            Adaptable Blotter Options
           </a>{' '}
           object.
           <br />
@@ -81,8 +81,15 @@ export default () => {
           <a href="https://www.ag-grid.com/" target="_blank">
             ag-Grid
           </a>{' '}
-          as the underlying grid control, and dummy data from the famous
-          Microsoft Northwind database (Orders table). <br />
+          as the underlying grid control (which{' '}
+          <a
+            href="https://medium.com/ag-grid/getting-more-from-your-datagrid-introducing-adaptable-blotter-2be5debd7e46"
+            target="_blank"
+          >
+            integrates very well
+          </a>{' '}
+          with the Adaptable Blotter), and dummy data from the famous Microsoft
+          Northwind database (Orders table). <br />
         </p>
 
         <p>

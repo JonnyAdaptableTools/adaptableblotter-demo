@@ -14,15 +14,17 @@ import { AdaptableBlotterOptions } from 'adaptableblotter/types';
 import json from '../../../../DataSets/Json/PriceBlotterBond.json';
 import { HelperAgGrid } from '../../../HelperAgGrid';
 import predefinedConfig from './config';
+import { BondHelperAgGrid } from './BondHelperAgGrid';
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
+  let bondHelperAgGrid = new BondHelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
 
   let rowData = JSON.parse(JSON.stringify(json));
   Helper.MakeAllRecordsColumnsDateProperDates(rowData);
 
-  const columndefs = helperAgGrid.geBondPricerSchema();
+  const columndefs = bondHelperAgGrid.getBondPricerSchema();
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
 
