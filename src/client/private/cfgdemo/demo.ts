@@ -27,6 +27,11 @@ export default () => {
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
   gridOptions.floatingFilter = true;
+  gridOptions.defaultColDef = {
+    resizable: true,
+    filter: true,
+    sortable: true,
+  };
 
   const blotterOptions: AdaptableBlotterOptions = {
     primaryKey: 'Order ID',

@@ -3,6 +3,7 @@ import { GridOptions } from 'ag-grid-community/dist/lib/entities/gridOptions';
 import { AdaptableBlotterOptions } from 'adaptableblotter/types';
 import { LicenseManager } from 'ag-grid-enterprise';
 import { ITrade } from './Trade';
+import { ColDef } from 'ag-grid-community';
 
 export class HelperAgGrid {
   private currencyFormatter = new Intl.NumberFormat('en-US', {
@@ -156,6 +157,7 @@ export class HelperAgGrid {
       suppressAggFuncInHeader: true,
       sideBar: true,
       suppressMenuHide: true,
+
       columnTypes: {
         // not required but helpful for column data type identification
         abColDefNumber: {},
