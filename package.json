@@ -52,7 +52,7 @@
     "pretty": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss}\"",
     "buildDataSets": "node buildJsonDataset.js",
     "openfin": "openfin -l -c app-dev.json",
-    "dev": "next",
+    "dev": "node --max-old-space-size=4096 ./node_modules/.bin/next",
     "build": "node --max-old-space-size=4096 ./node_modules/.bin/next build && node --max-old-space-size=4096 ./node_modules/.bin/next export -o dist && cp _headers dist && cp _redirects dist"
   },
   "repository": {
