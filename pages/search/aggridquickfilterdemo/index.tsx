@@ -26,21 +26,21 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360016818012-Floating-Filter"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360016818012-Quick-Filter"
               target="_blank"
             >
               User Guide
-            </a>
-            ,{' '}
+            </a>{' '}
+            -{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360008819152-Filter-FAQ"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029896011-Filter-FAQ"
               target="_blank"
             >
               FAQ
             </a>{' '}
-            and{' '}
+            -{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028637652-Advanced-Search-Videos"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028637912-Filtering-Videos"
               target="_blank"
             >
               Videos

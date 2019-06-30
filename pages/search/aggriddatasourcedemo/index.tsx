@@ -30,35 +30,32 @@ export default () => {
               target="_blank"
             >
               User Guide
-            </a>
-            ,{' '}
+            </a>{' '}
+            -{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028587352-DataSource-Config"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_runtimestate_datasourcestate_.datasourcestate.html"
               target="_blank"
             >
               Predefined Config
-            </a>
-            ,{' '}
+            </a>{' '}
+            -{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028585192-Advanced-Search-API"
+              href="https://api.adaptableblotter.com/interfaces/_api_interface_idatasourceapi_.idatasourceapi.html"
               target="_blank"
             >
               Blotter API
-            </a>
-            ,{' '}
+            </a>{' '}
+            -{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029055431-Data-Source-Selector-FAQ"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029895991-Data-Source-Selector-FAQ"
               target="_blank"
             >
               FAQ
             </a>{' '}
-            and{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360024888631-Server-Searching"
-              target="_blank"
-            >
-              Server Search
-            </a>{' '}
+            -{' '}
+            <a href="" target="_blank">
+              Videos
+            </a>
             .
           </p>
         </div>

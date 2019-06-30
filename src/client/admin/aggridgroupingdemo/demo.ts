@@ -9,7 +9,6 @@ import 'ag-grid-community/dist/styles/ag-theme-balham.css';
 import { cloneDeep } from 'lodash';
 
 import '../../../../DemoPage/aggriddemo.css';
-
 import { AdaptableBlotterOptions } from 'adaptableblotter/types';
 
 import json from '../../../../DataSets/Json/NorthwindOrders.json';

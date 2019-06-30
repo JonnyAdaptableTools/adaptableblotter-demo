@@ -30,29 +30,29 @@ export default () => {
               target="_blank"
             >
               User Guide
-            </a>
-            ,{' '}
+            </a>{' '}
+            -{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028901031-Quick-Search-Config"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_runtimestate_quicksearchstate_.quicksearchstate.html"
               target="_blank"
             >
               Predefined Config
-            </a>
-            ,{' '}
+            </a>{' '}
+            -{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028585452-Quick-Search-API"
+              href="https://api.adaptableblotter.com/interfaces/_api_interface_iquicksearchapi_.iquicksearchapi.html"
               target="_blank"
             >
               Blotter API
-            </a>
-            ,{' '}
+            </a>{' '}
+            -{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360009005151-Quick-Search-FAQ"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029568432-Quick-Search-FAQ"
               target="_blank"
             >
               FAQ
             </a>{' '}
-            and{' '}
+            -{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028952711-Quick-Search-Videos"
               target="_blank"

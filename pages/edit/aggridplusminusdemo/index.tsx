@@ -31,31 +31,31 @@ export default () => {
               target="_blank"
             >
               User Guide
-            </a>
-            ,{' '}
+            </a>{' '}
+            -{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028587192-Plus-Minus-Config"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_runtimestate_plusminusstate_.plusminusstate.html"
               target="_blank"
             >
               Predefined Config
-            </a>
-            ,{' '}
+            </a>{' '}
+            -{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028899451-plusminus-API"
+              href="https://api.adaptableblotter.com/interfaces/_api_interface_iplusminusapi_.iplusminusapi.html"
               target="_blank"
             >
               Blotter API
-            </a>
-            ,{' '}
+            </a>{' '}
+            -{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360008819132-Plus-Minus-FAQ"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029742892-Plus-Minus-FAQ"
               target="_blank"
             >
               FAQ
-            </a>
-            , and{' '}
+            </a>{' '}
+            -{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028952951-plusminus-Videos"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360030079731-Plus-Minus-Videos"
               target="_blank"
             >
               Videos

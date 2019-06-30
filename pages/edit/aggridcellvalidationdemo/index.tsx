@@ -34,22 +34,29 @@ export default () => {
               target="_blank"
             >
               User Guide
-            </a>
-            ,{' '}
+            </a>{' '}
+            -{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028585272-Cell-Validation-API"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_runtimestate_cellvalidationstate_.cellvalidationstate.html"
+              target="_blank"
+            >
+              Predefined Config
+            </a>{' '}
+            -{' '}
+            <a
+              href="https://api.adaptableblotter.com/interfaces/_api_interface_icellvalidationapi_.icellvalidationapi.html"
               target="_blank"
             >
               Blotter API
-            </a>
-            ,{' '}
+            </a>{' '}
+            -{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360009005011-Cell-Validation-FAQ"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360030078191-Cell-Validation-FAQ"
               target="_blank"
             >
               FAQ
-            </a>
-            , and{' '}
+            </a>{' '}
+            -{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028638052-Cell-Validation-Videos"
               target="_blank"

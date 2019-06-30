@@ -31,29 +31,29 @@ export default () => {
               target="_blank"
             >
               User Guide
-            </a>
-            ,{' '}
+            </a>{' '}
+            -{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028900891-Smart-Edit-Config"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_runtimestate_smarteditstate_.smarteditstate.html"
               target="_blank"
             >
               Predefined Config
-            </a>
-            ,{' '}
+            </a>{' '}
+            -{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028585472-Smart-Edit-API"
+              href="https://api.adaptableblotter.com/interfaces/_api_interface_ismarteditapi_.ismarteditapi.html"
               target="_blank"
             >
               Blotter API
-            </a>
-            ,{' '}
+            </a>{' '}
+            -{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360009005191-Smart-Edit-FAQ"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360030078211-Smart-Edit-FAQ"
               target="_blank"
             >
               FAQ
-            </a>
-            , and{' '}
+            </a>{' '}
+            -{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028952931-Smart-Edit-Videos"
               target="_blank"

@@ -31,29 +31,29 @@ export default () => {
               target="_blank"
             >
               User Guide
-            </a>
-            ,{' '}
+            </a>{' '}
+            -{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028587212-Shortcut-Config"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_runtimestate_shortcutstate_.shortcutstate.html"
               target="_blank"
             >
               Predefined Config
-            </a>
-            ,{' '}
+            </a>{' '}
+            -{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028899451-Shortcut-API"
+              href="https://api.adaptableblotter.com/interfaces/_api_interface_ishortcutapi_.ishortcutapi.html"
               target="_blank"
             >
               Blotter API
-            </a>
-            ,{' '}
+            </a>{' '}
+            -{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360009005171-Shortcuts-FAQ"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029742912-Shortcuts-FAQ"
               target="_blank"
             >
               FAQ
-            </a>
-            , and{' '}
+            </a>{' '}
+            -{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028952951-Shortcut-Videos"
               target="_blank"

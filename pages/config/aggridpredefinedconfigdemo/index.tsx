@@ -40,22 +40,22 @@ export default () => {
               target="_blank"
             >
               User Guide
-            </a>
-            ,{' '}
+            </a>{' '}
+            -{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028584292-Config-Basics"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029289152-Predefined-Config"
               target="_blank"
             >
               Predefined Config
-            </a>
-            ,{' '}
+            </a>{' '}
+            -{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028899251-Config-API"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360024582972-Blotter-API"
               target="_blank"
             >
               Blotter API
-            </a>
-            ,{' '}
+            </a>{' '}
+            -{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360008819312-Configuration-FAQ"
               target="_blank"
