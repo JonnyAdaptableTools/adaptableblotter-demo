@@ -26,6 +26,7 @@ export default () => {
   const columndefs = helperAgGrid.getGroupingNorthwindColumnSchema();
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
+  gridOptions.groupIncludeTotalFooter = true;
 
   const blotterOptions: AdaptableBlotterOptions = {
     primaryKey: 'OrderId',
