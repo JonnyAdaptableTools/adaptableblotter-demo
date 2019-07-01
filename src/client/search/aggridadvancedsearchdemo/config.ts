@@ -13,7 +13,6 @@ export default {
                 'Robert King',
               ],
               ColumnId: 'Employee',
-              ColumnRawValues: [],
             },
           ],
           FilterExpressions: [

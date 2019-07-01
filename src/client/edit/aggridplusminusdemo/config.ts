@@ -5,11 +5,6 @@ export default {
     PlusMinusRules: [
       {
         ColumnId: 'ItemCost',
-        Expression: {
-          ColumnValueExpressions: [],
-          FilterExpressions: [],
-          RangeExpressions: [],
-        },
         IsDefaultNudge: true,
         NudgeValue: 10,
       },
@@ -23,10 +18,7 @@ export default {
               ColumnRawValues: [],
             },
           ],
-          FilterExpressions: [],
-          RangeExpressions: [],
         },
-
         IsDefaultNudge: false,
         NudgeValue: 20,
       },

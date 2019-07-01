@@ -9,9 +9,7 @@ export default {
       {
         ColumnId: 'ChangeLastOrder',
         MaxValue: 56,
-        MaxValueColumnId: null,
         MinValue: -41,
-        MinValueColumnId: null,
         NegativeColor: '#FF0000',
         PositiveColor: '#008000',
         ShowValue: false,
@@ -19,9 +17,7 @@ export default {
       {
         ColumnId: 'InvoicedCost',
         MaxValue: 2810.5056,
-        MaxValueColumnId: null,
         MinValue: 0,
-        MinValueColumnId: null,
         NegativeColor: '#FF0000',
         PositiveColor: '#008000',
         ShowValue: false,
@@ -29,9 +25,7 @@ export default {
       {
         ColumnId: 'ItemCost',
         MaxValue: 199.46,
-        MaxValueColumnId: null,
         MinValue: 0,
-        MinValueColumnId: null,
         NegativeColor: '#FF0000',
         PositiveColor: '#ffff00',
         ShowValue: true,

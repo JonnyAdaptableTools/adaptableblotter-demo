@@ -15,19 +15,14 @@ export default {
                 'Robert King',
               ],
               ColumnId: 'Employee',
-              ColumnRawValues: [],
             },
           ],
-          FilterExpressions: [],
-          RangeExpressions: [],
         },
       },
       {
         Name: 'Small Invoices',
         ColumnId: 'InvoicedCost',
         Expression: {
-          ColumnValueExpressions: [],
-          FilterExpressions: [],
           RangeExpressions: [
             {
               ColumnId: 'InvoicedCost',
@@ -51,14 +46,12 @@ export default {
       {
         ColumnId: 'Employee',
         Filter: {
-          ColumnValueExpressions: [],
           FilterExpressions: [
             {
               ColumnId: 'Employee',
               Filters: ['My Team'],
             },
           ],
-          RangeExpressions: [],
         },
       },
     ],
@@ -70,14 +63,12 @@ export default {
         ColumnId: '',
         ConditionalStyleScope: 'Row',
         Expression: {
-          ColumnValueExpressions: [],
           FilterExpressions: [
             {
               ColumnId: 'InvoicedCost',
               Filters: ['Small Invoices'],
             },
           ],
-          RangeExpressions: [],
         },
         Style: {
           BackColor: '#ffffcc',
@@ -93,9 +84,7 @@ export default {
     CurrentReport: 'Team Small Invoices',
     Reports: [
       {
-        ColumnIds: [],
         Expression: {
-          ColumnValueExpressions: [],
           FilterExpressions: [
             {
               ColumnId: 'InvoicedCost',
@@ -106,7 +95,6 @@ export default {
               Filters: ['My Team'],
             },
           ],
-          RangeExpressions: [],
         },
         Name: 'Team Small Invoices',
         ReportColumnScope: 'AllColumns',

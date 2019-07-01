@@ -9,11 +9,6 @@ export default {
       {
         ActionMode: 'Stop Edit',
         ColumnId: 'CustomerReference',
-        Expression: {
-          ColumnValueExpressions: [],
-          FilterExpressions: [],
-          RangeExpressions: [],
-        },
         Range: {
           Operator: 'None',
           Operand1: '',
@@ -25,11 +20,6 @@ export default {
       {
         ActionMode: 'Show Warning',
         ColumnId: 'Employee',
-        Expression: {
-          ColumnValueExpressions: [],
-          FilterExpressions: [],
-          RangeExpressions: [],
-        },
         Range: {
           Operator: 'None',
           Operand1: '',
@@ -41,11 +31,6 @@ export default {
       {
         ActionMode: 'Stop Edit',
         ColumnId: 'InvoicedCost',
-        Expression: {
-          ColumnValueExpressions: [],
-          FilterExpressions: [],
-          RangeExpressions: [],
-        },
         Range: {
           Operator: 'GreaterThan',
           Operand1: 3000,
@@ -57,11 +42,6 @@ export default {
       {
         ActionMode: 'Show Warning',
         ColumnId: 'OrderCost',
-        Expression: {
-          ColumnValueExpressions: [],
-          FilterExpressions: [],
-          RangeExpressions: [],
-        },
         Range: {
           Operator: 'PercentChange',
           Operand1: 100,

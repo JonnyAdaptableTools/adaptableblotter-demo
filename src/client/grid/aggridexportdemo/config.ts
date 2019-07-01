@@ -8,7 +8,6 @@ export default {
     CurrentReport: 'My Team Big Invoice',
     Reports: [
       {
-        ColumnIds: [],
         Expression: {
           ColumnValueExpressions: [
             {
@@ -20,7 +19,6 @@ export default {
               ],
             },
           ],
-          FilterExpressions: [],
           RangeExpressions: [
             {
               ColumnId: 'InvoicedCost',
@@ -60,11 +58,6 @@ export default {
           'OrderCost',
           'OrderDate',
         ],
-        Expression: {
-          ColumnValueExpressions: [],
-          FilterExpressions: [],
-          RangeExpressions: [],
-        },
         Name: 'Current Orders',
         ReportColumnScope: 'BespokeColumns',
         ReportRowScope: 'VisibleRows',

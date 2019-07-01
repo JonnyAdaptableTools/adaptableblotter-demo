@@ -15,6 +15,10 @@ export default {
           'Col("InvoicedCost") - ( Col("OrderCost") + Col("PackageCost"))',
         ColumnId: 'Profit',
       },
+      {
+        ColumnExpression: 'Col("ItemCost") > 100 ? "High" : "Low"',
+        ColumnId: 'Comment',
+      },
     ],
   },
   ConditionalStyle: {
@@ -26,14 +30,12 @@ export default {
         },
         ConditionalStyleScope: 'Column',
         Expression: {
-          ColumnValueExpressions: [],
           FilterExpressions: [
             {
               ColumnId: 'Profit',
               Filters: ['Positive'],
             },
           ],
-          RangeExpressions: [],
         },
       },
       {
@@ -43,14 +45,12 @@ export default {
         },
         ConditionalStyleScope: 'Column',
         Expression: {
-          ColumnValueExpressions: [],
           FilterExpressions: [
             {
               ColumnId: 'Profit',
               Filters: ['Negative'],
             },
           ],
-          RangeExpressions: [],
         },
       },
     ],
@@ -61,6 +61,7 @@ export default {
       {
         Columns: [
           'OrderId',
+          'Comment',
           'ItemCost',
           'ItemCount',
           'Avg Item Cost',

@@ -59,7 +59,6 @@ export default {
     CurrentReport: 'My Team Big Invoice',
     Reports: [
       {
-        ColumnIds: [],
         Expression: {
           ColumnValueExpressions: [
             {
@@ -71,7 +70,6 @@ export default {
               ],
             },
           ],
-          FilterExpressions: [],
           RangeExpressions: [
             {
               ColumnId: 'InvoicedCost',

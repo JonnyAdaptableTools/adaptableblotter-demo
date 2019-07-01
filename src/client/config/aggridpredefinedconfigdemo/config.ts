@@ -25,8 +25,6 @@ export default {
           'InvoicedCost',
         ],
         Expression: {
-          ColumnValueExpressions: [],
-          FilterExpressions: [],
           RangeExpressions: [
             {
               ColumnId: 'Freight',
@@ -66,14 +64,12 @@ export default {
         },
         ConditionalStyleScope: 'Column',
         Expression: {
-          ColumnValueExpressions: [],
           FilterExpressions: [
             {
               ColumnId: 'ChangeLastOrder',
               Filters: ['Positive'],
             },
           ],
-          RangeExpressions: [],
         },
       },
       {
@@ -83,14 +79,12 @@ export default {
         },
         ConditionalStyleScope: 'Column',
         Expression: {
-          ColumnValueExpressions: [],
           FilterExpressions: [
             {
               ColumnId: 'ChangeLastOrder',
               Filters: ['Negative'],
             },
           ],
-          RangeExpressions: [],
         },
       },
       {
@@ -101,8 +95,6 @@ export default {
         },
         ConditionalStyleScope: 'Row',
         Expression: {
-          ColumnValueExpressions: [],
-          FilterExpressions: [],
           RangeExpressions: [
             {
               ColumnId: 'InvoicedCost',

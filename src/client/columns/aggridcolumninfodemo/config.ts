@@ -36,8 +36,6 @@ export default {
               ],
             },
           ],
-          FilterExpressions: [],
-          RangeExpressions: [],
         },
         Name: 'UK Team',
       },
@@ -68,14 +66,12 @@ export default {
         },
         ConditionalStyleScope: 'Column',
         Expression: {
-          ColumnValueExpressions: [],
           FilterExpressions: [
             {
               ColumnId: 'Employee',
               Filters: ['UK Team'],
             },
           ],
-          RangeExpressions: [],
         },
       },
     ],
@@ -85,11 +81,6 @@ export default {
       {
         ActionMode: 'Stop Edit',
         ColumnId: 'Employee',
-        Expression: {
-          ColumnValueExpressions: [],
-          FilterExpressions: [],
-          RangeExpressions: [],
-        },
         Range: {
           Operator: 'None',
           Operand1: '',

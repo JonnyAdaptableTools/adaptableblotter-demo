@@ -13,31 +13,24 @@ export default {
                 'Nancy Davolio',
               ],
               ColumnId: 'Employee',
-              ColumnRawValues: [],
             },
           ],
-          FilterExpressions: [],
-          RangeExpressions: [],
         },
         ColumnId: 'Employee',
       },
       {
         Filter: {
-          ColumnValueExpressions: [],
           FilterExpressions: [
             {
               ColumnId: 'OrderDate',
               Filters: ['This Year'],
             },
           ],
-          RangeExpressions: [],
         },
         ColumnId: 'OrderDate',
       },
       {
         Filter: {
-          ColumnValueExpressions: [],
-          FilterExpressions: [],
           RangeExpressions: [
             {
               ColumnId: 'InvoicedCost',
