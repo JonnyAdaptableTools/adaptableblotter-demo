@@ -25,6 +25,7 @@ export default () => {
   const columndefs = helperAgGrid.getConditionalstyleNorthwindColumnSchema();
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
+  gridOptions.floatingFilter = true;
 
   const blotterOptions: AdaptableBlotterOptions = {
     primaryKey: 'OrderId',

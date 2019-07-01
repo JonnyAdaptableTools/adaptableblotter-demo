@@ -24,13 +24,14 @@ export default () => {
             automatically as other values change.
           </p>
           <p>
-            This example we created 2 Calculated Columns: 'Avg Item Cost' and
-            'Profit' (click on the 5th button in toolbar to see details of the
-            Expression - or 'Edit Expression' in the Column Header menu). And
-            because they are treated as 'normal' columns we were able to include
-            them in the layout we created and also to style them using
-            Conditional Styles.
+            This example we created 3 Calculated Columns: <i>Avg Item Cost</i>{' '}
+            and <i>Profit</i> (which are numeric) and <i>Comment</i> (a string).
+            Click the 5th button in toolbar to see details of the Expression -
+            or 'Edit Expression' in the Column Header menu. Because they are
+            treated as 'normal' columns we were able to include them in the
+            layout we created and also to style them using Conditional Styles.
           </p>
+
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
@@ -38,20 +39,34 @@ export default () => {
               target="_blank"
             >
               User Guide
-            </a>
-            ,{' '}
+            </a>{' '}
+            -{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028585232-Calculated-Column-API"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_runtimestate_calculatedcolumnstate_.calculatedcolumnstate.html"
+              target="_blank"
+            >
+              Predefined Config
+            </a>{' '}
+            -{' '}
+            <a
+              href="https://api.adaptableblotter.com/interfaces/_api_interface_icalculatedcolumnapi_.icalculatedcolumnapi.html"
               target="_blank"
             >
               Blotter API
-            </a>
-            ,{' '}
+            </a>{' '}
+            -{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360008818992-Calculated-Column-FAQ"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360030078351-Calculated-Column-FAQ"
               target="_blank"
             >
               FAQ
+            </a>{' '}
+            -{' '}
+            <a
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360030078491-Calculated-Column-Videos"
+              target="_blank"
+            >
+              Videos
             </a>
             .
           </p>
