@@ -10,8 +10,8 @@ export default () => {
         <div>
           <h4>Plus Minus Demo</h4>
           <p>
-            Plus Minus function allows you to creage 'Nude Rules' which react to
-            the '+' or '-' keys being pressed in numeric cells.
+            Plus Minus function allows you to creage 'Nudge Rules' which react
+            to the '+' or '-' keys being pressed in numeric cells.
           </p>
           <p>
             You can create a 'default' Nudge Value for a whole column, or a
