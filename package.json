@@ -1,13 +1,13 @@
 {
   "name": "adaptableblotter-demo",
-  "version": "4.1.0",
+  "version": "4.1.1",
   "description": "",
   "main": "index.js",
   "dependencies": {
     "@trendmicro/react-sidenav": "^0.4.5",
     "@types/isomorphic-fetch": "0.0.34",
-    "adaptableblotter": "^4.1.0",
-    "adaptableblotter-react-aggrid": "^4.0.7",
+    "adaptableblotter": "^4.1.1",
+    "adaptableblotter-react-aggrid": "^4.1.1",
     "ag-grid-community": "^21.0.0",
     "ag-grid-enterprise": "^21.0.0",
     "ag-grid-react": "^21.0.1",
