@@ -112,9 +112,9 @@ export class CFGHelperAgGrid {
     schema.push({
       headerName: 'Side',
       field: 'Side',
-
       type: 'abColDefString',
       enableRowGroup: true,
+      editable: true,
     });
     schema.push({
       headerName: 'Amount',
@@ -142,7 +142,6 @@ export class CFGHelperAgGrid {
     schema.push({
       headerName: 'USD Principal',
       field: 'USD Principal',
-
       type: 'abColDefNumber',
       cellClass: 'number-cell',
       cellRenderer: this.currencyRendereragGrid,
@@ -158,7 +157,6 @@ export class CFGHelperAgGrid {
     schema.push({
       headerName: 'Average Price',
       field: 'Average Price',
-
       type: 'abColDefNumber',
       cellClass: 'number-cell',
     });
@@ -194,9 +192,9 @@ export class CFGHelperAgGrid {
     schema.push({
       headerName: 'Order Type',
       field: 'Order Type',
-
       type: 'abColDefString',
       enableRowGroup: true,
+      editable: true,
     });
     schema.push({
       headerName: 'Limit Price',
@@ -208,7 +206,7 @@ export class CFGHelperAgGrid {
     schema.push({
       headerName: 'Time In Force',
       field: 'Time In Force',
-
+      editable: true,
       type: 'abColDefString',
       enableRowGroup: true,
     });
@@ -311,7 +309,7 @@ export class CFGHelperAgGrid {
     schema.push({
       headerName: 'Cross Trade',
       field: 'Cross Trade',
-
+      editable: true,
       type: 'abColDefBoolean',
     });
     schema.push({
@@ -615,21 +613,19 @@ export class CFGHelperAgGrid {
     schema.push({
       headerName: 'Money Decimal Places',
       field: 'Money Decimal Places',
-
       type: 'abColDefNumber',
       cellClass: 'number-cell',
     });
     schema.push({
       headerName: 'Done for Day Flag',
       field: 'Done for Day Flag',
-
       type: 'abColDefString',
+      editable: true,
       enableRowGroup: true,
     });
     schema.push({
       headerName: 'Settle Method Code',
       field: 'Settle Method Code',
-
       type: 'abColDefString',
       enableRowGroup: true,
     });

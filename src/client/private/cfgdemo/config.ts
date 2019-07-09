@@ -464,4 +464,39 @@ export default {
       },
     ],
   },
+  UserInterface: {
+    EditLookUpColumns: [
+      {
+        ColumnId: 'Directed Order',
+        LookUpValues: [true, false],
+      },
+      {
+        ColumnId: 'Cross Trade',
+        LookUpValues: [true, false],
+      },
+      {
+        ColumnId: 'TCA Exclude from LiquidMetrix',
+        LookUpValues: [true, false],
+      },
+      {
+        ColumnId: 'TCA Include Premarket',
+        LookUpValues: [true, false],
+      },
+      {
+        ColumnId: 'Side',
+      },
+      {
+        ColumnId: 'Order Type',
+      },
+      {
+        ColumnId: 'Benchmark',
+      },
+      {
+        ColumnId: 'Time In Force',
+      },
+      {
+        ColumnId: 'Done for Day Flag',
+      },
+    ],
+  },
 } as PredefinedConfig;
