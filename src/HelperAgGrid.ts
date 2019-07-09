@@ -883,6 +883,7 @@ export class HelperAgGrid {
       headerName: 'Contact',
       field: 'ContactName',
       filter: true,
+      editable: true,
       sortable: true,
       enableRowGroup: true,
       type: 'abColDefString',

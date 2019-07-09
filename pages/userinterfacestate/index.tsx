@@ -24,10 +24,10 @@ const DemoBox = ({ href, children }: { href: string; children: ReactNode }) => {
 export default () => {
   return (
     <MainPage
-      pageTitle={'Query Option demos'}
+      pageTitle={'User Interface State demos'}
       description={
         <div>
-          <h4>Query Option Demos</h4>
+          <h4>User Interface State Demos</h4>
           <p>
             Queries are a key element of the Adaptable Blotter - and they are
             used by many functions, e.g. Advanced Search, Conditional Styles,
@@ -66,14 +66,14 @@ export default () => {
       }
     >
       <GridLayout>
-        <DemoBox href="/queryoptions/aggridserverlookupsdemo">
-          Server Lookups demo
+        <DemoBox href="/userinterfacestate/aggridcolorpalettedemo">
+          Color Palette demo
         </DemoBox>
-        <DemoBox href="/queryoptions/aggridignorecasequeriesdemo">
-          Queries Ignore Case demo
+        <DemoBox href="/userinterfacestate/aggridpermittedvaluesdemo">
+          Permitted Values demo
         </DemoBox>
-        <DemoBox href="/queryoptions/aggridmaxitemsqueriesdemo">
-          Queries Max Items Displayed demo
+        <DemoBox href="/userinterfacestate/aggrideditlookupcolumnsdemo">
+          Edit Lookup Columns demo
         </DemoBox>
       </GridLayout>
     </MainPage>

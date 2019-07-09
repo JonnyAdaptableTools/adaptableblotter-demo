@@ -5,7 +5,7 @@ export default () => {
   return (
     <DynamicDemoPage
       demo={import(
-        '../../../src/client/queryoptions/aggridignorecasequeriesdemo'
+        '../../../src/client/blotteroptions/aggridignorecasequeriesdemo'
       )}
       pageTitle={'AdaptableBlotter.JS ag-Grid Ignore Case in Queries Demo'}
       description={
@@ -37,6 +37,13 @@ export default () => {
             >
               User Guide
             </a>
+            -{' '}
+            <a
+              href="https://api.adaptableblotter.com/interfaces/_blotteroptions_queryoptions_.queryoptions.html"
+              target="_blank"
+            >
+              Blotter Options
+            </a>{' '}
           </p>{' '}
         </div>
       }

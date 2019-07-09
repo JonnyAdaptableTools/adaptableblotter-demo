@@ -4,9 +4,7 @@ import DynamicDemoPage from '../../../src/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import(
-        '../../../src/client/queryoptions/aggridmaxitemsqueriesdemo'
-      )}
+      demo={import('../../../src/client/lookups/aggridmaxitemsqueriesdemo')}
       pageTitle={'AdaptableBlotter.JS ag-Grid Max Items in Queries Demo'}
       description={
         <div>
@@ -14,7 +12,7 @@ export default () => {
           <p>
             When getting distinct column values for display (either in the
             column filter dropdown) the Adaptable Blotter will show the first
-            5,000 distinct values for that column.
+            2,000 distinct values for that column.
           </p>
           <p>
             However, if you would prefer to return a larger result set, you can

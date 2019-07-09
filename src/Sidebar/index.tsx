@@ -77,11 +77,9 @@ export default () => {
             Clear state
           </button>
         </div>
-
         <Link href="/">
           <a>Home</a>
         </Link>
-
         <Category
           title={
             <Link href="/config">
@@ -96,7 +94,6 @@ export default () => {
             <a>With Config</a>
           </Link>
         </Category>
-
         <Category
           title={
             <Link href="/search">
@@ -144,6 +141,9 @@ export default () => {
           </Link>
           <Link href="/edit/aggridcellvalidationdemo">
             <a>Cell Validation</a>
+          </Link>
+          <Link href="/edit/aggrideditdropdownsdemo">
+            <a>Edit Dropdowns</a>
           </Link>
         </Category>
         <Category
@@ -249,7 +249,6 @@ export default () => {
             <a>System Status</a>
           </Link>
         </Category>
-
         <Category
           title={
             <Link href="/dashboard">
@@ -284,7 +283,6 @@ export default () => {
             <a>iPushPull</a>
           </Link>
         </Category>
-
         <Category
           title={
             <Link href="/admin">
@@ -305,25 +303,47 @@ export default () => {
             <a>Master Detail</a>
           </Link>
         </Category>
-
         <Category
           title={
-            <Link href="/queryoptions">
-              <a>Query Options</a>
+            <Link href="/blotteroptions">
+              <a>Blotter Options</a>
             </Link>
           }
         >
-          <Link href="/queryoptions/aggridserverlookupsdemo">
-            <a>Server Lookups</a>
-          </Link>
-          <Link href="/queryoptions/aggridignorecasequeriesdemo">
-            <a>Ignore Case</a>
-          </Link>
-          <Link href="/queryoptions/aggridmaxitemsqueriesdemo">
-            <a>Max Items Displayed</a>
+          <Link href="/blotteroptions/aggridignorecasequeriesdemo">
+            <a>Ignore Case In Queries </a>
           </Link>
         </Category>
+        <Category
+          title={
+            <Link href="/lookups">
+              <a>Column Lookups</a>
+            </Link>
+          }
+        >
+          <Link href="/lookups/aggridmaxitemsqueriesdemo">
+            <a>Max Items Displayed</a>
+          </Link>{' '}
+          <Link href="/lookups/aggridserverlookupsdemo">
+            <a>Server Lookups</a>
+          </Link>
+          <Link href="/lookups/aggridpermittedvaluesdemo">
+            <a>Permitted Values</a>
+          </Link>
+        </Category>{' '}
         {/* 
+         <Category
+          title={
+            <Link href="/userinterfacestate">
+              <a>User Interface State</a>
+            </Link>
+          }
+        >
+          <Link href="/userinterfacestate/aggridcolorpalettedemo">
+            <a>Color Palette</a>
+          </Link>
+        </Category>
+       
         <Category
           title={
             <Link href="/examples">

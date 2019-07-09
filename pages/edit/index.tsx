@@ -53,6 +53,11 @@ export default () => {
               <b>Cell Validation:</b> Create rules to prevent (or show warnings)
               when particular cell edits take place.
             </li>
+            <li>
+              <b>Edit Dropdowns:</b> List which columns will automatically show
+              a dropdown (select) when editing and optionally provide the values
+              which it displays.
+            </li>
           </ul>
           Click on the buttons below to see a demo for each edit function.
         </div>
@@ -65,6 +70,9 @@ export default () => {
         <DemoBox href="/edit/aggridplusminusdemo">Plus Minus demo</DemoBox>
         <DemoBox href="/edit/aggridcellvalidationdemo">
           Cell Validation demo
+        </DemoBox>
+        <DemoBox href="/edit/aggrideditdropdownsdemo">
+          Edit Dropdowns demo
         </DemoBox>
       </GridLayout>
     </MainPage>

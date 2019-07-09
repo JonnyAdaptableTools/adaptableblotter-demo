@@ -15,7 +15,7 @@ import { AdaptableBlotterOptions } from 'adaptableblotter/types';
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../HelperAgGrid';
 import predefinedConfig from './config';
-import { IServerColumnValues } from 'adaptableblotter/Utilities/Interface/BlotterOptions/IQueryOptions';
+import { IServerColumnValues } from 'adaptableblotter/App_Scripts/BlotterOptions/QueryOptions';
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
@@ -34,9 +34,6 @@ export default () => {
     userName: 'Demo User',
     blotterId: 'Server Lookups Demo',
     queryOptions: {
-      //ignoreCaseInQueries: false,
-      // maxColumnValueItemsDisplayed: 5,
-      //  columnValuesOnlyInQueries: true,
       getColumnValues: (columnName: string) => {
         return new Promise((resolve, reject) => {
           setTimeout(() => resolve(getValuesForColumn(columnName)), 500);
@@ -55,12 +52,6 @@ export default () => {
     predefinedConfig,
     blotterOptions: blotterOptionsClone,
   };
-
-  function retrieveValues(columnName: string): Promise<IServerColumnValues> {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => resolve(getValuesForColumn(columnName)), 500);
-    });
-  }
 
   function getValuesForColumn(columnName: string): IServerColumnValues {
     let vals;
