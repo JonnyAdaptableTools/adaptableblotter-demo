@@ -313,6 +313,9 @@ export default () => {
           <Link href="/blotteroptions/aggridignorecasequeriesdemo">
             <a>Ignore Case In Queries </a>
           </Link>
+          <Link href="/blotteroptions/aggridvendorgridfiltersdemo">
+            <a>Vendor Grid Filters </a>
+          </Link>
         </Category>
         <Category
           title={

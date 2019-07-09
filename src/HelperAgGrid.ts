@@ -344,6 +344,19 @@ export class HelperAgGrid {
     return schema;
   }
 
+  public getFilteredColumnSchema(): any[] {
+    var schema = [];
+    schema.push(this.getOrderColumnDef());
+    schema.push(this.getEmployeeDef());
+    schema.push(this.getShipViaDef());
+    schema.push(this.getShipCountryDef());
+    schema.push(this.getShippedDateDef());
+    schema.push(this.getFreightDef());
+    schema.push(this.getShipNameDef());
+
+    return schema;
+  }
+
   public getGroupingNorthwindColumnSchema(): any[] {
     var schema = [];
     // do a column group for Customer
@@ -893,7 +906,7 @@ export class HelperAgGrid {
     return {
       headerName: 'Employee',
       field: 'Employee',
-      filter: 'text',
+      filter: 'agSetColumnFilter',
       editable: true,
       sortable: true,
       enableRowGroup: true,
@@ -1000,6 +1013,7 @@ export class HelperAgGrid {
       cellRenderer: this.currencyRendereragGrid,
       editable: true,
       sortable: true,
+      filter: 'text',
       type: 'abColDefNumber',
     };
   }
@@ -1011,6 +1025,7 @@ export class HelperAgGrid {
       editable: true,
       sortable: true,
       type: 'abColDefString',
+      filter: 'text',
     };
   }
   private getChangeLastOrderDef(): any {
@@ -1028,7 +1043,7 @@ export class HelperAgGrid {
     return {
       headerName: 'Ship Country',
       field: 'ShipCountry',
-      filter: 'text',
+      filter: 'agSetColumnFilter',
       editable: true,
       sortable: true,
       type: 'abColDefString',

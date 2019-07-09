@@ -48,6 +48,11 @@ export default () => {
               <b>Ignore Case Demo:</b> By default case is ignored when running
               queries against string columns but you can change this behaviour.
             </li>
+            <li>
+              <b>Vendor Grid Filters Demo:</b> You can use the agGrid Floating
+              Filter and Filter Form if you wish instead of the Adaptable
+              Blotter Quick Filter and Filter Form respectively.
+            </li>
           </ul>
           Click on the buttons below to see the Blotter Options demos.
         </div>
@@ -56,6 +61,9 @@ export default () => {
       <GridLayout>
         <DemoBox href="/blotteroptions/aggridignorecasequeriesdemo">
           Queries Ignore Case demo
+        </DemoBox>
+        <DemoBox href="/blotteroptions/aggridvendorgridfiltersdemo">
+          Vendor Grid Filters demo
         </DemoBox>
       </GridLayout>
     </MainPage>

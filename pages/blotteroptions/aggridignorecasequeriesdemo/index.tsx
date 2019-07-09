@@ -36,7 +36,7 @@ export default () => {
               target="_blank"
             >
               User Guide
-            </a>
+            </a>{' '}
             -{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_blotteroptions_queryoptions_.queryoptions.html"
