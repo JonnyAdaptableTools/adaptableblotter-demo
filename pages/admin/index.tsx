@@ -53,6 +53,12 @@ export default () => {
               <b>Master Detail Demo:</b> The Adaptable Blotter supports Master /
               Detail grids where the underlying vendor grid offers it.
             </li>
+            <li>
+              <b>API Demo:</b> Access the Adaptable Blotter functionality and
+              state through the Blotter API which contains hundreds of functions
+              giving full programmatic access to everything the Adaptable
+              Blotter provides.
+            </li>
           </ul>
           Click on the buttons below to see a demo for each administrative task.
         </div>
@@ -67,6 +73,7 @@ export default () => {
         <DemoBox href="/admin/aggridmasterdetaildemo">
           Master Detail demo
         </DemoBox>
+        <DemoBox href="/admin/aggridblotterapidemo">API demo</DemoBox>
       </GridLayout>
     </MainPage>
   );

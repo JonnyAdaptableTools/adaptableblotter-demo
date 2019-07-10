@@ -302,6 +302,9 @@ export default () => {
           <Link href="/admin/aggridmasterdetaildemo">
             <a>Master Detail</a>
           </Link>
+          <Link href="/admin/aggridblotterapidemo">
+            <a>Blotter API</a>
+          </Link>
         </Category>
         <Category
           title={

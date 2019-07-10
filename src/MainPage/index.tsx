@@ -30,6 +30,7 @@ export default ({ pageTitle, children, description }: MainPageProps) => {
         {description ? (
           <div className="demodescription">{description}</div>
         ) : null}
+        <div id="aboveGridDiv"></div>
         {children}
       </div>
     </div>
