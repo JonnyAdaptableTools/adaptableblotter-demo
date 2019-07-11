@@ -50,7 +50,7 @@ export default () => {
     testDiv.style.padding = '10px';
     var para = document.createElement('P');
     para.innerHTML =
-      'Using the Adaptable Blotter API: Click "Run Quick Search" (or "Clear Quick Search") to call the equivalent Quick Search API functions.  And use other buttons to set Dashboard visibility.';
+      'Using the Adaptable Blotter API: Click "Run Quick Search" (or "Clear Quick Search") to call the equivalent Quick Search API functions.  And use other buttons to set Dashboard visibility and load a layout.';
     testDiv.appendChild(para);
 
     var textBox = document.createElement('input');
@@ -80,8 +80,14 @@ export default () => {
     var maximiseDasahboardButton = document.createElement('BUTTON');
     maximiseDasahboardButton.innerHTML = 'Maximise Dasbhoard';
     maximiseDasahboardButton.onclick = () => maximiseadshboard();
-    maximiseDasahboardButton.style.marginRight = '10px';
+    maximiseDasahboardButton.style.marginRight = '30px';
     testDiv.appendChild(maximiseDasahboardButton);
+
+    var showOrdersLayoutButton = document.createElement('BUTTON');
+    showOrdersLayoutButton.innerHTML = 'Show Orders Layout';
+    showOrdersLayoutButton.onclick = () => showOrdersLayout();
+    showOrdersLayoutButton.style.marginRight = '10px';
+    testDiv.appendChild(showOrdersLayoutButton);
   }
 
   return {
@@ -115,5 +121,9 @@ export default () => {
 
   function maximiseadshboard() {
     adaptableblotter.api.dashboardApi.SetVisibility('Visible');
+  }
+
+  function showOrdersLayout() {
+    adaptableblotter.api.layoutApi.setLayout('Orders');
   }
 };

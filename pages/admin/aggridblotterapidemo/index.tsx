@@ -35,9 +35,9 @@ export default () => {
           <p>
             In this example we create our own form controls but will still call
             the Blotter API to run and clear Quick Search (e.g.{' '}
-            <i>adaptableblotter.api.quickSearchApi.clearQuickSearch();</i>) and
-            to manage Dashboard visibility (e.g.{' '}
-            <i>adaptableblotter.api.dashboardApi.Minimise();</i>). Note that the
+            <i>api.quickSearchApi.clearQuickSearch()</i>), manage Dashboard
+            visibility (e.g. <i>api.dashboardApi.Minimise()</i>) and load a
+            layout <i>api.layoutApi.setLayout('Orders')</i>. Note that the
             functions run as if you were using the Blotter and that all State is
             stored (refresh the page to see).
           </p>

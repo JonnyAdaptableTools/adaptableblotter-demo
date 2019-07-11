@@ -10,7 +10,10 @@ import { cloneDeep } from 'lodash';
 
 import '../../../../DemoPage/aggriddemo.css';
 
-import { AdaptableBlotterOptions } from 'adaptableblotter/types';
+import {
+  AdaptableBlotterOptions,
+  SearchChangedEventArgs,
+} from 'adaptableblotter/types';
 
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../HelperAgGrid';
@@ -40,7 +43,7 @@ export default () => {
   let adaptableblotter = new AdaptableBlotter(blotterOptions);
 
   adaptableblotter.api.eventApi
-    .onSearchedChanged()
+    .onSearchChanged()
     .Subscribe((sender, searchChangedArgs) =>
       listenToSearchChangedEvent(searchChangedArgs)
     );
@@ -51,7 +54,7 @@ export default () => {
   };
 
   function listenToSearchChangedEvent(
-    searchChangedEventArgs: ISearchChangedEventArgs
+    searchChangedEventArgs: SearchChangedEventArgs
   ) {
     console.log('search changed event received');
     console.log(searchChangedEventArgs);
