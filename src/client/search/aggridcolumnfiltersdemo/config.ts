@@ -12,10 +12,17 @@ export default {
                 'Margaret Peacock',
                 'Nancy Davolio',
               ],
+              ColumnRawValues: [
+                'Janet Leverling',
+                'Margaret Peacock',
+                'Nancy Davolio',
+              ],
               ColumnId: 'Employee',
             },
           ],
+          FilterExpressions: [],
         },
+
         ColumnId: 'Employee',
       },
       {

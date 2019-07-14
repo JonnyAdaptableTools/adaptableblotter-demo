@@ -14,13 +14,13 @@ export default () => {
             Predefined Config to enable you to run Searches on the Server..
           </p>
           <p>
-            When a Data Source is selected, the SearchedChanged event fires
+            When a Data Source is selected, the SearchChanged event fires
             allowing you to perform serach on the server and return data to the
             Adaptable Blotter via the API.
           </p>
           <p>
             In this example we have created 4 Data Sources and we also listen to
-            SearchedChanged and fire details to the console. Note: a release in
+            SearchChanged and fire details to the console. Note: a release in
             the near future will provide parameterised queries for Data Sources.
           </p>
           <p>
