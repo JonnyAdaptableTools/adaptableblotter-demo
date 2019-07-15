@@ -24,7 +24,7 @@ export default () => {
 
   const columndefs = helperAgGrid.getTradeSchema();
 
-  const trades = helperAgGrid.getTrades(100000);
+  const trades = helperAgGrid.getTrades(50000);
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, trades);
   gridOptions.floatingFilter = true;
