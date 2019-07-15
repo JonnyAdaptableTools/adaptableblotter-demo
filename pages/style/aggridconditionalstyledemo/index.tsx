@@ -25,6 +25,7 @@ export default () => {
             italic foreground; and (4) the font is bold where the 'Package Cost'
             column is less than 10.
           </p>
+
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
@@ -32,24 +33,31 @@ export default () => {
               target="_blank"
             >
               User Guide
-            </a>
-            ,{' '}
+            </a>{' '}
+            -{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028585272-Cell-Validation-API"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_runtimestate_conditionalstylestate_.conditionalstylestate.html"
+              target="_blank"
+            >
+              Predefined Config
+            </a>{' '}
+            -{' '}
+            <a
+              href="https://api.adaptableblotter.com/interfaces/_api_interface_iconditionalstyleapi_.iconditionalstyleapi.html"
               target="_blank"
             >
               Blotter API
-            </a>
-            ,{' '}
+            </a>{' '}
+            -{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360009005051-Conditional-Styles-FAQ"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029742932-Conditional-Styles-FAQ"
               target="_blank"
             >
               FAQ
-            </a>
-            , and{' '}
+            </a>{' '}
+            -{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028638052-Cell-Validation-Videos"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360030602892-Conditional-Style-Videos"
               target="_blank"
             >
               Videos

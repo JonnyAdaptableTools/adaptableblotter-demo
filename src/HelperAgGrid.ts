@@ -1082,6 +1082,9 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       type: 'abColDefNumber',
       filter: true,
+      cellRenderer: this.currencyRendereragGrid,
+      sortable: true,
+      aggFunc: 'sum',
     });
     schema.push({
       headerName: 'Counterparty',
@@ -1107,15 +1110,6 @@ export class HelperAgGrid {
       enableRowGroup: true,
       sortable: true,
       filter: 'agTextColumnFilter',
-      type: 'abColDefString',
-    });
-    schema.push({
-      headerName: 'Status',
-      field: 'status',
-      editable: true,
-      filter: true,
-      sortable: true,
-      enableRowGroup: true,
       type: 'abColDefString',
     });
     schema.push({
@@ -1151,14 +1145,6 @@ export class HelperAgGrid {
     schema.push({
       headerName: 'Ask',
       field: 'ask',
-      columnGroupShow: 'closed',
-      filter: true,
-      cellClass: 'number-cell',
-      type: 'abColDefNumber',
-    });
-    schema.push({
-      headerName: 'DV01',
-      field: 'dv01',
       columnGroupShow: 'closed',
       filter: true,
       cellClass: 'number-cell',
@@ -1314,6 +1300,13 @@ export class HelperAgGrid {
     let trades: ITrade[] = [];
     for (let i = 1; i <= count; i++) {
       trades.push(this.createTrade(i, 'EUR'));
+    }
+    return trades;
+  }
+  getTrades(count: number): ITrade[] {
+    let trades: ITrade[] = [];
+    for (let i = 1; i <= count; i++) {
+      trades.push(this.createTrade(i));
     }
     return trades;
   }

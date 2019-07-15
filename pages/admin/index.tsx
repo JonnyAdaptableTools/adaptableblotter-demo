@@ -59,6 +59,10 @@ export default () => {
               giving full programmatic access to everything the Adaptable
               Blotter provides.
             </li>
+            <li>
+              <b>Big Data Demo Demo:</b> See the Adaptable Blotter (and ag-Grid)
+              with 100,000 rows of client side data.
+            </li>
           </ul>
           Click on the buttons below to see a demo for each administrative task.
         </div>
@@ -74,6 +78,7 @@ export default () => {
           Master Detail demo
         </DemoBox>
         <DemoBox href="/admin/aggridblotterapidemo">API demo</DemoBox>
+        <DemoBox href="/admin/aggridbigdatademo">Big Data demo</DemoBox>
       </GridLayout>
     </MainPage>
   );

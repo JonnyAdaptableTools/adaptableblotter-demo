@@ -305,6 +305,9 @@ export default () => {
           <Link href="/admin/aggridblotterapidemo">
             <a>Blotter API</a>
           </Link>
+          <Link href="/admin/aggridbigdatademo">
+            <a>Big Data</a>
+          </Link>
         </Category>
         <Category
           title={
