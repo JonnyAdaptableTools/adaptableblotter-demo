@@ -14,14 +14,21 @@ export default () => {
             Predefined Config to enable you to run Searches on the Server..
           </p>
           <p>
-            When a Data Source is selected, the SearchChanged event fires
-            allowing you to perform serach on the server and return data to the
-            Adaptable Blotter via the API.
+            When a Data Source is selected, the SearchChanged event fires -
+            stating what triggered the event and providing full state details
+            (including the selected DataSource).
           </p>
           <p>
-            In this example we have created 4 Data Sources and we also listen to
-            SearchChanged and fire details to the console. Note: a release in
-            the near future will provide parameterised queries for Data Sources.
+            This allows you to perform the necessary search on the server and
+            return data to the Adaptable Blotter via the GridAPi setGridData().
+            (A forthcoming release will provide parameterised queries for Data
+            Sources.)
+          </p>
+          <p>
+            In this example we created 4 Data Sources. We subscribe to
+            SearchChanged event, fetch the relevant data and send to the Blotter
+            via the API. We also ouput the event details to the console for your
+            convenience.
           </p>
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}

@@ -15,23 +15,24 @@ import {
   SearchChangedEventArgs,
 } from 'adaptableblotter/types';
 
-import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../HelperAgGrid';
 import predefinedConfig from './config';
+import { SearchChangedInfo } from 'adaptableblotter/App_Scripts/Api/Events/SearchChanged/SearchChangedInfo';
+import { BlotterSearchState } from 'adaptableblotter/App_Scripts/Api/Events/SearchChanged/BlotterSearchState';
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
 
-  let rowData = JSON.parse(JSON.stringify(json));
-  Helper.MakeAllRecordsColumnsDateProperDates(rowData);
+  //  let rowData = JSON.parse(JSON.stringify(json));
+  // Helper.MakeAllRecordsColumnsDateProperDates(rowData);
 
-  const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
+  const columndefs = helperAgGrid.getTradeSchema();
 
-  const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
+  const gridOptions = helperAgGrid.getGridOptions(columndefs, null);
 
   const blotterOptions: AdaptableBlotterOptions = {
-    primaryKey: 'OrderId',
+    primaryKey: 'tradeId',
     userName: 'Demo User',
     blotterId: 'Data Source Demo',
     licenceKey: Helper.getdemolicencekey(),
@@ -45,7 +46,7 @@ export default () => {
   adaptableblotter.api.eventApi
     .onSearchChanged()
     .Subscribe((sender, searchChangedArgs) =>
-      listenToSearchChangedEvent(searchChangedArgs)
+      listenToSearchChange(adaptableblotter, helperAgGrid, searchChangedArgs)
     );
 
   return {
@@ -53,10 +54,39 @@ export default () => {
     blotterOptions: blotterOptionsClone,
   };
 
-  function listenToSearchChangedEvent(
-    searchChangedEventArgs: SearchChangedEventArgs
+  function listenToSearchChange(
+    blotter: AdaptableBlotter,
+    helperAgGrid: HelperAgGrid,
+    searchChangedArgs: SearchChangedEventArgs
   ) {
-    console.log('search changed event received');
-    console.log(searchChangedEventArgs);
+    let searchChangedInfo: SearchChangedInfo = searchChangedArgs.data[0].id;
+    if (searchChangedInfo.searchChangedTrigger == 'DataSource') {
+      console.log(searchChangedArgs);
+      let searchState: BlotterSearchState =
+        searchChangedArgs.data[0].id.blotterSearchState;
+      if (searchState.dataSource != null) {
+        switch (searchState.dataSource.Name) {
+          case 'Euro Trades':
+            let euroTrades = helperAgGrid.getEuroTrades(500);
+            blotter.api.gridApi.setGridData(euroTrades);
+            break;
+
+          case 'Dollar Trades':
+            let dollarTrades = helperAgGrid.getDollarTrades(200);
+            blotter.api.gridApi.setGridData(dollarTrades);
+            break;
+
+          case 'GBP Trades':
+            let sterlingTrades = helperAgGrid.getGBPTrades(12);
+            blotter.api.gridApi.setGridData(sterlingTrades);
+            break;
+
+          case '2019 Actiivty':
+            let thisYearTrades = helperAgGrid.getThisYearTrades(300);
+            blotter.api.gridApi.setGridData(thisYearTrades);
+            break;
+        }
+      }
+    }
   }
 };

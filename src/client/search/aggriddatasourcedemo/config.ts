@@ -4,23 +4,32 @@ export default {
   DataSource: {
     DataSources: [
       {
-        Name: 'Book 1',
-        Description: 'First Book to use',
+        Name: 'Euro Trades',
+        Description: 'Euro Trades',
       },
       {
-        Name: 'Book 2',
-        Description: 'Second Book to use',
+        Name: 'Dollar Trades',
+        Description: 'Dollar Trades',
       },
       {
-        Name: 'Stored Proc 1',
-        Description: 'First Stored Proc to use',
+        Name: 'GBP Trades',
+        Description: 'Sterling Trades',
+        DataSourceParams: [
+          {
+            Name: 'Hello',
+            DataType: 'String',
+          },
+          {
+            Name: 'Age',
+            DataType: 'Number',
+          },
+        ],
       },
       {
-        Name: 'Stored Proc 2',
-        Description: 'Second Stored Proc to use',
+        Name: '2019 Actiivty',
+        Description: 'Trades Done This Year',
       },
     ],
-    CurrentDataSource: 'Book 1',
   },
   Dashboard: {
     VisibleToolbars: ['DataSource'],

@@ -33,6 +33,10 @@ export default () => {
     blotterId: 'Predefined Config Demo',
     vendorGrid: gridOptions,
     licenceKey: Helper.getdemolicencekey(),
+    layoutOptions: {
+      includeVendorStateInLayouts: true,
+      autoSaveLayouts: true,
+    },
     predefinedConfig: predefinedConfig,
   };
 

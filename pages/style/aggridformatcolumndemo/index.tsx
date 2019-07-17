@@ -25,6 +25,7 @@ export default () => {
             green with a red fore colour, and the 'Order Date' column is
             italicised with a smaller font.
           </p>
+
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
@@ -32,24 +33,31 @@ export default () => {
               target="_blank"
             >
               User Guide
-            </a>
-            ,{' '}
+            </a>{' '}
+            -{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028899391-Format-Column-API"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_runtimestate_formatcolumnstate_.formatcolumnstate.html"
+              target="_blank"
+            >
+              Predefined Config
+            </a>{' '}
+            -{' '}
+            <a
+              href="https://api.adaptableblotter.com/interfaces/_api_interface_iformatcolumnapi_.iformatcolumnapi.html"
               target="_blank"
             >
               Blotter API
-            </a>
-            ,{' '}
+            </a>{' '}
+            -{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360009005111-Format-Column-FAQ"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029742972-Format-Column-FAQ"
               target="_blank"
             >
               FAQ
-            </a>
-            , and{' '}
+            </a>{' '}
+            -{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028638052-Cell-Validation-Videos"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360030944471-Styling-Videos"
               target="_blank"
             >
               Videos

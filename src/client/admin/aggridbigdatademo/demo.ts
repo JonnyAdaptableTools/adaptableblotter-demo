@@ -43,10 +43,10 @@ export default () => {
     blotterId: 'Big Data Demo',
     licenceKey: Helper.getdemolicencekey(),
     vendorGrid: gridOptions,
-    predefinedConfig: predefinedConfig,
     queryOptions: {
       maxColumnValueItemsDisplayed: 1000,
     },
+    predefinedConfig: predefinedConfig,
   };
 
   const blotterOptionsClone = cloneDeep(blotterOptions);

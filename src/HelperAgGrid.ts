@@ -1245,12 +1245,16 @@ export class HelperAgGrid {
     return schema;
   }
 
-  public createTrade(i: number, currency?: string): ITrade {
+  public createTrade(
+    i: number,
+    currency?: string,
+    tradeSeed: number = 1000
+  ): ITrade {
     var price = this.getMeaningfulDouble();
     var bidOfferSpread = this.getRandomItem(this.getBidOfferSpreads());
     var ask = this.roundTo4Dp(price + bidOfferSpread / 2);
     var bid = this.roundTo4Dp(price - bidOfferSpread / 2);
-    var tradeDate = this.generateRandomDateAndTime(-1000, 1000);
+    var tradeDate = this.generateRandomDateAndTime(-tradeSeed, tradeSeed);
     var moodyRating = this.getRandomItem(this.getMoodysRatings());
     let tradeCurrency = currency
       ? currency
@@ -1300,6 +1304,13 @@ export class HelperAgGrid {
     let trades: ITrade[] = [];
     for (let i = 1; i <= count; i++) {
       trades.push(this.createTrade(i, 'EUR'));
+    }
+    return trades;
+  }
+  getThisYearTrades(count: number): ITrade[] {
+    let trades: ITrade[] = [];
+    for (let i = 1; i <= count; i++) {
+      trades.push(this.createTrade(i, '', 50));
     }
     return trades;
   }

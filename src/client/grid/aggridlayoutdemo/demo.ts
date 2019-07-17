@@ -33,11 +33,12 @@ export default () => {
     blotterId: 'Layout Demo',
     licenceKey: Helper.getdemolicencekey(),
     vendorGrid: gridOptions,
-    predefinedConfig: predefinedConfig,
+
     layoutOptions: {
       includeVendorStateInLayouts: true,
       autoSaveLayouts: true,
     },
+    predefinedConfig: predefinedConfig,
   };
 
   const blotterOptionsClone = cloneDeep(blotterOptions);
