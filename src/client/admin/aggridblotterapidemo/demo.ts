@@ -110,8 +110,6 @@ export default () => {
     if (element != null) {
       element.value = '';
       adaptableblotter.api.quickSearchApi.clearQuickSearch();
-
-      adaptableblotter.api.dashboardApi.Minimise();
     }
   }
 

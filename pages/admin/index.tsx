@@ -63,6 +63,10 @@ export default () => {
               <b>Big Data Demo Demo:</b> See the Adaptable Blotter (and ag-Grid)
               with 100,000 rows of client side data.
             </li>
+            <li>
+              <b>Best Ex Demo:</b> Shows how you can use the Adaptable Blotter
+              Audit Log and Calculated Columns to prove Best Ex.
+            </li>
           </ul>
           Click on the buttons below to see a demo for each administrative task.
         </div>
@@ -79,6 +83,7 @@ export default () => {
         </DemoBox>
         <DemoBox href="/admin/aggridblotterapidemo">API demo</DemoBox>
         <DemoBox href="/admin/aggridbigdatademo">Big Data demo</DemoBox>
+        <DemoBox href="/admin/aggridbestexdemo">Best Ex demo</DemoBox>
       </GridLayout>
     </MainPage>
   );

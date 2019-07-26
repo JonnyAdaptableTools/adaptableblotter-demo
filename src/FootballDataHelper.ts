@@ -31,6 +31,9 @@ export class FootballDataHelper {
           params.successCallback(params.data.squad);
         },
       },
+      isRowMaster: function(dataItem) {
+        return dataItem ? dataItem.squad.length > 0 : false;
+      },
       enableRangeSelection: true,
       floatingFilter: true,
       suppressColumnVirtualisation: false,
@@ -207,6 +210,17 @@ export class FootballDataHelper {
       ],
     };
     footballTeams.push(barcelona);
+    // real madrid
+    let realMadrid: IFootballTeam = {
+      name: 'Real Madrid',
+      country: 'Spain',
+      stadium: 'Bernabou',
+      capacity: 857673,
+      yearEstablished: 1906,
+      manager: 'Zinadine Zidane',
+      squad: [],
+    };
+    footballTeams.push(realMadrid);
 
     return footballTeams;
   }

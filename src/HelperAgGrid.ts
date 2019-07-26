@@ -1063,7 +1063,7 @@ export class HelperAgGrid {
     };
   }
 
-  public getTradeSchema(): ColDef[] {
+  private getBasicTradeSchema(): ColDef[] {
     var schema: any[] = [];
     schema.push({
       headerName: 'Trade Id',
@@ -1180,6 +1180,12 @@ export class HelperAgGrid {
       filter: 'text',
       type: 'abColDefString',
     });
+
+    return schema;
+  }
+
+  public getTradeSchema(): ColDef[] {
+    var schema: any[] = this.getBasicTradeSchema();
     schema.push({
       headerName: 'Trade Date',
       field: 'tradeDate',
@@ -1191,6 +1197,14 @@ export class HelperAgGrid {
       valueFormatter: this.shortDateFormatteragGrid,
       filter: 'agDateColumnFilter',
       type: 'abColDefDate',
+    });
+    schema.push({
+      headerName: 'SandP',
+      field: 'sandpRating',
+      editable: true,
+      sortable: true,
+      filter: 'text',
+      type: 'abColDefString',
     });
     schema.push({
       headerName: 'SandP',
@@ -1244,6 +1258,41 @@ export class HelperAgGrid {
     });
     return schema;
   }
+  public getPriceTradeSchema(): ColDef[] {
+    var schema: any[] = this.getBasicTradeSchema();
+
+    schema.push({
+      headerName: 'Markit Ask',
+      field: 'markitAsk',
+      columnGroupShow: 'closed',
+      cellClass: 'number-cell',
+      type: 'abColDefNumber',
+    });
+    schema.push({
+      headerName: 'Markit Bid',
+      field: 'markitBid',
+      columnGroupShow: 'closed',
+      cellClass: 'number-cell',
+      type: 'abColDefNumber',
+    });
+
+    schema.push({
+      headerName: 'Indicative Ask',
+      field: 'indicativeAsk',
+      columnGroupShow: 'closed',
+      cellClass: 'number-cell',
+      type: 'abColDefNumber',
+    });
+    schema.push({
+      headerName: 'Indicative Bid',
+      field: 'indicativeBid',
+      columnGroupShow: 'closed',
+      cellClass: 'number-cell',
+      type: 'abColDefNumber',
+    });
+
+    return schema;
+  }
 
   public createTrade(
     i: number,
@@ -1279,6 +1328,10 @@ export class HelperAgGrid {
       settlementDate: this.addDays(tradeDate, 3),
       bloombergAsk: this.roundTo4Dp(ask + 0.01),
       bloombergBid: this.roundTo4Dp(bid - 0.01),
+      indicativeAsk: this.roundTo4Dp(ask + 0.02),
+      indicativeBid: this.roundTo4Dp(bid - 0.02),
+      markitAsk: this.roundTo4Dp(ask + 0.03),
+      markitBid: this.roundTo4Dp(bid - 0.03),
       percentChange: this.generateRandomNullableDouble(),
       lastUpdated: this.generateRandomDateAndTime(-7, 0),
       lastUpdatedBy: this.getRandomItem(this.getNames()),

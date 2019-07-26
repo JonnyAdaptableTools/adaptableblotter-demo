@@ -18,6 +18,10 @@
   settlementDate: Date;
   bloombergAsk: number;
   bloombergBid: number;
+  indicativeAsk: number;
+  indicativeBid: number;
+  markitAsk: number;
+  markitBid: number;
   percentChange: number;
   lastUpdated: Date;
   lastUpdatedBy: string;

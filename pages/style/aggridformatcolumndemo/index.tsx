@@ -21,9 +21,9 @@ export default () => {
             provide).
           </p>
           <p>
-            This example has 2 Format Columns: The 'Order Id' column is lime
-            green with a red fore colour, and the 'Order Date' column is
-            italicised with a smaller font.
+            This example has 2 Format Columns: The <b>Order Id</b> column is
+            lime green with a red fore colour, and the <b>Order Date</b> column
+            is italicised with a smaller font.
           </p>
 
           <p>
