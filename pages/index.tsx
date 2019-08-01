@@ -16,8 +16,6 @@ export default () => {
       <div
         style={{
           padding: 21,
-          fontSize: '15px',
-          fontFamily: 'Helvetica, Arial, sans-serif',
         }}
       >
         <h3>Adaptable Blotter Demos</h3>

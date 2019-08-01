@@ -19,9 +19,9 @@ export default () => (
         <img
           src={logo}
           style={{
-            padding: 10,
-            maxWidth: '100%',
-            maxHeight: '100%',
+            padding: 0,
+            maxWidth: '90%',
+            maxHeight: '90%',
 
             position: 'absolute',
             top: 0,

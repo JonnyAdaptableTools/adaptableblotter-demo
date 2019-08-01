@@ -51,9 +51,7 @@ export default () => {
     >
       <Logo />
       <div className="sidebar-container" style={{ flex: 1, overflow: 'auto' }}>
-        <h3 style={{ color: 'white', fontWeight: 200, marginTop: 20 }}>
-          Demos
-        </h3>
+        <h3 style={{ color: 'white', fontWeight: 200, marginTop: 5 }}>Demos</h3>
         <div
           style={{
             padding: '10px 20px',
@@ -67,7 +65,7 @@ export default () => {
             style={{
               padding: '2px 4px',
               cursor: 'pointer',
-              marginBottom: '20px',
+              marginBottom: '10px',
             }}
             onClick={() => {
               localStorage.clear();

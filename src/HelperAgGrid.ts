@@ -870,7 +870,7 @@ export class HelperAgGrid {
     return schema;
   }
 
-  private getOrderColumnDef(): any {
+  private getOrderColumnDef(): ColDef {
     return {
       headerName: 'Order Id',
       field: 'OrderId',
@@ -881,17 +881,18 @@ export class HelperAgGrid {
       type: 'abColDefNumber',
     };
   }
-  private getCustRefDef(): any {
+  private getCustRefDef(): ColDef {
     return {
       headerName: 'Cust. Ref',
       field: 'CustomerReference',
       editable: true,
       filter: true,
       sortable: true,
+      resizable: true,
       type: 'abColDefString',
     };
   }
-  private getContactDef(): any {
+  private getContactDef(): ColDef {
     return {
       headerName: 'Contact',
       field: 'ContactName',
@@ -902,7 +903,7 @@ export class HelperAgGrid {
       type: 'abColDefString',
     };
   }
-  private getEmployeeDef(): any {
+  private getEmployeeDef(): ColDef {
     return {
       headerName: 'Employee',
       field: 'Employee',
@@ -913,7 +914,7 @@ export class HelperAgGrid {
       type: 'abColDefString',
     };
   }
-  private getOrderDateDef(): any {
+  private getOrderDateDef(): ColDef {
     return {
       headerName: 'Order Date',
       field: 'OrderDate',
@@ -926,7 +927,7 @@ export class HelperAgGrid {
       type: 'abColDefDate',
     };
   }
-  private getInvoicedDef(): any {
+  private getInvoicedDef(): ColDef {
     return {
       headerName: 'Invoiced',
       field: 'InvoicedCost',
@@ -938,7 +939,7 @@ export class HelperAgGrid {
       type: 'abColDefNumber',
     };
   }
-  private getOrderCostDef(): any {
+  private getOrderCostDef(): ColDef {
     return {
       headerName: 'Order Cost',
       field: 'OrderCost',

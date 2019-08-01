@@ -3,8 +3,27 @@ body,
 #__next {
   height: 100%;
 }
-html {
-  font-family: Helvetica, Arial, sans-serif;
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+a:link {
+  color: steelblue;
+  text-decoration: none;
+}
+
+a:visited {
+  color: green;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
 }
 
 html.ab--theme-dark body {
@@ -32,7 +51,6 @@ h5 {
   background-color: #f7f7f7;
   margin-bottom: 10px;
   padding: 7px;
-  font-family: Helvetica, Arial, sans-serif;
   font-size: smaller;
 }
 .ab--theme-dark .demodescription {
@@ -55,4 +73,5 @@ h5 {
   padding: 20px;
   flex: 1;
   overflow: auto;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }

@@ -63,7 +63,7 @@ export default () => {
         <DemoBox href="/style/aggridconditionalstyledemo">
           Conditional Style demo
         </DemoBox>
-        <DemoBox href="/style/aggridcformatcolumndemo">
+        <DemoBox href="/style/aggridformatcolumndemo">
           Format Column demo
         </DemoBox>
         <DemoBox href="/style/aggridflashingcelldemo">
