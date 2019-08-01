@@ -60,8 +60,6 @@ export class agGridMultipleGridDemo {
       Dashboard: {
         VisibleToolbars: ['Export', 'Layout'],
         VisibleButtons: ['Dashboard', 'QuickSearch', 'ColumnChooser'],
-        Zoom: 0.8,
-        UseSingleColourForButtons: true,
         ShowSystemStatusButton: false,
       },
     };
@@ -70,8 +68,6 @@ export class agGridMultipleGridDemo {
       Dashboard: {
         VisibleToolbars: ['QuickSearch', 'ColumnFilter'],
         VisibleButtons: ['Dashboard', 'AdvancedSearch'],
-        Zoom: 0.8,
-        UseSingleColourForButtons: true,
         ShowSystemStatusButton: false,
       },
     };

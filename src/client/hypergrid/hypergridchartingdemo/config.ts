@@ -1,5 +1,4 @@
 import { PredefinedConfig } from 'adaptableblotter/types';
-import { PieChartDefinition } from 'adaptableblotter/App_Scripts/PredefinedConfig/RunTimeState/ChartState';
 
 export default {
   Dashboard: {

@@ -48,8 +48,6 @@ let json = {
       'ColumnChooser',
       'AdvancedSearch',
     ],
-    Zoom: '0.9',
-    UseSingleColourForButtons: true,
     DashboardVisibility: 'Minimised',
     ShowSystemStatusButton: false,
   },

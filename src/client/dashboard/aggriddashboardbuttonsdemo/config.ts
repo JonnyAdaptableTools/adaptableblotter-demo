@@ -10,7 +10,6 @@ export default {
       'Alert',
       'Reminder',
     ],
-    UseSingleColourForButtons: false,
     ShowSystemStatusButton: false,
     ShowAboutButton: false,
     ShowColumnsDropdown: false,

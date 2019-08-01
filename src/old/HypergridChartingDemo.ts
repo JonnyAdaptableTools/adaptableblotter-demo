@@ -89,7 +89,6 @@ let json = {
       'ColumnChooser',
       'AdvancedSearch',
     ],
-    Zoom: '0.9',
   },
   Chart: {
     CurrentChartName: 'Employee Sales',

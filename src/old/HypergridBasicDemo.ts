@@ -79,6 +79,5 @@ let json = {
       'ColumnChooser',
       'BulkUpdate',
     ],
-    Zoom: '1',
   },
 };

@@ -47,8 +47,6 @@ let json = {
       'ColumnChooser',
       'AdvancedSearch',
     ],
-    Zoom: 0.9,
-    UseSingleColourForButtons: true,
     ShowSystemStatusButton: false,
   },
   SmartEdit: {

@@ -3,7 +3,6 @@ import { PredefinedConfig } from 'adaptableblotter/types';
 export default {
   Dashboard: {
     VisibleToolbars: ['Chart'],
-    Zoom: '0.9',
   },
   Theme: {
     CurrentTheme: 'Dark Theme',

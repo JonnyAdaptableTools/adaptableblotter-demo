@@ -3,7 +3,6 @@ import { PredefinedConfig } from 'adaptableblotter/types';
 export default {
   Dashboard: {
     VisibleToolbars: ['SmartEdit', 'Export', 'Chart'],
-    Zoom: '0.9',
   },
   Chart: {
     CurrentChartName: 'Population Stats',

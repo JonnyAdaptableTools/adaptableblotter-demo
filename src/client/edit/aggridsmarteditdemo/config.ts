@@ -18,6 +18,5 @@ export default {
   },
   Dashboard: {
     VisibleToolbars: ['SmartEdit'],
-    UseSingleColourForButtons: false,
   },
 } as PredefinedConfig;
