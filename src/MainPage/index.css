@@ -6,6 +6,12 @@ body,
 
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+p {
+  line-height: 18px; /* within paragraph */
+  margin-bottom: 10px; /* between paragraphs */
 }
 
 a:link {
@@ -51,7 +57,6 @@ h5 {
   background-color: #f7f7f7;
   margin-bottom: 10px;
   padding: 7px;
-  font-size: smaller;
 }
 .ab--theme-dark .demodescription {
   background: #272b30;
