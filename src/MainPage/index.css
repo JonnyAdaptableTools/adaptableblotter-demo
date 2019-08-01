@@ -3,6 +3,9 @@ body,
 #__next {
   height: 100%;
 }
+html {
+  font-family: Helvetica, Arial, sans-serif;
+}
 
 .number-cell {
   text-align: right;
@@ -25,6 +28,7 @@ h5 {
   background-color: #f7f7f7;
   margin-bottom: 10px;
   padding: 7px;
+  font-size: smaller;
 }
 .ab--theme-dark .demodescription {
   background: #272b30;

@@ -205,11 +205,12 @@ export class FootballDataHelper {
         {
           age: 32,
           name: 'Lionel Messi',
-          position: 'Striker',
+          position: 'Forward',
         },
       ],
     };
     footballTeams.push(barcelona);
+
     // real madrid
     let realMadrid: IFootballTeam = {
       name: 'Real Madrid',
