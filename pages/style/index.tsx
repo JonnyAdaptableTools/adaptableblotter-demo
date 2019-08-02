@@ -34,10 +34,6 @@ export default () => {
           </p>
           <ul>
             <li>
-              <b>Theme:</b> Style the entire grid with our Light or Dark themes,
-              or with a theme that you provide yourself.
-            </li>
-            <li>
               <b>Conditional Style:</b> Style cells, columns and rows in
               striking ways when their data matches rules that you create.
             </li>
@@ -55,11 +51,17 @@ export default () => {
             </li>
           </ul>
           Click on the buttons below to see a demo for each styling function.
+          <br />
+          If you want to theme the actual Adaptable Blotter itself (e.g. change
+          the colours, look and feel then please refer to the{' '}
+          <a href="./theme" target="_self">
+            Theming
+          </a>{' '}
+          section).
         </div>
       }
     >
       <GridLayout>
-        <DemoBox href="/style/aggridthemingdemo">Theming demo</DemoBox>
         <DemoBox href="/style/aggridconditionalstyledemo">
           Conditional Style demo
         </DemoBox>

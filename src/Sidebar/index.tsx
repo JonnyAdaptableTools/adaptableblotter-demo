@@ -151,9 +151,6 @@ export default () => {
             </Link>
           }
         >
-          <Link href="/style/aggridthemingdemo">
-            <a>Theme</a>
-          </Link>
           <Link href="/style/aggridconditionalstyledemo">
             <a>Conditional Style</a>
           </Link>
@@ -165,6 +162,17 @@ export default () => {
           </Link>
           <Link href="/style/aggridpercentbardemo">
             <a>Percent Bar</a>
+          </Link>
+        </Category>
+        <Category
+          title={
+            <Link href="/style">
+              <a>Theming</a>
+            </Link>
+          }
+        >
+          <Link href="/theme/aggriddarkthemedemo">
+            <a>Dark Theme</a>
           </Link>
         </Category>
         <Category

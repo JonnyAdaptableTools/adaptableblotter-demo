@@ -4,25 +4,35 @@ import DynamicDemoPage from '../../../src/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/style/aggridthemingdemo')}
-      pageTitle={'AdaptableBlotter.JS ag-Grid Theming Demo'}
+      demo={import('../../../src/client/theme/aggriddarkthemedemo')}
+      pageTitle={'AdaptableBlotter.JS ag-Grid Dark Theme Demo'}
       description={
         <>
-          <h4>Theming Demo</h4>
+          <h4>Dark Theme Demo</h4>
           <p>
-            You can style and theme the Adaptable Blotter so that it matches
-            precisely your corporate styles and colours.
+            This demo shows how you can theme the Adaptable Blotter using the
+            shipped 'Dark Theme'.
           </p>
           <p>
-            We currently use Bootstrap 3 and you can use any Bootstrap theme you
-            want instead. A release in the near future will allow for full style
-            management entirely through css and without needing to use Bootstrap
-            at all.
+            When you use this theme (or the Light Theme) the Adaptable Blotter
+            will automatically update the theme of the vendor grid to match your
+            choice.
           </p>
           <p>
-            The Blotter ships with 2 themes ('Light' and 'Dark'). This example
-            shows the Adaptable Blotter with the 'Dark Theme' selected - use the
-            dropdown in the Theme toolbar to change the selection.
+            The Adaptable Blotter manages themeing through CSS variables. We
+            created the Dark Theme just by setting a few properties (mainly
+            colours). You can see the css code{' '}
+            <a
+              href="https://github.com/AdaptableTools/adaptableblotter/blob/dev/packages/adaptableblotter/App_Scripts/themes/dark.scss"
+              target="_blank"
+            >
+              here
+            </a>
+            .
+          </p>
+          <p>
+            You can create your own themes based on this or others (see the
+            other demos in this section).
           </p>
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
