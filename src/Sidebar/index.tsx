@@ -166,7 +166,7 @@ export default () => {
         </Category>
         <Category
           title={
-            <Link href="/style">
+            <Link href="/theme">
               <a>Theming</a>
             </Link>
           }

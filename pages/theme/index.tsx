@@ -30,7 +30,14 @@ export default () => {
           <h4>Theming the Adaptable Blotter</h4>
           <p>
             You can theme (ie. set up the look and feel of) the Adaptable
-            Blotter entirely through CSS Variables.{' '}
+            Blotter entirely through{' '}
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties"
+              target="_blank"
+            >
+              CSS variables
+            </a>
+            .
           </p>
           <p>
             You are able to change the font and entire colour scheme by setting

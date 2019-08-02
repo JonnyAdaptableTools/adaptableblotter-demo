@@ -19,8 +19,14 @@ export default () => {
             choice.
           </p>
           <p>
-            The Adaptable Blotter manages themeing through CSS variables. We
-            created the Dark Theme just by setting a few properties (mainly
+            The Adaptable Blotter manages theming through{' '}
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties"
+              target="_blank"
+            >
+              CSS variables
+            </a>
+            . We created the Dark Theme just by setting a few properties (mainly
             colours). You can see the css code{' '}
             <a
               href="https://github.com/AdaptableTools/adaptableblotter/blob/dev/packages/adaptableblotter/App_Scripts/themes/dark.scss"
