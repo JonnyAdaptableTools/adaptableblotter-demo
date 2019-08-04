@@ -1,0 +1,21 @@
+html.ab--theme-wimbledon-theme {
+  font-family: Helvetica, Arial, sans-serif;
+  --ab-theme-loaded: 777;
+
+  --ab-dashboard__background: gray;
+  --ab-cmp-input--disabled__background: green;
+
+  --ab-color-defaultbackground: gray;
+  --ab-color-text-on-defaultbackground: purple;
+
+  --ab-color-primary: purple;
+  --ab-color-primarylight: green;
+  --ab-color-primarydark: blue;
+  --ab-color-text-on-primary: white;
+
+  --ab-color-secondary: green;
+  --ab-color-secondarylight: #07456d;
+  --ab-color-secondarydark: purple;
+  --ab-color-text-on-secondary: purple;
+  --ab-color-text-on-secondarylight: white;
+}

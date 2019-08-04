@@ -16,17 +16,17 @@ export default {
       */
       {
         Style: {
-          //     ForeColor: 'yellow',
-          //    BackColor: 'orange',
-          //   FontWeight: 'Bold',
+          //  ForeColor: 'yellow',
+          //  BackColor: 'orange',
+          //  FontWeight: 'Bold',
           ClassName: 'evenRowStyle',
         },
         RowType: 'Even',
       },
       {
         Style: {
-          ForeColor: 'purple',
-          BackColor: 'lightgreen',
+          ForeColor: 'lightyellow',
+          BackColor: 'brown',
           FontStyle: 'Italic',
           //  ClassName: 'oddRowStyle',
         },

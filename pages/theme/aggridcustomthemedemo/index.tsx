@@ -9,11 +9,9 @@ export default () => {
       description={
         <>
           <h4>Custom Theme Demo</h4>
-          <p>To do</p>
           <p>
-            When you use this theme (or the Light Theme) the Adaptable Blotter
-            will automatically update the theme of the vendor grid to match your
-            choice.
+            The Adaptable Blotter ships with 2 themes - Dark or Light. But you
+            can create your own yourself.
           </p>
           <p>
             The Adaptable Blotter manages theming through{' '}
@@ -23,19 +21,17 @@ export default () => {
             >
               CSS variables
             </a>
-            ; we created the Dark Theme just by setting a few properties (mainly
-            colours). You can see the css code{' '}
-            <a
-              href="https://github.com/AdaptableTools/adaptableblotter/blob/dev/packages/adaptableblotter/App_Scripts/themes/dark.scss"
-              target="_blank"
-            >
-              here
-            </a>
-            .
+            . We provide a number of properties that you can set to create your
+            own theme.{' '}
           </p>
           <p>
-            You can create your own themes based on this or others (see the
-            other demos in this section).
+            Most are colour based but you have control also over button shapes
+            and sizes for example.
+          </p>
+          <p>
+            In this example we have created a 'Wimbledon Theme' that styles the
+            Blotter purple and green (and uses row styles to similarly colour
+            the grid).
           </p>
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}

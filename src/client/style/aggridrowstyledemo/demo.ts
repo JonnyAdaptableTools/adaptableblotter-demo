@@ -1,7 +1,6 @@
 import * as Helper from '../../../Helper';
 import AdaptableBlotter from 'adaptableblotter/agGrid';
-import 'adaptableblotter/base.css';
-import 'adaptableblotter/themes/light.css';
+import 'adaptableblotter/index.css';
 import 'adaptableblotter/themes/dark.css';
 import './rowstyle.css';
 
