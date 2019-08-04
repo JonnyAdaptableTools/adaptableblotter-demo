@@ -163,6 +163,9 @@ export default () => {
           <Link href="/style/aggridpercentbardemo">
             <a>Percent Bar</a>
           </Link>
+          <Link href="/style/aggridrowstyledemo">
+            <a>Row Style</a>
+          </Link>
         </Category>
         <Category
           title={

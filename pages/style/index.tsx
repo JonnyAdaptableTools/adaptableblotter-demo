@@ -49,6 +49,10 @@ export default () => {
               <b>Percent Bar:</b> Show numeric columns as a bar, that is filled
               according to the cell value as a %.
             </li>
+            <li>
+              <b>Row Styles:</b> Choose to style rows in the Adaptable Blotter
+              using your preferred colour scheme.
+            </li>
           </ul>
           Click on the buttons below to see a demo for each styling function.
           <br />
@@ -72,6 +76,7 @@ export default () => {
           Flashing Cell demo
         </DemoBox>
         <DemoBox href="/style/aggridpercentbardemo">Percent Bar demo</DemoBox>
+        <DemoBox href="/style/aggridrowstyledemo">Row Style demo</DemoBox>
       </GridLayout>
     </MainPage>
   );

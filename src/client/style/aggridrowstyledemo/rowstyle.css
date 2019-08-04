@@ -1,0 +1,15 @@
+.evenRowStyle {
+  background: lightgrey !important;
+  font-weight: normal !important;
+  font-style: italic !important;
+}
+.oddRowStyle {
+  background: lightgreen !important;
+  font-weight: normal !important;
+  font-style: italic !important;
+}
+.allRowStyle {
+  background: pink !important;
+  font-weight: normal !important;
+  font-style: italic !important;
+}
