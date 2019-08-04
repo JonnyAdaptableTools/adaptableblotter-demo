@@ -1,10 +1,11 @@
 .evenRowStyle {
-  background: lightgrey !important;
+  background: purple !important;
+  color: lightgreen;
   font-weight: normal !important;
-  font-style: italic !important;
+  font-style: bold !important;
 }
 .oddRowStyle {
-  background: lightgreen !important;
+  background: brown !important;
   font-weight: normal !important;
   font-style: italic !important;
 }

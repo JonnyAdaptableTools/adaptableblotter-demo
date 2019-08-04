@@ -164,7 +164,7 @@ export default () => {
             <a>Percent Bar</a>
           </Link>
           <Link href="/style/aggridrowstyledemo">
-            <a>Row Style</a>
+            <a>Row Styles</a>
           </Link>
         </Category>
         <Category

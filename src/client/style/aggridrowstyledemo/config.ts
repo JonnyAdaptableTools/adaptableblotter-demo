@@ -1,9 +1,6 @@
 import { PredefinedConfig } from 'adaptableblotter/types';
 
 export default {
-  Dashboard: {
-    VisibleButtons: ['PercentBar'],
-  },
   UserInterface: {
     RowStyles: [
       /*
@@ -21,17 +18,17 @@ export default {
         Style: {
           //     ForeColor: 'yellow',
           //    BackColor: 'orange',
-          FontWeight: 'Bold',
+          //   FontWeight: 'Bold',
           ClassName: 'evenRowStyle',
         },
         RowType: 'Even',
       },
       {
         Style: {
-          ForeColor: 'cyan',
-          BackColor: 'brown',
+          ForeColor: 'purple',
+          BackColor: 'lightgreen',
           FontStyle: 'Italic',
-          ClassName: 'oddRowStyle',
+          //  ClassName: 'oddRowStyle',
         },
         RowType: 'Odd',
       },

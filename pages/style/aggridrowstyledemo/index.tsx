@@ -9,16 +9,41 @@ export default () => {
       description={
         <div>
           <h4>Row Style Demo</h4>
-          <p>To Do</p>
           <p>
-            Percent Bars work for both positive and negative values and you can
-            choose whether to display the actual value. If the column is
-            editable, then you can still edit it as normal.
+            By default ag-Grid will display according to the{' '}
+            <a
+              href="https://www.ag-grid.com/javascript-grid-themes-provided/"
+              target="_blank"
+            >
+              provided theme
+            </a>{' '}
+            you use (e.g. Balham, Blue, Blue etc.)
           </p>
           <p>
-            In this example we created 3 Percent Bars. The 'Change Last Order'
-            Percent Bar automatically shows the negative values, while the 'Item
-            Cost' one displays cell values as well as uses a non default colour.
+            However you are able to style the rows in the ag-Grid using the
+            RowStyles property of{' '}
+            <a
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_designtimestate_userinterfacestate_.userinterfacestate.html"
+              target="_blank"
+            >
+              User Interface State
+            </a>
+            .
+          </p>
+          <p>
+            The <i>RowStyles</i> array can take up to 3 properties: 'All' (which
+            is used for all rows and will ignore other properties), 'Even' or
+            'Odd'; for the last 2 properties you can supply either, both or
+            none.
+          </p>
+          <p>
+            In this example we have set an Even Row style (using a classname
+            property - we need to make sure that we provide a css style of that
+            name) and an Odd Row Style that uses the{' '}
+            <a href="" target="_blank">
+              IStyle
+            </a>{' '}
+            object that we populate.
           </p>
         </div>
       }
