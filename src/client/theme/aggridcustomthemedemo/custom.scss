@@ -1,0 +1,23 @@
+html.ab--theme-custom {
+  //font-size: 50;
+
+  font-family: Helvetica, Arial, sans-serif;
+  --ab-theme-loaded: 777; // this custom variable is here to allow checking if the theme was correctly loaded by the host app
+
+  --ab-dashboard__background: red;
+  --ab-cmp-input--disabled__background: #b6b7b8;
+
+  --ab-color-defaultbackground: #3e444c;
+  --ab-color-text-on-defaultbackground: #f7f7f7;
+
+  --ab-color-primary: #262d2f;
+  --ab-color-primarylight: #2d3537;
+  --ab-color-primarydark: #1c2021;
+  --ab-color-text-on-primary: #f7f7f7;
+
+  --ab-color-secondary: #f7f7f7;
+  --ab-color-secondarylight: #07456d;
+  --ab-color-secondarydark: #f7f7f7;
+  --ab-color-text-on-secondary: #262d2f;
+  --ab-color-text-on-secondarylight: #f7f7f7;
+}

@@ -174,6 +174,9 @@ export default () => {
           <Link href="/theme/aggriddarkthemedemo">
             <a>Dark Theme</a>
           </Link>
+          <Link href="/theme/aggridcustomthemedemo">
+            <a>Custom Theme</a>
+          </Link>
         </Category>
         <Category
           title={

@@ -4,16 +4,12 @@ import DynamicDemoPage from '../../../src/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/theme/aggriddarkthemedemo')}
-      pageTitle={'AdaptableBlotter.JS ag-Grid Dark Theme Demo'}
+      demo={import('../../../src/client/theme/aggridcustomthemedemo')}
+      pageTitle={'AdaptableBlotter.JS ag-Grid Custom Theme Demo'}
       description={
         <>
-          <h4>Dark Theme Demo</h4>
-          <p>
-            This demo shows how you can theme the Adaptable Blotter using the
-            shipped 'Dark Theme'. You can select this as your theme in the Theme
-            State.
-          </p>
+          <h4>Custom Theme Demo</h4>
+          <p>To do</p>
           <p>
             When you use this theme (or the Light Theme) the Adaptable Blotter
             will automatically update the theme of the vendor grid to match your

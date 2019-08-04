@@ -60,6 +60,7 @@ export default () => {
     >
       <GridLayout>
         <DemoBox href="/theme/aggriddarkthemedemo">Dark Theme demo</DemoBox>
+        <DemoBox href="/theme/aggridcustomthemedemo">Custom Theme demo</DemoBox>
       </GridLayout>
     </MainPage>
   );
