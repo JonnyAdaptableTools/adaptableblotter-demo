@@ -105,14 +105,17 @@ export default () => {
           <Link href="/search/aggridadvancedsearchdemo">
             <a>Advanced Search</a>
           </Link>
+          <Link href="/search/aggridquickfilterdemo">
+            <a>Quick Filter Bar</a>
+          </Link>{' '}
           <Link href="/search/aggridcolumnfiltersdemo">
             <a>Column Filters</a>
           </Link>
           <Link href="/search/aggriduserfiltersdemo">
             <a>User Filters</a>
           </Link>
-          <Link href="/search/aggridquickfilterdemo">
-            <a>Quick Filter</a>
+          <Link href="/search/aggridnamedfiltersdemo">
+            <a>Named Filters</a>
           </Link>
           <Link href="/search/aggriddatasourcedemo">
             <a>Data Source Selector</a>

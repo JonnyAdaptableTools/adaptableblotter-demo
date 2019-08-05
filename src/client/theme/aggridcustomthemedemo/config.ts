@@ -20,7 +20,7 @@ export default {
       {
         Style: {
           ForeColor: 'white',
-          BackColor: 'purple',
+          BackColor: '#462376',
           FontStyle: 'Bold',
         },
         RowType: 'Even',
@@ -28,7 +28,7 @@ export default {
       {
         Style: {
           ForeColor: 'white',
-          BackColor: 'green',
+          BackColor: '#0e6537',
           FontStyle: 'Italic',
         },
         RowType: 'Odd',

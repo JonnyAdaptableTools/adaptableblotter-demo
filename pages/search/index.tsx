@@ -43,6 +43,10 @@ export default () => {
               precise requirements.
             </li>
             <li>
+              <b>Quick Filter:</b> The area under the Column Header is called
+              the Quick Filter, which is a shortcut to the Column Filter.
+            </li>{' '}
+            <li>
               <b>Column Filters:</b> Create saveable column filters to restrict
               which cells are shown for a column.
             </li>
@@ -51,8 +55,9 @@ export default () => {
               and then re-used in queries in other functions.
             </li>
             <li>
-              <b>Quick Filter:</b> The area under the Column Header is called
-              the Quick Filter, which is a shortcut to the Column Filter.
+              <b>Named Filters:</b> Filters that you provide at design time
+              which evaluate according to a predicate that you provide - used
+              when you have very complicated filters.
             </li>
             <li>
               <b>Data Source Selector:</b> Dropdown populated through Config

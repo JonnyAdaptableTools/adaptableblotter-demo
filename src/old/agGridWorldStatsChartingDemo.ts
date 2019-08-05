@@ -39,7 +39,7 @@ export class agGridWorldStatsChartingDemo {
 
 let json = {
   Theme: {
-    CurrentTheme: 'Light Theme',
+    CurrentTheme: 'light',
   },
   Dashboard: {
     VisibleToolbars: ['SmartEdit', 'Export', 'Chart', 'Theme'],

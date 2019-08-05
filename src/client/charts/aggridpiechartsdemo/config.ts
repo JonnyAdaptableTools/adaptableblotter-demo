@@ -5,7 +5,7 @@ export default {
     VisibleToolbars: ['Chart'],
   },
   Theme: {
-    CurrentTheme: 'Dark Theme',
+    CurrentTheme: 'dark',
   },
   Chart: {
     CurrentChartName: 'Population Pie Chart',

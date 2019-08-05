@@ -2,7 +2,7 @@ import { PredefinedConfig } from 'adaptableblotter/types';
 
 export default {
   Theme: {
-    CurrentTheme: 'Dark Theme',
+    CurrentTheme: 'dark',
   },
   Dashboard: {
     VisibleToolbars: ['AdvancedSearch', 'QuickSearch', 'Theme'],

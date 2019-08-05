@@ -37,7 +37,7 @@ export default () => {
 
   const blotterOptionsClone = cloneDeep(blotterOptions);
   let adaptableblotter = new AdaptableBlotter(blotterOptions);
-  adaptableblotter.api.systemStatusApi.setRedSystemStatus(
+  adaptableblotter.api.systemStatusApi.setErrorSystemStatus(
     'Server about to restart'
   );
 

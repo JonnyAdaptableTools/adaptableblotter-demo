@@ -37,7 +37,7 @@ export class agGridThemingDemo {
 
 let json = {
   Theme: {
-    CurrentTheme: 'Dark Theme',
+    CurrentTheme: 'dark',
   },
   Dashboard: {
     VisibleToolbars: ['SmartEdit', 'Export', 'BulkUpdate'],

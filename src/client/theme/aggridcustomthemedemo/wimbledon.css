@@ -3,19 +3,19 @@ html.ab--theme-wimbledon-theme {
   --ab-theme-loaded: 777;
 
   --ab-dashboard__background: gray;
-  --ab-cmp-input--disabled__background: green;
+  --ab-cmp-input--disabled__background: #0e6537;
 
   --ab-color-defaultbackground: gray;
-  --ab-color-text-on-defaultbackground: purple;
+  --ab-color-text-on-defaultbackground: #462376;
 
-  --ab-color-primary: purple;
-  --ab-color-primarylight: green;
+  --ab-color-primary: #462376;
+  --ab-color-primarylight: #0e6537;
   --ab-color-primarydark: blue;
   --ab-color-text-on-primary: white;
 
-  --ab-color-secondary: green;
+  --ab-color-secondary: #0e6537;
   --ab-color-secondarylight: #07456d;
-  --ab-color-secondarydark: purple;
-  --ab-color-text-on-secondary: purple;
+  --ab-color-secondarydark: #462376;
+  --ab-color-text-on-secondary: #462376;
   --ab-color-text-on-secondarylight: white;
 }
