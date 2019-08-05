@@ -45,7 +45,7 @@ export default () => {
     userFunctions: {
       actionColumnFunctions: [
         {
-          name: 'RenderActionFunc',
+          name: 'RenderMultiplyButtonFunc',
           func: params => {
             let itemCost: number = params.data.ItemCost;
             if (params.data.Employee == 'Margaret Peacock') {

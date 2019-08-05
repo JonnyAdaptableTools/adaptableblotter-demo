@@ -6,7 +6,7 @@ export default {
       {
         ColumnId: 'Multiply',
         ButtonText: 'Click',
-        RenderFunctionName: 'RenderActionFunc',
+        RenderFunctionName: 'RenderMultiplyButtonFunc',
       },
       {
         ColumnId: 'Plus',
