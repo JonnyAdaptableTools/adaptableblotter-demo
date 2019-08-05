@@ -1,7 +1,7 @@
 import * as Helper from '../../../Helper';
 
 import AdaptableBlotter from 'adaptableblotter/agGrid';
-import 'adaptableblotter/base.css';
+import 'adaptableblotter/index.css';
 import './wimbledon.css';
 
 import 'ag-grid-community/dist/styles/ag-grid.css';

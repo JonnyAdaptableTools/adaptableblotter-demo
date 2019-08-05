@@ -7,8 +7,7 @@ import {
 
 import * as Helper from '../../../Helper';
 
-import 'adaptableblotter/base.css';
-import 'adaptableblotter/themes/light.css';
+import 'adaptableblotter/index.css';
 
 import '../../../../ExtLibs/hypergrid/fin-hypergrid';
 
