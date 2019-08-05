@@ -203,6 +203,9 @@ export default () => {
           <Link href="/column/aggridcolumninfodemo">
             <a>Column Info</a>
           </Link>
+          <Link href="/column/aggridactioncolumnsdemo">
+            <a>Action Columns</a>
+          </Link>
         </Category>
         <Category
           title={
@@ -323,6 +326,7 @@ export default () => {
           <Link href="/admin/aggridbigdatademo">
             <a>Big Data</a>
           </Link>
+
           {/* 
           <Link href="/admin/aggridbestexdemo">
             <a>Best Ex</a>

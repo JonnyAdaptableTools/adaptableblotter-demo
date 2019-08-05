@@ -17,7 +17,7 @@ export default () => {
             grid (which is in this example that uses ag-Grid) using some
             football teams.
           </p>
-          <p>Click on the team to expland to see the players.</p>
+          <p>Click on the team to expand to see the players.</p>
         </div>
       }
     />

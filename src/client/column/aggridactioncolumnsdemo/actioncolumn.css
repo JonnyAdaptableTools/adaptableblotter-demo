@@ -1,0 +1,15 @@
+.doublebutton {
+  background-color: lightgreen;
+  border: none;
+  color: black;
+  border-radius: 12px;
+
+  font-style: italic;
+}
+.treblebutton {
+  background-color: lightblue;
+  border: none;
+  color: black;
+  border-radius: 12px;
+  margin: 0px;
+}

@@ -51,6 +51,11 @@ export default () => {
               <b>Column Info:</b> Find out all the objects associated with a
               column with a single lookup.
             </li>
+            <li>
+              <b>Action Column:</b> Specify a column with a button (that you can
+              render) and listen to the clicked event to perform any logic you
+              reqiure.
+            </li>
           </ul>
           Click on the buttons below to see a demo for each edit function.
         </div>
@@ -67,6 +72,9 @@ export default () => {
           Column Category demo
         </DemoBox>
         <DemoBox href="/column/aggridcolumninfodemo">Column Info demo</DemoBox>
+        <DemoBox href="/column/aggridactioncolumnsdemo">
+          Action Column demo
+        </DemoBox>
       </GridLayout>
     </MainPage>
   );

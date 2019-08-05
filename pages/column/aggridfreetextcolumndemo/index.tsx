@@ -4,7 +4,7 @@ import DynamicDemoPage from '../../../src/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/columns/aggridfreetextcolumndemo')}
+      demo={import('../../../src/client/column/aggridfreetextcolumndemo')}
       pageTitle={'Free Text Column Demo'}
       description={
         <div>

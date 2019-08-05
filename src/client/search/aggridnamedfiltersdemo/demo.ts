@@ -41,9 +41,9 @@ export default () => {
       namedFilterFunctions: [
         {
           name: 'High Order',
-          func: (_record, _columnId, cellValue) => {
-            let invoiced: number = _record.data.InvoicedCost;
-            let itemCount: number = _record.data.ItemCount;
+          func: record => {
+            let invoiced: number = record.data.InvoicedCost;
+            let itemCount: number = record.data.ItemCount;
             return invoiced > 1000 && itemCount > 10 ? true : false;
           },
         },
