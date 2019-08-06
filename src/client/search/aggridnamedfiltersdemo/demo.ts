@@ -35,7 +35,6 @@ export default () => {
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };
-
   blotterOptions.advancedOptions = {
     userFunctions: {
       namedFilterFunctions: [
@@ -50,8 +49,9 @@ export default () => {
         {
           name: 'New Starter',
           func: (_record, _columnId, cellValue) => {
-            // here we would look up in some internal
-            return isNewEmployee(cellValue) ? true : false;
+            return getEmployeeStatusFromCRMService(cellValue) == 'New'
+              ? true
+              : false;
           },
         },
         {
@@ -74,11 +74,11 @@ export default () => {
     blotterOptions: blotterOptionsClone,
   };
 
-  function isNewEmployee(employeeName: string): boolean {
+  function getEmployeeStatusFromCRMService(employeeName: string): string {
     return employeeName == 'Robert King' ||
       employeeName == 'Laura Callahan' ||
       employeeName == 'Andrew Fuller'
-      ? true
-      : false;
+      ? 'New'
+      : 'Existing';
   }
 };
