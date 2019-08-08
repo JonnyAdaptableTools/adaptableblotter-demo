@@ -19,7 +19,7 @@ export interface IFootballPlayer {
 export class FootballDataHelper {
   public getMasterGridOptionsFootball(): GridOptions {
     return {
-      columnDefs: this.getFootballTeamSchema(),
+      columnDefs: this.getMasterFootballSchema(),
       rowData: this.getFootballData(),
       masterDetail: true,
       detailCellRendererParams: {
@@ -49,7 +49,7 @@ export class FootballDataHelper {
     };
   }
 
-  public getFootballTeamSchema(): ColDef[] {
+  public getMasterFootballSchema(): ColDef[] {
     var schema: any[] = [];
     schema.push({
       headerName: 'Team',
@@ -101,7 +101,7 @@ export class FootballDataHelper {
 
   public getDetailGridOptionsFootball(): GridOptions {
     return {
-      columnDefs: this.getFootballPlayerSchema(),
+      columnDefs: this.getDetailsFootballSchema(),
       columnTypes: {
         abColDefNumber: {},
         abColDefString: {},
@@ -112,7 +112,7 @@ export class FootballDataHelper {
     };
   }
 
-  public getFootballPlayerSchema(): ColDef[] {
+  public getDetailsFootballSchema(): ColDef[] {
     var schema: any[] = [];
 
     schema.push({

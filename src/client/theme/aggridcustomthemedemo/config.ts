@@ -3,7 +3,7 @@ import { PredefinedConfig } from 'adaptableblotter/types';
 export default {
   Dashboard: {
     VisibleToolbars: ['Theme', 'Export', 'Layout'],
-    ShowSystemStatusButton: false,
+    // ShowSystemStatusButton: false,
   },
   Theme: {
     SystemThemes: [],

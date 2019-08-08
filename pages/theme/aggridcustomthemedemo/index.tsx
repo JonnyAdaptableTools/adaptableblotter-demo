@@ -30,8 +30,12 @@ export default () => {
           </p>
           <p>
             In this example we have created a 'Wimbledon Theme' that styles the
-            Blotter purple and green (and uses row styles to similarly colour
-            the grid).
+            Blotter purple and green, with slightly rounded borders. Note that
+            we use{' '}
+            <a href="../style/aggridrowstyledemo" target="_self">
+              Row Styles
+            </a>{' '}
+            to similarly colour the grid).
           </p>
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}

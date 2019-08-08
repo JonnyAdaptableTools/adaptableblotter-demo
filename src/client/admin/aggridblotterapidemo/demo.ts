@@ -83,7 +83,7 @@ export default () => {
     testDiv.appendChild(maximiseDasahboardButton);
 
     var showOrdersLayoutButton = document.createElement('BUTTON');
-    showOrdersLayoutButton.innerHTML = 'Show Orders Layout';
+    showOrdersLayoutButton.innerHTML = 'Load Orders Layout';
     showOrdersLayoutButton.onclick = () => showOrdersLayout();
     showOrdersLayoutButton.style.marginRight = '10px';
     testDiv.appendChild(showOrdersLayoutButton);

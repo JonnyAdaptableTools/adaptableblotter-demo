@@ -1,12 +1,17 @@
 html.ab--theme-wimbledon-theme {
   font-family: Helvetica, Arial, sans-serif;
-  --ab-theme-loaded: 777;
+  --ab-theme-loaded: wimbledon-theme;
 
   --ab-dashboard__background: gray;
   --ab-cmp-input--disabled__background: #0e6537;
 
   --ab-color-defaultbackground: gray;
   --ab-color-text-on-defaultbackground: #462376;
+
+  --ab-color-accent: yellow;
+
+  --ab-color-success: lightgreen;
+  --ab-color-text-on-success: #462376;
 
   --ab-color-primary: #462376;
   --ab-color-primarylight: #0e6537;
@@ -18,4 +23,6 @@ html.ab--theme-wimbledon-theme {
   --ab-color-secondarydark: #462376;
   --ab-color-text-on-secondary: #462376;
   --ab-color-text-on-secondarylight: white;
+
+  --ab__border-radius: var(--ab-space-2);
 }

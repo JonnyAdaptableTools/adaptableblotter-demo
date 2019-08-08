@@ -15,9 +15,15 @@ export default () => {
             ag-Grid.
           </p>
           <p>
-            However, if you wish for a columnn to display a Dropdown (select),
-            then you can stipulate in the User Interface State section of
-            Predefined Config. .
+            However, in the{' '}
+            <a
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_designtimestate_userinterfacestate_.userinterfacestate.html"
+              target="_blank"
+            >
+              User Interface
+            </a>{' '}
+            section of Predefined Config you can stipulte that a column will
+            automatically display a Dropdown (select) when being edited.
           </p>
           <p>
             Simply list the columns that should display a Dropdown in the{' '}
@@ -32,10 +38,10 @@ export default () => {
             that Column dynamically.
           </p>
           <p>
-            This example shows 3 column dropdowns: Cust Ref (which is given a
-            list of 15 values to show), Contact (which is populated via
-            Permitted Values) and Employee (which gets distinct column values
-            dynamically).
+            This example shows 3 column dropdowns: <b>Cust Ref</b> (which is
+            given a list of 15 values to show), <b>Contact</b> (which is
+            populated via Permitted Values) and <b>Employee</b> (which gets
+            distinct column values dynamically).
           </p>
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
