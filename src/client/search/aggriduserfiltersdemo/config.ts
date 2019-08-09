@@ -81,7 +81,7 @@ export default {
     ],
   },
   Export: {
-    CurrentReport: 'Team Small Invoices',
+    CurrentReport: 'Team Invoices',
     Reports: [
       {
         Expression: {
@@ -96,7 +96,7 @@ export default {
             },
           ],
         },
-        Name: 'Team Small Invoices',
+        Name: 'Team Invoices',
         ReportColumnScope: 'AllColumns',
         ReportRowScope: 'ExpressionRows',
       },

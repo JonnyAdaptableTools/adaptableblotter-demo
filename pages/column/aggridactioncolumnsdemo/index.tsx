@@ -53,6 +53,37 @@ export default () => {
             function for the button, with logic to say it shouldn't appear if
             Employee is Margaret.
           </p>
+          <p>
+            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <a
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_designtimestate_actioncolumnstate_.actioncolumnstate.html"
+              target="_blank"
+            >
+              Predefined Config
+            </a>{' '}
+            -{' '}
+            <a
+              href="https://api.adaptableblotter.com/interfaces/_api_interface_iactioncolumnapi_.iactioncolumnapi.html"
+              target="_blank"
+            >
+              Blotter API
+            </a>{' '}
+            -{' '}
+            <a
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002209498-Action-Column-FAQ"
+              target="_blank"
+            >
+              FAQ
+            </a>{' '}
+            -{' '}
+            <a
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002204277-Action-Column-Videos"
+              target="_blank"
+            >
+              Videos
+            </a>
+            .
+          </p>
         </div>
       }
     />

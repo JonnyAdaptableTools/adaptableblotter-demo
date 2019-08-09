@@ -357,6 +357,35 @@ export class HelperAgGrid {
     return schema;
   }
 
+  public geRowSelectionNorthwindColumnSchema(): any[] {
+    var schema = [];
+
+    schema.push(this.getCustRefDef());
+    schema.push(this.getContactDef());
+
+    schema.push(this.getOrderDateDef());
+    let orderColDef = this.getOrderColumnDef();
+    orderColDef.checkboxSelection = true;
+    schema.push(orderColDef);
+    schema.push(this.getInvoicedDef());
+    schema.push(this.getOrderCostDef());
+    schema.push(this.getPackageCostDef());
+    schema.push(this.getItemCostDef());
+    schema.push(this.getItemCountDef());
+    schema.push(this.getCompanyDef());
+    schema.push(this.getChangeLastOrderDef());
+    schema.push(this.getShipViaDef());
+    schema.push(this.getFreightDef());
+    schema.push(this.getShipNameDef());
+    let employeeColDef = this.getEmployeeDef();
+    employeeColDef.rowGroupIndex = 0;
+    schema.push(employeeColDef);
+    let shipCountryColDef = this.getShipCountryDef();
+    shipCountryColDef.rowGroupIndex = 1;
+    schema.push(shipCountryColDef);
+    return schema;
+  }
+
   public getGroupingNorthwindColumnSchema(): any[] {
     var schema = [];
     // do a column group for Customer

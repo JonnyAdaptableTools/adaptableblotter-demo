@@ -326,6 +326,9 @@ export default () => {
           <Link href="/admin/aggridbigdatademo">
             <a>Big Data</a>
           </Link>
+          <Link href="/admin/aggridrowselectiondemo">
+            <a>Row Selection</a>
+          </Link>
 
           {/* 
           <Link href="/admin/aggridbestexdemo">

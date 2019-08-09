@@ -6,8 +6,8 @@
   "dependencies": {
     "@trendmicro/react-sidenav": "^0.4.5",
     "@types/isomorphic-fetch": "0.0.34",
-    "adaptableblotter": "4.1.2-canary.3",
-    "adaptableblotter-react-aggrid": "4.1.2-canary.3",
+    "adaptableblotter": "4.1.2-canary.6",
+    "adaptableblotter-react-aggrid": "4.1.2-canary.6",
     "ag-grid-community": "^21.0.0",
     "ag-grid-enterprise": "^21.0.0",
     "ag-grid-react": "^21.0.1",

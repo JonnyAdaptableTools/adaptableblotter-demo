@@ -60,8 +60,13 @@ export default () => {
               Blotter provides.
             </li>
             <li>
-              <b>Big Data Demo Demo:</b> See the Adaptable Blotter (and ag-Grid)
-              with 100,000 rows of client side data.
+              <b>Big Data Demo:</b> See the Adaptable Blotter (and ag-Grid) with
+              100,000 rows of client side data.
+            </li>
+            <li>
+              <b>Row Selection Demo:</b> The Adaptable Blotter fires an event
+              each time the cell or row selection changes. This includes full
+              detials of the cells and rows selected.
             </li>
             {/*
             <li>
@@ -85,6 +90,9 @@ export default () => {
         </DemoBox>
         <DemoBox href="/admin/aggridblotterapidemo">API demo</DemoBox>
         <DemoBox href="/admin/aggridbigdatademo">Big Data demo</DemoBox>
+        <DemoBox href="/admin/aggridrowselectiondemo">
+          Row Selection demo
+        </DemoBox>
 
         {/* <DemoBox href="/admin/aggridbestexdemo">Best Ex demo</DemoBox>*/}
       </GridLayout>
