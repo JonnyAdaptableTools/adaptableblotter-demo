@@ -5,10 +5,10 @@ import * as HelperAgGrid from '../HelperAgGrid';
 import {
   IAdaptableBlotter,
   AdaptableBlotterOptions,
-} from 'adaptableblotter/types';
-import { IRangeExpression } from 'adaptableblotter/dist/App_Scripts/Utilities/Interface/Expression/IRangeExpression';
-import { IFilterExpression } from 'adaptableblotter/dist/App_Scripts/Utilities/Interface/Expression/IFilterExpression';
-import { IColumnValueExpression } from 'adaptableblotter/dist/App_Scripts/Utilities/Interface/Expression/IColumnValueExpression';
+} from '@adaptabletools/adaptableblotter/types';
+import { IRangeExpression } from '@adaptabletools/adaptableblotter/dist/App_Scripts/Utilities/Interface/Expression/IRangeExpression';
+import { IFilterExpression } from '@adaptabletools/adaptableblotter/dist/App_Scripts/Utilities/Interface/Expression/IFilterExpression';
+import { IColumnValueExpression } from '@adaptabletools/adaptableblotter/dist/App_Scripts/Utilities/Interface/Expression/IColumnValueExpression';
 
 export class agGridWorldStatsChartingDemo {
   private adaptableblotter: IAdaptableBlotter;

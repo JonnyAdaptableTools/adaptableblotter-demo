@@ -2,11 +2,11 @@ import * as Helper from '../Helper';
 import {
   IAdaptableBlotter,
   AdaptableBlotterOptions,
-} from 'adaptableblotter/types';
+} from '@adaptabletools/adaptableblotter/types';
 import { getSchema, setNorthwindHyperGridProperties } from '../HelperHypergrid';
-import { IColumnValueExpression } from 'adaptableblotter/dist/App_Scripts/Utilities/Interface/Expression/IColumnValueExpression';
-import { IFilterExpression } from 'adaptableblotter/dist/App_Scripts/Utilities/Interface/Expression/IFilterExpression';
-import { IRangeExpression } from 'adaptableblotter/dist/App_Scripts/Utilities/Interface/Expression/IRangeExpression';
+import { IColumnValueExpression } from '@adaptabletools/adaptableblotter/dist/App_Scripts/Utilities/Interface/Expression/IColumnValueExpression';
+import { IFilterExpression } from '@adaptabletools/adaptableblotter/dist/App_Scripts/Utilities/Interface/Expression/IFilterExpression';
+import { IRangeExpression } from '@adaptabletools/adaptableblotter/dist/App_Scripts/Utilities/Interface/Expression/IRangeExpression';
 
 export class HypergridChartingDemo {
   private adaptableblotter: IAdaptableBlotter;

@@ -4,7 +4,7 @@ import * as Helper from '../Helper';
 import {
   IAdaptableBlotter,
   AdaptableBlotterOptions,
-} from 'adaptableblotter/types';
+} from '@adaptabletools/adaptableblotter/types';
 
 export class HypergridDemo {
   private themeName = '';

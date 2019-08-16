@@ -1,4 +1,4 @@
-import { PredefinedConfig } from 'adaptableblotter/types';
+import { PredefinedConfig } from '@adaptabletools/adaptableblotter/types';
 
 export default {
   QuickSearch: {

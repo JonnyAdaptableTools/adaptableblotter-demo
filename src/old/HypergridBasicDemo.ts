@@ -2,7 +2,7 @@ import * as Helper from '../Helper';
 import {
   IAdaptableBlotter,
   AdaptableBlotterOptions,
-} from 'adaptableblotter/types';
+} from '@adaptabletools/adaptableblotter/types';
 import { getSchema, setNorthwindHyperGridProperties } from '../HelperHypergrid';
 
 export class HypergridBasicDemo {

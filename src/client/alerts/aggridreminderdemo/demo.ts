@@ -1,6 +1,6 @@
 import * as Helper from '../../../Helper';
-import AdaptableBlotter from 'adaptableblotter/agGrid';
-import 'adaptableblotter/index.css';
+import AdaptableBlotter from '@adaptabletools/adaptableblotter/agGrid';
+import '@adaptabletools/adaptableblotter/index.css';
 
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-balham.css';
@@ -8,7 +8,7 @@ import { cloneDeep } from 'lodash';
 
 import '../../../../DemoPage/aggriddemo.css';
 
-import { AdaptableBlotterOptions } from 'adaptableblotter/types';
+import { AdaptableBlotterOptions } from '@adaptabletools/adaptableblotter/types';
 
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../HelperAgGrid';

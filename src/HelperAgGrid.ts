@@ -1,6 +1,6 @@
 import * as Helper from './Helper';
 import { GridOptions } from 'ag-grid-community/dist/lib/entities/gridOptions';
-import { AdaptableBlotterOptions } from 'adaptableblotter/types';
+import { AdaptableBlotterOptions } from '@adaptabletools/adaptableblotter/types';
 import { LicenseManager } from 'ag-grid-enterprise';
 import { ITrade } from './Trade';
 import { ColDef } from 'ag-grid-community';

@@ -1,4 +1,4 @@
-import AdaptableBlotter from 'adaptableblotter/Hypergrid';
+import AdaptableBlotter from '@adaptabletools/adaptableblotter/Hypergrid';
 
 import {
   getSchema,
@@ -7,7 +7,7 @@ import {
 
 import * as Helper from '../../../Helper';
 
-import 'adaptableblotter/index.css';
+import '@adaptabletools/adaptableblotter/index.css';
 
 import '../../../../ExtLibs/hypergrid/fin-hypergrid';
 
@@ -17,7 +17,7 @@ import '../../../DemoPage/hypergriddemo.css';
 import {
   IAdaptableBlotter,
   AdaptableBlotterOptions,
-} from 'adaptableblotter/types';
+} from '@adaptabletools/adaptableblotter/types';
 
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 

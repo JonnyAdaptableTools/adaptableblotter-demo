@@ -1,7 +1,7 @@
 import * as Helper from '../../../Helper';
 
-import AdaptableBlotter from 'adaptableblotter/agGrid';
-import 'adaptableblotter/index.css';
+import AdaptableBlotter from '@adaptabletools/adaptableblotter/agGrid';
+import '@adaptabletools/adaptableblotter/index.css';
 
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-balham.css';
@@ -12,12 +12,12 @@ import '../../../../DemoPage/aggriddemo.css';
 import {
   AdaptableBlotterOptions,
   SearchChangedEventArgs,
-} from 'adaptableblotter/types';
+} from '@adaptabletools/adaptableblotter/types';
 
 import { HelperAgGrid } from '../../../HelperAgGrid';
 import predefinedConfig from './config';
-import { SearchChangedInfo } from 'adaptableblotter/App_Scripts/Api/Events/SearchChanged/SearchChangedInfo';
-import { BlotterSearchState } from 'adaptableblotter/App_Scripts/Api/Events/SearchChanged/BlotterSearchState';
+import { SearchChangedInfo } from '@adaptabletools/adaptableblotter/App_Scripts/Api/Events/SearchChanged/SearchChangedInfo';
+import { BlotterSearchState } from '@adaptabletools/adaptableblotter/App_Scripts/Api/Events/SearchChanged/BlotterSearchState';
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();

@@ -5,7 +5,7 @@ import { GridOptions } from 'ag-grid-community/dist/lib/entities/gridOptions';
 import {
   IAdaptableBlotter,
   AdaptableBlotterOptions,
-} from 'adaptableblotter/types';
+} from '@adaptabletools/adaptableblotter/types';
 
 export class agGridDemo {
   private themeName = '';
