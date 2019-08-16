@@ -1,7 +1,7 @@
 {
   "name": "adaptableblotter-demo",
   "version": "4.1.1",
-  "description": "",
+  "description": "Demo",
   "main": "index.js",
   "dependencies": {
     "@trendmicro/react-sidenav": "^0.4.5",
