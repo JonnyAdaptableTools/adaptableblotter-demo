@@ -1,4 +1,4 @@
-import * as Helper from '../../../Helper';
+import * as Helper from '../../../Helpers/Helper';
 
 import AdaptableBlotter from '@adaptabletools/adaptableblotter/agGrid';
 import '@adaptabletools/adaptableblotter/index.css';
@@ -11,8 +11,8 @@ import '../../../../DemoPage/aggriddemo.css';
 
 import { AdaptableBlotterOptions } from '@adaptabletools/adaptableblotter/types';
 
-import { HelperAgGrid } from '../../../HelperAgGrid';
-import { FootballDataHelper } from '../../../FootballDataHelper';
+import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
+import { FootballDataHelper } from '../../../Helpers/FootballDataHelper';
 import predefinedConfig from './config';
 
 export default () => {

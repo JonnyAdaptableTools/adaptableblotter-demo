@@ -1,6 +1,6 @@
 import { IDataSetConfiguration } from './IDataSetConfiguration';
 import { AvailableDatasetConfigs } from './DatasetConfigsHypergrid';
-import * as Helper from '../Helper';
+import * as Helper from '../Helpers/Helper';
 import {
   IAdaptableBlotter,
   AdaptableBlotterOptions,

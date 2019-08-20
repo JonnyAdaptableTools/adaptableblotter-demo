@@ -1,5 +1,5 @@
 import React from 'react';
-import DynamicDemoPage from '../../../src/DynamicDemoPage';
+import DynamicDemoPage from '../../../src/Helpers/DynamicDemoPage';
 
 export default () => {
   return (

@@ -1,4 +1,4 @@
-import * as Helper from '../../../Helper';
+import * as Helper from '../../../Helpers/Helper';
 import AdaptableBlotter from '@adaptabletools/adaptableblotter/agGrid';
 import '@adaptabletools/adaptableblotter/index.css';
 
@@ -12,7 +12,7 @@ import '../../../../DemoPage/aggriddemo.css';
 import { AdaptableBlotterOptions } from '@adaptabletools/adaptableblotter/types';
 
 import json from '../../../../DataSets/Json/cfg.json';
-import { HelperAgGrid } from '../../../HelperAgGrid';
+import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import predefinedConfig from './config';
 import { CFGHelperAgGrid } from './CFGHelperAgGrid';
 

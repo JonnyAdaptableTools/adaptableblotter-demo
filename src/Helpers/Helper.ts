@@ -1,4 +1,4 @@
-import { IDataSetConfiguration } from './old/IDataSetConfiguration';
+import { IDataSetConfiguration } from '../old/IDataSetConfiguration';
 import * as fetch from 'isomorphic-fetch';
 
 export function capitalize(input: string) {

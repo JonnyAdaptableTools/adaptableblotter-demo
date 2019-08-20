@@ -1,4 +1,4 @@
-import * as Helper from '../../../Helper';
+import * as Helper from '../../../Helpers/Helper';
 
 import AdaptableBlotter from '@adaptabletools/adaptableblotter/agGrid';
 import '@adaptabletools/adaptableblotter/index.css';
@@ -14,7 +14,7 @@ import {
   SearchChangedEventArgs,
 } from '@adaptabletools/adaptableblotter/types';
 
-import { HelperAgGrid } from '../../../HelperAgGrid';
+import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import predefinedConfig from './config';
 import { SearchChangedInfo } from '@adaptabletools/adaptableblotter/App_Scripts/Api/Events/SearchChanged/SearchChangedInfo';
 import { BlotterSearchState } from '@adaptabletools/adaptableblotter/App_Scripts/Api/Events/SearchChanged/BlotterSearchState';

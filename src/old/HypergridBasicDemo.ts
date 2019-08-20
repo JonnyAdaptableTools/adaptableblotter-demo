@@ -1,9 +1,12 @@
-import * as Helper from '../Helper';
+import * as Helper from '../Helpers/Helper';
 import {
   IAdaptableBlotter,
   AdaptableBlotterOptions,
 } from '@adaptabletools/adaptableblotter/types';
-import { getSchema, setNorthwindHyperGridProperties } from '../HelperHypergrid';
+import {
+  getSchema,
+  setNorthwindHyperGridProperties,
+} from '../Helpers/HelperHypergrid';
 
 export class HypergridBasicDemo {
   private adaptableblotter: IAdaptableBlotter;

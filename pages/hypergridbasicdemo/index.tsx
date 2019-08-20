@@ -1,5 +1,5 @@
 import React from 'react';
-import HypergridDemoPage from '../../src/HypergridDemoPage';
+import HypergridDemoPage from '../../src/Helpers/HypergridDemoPage';
 import dynamic from 'next/dynamic';
 /*
 const DynamicComponent = dynamic(

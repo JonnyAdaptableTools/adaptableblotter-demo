@@ -18,8 +18,8 @@ import { LicenseManager } from 'ag-grid-enterprise';
 import '../../../../DemoPage/aggriddemo.css';
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 
-import { HelperAgGrid } from '../../../HelperAgGrid';
-import * as Helper from '../../../Helper';
+import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
+import * as Helper from '../../../Helpers/Helper';
 
 const helperAgGrid = new HelperAgGrid();
 helperAgGrid.setUpAgGridLicence();

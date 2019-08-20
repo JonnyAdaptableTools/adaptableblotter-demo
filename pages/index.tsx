@@ -25,7 +25,6 @@ export default () => {
         <br />
         <br />
         <p>
-          <b>Background</b> <br />
           The Adaptable Blotter is the most advanced and powerful HTML5 DataGrid
           Solution on the market today.
           <br />
@@ -34,11 +33,7 @@ export default () => {
           usually needs to be built on a bespoke basis for each project.
           <br />
           AdaptableBlotter.JS sits on top of (and integrates with) a number of
-          HTML5 vendor DataGrids both vendor and open source including the{' '}
-          <a href="https://www.ag-grid.com/" target="_blank">
-            market-leading ag-Grid
-          </a>{' '}
-          (which we are using for these demos).
+          HTML5 vendor DataGrids both vendor and open source.
           <br />
           Adaptable Blotter.JS is fully data-agnostic and can work with any data
           set, for any Desk, in any team, at any Location
@@ -162,34 +157,45 @@ export default () => {
         <p>
           <b>Licence and Pricing</b>
           <br />
-          The Adaptable Blotter is free for evaluation use via the Community
-          Edition (which is also available for use by charities, open-source
-          projects and students in full time education). This gives full access
-          to all features in the Adaptable Blotter but state cannot be saved or
-          pre-loaded.
+          The Adaptable Blotter requires a commerical licence sold on an annual
+          basis. This includes guaranteed quarterly (often monthly) updates
+          together with full ongoing support.
           <br />
-          For all other usage a commerical annual licence must be purchased,
-          which provides full state management capabilities. A commercial
-          licence also guarantees quarterly updates together with full ongoing
-          support.
+          We provide a range of licence options to suit each use case. These
+          include: <b>End User</b>, <b>Team</b>, <b>Universal</b>,{' '}
+          <b>Developer</b> and <b>Trial</b> licences.
           <br />
-          We also provide support for more formal trials and POCs, and offer a
-          range of tailored licence alternatives depending on desired usage.
-          <br />
-          To find out more about becoming an Adaptable Blotter user, please
-          email{' '}
+          To find out more about various options on offer and how to join the
+          Adaptable Blotter community, please email{' '}
           <a href="mailto:sales@adaptabletools.com">Adaptable Tools Sales</a>.
         </p>
         <p>
-          <b>Source Code</b>
-          <br /> The Repository for the AdaptableBlotter.JS Demo is located in{' '}
-          <a
-            href="https://github.com/jonnyadaptabletools/adaptableblotter-demo"
-            target="_blank"
-          >
-            Github
-          </a>
-          .
+          <b>Grid Gurus</b>
+          <br />
+          When developing the Adaptable Blotter, The Adaptable Tools dev team
+          learned everything there is to know (and more!) about all the
+          DataGrids that we support, particularly the excellent ag-Grid.
+          <br />
+          We researched all the multiple set up and configuration options, the
+          different ways to get data into the grid, the various display modes,
+          whether to use server or client, when to group, aggregate or pivot,
+          how best to update data and much, much more. <br />
+          Our{' '}
+          <b>
+            <i>Grid Guru Service</i>
+          </b>{' '}
+          puts that unrivalled knowledge to good use by working with you when
+          you set up your DataGrid to ensure that you are making the right
+          decisions for your project and requirements. <br />
+          We will work (on-site if you prefer) to set up your Grid in a bespoke
+          fashion so that is ideally aligned with your use cases. This is
+          particularly important at the start of the project when making the
+          right architectural and design decisions can save you lots of money,
+          time and support heartache down the line...
+          <br />
+        </p>
+        <p>
+          <b>Contibuting to our Source Code</b>
           <br />
           We welcome - and value - the many contributions and pull requests we
           receive from the development community; if you want to get involved in

@@ -3,9 +3,9 @@ import AdaptableBlotter from '@adaptabletools/adaptableblotter/Hypergrid';
 import {
   getSchema,
   setNorthwindHyperGridProperties,
-} from '../../../HelperHypergrid';
+} from '../../../Helpers/HelperHypergrid';
 
-import * as Helper from '../../../Helper';
+import * as Helper from '../../../Helpers/Helper';
 
 import '@adaptabletools/adaptableblotter/index.css';
 

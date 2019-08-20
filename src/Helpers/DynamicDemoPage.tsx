@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import AgGridDemoPage, { AgGridDemoPageProps } from './AgGridDemoPage';
+import AgGridDemoPage, { AgGridDemoPageProps } from '../AgGridDemoPage';
 import dynamic from 'next/dynamic';
 
 type DynamicComponentType = {
