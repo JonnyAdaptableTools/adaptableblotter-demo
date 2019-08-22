@@ -161,9 +161,9 @@ export default () => {
           basis. This includes guaranteed quarterly (often monthly) updates
           together with full ongoing support.
           <br />
-          We provide a range of licence options to suit each use case. These
-          include: <b>End User</b>, <b>Team</b>, <b>Universal</b>,{' '}
-          <b>Developer</b> and <b>Trial</b> licences.
+          We provide a range of licence options to suit each use case,
+          including: <b>End User</b>, <b>Team</b>, <b>Universal</b>,{' '}
+          <b>Developer</b> and <b>Trial</b>.
           <br />
           To find out more about various options on offer and how to join the
           Adaptable Blotter community, please email{' '}
@@ -172,7 +172,7 @@ export default () => {
         <p>
           <b>Grid Gurus</b>
           <br />
-          When developing the Adaptable Blotter, The Adaptable Tools dev team
+          When developing the Adaptable Blotter, the Adaptable Tools dev team
           learned everything there is to know (and more!) about all the
           DataGrids that we support, particularly the excellent ag-Grid.
           <br />

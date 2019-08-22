@@ -12,21 +12,24 @@ export default () => {
         <div>
           <h4>Dashboard Visibility Demo</h4>
           <p>
-            You can specify - through Predefined Config - the visibility and
-            size of the Dashboard. You can set the Visibility to be Visible
-            (default), Minimised (just Blotter name is shown) and Hidden.
+            You can specify - through Predefined Config - the visibility and of
+            the Dashboard; options are: Visible (default), Minimised (just
+            Blotter name is shown) and Hidden.
           </p>
           <p>
-            The 'Zoom' property sets how big the Dashboard is (between 0 and 1).
-          </p>
-          <p>
-            Note: you can minimise / maximise the Dashboard by clicking the
-            cheveron in the Home Toolbar and you can show / hide the Toolbar
-            through the Column Menu.
+            Minimise / maximise the Dashboard by clicking the cheveron in the
+            Home Toolbar. Or you can show / hide the Dashboard through the
+            Column Menu.
           </p>
           <p>
             In this example we have set the Dashboard to be Minimised at
-            Startup. When opened up, the Dasbhoard displays with a Zoom of 0.85.{' '}
+            startup.{' '}
+          </p>
+          <p>
+            Note: we have also set the name of the Toolbar to 'Blotter Toolbar'
+            (via the <i>HomeToolbarTitle</i> property in Dashboard Config. (If
+            not set, it defaults to the 'blotterId' property in{' '}
+            <i>Blotter Options</i>).
           </p>
         </div>
       }

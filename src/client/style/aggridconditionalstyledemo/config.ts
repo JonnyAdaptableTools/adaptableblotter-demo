@@ -60,6 +60,29 @@ export default {
           ],
         },
       },
+      {
+        ColumnId: 'PackageCost',
+        Style: {
+          FontWeight: 'Bold',
+        },
+        ConditionalStyleScope: 'Row',
+        Expression: {
+          RangeExpressions: [
+            {
+              ColumnId: 'PackageCost',
+              Ranges: [
+                {
+                  Operand1: '10',
+                  Operand1Type: 'Value',
+                  Operand2: '',
+                  Operand2Type: 'Value',
+                  Operator: 'LessThan',
+                },
+              ],
+            },
+          ],
+        },
+      },
     ],
   },
 } as PredefinedConfig;

@@ -11,23 +11,24 @@ export default () => {
           <h4>Data Source Selector Demo</h4>
           <p>
             Data Sources are lists of 'hard coded' names provided by you in
-            Predefined Config to enable you to run Searches on the Server..
+            Predefined Config to enable you to <b>run searches on the Server</b>
+            .
           </p>
           <p>
-            When a Data Source is selected, the SearchChanged event fires -
-            stating what triggered the event and providing full state details
+            When a Data Source is selected, the <i>SearchChanged</i> event fires
+            - stating what triggered the event and providing full state details
             (including the selected DataSource).
           </p>
           <p>
             This allows you to perform the necessary search on the server and
-            return data to the Adaptable Blotter via the GridAPi setGridData().
-            (A forthcoming release will provide parameterised queries for Data
-            Sources.)
+            return data to the Adaptable Blotter via the GridAPi{' '}
+            <i>setGridData</i> method. (A forthcoming release will provide
+            parameterised queries functionality.)
           </p>
           <p>
             In this example we created 4 Data Sources. We subscribe to
             SearchChanged event, fetch the relevant data and send to the Blotter
-            via the API. We also ouput the event details to the console for your
+            via the API. We also ouput the event info to the console for your
             convenience.
           </p>
           <p>

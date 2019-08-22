@@ -4,7 +4,7 @@ export default {
   Dashboard: {
     VisibleToolbars: ['Export', 'Layout'],
   },
-  Entitlement: {
+  Entitlements: {
     FunctionEntitlements: [
       {
         FunctionName: 'ColumnCategory',

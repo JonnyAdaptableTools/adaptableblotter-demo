@@ -14,16 +14,6 @@ export default {
       {
         Name: 'GBP Trades',
         Description: 'Sterling Trades',
-        DataSourceParams: [
-          {
-            Name: 'Hello',
-            DataType: 'String',
-          },
-          {
-            Name: 'Age',
-            DataType: 'Number',
-          },
-        ],
       },
       {
         Name: '2019 Actiivty',

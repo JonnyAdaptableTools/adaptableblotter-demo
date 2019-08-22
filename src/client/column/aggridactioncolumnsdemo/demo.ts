@@ -47,6 +47,13 @@ export default () => {
         {
           name: 'RenderMultiplyButtonFunc',
           func: params => {
+            if (
+              !params.data ||
+              !params.data.ItemCost ||
+              !params.data.Employee
+            ) {
+              return '';
+            }
             let itemCost: number = params.data.ItemCost;
             if (params.data.Employee == 'Margaret Peacock') {
               return '';

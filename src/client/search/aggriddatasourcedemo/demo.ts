@@ -89,3 +89,16 @@ export default () => {
     }
   }
 };
+
+/*
+ DataSourceParams: [
+          {
+            Name: 'Hello',
+            DataType: 'String',
+          },
+          {
+            Name: 'Age',
+            DataType: 'Number',
+          },
+        ],
+        */
