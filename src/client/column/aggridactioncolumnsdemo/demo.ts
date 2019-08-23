@@ -26,7 +26,6 @@ export default () => {
   let adaptableBlotter: IAdaptableBlotter;
 
   let rowData = JSON.parse(JSON.stringify(json));
-  Helper.MakeAllRecordsColumnsDateProperDates(rowData);
 
   const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
 

@@ -20,7 +20,6 @@ export default () => {
   helperAgGrid.setUpAgGridLicence();
 
   let rowData = JSON.parse(JSON.stringify(json));
-  Helper.MakeAllRecordsColumnsDateProperDates(rowData);
 
   const columndefs = helperAgGrid.getConditionalstyleNorthwindColumnSchema();
 

@@ -28,7 +28,7 @@ export class Demo {
   private grid: any;
   constructor() {
     let rowData = JSON.parse(JSON.stringify(json));
-    Helper.MakeAllRecordsColumnsDateProperDates(rowData);
+
     let schema: any = getSchema(rowData);
 
     this.grid = new fin.Hypergrid('#grid', {

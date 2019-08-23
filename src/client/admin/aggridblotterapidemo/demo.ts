@@ -23,7 +23,6 @@ export default () => {
   helperAgGrid.setUpAgGridLicence();
   let adaptableblotter: IAdaptableBlotter;
   let rowData = JSON.parse(JSON.stringify(json));
-  Helper.MakeAllRecordsColumnsDateProperDates(rowData);
 
   const columndefs = helperAgGrid.getFilteredColumnSchema();
 

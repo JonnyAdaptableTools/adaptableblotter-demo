@@ -30,27 +30,6 @@ const checkStatus = (response: Response) => {
   throw error;
 };
 
-export function ConvertExcelDate(dateToConvert: number) {
-  if (dateToConvert.toString() == '') {
-    return null;
-  }
-  var result = new Date();
-  result.setTime((dateToConvert - 25569) * 24 * 3600 * 1000);
-  return result;
-}
-
-export function MakeAllRecordsColumnsDateProperDates(data: any[]) {
-  data.forEach(record => {
-    for (let prop in record) {
-      //we convert all columns where there is date in the name header to proper Date objects
-      if (record.hasOwnProperty(prop) && prop.match(/date/i)) {
-        record[prop] = ConvertExcelDate(record[prop]);
-      }
-    }
-    // record.MaturityDate = Helper.ConvertExcelDate(record.MaturityDate);
-  });
-}
-
 export function manageDomDataSetSelectAndReturnSelectDataset(
   AvailableDatasetConfigs: Map<string, IDataSetConfiguration>
 ) {
