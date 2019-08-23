@@ -38,13 +38,13 @@ function convertToJSON(data) {
   let sheet1Data = data[sheetNames[0]];
 
   // get the first row - which we will treat as the Header Row
-  var firstRow = sheet1Data[0];
-  if (!firstRow) {
+  var headerRow = sheet1Data[0];
+  if (!headerRow) {
     return jsonData;
   }
 
-  let colKeys = Object.keys(firstRow);
-  let colNames = Object.values(firstRow);
+  let colKeys = Object.keys(headerRow);
+  let colNames = Object.values(headerRow);
 
   var dataRowCount = sheet1Data.length;
   var colNamesLength = colNames.length;
