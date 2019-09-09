@@ -8,6 +8,7 @@ dataSets.forEach(x => convertXlsToJson(x));
 
 function convertXlsToJson(filename) {
   let fullpath = path + filename;
+  console.log(fullpath);
   let data = excelToJson({
     sourceFile: fullpath,
   });
