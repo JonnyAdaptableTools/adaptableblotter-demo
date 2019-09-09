@@ -36,7 +36,7 @@ export default () => {
   };
 
   const blotterOptions: AdaptableBlotterOptions = {
-    primaryKey: 'OrderId',
+    primaryKey: 'tradeId',
     userName: 'Demo User',
     blotterId: 'Big Data Demo',
     licenceKey: Helper.getdemolicencekey(),
