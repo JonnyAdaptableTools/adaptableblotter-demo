@@ -206,6 +206,9 @@ export default () => {
           <Link href="/column/aggridactioncolumnsdemo">
             <a>Action Columns</a>
           </Link>
+          <Link href="/column/aggridsparklinecolumnsdemo">
+            <a>Sparkline Columns</a>
+          </Link>
         </Category>
         <Category
           title={

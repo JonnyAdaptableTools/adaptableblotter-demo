@@ -56,6 +56,10 @@ export default () => {
               render) and listen to the clicked event to perform any logic you
               reqiure.
             </li>
+            <li>
+              <b>Sparkline Column:</b> Visualise columns that contain a range /
+              array of numeric cells by using a Sparkline.
+            </li>
           </ul>
           Click on the buttons below to see a demo for each edit function.
         </div>
@@ -74,6 +78,9 @@ export default () => {
         <DemoBox href="/column/aggridcolumninfodemo">Column Info demo</DemoBox>
         <DemoBox href="/column/aggridactioncolumnsdemo">
           Action Column demo
+        </DemoBox>
+        <DemoBox href="/column/aggridsparklinecolumnsdemo">
+          Sparkline Column demo
         </DemoBox>
       </GridLayout>
     </MainPage>

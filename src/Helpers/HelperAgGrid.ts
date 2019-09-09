@@ -1288,6 +1288,20 @@ export class HelperAgGrid {
     });
     return schema;
   }
+
+  public getTradeSchemaWithSparkline(): ColDef[] {
+    let schema = this.getTradeSchema();
+    let historyArray = {
+      headerName: 'History',
+      field: 'history',
+      editable: false,
+      type: 'abColDefNumberArray',
+      resizable: true,
+    };
+    schema.splice(3, 0, historyArray);
+    return schema;
+  }
+
   public getPriceTradeSchema(): ColDef[] {
     var schema: any[] = this.getBasicTradeSchema();
 
@@ -1340,6 +1354,9 @@ export class HelperAgGrid {
       : this.getRandomItem(this.getCurrencies());
     var trade = {
       tradeId: i,
+      history: [...new Array(this.generateRandomInt(5, 20))].map(_ =>
+        this.generateRandomInt(1, 30)
+      ),
       notional: this.getRandomItem(this.getNotionals()),
       deskId: this.generateRandomInt(0, 250),
       counterparty: this.getRandomItem(this.getCounterparties()),

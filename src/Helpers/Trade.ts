@@ -3,6 +3,7 @@
   notional: number;
   deskId: number;
   counterparty: string;
+  history: number[];
   currency: string;
   country: string;
   changeOnYear: number;
