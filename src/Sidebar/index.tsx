@@ -349,6 +349,9 @@ export default () => {
           <Link href="/blotteroptions/aggridvendorgridfiltersdemo">
             <a>Vendor Grid Filters </a>
           </Link>
+          <Link href="/blotteroptions/aggridautofiltersdemo">
+            <a>Auto Filters </a>
+          </Link>
         </Category>
         <Category
           title={

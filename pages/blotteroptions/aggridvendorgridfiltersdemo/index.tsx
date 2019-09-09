@@ -24,8 +24,7 @@ export default () => {
             <i>FilterOptions</i>.
           </p>
           <p>
-            {' '}
-            Any filers created with these forms will NOT be stored with your
+            Any filters created with these forms will NOT be stored with your
             Adaptable Blotter state, e.g. if you type in the 'Ship Via' Floating
             Filter bar, the Column Filter toolbar does <b>not</b> update.
           </p>

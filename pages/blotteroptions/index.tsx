@@ -53,6 +53,12 @@ export default () => {
               Filter and Filter Form if you wish instead of the Adaptable
               Blotter Quick Filter and Filter Form respectively.
             </li>
+            <li>
+              <b>Auto Filters Demo:</b> In Column Filters the default is to
+              filter each time a value in the dropdown is clicked. But if you
+              prefer, you can apply the filters only after an 'Apply' button is
+              clicked (useful if doing server side filtering).
+            </li>
           </ul>
           Click on the buttons below to see the Blotter Options demos.
         </div>
@@ -64,6 +70,9 @@ export default () => {
         </DemoBox>
         <DemoBox href="/blotteroptions/aggridvendorgridfiltersdemo">
           Vendor Grid Filters demo
+        </DemoBox>
+        <DemoBox href="/blotteroptions/aggridautofiltersdemo">
+          Auto Filters demo
         </DemoBox>
       </GridLayout>
     </MainPage>

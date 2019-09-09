@@ -109,7 +109,7 @@ export default ({
       <div
         id="grid"
         className="ag-theme-balham"
-        style={{ height: 550, marginRight: 30 }}
+        style={{ height: 600, marginRight: 30 }}
       />
 
       {children}
