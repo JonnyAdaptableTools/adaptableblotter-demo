@@ -24,6 +24,11 @@ export default () => {
             try 'Invoiced' column).
           </p>
           <p>
+            If you want to see a pie chart for a subset of values in a column
+            then simply select the cells you wish to see and select 'See as Pie
+            Chart' from the Context menu.
+          </p>
+          <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360005113352-Shortcuts"

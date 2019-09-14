@@ -9,7 +9,7 @@ export default () => {
       description={
         <div>
           <h4>
-            <h4>Action Columns Demo</h4>
+            <h4>Action Column Demo</h4>
           </h4>
           <p>
             The Adaptable Blotter provides an Action Column function that allows

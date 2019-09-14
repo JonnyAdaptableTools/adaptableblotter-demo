@@ -11,38 +11,55 @@ import '../../../../DemoPage/aggriddemo.css';
 
 import { AdaptableBlotterOptions } from '@adaptabletools/adaptableblotter/types';
 
-import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
-
-import { TickingDataHelper } from '../../../TickingDataHelper';
+import { TickingDataHelper } from '../../../Helpers/TickingDataHelper';
 import predefinedConfig from './config';
+import { ITrade } from '../../../Helpers/Trade';
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
-  const tickingDataHelper = new TickingDataHelper();
-  let rowData = JSON.parse(JSON.stringify(json));
 
-  const columndefs = helperAgGrid.getFlashingCellColumnSchema();
+  let tickingDataHelper = new TickingDataHelper();
+  const columndefs = helperAgGrid.getTradeSchema();
 
-  const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
-  tickingDataHelper.startTickingDataagGrid(gridOptions, true);
+  let rowCount: number = 1000;
+  const trades: ITrade[] = helperAgGrid.getTrades(rowCount);
 
+  const gridOptions = helperAgGrid.getGridOptions(columndefs, trades);
+  gridOptions.floatingFilter = true;
+  gridOptions.statusBar = {
+    statusPanels: [
+      { statusPanel: 'agTotalRowCountComponent', align: 'left' },
+      { statusPanel: 'agFilteredRowCountComponent' },
+    ],
+  };
   const blotterOptions: AdaptableBlotterOptions = {
-    primaryKey: 'OrderId',
+    primaryKey: 'tradeId',
     userName: 'Demo User',
-    blotterId: 'Alert Demo',
+    blotterId: 'DataSource Changes Demo',
     licenceKey: Helper.getdemolicencekey(),
     vendorGrid: gridOptions,
-    layoutOptions: {
-      includeVendorStateInLayouts: true,
-      autoSaveLayouts: true,
-    },
     predefinedConfig: predefinedConfig,
   };
 
   const blotterOptionsClone = cloneDeep(blotterOptions);
   new AdaptableBlotter(blotterOptions);
+
+  // turn on mimicing adding rows
+  tickingDataHelper.startTickingDataagGridAddRow(
+    gridOptions,
+    trades,
+    1000,
+    3000
+  );
+  // turn on mimicing removing rows
+  tickingDataHelper.startTickingDataagGridDeleteRow(
+    gridOptions,
+    trades,
+    3000,
+    100
+  );
 
   return {
     predefinedConfig,

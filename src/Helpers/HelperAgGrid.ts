@@ -96,59 +96,6 @@ export class HelperAgGrid {
     return formatedDate;
   }
 
-  public startTickingDataagGrid(
-    gridOptions: any,
-    includeItemCount: boolean = false
-  ) {
-    setInterval(() => {
-      let orderId = Helper.generateRandomInt(11101, 11142);
-      if (gridOptions != null && gridOptions.api != null) {
-        gridOptions.api.forEachNode((rowNode: any, index: number) => {
-          if (rowNode.group) {
-            return;
-          }
-          let rowOrderId = gridOptions.api.getValue('OrderId', rowNode);
-          if (rowOrderId != orderId) {
-            return;
-          }
-          let trade = rowNode;
-          if (!includeItemCount) {
-            let numberToAdd: number =
-              Helper.generateRandomInt(1, 2) == 1 ? -0.5 : 0.5;
-
-            let columnName = 'ItemCost';
-            let initialItemCost = gridOptions.api.getValue(columnName, trade);
-            let newItemCost = Helper.roundTo4Dp(initialItemCost + numberToAdd);
-
-            trade.setDataValue(columnName, newItemCost);
-
-            let itemCount = gridOptions.api.getValue('ItemCount', trade);
-            let newOrderCost = itemCount * newItemCost;
-            trade.setDataValue('OrderCost', newOrderCost);
-
-            let packageCost = gridOptions.api.getValue('PackageCost', trade);
-            let newInvoicedCost = newOrderCost - packageCost;
-            trade.setDataValue('InvoicedCost', newInvoicedCost);
-            let incdec: number = Helper.generateRandomInt(1, 2) == 1 ? -1 : 1;
-            let changeLastOrder = gridOptions.api.getValue(
-              'ChangeLastOrder',
-              trade
-            );
-            trade.setDataValue('ChangeLastOrder', incdec + changeLastOrder);
-          } else {
-            let numberToAdd: number = Helper.generateRandomInt(1, 20);
-            let itemCount = gridOptions.api.getValue('ItemCount', trade);
-            if (numberToAdd != 19) {
-              trade.setDataValue('ItemCount', itemCount + 1);
-            } else {
-              trade.setDataValue('ItemCount', itemCount * 3);
-            }
-          }
-        });
-      }
-    }, 400);
-  }
-
   public getGridOptions(columndefs: any, data: any): GridOptions {
     let gridOptions: GridOptions = {
       animateRows: true,
@@ -165,6 +112,7 @@ export class HelperAgGrid {
         abColDefBoolean: {},
         abColDefDate: {},
         abColDefObject: {},
+        abColDefNumberArray: {},
       },
       columnDefs: columndefs,
       rowData: data,
@@ -1100,7 +1048,7 @@ export class HelperAgGrid {
       field: 'tradeId',
       editable: true,
       type: 'abColDefNumber',
-      sortable: false,
+      sortable: true,
       filter: true,
     });
     schema.push({
@@ -1227,14 +1175,6 @@ export class HelperAgGrid {
       valueFormatter: this.shortDateFormatteragGrid,
       filter: 'agDateColumnFilter',
       type: 'abColDefDate',
-    });
-    schema.push({
-      headerName: 'SandP',
-      field: 'sandpRating',
-      editable: true,
-      sortable: true,
-      filter: 'text',
-      type: 'abColDefString',
     });
     schema.push({
       headerName: 'SandP',
@@ -1558,14 +1498,16 @@ export class HelperAgGrid {
       'India',
       'Ireland',
       'Italy',
+      'Israel',
+      'Indonesia',
       'Japan',
-      'Kenya',
+      //  'Kenya',
       'Luxembourg',
-      'Portugal',
-      'Qatar',
+      //   'Portugal',
+      //    'Qatar',
       'Russia',
       'Spain',
-      'Thailand',
+      //      'Thailand',
     ];
     return countries;
   }

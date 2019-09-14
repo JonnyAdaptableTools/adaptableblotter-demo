@@ -3,18 +3,25 @@ import MainPage from '../../src/MainPage';
 import Link from 'next/link';
 import { ReactNode } from 'react-redux';
 
-import logo from '../../images/AdaptableBlotter.png';
-
 import './index.scss';
 import GridLayout from '../../src/components/GridLayout';
 
-const DemoBox = ({ href, children }: { href: string; children: ReactNode }) => {
+const DemoBox = ({
+  href,
+  title,
+  children,
+}: {
+  href: string;
+  title: string;
+  children: ReactNode;
+}) => {
   return (
     <Link href={href}>
       <a>
-        <div className="demo-box">
-          <img src={logo} style={{ maxWidth: '80%' }} />
-          <div>{children}</div>
+        {' '}
+        <div className="demo-box" style={{ height: '300px', width: '300px' }}>
+          <h4>{title}</h4>
+          {children}
         </div>
       </a>
     </Link>
@@ -54,13 +61,27 @@ export default () => {
             2 themes will - depending on your Blotter Options - also update the
             underlying vendor grid.
           </p>
-          Click on the buttons below to see a demo for each styling function.
         </div>
       }
     >
       <GridLayout>
-        <DemoBox href="/theme/aggriddarkthemedemo">Dark Theme demo</DemoBox>
-        <DemoBox href="/theme/aggridcustomthemedemo">Custom Theme demo</DemoBox>
+        <DemoBox href="/theme/aggriddarkthemedemo" title="Dark Theme Demo">
+          <p>See the Adaptable Blotter using the shipped Dark Theme.</p>
+          <p>
+            When you use this theme the Adaptable Blotter will automatically
+            update the underlying vendor grid to match.
+          </p>
+        </DemoBox>
+        <DemoBox href="/theme/aggridcustomthemedemo" title="Custom Theme Demo">
+          <p>
+            See the Adaptable Blotter using a custom theme (based on Wimbledon
+            tennis colours).
+          </p>
+          <p>
+            When you use this theme the Adaptable Blotter will automatically
+            update the underlying vendor grid to match.
+          </p>
+        </DemoBox>
       </GridLayout>
     </MainPage>
   );

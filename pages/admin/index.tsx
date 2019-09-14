@@ -68,8 +68,17 @@ export default () => {
               each time the cell or row selection changes. This includes full
               detials of the cells and rows selected.
             </li>
-            {/*
             <li>
+              <b>DataSource Changes Demo:</b> Any changes made to the data
+              source to the underlying DataGrid (in this example ag-Grid) is
+              automatically reflected in the Adaptable Blotter and it will be
+              picked up by all relevant functions.
+            </li>
+            {/*
+             <li>
+              <b>No Code Demo:</b> To Do
+            </li>
+           <li>
               <b>Best Ex Demo:</b> Shows how you can use the Adaptable Blotter
               Audit Log and Calculated Columns to prove Best Ex.
             </li>
@@ -92,6 +101,10 @@ export default () => {
         <DemoBox href="/admin/aggridbigdatademo">Big Data demo</DemoBox>
         <DemoBox href="/admin/aggridrowselectiondemo">
           Row Selection demo
+        </DemoBox>
+        <DemoBox href="/admin/aggridnocodedemo">No Code demo</DemoBox>
+        <DemoBox href="/admin/aggriddatasourcechangesdemo">
+          DataSource Changes demo
         </DemoBox>
 
         {/* <DemoBox href="/admin/aggridbestexdemo">Best Ex demo</DemoBox>*/}
