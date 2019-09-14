@@ -23,8 +23,7 @@ export class agGridConfigDemo {
         var gridOptions = HelperAgGrid.getGridOptions(columndefs, data);
         var eGridDiv = document.getElementById('grid');
         let grid = new Grid(eGridDiv, gridOptions);
-        // HelperAgGrid.startTickingDataagGrid(gridOptions);
-        //  let configUrl = 'src/configs/configconfig.json';
+
         let blotterOptions: AdaptableBlotterOptions = HelperAgGrid.getAadaptableBlotterOptions(
           gridOptions,
           'OrderId',

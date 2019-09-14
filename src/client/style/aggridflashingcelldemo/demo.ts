@@ -13,18 +13,19 @@ import { AdaptableBlotterOptions } from '@adaptabletools/adaptableblotter/types'
 
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
+import { TickingDataHelper } from '../../../Helpers/TickingDataHelper';
 import predefinedConfig from './config';
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
-
+  const tickingDataHelper = new TickingDataHelper();
   let rowData = JSON.parse(JSON.stringify(json));
 
   const columndefs = helperAgGrid.getFlashingCellColumnSchema();
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
-  helperAgGrid.startTickingDataagGrid(gridOptions);
+  tickingDataHelper.startTickingDataagGrid(gridOptions);
 
   const blotterOptions: AdaptableBlotterOptions = {
     primaryKey: 'OrderId',
