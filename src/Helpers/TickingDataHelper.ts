@@ -57,33 +57,31 @@ export class TickingDataHelper {
   ) {
     if (gridOptions != null && gridOptions.api != null) {
       setInterval(() => {
-        let rowNode: RowNode = gridOptions.api!.getRowNode(
-          this.generateRandomInt(1, 30)
-        );
+        let index: number = this.generateRandomInt(1, 100);
+        let rowNode: RowNode = gridOptions.api!.getRowNode(index);
         if (rowNode) {
-          const randomInt = this.generateRandomInt(1, 2);
-          const numberToAdd: number = randomInt == 1 ? -0.5 : 0.5;
-          const directionToAdd: number = randomInt == 1 ? -0.01 : 0.01;
-          const columnName = 'price';
-          const initialPrice = gridOptions.api!.getValue(columnName, rowNode);
-          const newPrice = this.roundTo4Dp(initialPrice + numberToAdd);
-          rowNode.setDataValue(columnName, newPrice);
-          const bidOfferSpread = gridOptions.api!.getValue(
-            'bidOfferSpread',
-            rowNode
-          );
-          const ask = this.roundTo4Dp(newPrice + bidOfferSpread / 2);
-          rowNode.setDataValue('ask', ask);
-          const bid = this.roundTo4Dp(newPrice - bidOfferSpread / 2);
-          rowNode.setDataValue('bid', bid);
-          rowNode.setDataValue(
-            'bloombergAsk',
-            this.roundTo4Dp(ask + directionToAdd)
-          );
-          rowNode.setDataValue(
-            'bloombergBid',
-            this.roundTo4Dp(bid - directionToAdd)
-          );
+          // NOTE:  You need to make a COPY of the data that you are changing...
+          const trade: ITrade = rowNode.data;
+          if (trade) {
+            const randomInt = this.generateRandomInt(1, 2);
+            const numberToAdd: number = randomInt == 1 ? -0.5 : 0.5;
+            const directionToAdd: number = randomInt == 1 ? -0.01 : 0.01;
+            const newPrice = this.roundTo4Dp(trade.price + numberToAdd);
+            const bidOfferSpread = trade.bidOfferSpread;
+            const ask = this.roundTo4Dp(newPrice + bidOfferSpread / 2);
+            const bid = this.roundTo4Dp(newPrice - bidOfferSpread / 2);
+
+            trade.price = newPrice;
+            trade.bid = bid;
+            trade.ask = ask;
+            trade.bloombergAsk = this.roundTo4Dp(ask + directionToAdd);
+            trade.bloombergBid = this.roundTo4Dp(bid - directionToAdd);
+
+            //    trade.notional = this.generateRandomInt(1, 50);
+            trade.changeOnYear = this.generateRandomInt(-150, 150);
+
+            rowNode.setData(trade);
+          }
         }
       }, tickingFrequency);
     }

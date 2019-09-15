@@ -50,7 +50,7 @@ export default () => {
 
   const blotterOptionsClone = cloneDeep(blotterOptions);
   new AdaptableBlotter(blotterOptions);
-  tickingDataHelper.startTickingDataagGridTrade(gridOptions, 50);
+  tickingDataHelper.startTickingDataagGridTrade(gridOptions, 20);
   return {
     predefinedConfig,
     blotterOptions: blotterOptionsClone,
