@@ -13,11 +13,12 @@ import { AdaptableBlotterOptions } from '@adaptabletools/adaptableblotter/types'
 
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import predefinedConfig from './config';
+import { TickingDataHelper } from '../../../Helpers/TickingDataHelper';
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
-
+  const tickingDataHelper = new TickingDataHelper();
   // let rowData = JSON.parse(JSON.stringify(json));
 
   const columndefs = helperAgGrid.getTradeSchema();
@@ -49,7 +50,7 @@ export default () => {
 
   const blotterOptionsClone = cloneDeep(blotterOptions);
   new AdaptableBlotter(blotterOptions);
-
+  tickingDataHelper.startTickingDataagGridTrade(gridOptions, 50);
   return {
     predefinedConfig,
     blotterOptions: blotterOptionsClone,

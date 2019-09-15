@@ -25,7 +25,6 @@ export default () => {
   const columndefs = helperAgGrid.getFlashingCellColumnSchema();
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
-  tickingDataHelper.startTickingDataagGrid(gridOptions);
 
   const blotterOptions: AdaptableBlotterOptions = {
     primaryKey: 'OrderId',
@@ -38,7 +37,7 @@ export default () => {
 
   const blotterOptionsClone = cloneDeep(blotterOptions);
   new AdaptableBlotter(blotterOptions);
-
+  tickingDataHelper.startTickingDataagGridOrders(gridOptions, 200);
   return {
     predefinedConfig,
     blotterOptions: blotterOptionsClone,

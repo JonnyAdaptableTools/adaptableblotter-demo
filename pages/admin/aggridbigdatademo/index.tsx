@@ -15,19 +15,26 @@ export default () => {
             Adaptable Blotter works with any data set.
           </p>
           <p>
-            But we are often asked if the Adaptable Blotter works as well with
-            big data sets. So this demo contains 100,000 rows (of random
-            meaningless data).
+            But we're often asked if the Adaptable Blotter works as well with
+            big data sets: this demo contains 100,000 rows of random meaningless
+            data which ticks many thousands of times a second.
           </p>
           <p>
             The ag-Grid Status Bar at the bottom of the grid will display the
             total (and filtered) number of rows. Create filters, searches, and
-            style sand you will see that even with a very large dataset
+            styles, and you will see that even with a very large dataset
             everything still works.
           </p>
           <p>
             <b>Note:</b> If you have a DataSet with many hundreds of thousands
-            of rows then you will want to use on the Server options available.
+            of rows then you will probably want to use one the{' '}
+            <a
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360024888631-Server-Searching"
+              target="_blank"
+            >
+              Server Search
+            </a>{' '}
+            options available.
           </p>
         </div>
       }

@@ -3,57 +3,90 @@ import { ITrade } from './Trade';
 import { HelperAgGrid } from './HelperAgGrid';
 
 export class TickingDataHelper {
-  public startTickingDataagGrid(
+  public startTickingDataagGridOrders(
     gridOptions: any,
+    tickingFrequency: number,
     includeItemCount: boolean = false
   ) {
-    setInterval(() => {
-      let orderId = this.generateRandomInt(11101, 11142);
-      if (gridOptions != null && gridOptions.api != null) {
-        gridOptions.api.forEachNode((rowNode: any, index: number) => {
-          if (rowNode.group) {
-            return;
-          }
-          let rowOrderId = gridOptions.api.getValue('OrderId', rowNode);
-          if (rowOrderId != orderId) {
-            return;
-          }
-          let trade = rowNode;
+    if (gridOptions != null && gridOptions.api != null) {
+      setInterval(() => {
+        let rowNode: RowNode = gridOptions.api!.getRowNode(
+          this.generateRandomInt(11074, 11142)
+        );
+        if (rowNode) {
           if (!includeItemCount) {
             let numberToAdd: number =
               this.generateRandomInt(1, 2) == 1 ? -0.5 : 0.5;
 
             let columnName = 'ItemCost';
-            let initialItemCost = gridOptions.api.getValue(columnName, trade);
+            let initialItemCost = gridOptions.api.getValue(columnName, rowNode);
             let newItemCost = this.roundTo4Dp(initialItemCost + numberToAdd);
 
-            trade.setDataValue(columnName, newItemCost);
+            rowNode.setDataValue(columnName, newItemCost);
 
-            let itemCount = gridOptions.api.getValue('ItemCount', trade);
+            let itemCount = gridOptions.api.getValue('ItemCount', rowNode);
             let newOrderCost = itemCount * newItemCost;
-            trade.setDataValue('OrderCost', newOrderCost);
+            rowNode.setDataValue('OrderCost', newOrderCost);
 
-            let packageCost = gridOptions.api.getValue('PackageCost', trade);
+            let packageCost = gridOptions.api.getValue('PackageCost', rowNode);
             let newInvoicedCost = newOrderCost - packageCost;
-            trade.setDataValue('InvoicedCost', newInvoicedCost);
+            rowNode.setDataValue('InvoicedCost', newInvoicedCost);
             let incdec: number = this.generateRandomInt(1, 2) == 1 ? -1 : 1;
             let changeLastOrder = gridOptions.api.getValue(
               'ChangeLastOrder',
-              trade
+              rowNode
             );
-            trade.setDataValue('ChangeLastOrder', incdec + changeLastOrder);
+            rowNode.setDataValue('ChangeLastOrder', incdec + changeLastOrder);
           } else {
-            let numberToAdd: number = this.generateRandomInt(1, 20);
-            let itemCount = gridOptions.api.getValue('ItemCount', trade);
-            if (numberToAdd != 19) {
-              trade.setDataValue('ItemCount', itemCount + 1);
+            let numberToAdd: number = this.generateRandomInt(1, 10);
+            let itemCount = gridOptions.api.getValue('ItemCount', rowNode);
+            if (numberToAdd < 8) {
+              rowNode.setDataValue('ItemCount', itemCount + 1);
             } else {
-              trade.setDataValue('ItemCount', itemCount * 3);
+              rowNode.setDataValue('ItemCount', itemCount * 3);
             }
           }
-        });
-      }
-    }, 50);
+        }
+      }, tickingFrequency);
+    }
+  }
+
+  public startTickingDataagGridTrade(
+    gridOptions: any,
+    tickingFrequency: number
+  ) {
+    if (gridOptions != null && gridOptions.api != null) {
+      setInterval(() => {
+        let rowNode: RowNode = gridOptions.api!.getRowNode(
+          this.generateRandomInt(1, 30)
+        );
+        if (rowNode) {
+          const randomInt = this.generateRandomInt(1, 2);
+          const numberToAdd: number = randomInt == 1 ? -0.5 : 0.5;
+          const directionToAdd: number = randomInt == 1 ? -0.01 : 0.01;
+          const columnName = 'price';
+          const initialPrice = gridOptions.api!.getValue(columnName, rowNode);
+          const newPrice = this.roundTo4Dp(initialPrice + numberToAdd);
+          rowNode.setDataValue(columnName, newPrice);
+          const bidOfferSpread = gridOptions.api!.getValue(
+            'bidOfferSpread',
+            rowNode
+          );
+          const ask = this.roundTo4Dp(newPrice + bidOfferSpread / 2);
+          rowNode.setDataValue('ask', ask);
+          const bid = this.roundTo4Dp(newPrice - bidOfferSpread / 2);
+          rowNode.setDataValue('bid', bid);
+          rowNode.setDataValue(
+            'bloombergAsk',
+            this.roundTo4Dp(ask + directionToAdd)
+          );
+          rowNode.setDataValue(
+            'bloombergBid',
+            this.roundTo4Dp(bid - directionToAdd)
+          );
+        }
+      }, tickingFrequency);
+    }
   }
 
   startTickingDataHypergrid(grid: any) {
