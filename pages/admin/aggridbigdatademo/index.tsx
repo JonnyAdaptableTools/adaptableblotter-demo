@@ -16,8 +16,12 @@ export default () => {
           </p>
           <p>
             But we're often asked if the Adaptable Blotter works as well with
-            big data sets: this demo contains 100,000 rows of random meaningless
-            data which ticks many thousands of times a second.
+            big data sets and the answer is yes.{' '}
+          </p>
+          <p>
+            This demo contains 100,000 rows of <b>random meaningless data</b>{' '}
+            which ticks many thousands of times a second (also updating the
+            Percent Bar in Change column).
           </p>
           <p>
             The ag-Grid Status Bar at the bottom of the grid will display the
