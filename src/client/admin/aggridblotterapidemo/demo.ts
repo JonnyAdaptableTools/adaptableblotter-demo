@@ -2,6 +2,7 @@ import * as Helper from '../../../Helpers/Helper';
 
 import AdaptableBlotter from '@adaptabletools/adaptableblotter/agGrid';
 import '@adaptabletools/adaptableblotter/index.css';
+import './viletheme.css';
 
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-balham.css';
@@ -86,6 +87,12 @@ export default () => {
     showOrdersLayoutButton.onclick = () => showOrdersLayout();
     showOrdersLayoutButton.style.marginRight = '10px';
     testDiv.appendChild(showOrdersLayoutButton);
+
+    var loadVileThemeButton = document.createElement('BUTTON');
+    loadVileThemeButton.innerHTML = 'Load Vile Theme';
+    loadVileThemeButton.onclick = () => loadVileTheme();
+    loadVileThemeButton.style.marginRight = '10px';
+    testDiv.appendChild(loadVileThemeButton);
   }
 
   return {
@@ -121,5 +128,9 @@ export default () => {
 
   function showOrdersLayout() {
     adaptableblotter.api.layoutApi.setLayout('Orders');
+  }
+
+  function loadVileTheme() {
+    adaptableblotter.api.themeApi.setTheme('vile-theme');
   }
 };

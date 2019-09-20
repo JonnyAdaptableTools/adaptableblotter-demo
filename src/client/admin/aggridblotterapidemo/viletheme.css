@@ -1,0 +1,28 @@
+html.ab--theme-vile-theme {
+  font-family: Helvetica, Arial, sans-serif;
+  --ab-theme-loaded: wimbledon-theme;
+
+  --ab-dashboard__background: lightgray;
+  --ab-cmp-input--disabled__background: lightyellow;
+
+  --ab-color-defaultbackground: lightgray;
+  --ab-color-text-on-defaultbackground: black;
+
+  --ab-color-accent: yellow;
+
+  --ab-color-success: lightyellow;
+  --ab-color-text-on-success: #462376;
+
+  --ab-color-primary: brown;
+  --ab-color-primarylight: lightyellow;
+  --ab-color-primarydark: blue;
+  --ab-color-text-on-primary: pink;
+
+  --ab-color-secondary: lightyellow;
+  --ab-color-secondarylight: #07456d;
+  --ab-color-secondarydark: brown;
+  --ab-color-text-on-secondary: brown;
+  --ab-color-text-on-secondarylight: black;
+
+  --ab__border-radius: var(--ab-space-2);
+}
