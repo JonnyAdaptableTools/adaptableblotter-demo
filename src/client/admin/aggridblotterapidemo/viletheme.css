@@ -17,6 +17,7 @@ html.ab--theme-vile-theme {
   --ab-color-primarylight: lightyellow;
   --ab-color-primarydark: blue;
   --ab-color-text-on-primary: brown;
+  --ab-color-text-on-primarydark: black;
 
   --ab-color-secondary: lightyellow;
   --ab-color-secondarylight: #07456d;

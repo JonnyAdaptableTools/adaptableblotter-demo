@@ -131,6 +131,6 @@ export default () => {
   }
 
   function loadVileTheme() {
-    adaptableblotter.api.themeApi.setTheme('vile-theme');
+    adaptableblotter.api.themeApi.loadTheme('vile-theme');
   }
 };
