@@ -42,7 +42,7 @@ export default {
     ],
   },
   CustomSort: {
-    Customsorts: [
+    CustomSorts: [
       {
         ColumnId: 'Employee',
         SortedValues: [
@@ -121,6 +121,7 @@ export default {
           'CustomerReference',
           'CompanyName',
           'ContactName',
+          'Employee',
           'InvoicedCost',
           'ChangeLastOrder',
           'OrderCost',

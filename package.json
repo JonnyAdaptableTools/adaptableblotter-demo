@@ -4,8 +4,8 @@
   "description": "Demo",
   "main": "index.js",
   "dependencies": {
-    "@adaptabletools/adaptableblotter": "^5.0.1",
-    "@adaptabletools/adaptableblotter-react-aggrid": "5.0.0",
+    "@adaptabletools/adaptableblotter": "^5.1.0",
+    "@adaptabletools/adaptableblotter-react-aggrid": "^5.1.0",
     "@trendmicro/react-sidenav": "^0.4.5",
     "@types/isomorphic-fetch": "0.0.34",
     "adaptableblotter": "^4.2.0",

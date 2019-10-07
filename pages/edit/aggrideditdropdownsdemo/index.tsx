@@ -22,7 +22,7 @@ export default () => {
             >
               User Interface
             </a>{' '}
-            section of Predefined Config you can stipulte that a column will
+            section of Predefined Config you can stipulate that a column will
             automatically display a Dropdown (select) when being edited.
           </p>
           <p>

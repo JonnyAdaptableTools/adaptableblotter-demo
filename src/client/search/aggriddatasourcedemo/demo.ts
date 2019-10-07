@@ -66,11 +66,13 @@ export default () => {
         switch (searchState.dataSource.Name) {
           case 'Euro Trades':
             let euroTrades = helperAgGrid.getEuroTrades(500);
+
             blotter.api.gridApi.setGridData(euroTrades);
             break;
 
           case 'Dollar Trades':
             let dollarTrades = helperAgGrid.getDollarTrades(200);
+
             blotter.api.gridApi.setGridData(dollarTrades);
             break;
 
