@@ -45,15 +45,6 @@ export default () => {
               enabling data playback.
             </li>
             <li>
-              <b>Grouping Demo:</b> The Adaptable Blotter works fully when the
-              ag-Grid column banding, pivoting, aggregration and grouping
-              functionality is all applied.
-            </li>
-            <li>
-              <b>Master Detail Demo:</b> The Adaptable Blotter supports Master /
-              Detail grids where the underlying vendor grid offers it.
-            </li>
-            <li>
               <b>API Demo:</b> Access the Adaptable Blotter functionality and
               state through the Blotter API which contains hundreds of functions
               giving full programmatic access to everything the Adaptable
@@ -62,11 +53,6 @@ export default () => {
             <li>
               <b>Big Data Demo:</b> See the Adaptable Blotter (and ag-Grid) with
               100,000 rows of client side data.
-            </li>
-            <li>
-              <b>Row Selection Demo:</b> The Adaptable Blotter fires an event
-              each time the cell or row selection changes. This includes full
-              detials of the cells and rows selected.
             </li>
             <li>
               <b>DataSource Changes Demo:</b> Any changes made to the data
@@ -93,15 +79,8 @@ export default () => {
           Entitlements demo
         </DemoBox>
         <DemoBox href="/admin/aggridauditdemo">Audit Log demo</DemoBox>
-        <DemoBox href="/admin/aggridgroupingdemo">Grouping demo</DemoBox>
-        <DemoBox href="/admin/aggridmasterdetaildemo">
-          Master Detail demo
-        </DemoBox>
         <DemoBox href="/admin/aggridblotterapidemo">API demo</DemoBox>
         <DemoBox href="/admin/aggridbigdatademo">Big Data demo</DemoBox>
-        <DemoBox href="/admin/aggridrowselectiondemo">
-          Row Selection demo
-        </DemoBox>
         <DemoBox href="/admin/aggridnocodedemo">No Code demo</DemoBox>
         <DemoBox href="/admin/aggriddatasourcechangesdemo">
           DataSource Changes demo

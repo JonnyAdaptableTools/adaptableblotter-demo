@@ -305,7 +305,7 @@ export class HelperAgGrid {
     return schema;
   }
 
-  public geRowSelectionNorthwindColumnSchema(): any[] {
+  public getRowSelectionNorthwindColumnSchema(): any[] {
     var schema = [];
 
     schema.push(this.getCustRefDef());
@@ -334,7 +334,40 @@ export class HelperAgGrid {
     return schema;
   }
 
-  public getGroupingNorthwindColumnSchema(): any[] {
+  public getRowGroupingNorthwindColumnSchema(): any[] {
+    var schema = [];
+    schema.push({
+      headerName: 'Ship Country',
+      field: 'ShipCountry',
+      filter: 'text',
+      editable: true,
+      rowGroup: true,
+      enableRowGroup: true,
+      hide: true,
+      sortable: true,
+      type: 'abColDefString',
+    });
+
+    schema.push(this.getOrderColumnDef());
+    schema.push(this.getCustRefDef());
+    schema.push(this.getInvoicedDef());
+    schema.push(this.getOrderCostDef());
+    schema.push(this.getPackageCostDef());
+    schema.push(this.getItemCostDef());
+    schema.push(this.getItemCountDef());
+    schema.push(this.getChangeLastOrderDef());
+    schema.push(this.getEmployeeDef());
+    schema.push(this.getContactDef());
+    schema.push(this.getOrderDateDef());
+    schema.push(this.getCompanyDef());
+    schema.push(this.getShipViaDef());
+    schema.push(this.getFreightDef());
+    schema.push(this.getShipNameDef());
+    schema.push(this.getShippedDateDef());
+    return schema;
+  }
+
+  public getColumnGroupingNorthwindColumnSchema(): any[] {
     var schema = [];
     // do a column group for Customer
     schema.push({
@@ -513,18 +546,6 @@ export class HelperAgGrid {
         },
       ],
     });
-    schema.push({
-      headerName: 'Ship Country',
-      field: 'ShipCountry',
-      filter: 'text',
-      editable: true,
-      rowGroup: true,
-      enableRowGroup: true,
-      hide: true,
-      sortable: true,
-      type: 'abColDefString',
-    });
-
     return schema;
   }
 

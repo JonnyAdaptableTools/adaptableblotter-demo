@@ -4,7 +4,7 @@ import DynamicDemoPage from '../../../src/Helpers/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/admin/aggridrowselectiondemo')}
+      demo={import('../../../src/client/aggridfeatures/aggridrowselectiondemo')}
       pageTitle={'Row Selection Demo'}
       description={
         <div>

@@ -14,58 +14,34 @@ import { AdaptableBlotterOptions } from '@adaptabletools/adaptableblotter/types'
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import predefinedConfig from './config';
-import { GridOptions, ColDef } from 'ag-grid-community';
-import { SelectionChangedEventArgs } from '@adaptabletools/adaptableblotter/App_Scripts/Api/Events/BlotterEvents';
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
-
   let rowData = JSON.parse(JSON.stringify(json));
 
-  const columndefs = helperAgGrid.geRowSelectionNorthwindColumnSchema();
-  let autoGroupColumnDef: ColDef = {
-    headerName: 'Employee',
-    field: 'employee',
-    width: 200,
-    cellRenderer: 'agGroupCellRenderer',
-    cellRendererParams: {
-      checkbox: true,
-    },
-  };
+  const columndefs = helperAgGrid.getFilteredColumnSchema();
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
-  gridOptions.rowSelection = 'multiple';
-  gridOptions.autoGroupColumnDef = autoGroupColumnDef;
-  gridOptions.suppressRowClickSelection = true;
+  gridOptions.floatingFilter = true;
 
   const blotterOptions: AdaptableBlotterOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    blotterId: 'Row Selection Demo',
+    blotterId: 'Auto Apply Filters Demo',
+    filterOptions: {
+      autoApplyFilter: false,
+    },
     licenceKey: Helper.getdemolicencekey(),
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };
 
   const blotterOptionsClone = cloneDeep(blotterOptions);
-  let adaptableblotter = new AdaptableBlotter(blotterOptions);
-
-  adaptableblotter.api.eventApi
-    .onSelectionChanged()
-    .Subscribe((sender, selectedChangedArgs) =>
-      listenToSelectedChange(selectedChangedArgs)
-    );
+  new AdaptableBlotter(blotterOptions);
 
   return {
     predefinedConfig,
     blotterOptions: blotterOptionsClone,
   };
-
-  function listenToSelectedChange(
-    selectedChangedArgs: SelectionChangedEventArgs
-  ) {
-    console.log('Selection Has Changed');
-    console.log(selectedChangedArgs);
-  }
 };

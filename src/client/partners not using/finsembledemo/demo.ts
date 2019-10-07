@@ -28,7 +28,7 @@ export default () => {
   const blotterOptions: AdaptableBlotterOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    blotterId: 'Advanced Search Demo',
+    blotterId: 'Finsemble Demo',
     licenceKey: Helper.getdemolicencekey(),
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,

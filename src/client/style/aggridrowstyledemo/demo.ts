@@ -28,7 +28,7 @@ export default () => {
   const blotterOptions: AdaptableBlotterOptions = {
     primaryKey: 'OrderId',
     userName: 'Row Style User',
-    blotterId: 'Percent Bar Demo',
+    blotterId: 'Row Style Demo',
     licenceKey: Helper.getdemolicencekey(),
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,

@@ -4,11 +4,13 @@ import DynamicDemoPage from '../../../src/Helpers/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/blotteroptions/aggridautofiltersdemo')}
-      pageTitle={'AdaptableBlotter.JS ag-Grid Auto Filters Demo'}
+      demo={import(
+        '../../../src/client/blotteroptions/aggridautoapplyfiltersdemo'
+      )}
+      pageTitle={'AdaptableBlotter.JS ag-Grid Auto Apply Filters Demo'}
       description={
         <div>
-          <h4>Auto Filters Demo</h4>
+          <h4>Auto Apply Filters Demo</h4>
           <p>
             By default the Adaptable Blotter will apply the column filters as
             soon as an item in the filter menu is clicked.

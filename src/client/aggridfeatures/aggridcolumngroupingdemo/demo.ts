@@ -8,7 +8,6 @@ import 'ag-grid-community/dist/styles/ag-theme-balham.css';
 import { cloneDeep } from 'lodash';
 
 import '../../../../DemoPage/aggriddemo.css';
-
 import { AdaptableBlotterOptions } from '@adaptabletools/adaptableblotter/types';
 
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
@@ -21,14 +20,15 @@ export default () => {
 
   let rowData = JSON.parse(JSON.stringify(json));
 
-  const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
+  const columndefs = helperAgGrid.getColumnGroupingNorthwindColumnSchema();
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
+  gridOptions.groupIncludeTotalFooter = true;
 
   const blotterOptions: AdaptableBlotterOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    blotterId: 'OpenFin Demo',
+    blotterId: 'Column Grouping Demo',
     licenceKey: Helper.getdemolicencekey(),
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,

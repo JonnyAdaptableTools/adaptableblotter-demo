@@ -317,20 +317,11 @@ export default () => {
           <Link href="/admin/aggridauditdemo">
             <a>Audit Log</a>
           </Link>
-          <Link href="/admin/aggridgroupingdemo">
-            <a>Grouping</a>
-          </Link>
-          <Link href="/admin/aggridmasterdetaildemo">
-            <a>Master Detail</a>
-          </Link>
           <Link href="/admin/aggridblotterapidemo">
             <a>Blotter API</a>
           </Link>
           <Link href="/admin/aggridbigdatademo">
             <a>Big Data</a>
-          </Link>
-          <Link href="/admin/aggridrowselectiondemo">
-            <a>Row Selection</a>
           </Link>
           <Link href="/admin/aggriddatasourcechangesdemo">
             <a>DataSource Changes</a>
@@ -347,6 +338,26 @@ export default () => {
         </Category>
         <Category
           title={
+            <Link href="/aggridfeatures">
+              <a>agGrid Features</a>
+            </Link>
+          }
+        >
+          <Link href="/aggridfeatures/aggridrowgroupingdemo">
+            <a>Row Grouping</a>
+          </Link>
+          <Link href="/aggridfeatures/aggridcolumngroupingdemo">
+            <a>Column Grouping</a>
+          </Link>
+          <Link href="/aggridfeatures/aggridmasterdetaildemo">
+            <a>Master Detail</a>
+          </Link>
+          <Link href="/aggridfeatures/aggridrowselectiondemo">
+            <a>Row Selection</a>
+          </Link>
+        </Category>
+        <Category
+          title={
             <Link href="/blotteroptions">
               <a>Blotter Options</a>
             </Link>
@@ -358,8 +369,8 @@ export default () => {
           <Link href="/blotteroptions/aggridvendorgridfiltersdemo">
             <a>Vendor Grid Filters </a>
           </Link>
-          <Link href="/blotteroptions/aggridautofiltersdemo">
-            <a>Auto Filters </a>
+          <Link href="/blotteroptions/aggridautoapplyfiltersdemo">
+            <a>Auto Apply Filters </a>
           </Link>
         </Category>
         <Category
