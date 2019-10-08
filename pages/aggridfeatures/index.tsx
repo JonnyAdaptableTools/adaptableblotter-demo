@@ -44,6 +44,10 @@ export default () => {
               applied.
             </li>
             <li>
+              <b>Pivoting Demo:</b> The Adaptable Blotter enables you to create
+              layouts that take pivoting into account.
+            </li>
+            <li>
               <b>Master Detail Demo:</b> The Adaptable Blotter supports Master /
               Detail grids where the underlying vendor grid offers it.
             </li>
@@ -63,6 +67,9 @@ export default () => {
         </DemoBox>
         <DemoBox href="/aggridfeatures/aggridcolumngroupingdemo">
           Column Grouping demo
+        </DemoBox>
+        <DemoBox href="/aggridfeatures/aggridpivotingdemo">
+          Pivoting demo
         </DemoBox>
         <DemoBox href="/aggridfeatures/aggridmasterdetaildemo">
           Master Detail demo

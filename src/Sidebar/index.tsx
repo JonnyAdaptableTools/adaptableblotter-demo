@@ -349,6 +349,9 @@ export default () => {
           <Link href="/aggridfeatures/aggridcolumngroupingdemo">
             <a>Column Grouping</a>
           </Link>
+          <Link href="/aggridfeatures/aggridpivotingdemo">
+            <a>Pivoting</a>
+          </Link>
           <Link href="/aggridfeatures/aggridmasterdetaildemo">
             <a>Master Detail</a>
           </Link>
