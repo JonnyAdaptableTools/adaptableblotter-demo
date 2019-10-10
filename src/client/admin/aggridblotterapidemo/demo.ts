@@ -93,6 +93,12 @@ export default () => {
     loadVileThemeButton.onclick = () => loadVileTheme();
     loadVileThemeButton.style.marginRight = '10px';
     testDiv.appendChild(loadVileThemeButton);
+
+    var showColumnChooserPopupButton = document.createElement('BUTTON');
+    showColumnChooserPopupButton.innerHTML = 'Show Column Chooser';
+    showColumnChooserPopupButton.onclick = () => showColumnChooserPopup();
+    showColumnChooserPopupButton.style.marginRight = '10px';
+    testDiv.appendChild(showColumnChooserPopupButton);
   }
 
   return {
@@ -132,5 +138,9 @@ export default () => {
 
   function loadVileTheme() {
     adaptableblotter.api.themeApi.loadTheme('vile-theme');
+  }
+
+  function showColumnChooserPopup() {
+    adaptableblotter.api.columnChooserApi.showColumnChooserPopup();
   }
 };

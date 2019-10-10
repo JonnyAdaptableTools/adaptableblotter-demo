@@ -34,12 +34,11 @@ export default () => {
           </p>
           <p>
             In this example we create our own form controls (external to the
-            Adaptable Blotter) but we call the Blotter API to run and clear
-            Quick Search (e.g. <i>api.quickSearchApi.clearQuickSearch()</i>),
-            manage Dashboard visibility (e.g. <i>api.dashboardApi.Minimise()</i>
-            ) and load a layout <i>api.layoutApi.setLayout('Orders')</i>. Note
-            that the functions run as if you were using the Blotter and that all
-            State is stored (refresh the page to see).
+            Adaptable Blotter) but we call the QuickSearch API to run and clear
+            Quick Search, Dashboard API to manage Dashboard visibility, Layout
+            API to load a layout and Column Chooser API to show the column
+            chooser. Note that the functions run as if you were using the
+            Blotter and that all State is stored (refresh the page to see).
           </p>
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
