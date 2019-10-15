@@ -3,6 +3,7 @@ import { PredefinedConfig } from '@adaptabletools/adaptableblotter/types';
 export default {
   Dashboard: {
     VisibleButtons: ['CellValidation'],
+    VisibleToolbars: ['QuickSearch', 'BulkUpdate', 'SmartEdit'],
   },
   CellValidation: {
     CellValidations: [
@@ -10,7 +11,7 @@ export default {
         ActionMode: 'Stop Edit',
         ColumnId: 'CustomerReference',
         Range: {
-          Operator: 'None',
+          Operator: 'AnyChange',
           Operand1: '',
           Operand2: '',
           Operand1Type: 'Value',
@@ -21,7 +22,7 @@ export default {
         ActionMode: 'Show Warning',
         ColumnId: 'Employee',
         Range: {
-          Operator: 'None',
+          Operator: 'AnyChange',
           Operand1: '',
           Operand2: '',
           Operand1Type: 'Value',
