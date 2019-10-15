@@ -457,7 +457,7 @@ export class HelperAgGrid {
           enableValue: true,
           filter: true,
           sortable: true,
-          aggFunc: 'sum',
+          //  aggFunc: 'sum',
           type: 'abColDefNumber',
         },
         {
@@ -469,7 +469,7 @@ export class HelperAgGrid {
           filter: true,
           sortable: true,
           type: 'abColDefNumber',
-          aggFunc: 'sum',
+          //   aggFunc: 'sum',
         },
       ],
     });
