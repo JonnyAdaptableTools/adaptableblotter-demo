@@ -7,6 +7,14 @@ export default {
   SmartEdit: {
     SmartEditValue: 10,
   },
+  CalculatedColumn: {
+    CalculatedColumns: [
+      {
+        ColumnExpression: 'Col("ItemCost") / Col("ItemCount")',
+        ColumnId: 'Avg Item Cost',
+      },
+    ],
+  },
   Layout: {
     CurrentLayout: 'Orders View',
     Layouts: [
@@ -14,6 +22,7 @@ export default {
         Columns: [
           'OrderId',
           'OrderDate',
+          'Avg Item Cost',
           'CustomerReference',
           'CompanyName',
           'ContactName',
@@ -24,7 +33,7 @@ export default {
           'ItemCost',
           'ItemCount',
         ],
-        ColumnSorts: [],
+        ColumnSorts: [{ Column: 'CompanyName', SortOrder: 'Ascending' }],
         Name: 'Orders View',
       },
       {
