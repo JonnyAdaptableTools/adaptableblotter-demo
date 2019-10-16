@@ -1,10 +1,10 @@
 {
   "name": "adaptableblotter-demo",
-  "version": "5.1.1",
+  "version": "5.1.2",
   "description": "Demo",
   "main": "index.js",
   "dependencies": {
-    "@adaptabletools/adaptableblotter": "^5.1.1",
+    "@adaptabletools/adaptableblotter": "^5.1.2",
     "@adaptabletools/adaptableblotter-react-aggrid": "^5.1.0",
     "@trendmicro/react-sidenav": "^0.4.5",
     "@types/isomorphic-fetch": "0.0.34",
@@ -16,6 +16,7 @@
     "copy-to-clipboard": "^3.2.0",
     "fin-hypergrid-data-source-base": "^0.4.11",
     "isomorphic-fetch": "^2.2.1",
+    "latest": "^0.2.0",
     "next": "8.0.4",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
