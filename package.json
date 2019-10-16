@@ -4,11 +4,10 @@
   "description": "Demo",
   "main": "index.js",
   "dependencies": {
-    "@adaptabletools/adaptableblotter": "^5.1.2",
-    "@adaptabletools/adaptableblotter-react-aggrid": "^5.1.0",
+    "@adaptabletools/adaptableblotter": "^5.1.3",
+    "@adaptabletools/adaptableblotter-react-aggrid": "^5.1.3",
     "@trendmicro/react-sidenav": "^0.4.5",
     "@types/isomorphic-fetch": "0.0.34",
-    "adaptableblotter": "^4.2.0",
     "ag-grid-community": "^21.0.0",
     "ag-grid-enterprise": "^21.0.0",
     "ag-grid-react": "^21.0.1",
