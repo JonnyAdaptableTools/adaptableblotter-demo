@@ -28,44 +28,6 @@ export default () => {
             then simply select the cells you wish to see and select 'See as Pie
             Chart' from the Context menu.
           </p>
-          <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360005113352-Shortcuts"
-              target="_blank"
-            >
-              User Guide
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028587212-Shortcut-Config"
-              target="_blank"
-            >
-              Predefined Config
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028899451-Shortcut-API"
-              target="_blank"
-            >
-              Blotter API
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360009005171-Shortcuts-FAQ"
-              target="_blank"
-            >
-              FAQ
-            </a>
-            , and{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028952951-Shortcut-Videos"
-              target="_blank"
-            >
-              Videos
-            </a>
-            .
-          </p>
         </div>
       }
     />

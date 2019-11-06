@@ -26,7 +26,7 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360020202712-Column-Category"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755157-Column-Management-Functions"
               target="_blank"
             >
               User Guide

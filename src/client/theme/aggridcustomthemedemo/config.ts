@@ -3,39 +3,20 @@ import { PredefinedConfig } from '@adaptabletools/adaptableblotter/types';
 export default {
   Dashboard: {
     VisibleToolbars: ['Theme', 'Export', 'Layout'],
-    // ShowSystemStatusButton: false,
   },
+
   Theme: {
-    SystemThemes: [],
     UserThemes: [
       {
         Name: 'wimbledon-theme',
         Description: 'Wimbledon',
       },
+      {
+        Name: 'BlueTheme',
+        Description: 'Blue theme',
+        VendorGridClassName: 'ag-theme-blue',
+      },
     ],
     CurrentTheme: 'wimbledon-theme',
-  },
-  UserInterface: {
-    RowStyles: [
-      {
-        Style: {
-          ForeColor: 'white',
-          BackColor: '#462376',
-          FontStyle: 'Bold',
-        },
-        RowType: 'Even',
-      },
-      {
-        Style: {
-          ForeColor: 'white',
-          BackColor: '#0e6537',
-          FontStyle: 'Italic',
-        },
-        RowType: 'Odd',
-      },
-    ],
-  },
-  Export: {
-    CurrentReport: 'Visible Data',
   },
 } as PredefinedConfig;

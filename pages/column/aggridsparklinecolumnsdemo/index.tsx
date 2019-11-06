@@ -36,6 +36,13 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360003213038-Special-Column-Functions"
+              target="_blank"
+            >
+              User Guide
+            </a>{' '}
+            -{' '}
+            <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_designtimestate_sparklinecolumnstate_.sparklinecolumnstate.html"
               target="_blank"
             >

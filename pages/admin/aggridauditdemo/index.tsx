@@ -32,7 +32,7 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360024888671-Audit-Log"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754518-Audit-Log"
               target="_blank"
             >
               User Guide

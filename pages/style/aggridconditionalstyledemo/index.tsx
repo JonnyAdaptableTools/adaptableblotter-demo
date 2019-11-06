@@ -29,7 +29,7 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360005113372-Conditional-Styles"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755177-Styling-Functions"
               target="_blank"
             >
               User Guide

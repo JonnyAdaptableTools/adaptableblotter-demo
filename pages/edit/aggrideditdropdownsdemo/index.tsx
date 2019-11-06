@@ -43,15 +43,6 @@ export default () => {
             populated via Permitted Values) and <b>Employee</b> (which gets
             distinct column values dynamically).
           </p>
-          <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360024888651-Column-Values"
-              target="_blank"
-            >
-              User Guide
-            </a>
-          </p>{' '}
         </div>
       }
     />
