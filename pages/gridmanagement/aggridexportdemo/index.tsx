@@ -30,7 +30,7 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360005168011-Export"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755197-Grid-Functions"
               target="_blank"
             >
               User Guide

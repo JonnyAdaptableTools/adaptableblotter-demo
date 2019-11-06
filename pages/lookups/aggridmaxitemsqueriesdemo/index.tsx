@@ -30,10 +30,10 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028584632-Query-Options"
+              href="https://api.adaptableblotter.com/interfaces/_blotteroptions_queryoptions_.queryoptions.html"
               target="_blank"
             >
-              User Guide
+              Blotter Options
             </a>
           </p>
         </div>

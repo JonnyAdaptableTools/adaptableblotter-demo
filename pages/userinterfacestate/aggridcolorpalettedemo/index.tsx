@@ -29,15 +29,6 @@ export default () => {
             the 'Contact' column and you will see only 20 items displayed
             (instead of the many hundred we show in other demos).
           </p>
-          <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028584632-Query-Options"
-              target="_blank"
-            >
-              User Guide
-            </a>
-          </p>
         </div>
       }
     />

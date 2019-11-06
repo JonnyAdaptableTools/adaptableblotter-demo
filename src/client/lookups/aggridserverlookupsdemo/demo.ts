@@ -54,38 +54,10 @@ export default () => {
   function getValuesForColumn(columnName: string): IServerColumnValues {
     let vals;
 
-    if (columnName === 'CustomerReference') {
-      vals = [
-        'MEREP',
-        'TOMSP',
-        'WARTH',
-        'BLONP',
-        'BERGS',
-        'FOLKO',
-        'PRINI',
-        'LEHMS',
-        'SPLIR',
-        'BOTTM',
-        'ERNSH',
-        'HUNGO',
-        'REGGC',
-      ];
-    } else if (columnName === 'ContactName') {
-      vals = [
-        'Jean Fresnière',
-        'Karin Josephs',
-        'Pirkko Koskitalo',
-        'Frédérique Citeaux',
-        'Elizabeth Brown',
-        'Maria Larsson',
-        'Art Braunschweiger',
-        'Roland Mendel',
-        'Elizabeth Lincoln',
-        'Patricia McKenna',
-        'Pedro Afonso',
-        'Philip Cramer',
-        'Maurizio Moroni',
-      ];
+    if (columnName === 'country') {
+      vals = ['Rasdu'];
+    } else if (columnName === 'currency') {
+      vals = ['Jonny'];
     } else {
       return undefined; // not nice and we need to fix
     }

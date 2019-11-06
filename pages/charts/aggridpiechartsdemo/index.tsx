@@ -36,6 +36,15 @@ export default () => {
             <i>showModal</i> to false so that the chart appears above the grid
             (and not in a popup).
           </p>
+          <p>
+            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <a
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755217-Chart-Functionss"
+              target="_blank"
+            >
+              User Guide
+            </a>{' '}
+          </p>
         </div>
       }
     />

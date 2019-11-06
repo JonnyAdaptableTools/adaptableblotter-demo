@@ -27,7 +27,7 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360005167931-Advanced-Search"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755137-Search-Functions"
               target="_blank"
             >
               User Guide

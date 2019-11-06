@@ -32,12 +32,12 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028584632-Query-Options"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_designtimestate_userinterfacestate_.permittedcolumnvalues.html"
               target="_blank"
             >
-              User Guide
+              Predefined Config
             </a>
-          </p>{' '}
+          </p>
         </div>
       }
     />
