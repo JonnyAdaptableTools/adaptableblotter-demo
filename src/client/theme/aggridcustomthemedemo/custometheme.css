@@ -26,3 +26,23 @@ html.ab--theme-wimbledon-theme {
 
   --ab__border-radius: var(--ab-space-2);
 }
+
+html.ab--theme-BlueTheme {
+  --ab-theme-loaded: BlueTheme;
+  --ab-dashboard__background: #cce5ff;
+  --ab-cmp-input--disabled__background: #0e6537;
+  --ab-color-defaultbackground: #99ccff;
+  --ab-color-text-on-defaultbackground: #000099;
+  --ab-color-accent: yellow;
+  --ab-color-success: lightgreen;
+  --ab-color-text-on-success: #000099;
+  --ab-color-primary: #99ccff;
+  --ab-color-primarylight: #0066cc;
+  --ab-color-primarydark: #3333ff;
+  --ab-color-text-on-primary: #000099;
+  --ab-color-secondary: #000099;
+  --ab-color-secondarylight: #07456d;
+  --ab-color-secondarydark: #000099;
+  --ab-color-text-on-secondary: #99ccff;
+  --ab-color-text-on-secondarylight: white;
+}
