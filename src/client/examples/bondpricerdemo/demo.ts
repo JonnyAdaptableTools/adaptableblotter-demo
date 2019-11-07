@@ -31,7 +31,7 @@ export default () => {
     primaryKey: 'Isin',
     userName: 'Demo User',
     blotterId: 'Bond Pricer Demo',
-    licenceKey: Helper.getdemolicencekey(),
+
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };

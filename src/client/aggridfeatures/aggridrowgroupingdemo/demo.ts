@@ -29,7 +29,7 @@ export default () => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     blotterId: 'Row Grouping Demo',
-    licenceKey: Helper.getdemolicencekey(),
+
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };

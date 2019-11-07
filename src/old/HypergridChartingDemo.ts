@@ -48,7 +48,7 @@ export class HypergridChartingDemo {
           vendorGrid: this.grid,
           userName: 'Demo User',
           blotterId: 'Charting Demo',
-          licenceKey: Helper.getdemolicencekey(),
+
           predefinedConfig: json,
           chartOptions: {
             displayOnStartUp: true,

@@ -27,7 +27,7 @@ export default () => {
     primaryKey: 'name',
     userName: 'Demo User',
     blotterId: 'Master Detail Demo',
-    licenceKey: Helper.getdemolicencekey(),
+
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };

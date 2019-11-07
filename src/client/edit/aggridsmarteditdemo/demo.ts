@@ -28,7 +28,7 @@ export default () => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     blotterId: 'Smart Edit Demo',
-    licenceKey: Helper.getdemolicencekey(),
+
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };

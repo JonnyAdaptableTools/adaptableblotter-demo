@@ -29,7 +29,7 @@ export default () => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     blotterId: 'Best Ex Demo',
-    licenceKey: Helper.getdemolicencekey(),
+
     auditOptions: {
       auditUserStateChanges: {
         auditToConsole: true,

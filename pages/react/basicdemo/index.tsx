@@ -23,7 +23,7 @@ export default () => {
             target="_blank"
           >
             React Wrapper
-          </a>{' '}
+          </a>
           (adaptableblotter-react-aggrid)
         </h4>
       }

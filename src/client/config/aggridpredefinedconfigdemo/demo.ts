@@ -30,7 +30,7 @@ export default () => {
     userName: 'Demo User',
     blotterId: 'Predefined Config Demo',
     vendorGrid: gridOptions,
-    licenceKey: Helper.getdemolicencekey(),
+
     layoutOptions: {
       includeVendorStateInLayouts: true,
       autoSaveLayouts: true,

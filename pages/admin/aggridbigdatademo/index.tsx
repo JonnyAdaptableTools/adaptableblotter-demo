@@ -37,7 +37,7 @@ export default () => {
               target="_blank"
             >
               Server Search
-            </a>{' '}
+            </a>
             options available.
           </p>
         </div>

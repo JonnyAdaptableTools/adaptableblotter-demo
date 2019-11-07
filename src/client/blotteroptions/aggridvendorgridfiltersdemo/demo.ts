@@ -33,7 +33,7 @@ export default () => {
       useAdaptableBlotterQuickFilter: false,
       useAdaptableBlotterFilterForm: false,
     },
-    licenceKey: Helper.getdemolicencekey(),
+
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };

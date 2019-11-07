@@ -44,13 +44,6 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755177-Styling-Functions"
-              target="_blank"
-            >
-              User Guide
-            </a>
-            ,{' '}
-            <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028587452-Theme-Config"
               target="_blank"
             >
@@ -63,12 +56,19 @@ export default () => {
             >
               Blotter API
             </a>{' '}
-            and{' '}
+            ,{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360009005211-Theme-Picker-FAQ"
               target="_blank"
             >
               FAQ
+            </a>
+            ,{' '}
+            <a
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755177-Styling-Functions"
+              target="_blank"
+            >
+              User Guide
             </a>
             .
           </p>

@@ -38,7 +38,7 @@ export default () => {
     primaryKey: 'tradeId',
     userName: 'Demo User',
     blotterId: 'DataSource Changes Demo',
-    licenceKey: Helper.getdemolicencekey(),
+
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };

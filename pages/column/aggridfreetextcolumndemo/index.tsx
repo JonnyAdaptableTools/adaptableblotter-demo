@@ -27,19 +27,19 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360003213038-Special-Column-Functions"
-              target="_blank"
-            >
-              User Guide
-            </a>
-            ,{' '}
-            <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028899411-Free-Text-Column-API"
               target="_blank"
             >
               Blotter API
             </a>
-            , .
+            ,{' '}
+            <a
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360003213038-Special-Column-Functions"
+              target="_blank"
+            >
+              User Guide
+            </a>
+            .
           </p>
         </div>
       }

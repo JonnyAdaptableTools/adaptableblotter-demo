@@ -26,13 +26,6 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755177-Styling-Functions"
-              target="_blank"
-            >
-              User Guide
-            </a>
-            ,{' '}
-            <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028899431-Percent-Bar-API"
               target="_blank"
             >
@@ -45,12 +38,19 @@ export default () => {
             >
               FAQ
             </a>
-            , and{' '}
+            ,{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028638052-Cell-Validation-Videos"
               target="_blank"
             >
               Videos
+            </a>
+            ,{' '}
+            <a
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755177-Styling-Functions"
+              target="_blank"
+            >
+              User Guide
             </a>
             .
           </p>

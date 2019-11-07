@@ -28,7 +28,7 @@ export default () => {
     primaryKey: 'Country',
     userName: 'Demo User',
     blotterId: 'Category Charts Demo',
-    licenceKey: Helper.getdemolicencekey(),
+
     chartOptions: {
       displayOnStartUp: true,
       showModal: false,

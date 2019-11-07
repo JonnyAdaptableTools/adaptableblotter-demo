@@ -163,6 +163,9 @@ export default () => {
           <Link href="/style/aggridflashingcelldemo">
             <a>Flashing Cell</a>
           </Link>
+          <Link href="/style/aggridupdatedrowsdemo">
+            <a>Updated Rows</a>
+          </Link>
           <Link href="/style/aggridpercentbardemo">
             <a>Percent Bar</a>
           </Link>

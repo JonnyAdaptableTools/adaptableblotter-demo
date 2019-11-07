@@ -22,7 +22,7 @@ export default () => {
               target="_blank"
             >
               onActionColumnClicked
-            </a>{' '}
+            </a>
             event fires, providing details of column clicked and current data in
             the row; subscribe to this event and perform any additional logic
             that is required.
@@ -56,38 +56,38 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360003213038-Special-Column-Functions"
-              target="_blank"
-            >
-              User Guide
-            </a>{' '}
-            -{' '}
-            <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_designtimestate_actioncolumnstate_.actioncolumnstate.html"
               target="_blank"
             >
               Predefined Config
-            </a>{' '}
-            -{' '}
+            </a>
+            ,{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_api_interface_iactioncolumnapi_.iactioncolumnapi.html"
               target="_blank"
             >
               Blotter API
-            </a>{' '}
-            -{' '}
+            </a>
+            ,{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002209498-Action-Column-FAQ"
               target="_blank"
             >
               FAQ
-            </a>{' '}
-            -{' '}
+            </a>
+            ,{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002204277-Action-Column-Videos"
               target="_blank"
             >
               Videos
+            </a>
+            ,{' '}
+            <a
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360003213038-Special-Column-Functions"
+              target="_blank"
+            >
+              User Guide
             </a>
             .
           </p>

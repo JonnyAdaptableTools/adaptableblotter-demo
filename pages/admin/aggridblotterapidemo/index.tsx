@@ -43,17 +43,17 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754777-Blotter-API"
-              target="_blank"
-            >
-              User Guide
-            </a>{' '}
-            -{' '}
-            <a
               href="https://api.adaptableblotter.com/interfaces/_api_interface_iblotterapi_.iblotterapi.html"
               target="_blank"
             >
               Blotter API
+            </a>
+            ,{' '}
+            <a
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754777-Blotter-API"
+              target="_blank"
+            >
+              User Guide
             </a>{' '}
             .
           </p>

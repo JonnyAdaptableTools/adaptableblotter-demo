@@ -32,7 +32,7 @@ export default () => {
     filterOptions: {
       autoApplyFilter: false,
     },
-    licenceKey: Helper.getdemolicencekey(),
+
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };

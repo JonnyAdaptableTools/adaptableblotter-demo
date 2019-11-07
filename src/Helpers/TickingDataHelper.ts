@@ -1,6 +1,7 @@
 import { GridOptions, RowNode } from 'ag-grid-community';
 import { ITrade } from './Trade';
 import { HelperAgGrid } from './HelperAgGrid';
+import { IAdaptableBlotter } from '@adaptabletools/adaptableblotter/types';
 
 export class TickingDataHelper {
   public startTickingDataagGridOrders(
@@ -31,6 +32,7 @@ export class TickingDataHelper {
             let packageCost = gridOptions.api.getValue('PackageCost', rowNode);
             let newInvoicedCost = newOrderCost - packageCost;
             rowNode.setDataValue('InvoicedCost', newInvoicedCost);
+
             let incdec: number = this.generateRandomInt(1, 2) == 1 ? -1 : 1;
             let changeLastOrder = gridOptions.api.getValue(
               'ChangeLastOrder',
@@ -47,6 +49,36 @@ export class TickingDataHelper {
             }
           }
         }
+      }, tickingFrequency);
+    }
+  }
+
+  public startTickingDataagGridTradesUpdateData(
+    gridOptions: any,
+    blotter: IAdaptableBlotter,
+    tickingFrequency: number,
+    tradeCount: number
+  ) {
+    if (gridOptions != null && gridOptions.api != null) {
+      setInterval(() => {
+        let tradeId = this.generateRandomInt(1, tradeCount);
+
+        const trade: ITrade = { ...gridOptions.rowData[tradeId] };
+
+        let numberToAdd: number = this.generateRandomInt(1, 3);
+
+        if (numberToAdd == 1) {
+          // if 1 then update a number up
+          trade.price = trade.price + 1;
+        } else if (numberToAdd == 2) {
+          // if 2 then update a number down
+          trade.price = trade.price - 1;
+        } else if (numberToAdd == 3) {
+          // if 3 then update a country
+          trade.currency = 'JPY';
+        }
+
+        blotter.api.gridApi.updateGridData([trade]);
       }, tickingFrequency);
     }
   }
@@ -85,28 +117,6 @@ export class TickingDataHelper {
         }
       }, tickingFrequency);
     }
-  }
-
-  startTickingDataHypergrid(grid: any) {
-    setInterval(() => {
-      const numberToAdd: number =
-        this.generateRandomInt(1, 2) == 1 ? -0.5 : 0.5;
-      // pick a random trade in the first ten
-      const trade = this.getRandomItem(grid.behavior.getData(), 20);
-      // pick a random colum in the numeric col
-      const columnName = 'price'; // this.getRandomItem(this._numericCols);
-      const initialNewValue = trade[columnName];
-      const newValue = this.roundTo4Dp(initialNewValue + numberToAdd);
-      trade[columnName] = newValue;
-
-      trade.ask = this.roundTo4Dp(trade.price - trade.bidOfferSpread / 2);
-      trade.bid = this.roundTo4Dp(trade.price + trade.bidOfferSpread / 2);
-
-      trade.bloombergAsk = this.roundTo4Dp(trade.ask + 0.01);
-      trade.bloombergBid = this.roundTo4Dp(trade.bid - 0.01);
-      // grid.behavior.reindex();
-      grid.repaint();
-    }, 1000);
   }
 
   startTickingDataagGridAddRow(

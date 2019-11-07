@@ -28,13 +28,6 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755197-Grid-Functions"
-              target="_blank"
-            >
-              User Guide
-            </a>
-            ,{' '}
-            <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028585312-Custom-Sort-API"
               target="_blank"
             >
@@ -46,6 +39,13 @@ export default () => {
               target="_blank"
             >
               FAQ
+            </a>
+            ,{' '}
+            <a
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755197-Grid-Functions"
+              target="_blank"
+            >
+              User Guide
             </a>
             .
           </p>

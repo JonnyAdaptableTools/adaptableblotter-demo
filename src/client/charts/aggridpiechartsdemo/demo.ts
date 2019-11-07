@@ -29,7 +29,7 @@ export default () => {
     primaryKey: 'Country',
     userName: 'Demo User',
     blotterId: 'Pie Charts Demo',
-    licenceKey: Helper.getdemolicencekey(),
+
     chartOptions: {
       displayOnStartUp: true,
       showModal: false,

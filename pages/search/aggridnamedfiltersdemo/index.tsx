@@ -35,7 +35,7 @@ export default () => {
               target="_blank"
             >
               Named Filters
-            </a>{' '}
+            </a>
             section of Config, and the actual <b>Predicate</b> in{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_blotteroptions_advancedoptions_.advancedoptions.html"
@@ -57,38 +57,38 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755137-Search-Functions"
-              target="_blank"
-            >
-              User Guide
-            </a>{' '}
-            -{' '}
-            <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_runtimestate_namedfilterstate_.namedfilterstate.html"
               target="_blank"
             >
               Predefined Config
-            </a>{' '}
-            -{' '}
+            </a>
+            ,{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_api_interface_inamedfilterapi_.inamedfilterapi.html"
               target="_blank"
             >
               Blotter API
-            </a>{' '}
-            -{' '}
+            </a>
+            ,{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029896011-Filter-FAQ"
               target="_blank"
             >
               FAQ
-            </a>{' '}
-            -{' '}
+            </a>
+            ,{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002179298-Named-Filters-Videos"
               target="_blank"
             >
               Videos
+            </a>
+            ,{' '}
+            <a
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755137-Search-Functions"
+              target="_blank"
+            >
+              User Guide
             </a>
             .
           </p>

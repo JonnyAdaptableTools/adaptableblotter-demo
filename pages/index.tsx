@@ -57,7 +57,7 @@ export default () => {
             target="_blank"
           >
             Predefined Config
-          </a>{' '}
+          </a>
           - state that you have created at design time (eg. searches, layouts,
           styles, entitlements etc.)
           <br />
@@ -67,7 +67,7 @@ export default () => {
             target="_blank"
           >
             Adaptable Blotter Options
-          </a>{' '}
+          </a>
           object.
           <br />
           Each of these demos includes a small amount of Predefined Config
@@ -78,14 +78,14 @@ export default () => {
           The demos use the excellent{' '}
           <a href="https://www.ag-grid.com/" target="_blank">
             ag-Grid
-          </a>{' '}
+          </a>
           as the underlying grid control (which{' '}
           <a
             href="https://medium.com/ag-grid/getting-more-from-your-datagrid-introducing-adaptable-blotter-2be5debd7e46"
             target="_blank"
           >
             integrates very well
-          </a>{' '}
+          </a>
           with the Adaptable Blotter), and dummy data from the famous Microsoft
           Northwind database (Orders table). <br />
         </p>
@@ -102,11 +102,11 @@ export default () => {
             target="_blank"
           >
             Integtration Help Pages
-          </a>{' '}
+          </a>
           for more information and also this{' '}
           <a href="https://yg0we.codesandbox.io/" target="_blank">
             Live Example
-          </a>{' '}
+          </a>
           (which you can download and experiment with it yourself using this{' '}
           <a
             href="https://codesandbox.io/s/adaptableblotterbasic-yg0we"
@@ -130,7 +130,7 @@ export default () => {
             target="_blank"
           >
             React Wrapper
-          </a>{' '}
+          </a>
           and a{' '}
           <a
             href="https://adaptabletools.zendesk.com/hc/en-us/articles/360024888791-Angular-Wrapper"
@@ -147,7 +147,7 @@ export default () => {
           If you require further information please visit our{' '}
           <a href="http://adaptabletools.com" target="_blank">
             Website
-          </a>{' '}
+          </a>
           or use the{' '}
           <a href="https://adaptabletools.zendesk.com/hc/en-us" target="_blank">
             Online Help

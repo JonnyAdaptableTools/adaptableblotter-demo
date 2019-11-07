@@ -9,10 +9,15 @@ export default {
       {
         Alert: {
           Header: "Run 'All Data' Report",
-          MessageType: 'Info',
           Msg: "Run the 'All Data' report so MO have full view of activity",
-          ShowAsPopup: true,
+          AlertDefinition: {
+            MessageType: 'Warning',
+            AlertProperties: {
+              ShowPopup: true,
+            },
+          },
         },
+
         Schedule: {
           DaysOfWeek: [1, 2, 3, 4, 5],
           Hour: 17,

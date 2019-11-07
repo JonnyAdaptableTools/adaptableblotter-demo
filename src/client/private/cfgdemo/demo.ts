@@ -37,7 +37,7 @@ export default () => {
     primaryKey: 'Order ID',
     userName: 'Demo User',
     blotterId: 'CFG Demo',
-    licenceKey: Helper.getdemolicencekey(),
+
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };

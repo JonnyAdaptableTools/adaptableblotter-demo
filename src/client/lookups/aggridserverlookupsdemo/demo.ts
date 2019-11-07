@@ -38,7 +38,7 @@ export default () => {
         });
       },
     },
-    licenceKey: Helper.getdemolicencekey(),
+
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };

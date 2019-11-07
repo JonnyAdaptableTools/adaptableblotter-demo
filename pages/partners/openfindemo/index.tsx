@@ -18,7 +18,7 @@ export default () => {
           However if you are running the Adaptable Blotter inside the popular{' '}
           <a href="https://openfin.co/" target="_blank">
             OpenFin container
-          </a>{' '}
+          </a>
           then you get some extra features which we have added that take
           advantage of the many benefits that OpenFin brings.
         </p>

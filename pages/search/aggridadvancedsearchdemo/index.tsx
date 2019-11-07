@@ -27,38 +27,38 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755137-Search-Functions"
-              target="_blank"
-            >
-              User Guide
-            </a>{' '}
-            -{' '}
-            <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_runtimestate_advancedsearchstate_.advancedsearchstate.html"
               target="_blank"
             >
               Predefined Config
-            </a>{' '}
-            -{' '}
+            </a>
+            ,{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_api_interface_iadvancedsearchapi_.iadvancedsearchapi.html"
               target="_blank"
             >
               Blotter API
-            </a>{' '}
-            -{' '}
+            </a>
+            ,{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029895971-Advanced-Search-FAQ"
               target="_blank"
             >
               FAQ
-            </a>{' '}
-            -{' '}
+            </a>
+            ,{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028637652-Advanced-Search-Videos"
               target="_blank"
             >
               Videos
+            </a>
+            ,{' '}
+            <a
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755137-Search-Functions"
+              target="_blank"
+            >
+              User Guide
             </a>
             .
           </p>

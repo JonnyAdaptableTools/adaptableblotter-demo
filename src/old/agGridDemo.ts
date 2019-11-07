@@ -79,7 +79,7 @@ export class agGridDemo {
           vendorGrid: gridOptions,
           userName: 'Demo',
           blotterId: blotterId,
-          licenceKey: Helper.getdemolicencekey(),
+
           layoutOptions: {
             includeVendorStateInLayouts: true,
             autoSaveLayouts: true,

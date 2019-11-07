@@ -30,7 +30,7 @@ export default () => {
               target="_blank"
             >
               Chart Options
-            </a>{' '}
+            </a>
             has overriden values. We set <i>displayOnStartUp</i> to true so you
             see the currently selected chart when the page loads, and{' '}
             <i>showModal</i> to false so that the chart appears above the grid
@@ -43,7 +43,7 @@ export default () => {
               target="_blank"
             >
               User Guide
-            </a>{' '}
+            </a>
           </p>
         </div>
       }

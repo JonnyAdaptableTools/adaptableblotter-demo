@@ -21,7 +21,7 @@ export default () => {
               target="_blank"
             >
               User Interface
-            </a>{' '}
+            </a>
             section of Predefined Config you can stipulate that a column will
             automatically display a Dropdown (select) when being edited.
           </p>

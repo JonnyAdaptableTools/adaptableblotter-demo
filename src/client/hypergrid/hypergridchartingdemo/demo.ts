@@ -52,7 +52,7 @@ export class Demo {
       vendorGrid: this.grid,
       userName: 'Demo User',
       blotterId: 'Basic Charting Demo',
-      licenceKey: Helper.getdemolicencekey(),
+
       predefinedConfig: jsonConfig,
       chartOptions: {
         displayOnStartUp: true,

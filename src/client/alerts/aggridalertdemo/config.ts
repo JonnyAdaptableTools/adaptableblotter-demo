@@ -17,7 +17,9 @@ export default {
           Operand2Type: 'Value',
           Operator: 'GreaterThan',
         },
-        ShowAsPopup: true,
+        AlertProperties: {
+          ShowPopup: true,
+        },
       },
       {
         ColumnId: 'ItemCount',
@@ -29,7 +31,9 @@ export default {
           Operand2Type: 'Value',
           Operator: 'PercentChange',
         },
-        ShowAsPopup: false,
+        AlertProperties: {
+          ShowPopup: false,
+        },
       },
     ],
   },

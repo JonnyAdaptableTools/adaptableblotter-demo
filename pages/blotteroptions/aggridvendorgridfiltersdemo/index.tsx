@@ -40,7 +40,7 @@ export default () => {
               target="_blank"
             >
               Blotter Options
-            </a>{' '}
+            </a>
           </p>{' '}
         </div>
       }

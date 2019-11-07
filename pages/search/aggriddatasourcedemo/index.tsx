@@ -34,35 +34,35 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755137-Search-Functions"
-              target="_blank"
-            >
-              User Guide
-            </a>{' '}
-            -{' '}
-            <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_runtimestate_datasourcestate_.datasourcestate.html"
               target="_blank"
             >
               Predefined Config
-            </a>{' '}
-            -{' '}
+            </a>
+            ,{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_api_interface_idatasourceapi_.idatasourceapi.html"
               target="_blank"
             >
               Blotter API
-            </a>{' '}
-            -{' '}
+            </a>
+            ,{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029895991-Data-Source-Selector-FAQ"
               target="_blank"
             >
               FAQ
-            </a>{' '}
-            -{' '}
+            </a>
+            ,{' '}
             <a href="" target="_blank">
               Videos
+            </a>
+            ,{' '}
+            <a
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755137-Search-Functions"
+              target="_blank"
+            >
+              User Guide
             </a>
             .
           </p>

@@ -28,7 +28,7 @@ export default () => {
               target="_blank"
             >
               User Guide
-            </a>{' '}
+            </a>
           </p>
         </div>
       }

@@ -46,6 +46,10 @@ export default () => {
               change (using colours and duration you specify)
             </li>
             <li>
+              <b>Updated Rows:</b> Colour (and jump to) rows as they update so
+              you can see which rows have changed.
+            </li>
+            <li>
               <b>Percent Bar:</b> Show numeric columns as a bar, that is filled
               according to the cell value as a %.
             </li>
@@ -60,7 +64,7 @@ export default () => {
           the colours, look and feel then please refer to the{' '}
           <a href="./theme" target="_self">
             Theming
-          </a>{' '}
+          </a>
           section).
         </div>
       }
@@ -75,6 +79,7 @@ export default () => {
         <DemoBox href="/style/aggridflashingcelldemo">
           Flashing Cell demo
         </DemoBox>
+        <DemoBox href="/style/aggridupdatedrowsdemo">Updated Rows demo</DemoBox>
         <DemoBox href="/style/aggridpercentbardemo">Percent Bar demo</DemoBox>
         <DemoBox href="/style/aggridrowstyledemo">Row Style demo</DemoBox>
       </GridLayout>

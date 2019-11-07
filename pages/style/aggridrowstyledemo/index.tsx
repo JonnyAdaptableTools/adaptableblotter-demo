@@ -16,7 +16,7 @@ export default () => {
               target="_blank"
             >
               provided theme
-            </a>{' '}
+            </a>
             you use (e.g. Balham, Blue, Blue etc.)
           </p>
           <p>
@@ -42,7 +42,7 @@ export default () => {
             name) and an Odd Row Style that uses the{' '}
             <a href="" target="_blank">
               IStyle
-            </a>{' '}
+            </a>
             object that we populate.
           </p>
         </div>

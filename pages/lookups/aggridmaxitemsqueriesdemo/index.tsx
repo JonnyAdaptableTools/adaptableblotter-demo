@@ -19,7 +19,7 @@ export default () => {
             set the the <b>maxColumnValueItemsDisplayed</b> property of{' '}
             <a href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028584632-Query-Options">
               Query Options
-            </a>{' '}
+            </a>
             to a different value.
           </p>
           <p>

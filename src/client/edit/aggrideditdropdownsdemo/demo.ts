@@ -36,7 +36,7 @@ export default () => {
       // maxColumnValueItemsDisplayed: 5,
       //  columnValuesOnlyInQueries: true,
     },
-    licenceKey: Helper.getdemolicencekey(),
+
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };

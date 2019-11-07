@@ -4,34 +4,41 @@ import DynamicDemoPage from '../../../src/Helpers/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/style/aggridflashingcelldemo')}
-      pageTitle={'Flashing Cell Demo'}
+      demo={import('../../../src/client/style/aggridupdatedrowsdemo')}
+      pageTitle={'Updated Rows Demo'}
       description={
         <div>
-          <h4>Flashing Cells Demo</h4>
-          <p>Flashing cells briefly appear when cell values' change.</p>
+          <h4>Updated Rows Demo</h4>
           <p>
-            By default they flash for half a second, with a green flash for a
-            positive change and a red flash for a negative change but this can
-            be amended by you.
+            Updated Rows are designed for when rows <b>change rarely</b> and you
+            wish to see what has changed. (For fast ticking data use the
+            Flashing Cell funtion).
           </p>
           <p>
-            This (very contrived!) example has 4 Flashing cell columns: The
-            'Item Cost', 'Order Cost', 'Change Last Order' columns use the
-            default flashing values while (for no particularly good reason) the
-            'Invoiced' column has different colours and a longer duration.
+            If the function is enabled, then each time a cell value changes the
+            row will change colour. You can also choose to have the Grid 'jump'
+            to display the updated row.
+          </p>
+          <p>
+            If the change occurs in a numeric or date cell then the row will
+            dispaly the 'Up' or 'Down' colour depending on the direction of the
+            change. For other cells it wil use the 'neutral' colour.
+          </p>
+          <p>
+            You can clear an updated row through the Context Menu, and you can
+            clear all updated rows through the Column Header Menu.
           </p>
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_runtimestate_flashingcellstate_.flashingcellstate.html"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_runtimestate_updatedrowstate_.updatedrowstate.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_interface_iflashingcellapi_.iflashingcellapi.html"
+              href="https://api.adaptableblotter.com/interfaces/_api_interface_iupdatedrowapi_.iupdatedrowapi.html"
               target="_blank"
             >
               Blotter API

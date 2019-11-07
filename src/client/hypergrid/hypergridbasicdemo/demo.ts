@@ -50,7 +50,7 @@ export class Demo {
       vendorGrid: this.grid,
       userName: 'Demo User',
       blotterId: 'Basic Demo',
-      licenceKey: Helper.getdemolicencekey(),
+
       predefinedConfig: jsonConfig,
     };
 

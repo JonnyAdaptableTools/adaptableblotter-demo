@@ -36,24 +36,24 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754837-User-State"
-              target="_blank"
-            >
-              User Guide
-            </a>{' '}
-            -{' '}
-            <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754817-Predefined-Config"
               target="_blank"
             >
               Predefined Config
-            </a>{' '}
-            -{' '}
+            </a>
+            ,{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360008819312-Configuration-FAQ"
               target="_blank"
             >
               FAQ
+            </a>
+            ,{' '}
+            <a
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754837-User-State"
+              target="_blank"
+            >
+              User Guide
             </a>
             .
           </p>

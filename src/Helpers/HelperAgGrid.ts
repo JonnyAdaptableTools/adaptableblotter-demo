@@ -148,7 +148,7 @@ export class HelperAgGrid {
       vendorGrid: gridOptions,
       userName: 'Demo User',
       blotterId: blotterId,
-      licenceKey: Helper.getdemolicencekey(),
+
       predefinedConfig: config,
       layoutOptions: {
         includeVendorStateInLayouts: true,
@@ -176,7 +176,7 @@ export class HelperAgGrid {
       vendorGrid: gridOptions,
       userName: 'Demo User',
       blotterId: blotterId,
-      licenceKey: Helper.getdemolicencekey(),
+
       predefinedConfig: config,
       layoutOptions: {
         includeVendorStateInLayouts: true,

@@ -18,7 +18,7 @@ export default () => {
         then we partner with{' '}
         <a href="https://www.chartiq.com/finsemble/" target="_blank">
           Finsemble
-        </a>{' '}
+        </a>
         (by ChartIQ) which offers a fantastic multi-windowed, multi-application
         experience.
       </p>

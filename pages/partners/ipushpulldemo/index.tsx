@@ -18,7 +18,7 @@ export default () => {
         partner{' '}
         <a href="https://www.ipushpull.com/" target="_blank">
           iPushpull
-        </a>{' '}
+        </a>
         .
       </p>
       <p>

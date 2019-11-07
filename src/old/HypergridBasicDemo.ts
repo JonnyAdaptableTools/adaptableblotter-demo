@@ -42,7 +42,7 @@ export class HypergridBasicDemo {
           vendorGrid: this.grid,
           userName: 'Demo User',
           blotterId: 'Basic Demo',
-          licenceKey: Helper.getdemolicencekey(),
+
           //  predefinedConfig: json // no config in this basic demo?
         };
 
