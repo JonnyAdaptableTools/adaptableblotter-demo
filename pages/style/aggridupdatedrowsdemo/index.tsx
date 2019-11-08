@@ -45,7 +45,7 @@ export default () => {
             </a>
             ,{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029742952-Flashing-Cell-FAQ"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360003410918-Updated-Row-FAQ"
               target="_blank"
             >
               FAQ

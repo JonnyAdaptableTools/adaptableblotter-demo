@@ -67,17 +67,10 @@ export default () => {
             </a>
             ,{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029895971-Advanced-Search-FAQ"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029743092-Dashboard-FAQ"
               target="_blank"
             >
               FAQ
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028637652-Advanced-Search-Videos"
-              target="_blank"
-            >
-              Videos
             </a>
             ,{' '}
             <a
