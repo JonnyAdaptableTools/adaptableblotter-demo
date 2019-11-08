@@ -289,6 +289,9 @@ export default () => {
           <Link href="/dashboard/aggriddashboardvisibilitydemo">
             <a>Visibility</a>
           </Link>
+          <Link href="/dashboard/aggriddashboardapplicationtoolbardemo">
+            <a>Application Toolbar</a>
+          </Link>
         </Category>
         <Category
           title={

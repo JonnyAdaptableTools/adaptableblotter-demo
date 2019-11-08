@@ -38,6 +38,10 @@ export default () => {
             the dashboard displays, what colours are shown and much more.
           </p>
           <p>
+            You can also create / set the Application Toolbar which is left
+            empty for you to render with your own content.
+          </p>
+          <p>
             This is all done through Dashboard Predefined Config. See the
             examples in this section to find out more.
           </p>
@@ -53,6 +57,9 @@ export default () => {
         </DemoBox>
         <DemoBox href="/dashboard/aggriddashboardvisibilitydemo">
           Dashboard visibility demo
+        </DemoBox>
+        <DemoBox href="/dashboard/aggriddashboardapplicationtoolbardemo">
+          Application Toolbar demo
         </DemoBox>
       </GridLayout>
     </MainPage>
