@@ -44,14 +44,14 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028587312-Reminder-Config"
+              href="https://api.adaptableblotter.com/interfaces/_api_systemstatusapi_.systemstatusapi.html"
               target="_blank"
             >
-              Predefined Config
+              Blotter API
             </a>
             ,{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360026222612-Reminders"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754957-Messages-and-Alerts"
               target="_blank"
             >
               User Guide

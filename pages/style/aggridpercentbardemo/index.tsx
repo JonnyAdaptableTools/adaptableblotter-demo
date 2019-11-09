@@ -26,21 +26,28 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028899431-Percent-Bar-API"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_percentbarstate_.percentbarstate.html"
+              target="_blank"
+            >
+              Predefined Config
+            </a>
+            ,{' '}
+            <a
+              href="https://api.adaptableblotter.com/interfaces/_api_percentbarapi_.percentbarapi.html"
               target="_blank"
             >
               Blotter API
             </a>
             ,{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360009005091-Flashing-Cell-FAQ"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360003426058-Percent-Bar-FAQ"
               target="_blank"
             >
               FAQ
             </a>
             ,{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028638052-Cell-Validation-Videos"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360030944551-Percent-Bar-Videos"
               target="_blank"
             >
               Videos
