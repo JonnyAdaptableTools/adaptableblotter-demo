@@ -31,14 +31,14 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_runtimestate_cellvalidationstate_.cellvalidationstate.html"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_cellvalidationstate_.cellvalidationstate.htmll"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_interface_icellvalidationapi_.icellvalidationapi.html"
+              href="https://api.adaptableblotter.com/interfaces/_api_cellvalidationapi_.cellvalidationapi.html"
               target="_blank"
             >
               Blotter API

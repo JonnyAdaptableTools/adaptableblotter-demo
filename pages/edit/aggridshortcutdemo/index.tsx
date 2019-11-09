@@ -27,14 +27,14 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_runtimestate_shortcutstate_.shortcutstate.html"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_shortcutstate_.shortcutstate.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_interface_ishortcutapi_.ishortcutapi.html"
+              href="https://api.adaptableblotter.com/interfaces/_api_shortcutapi_.shortcutapi.html"
               target="_blank"
             >
               Blotter API

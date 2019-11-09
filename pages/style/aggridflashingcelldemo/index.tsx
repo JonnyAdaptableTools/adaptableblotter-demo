@@ -24,14 +24,14 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_runtimestate_flashingcellstate_.flashingcellstate.html"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_flashingcellstate_.flashingcellstate.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_interface_iflashingcellapi_.iflashingcellapi.html"
+              href="https://api.adaptableblotter.com/interfaces/_api_flashingcellapi_.flashingcellapi.html"
               target="_blank"
             >
               Blotter API
@@ -45,7 +45,7 @@ export default () => {
             </a>
             ,{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360030944531-Flashing-Cells-Videos "
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360030944531-Flashing-Cells-Videos"
               target="_blank"
             >
               Videos

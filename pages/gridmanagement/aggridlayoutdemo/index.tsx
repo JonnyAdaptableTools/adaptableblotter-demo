@@ -29,24 +29,31 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028900971-Layout-Config"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_layoutstate_.layoutstate.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028585432-Layout-API"
+              href="https://api.adaptableblotter.com/interfaces/_api_layoutapi_.layoutapi.html"
               target="_blank"
             >
               Blotter API
             </a>
             ,{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360008819092-Layouts-FAQ"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002170317-Layouts-FAQ"
               target="_blank"
             >
               FAQ
+            </a>
+            ,{' '}
+            <a
+              href=" https://adaptabletools.zendesk.com/hc/en-us/articles/360029743312-Layout-Videos"
+              target="_blank"
+            >
+              Videos
             </a>
             ,{' '}
             <a

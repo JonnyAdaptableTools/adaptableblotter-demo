@@ -27,14 +27,14 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_runtimestate_smarteditstate_.smarteditstate.html"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_smarteditstate_.smarteditstate.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_interface_ismarteditapi_.ismarteditapi.html"
+              href="https://api.adaptableblotter.com/interfaces/_api_smarteditapi_.smarteditapi.html"
               target="_blank"
             >
               Blotter API

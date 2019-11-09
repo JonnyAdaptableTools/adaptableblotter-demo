@@ -53,14 +53,14 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_designtimestate_applicationstate_.applicationstate.html"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_applicationstate_.applicationstate.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_interface_iapplicationapi_.iapplicationapi.html"
+              href="https://api.adaptableblotter.com/interfaces/_api_applicationapi_.applicationapi.html"
               target="_blank"
             >
               Blotter API

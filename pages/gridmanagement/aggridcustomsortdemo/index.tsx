@@ -28,7 +28,14 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028585312-Custom-Sort-API"
+              href=" https://api.adaptableblotter.com/interfaces/_predefinedconfig_customsortstate_.customsortstate.html"
+              target="_blank"
+            >
+              Predefined Config
+            </a>
+            ,{' '}
+            <a
+              href="https://api.adaptableblotter.com/interfaces/_api_customsortapi_.customsortapi.html"
               target="_blank"
             >
               Blotter API

@@ -25,10 +25,17 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028900931-Cell-Summaries-Config"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_cellsummarystate_.cellsummarystate.html"
               target="_blank"
             >
               Predefined Config
+            </a>
+            ,{' '}
+            <a
+              href="https://api.adaptableblotter.com/interfaces/_api_cellsummaryapi_.cellsummaryapi.html"
+              target="_blank"
+            >
+              Blotter API
             </a>
             ,{' '}
             <a

@@ -26,14 +26,14 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028587272-Alerts-Config"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_alertstate_.alertstate.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028899211-Alert-API"
+              href="https://api.adaptableblotter.com/interfaces/_api_alertapi_.alertapi.html"
               target="_blank"
             >
               Blotter API

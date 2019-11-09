@@ -57,14 +57,14 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_runtimestate_namedfilterstate_.namedfilterstate.html"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_namedfilterstate_.namedfilterstate.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_interface_inamedfilterapi_.inamedfilterapi.html"
+              href="https://api.adaptableblotter.com/interfaces/_api_namedfilterapi_.namedfilterapi.html"
               target="_blank"
             >
               Blotter API

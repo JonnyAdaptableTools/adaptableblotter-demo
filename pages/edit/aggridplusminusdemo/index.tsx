@@ -27,14 +27,14 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_runtimestate_plusminusstate_.plusminusstate.html"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_plusminusstate_.plusminusstate.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_interface_iplusminusapi_.iplusminusapi.html"
+              href="https://api.adaptableblotter.com/interfaces/_api_plusminusapi_.plusminusapi.html"
               target="_blank"
             >
               Blotter API

@@ -29,14 +29,14 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_runtimestate_formatcolumnstate_.formatcolumnstate.html"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_formatcolumnstate_.formatcolumnstate.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_interface_iformatcolumnapi_.iformatcolumnapi.html"
+              href="https://api.adaptableblotter.com/interfaces/_api_formatcolumnapi_.formatcolumnapi.html"
               target="_blank"
             >
               Blotter API

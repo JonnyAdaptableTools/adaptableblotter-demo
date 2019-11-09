@@ -26,14 +26,14 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_runtimestate_quicksearchstate_.quicksearchstate.html"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_quicksearchstate_.quicksearchstate.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_interface_iquicksearchapi_.iquicksearchapi.html"
+              href="https://api.adaptableblotter.com/interfaces/_api_quicksearchapi_.quicksearchapi.html"
               target="_blank"
             >
               Blotter API

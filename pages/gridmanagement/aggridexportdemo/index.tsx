@@ -30,21 +30,21 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028587292-Export-Config"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_exportstate_.exportstate.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028585392-Export-API"
+              href="https://api.adaptableblotter.com/interfaces/_api_exportapi_.exportapi.html"
               target="_blank"
             >
               Blotter API
             </a>
             ,{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360008819072-Export-FAQ"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002179358-Export-FAQ"
               target="_blank"
             >
               FAQ
