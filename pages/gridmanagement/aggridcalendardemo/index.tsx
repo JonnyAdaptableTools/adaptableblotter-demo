@@ -27,17 +27,31 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028585252-Calendar-API"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_calendarstate_.calendarstate.html"
               target="_blank"
             >
-              Blotter API
+              Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360009004991-Calendars-FAQ"
+              href="https://api.adaptableblotter.com/interfaces/_api_calendarapi_.calendarapi.html"
+              target="_blank"
+            >
+              Blotter API
+            </a>{' '}
+            ,{' '}
+            <a
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002179338-Calendars-FAQ"
               target="_blank"
             >
               FAQ
+            </a>
+            ,{' '}
+            <a
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754438-UI-Elements"
+              target="_blank"
+            >
+              User Guide
             </a>
             .
           </p>

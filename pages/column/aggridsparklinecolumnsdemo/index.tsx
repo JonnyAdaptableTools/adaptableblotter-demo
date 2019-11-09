@@ -36,21 +36,21 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_designtimestate_sparklinecolumnstate_.sparklinecolumnstate.html"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_sparklinecolumnstate_.sparklinecolumnstate.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_interface_isparklinecolumnapi_.isparklinecolumnapi.html"
+              href="https://api.adaptableblotter.com/interfaces/_api_sparklinecolumnapi_.sparklinecolumnapi.html"
               target="_blank"
             >
               Blotter API
             </a>
             ,{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002449478-Sparkline-Column-FAQ"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002449458-Sparkline-Column-FAQ"
               target="_blank"
             >
               FAQ

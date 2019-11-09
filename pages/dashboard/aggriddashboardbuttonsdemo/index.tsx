@@ -23,6 +23,44 @@ export default () => {
             buttons, and we have also opted to hide the <i>Columns</i> and{' '}
             <i>Toolbars</i> dropdowns.
           </p>
+          <p>
+            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <a
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_dashboardstate_.dashboardstate.html"
+              target="_blank"
+            >
+              Predefined Config
+            </a>
+            ,{' '}
+            <a
+              href="https://api.adaptableblotter.com/interfaces/_api_dashboardapi_.dashboardapi.html"
+              target="_blank"
+            >
+              Blotter API
+            </a>
+            ,{' '}
+            <a
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029743092-Dashboard-FAQ"
+              target="_blank"
+            >
+              FAQ
+            </a>
+            ,{' '}
+            <a
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360030944511-Dashboard-Videos"
+              target="_blank"
+            >
+              Videos
+            </a>
+            ,{' '}
+            <a
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755177-Styling-Functions"
+              target="_blank"
+            >
+              User Guide
+            </a>
+            .
+          </p>
         </div>
       }
     />

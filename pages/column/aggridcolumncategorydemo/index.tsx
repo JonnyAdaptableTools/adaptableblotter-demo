@@ -26,10 +26,24 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028899231-Column-Category-API"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_columncategorystate_.columncategorystate.html"
+              target="_blank"
+            >
+              Predefined Config
+            </a>
+            ,{' '}
+            <a
+              href="https://api.adaptableblotter.com/interfaces/_api_columncategoryapi_.columncategoryapi.html"
               target="_blank"
             >
               Blotter API
+            </a>{' '}
+            ,{' '}
+            <a
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360030078511-Column-Category-Videos"
+              target="_blank"
+            >
+              Videos
             </a>
             ,{' '}
             <a

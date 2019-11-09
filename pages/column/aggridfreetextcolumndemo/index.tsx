@@ -27,10 +27,31 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028899411-Free-Text-Column-API"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_freetextcolumnstate_.freetextcolumnstate.html"
+              target="_blank"
+            >
+              Predefined Config
+            </a>
+            ,{' '}
+            <a
+              href="https://api.adaptableblotter.com/interfaces/_api_freetextcolumnapi_.freetextcolumnapi.html"
               target="_blank"
             >
               Blotter API
+            </a>
+            ,{' '}
+            <a
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360030078371-FreeText-Column-FAQ"
+              target="_blank"
+            >
+              FAQ
+            </a>
+            ,{' '}
+            <a
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029743352-Free-Text-Column-Videos"
+              target="_blank"
+            >
+              Videos
             </a>
             ,{' '}
             <a
