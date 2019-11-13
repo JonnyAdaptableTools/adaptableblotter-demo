@@ -66,6 +66,6 @@ export default () => {
     selectedChangedArgs: SelectionChangedEventArgs
   ) {
     console.log('Selection Has Changed');
-    console.log(selectedChangedArgs);
+    console.log(selectedChangedArgs.data[0].id);
   }
 };

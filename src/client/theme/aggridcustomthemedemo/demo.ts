@@ -20,7 +20,7 @@ import {
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import predefinedConfig from './config';
-import { RowStyle } from '@adaptabletools/adaptableblotter/App_Scripts/PredefinedConfig/DesignTimeState/UserInterfaceState';
+import { RowStyle } from '@adaptabletools/adaptableblotter/App_Scripts/PredefinedConfig/UserInterfaceState';
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
@@ -62,7 +62,8 @@ function listenToThemeChanged(
   adaptableblotter: IAdaptableBlotter,
   args: ThemeChangedEventArgs
 ) {
-  if (args.themeName === 'wimbledon-theme') {
+  console.log(args);
+  if (args.data[0].id.themeName === 'wimbledon-theme') {
     let rowStyles: RowStyle[] = [];
     let evenStyle: RowStyle = {
       Style: {

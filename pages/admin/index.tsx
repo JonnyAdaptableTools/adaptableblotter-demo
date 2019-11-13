@@ -60,11 +60,15 @@ export default () => {
               automatically reflected in the Adaptable Blotter and it will be
               picked up by all relevant functions.
             </li>
-            {/*
-             <li>
-              <b>No Code Demo:</b> To Do
+
+            <li>
+              <b>No Code Demo:</b> The no code version allows you to create an
+              Adaptable Blotter at runtime from any JSON or Excel file that you
+              give it. Immediately you will have an Adaptable Blotter with all
+              the rich functions it contains including advanced functionality
+              like state management and full audit.
             </li>
-           <li>
+            {/*  <li>
               <b>Best Ex Demo:</b> Shows how you can use the Adaptable Blotter
               Audit Log and Calculated Columns to prove Best Ex.
             </li>

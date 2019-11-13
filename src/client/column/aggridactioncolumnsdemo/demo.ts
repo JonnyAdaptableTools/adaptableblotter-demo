@@ -70,12 +70,12 @@ export default () => {
   const blotterOptionsClone = cloneDeep(blotterOptions);
   adaptableBlotter = new AdaptableBlotter(blotterOptions);
 
-  adaptableBlotter.api.eventApi
-    .onActionColumnClicked()
-    .Subscribe((sender, actionColumnEventArgs) =>
-      onActionColumnClicked(actionColumnEventArgs)
-    );
-
+  adaptableBlotter.api.eventApi.on(
+    'ActionColumnClicked',
+    (actionColumnEventArgs: ActionColumnClickedEventArgs) => {
+      onActionColumnClicked(actionColumnEventArgs);
+    }
+  );
   return {
     predefinedConfig,
     blotterOptions: blotterOptionsClone,
@@ -84,27 +84,31 @@ export default () => {
   function onActionColumnClicked(
     actionColumnEventArgs: ActionColumnClickedEventArgs
   ) {
-    let rowData = actionColumnEventArgs.rowData;
-    if (actionColumnEventArgs.actionColumn.ColumnId == 'Plus') {
+    let rowData = actionColumnEventArgs.data[0].id.rowData;
+    if (actionColumnEventArgs.data[0].id.actionColumn.ColumnId == 'Plus') {
       let itemCount = rowData.ItemCount;
-      adaptableBlotter.api.gridApi.setValue(
-        actionColumnEventArgs.primaryKeyValue,
+      adaptableBlotter.api.internalApi.setValue(
+        actionColumnEventArgs.data[0].id.primaryKeyValue,
         'ItemCount',
         itemCount + 1
       );
-    } else if (actionColumnEventArgs.actionColumn.ColumnId == 'Minus') {
+    } else if (
+      actionColumnEventArgs.data[0].id.actionColumn.ColumnId == 'Minus'
+    ) {
       let itemCount = rowData.ItemCount;
-      adaptableBlotter.api.gridApi.setValue(
-        actionColumnEventArgs.primaryKeyValue,
+      adaptableBlotter.api.internalApi.setValue(
+        actionColumnEventArgs.data[0].id.primaryKeyValue,
         'ItemCount',
         itemCount - 1
       );
-    } else if (actionColumnEventArgs.actionColumn.ColumnId == 'Multiply') {
+    } else if (
+      actionColumnEventArgs.data[0].id.actionColumn.ColumnId == 'Multiply'
+    ) {
       let multiplier: number = rowData.ItemCost > 75 ? 2 : 3;
       let newItemCost = rowData.ItemCost * multiplier;
       newItemCost = Math.round(newItemCost * 100) / 100;
-      adaptableBlotter.api.gridApi.setValue(
-        actionColumnEventArgs.primaryKeyValue,
+      adaptableBlotter.api.internalApi.setValue(
+        actionColumnEventArgs.data[0].id.primaryKeyValue,
         'ItemCost',
         newItemCost
       );

@@ -10,8 +10,14 @@ export default () => {
         <div>
           <h4>Row Selection Demo</h4>
           <p>
-            One of the events published by the Adaptable Blotter is Selection
-            Changed.
+            One of the many{' '}
+            <a
+              href="https://api.adaptableblotter.com/interfaces/_api_eventapi_.eventapi.html"
+              target="_blank"
+            >
+              Adaptable Blotter events
+            </a>{' '}
+            is <b>SelectionChanged</b>.
           </p>
           <p>
             This gives full details of which cells and rows are selected,

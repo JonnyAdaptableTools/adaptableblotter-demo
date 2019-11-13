@@ -1,10 +1,10 @@
 {
   "name": "adaptableblotter-demo",
-  "version": "5.2.0",
+  "version": "5.2.1",
   "description": "Demo",
   "main": "index.js",
   "dependencies": {
-    "@adaptabletools/adaptableblotter": "^5.2.0",
+    "@adaptabletools/adaptableblotter": "^5.2.1",
     "@adaptabletools/adaptableblotter-react-aggrid": "^5.2.0",
     "@trendmicro/react-sidenav": "^0.4.5",
     "@types/isomorphic-fetch": "0.0.34",

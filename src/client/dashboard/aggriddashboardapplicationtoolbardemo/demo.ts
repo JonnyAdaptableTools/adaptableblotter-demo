@@ -51,8 +51,10 @@ export default () => {
     'ToolbarVisibilityChanged',
     (toolbarVisibilityChangedEventArgs: ToolbarVisibilityChangedEventArgs) => {
       if (
-        toolbarVisibilityChangedEventArgs.toolbar === 'Application' &&
-        toolbarVisibilityChangedEventArgs.visibility == Visibility.Visible
+        toolbarVisibilityChangedEventArgs.data[0].id.toolbar ===
+          'Application' &&
+        toolbarVisibilityChangedEventArgs.data[0].id.visibility ==
+          Visibility.Visible
       ) {
         let toolbarContents: any = renderCustomDiv();
 
@@ -71,11 +73,11 @@ export default () => {
     ) => {
       alert(
         'name: ' +
-          applicationToolbarButtonClickedEventArgs.applicationToolbarButton
-            .Name +
+          applicationToolbarButtonClickedEventArgs.data[0].id
+            .applicationToolbarButton.Name +
           ';caption: ' +
-          applicationToolbarButtonClickedEventArgs.applicationToolbarButton
-            .Caption
+          applicationToolbarButtonClickedEventArgs.data[0].id
+            .applicationToolbarButton.Caption
       );
     }
   );
