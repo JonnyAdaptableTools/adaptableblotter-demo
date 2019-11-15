@@ -16,6 +16,10 @@ export default {
         ColumnId: 'Minus',
         ButtonText: '-',
       },
+      {
+        ColumnId: 'Action',
+        ButtonText: 'Delete Row',
+      },
     ],
   },
   Layout: {
@@ -31,6 +35,7 @@ export default {
           'ItemCount',
           'Minus',
           'Employee',
+          'Action',
         ],
         ColumnSorts: [],
         Name: 'Action Cols',

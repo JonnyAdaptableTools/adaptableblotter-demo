@@ -54,6 +54,20 @@ export default () => {
             Employee is Margaret.
           </p>
           <p>
+            Lastly we created an Action column to <b>delete a row</b> which was
+            trivial to implement with just one line of code using the{' '}
+            <a
+              href="https://api.adaptableblotter.com/interfaces/_api_datagridapi_.datagridapi.html#deletegriddata"
+              target="_blank"
+            >
+              API
+            </a>
+            :{' '}
+            <i>
+              blotter.api.gridApi.deleteGridData([args.data[0].id.rowData]);
+            </i>
+          </p>
+          <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_actioncolumnstate_.actioncolumnstate.html"

@@ -112,6 +112,12 @@ export default () => {
         'ItemCost',
         newItemCost
       );
+    } else if (
+      actionColumnEventArgs.data[0].id.actionColumn.ColumnId == 'Action'
+    ) {
+      adaptableBlotter.api.gridApi.deleteGridData([
+        actionColumnEventArgs.data[0].id.rowData,
+      ]);
     }
   }
 };
