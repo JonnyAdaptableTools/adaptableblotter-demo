@@ -61,6 +61,11 @@ export default () => {
             2 themes will - depending on your Blotter Options - also update the
             underlying vendor grid.
           </p>
+          <p>
+            You can change pretty much any aspect of the UI that we provide. For
+            instance you can replace the icons that we show in the toolbars with
+            your own. We have a demo that shows you how.
+          </p>
         </div>
       }
     >
@@ -81,6 +86,10 @@ export default () => {
             When you use this theme the Adaptable Blotter will automatically
             update the underlying vendor grid to match.
           </p>
+        </DemoBox>
+        <DemoBox href="/theme/aggridcustomicondemo" title="Custom Icon Demo">
+          <p>To do</p>
+          <p>To do</p>
         </DemoBox>
       </GridLayout>
     </MainPage>

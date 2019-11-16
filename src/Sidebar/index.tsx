@@ -186,6 +186,9 @@ export default () => {
           <Link href="/theme/aggridcustomthemedemo">
             <a>Custom Theme</a>
           </Link>
+          <Link href="/theme/aggridcustomicondemo">
+            <a>Custom Icons</a>
+          </Link>
         </Category>
         <Category
           title={
