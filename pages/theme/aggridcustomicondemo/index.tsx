@@ -19,7 +19,10 @@ export default () => {
             and <b>Alert</b> functions. We overrode the <i>.ab-Icon--export</i>{' '}
             and <i>.ab-Icon--alert </i> properties in our css with the new
             images. (See{' '}
-            <a href="https://material.io/resources/icons/" target="_blank">
+            <a
+              href="https://github.com/AdaptableTools/adaptableblotter-demo/blob/master/src/client/theme/aggridcustomicondemo/index.css"
+              target="_blank"
+            >
               source code
             </a>{' '}
             here).
