@@ -53,7 +53,7 @@ export default () => {
           When you release an application using the Adaptable Blotter you will
           typically ship it with{' '}
           <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029289152-Predefined-Config"
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754817-Predefined-Config"
             target="_blank"
           >
             Predefined Config
@@ -63,7 +63,7 @@ export default () => {
           <br />
           You will also set up the Options you need for your Blotter using the{' '}
           <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/categories/360001777412-Blotter-Options"
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754697#UUID-f8f5acaa-44e5-683e-8a60-6abdbbeb2302"
             target="_blank"
           >
             Adaptable Blotter Options
@@ -98,7 +98,7 @@ export default () => {
           <br />
           See our{' '}
           <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/sections/360003854892-Integration"
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754578-Integration"
             target="_blank"
           >
             Integration Help Pages
@@ -126,14 +126,14 @@ export default () => {
           However, for those who prefer to implement the tool using a JavaScript
           Framework / Library we provide 2 options: a{' '}
           <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360024888851-React-Wrapper"
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754997-React-Wrapper"
             target="_blank"
           >
             React Wrapper
           </a>{' '}
           and a{' '}
           <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360024888791-Angular-Wrapper"
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755017-Angular-Wrapper"
             target="_blank"
           >
             Angular Wrapper
