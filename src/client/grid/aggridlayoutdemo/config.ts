@@ -4,9 +4,6 @@ export default {
   Dashboard: {
     VisibleToolbars: ['Layout'],
   },
-  SmartEdit: {
-    SmartEditValue: 10,
-  },
   CalculatedColumn: {
     CalculatedColumns: [
       {
@@ -16,12 +13,15 @@ export default {
     ],
   },
   Layout: {
-    CurrentLayout: 'Orders View',
+    CurrentLayout: 'Simple Layout',
     Layouts: [
       {
+        Name: 'Simple Layout',
         Columns: [
           'OrderId',
           'OrderDate',
+          'ItemCost',
+          'ItemCount',
           'Avg Item Cost',
           'CustomerReference',
           'CompanyName',
@@ -30,13 +30,17 @@ export default {
           'ChangeLastOrder',
           'OrderCost',
           'PackageCost',
-          'ItemCost',
-          'ItemCount',
         ],
-        ColumnSorts: [{ Column: 'CompanyName', SortOrder: 'Ascending' }],
-        Name: 'Orders View',
       },
       {
+        Name: 'Sorting Layout',
+        ColumnSorts: [
+          {
+            Column: 'ShipName',
+            SortOrder: 'Ascending',
+          },
+          { Column: 'ShipVia', SortOrder: 'Descending' },
+        ],
         Columns: [
           'OrderId',
           'ShipVia',
@@ -46,13 +50,36 @@ export default {
           'ShippedDate',
           'CustomerReference',
         ],
-        ColumnSorts: [
-          {
-            Column: 'ShipName',
-            SortOrder: 'Ascending',
-          },
+      },
+      {
+        Columns: [
+          'CustomerReference',
+          'ContactName',
+          'InvoicedCost',
+          'ChangeLastOrder',
+          'OrderCost',
+          'PackageCost',
+          'InvoicedCost',
+          'ChangeLastOrder',
+          'OrderCost',
+          'PackageCost',
         ],
-        Name: 'Shipping View',
+        GroupedColumns: ['Employee', 'ShipCountry'],
+        Name: 'Grouping Layout',
+      },
+      {
+        Columns: [
+          'CustomerReference',
+          'ContactName',
+          'Employee',
+          'ShipCountry',
+        ],
+        GroupedColumns: ['ShipCountry'],
+        PivotDetails: {
+          PivotColumns: ['Employee'],
+          AggregationColumns: ['InvoicedCost', 'ItemCost'],
+        },
+        Name: 'Pivot Layout',
       },
     ],
   },

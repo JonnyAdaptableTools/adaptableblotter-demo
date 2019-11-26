@@ -14,17 +14,18 @@ export default () => {
             grouping.
           </p>
           <p>
-            Whereas the search columns filter which rows are visible, layouts
-            filter which columns are visible. They can include all grid state
-            (e.g. grouping) and save automatially when changed.
+            Whereas the search functions determine <b>row </b>visibility,
+            layouts manage <b>column</b> visibility and order (plus sorting,
+            grouping and pivoting). They can include all grid state (e.g.
+            grouping) and save automatially when changed.
           </p>
           <p>
-            This example has 2 layouts: 'Orders View' and 'Shipping View'. You
-            can alternate between them in the Layout toolbar. And you can create
-            your own layout and group by a column and you will see that the
-            layout, including the grouping, persists automatically. (Note that
-            the Shipping View Layout sorts on 'Ship Name' column which uses a
-            Custom Sort).
+            This example has 4 layouts: <i>Simple Layout</i>: a basic layout
+            (which includes a Calculated Column; <i>Sorting Layout</i> which
+            contains 2 sorted columns (one with a Custom Sort);{' '}
+            <i>Grouping Layout</i>: which groups on the 'Employee' and 'Ship
+            Country' column; and <i>Pivoting Layout</i> which stores pivoting
+            information.
           </p>
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}

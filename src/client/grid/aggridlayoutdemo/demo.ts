@@ -23,7 +23,8 @@ export default () => {
 
   const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
 
-  const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
+  const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData, false);
+  gridOptions.sideBar = true;
 
   const blotterOptions: AdaptableBlotterOptions = {
     primaryKey: 'OrderId',

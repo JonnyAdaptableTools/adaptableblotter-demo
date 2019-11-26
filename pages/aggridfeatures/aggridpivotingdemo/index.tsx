@@ -22,14 +22,19 @@ export default () => {
             that layout.
           </p>
           <p>
-            <b>Try it yourself: </b>Select the 'Pivot Layout' from the Layout
-            dropdown, go into pivot mode and start to pivot the grid by moving
-            columns into 'Row Groups', 'Values' and 'Column Labels'.
+            In this demo you can switch layouts between <i>Pivot View</i> and{' '}
+            <i>Non Pivot View</i> and the correct layout (and Pivot Mode) will
+            load.
           </p>
           <p>
-            Now if you move from the 'Pivot Layout' to the 'Non Pivot Layout'
-            (or to clear all layouts) and then back in you will see the Pivot
-            mode return.
+            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <a
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_layoutstate_.layoutstate.html"
+              target="_blank"
+            >
+              Predefined Config
+            </a>
+            .
           </p>
         </div>
       }
