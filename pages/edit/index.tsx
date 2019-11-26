@@ -51,7 +51,13 @@ export default () => {
             </li>
             <li>
               <b>Cell Validation:</b> Create rules to prevent (or show warnings)
-              when particular cell edits take place.
+              when particular cell edits take place. These will run on the
+              client.
+            </li>
+            <li>
+              <b>Server Validation:</b> Provide a function (and promise) that
+              wil check edits and return a validation response (with optional
+              message and replacement value).
             </li>
             <li>
               <b>Edit Dropdowns:</b> List which columns will automatically show
@@ -70,6 +76,9 @@ export default () => {
         <DemoBox href="/edit/aggridplusminusdemo">Plus Minus demo</DemoBox>
         <DemoBox href="/edit/aggridcellvalidationdemo">
           Cell Validation demo
+        </DemoBox>
+        <DemoBox href="/edit/aggridservervalidationdemo">
+          Server Validation demo
         </DemoBox>
         <DemoBox href="/edit/aggrideditdropdownsdemo">
           Edit Dropdowns demo

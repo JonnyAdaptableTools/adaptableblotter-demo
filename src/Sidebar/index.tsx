@@ -143,6 +143,9 @@ export default () => {
           <Link href="/edit/aggridcellvalidationdemo">
             <a>Cell Validation</a>
           </Link>
+          <Link href="/edit/aggridservervalidationdemo">
+            <a>Server Validation</a>
+          </Link>
           <Link href="/edit/aggrideditdropdownsdemo">
             <a>Edit Dropdowns</a>
           </Link>
