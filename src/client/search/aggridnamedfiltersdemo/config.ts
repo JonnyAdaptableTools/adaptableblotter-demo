@@ -8,14 +8,22 @@ export default {
         Scope: {
           ColumnIds: ['OrderId'],
         },
-        PredicateName: 'High Order',
+        FilterPredicate: (_record, _columnId, cellValue) => {
+          let invoiced: number = _record.data.InvoicedCost;
+          let itemCount: number = _record.data.ItemCount;
+          return invoiced > 1000 && itemCount > 10 ? true : false;
+        },
       },
       {
         Name: 'New Starter',
         Scope: {
           ColumnIds: ['Employee'],
         },
-        PredicateName: 'New Starter',
+        FilterPredicate: (_record, _columnId, cellValue) => {
+          return getEmployeeStatusFromCRMService(cellValue) == 'New'
+            ? true
+            : false;
+        },
       },
 
       {
@@ -23,7 +31,11 @@ export default {
         Scope: {
           DataType: 'Date',
         },
-        PredicateName: 'Post Takeover',
+        FilterPredicate: (_record, _columnId, cellValue) => {
+          let dateToTest = cellValue as Date;
+          let takeOverDate = new Date('2017-03-21');
+          return dateToTest > takeOverDate;
+        },
       },
     ],
   },
@@ -43,3 +55,11 @@ export default {
     ],
   },
 } as PredefinedConfig;
+
+function getEmployeeStatusFromCRMService(employeeName: string): string {
+  return employeeName == 'Robert King' ||
+    employeeName == 'Laura Callahan' ||
+    employeeName == 'Andrew Fuller'
+    ? 'New'
+    : 'Existing';
+}

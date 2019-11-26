@@ -1,5 +1,6 @@
 export default {
   Layout: {
+    CurrentLayout: 'Pivot View',
     Layouts: [
       {
         Columns: [
@@ -17,6 +18,11 @@ export default {
           'ShipName',
         ],
         ColumnSorts: [],
+        GroupedColumns: ['ShipCountry'],
+        PivotDetails: {
+          PivotColumns: ['Employee'],
+          AggregationColumns: ['InvoicedCost', 'ItemCost'],
+        },
         Name: 'Pivot View',
       },
       {

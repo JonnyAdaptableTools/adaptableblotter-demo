@@ -29,7 +29,10 @@ export default () => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     blotterId: 'Pivoting Demo',
-
+    layoutOptions: {
+      autoSizeColumnsInLayout: true,
+      autoSizeColumnsInPivotLayout: true,
+    },
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };

@@ -1,5 +1,3 @@
-import * as Helper from '../../../Helpers/Helper';
-
 import AdaptableBlotter from '@adaptabletools/adaptableblotter/agGrid';
 import '@adaptabletools/adaptableblotter/index.css';
 import './actioncolumn.css';
@@ -18,7 +16,10 @@ import {
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import predefinedConfig from './config';
-import { ActionColumnClickedEventArgs } from '@adaptabletools/adaptableblotter/App_Scripts/Api/Events/BlotterEvents';
+import {
+  ActionColumnClickedEventArgs,
+  ActionColumnClickedInfo,
+} from '@adaptabletools/adaptableblotter/App_Scripts/Api/Events/BlotterEvents';
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
@@ -40,33 +41,6 @@ export default () => {
     predefinedConfig: predefinedConfig,
   };
 
-  blotterOptions.advancedOptions = {
-    userFunctions: {
-      actionColumnFunctions: [
-        {
-          name: 'RenderMultiplyButtonFunc',
-          func: params => {
-            if (
-              !params.data ||
-              !params.data.ItemCost ||
-              !params.data.Employee
-            ) {
-              return '';
-            }
-            let itemCost: number = params.data.ItemCost;
-            if (params.data.Employee == 'Margaret Peacock') {
-              return '';
-            }
-
-            return itemCost > 75
-              ? '<button class="doublebutton">Double</button>'
-              : '<button class="treblebutton">Treble</button>';
-          },
-        },
-      ],
-    },
-  };
-
   const blotterOptionsClone = cloneDeep(blotterOptions);
   adaptableBlotter = new AdaptableBlotter(blotterOptions);
 
@@ -84,22 +58,25 @@ export default () => {
   function onActionColumnClicked(
     actionColumnEventArgs: ActionColumnClickedEventArgs
   ) {
-    let rowData = actionColumnEventArgs.data[0].id.rowData;
+    let actionColumnClickedInfo: ActionColumnClickedInfo =
+      actionColumnEventArgs.data[0].id;
+    let rowData: any = actionColumnClickedInfo.rowData;
+
     if (actionColumnEventArgs.data[0].id.actionColumn.ColumnId == 'Plus') {
       let itemCount = rowData.ItemCount;
-      adaptableBlotter.api.internalApi.setValue(
-        actionColumnEventArgs.data[0].id.primaryKeyValue,
+      adaptableBlotter.api.gridApi.setCellValue(
         'ItemCount',
-        itemCount + 1
+        itemCount + 1,
+        actionColumnClickedInfo.primaryKeyValue
       );
     } else if (
       actionColumnEventArgs.data[0].id.actionColumn.ColumnId == 'Minus'
     ) {
       let itemCount = rowData.ItemCount;
-      adaptableBlotter.api.internalApi.setValue(
-        actionColumnEventArgs.data[0].id.primaryKeyValue,
+      adaptableBlotter.api.gridApi.setCellValue(
         'ItemCount',
-        itemCount - 1
+        itemCount - 1,
+        actionColumnClickedInfo.primaryKeyValue
       );
     } else if (
       actionColumnEventArgs.data[0].id.actionColumn.ColumnId == 'Multiply'
@@ -107,16 +84,16 @@ export default () => {
       let multiplier: number = rowData.ItemCost > 75 ? 2 : 3;
       let newItemCost = rowData.ItemCost * multiplier;
       newItemCost = Math.round(newItemCost * 100) / 100;
-      adaptableBlotter.api.internalApi.setValue(
-        actionColumnEventArgs.data[0].id.primaryKeyValue,
+      adaptableBlotter.api.gridApi.setCellValue(
         'ItemCost',
-        newItemCost
+        newItemCost,
+        actionColumnClickedInfo.primaryKeyValue
       );
     } else if (
       actionColumnEventArgs.data[0].id.actionColumn.ColumnId == 'Action'
     ) {
       adaptableBlotter.api.gridApi.deleteGridData([
-        actionColumnEventArgs.data[0].id.rowData,
+        actionColumnClickedInfo.rowData,
       ]);
     }
   }

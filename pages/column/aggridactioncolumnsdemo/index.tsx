@@ -13,30 +13,25 @@ export default () => {
           </h4>
           <p>
             The Adaptable Blotter provides an Action Column function that allows
-            you to specify a button to placed in a column.
+            you to specify (and optionally render) a button to placed in a
+            column.
           </p>
           <p>
             When the button is clicked an{' '}
             <a
-              href="//api.adaptableblotter.com/interfaces/_api_interface_ieventapi_.ieventapi.html#onactioncolumnclicked"
+              href="https://api.adaptableblotter.com/interfaces/_api_eventapi_.eventapi.html"
               target="_blank"
             >
-              onActionColumnClicked
-            </a>
+              On('ActionColumnClicked')
+            </a>{' '}
             event fires, providing details of column clicked and current data in
             the row; subscribe to this event and perform any additional logic
             that is required.
           </p>
           <p>
-            You are also able to provider a render function (specify it in{' '}
-            <a
-              href="https://api.adaptableblotter.com/interfaces/_blotteroptions_advancedoptions_.advancedoptions.html"
-              target="_blank"
-            >
-              Advanced Options
-            </a>
-            ) that will replace the default button with one that matches the
-            look and feel that you specify.
+            You can, optionally, provide a <b>ShouldRenderPredicate</b> function
+            which decides whether the button appears and a <b>RenderFunction</b>{' '}
+            function that allows you provide your own button implementation.
           </p>
           <p>
             In this example we have created Action Columns <b>Plus</b> and{' '}
@@ -57,7 +52,7 @@ export default () => {
             Lastly we created an Action column to <b>delete a row</b> which was
             trivial to implement with just one line of code using the{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_datagridapi_.datagridapi.html#deletegriddata"
+              href="https://api.adaptableblotter.com/interfaces/_api_gridapi_.gridapi.html#deletegriddata"
               target="_blank"
             >
               API

@@ -52,13 +52,12 @@ export class Demo {
       vendorGrid: this.grid,
       userName: 'Demo User',
       blotterId: 'Basic Charting Demo',
-
-      predefinedConfig: jsonConfig,
       chartOptions: {
         displayOnStartUp: true,
         showModal: false,
         pieChartMaxItems: 50,
       },
+      predefinedConfig: jsonConfig,
     };
 
     this.adaptableblotter = new AdaptableBlotter(blotterOptions);

@@ -40,11 +40,11 @@ export default () => {
     primaryKey: 'tradeId',
     userName: 'Demo User',
     blotterId: 'Big Data Demo',
-
-    vendorGrid: gridOptions,
     queryOptions: {
       maxColumnValueItemsDisplayed: 1000,
     },
+    vendorGrid: gridOptions,
+
     predefinedConfig: predefinedConfig,
   };
 

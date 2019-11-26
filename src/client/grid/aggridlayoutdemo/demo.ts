@@ -29,13 +29,7 @@ export default () => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     blotterId: 'Layout Demo',
-
     vendorGrid: gridOptions,
-
-    layoutOptions: {
-      includeVendorStateInLayouts: true,
-      autoSaveLayouts: true,
-    },
     predefinedConfig: predefinedConfig,
   };
 

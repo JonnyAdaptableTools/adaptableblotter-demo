@@ -50,7 +50,6 @@ export class Demo {
       vendorGrid: this.grid,
       userName: 'Demo User',
       blotterId: 'Basic Demo',
-
       predefinedConfig: jsonConfig,
     };
 

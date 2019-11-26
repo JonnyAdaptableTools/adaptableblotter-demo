@@ -23,27 +23,20 @@ export default () => {
           </p>
           <p>
             This is where <b>Named Filters</b> come in. You can create at{' '}
-            <b>design time</b> a Named Filter and provide the Blotter the
+            <b>design time</b> a Named Filter and provide the Blotter with the
             Predicate function required to evaluate it.
           </p>
           <p>
             Named Filters operate either on a Single Column or all Columns of a
-            particular DataType (e.g. Data): provide the <b>Name</b> of the
-            Predicate in{' '}
+            particular DataType (e.g. Data). You provide this information
+            together with the predicate function in the{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_runtimestate_namedfilterstate_.namedfilterstate.html"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_namedfilterstate_.namedfilterstate.html"
               target="_blank"
             >
               Named Filters
-            </a>
-            section of Config, and the actual <b>Predicate</b> in{' '}
-            <a
-              href="https://api.adaptableblotter.com/interfaces/_blotteroptions_advancedoptions_.advancedoptions.html"
-              target="_blank"
-            >
-              Advanced Options
-            </a>
-            .
+            </a>{' '}
+            section of Config.
           </p>
           <p>
             In this example we created 3 Named Filters and associated Predicate

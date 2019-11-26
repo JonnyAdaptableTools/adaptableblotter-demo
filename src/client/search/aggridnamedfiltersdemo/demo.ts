@@ -34,36 +34,6 @@ export default () => {
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };
-  blotterOptions.advancedOptions = {
-    userFunctions: {
-      namedFilterFunctions: [
-        {
-          name: 'High Order',
-          func: record => {
-            let invoiced: number = record.data.InvoicedCost;
-            let itemCount: number = record.data.ItemCount;
-            return invoiced > 1000 && itemCount > 10 ? true : false;
-          },
-        },
-        {
-          name: 'New Starter',
-          func: (_record, _columnId, cellValue) => {
-            return getEmployeeStatusFromCRMService(cellValue) == 'New'
-              ? true
-              : false;
-          },
-        },
-        {
-          name: 'Post Takeover',
-          func: (_record, _columnId, cellValue) => {
-            let dateToTest = cellValue as Date;
-            let takeOverDate = new Date('2017-03-21');
-            return dateToTest > takeOverDate;
-          },
-        },
-      ],
-    },
-  };
 
   const blotterOptionsClone = cloneDeep(blotterOptions);
   new AdaptableBlotter(blotterOptions);
@@ -72,12 +42,4 @@ export default () => {
     predefinedConfig,
     blotterOptions: blotterOptionsClone,
   };
-
-  function getEmployeeStatusFromCRMService(employeeName: string): string {
-    return employeeName == 'Robert King' ||
-      employeeName == 'Laura Callahan' ||
-      employeeName == 'Andrew Fuller'
-      ? 'New'
-      : 'Existing';
-  }
 };

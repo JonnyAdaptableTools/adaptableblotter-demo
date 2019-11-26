@@ -1011,6 +1011,7 @@ export class HelperAgGrid {
       editable: true,
       filter: true,
       sortable: true,
+      cellRenderer: this.currencyRendereragGrid,
       type: 'abColDefNumber',
     };
   }
@@ -1706,4 +1707,11 @@ export class HelperAgGrid {
 
     return myValue;
   }
+
+  private fourDecimalPlaceFormatter = (params: any) => {
+    return params.value ? this.roundTo4Dp(params.value) : null;
+  };
+  private twoDecimalPlaceFormatter = (params: any) => {
+    return params.value ? this.roundTo2Dp(params.value) : null;
+  };
 }

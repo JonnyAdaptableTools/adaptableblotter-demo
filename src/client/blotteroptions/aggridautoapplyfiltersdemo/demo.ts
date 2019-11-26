@@ -32,7 +32,6 @@ export default () => {
     filterOptions: {
       autoApplyFilter: false,
     },
-
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };

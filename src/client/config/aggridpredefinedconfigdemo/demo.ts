@@ -30,11 +30,6 @@ export default () => {
     userName: 'Demo User',
     blotterId: 'Predefined Config Demo',
     vendorGrid: gridOptions,
-
-    layoutOptions: {
-      includeVendorStateInLayouts: true,
-      autoSaveLayouts: true,
-    },
     predefinedConfig: predefinedConfig,
   };
 

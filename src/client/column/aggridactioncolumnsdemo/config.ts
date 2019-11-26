@@ -6,7 +6,15 @@ export default {
       {
         ColumnId: 'Multiply',
         ButtonText: 'Click',
-        RenderFunctionName: 'RenderMultiplyButtonFunc',
+        ShouldRenderPredicate: params => {
+          //   return params.rowData.counterparty != 'BNP';
+          return params.rowData.Employee != 'Margaret Peacock';
+        },
+        RenderFunction: params => {
+          return params.rowData.ItemCost > 75
+            ? '<button style="color:blue; font-weight:bold">Double</button>'
+            : '<button style="color:red; font-weight:bold; font-style:italic">Treble</button>';
+        },
       },
       {
         ColumnId: 'Plus',
