@@ -55,10 +55,10 @@ export default () => {
           NewValue: dataChangedInfo.OldValue,
           ValidationMessage: 'Cannot set Item Count to 17',
         };
-      } else if (dataChangedInfo.NewValue > 20) {
+      } else if (dataChangedInfo.NewValue > 25) {
         return {
           NewValue: 25,
-          ValidationMessage: 'Item Count cannot be greater than 20',
+          ValidationMessage: 'Item Count cannot be greater than 25',
         };
       } else if (dataChangedInfo.NewValue < 5) {
         return {

@@ -24,14 +24,14 @@ export default () => {
           <p>
             (1) Pre-populate the Toolbar with Button definitions (as part of{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_designtimestate_applicationstate_.applicationstate.html"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_applicationstate_.applicationstate.html"
               target="_blank"
             >
               Application State
             </a>
             ); when a button is clicked the{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_interface_ieventapi_.ieventapi.html#on"
+              href="https://api.adaptableblotter.com/interfaces/_api_eventapi_.eventapi.html"
               target="_blank"
             >
               ApplicationToolbarButtonClicked
@@ -42,7 +42,7 @@ export default () => {
             (2) Render the Toolbar with any content that is required; listen to
             the{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_interface_ieventapi_.ieventapi.html#on"
+              href="https://api.adaptableblotter.com/interfaces/_api_eventapi_.eventapi.html#on"
               target="_blank"
             >
               ToolbarVisibilityChanged
