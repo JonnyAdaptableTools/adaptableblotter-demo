@@ -47,8 +47,8 @@ export default () => {
             >
               ToolbarVisibilityChanged
             </a>{' '}
-            event and if the Application Toolbar has become visible, render the
-            content.
+            event and if the Application Toolbar has become visible, then render
+            the content.
           </p>
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
