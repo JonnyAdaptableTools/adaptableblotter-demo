@@ -15,13 +15,25 @@ export default () => {
             .
           </p>
           <p>
-            When a Data Source is selected, the <i>SearchChanged</i> event fires
-            - stating what triggered the event and providing full state details
-            (including the selected DataSource).
+            When a Data Source is selected, the{' '}
+            <a
+              href="https://api.adaptableblotter.com/interfaces/_api_eventapi_.eventapi.html"
+              target="_blank"
+            >
+              on('SearchChanged') event
+            </a>
+            fires - stating what triggered the event and providing full state
+            details (including the selected DataSource).
           </p>
           <p>
             This allows you to perform the necessary search on the server and
-            return data to the Adaptable Blotter via the GridAPi{' '}
+            return data to the Adaptable Blotter via the
+            <a
+              href="https://api.adaptableblotter.com/interfaces/_api_gridapi_.gridapi.html"
+              target="_blank"
+            >
+              Grid APi
+            </a>{' '}
             <i>setGridData</i> method. (A forthcoming release will provide
             parameterised queries functionality.)
           </p>

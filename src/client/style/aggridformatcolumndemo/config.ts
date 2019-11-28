@@ -9,7 +9,7 @@ export default {
       {
         ColumnId: 'OrderDate',
         Style: {
-          FontWeight: 'Normal',
+          FontWeight: 'Bold',
           FontSize: 'XSmall',
           FontStyle: 'Italic',
           ClassName: '',

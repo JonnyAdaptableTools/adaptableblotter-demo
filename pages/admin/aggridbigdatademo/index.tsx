@@ -31,14 +31,14 @@ export default () => {
           </p>
           <p>
             <b>Note:</b> If you have a DataSet with many hundreds of thousands
-            of rows then you will probably want to use one the{' '}
+            of rows then you will probably want to use{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360024888631-Server-Searching"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754897-Server-Searching"
               target="_blank"
             >
-              Server Search
+              Server Searching
             </a>
-            options available.
+            .
           </p>
         </div>
       }
