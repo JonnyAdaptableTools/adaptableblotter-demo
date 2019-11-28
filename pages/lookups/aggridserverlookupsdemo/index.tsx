@@ -19,7 +19,10 @@ export default () => {
             However sometimes you might want to provide the Adaptable Blotter
             with a list of allowed values for lookups or filtering. You do this
             through the <b>getColumnValues</b> property of{' '}
-            <a href="https://api.adaptableblotter.com/interfaces/_blotteroptions_queryoptions_.queryoptions.html">
+            <a
+              href="https://api.adaptableblotter.com/interfaces/_blotteroptions_queryoptions_.queryoptions.html"
+              target="_blank"
+            >
               Query Options
             </a>
             .

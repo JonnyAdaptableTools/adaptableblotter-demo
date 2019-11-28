@@ -17,7 +17,10 @@ export default () => {
           <p>
             However, if you would prefer to return a larger result set, you can
             set the the <b>maxColumnValueItemsDisplayed</b> property of{' '}
-            <a href="https://api.adaptableblotter.com/interfaces/_blotteroptions_queryoptions_.queryoptions.html">
+            <a
+              href="https://api.adaptableblotter.com/interfaces/_blotteroptions_queryoptions_.queryoptions.html"
+              target="_blank"
+            >
               Query Options
             </a>{' '}
             to a different value.

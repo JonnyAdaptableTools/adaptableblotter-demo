@@ -19,7 +19,10 @@ export default () => {
           <p>
             However, if this is not your preferred behaviour, you can set the
             the <b>ignoreCaseInQueries</b> property of{' '}
-            <a href="https://api.adaptableblotter.com/interfaces/_blotteroptions_queryoptions_.queryoptions.html">
+            <a
+              href="https://api.adaptableblotter.com/interfaces/_blotteroptions_queryoptions_.queryoptions.html"
+              target="_blank"
+            >
               Query Options
             </a>{' '}
             to be <i>false</i> (the default if not set is <i>true</i>).

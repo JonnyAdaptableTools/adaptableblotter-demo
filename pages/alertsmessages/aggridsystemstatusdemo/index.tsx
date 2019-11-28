@@ -37,7 +37,7 @@ export default () => {
             </a>
             . In this example we set an error message as follows:{' '}
             <i>
-              blotter.api.systemStatusApi.setRedSystemStatus('Server about to
+              blotterApi.systemStatusApi.setErrorSystemStatus('Server about to
               restart');
             </i>
           </p>
