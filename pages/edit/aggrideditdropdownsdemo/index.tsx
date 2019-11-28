@@ -17,11 +17,11 @@ export default () => {
           <p>
             However, in the{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_designtimestate_userinterfacestate_.userinterfacestate.html"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_userinterfacestate_.userinterfacestate.html"
               target="_blank"
             >
               User Interface
-            </a>
+            </a>{' '}
             section of Predefined Config you can stipulate that a column will
             automatically display a Dropdown (select) when being edited.
           </p>

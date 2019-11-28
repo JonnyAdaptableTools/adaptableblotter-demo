@@ -26,7 +26,7 @@ export default () => {
           <p>
             Note: In this example the{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028584692-Chart-Options"
+              href="https://api.adaptableblotter.com/interfaces/_blotteroptions_chartoptions_.chartoptions.html"
               target="_blank"
             >
               Chart Options

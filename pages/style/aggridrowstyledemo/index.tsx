@@ -16,14 +16,14 @@ export default () => {
               target="_blank"
             >
               provided theme
-            </a>
+            </a>{' '}
             you use (e.g. Balham, Blue, Blue etc.)
           </p>
           <p>
             However you are able to style the rows in the ag-Grid using the
             RowStyles property of{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_designtimestate_userinterfacestate_.userinterfacestate.html"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_userinterfacestate_.userinterfacestate.html"
               target="_blank"
             >
               User Interface State

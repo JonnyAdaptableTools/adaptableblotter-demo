@@ -37,7 +37,7 @@ export default () => {
             In this example we have created Action Columns <b>Plus</b> and{' '}
             <b>Minus</b> and in the onActionColumnClicked event handler we
             update the <i>Item Count</i> column (though we do also have a{' '}
-            <a href="../edit/aggridplusminusdemo" target="_blank">
+            <a href="../../edit/aggridplusminusdemo" target="_blank">
               Plus/Minus Function
             </a>
             ).
@@ -58,9 +58,7 @@ export default () => {
               API
             </a>
             :{' '}
-            <i>
-              blotter.api.gridApi.deleteGridData([args.data[0].id.rowData]);
-            </i>
+            <i>blotterApi.gridApi.deleteGridData([args.data[0].id.rowData]);</i>
           </p>
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}

@@ -12,12 +12,12 @@ export default () => {
         <p>
           The Adaptable Blotter runs in the Broswer or Electron with all
           functionality available for users (depending on their{' '}
-          <a href="../admin/aggridentitlementsdemo/">Entitlements</a>).
+          <a href="../../admin/aggridentitlementsdemo/">Entitlements</a>).
         </p>
         <p>
           However if you are running the Adaptable Blotter inside the popular{' '}
           <a href="https://openfin.co/" target="_blank">
-            OpenFin container
+            OpenFin container{' '}
           </a>
           then you get some extra features which we have added that take
           advantage of the many benefits that OpenFin brings.
@@ -55,7 +55,7 @@ export default () => {
             width="840"
             height="480"
             src="https://www.youtube.com/embed/6Pf7BDUoe0I"
-          ></iframe>
+          />
           {/*
          
 

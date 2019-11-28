@@ -17,20 +17,20 @@ export default () => {
           <p>
             Messages can be green ('success' and the default), blue ('info'),
             amber ('warning') or red ('error'). Clicking the button displays the
-            message. (Turn it off by setting <i>ShowSystemStatusButton</i> to
-            false in{' '}
+            message. (Hide the button by setting <i>ShowSystemStatusButton</i>{' '}
+            to false in{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028901111-Dashboard-Config"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_dashboardstate_.dashboardstate.html"
               target="_blank"
             >
-              Dashboard Config
+              Dashboard State
             </a>
             ).
           </p>
           <p>
             You set System Status messages through code using the{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028899471-System-Status-API"
+              href="https://api.adaptableblotter.com/interfaces/_api_systemstatusapi_.systemstatusapi.html"
               target="_blank"
             >
               Adaptable Blotter API

@@ -16,15 +16,15 @@ export default () => {
           </p>
           <p>
             This demo shows some example Predefined Config. It includes: 2{' '}
-            <a href="../gridmanagement/aggridlayoutdemo/">Layouts</a>, 2{' '}
-            <a href="../style/aggridconditionalstyledemo/">
+            <a href="../../gridmanagement/aggridlayoutdemo/">Layouts</a>, 2{' '}
+            <a href="../../style/aggridconditionalstyledemo/">
               Conditional Styles
             </a>
-            , 1 <a href="../gridmanagement/aggridexportdemo/">Report</a>, 1{' '}
-            <a href="../style/aggridformatcolumndemo/">Format Column</a>, 1{' '}
-            <a href="../gridmanagement/aggridcustomsortdemo/">Custom Sort</a> ,{' '}
-            <a href="../search/aggridquicksearchdemo/">Quick Search</a> applied
-            and some <a href="../dashboard/">Dashboard</a> changes.
+            , 1 <a href="../../gridmanagement/aggridexportdemo/">Report</a>, 1{' '}
+            <a href="../../style/aggridformatcolumndemo/">Format Column</a>, 1{' '}
+            <a href="../../gridmanagement/aggridcustomsortdemo/">Custom Sort</a>{' '}
+            , <a href="../../search/aggridquicksearchdemo/">Quick Search</a>{' '}
+            applied and some <a href="../../dashboard/">Dashboard</a> changes.
           </p>
           <p>
             As well as pre-loading state the Adaptable Blotter also

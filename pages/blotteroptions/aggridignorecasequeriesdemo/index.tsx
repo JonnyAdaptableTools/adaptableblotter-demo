@@ -19,9 +19,9 @@ export default () => {
           <p>
             However, if this is not your preferred behaviour, you can set the
             the <b>ignoreCaseInQueries</b> property of{' '}
-            <a href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028584632-Query-Options">
+            <a href="https://api.adaptableblotter.com/interfaces/_blotteroptions_queryoptions_.queryoptions.html">
               Query Options
-            </a>
+            </a>{' '}
             to be <i>false</i> (the default if not set is <i>true</i>).
           </p>
           <p>

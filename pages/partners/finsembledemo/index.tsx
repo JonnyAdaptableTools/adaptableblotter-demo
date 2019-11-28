@@ -18,7 +18,7 @@ export default () => {
         then we partner with{' '}
         <a href="https://www.chartiq.com/finsemble/" target="_blank">
           Finsemble
-        </a>
+        </a>{' '}
         (by ChartIQ) which offers a fantastic multi-windowed, multi-application
         experience.
       </p>
@@ -32,14 +32,14 @@ export default () => {
           width="840"
           height="630"
           src="https://www.youtube.com/embed/Xz4IUPeYW8c"
-        ></iframe>
+        />
       </p>
       <p>
         <iframe
           width="840"
           height="630"
           src="https://www.youtube.com/embed/amhRqx1FFsc"
-        ></iframe>
+        />
       </p>
     </MainPage>
   );

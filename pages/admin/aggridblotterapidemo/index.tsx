@@ -18,7 +18,7 @@ export default () => {
           <p>
             There are hundreds of functions in the{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_interface_iblotterapi_.iblotterapi.html"
+              href="https://api.adaptableblotter.com/interfaces/_api_blotterapi_.blotterapi.html"
               target="_blank"
             >
               Adaptable Blotter API

@@ -25,12 +25,12 @@ export default () => {
         You need to be an existing iPushPull user and fill in your user
         credentials in the{' '}
         <a
-          href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028898751-iPushPull-Options"
+          href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_partnerconfigstate_.partnerconfigstate.html"
           target="_blank"
         >
-          Adaptable Blotter Options iPushPull section
-        </a>
-        .
+          Partner Config section
+        </a>{' '}
+        section of Adaptable Blotter state. .
       </p>
       <p>
         Then when you wish to Export, simply select 'iPushPull' from the
@@ -46,13 +46,13 @@ export default () => {
           width="840"
           height="480"
           src="https://www.youtube.com/embed/_YK4T4xvnTU"
-        ></iframe>
+        />
         <br />
         <iframe
           width="840"
           height="480"
           src="https://www.youtube.com/embed/HUm9dzdX9dE"
-        ></iframe>
+        />
       </p>
     </MainPage>
   );

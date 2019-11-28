@@ -23,7 +23,7 @@ export default () => {
             You can turn this off by setting <i>ShowAboutButton</i> to false in
             in{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028901111-Dashboard-Config"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_dashboardstate_.dashboardstate.html"
               target="_blank"
             >
               Dashboard Config
