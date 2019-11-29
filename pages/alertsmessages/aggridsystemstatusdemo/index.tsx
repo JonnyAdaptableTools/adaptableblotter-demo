@@ -15,17 +15,20 @@ export default () => {
             happened to the system or server they need to know about.
           </p>
           <p>
-            Messages can be green ('success' and the default), blue ('info'),
-            amber ('warning') or red ('error'). Clicking the button displays the
-            message. (Hide the button by setting <i>ShowSystemStatusButton</i>{' '}
-            to false in{' '}
+            Messages can be <b>Success</b> (by default green), <b>Warning</b>{' '}
+            (by default amber), <b>Error</b> (by default red) or <b>Info</b>(by
+            default blue). Clicking the button will display the message.
+          </p>
+          <p>
+            You can hide the System Status button by setting{' '}
+            <i>ShowSystemStatusButton</i> to false in{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_dashboardstate_.dashboardstate.html"
               target="_blank"
             >
               Dashboard State
             </a>
-            ).
+            .
           </p>
           <p>
             You set System Status messages through code using the{' '}
@@ -35,11 +38,8 @@ export default () => {
             >
               Adaptable Blotter API
             </a>
-            . In this example we set an error message as follows:{' '}
-            <i>
-              blotterApi.systemStatusApi.setErrorSystemStatus('Server about to
-              restart');
-            </i>
+            . In this example we set info, warning, success and error messages
+            all through the API.
           </p>
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
