@@ -29,7 +29,7 @@ export default () => {
             In this example we have created a 'Wimbledon Theme' that styles the
             Blotter purple and green, with slightly rounded borders. Note that
             we use{' '}
-            <a href="../style/aggridrowstyledemo" target="_self">
+            <a href="../../style/aggridrowstyledemo" target="_self">
               Row Styles
             </a>{' '}
             to similarly colour the grid).
@@ -38,7 +38,7 @@ export default () => {
             We have also created a 'Blue Theme'. When this loads we leverage the{' '}
             <b>VendorGridClassName</b> of{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028587452-Theme-Config"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_themestate_.themestate.html"
               target="_blank"
             >
               Theme Predefined Config

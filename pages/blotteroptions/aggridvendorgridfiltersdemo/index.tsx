@@ -21,7 +21,12 @@ export default () => {
             highly advanced. You do this by setting the{' '}
             <b>useAdaptableBlotterQuickFilter</b> and{' '}
             <b>useAdaptableBlotterFilterForm</b> properties in{' '}
-            <i>FilterOptions</i>.
+            <a
+              href="https://api.adaptableblotter.com/interfaces/_blotteroptions_filteroptions_.filteroptions.html"
+              target="_blank"
+            >
+              Filter Options
+            </a>{' '}
           </p>
           <p>
             Any filters created with these forms will NOT be stored with your

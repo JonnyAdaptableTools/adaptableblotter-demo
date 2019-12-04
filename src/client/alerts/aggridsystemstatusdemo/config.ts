@@ -1,14 +1,8 @@
+import { PredefinedConfig } from '@adaptabletools/adaptableblotter/types';
+
 export default {
   Dashboard: {
-    VisibleToolbars: ['Application', 'SystemStatus'],
-  },
-
-  SystemStatus: {
-    ShowAlert: false,
-    DefaultStatusMessage: 'Everything is fine (default)',
-    DefaultStatusType: 'Success',
-    StatusMessage: 'Possible problem on server',
-    StatusType: 'Warning',
+    VisibleToolbars: ['Application', 'Layout'],
   },
   Application: {
     ApplicationToolbarButtons: [

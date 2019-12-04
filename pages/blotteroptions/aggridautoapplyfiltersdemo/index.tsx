@@ -28,7 +28,7 @@ export default () => {
               target="_blank"
             >
               Filter Options
-            </a>
+            </a>{' '}
             to false (the default is true).
           </p>
           <p>

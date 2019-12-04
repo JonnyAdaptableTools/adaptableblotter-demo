@@ -17,7 +17,6 @@
     "ipushpull-js": "^2.18.12",
     "isomorphic-fetch": "^2.2.1",
     "latest": "^0.2.0",
-    "next": "8.0.4",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
@@ -32,6 +31,7 @@
     "dotenv-webpack": "^1.7.0",
     "husky": ">=1",
     "lint-staged": ">=8",
+    "next": "^8.0.4",
     "next-compose-plugins": "^2.2.0",
     "next-fonts": "^0.17.0",
     "next-images": "^1.1.1",
@@ -55,7 +55,7 @@
     "pretty": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss}\"",
     "buildDataSets": "node buildJsonDataset.js",
     "openfin": "openfin -l -c app-dev.json",
-    "dev": "node --max-old-space-size=4096 ./node_modules/.bin/next",
+    "dev": "next",
     "next": "next",
     "build": "node --max-old-space-size=4096 ./node_modules/.bin/next build && node --max-old-space-size=4096 ./node_modules/.bin/next export -o dist && cp _headers dist && cp app-demo.json dist && cp -R ExtLibs dist && cp _redirects dist && cp .npmrc dist"
   },

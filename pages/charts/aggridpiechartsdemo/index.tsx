@@ -26,11 +26,11 @@ export default () => {
           <p>
             Note: In this example the{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028584692-Chart-Options"
+              href="https://api.adaptableblotter.com/interfaces/_blotteroptions_chartoptions_.chartoptions.html"
               target="_blank"
             >
               Chart Options
-            </a>
+            </a>{' '}
             has overriden values. We set <i>displayOnStartUp</i> to true so you
             see the currently selected chart when the page loads, and{' '}
             <i>showModal</i> to false so that the chart appears above the grid

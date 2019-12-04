@@ -17,9 +17,12 @@ export default () => {
           <p>
             However, if you would prefer to return a larger result set, you can
             set the the <b>maxColumnValueItemsDisplayed</b> property of{' '}
-            <a href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028584632-Query-Options">
+            <a
+              href="https://api.adaptableblotter.com/interfaces/_blotteroptions_queryoptions_.queryoptions.html"
+              target="_blank"
+            >
               Query Options
-            </a>
+            </a>{' '}
             to a different value.
           </p>
           <p>
