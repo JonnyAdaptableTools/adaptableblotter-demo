@@ -35,9 +35,36 @@ export default () => {
   };
 
   const blotterOptionsClone = cloneDeep(blotterOptions);
-  let adaptableblotter = new AdaptableBlotter(blotterOptions);
-  adaptableblotter.api.systemStatusApi.setErrorSystemStatus(
-    'Server about to restart'
+  let blotterApi = AdaptableBlotter.init(blotterOptions);
+
+  blotterApi.eventApi.on(
+    'ApplicationToolbarButtonClicked',
+    applicationToolbarButtonClickedEventArgs => {
+      switch (
+        applicationToolbarButtonClickedEventArgs.data[0].id
+          .applicationToolbarButton.Name
+      ) {
+        case 'info':
+          blotterApi.systemStatusApi.setInfoSystemStatus('No issues');
+          break;
+        case 'success':
+          blotterApi.systemStatusApi.setSuccessSystemStatus('All working fine');
+          break;
+        case 'warning':
+          blotterApi.systemStatusApi.setWarningSystemStatus(
+            'Problems with server'
+          );
+          break;
+        case 'error':
+          blotterApi.systemStatusApi.setErrorSystemStatus(
+            'The server is down!'
+          );
+          break;
+        case 'clear':
+          blotterApi.systemStatusApi.clearSystemStatus();
+          break;
+      }
+    }
   );
 
   return {

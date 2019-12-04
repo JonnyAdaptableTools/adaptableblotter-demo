@@ -4,7 +4,7 @@
   "description": "Demo",
   "main": "index.js",
   "dependencies": {
-    "@adaptabletools/adaptableblotter": "^5.2.2-canary.0",
+    "@adaptabletools/adaptableblotter": "^5.2.2-canary.1",
     "@adaptabletools/adaptableblotter-react-aggrid": "^5.2.0",
     "@trendmicro/react-sidenav": "^0.4.5",
     "@types/isomorphic-fetch": "0.0.34",
@@ -14,6 +14,7 @@
     "convert-excel-to-json": "^1.6.1",
     "copy-to-clipboard": "^3.2.0",
     "fin-hypergrid-data-source-base": "^0.4.11",
+    "ipushpull-js": "^2.18.12",
     "isomorphic-fetch": "^2.2.1",
     "latest": "^0.2.0",
     "next": "8.0.4",
