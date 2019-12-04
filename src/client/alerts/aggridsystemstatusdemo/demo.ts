@@ -30,7 +30,6 @@ export default () => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     blotterId: 'System Status Demo',
-
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };
@@ -68,7 +67,7 @@ export default () => {
     }
   );
 
-  adaptableblotter.api.eventApi.on(
+  blotterApi.eventApi.on(
     'ApplicationToolbarButtonClicked',
     (
       applicationToolbarButtonClickedEventArgs: ApplicationToolbarButtonClickedEventArgs
@@ -79,22 +78,20 @@ export default () => {
 
       switch (buttonName) {
         case 'setInfo':
-          adaptableblotter.api.systemStatusApi.setInfoSystemStatus(
+          blotterApi.systemStatusApi.setInfoSystemStatus(
             '30 new records added today'
           );
           break;
         case 'setWarning':
-          adaptableblotter.api.systemStatusApi.setWarningSystemStatus(
+          blotterApi.systemStatusApi.setWarningSystemStatus(
             'Server is running slowly'
           );
           break;
         case 'setError':
-          adaptableblotter.api.systemStatusApi.setErrorSystemStatus(
-            'Server is down!'
-          );
+          blotterApi.systemStatusApi.setErrorSystemStatus('Server is down!');
           break;
         case 'setSuccess':
-          adaptableblotter.api.systemStatusApi.setSuccessSystemStatus(
+          blotterApi.systemStatusApi.setSuccessSystemStatus(
             'Everything is fine'
           );
           break;

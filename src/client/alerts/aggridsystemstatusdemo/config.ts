@@ -2,7 +2,14 @@ import { PredefinedConfig } from '@adaptabletools/adaptableblotter/types';
 
 export default {
   Dashboard: {
-    VisibleToolbars: ['Application', 'Layout'],
+    VisibleToolbars: ['Application', 'SystemStatus'],
+  },
+  SystemStatus: {
+    ShowAlert: false,
+    DefaultStatusMessage: 'Everything is fine',
+    DefaultStatusType: 'Success',
+    StatusMessage: 'Server running slowly',
+    StatusType: 'Warning',
   },
   Application: {
     ApplicationToolbarButtons: [
@@ -33,4 +40,4 @@ export default {
       },
     ],
   },
-};
+} as PredefinedConfig;

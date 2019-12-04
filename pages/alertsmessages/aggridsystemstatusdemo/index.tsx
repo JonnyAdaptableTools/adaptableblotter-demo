@@ -17,7 +17,12 @@ export default () => {
           <p>
             Messages can be <b>Success</b> (by default green), <b>Warning</b>{' '}
             (by default amber), <b>Error</b> (by default red) or <b>Info</b>(by
-            default blue). Clicking the button will display the message.
+            default blue). Clicking the button will display the message.{' '}
+          </p>
+          <p>
+            You can provide default and start-up messages (and message types)
+            and also choose whether an Alert will be displayed when the System
+            Status changes (to anything other than default).
           </p>
           <p>
             You can hide the System Status button by setting{' '}
@@ -28,7 +33,8 @@ export default () => {
             >
               Dashboard State
             </a>
-            .
+            . There is also a System Status toolbar if you want to see the
+            message permanently.
           </p>
           <p>
             You set System Status messages through code using the{' '}
@@ -36,11 +42,19 @@ export default () => {
               href="https://api.adaptableblotter.com/interfaces/_api_systemstatusapi_.systemstatusapi.html"
               target="_blank"
             >
-              Adaptable Blotter API
+              Blotter API
             </a>
             . In this example we set info, warning, success and error messages
-            all through the API.
+            through the API - using Application Buttons in{' '}
+            <a
+              href="../../dashboard/aggriddashboardapplicationtoolbardemo"
+              target="_blank"
+            >
+              Application Toolbar
+            </a>
+            .
           </p>
+
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
