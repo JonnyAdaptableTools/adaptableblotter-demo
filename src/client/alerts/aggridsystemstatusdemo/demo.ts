@@ -22,9 +22,9 @@ export default () => {
 
   let rowData = JSON.parse(JSON.stringify(json));
 
-  const columndefs = helperAgGrid.getFlashingCellColumnSchema();
+  const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
 
-  const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
+  const gridOptions = helperAgGrid.getGridOptions(columndefs, null);
 
   const blotterOptions: AdaptableBlotterOptions = {
     primaryKey: 'OrderId',
@@ -36,6 +36,19 @@ export default () => {
 
   const blotterOptionsClone = cloneDeep(blotterOptions);
   let blotterApi = AdaptableBlotter.init(blotterOptions);
+
+  blotterApi.eventApi.on('BlotterReady', () => {
+    // we load the json orders
+    import('../../../../DataSets/Json/NorthwindOrders.json')
+      .then(data => data.default)
+      .then(data => {
+        // add an extra timeout
+        setTimeout(() => {
+          // and then set the correct row data
+          gridOptions.api!.setRowData(data);
+        }, 500);
+      });
+  });
 
   blotterApi.eventApi.on(
     'ApplicationToolbarButtonClicked',

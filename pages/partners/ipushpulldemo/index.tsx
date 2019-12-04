@@ -67,33 +67,40 @@ export default () => {
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
+              href="https://github.com/AdaptableTools/example-adaptableblotter-ipushpull-integration/blob/master/index.ts"
+              target="_blank"
+            >
+              Github Example
+            </a>{' '}
+            |{' '}
+            <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_partnerstate_.ipushpullstate.html"
               target="_blank"
             >
               Predefined Config
-            </a>
-            ,{' '}
+            </a>{' '}
+            |{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_api_partnerapi_.partnerapi.html"
               target="_blank"
             >
               Blotter API
-            </a>
-            ,{' '}
+            </a>{' '}
+            |{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360004099278-iPushPull-FAQ"
               target="_blank"
             >
               FAQ
-            </a>
-            ,{' '}
+            </a>{' '}
+            |{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360004003298-iPushPull"
               target="_blank"
             >
               Videos
-            </a>
-            ,{' '}
+            </a>{' '}
+            |{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755297-iPushPull"
               target="_blank"
