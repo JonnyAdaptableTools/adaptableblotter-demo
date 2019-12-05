@@ -51,7 +51,7 @@ export default () => {
   });
 
   return {
-    predefinedConfig,
+    // predefinedConfig,
     blotterOptions: blotterOptionsClone,
   };
 };
