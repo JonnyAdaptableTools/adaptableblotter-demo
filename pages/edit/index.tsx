@@ -7,6 +7,7 @@ import logo from '../../images/AdaptableBlotter.png';
 
 import './index.scss';
 import GridLayout from '../../src/components/GridLayout';
+import { getDemoPageStructure, DemoPage } from '../../DemoList/demolist';
 
 const DemoBox = ({ href, children }: { href: string; children: ReactNode }) => {
   return (
@@ -22,6 +23,27 @@ const DemoBox = ({ href, children }: { href: string; children: ReactNode }) => {
 };
 
 export default () => {
+  let categoryPages = getDemoPageStructure().Categories.find(
+    c => c.CategoryName == 'Edit'
+  )!.Pages;
+
+  let demoLinks: any = categoryPages.map((page: DemoPage) => {
+    return (
+      <li>
+        <b>{page.Name}: </b> {page.Description}
+      </li>
+    );
+  });
+
+  let demoBoxes: any = categoryPages.map((page: DemoPage) => {
+    let title = page.Name + ' Demo';
+    return (
+      <DemoBox key={page.Name} href={page.Link}>
+        {title}
+      </DemoBox>
+    );
+  });
+
   return (
     <MainPage
       pageTitle={'Edit demos'}
@@ -32,58 +54,12 @@ export default () => {
             There are a number of different ways to edit data in the Adaptable
             Blotter:
           </p>
-          <ul>
-            <li>
-              <b>Smart Edit:</b> Update contiguous numeric cells using a
-              mathmatical operation.
-            </li>
-            <li>
-              <b>Bulk Update:</b> Update contiguous cells in a column to all
-              contain the same value.
-            </li>
-            <li>
-              <b>Shortcut:</b> Avoid fat finger issues and speed up / automate
-              data entry for numeric and date columns.
-            </li>
-            <li>
-              <b>Plus Minus:</b> Set up 'nudge' rules for numeric columns to
-              respond when the '+' or '-' keys are pressed.
-            </li>
-            <li>
-              <b>Cell Validation:</b> Create rules to prevent (or show warnings)
-              when particular cell edits take place. These will run on the
-              client.
-            </li>
-            <li>
-              <b>Server Validation:</b> Provide a function (and promise) that
-              wil check edits and return a validation response (with optional
-              message and replacement value).
-            </li>
-            <li>
-              <b>Edit Dropdowns:</b> List which columns will automatically show
-              a dropdown (select) when editing and optionally provide the values
-              which it displays.
-            </li>
-          </ul>
+          <ul>{demoLinks}</ul>
           Click on the buttons below to see a demo for each edit function.
         </div>
       }
     >
-      <GridLayout>
-        <DemoBox href="/edit/aggridsmarteditdemo">Smart Edit demo</DemoBox>
-        <DemoBox href="/edit/aggridbulkupdatedemo">Bulk Update demo</DemoBox>
-        <DemoBox href="/edit/aggridshortcutdemo">Shortcut demo</DemoBox>
-        <DemoBox href="/edit/aggridplusminusdemo">Plus Minus demo</DemoBox>
-        <DemoBox href="/edit/aggridcellvalidationdemo">
-          Cell Validation demo
-        </DemoBox>
-        <DemoBox href="/edit/aggridservervalidationdemo">
-          Server Validation demo
-        </DemoBox>
-        <DemoBox href="/edit/aggrideditdropdownsdemo">
-          Edit Dropdowns demo
-        </DemoBox>
-      </GridLayout>
+      <GridLayout>{demoBoxes}</GridLayout>
     </MainPage>
   );
 };

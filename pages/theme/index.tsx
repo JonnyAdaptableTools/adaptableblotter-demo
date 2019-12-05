@@ -3,25 +3,18 @@ import MainPage from '../../src/MainPage';
 import Link from 'next/link';
 import { ReactNode } from 'react-redux';
 
+import logo from '../../images/AdaptableBlotter.png';
 import './index.scss';
 import GridLayout from '../../src/components/GridLayout';
+import { getDemoPageStructure, DemoPage } from '../../DemoList/demolist';
 
-const DemoBox = ({
-  href,
-  title,
-  children,
-}: {
-  href: string;
-  title: string;
-  children: ReactNode;
-}) => {
+const DemoBox = ({ href, children }: { href: string; children: ReactNode }) => {
   return (
     <Link href={href}>
       <a>
-        {' '}
-        <div className="demo-box" style={{ height: '300px', width: '300px' }}>
-          <h4>{title}</h4>
-          {children}
+        <div className="demo-box">
+          <img src={logo} style={{ maxWidth: '80%' }} />
+          <div>{children}</div>
         </div>
       </a>
     </Link>
@@ -29,6 +22,26 @@ const DemoBox = ({
 };
 
 export default () => {
+  let categoryPages = getDemoPageStructure().Categories.find(
+    c => c.CategoryName == 'Theming'
+  )!.Pages;
+
+  let demoLinks: any = categoryPages.map((page: DemoPage) => {
+    return (
+      <li>
+        <b>{page.Name}: </b> {page.Description}
+      </li>
+    );
+  });
+
+  let demoBoxes: any = categoryPages.map((page: DemoPage) => {
+    let title = page.Name + ' Demo';
+    return (
+      <DemoBox key={page.Name} href={page.Link}>
+        {title}
+      </DemoBox>
+    );
+  });
   return (
     <MainPage
       pageTitle={'Theme demos'}
@@ -66,32 +79,11 @@ export default () => {
             instance you can replace the icons that we show in the toolbars with
             your own. We have a demo that shows you how.
           </p>
+          <ul>{demoLinks}</ul>
         </div>
       }
     >
-      <GridLayout>
-        <DemoBox href="/theme/aggriddarkthemedemo" title="Dark Theme Demo">
-          <p>See the Adaptable Blotter using the shipped Dark Theme.</p>
-          <p>
-            When you use this theme the Adaptable Blotter will automatically
-            update the underlying vendor grid to match.
-          </p>
-        </DemoBox>
-        <DemoBox href="/theme/aggridcustomthemedemo" title="Custom Theme Demo">
-          <p>
-            See the Adaptable Blotter using a custom theme (based on Wimbledon
-            tennis colours).
-          </p>
-          <p>
-            When you use this theme the Adaptable Blotter will automatically
-            update the underlying vendor grid to match.
-          </p>
-        </DemoBox>
-        <DemoBox href="/theme/aggridcustomicondemo" title="Custom Icon Demo">
-          <p>To do</p>
-          <p>To do</p>
-        </DemoBox>
-      </GridLayout>
+      <GridLayout>{demoBoxes}</GridLayout>
     </MainPage>
   );
 };

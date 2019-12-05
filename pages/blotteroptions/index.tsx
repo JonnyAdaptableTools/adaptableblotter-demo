@@ -7,6 +7,7 @@ import logo from '../../images/AdaptableBlotter.png';
 
 import './index.scss';
 import GridLayout from '../../src/components/GridLayout';
+import { getDemoPageStructure, DemoPage } from '../../DemoList/demolist';
 
 const DemoBox = ({ href, children }: { href: string; children: ReactNode }) => {
   return (
@@ -22,6 +23,26 @@ const DemoBox = ({ href, children }: { href: string; children: ReactNode }) => {
 };
 
 export default () => {
+  let categoryPages = getDemoPageStructure().Categories.find(
+    c => c.CategoryName == 'Blotter Options'
+  )!.Pages;
+
+  let demoLinks: any = categoryPages.map((page: DemoPage) => {
+    return (
+      <li>
+        <b>{page.Name}: </b> {page.Description}
+      </li>
+    );
+  });
+
+  let demoBoxes: any = categoryPages.map((page: DemoPage) => {
+    let title = page.Name + ' Demo';
+    return (
+      <DemoBox key={page.Name} href={page.Link}>
+        {title}
+      </DemoBox>
+    );
+  });
   return (
     <MainPage
       pageTitle={'Blotter Option demos'}
@@ -43,38 +64,12 @@ export default () => {
             different property in AdaptableBlotterOptions.
           </p>
           <p>These include:</p>
-          <ul>
-            <li>
-              <b>Ignore Case Demo:</b> By default case is ignored when running
-              queries against string columns but you can change this behaviour.
-            </li>
-            <li>
-              <b>Vendor Grid Filters Demo:</b> You can use the agGrid Floating
-              Filter and Filter Form if you wish instead of the Adaptable
-              Blotter Quick Filter and Filter Form respectively.
-            </li>
-            <li>
-              <b>Auto Apply Filters Demo:</b> In Column Filters the default is
-              to filter each time a value in the dropdown is clicked. But if you
-              prefer, you can apply the filters only after an 'Apply' button is
-              clicked (useful if doing server side filtering).
-            </li>
-          </ul>
+          <ul>{demoLinks}</ul>
           Click on the buttons below to see the Blotter Options demos.
         </div>
       }
     >
-      <GridLayout>
-        <DemoBox href="/blotteroptions/aggridignorecasequeriesdemo">
-          Queries Ignore Case demo
-        </DemoBox>
-        <DemoBox href="/blotteroptions/aggridvendorgridfiltersdemo">
-          Vendor Grid Filters demo
-        </DemoBox>
-        <DemoBox href="/blotteroptions/aggridautoapplyfiltersdemo">
-          Auto Apply Filters demo
-        </DemoBox>
-      </GridLayout>
+      <GridLayout>{demoBoxes}</GridLayout>
     </MainPage>
   );
 };

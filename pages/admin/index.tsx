@@ -7,6 +7,7 @@ import logo from '../../images/AdaptableBlotter.png';
 
 import './index.scss';
 import GridLayout from '../../src/components/GridLayout';
+import { getDemoPageStructure, DemoPage } from '../../DemoList/demolist';
 
 const DemoBox = ({ href, children }: { href: string; children: ReactNode }) => {
   return (
@@ -22,6 +23,27 @@ const DemoBox = ({ href, children }: { href: string; children: ReactNode }) => {
 };
 
 export default () => {
+  let categoryPages = getDemoPageStructure().Categories.find(
+    c => c.CategoryName == 'Admin'
+  )!.Pages;
+
+  let demoLinks: any = categoryPages.map((page: DemoPage) => {
+    return (
+      <li>
+        <b>{page.Name}: </b> {page.Description}
+      </li>
+    );
+  });
+
+  let demoBoxes: any = categoryPages.map((page: DemoPage) => {
+    let title = page.Name + ' Demo';
+    return (
+      <DemoBox key={page.Name} href={page.Link}>
+        {title}
+      </DemoBox>
+    );
+  });
+
   return (
     <MainPage
       pageTitle={'Admin demos'}
@@ -33,65 +55,12 @@ export default () => {
             permission users, and have full visibility over all that goes on in
             the Blotter.
           </p>
-          <ul>
-            <li>
-              <b>Entitlements:</b> Manage which functions your users have access
-              tol
-            </li>
-            <li>
-              <b>Audit Log Demo:</b> Every data change, user action, state
-              change and function action is auditable and availalbe for you to
-              listen to in a number of ways, making support a breeze and
-              enabling data playback.
-            </li>
-            <li>
-              <b>API Demo:</b> Access the Adaptable Blotter functionality and
-              state through the Blotter API which contains hundreds of functions
-              giving full programmatic access to everything the Adaptable
-              Blotter provides.
-            </li>
-            <li>
-              <b>Big Data Demo:</b> See the Adaptable Blotter (and ag-Grid) with
-              100,000 rows of client side data.
-            </li>
-            <li>
-              <b>DataSource Changes Demo:</b> Any changes made to the data
-              source to the underlying DataGrid (in this example ag-Grid) is
-              automatically reflected in the Adaptable Blotter and it will be
-              picked up by all relevant functions.
-            </li>
-
-            <li>
-              <b>No Code Demo:</b> The no code version allows you to create an
-              Adaptable Blotter at runtime from any JSON or Excel file that you
-              give it. Immediately you will have an Adaptable Blotter with all
-              the rich functions it contains including advanced functionality
-              like state management and full audit.
-            </li>
-            {/*  <li>
-              <b>Best Ex Demo:</b> Shows how you can use the Adaptable Blotter
-              Audit Log and Calculated Columns to prove Best Ex.
-            </li>
-           */}
-          </ul>
+          <ul>{demoLinks}</ul>
           Click on the buttons below to see a demo for each administrative task.
         </div>
       }
     >
-      <GridLayout>
-        <DemoBox href="/admin/aggridentitlementsdemo">
-          Entitlements demo
-        </DemoBox>
-        <DemoBox href="/admin/aggridauditdemo">Audit Log demo</DemoBox>
-        <DemoBox href="/admin/aggridblotterapidemo">API demo</DemoBox>
-        <DemoBox href="/admin/aggridbigdatademo">Big Data demo</DemoBox>
-        <DemoBox href="/admin/aggridnocodedemo">No Code demo</DemoBox>
-        <DemoBox href="/admin/aggriddatasourcechangesdemo">
-          DataSource Changes demo
-        </DemoBox>
-
-        {/* <DemoBox href="/admin/aggridbestexdemo">Best Ex demo</DemoBox>*/}
-      </GridLayout>
+      <GridLayout>{demoBoxes}</GridLayout>
     </MainPage>
   );
 };

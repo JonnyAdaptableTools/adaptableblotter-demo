@@ -7,6 +7,7 @@ import logo from '../../images/AdaptableBlotter.png';
 
 import './index.scss';
 import GridLayout from '../../src/components/GridLayout';
+import { getDemoPageStructure, DemoPage } from '../../DemoList/demolist';
 
 const DemoBox = ({ href, children }: { href: string; children: ReactNode }) => {
   return (
@@ -22,6 +23,26 @@ const DemoBox = ({ href, children }: { href: string; children: ReactNode }) => {
 };
 
 export default () => {
+  let categoryPages = getDemoPageStructure().Categories.find(
+    c => c.CategoryName == 'Dashboard'
+  )!.Pages;
+
+  let demoLinks: any = categoryPages.map((page: DemoPage) => {
+    return (
+      <li>
+        <b>{page.Name}: </b> {page.Description}
+      </li>
+    );
+  });
+
+  let demoBoxes: any = categoryPages.map((page: DemoPage) => {
+    let title = page.Name + ' Demo';
+    return (
+      <DemoBox key={page.Name} href={page.Link}>
+        {title}
+      </DemoBox>
+    );
+  });
   return (
     <MainPage
       pageTitle={'AdaptableBlotter.JS ag-Grid Dashboard demos'}
@@ -45,23 +66,11 @@ export default () => {
             This is all done through Dashboard Predefined Config. See the
             examples in this section to find out more.
           </p>
+          <ul>{demoLinks}</ul>
         </div>
       }
     >
-      <GridLayout>
-        <DemoBox href="/dashboard/aggriddashboardbuttonsdemo">
-          Dashboard buttons demo
-        </DemoBox>
-        <DemoBox href="/dashboard/aggriddashboardtoolbarsdemo">
-          Dashboard toolbars demo
-        </DemoBox>
-        <DemoBox href="/dashboard/aggriddashboardvisibilitydemo">
-          Dashboard visibility demo
-        </DemoBox>
-        <DemoBox href="/dashboard/aggriddashboardapplicationtoolbardemo">
-          Application Toolbar demo
-        </DemoBox>
-      </GridLayout>
+      <GridLayout>{demoBoxes}</GridLayout>
     </MainPage>
   );
 };
