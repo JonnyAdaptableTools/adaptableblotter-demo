@@ -43,8 +43,9 @@ export default () => {
     web_url: 'https://www.ipushpull.com',
     docs_url: 'https://docs.ipushpull.com',
     storage_prefix: 'ipp_local',
-    api_key: process.env.IPUSHPULL_API_KEY as string,
-    api_secret: process.env.IPUSHPULL_API_SECRET as string,
+    api_key: 'CbBaMaoqHVifScrYwKssGnGyNkv5xHOhQVGm3cYP', //process.env.IPUSHPULL_API_KEY as string,
+    api_secret:
+      'xYzE51kuHyyt9kQCvMe0tz0H2sDSjyEQcF5SOBlPQmcL9em0NqcCzyqLYj5fhpuZxQ8BiVcYl6zoOHeI6GYZj1TkUiiLVFoW3HUxiCdEUjlPS8Vl2YHUMEPD5qkLYnGj', //process.env.IPUSHPULL_API_SECRET as string,
     transport: 'polling',
     hsts: false, // strict cors policy
   });
