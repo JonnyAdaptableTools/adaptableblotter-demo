@@ -47,7 +47,7 @@ export default () => {
     api_key: process.env.IPUSHPULL_API_KEY as string,
     api_secret: process.env.IPUSHPULL_API_SECRET as string,
     transport: 'polling',
-    hsts: false, // strict cors policy
+    hsts: true, // strict cors policy
   });
 
   return {
