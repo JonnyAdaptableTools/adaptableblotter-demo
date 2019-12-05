@@ -36,8 +36,7 @@ export default () => {
 
   const blotterOptionsClone = cloneDeep(blotterOptions);
   const blotterApi = AdaptableBlotter.init(blotterOptions);
-  console.log(process.env.IPUSHPULL_API_KEY);
-  console.log(process.env.IPUSHPULL_API_SECRET);
+
   ipushpull.config.set({
     api_url: 'https://www.ipushpull.com/api/1.0',
     ws_url: 'https://www.ipushpull.com',
@@ -47,7 +46,7 @@ export default () => {
     api_key: process.env.IPUSHPULL_API_KEY as string,
     api_secret: process.env.IPUSHPULL_API_SECRET as string,
     transport: 'polling',
-    hsts: true, // strict cors policy
+    hsts: false, // strict cors policy
   });
 
   return {
