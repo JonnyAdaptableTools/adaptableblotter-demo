@@ -25,9 +25,10 @@ export default () => {
         <br />
         <br />
         <p>
-          The Adaptable Blotter is the most advanced and powerful HTML5 DataGrid
-          Solution on the market today.
-          <br />
+          <h3>
+            The Adaptable Blotter is the most advanced and powerful HTML5
+            DataGrid Solution on the market today.
+          </h3>
           It provides, out of the box, all the functionality that financial and
           other advanced users require to be productive and efficient. And which
           usually needs to be built on a bespoke basis for each project.
@@ -50,6 +51,18 @@ export default () => {
         </p>
         <p>
           <b>The Demos</b> <br />
+          There are many demos on this site each of which illustrate an
+          Adaptable Blotter function, or a Blooter Option, a UI feature or a
+          piece of admin or advanced functionality.
+          <br />
+          You can see a full list of the available demos{' '}
+          <a href="/AdaptableBlotterDemoList" target="_self">
+            here
+          </a>
+          .
+        </p>
+        <p>
+          <b>Predefined Config</b> <br />
           When you release an application using the Adaptable Blotter you will
           typically ship it with{' '}
           <a
@@ -124,22 +137,25 @@ export default () => {
           the Adaptable Blotter.
           <br />
           However, for those who prefer to implement the tool using a JavaScript
-          Framework / Library we provide 2 options: a{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754997-React-Wrapper"
-            target="_blank"
-          >
-            React Wrapper
-          </a>{' '}
-          and a{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755017-Angular-Wrapper"
-            target="_blank"
-          >
-            Angular Wrapper
-          </a>
-          .
-          <br />
+          Framework / Library we provide 2 options:
+          <ul>
+            <li>
+              <a
+                href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754997-React-Wrapper"
+                target="_blank"
+              >
+                React Wrapper
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755017-Angular-Wrapper"
+                target="_blank"
+              >
+                Angular Wrapper
+              </a>
+            </li>
+          </ul>
         </p>
         <p>
           <b>Help</b>
@@ -155,6 +171,39 @@ export default () => {
           .
         </p>
         <p>
+          <b>Github Examples</b>
+          <br />
+          The Adaptable Blotter dev team produce some custom examples to fit
+          particular use cases that our users have requested. <br />
+          These are found on Github. These include:{' '}
+          <ul>
+            <li>
+              <a
+                href="https://github.com/AdaptableTools/example-adaptableblotter-angular-aggrid"
+                target="_blank"
+              >
+                Using the Angular wrapper
+              </a>{' '}
+            </li>
+            <li>
+              <a
+                href="https://github.com/AdaptableTools/example-adaptableblotter-ipushpull-integration"
+                target="_blank"
+              >
+                iPushPull Integration
+              </a>{' '}
+            </li>
+            <li>
+              <a
+                href="https://github.com/AdaptableTools/example-adaptableblotter-with-parceljs"
+                target="_blank"
+              >
+                Using ParcelJS to build a minified file
+              </a>{' '}
+            </li>
+          </ul>
+        </p>
+        <p>
           <b>Licence and Pricing</b>
           <br />
           The Adaptable Blotter requires a commerical licence sold on an annual
@@ -166,8 +215,11 @@ export default () => {
           <b>Developer</b> and <b>Trial</b>.
           <br />
           To find out more about various options on offer and how to join the
-          Adaptable Blotter community, please email{' '}
-          <a href="mailto:sales@adaptabletools.com">Adaptable Tools Sales</a>.
+          Adaptable Blotter community, please{' '}
+          <a href="mailto:sales@adaptabletools.com">
+            email Adaptable Tools Sales
+          </a>
+          .
         </p>
         <p>
           <b>Grid Gurus</b>

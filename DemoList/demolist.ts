@@ -332,13 +332,13 @@ export function getDemoPageStructure(): DemoPageStructure {
         Link: '/dashboard',
         Pages: [
           {
-            Name: 'Toolbars',
+            Name: 'Dashboard Toolbars',
             Link: '/dashboard/aggriddashboardtoolbarsdemo',
             Description:
               'The Adaptable Blotter provides a number of Toolbars to provide easy access to functions. You can choose which ones you want in the Dashbboard',
           },
           {
-            Name: 'Buttons',
+            Name: 'Dashboard Buttons',
             Link: '/dashboard/aggriddashboardbuttonsdemo',
             Description:
               'You can select which buttons - and dropdowns -you wish to see in the Home Toolbar',
