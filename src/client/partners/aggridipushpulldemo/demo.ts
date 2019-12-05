@@ -36,8 +36,8 @@ export default () => {
 
   const blotterOptionsClone = cloneDeep(blotterOptions);
   const blotterApi = AdaptableBlotter.init(blotterOptions);
-  alert(process.env.IPUSHPULL_API_KEY);
-  alert(process.env.IPUSHPULL_API_SECRET);
+  console.log(process.env.IPUSHPULL_API_KEY);
+  console.log(process.env.IPUSHPULL_API_SECRET);
   ipushpull.config.set({
     api_url: 'https://www.ipushpull.com/api/1.0',
     ws_url: 'https://www.ipushpull.com',
@@ -60,7 +60,7 @@ let predefinedConfig: PredefinedConfig = {
   Partner: {
     iPushPull: {
       iPushPullConfig: ipushpull,
-      Username: process.env.IPUSHPULL_USERNAME as string,
+      // Username: process.env.IPUSHPULL_USERNAME as string,
     },
   },
 };
