@@ -37,6 +37,7 @@ export default () => {
   const blotterOptionsClone = cloneDeep(blotterOptions);
   const blotterApi = AdaptableBlotter.init(blotterOptions);
 
+  // the config with the keys set in env variables
   ipushpull.config.set({
     api_url: 'https://www.ipushpull.com/api/1.0',
     ws_url: 'https://www.ipushpull.com',
