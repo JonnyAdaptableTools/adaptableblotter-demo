@@ -20,8 +20,6 @@ export default () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
 
-  let rowData = JSON.parse(JSON.stringify(json));
-
   const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, null);
@@ -38,16 +36,9 @@ export default () => {
   let blotterApi = AdaptableBlotter.init(blotterOptions);
 
   blotterApi.eventApi.on('BlotterReady', () => {
-    // we load the json orders
-    import('../../../../DataSets/Json/NorthwindOrders.json')
-      .then(data => data.default)
-      .then(data => {
-        // add an extra timeout
-        setTimeout(() => {
-          // and then set the correct row data
-          gridOptions.api!.setRowData(data);
-        }, 500);
-      });
+    setTimeout(() => {
+      blotterApi.gridApi.setGridData(JSON.parse(JSON.stringify(json)));
+    }, 500);
   });
 
   blotterApi.eventApi.on(
