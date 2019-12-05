@@ -418,7 +418,7 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'No Code',
             Link: '/admin/aggridnocodedemo',
             Description:
-              'The no code version allows you to create an Adaptable Blotter at runtime from any JSON or Excel file that you give it. Immediately you will have an Adaptable Blotter with all the rich functions it contains including advanced functionality like state management and full audit.',
+              'Create an Adaptable Blotter instance dynamically from a JSON or Excel file that you provide; your Blotter will include the full range of functions and all the advanced functionality like state management and audit.',
           },
         ],
       },
