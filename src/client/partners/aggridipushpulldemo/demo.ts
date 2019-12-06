@@ -26,10 +26,12 @@ ipushpull.config.set({
   storage_prefix: 'ipp_local',
   api_key:
     (process.env.IPUSHPULL_API_KEY as string) ||
-    ((window as any).IPUSHPULL_API_KEY as string),
+    ((window as any).IPUSHPULL_API_KEY as string) ||
+    (localStorage.getItem('IPUSHPULL_API_KEY') as string),
   api_secret:
     (process.env.IPUSHPULL_API_SECRET as string) ||
-    ((window as any).IPUSHPULL_API_SECRET as string),
+    ((window as any).IPUSHPULL_API_SECRET as string) ||
+    (localStorage.getItem('IPUSHPULL_API_SECRET') as string),
   transport: 'polling',
   hsts: false, // strict cors policy
 });
