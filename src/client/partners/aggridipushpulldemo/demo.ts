@@ -16,6 +16,7 @@ import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 //import predefinedConfig from './config';
 import ipushpull from 'ipushpull-js';
 
+(window as any).ipp = ipushpull;
 // the config with the keys set in env variables
 ipushpull.config.set({
   api_url: 'https://www.ipushpull.com/api/1.0',
