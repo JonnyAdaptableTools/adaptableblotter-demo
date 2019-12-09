@@ -24,7 +24,6 @@ import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import jsonConfig from './config';
 
 export class Demo {
-  private adaptableblotter: IAdaptableBlotter;
   private grid: any;
   constructor() {
     let rowData = JSON.parse(JSON.stringify(json));
@@ -53,7 +52,7 @@ export class Demo {
       predefinedConfig: jsonConfig,
     };
 
-    this.adaptableblotter = new AdaptableBlotter(blotterOptions);
+    const blotterApi = AdaptableBlotter.init(blotterOptions);
     //alternate rows
     var origgetCell = this.grid.behavior.dataModel.getCell;
     this.grid.behavior.dataModel.getCell = function(

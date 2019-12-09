@@ -36,7 +36,7 @@ export default () => {
   };
 
   const blotterOptionsClone = cloneDeep(blotterOptions);
-  new AdaptableBlotter(blotterOptions);
+  const blotterApi = AdaptableBlotter.init(blotterOptions);
   tickingDataHelper.startTickingDataagGridOrders(gridOptions, 750, true);
   return {
     predefinedConfig,

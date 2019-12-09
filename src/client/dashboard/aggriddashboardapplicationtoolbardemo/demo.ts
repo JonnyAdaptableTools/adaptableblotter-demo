@@ -43,11 +43,9 @@ export default () => {
   };
 
   const blotterOptionsClone = cloneDeep(blotterOptions);
-  const adaptableblotter: IAdaptableBlotter = new AdaptableBlotter(
-    blotterOptions
-  );
+  const blotterApi = AdaptableBlotter.init(blotterOptions);
 
-  adaptableblotter.api.eventApi.on(
+  blotterApi.eventApi.on(
     'ToolbarVisibilityChanged',
     (toolbarVisibilityChangedEventArgs: ToolbarVisibilityChangedEventArgs) => {
       if (
@@ -60,13 +58,13 @@ export default () => {
 
         ReactDOM.render(
           toolbarContents,
-          adaptableblotter.api.applicationApi.getApplicationToolbarContentsDiv()
+          blotterApi.applicationApi.getApplicationToolbarContentsDiv()
         );
       }
     }
   );
 
-  adaptableblotter.api.eventApi.on(
+  blotterApi.eventApi.on(
     'ApplicationToolbarButtonClicked',
     (
       applicationToolbarButtonClickedEventArgs: ApplicationToolbarButtonClickedEventArgs

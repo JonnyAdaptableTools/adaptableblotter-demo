@@ -39,13 +39,11 @@ export default () => {
   };
 
   const blotterOptionsClone = cloneDeep(blotterOptions);
-  const adaptableblotter: IAdaptableBlotter = new AdaptableBlotter(
-    blotterOptions
-  );
+  const blotterApi = AdaptableBlotter.init(blotterOptions);
 
   tickingDataHelper.startTickingDataagGridTradesUpdateData(
     gridOptions,
-    adaptableblotter,
+    blotterApi,
     4000,
     tradeCount
   );

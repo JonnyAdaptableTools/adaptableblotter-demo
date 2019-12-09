@@ -49,9 +49,9 @@ export default () => {
   };
 
   const blotterOptionsClone = cloneDeep(blotterOptions);
-  let adaptableblotter = new AdaptableBlotter(blotterOptions);
+  const blotterApi = AdaptableBlotter.init(blotterOptions);
 
-  adaptableblotter.api.eventApi
+  blotterApi.eventApi
     .onSelectionChanged()
     .Subscribe((sender, selectedChangedArgs) =>
       listenToSelectedChange(selectedChangedArgs)

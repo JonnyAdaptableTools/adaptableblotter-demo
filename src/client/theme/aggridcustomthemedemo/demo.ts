@@ -14,6 +14,7 @@ import {
   AdaptableBlotterOptions,
   ThemeChangedEventArgs,
   IAdaptableBlotter,
+  BlotterApi,
 } from '@adaptabletools/adaptableblotter/types';
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
@@ -24,7 +25,7 @@ export default () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
 
-  var adaptableblotter: IAdaptableBlotter;
+  var blotterApi: BlotterApi;
   let rowData = JSON.parse(JSON.stringify(json));
 
   const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
@@ -41,12 +42,12 @@ export default () => {
   };
 
   const blotterOptionsClone = cloneDeep(blotterOptions);
-  adaptableblotter = new AdaptableBlotter(blotterOptions);
+  blotterApi = AdaptableBlotter.init(blotterOptions);
 
-  adaptableblotter.api.eventApi.on(
+  blotterApi.eventApi.on(
     'ThemeChanged',
     (themeChangedEventArgs: ThemeChangedEventArgs) => {
-      listenToThemeChanged(adaptableblotter, themeChangedEventArgs);
+      listenToThemeChanged(blotterApi, themeChangedEventArgs);
     }
   );
 
@@ -57,7 +58,7 @@ export default () => {
 };
 
 function listenToThemeChanged(
-  adaptableblotter: IAdaptableBlotter,
+  blotterApi: BlotterApi,
   args: ThemeChangedEventArgs
 ) {
   console.log(args);
@@ -81,8 +82,8 @@ function listenToThemeChanged(
     };
     rowStyles.push(evenStyle);
     rowStyles.push(oddStyle);
-    adaptableblotter.api.userInterfaceApi.setRowStyles(rowStyles);
+    blotterApi.userInterfaceApi.setRowStyles(rowStyles);
   } else {
-    adaptableblotter.api.userInterfaceApi.clearRowStyles();
+    blotterApi.userInterfaceApi.clearRowStyles();
   }
 }

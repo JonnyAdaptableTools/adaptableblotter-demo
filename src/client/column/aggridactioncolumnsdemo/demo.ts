@@ -11,6 +11,7 @@ import '../../../../DemoPage/aggriddemo.css';
 import {
   AdaptableBlotterOptions,
   IAdaptableBlotter,
+  BlotterApi,
 } from '@adaptabletools/adaptableblotter/types';
 
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
@@ -24,7 +25,7 @@ import {
 export default () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
-  let adaptableBlotter: IAdaptableBlotter;
+  // let adaptableBlotter: IAdaptableBlotter;
 
   let rowData = JSON.parse(JSON.stringify(json));
 
@@ -42,12 +43,12 @@ export default () => {
   };
 
   const blotterOptionsClone = cloneDeep(blotterOptions);
-  adaptableBlotter = new AdaptableBlotter(blotterOptions);
+  const blotterApi = AdaptableBlotter.init(blotterOptions);
 
-  adaptableBlotter.api.eventApi.on(
+  blotterApi.eventApi.on(
     'ActionColumnClicked',
     (actionColumnEventArgs: ActionColumnClickedEventArgs) => {
-      onActionColumnClicked(actionColumnEventArgs);
+      onActionColumnClicked(blotterApi, actionColumnEventArgs);
     }
   );
   return {
@@ -56,6 +57,7 @@ export default () => {
   };
 
   function onActionColumnClicked(
+    blotterApi: BlotterApi,
     actionColumnEventArgs: ActionColumnClickedEventArgs
   ) {
     let actionColumnClickedInfo: ActionColumnClickedInfo =
@@ -64,7 +66,7 @@ export default () => {
 
     if (actionColumnEventArgs.data[0].id.actionColumn.ColumnId == 'Plus') {
       let itemCount = rowData.ItemCount;
-      adaptableBlotter.api.gridApi.setCellValue(
+      blotterApi.gridApi.setCellValue(
         'ItemCount',
         itemCount + 1,
         actionColumnClickedInfo.primaryKeyValue
@@ -73,7 +75,7 @@ export default () => {
       actionColumnEventArgs.data[0].id.actionColumn.ColumnId == 'Minus'
     ) {
       let itemCount = rowData.ItemCount;
-      adaptableBlotter.api.gridApi.setCellValue(
+      blotterApi.gridApi.setCellValue(
         'ItemCount',
         itemCount - 1,
         actionColumnClickedInfo.primaryKeyValue
@@ -84,7 +86,7 @@ export default () => {
       let multiplier: number = rowData.ItemCost > 75 ? 2 : 3;
       let newItemCost = rowData.ItemCost * multiplier;
       newItemCost = Math.round(newItemCost * 100) / 100;
-      adaptableBlotter.api.gridApi.setCellValue(
+      blotterApi.gridApi.setCellValue(
         'ItemCost',
         newItemCost,
         actionColumnClickedInfo.primaryKeyValue
@@ -92,9 +94,7 @@ export default () => {
     } else if (
       actionColumnEventArgs.data[0].id.actionColumn.ColumnId == 'Action'
     ) {
-      adaptableBlotter.api.gridApi.deleteGridData([
-        actionColumnClickedInfo.rowData,
-      ]);
+      blotterApi.gridApi.deleteGridData([actionColumnClickedInfo.rowData]);
     }
   }
 };

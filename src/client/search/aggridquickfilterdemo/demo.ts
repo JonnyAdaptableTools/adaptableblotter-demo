@@ -19,11 +19,13 @@ export default () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
 
-  let rowData = JSON.parse(JSON.stringify(json));
+  const columndefs = helperAgGrid.getTradeSchema();
 
-  const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
+  const trades = helperAgGrid.getTrades(500);
 
-  const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
+  const gridOptions = helperAgGrid.getGridOptions(columndefs, trades);
+
+  //const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
   gridOptions.floatingFilter = true;
 
   const blotterOptions: AdaptableBlotterOptions = {
@@ -36,7 +38,7 @@ export default () => {
   };
 
   const blotterOptionsClone = cloneDeep(blotterOptions);
-  new AdaptableBlotter(blotterOptions);
+  const blotterApi = AdaptableBlotter.init(blotterOptions);
 
   return {
     predefinedConfig,

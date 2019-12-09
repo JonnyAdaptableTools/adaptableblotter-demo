@@ -1,7 +1,7 @@
 import { GridOptions, RowNode } from 'ag-grid-community';
 import { ITrade } from './Trade';
 import { HelperAgGrid } from './HelperAgGrid';
-import { IAdaptableBlotter } from '@adaptabletools/adaptableblotter/types';
+import { BlotterApi } from '@adaptabletools/adaptableblotter/types';
 
 export class TickingDataHelper {
   public startTickingDataagGridOrders(
@@ -55,7 +55,7 @@ export class TickingDataHelper {
 
   public startTickingDataagGridTradesUpdateData(
     gridOptions: any,
-    blotter: IAdaptableBlotter,
+    blotterApi: BlotterApi,
     tickingFrequency: number,
     tradeCount: number
   ) {
@@ -78,7 +78,7 @@ export class TickingDataHelper {
           trade.currency = 'JPY';
         }
 
-        blotter.api.gridApi.updateGridData([trade]);
+        blotterApi.gridApi.updateGridData([trade]);
       }, tickingFrequency);
     }
   }

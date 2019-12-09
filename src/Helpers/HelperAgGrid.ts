@@ -1520,7 +1520,7 @@ export class HelperAgGrid {
     var counterparties = [0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.5];
     return counterparties;
   }
-  protected getCounterparties(): string[] {
+  protected getCounterparties(): (string | null | undefined)[] {
     var counterparties = [
       'Goldman Sachs',
       'Societe Generale',
@@ -1536,6 +1536,8 @@ export class HelperAgGrid {
       'Deutsche Bank',
       'Credit Suisse',
       'Nomura',
+      null,
+      undefined,
     ];
     return counterparties;
   }

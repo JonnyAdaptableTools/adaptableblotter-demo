@@ -12,7 +12,7 @@ import '../../../../DemoPage/aggriddemo.css';
 
 import {
   AdaptableBlotterOptions,
-  IAdaptableBlotter,
+  BlotterApi,
 } from '@adaptabletools/adaptableblotter/types';
 
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
@@ -22,7 +22,7 @@ import predefinedConfig from './config';
 export default () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
-  let adaptableblotter: IAdaptableBlotter;
+  let blotterApi: BlotterApi;
   let rowData = JSON.parse(JSON.stringify(json));
 
   const columndefs = helperAgGrid.getFilteredColumnSchema();
@@ -40,7 +40,7 @@ export default () => {
   };
 
   const blotterOptionsClone = cloneDeep(blotterOptions);
-  adaptableblotter = new AdaptableBlotter(blotterOptions);
+  blotterApi = AdaptableBlotter.init(blotterOptions);
 
   const testDiv: HTMLElement | null = document.getElementById('aboveGridDiv');
   if (testDiv != null) {
@@ -111,7 +111,7 @@ export default () => {
     if (element != null) {
       let searchValue = element.value;
       if (searchValue != null && searchValue != '') {
-        adaptableblotter.api.quickSearchApi.applyQuickSearch(searchValue);
+        blotterApi.quickSearchApi.applyQuickSearch(searchValue);
       }
     }
   }
@@ -120,27 +120,27 @@ export default () => {
     const element: any = document.getElementById('txtQuickSearchText');
     if (element != null) {
       element.value = '';
-      adaptableblotter.api.quickSearchApi.clearQuickSearch();
+      blotterApi.quickSearchApi.clearQuickSearch();
     }
   }
 
   function minimiseDashboard() {
-    adaptableblotter.api.dashboardApi.Minimise();
+    blotterApi.dashboardApi.Minimise();
   }
 
   function maximiseadshboard() {
-    adaptableblotter.api.dashboardApi.SetVisibility('Visible');
+    blotterApi.dashboardApi.SetVisibility('Visible');
   }
 
   function showOrdersLayout() {
-    adaptableblotter.api.layoutApi.setLayout('Orders');
+    blotterApi.layoutApi.setLayout('Orders');
   }
 
   function loadVileTheme() {
-    adaptableblotter.api.themeApi.loadTheme('vile-theme');
+    blotterApi.themeApi.loadTheme('vile-theme');
   }
 
   function showColumnChooserPopup() {
-    adaptableblotter.api.columnChooserApi.showColumnChooserPopup();
+    blotterApi.columnChooserApi.showColumnChooserPopup();
   }
 };

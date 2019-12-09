@@ -24,7 +24,6 @@ export default () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
 
-  var adaptableblotter: IAdaptableBlotter;
   let rowData = JSON.parse(JSON.stringify(json));
 
   const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
@@ -41,7 +40,7 @@ export default () => {
   };
 
   const blotterOptionsClone = cloneDeep(blotterOptions);
-  adaptableblotter = new AdaptableBlotter(blotterOptions);
+  const blotterApi = AdaptableBlotter.init(blotterOptions);
 
   return {
     predefinedConfig,

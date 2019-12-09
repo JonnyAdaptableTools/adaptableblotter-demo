@@ -12,6 +12,7 @@ import '../../../../DemoPage/aggriddemo.css';
 import {
   AdaptableBlotterOptions,
   SearchChangedEventArgs,
+  BlotterApi,
 } from '@adaptabletools/adaptableblotter/types';
 
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
@@ -39,12 +40,12 @@ export default () => {
   };
 
   const blotterOptionsClone = cloneDeep(blotterOptions);
-  let adaptableblotter = new AdaptableBlotter(blotterOptions);
+  const blotterApi = AdaptableBlotter.init(blotterOptions);
 
-  adaptableblotter.api.eventApi
+  blotterApi.eventApi
     .onSearchChanged()
     .Subscribe((sender, searchChangedArgs) =>
-      listenToSearchChange(adaptableblotter, helperAgGrid, searchChangedArgs)
+      listenToSearchChange(blotterApi, helperAgGrid, searchChangedArgs)
     );
 
   return {
@@ -53,7 +54,7 @@ export default () => {
   };
 
   function listenToSearchChange(
-    blotter: AdaptableBlotter,
+    blotterApi: BlotterApi,
     helperAgGrid: HelperAgGrid,
     searchChangedArgs: SearchChangedEventArgs
   ) {
@@ -67,23 +68,23 @@ export default () => {
           case 'Euro Trades':
             let euroTrades = helperAgGrid.getEuroTrades(500);
 
-            blotter.api.gridApi.setGridData(euroTrades);
+            blotterApi.gridApi.setGridData(euroTrades);
             break;
 
           case 'Dollar Trades':
             let dollarTrades = helperAgGrid.getDollarTrades(200);
 
-            blotter.api.gridApi.setGridData(dollarTrades);
+            blotterApi.gridApi.setGridData(dollarTrades);
             break;
 
           case 'GBP Trades':
             let sterlingTrades = helperAgGrid.getGBPTrades(12);
-            blotter.api.gridApi.setGridData(sterlingTrades);
+            blotterApi.gridApi.setGridData(sterlingTrades);
             break;
 
           case '2019 Actiivty':
             let thisYearTrades = helperAgGrid.getThisYearTrades(300);
-            blotter.api.gridApi.setGridData(thisYearTrades);
+            blotterApi.gridApi.setGridData(thisYearTrades);
             break;
         }
       }
