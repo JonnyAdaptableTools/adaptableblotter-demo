@@ -23,8 +23,8 @@ export default () => {
           </p>
           <p>
             This example has 3 Server Validation Rules for <b>Item Count</b>:
-            (1) Edits above 20 are rejected and changed to 20; (2) Edits below 5
-            are rejected and changed to 5; (3) Any edit of 17 is ( bizarrely)
+            (1) Edits above 25 are rejected and changed to 25; (2) Edits below 5
+            are rejected and changed to 5; (3) Any edit of 17 is (bizarrely)
             rejected outright.{' '}
           </p>
           <p>
