@@ -36,7 +36,8 @@ export default () => {
             >
               ApplicationToolbarButtonClicked
             </a>{' '}
-            event is fired.
+            event is fired. Note that we have also styled the buttons
+            individually.
           </p>
           <p>
             (2) Render the Toolbar with any content that is required; listen to

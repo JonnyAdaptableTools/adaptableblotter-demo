@@ -9,10 +9,18 @@ export default {
       {
         Name: 'btnNewTrade',
         Caption: 'New Trade',
+        ButtonStyle: {
+          Variant: 'text',
+          Tone: 'success',
+        },
       },
       {
         Name: 'btnRefreshGrid',
         Caption: 'Refresh Grid',
+        ButtonStyle: {
+          Variant: 'raised',
+          Tone: 'accent',
+        },
       },
     ],
   },

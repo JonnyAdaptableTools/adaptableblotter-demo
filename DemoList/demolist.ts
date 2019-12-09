@@ -104,7 +104,7 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Avoid fat finger issues and speed up / automate data entry for numeric and date columns.',
           },
           {
-            Name: 'Shortcut',
+            Name: 'Plus / Minus',
             Link: '/edit/aggridplusminusdemo',
             Description:
               'Set up "nudge" rules for numeric columns to respond when the "+" or "-" keys are pressed.',

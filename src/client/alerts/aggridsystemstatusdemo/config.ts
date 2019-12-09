@@ -16,26 +16,34 @@ export default {
       {
         Name: 'info',
         Caption: 'Info',
-        Variant: 'text',
-        //   Tone: 'info',
+        ButtonStyle: {
+          Variant: 'text',
+          Tone: 'info',
+        },
       },
       {
         Name: 'success',
         Caption: 'Success',
-        Variant: 'text',
-        //   Tone: 'success',
+        ButtonStyle: {
+          Variant: 'text',
+          Tone: 'success',
+        },
       },
       {
         Name: 'warning',
         Caption: 'Warning',
-        Variant: 'text',
-        //   Tone: 'warning',
+        ButtonStyle: {
+          Variant: 'text',
+          Tone: 'warning',
+        },
       },
       {
         Name: 'error',
         Caption: 'Error',
-        Variant: 'text',
-        //   Tone: 'error',
+        ButtonStyle: {
+          Variant: 'text',
+          Tone: 'error',
+        },
       },
       {
         Name: 'clear',
