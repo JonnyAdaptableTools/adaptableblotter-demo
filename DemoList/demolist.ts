@@ -65,13 +65,19 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'User Filters',
             Link: '/search/aggriduserfiltersdemo',
             Description:
-              'Column Filters which have been named and saved and so are usable across multiple functions that use queries (like Conditional Styles, Reports or Advanced Search)',
+              'Column Filters which have been named and saved and so are usable across multiple functions that use queries (like Conditional Styles, Reports or Advanced Search).',
           },
           {
             Name: 'Named Filters',
             Link: '/search/aggridnamedfiltersdemo',
             Description:
-              'Named Filters are provided by users at design-time and include a custom Predicate function that is run each time the filter is applied',
+              'Named Filters are provided by users at design-time and include a custom Predicate function that is run each time the filter is applied.',
+          },
+          {
+            Name: 'System Filters',
+            Link: '/search/aggridsystemfiltersdemo',
+            Description:
+              'System Filters are those provided by the Adaptable Blotter (e.g. "Blanks", "Yeserday", "Positive"); you can choose which - if any - of these are available.',
           },
           {
             Name: 'Data Source Selector',

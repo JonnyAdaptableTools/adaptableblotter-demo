@@ -41,7 +41,6 @@ export default () => {
         });
       },
     },
-
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };
