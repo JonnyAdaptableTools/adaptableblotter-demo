@@ -102,7 +102,7 @@ export default () => {
             </a>{' '}
             |{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755297-iPushPull"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360004256778#UUID-bea0c942-9326-7490-30b2-9a75709ac7d6"
               target="_blank"
             >
               User Guide
