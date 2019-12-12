@@ -12,6 +12,7 @@ const arrowRight = (
 export type AgGridDemoPageProps = {
   config?: any;
   blotterOptions?: any;
+  className?: string;
   description: any;
 } & MainPageProps;
 
@@ -90,6 +91,7 @@ export default ({
   children,
   description,
   config,
+  className,
   blotterOptions,
 }: AgGridDemoPageProps) => {
   if (config) {
@@ -103,7 +105,11 @@ export default ({
   }
 
   return (
-    <MainPage pageTitle={pageTitle} description={description}>
+    <MainPage
+      className={className}
+      pageTitle={pageTitle}
+      description={description}
+    >
       <div id="adaptableBlotter" style={{ marginRight: 30 }} />
       <p />
       <div

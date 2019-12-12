@@ -7,12 +7,19 @@ import Sidebar from '../Sidebar';
 export type MainPageProps = {
   pageTitle: string;
   children?: ReactNode;
+  className?: string;
   description?: ReactNode;
 };
 
-export default ({ pageTitle, children, description }: MainPageProps) => {
+export default ({
+  className,
+  pageTitle,
+  children,
+  description,
+}: MainPageProps) => {
   return (
     <div
+      className={className}
       style={{
         display: 'flex',
         flexFlow: 'row',

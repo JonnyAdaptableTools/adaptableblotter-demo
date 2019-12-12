@@ -1,18 +1,17 @@
-.ab-Icon--alert path {
+.custom-icon-demo .ab-Icon--alert path {
   visibility: hidden; /* to hide the contents of the actual SVG */
 }
 
-.ab-Icon--alert {
+.custom-icon-demo .ab-Icon--alert {
   background-image: url(./alarm_on-24px.svg);
   background-size: cover;
 }
 
+.custom-icon-demo .ab-Icon--export path {
+  visibility: hidden; /* to hide the contents of the actual SVG */
+}
 
-.ab-Icon--export path {
-    visibility: hidden; /* to hide the contents of the actual SVG */
-  }
-  
-  .ab-Icon--export {
-    background-image: url(./cloud_download-24px.svg);
-    background-size: cover;
-  }
+.custom-icon-demo .ab-Icon--export {
+  background-image: url(./cloud_download-24px.svg);
+  background-size: cover;
+}
