@@ -218,13 +218,13 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Create your own column where you can insert your own values (e.g. comments) that are stored separately from the Data Source.',
           },
           {
-            Name: 'Column Category Demo',
+            Name: 'Column Category',
             Link: '/column/aggridcolumncategorydemo',
             Description:
               'Group columns together logically to help you to manipulate grids with very large numbers of columns.',
           },
           {
-            Name: 'Column Info Demo',
+            Name: 'Column Info',
             Link: '/column/aggridcolumninfodemo',
             Description:
               'Find out all the objects associated with a column with a single lookup.',
@@ -301,6 +301,14 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'Click in the "info" button in the Home Toolbar to see summary information about the grid, your licence and the Options you have set.',
           },
+          /*
+          {
+            Name: 'Context Menu',
+            Link: '/gridmanagement/aggridcontextmenudemo',
+            Description:
+              'You can choose which items will appear in the Context Menu and additionally add your own.',
+          },
+          */
           {
             Name: 'Calendar',
             Link: '/gridmanagement/aggridcalendardemo',
