@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import NextLink from 'next/link';
 
 import { withRouter } from 'next/router';
@@ -103,6 +103,7 @@ export default () => {
             Clear state
           </button>
         </div>
+
         <Link href="/">
           <a>Home</a>
         </Link>

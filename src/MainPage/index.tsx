@@ -17,6 +17,15 @@ export default ({
   children,
   description,
 }: MainPageProps) => {
+  useEffect(() => {
+    (window as any).docsearch({
+      apiKey: process.env.ALGOLIA_KEY || 'e99bd225937a503648616efb7b1ebc04',
+      indexName: 'adaptableblotter',
+      inputSelector: '#searchInput',
+      debug: true, // Set debug to true if you want to inspect the dropdown
+    });
+  });
+
   return (
     <div
       className={className}
@@ -34,6 +43,15 @@ export default ({
       <Sidebar />
 
       <div className="main">
+        <div style={{ textAlign: 'right' }}>
+          <input
+            style={{ marginBottom: 20, padding: 10, minWidth: '20rem' }}
+            type="text"
+            id="searchInput"
+            placeholder="Search docs"
+          />
+        </div>
+
         {description ? (
           <div className="demodescription">{description}</div>
         ) : null}
