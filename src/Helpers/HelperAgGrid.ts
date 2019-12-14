@@ -959,6 +959,7 @@ export class HelperAgGrid {
       headerName: 'Order Date',
       field: 'OrderDate',
       editable: true,
+      enableRowGroup: true,
       cellEditorParams: { useFormatter: true },
       valueParser: this.dateParseragGrid,
       valueFormatter: this.shortDateFormatteragGrid,

@@ -65,13 +65,19 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'User Filters',
             Link: '/search/aggriduserfiltersdemo',
             Description:
-              'Column Filters which have been named and saved and so are usable across multiple functions that use queries (like Conditional Styles, Reports or Advanced Search)',
+              'Column Filters which have been named and saved and so are usable across multiple functions that use queries (like Conditional Styles, Reports or Advanced Search).',
           },
           {
             Name: 'Named Filters',
             Link: '/search/aggridnamedfiltersdemo',
             Description:
-              'Named Filters are provided by users at design-time and include a custom Predicate function that is run each time the filter is applied',
+              'Named Filters are provided by users at design-time and include a custom Predicate function that is run each time the filter is applied.',
+          },
+          {
+            Name: 'System Filters',
+            Link: '/search/aggridsystemfiltersdemo',
+            Description:
+              'System Filters are those provided by the Adaptable Blotter (e.g. "Blanks", "Yeserday", "Positive"); you can choose which - if any - of these are available.',
           },
           {
             Name: 'Data Source Selector',
@@ -212,13 +218,13 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Create your own column where you can insert your own values (e.g. comments) that are stored separately from the Data Source.',
           },
           {
-            Name: 'Column Category Demo',
+            Name: 'Column Category',
             Link: '/column/aggridcolumncategorydemo',
             Description:
               'Group columns together logically to help you to manipulate grids with very large numbers of columns.',
           },
           {
-            Name: 'Column Info Demo',
+            Name: 'Column Info',
             Link: '/column/aggridcolumninfodemo',
             Description:
               'Find out all the objects associated with a column with a single lookup.',
@@ -295,6 +301,14 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'Click in the "info" button in the Home Toolbar to see summary information about the grid, your licence and the Options you have set.',
           },
+          /*
+          {
+            Name: 'Context Menu',
+            Link: '/gridmanagement/aggridcontextmenudemo',
+            Description:
+              'You can choose which items will appear in the Context Menu and additionally add your own.',
+          },
+          */
           {
             Name: 'Calendar',
             Link: '/gridmanagement/aggridcalendardemo',
