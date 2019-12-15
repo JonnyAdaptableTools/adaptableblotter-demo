@@ -4,8 +4,8 @@
   "description": "Demo",
   "main": "index.js",
   "dependencies": {
-    "@adaptabletools/adaptableblotter": "5.2.2-canary.10",
-    "@adaptabletools/adaptableblotter-react-aggrid": "5.2.2-canary.10",
+    "@adaptabletools/adaptableblotter": "5.2.2-canary.12",
+    "@adaptabletools/adaptableblotter-react-aggrid": "5.2.2-canary.12",
     "@trendmicro/react-sidenav": "^0.4.5",
     "@types/isomorphic-fetch": "0.0.34",
     "ag-grid-community": "^21.0.0",
