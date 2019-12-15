@@ -50,7 +50,7 @@ export default () => {
     (category: DemoCategory) => {
       let demoPages = category.Pages.map((page: DemoPage) => {
         return (
-          <Link href={page.Link}>
+          <Link key={page.Name} href={page.Link}>
             <a>{page.Name}</a>
           </Link>
         );
@@ -58,7 +58,7 @@ export default () => {
       return (
         <Category
           title={
-            <Link href={category.Link}>
+            <Link key={category.CategoryName} href={category.Link}>
               <a>{category.CategoryName}</a>
             </Link>
           }

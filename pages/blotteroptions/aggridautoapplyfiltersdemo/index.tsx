@@ -7,7 +7,7 @@ export default () => {
       demo={import(
         '../../../src/client/blotteroptions/aggridautoapplyfiltersdemo'
       )}
-      pageTitle={'AdaptableBlotter.JS ag-Grid Auto Apply Filters Demo'}
+      pageTitle={'Auto Apply Filters Demo'}
       description={
         <div>
           <h4>Auto Apply Filters Demo</h4>

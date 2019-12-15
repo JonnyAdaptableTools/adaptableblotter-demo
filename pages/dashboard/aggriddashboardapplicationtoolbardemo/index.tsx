@@ -7,7 +7,7 @@ export default () => {
       demo={import(
         '../../../src/client/dashboard/aggriddashboardapplicationtoolbardemo'
       )}
-      pageTitle={'AdaptableBlotter.JS ag-Grid Application Toolbar Demo'}
+      pageTitle={'Application Toolbar Demo'}
       description={
         <div>
           <h4>Application Toolbar Demo</h4>

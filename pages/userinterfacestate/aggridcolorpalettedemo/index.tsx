@@ -7,7 +7,7 @@ export default () => {
       demo={import(
         '../../../src/client/userinterfacestate/aggridcolorpalettedemo'
       )}
-      pageTitle={'AdaptableBlotter.JS ag-Grid Color Palette Demo'}
+      pageTitle={'Color Palette Demo'}
       description={
         <div>
           <h4>Color Palette Demo (User Inferface State)</h4>

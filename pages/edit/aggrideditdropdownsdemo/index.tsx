@@ -5,7 +5,7 @@ export default () => {
   return (
     <DynamicDemoPage
       demo={import('../../../src/client/edit/aggrideditdropdownsdemo')}
-      pageTitle={'AdaptableBlotter.JS ag-Grid Edit Dropdowns Demo'}
+      pageTitle={'Edit Dropdowns Demo'}
       description={
         <div>
           <h4>Edit Dropdowns Demo</h4>

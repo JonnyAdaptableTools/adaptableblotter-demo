@@ -45,7 +45,7 @@ export default () => {
   });
   return (
     <MainPage
-      pageTitle={'AdaptableBlotter.JS ag-Grid Dashboard demos'}
+      pageTitle={'Dashboard demos'}
       description={
         <div>
           <h4>Dashboard</h4>

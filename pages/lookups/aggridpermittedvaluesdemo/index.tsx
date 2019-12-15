@@ -5,7 +5,7 @@ export default () => {
   return (
     <DynamicDemoPage
       demo={import('../../../src/client/lookups/aggridpermittedvaluesdemo')}
-      pageTitle={'AdaptableBlotter.JS ag-Grid Permitted Values Demo'}
+      pageTitle={'Permitted Values Demo'}
       description={
         <div>
           <h4>Permitted Values Demo (User Inferface State)</h4>

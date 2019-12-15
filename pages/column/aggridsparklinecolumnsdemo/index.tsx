@@ -5,7 +5,7 @@ export default () => {
   return (
     <DynamicDemoPage
       demo={import('../../../src/client/column/aggridsparklinecolumnsdemo')}
-      pageTitle={'AdaptableBlotter.JS ag-Grid Sparkline Columns Demo'}
+      pageTitle={'Sparkline Columns Demo'}
       description={
         <div>
           <h4>

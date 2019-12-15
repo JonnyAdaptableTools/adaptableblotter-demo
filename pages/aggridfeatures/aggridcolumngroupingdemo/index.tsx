@@ -7,7 +7,7 @@ export default () => {
       demo={import(
         '../../../src/client/aggridfeatures/aggridcolumngroupingdemo'
       )}
-      pageTitle={'AdaptableBlotter.JS ag-Grid Column Grouping Demo'}
+      pageTitle={'Column Grouping Demo'}
       description={
         <div>
           <h4>

@@ -5,7 +5,7 @@ export default () => {
   return (
     <DynamicDemoPage
       demo={import('../../../src/client/lookups/aggridmaxitemsqueriesdemo')}
-      pageTitle={'AdaptableBlotter.JS ag-Grid Max Items in Queries Demo'}
+      pageTitle={'Max Items in Queries Demo'}
       description={
         <div>
           <h4>Max Items Displayed in Queries Demo</h4>

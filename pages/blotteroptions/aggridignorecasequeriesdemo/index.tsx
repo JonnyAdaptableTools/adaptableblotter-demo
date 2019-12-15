@@ -7,7 +7,7 @@ export default () => {
       demo={import(
         '../../../src/client/blotteroptions/aggridignorecasequeriesdemo'
       )}
-      pageTitle={'AdaptableBlotter.JS ag-Grid Ignore Case in Queries Demo'}
+      pageTitle={'Ignore Case in Queries Demo'}
       description={
         <div>
           <h4>Ignore Case in Queries Demo</h4>

@@ -7,7 +7,7 @@ export default () => {
       demo={import(
         '../../../src/client/blotteroptions/aggridvendorgridfiltersdemo'
       )}
-      pageTitle={'AdaptableBlotter.JS ag-Grid Vendor Grid Filters Demo'}
+      pageTitle={'Vendor Grid Filters Demo'}
       description={
         <div>
           <h4>Vendor Grid Filters Demo</h4>

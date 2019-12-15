@@ -5,7 +5,7 @@ export default () => {
   return (
     <DynamicDemoPage
       demo={import('../../../src/client/aggridfeatures/aggridrowgroupingdemo')}
-      pageTitle={'AdaptableBlotter.JS ag-Grid Row Grouping Demo'}
+      pageTitle={'Row Grouping Demo'}
       description={
         <div>
           <h4>

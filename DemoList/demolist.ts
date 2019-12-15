@@ -369,6 +369,11 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'Use the Application Toolbar to render your own content in the Dashboard or to provide buttons (which when clicked trigger an Event that you can listen to).',
           },
+          {
+            Name: 'Tool Panel',
+            Link: '/dashboard/aggridtoolpaneldemo',
+            Description: 'Work in progress....',
+          },
         ],
       },
       {

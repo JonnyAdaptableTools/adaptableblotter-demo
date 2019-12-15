@@ -16,7 +16,8 @@ export default {
         ColumnId: 'Profit',
       },
       {
-        ColumnExpression: 'Col("ItemCost") > 100 ? "High" : "Low"',
+        ColumnExpression:
+          'Col("ItemCost") > 100 ? "High" : Col("ItemCost") > 50 ? "Medium": "Low"',
         ColumnId: 'Comment',
       },
     ],
@@ -57,6 +58,7 @@ export default {
   },
   Layout: {
     CurrentLayout: 'with calc cols',
+
     Layouts: [
       {
         Columns: [
@@ -71,6 +73,7 @@ export default {
           'OrderDate',
         ],
         ColumnSorts: [],
+        GroupedColumns: ['Comment'],
         Name: 'with calc cols',
       },
     ],

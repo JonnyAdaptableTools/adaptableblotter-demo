@@ -29,7 +29,8 @@ export default () => {
             Click the 5th button in toolbar to see details of the Expression -
             or 'Edit Expression' in the Column Header menu. Because they are
             treated as 'normal' columns we were able to include them in the
-            layout we created and also to style them using Conditional Styles.
+            layout we created (and we grouped on 'Comment') and also to style
+            them (e.g. 'Profit') using Conditional Styles.
           </p>
 
           <p>
