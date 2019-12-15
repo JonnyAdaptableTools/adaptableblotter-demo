@@ -68,7 +68,7 @@ export default () => {
 let predefinedConfig: PredefinedConfig = {
   Partner: {
     iPushPull: {
-      iPushPullConfig: ipushpull,
+      iPushPullInstance: ipushpull,
       // Username: process.env.IPUSHPULL_USERNAME as string,
     },
   },
