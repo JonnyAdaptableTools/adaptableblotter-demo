@@ -19,7 +19,7 @@ export default ({
 }: MainPageProps) => {
   useEffect(() => {
     (window as any).docsearch({
-      apiKey: process.env.ALGOLIA_KEY || 'e99bd225937a503648616efb7b1ebc04',
+      apiKey: process.env.ALGOLIA_KEY,
       indexName: 'adaptableblotter',
       inputSelector: '#searchInput',
       debug: true, // Set debug to true if you want to inspect the dropdown
