@@ -9,9 +9,10 @@ import '../../../../DemoPage/aggriddemo.css';
 import {
   AdaptableBlotterOptions,
   PredefinedConfig,
+  BlotterApi,
 } from '@adaptabletools/adaptableblotter/types';
-
-import json from '../../../../DataSets/Json/NorthwindOrders.json';
+import { TickingDataHelper } from '../../../Helpers/TickingDataHelper';
+import { ITrade } from '../../../Helpers/Trade';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import ipushpull from 'ipushpull-js';
 
@@ -31,14 +32,16 @@ export default () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
 
-  let rowData = JSON.parse(JSON.stringify(json));
+  let tickingDataHelper = new TickingDataHelper();
+  const columndefs = helperAgGrid.getTradeSchema();
 
-  const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
+  let rowCount: number = 21;
+  const trades: ITrade[] = helperAgGrid.getTrades(rowCount);
 
-  const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
+  const gridOptions = helperAgGrid.getGridOptions(columndefs, trades);
 
   const blotterOptions: AdaptableBlotterOptions = {
-    primaryKey: 'OrderId',
+    primaryKey: 'tradeId',
     userName: 'Demo User',
     blotterId: 'iPushPull Demo',
     vendorGrid: gridOptions,
@@ -46,7 +49,15 @@ export default () => {
   };
 
   const blotterOptionsClone = cloneDeep(blotterOptions);
-  AdaptableBlotter.init(blotterOptions);
+  let blotterAPI: BlotterApi = AdaptableBlotter.init(blotterOptions);
+
+  tickingDataHelper.startTickingDataagGridTradesUpdateData(
+    gridOptions,
+    blotterAPI,
+    1000,
+    rowCount,
+    true
+  );
 
   return {
     // predefinedConfig,
@@ -57,7 +68,7 @@ export default () => {
 let predefinedConfig: PredefinedConfig = {
   Partner: {
     iPushPull: {
-      iPushPullInstance: ipushpull,
+      iPushPullConfig: ipushpull,
       // Username: process.env.IPUSHPULL_USERNAME as string,
     },
   },

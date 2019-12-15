@@ -57,25 +57,44 @@ export class TickingDataHelper {
     gridOptions: any,
     blotterApi: BlotterApi,
     tickingFrequency: number,
-    tradeCount: number
+    tradeCount: number,
+    updateNotional: boolean = false
   ) {
     if (gridOptions != null && gridOptions.api != null) {
+      const helperAgGrid = new HelperAgGrid();
       setInterval(() => {
         let tradeId = this.generateRandomInt(1, tradeCount);
 
         const trade: ITrade = { ...gridOptions.rowData[tradeId] };
 
-        let numberToAdd: number = this.generateRandomInt(1, 3);
+        if (updateNotional) {
+          const randomInt = this.generateRandomInt(1, 2);
+          const numberToAdd: number = randomInt == 1 ? -0.5 : 0.5;
+          const directionToAdd: number = randomInt == 1 ? -0.01 : 0.01;
+          const newPrice = this.roundTo4Dp(trade.price + numberToAdd);
+          const bidOfferSpread = trade.bidOfferSpread;
+          const ask = this.roundTo4Dp(newPrice + bidOfferSpread / 2);
+          const bid = this.roundTo4Dp(newPrice - bidOfferSpread / 2);
 
-        if (numberToAdd == 1) {
-          // if 1 then update a number up
-          trade.price = trade.price + 1;
-        } else if (numberToAdd == 2) {
-          // if 2 then update a number down
-          trade.price = trade.price - 1;
-        } else if (numberToAdd == 3) {
-          // if 3 then update a country
-          trade.currency = 'JPY';
+          trade.price = newPrice;
+          trade.bid = bid;
+          trade.ask = ask;
+          trade.bloombergAsk = this.roundTo4Dp(ask + directionToAdd);
+          trade.bloombergBid = this.roundTo4Dp(bid - directionToAdd);
+          trade.notional = this.getRandomItem(helperAgGrid.getNotionals());
+          trade.changeOnYear = helperAgGrid.getMeaningfulDouble();
+        } else {
+          let numberToAdd: number = this.generateRandomInt(1, 3);
+          if (numberToAdd == 1) {
+            // if 1 then update a number up
+            trade.price = trade.price + 1;
+          } else if (numberToAdd == 2) {
+            // if 2 then update a number down
+            trade.price = trade.price - 1;
+          } else if (numberToAdd == 3) {
+            // if 3 then update a country
+            trade.currency = 'JPY';
+          }
         }
 
         blotterApi.gridApi.updateGridData([trade]);

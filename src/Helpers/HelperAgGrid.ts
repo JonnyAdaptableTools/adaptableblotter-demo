@@ -1435,7 +1435,7 @@ export class HelperAgGrid {
     return myString;
   }
 
-  protected getMeaningfulDouble(): number {
+  public getMeaningfulDouble(): number {
     return this.roundTo4Dp(
       this.generateRandomInt(10, 150) + this.generateRandomDouble()
     );
@@ -1513,7 +1513,7 @@ export class HelperAgGrid {
     }
   }
 
-  protected getNotionals(): number[] {
+  public getNotionals(): number[] {
     var notionals = [1000000, 2000000, 5000000, 7500000, 10000000];
     return notionals;
   }
