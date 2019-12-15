@@ -45,10 +45,10 @@ export default ({
       <div className="main">
         <div style={{ textAlign: 'right' }}>
           <input
-            style={{ marginBottom: 20, padding: 10, minWidth: '20rem' }}
+            style={{ marginBottom: 20, padding: 10, minWidth: '15rem' }}
             type="text"
             id="searchInput"
-            placeholder="Search docs"
+            placeholder="Search Adaptable Blotter Demos"
           />
         </div>
 
