@@ -471,7 +471,6 @@ export function getDemoPageStructure(): DemoPageStructure {
           },
         ],
       },
-      /*
       {
         CategoryName: 'User Interface',
         Link: '/userinterface',
@@ -488,7 +487,6 @@ export function getDemoPageStructure(): DemoPageStructure {
           },
         ],
       },
-      */
       {
         CategoryName: 'Blotter Options',
         Link: '/blotteroptions',
