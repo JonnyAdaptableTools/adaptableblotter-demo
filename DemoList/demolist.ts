@@ -34,7 +34,7 @@ export function getDemoPageStructure(): DemoPageStructure {
         ],
       },
       {
-        CategoryName: 'Search',
+        CategoryName: 'Searching',
         Link: '/search',
         Pages: [
           {
@@ -50,36 +50,6 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Saveable multiple-column search facility including a huge array of ranges and search criteria.',
           },
           {
-            Name: 'Quick Filter Bar',
-            Link: '/search/aggridquickfilterdemo',
-            Description:
-              'A textbox below the Column Header that allows you to quickly search in a column (includes wildcards like ">").',
-          },
-          {
-            Name: 'Column Filters',
-            Link: '/search/aggridcolumnfiltersdemo',
-            Description:
-              'A filter panel available as a dropdown from the Column Header which allows you to perform complex filtering for a particular column.  Can be saved as User Filters.',
-          },
-          {
-            Name: 'User Filters',
-            Link: '/search/aggriduserfiltersdemo',
-            Description:
-              'Column Filters which have been named and saved and so are usable across multiple functions that use queries (like Conditional Styles, Reports or Advanced Search).',
-          },
-          {
-            Name: 'Named Filters',
-            Link: '/search/aggridnamedfiltersdemo',
-            Description:
-              'Named Filters are provided by users at design-time and include a custom Predicate function that is run each time the filter is applied.',
-          },
-          {
-            Name: 'System Filters',
-            Link: '/search/aggridsystemfiltersdemo',
-            Description:
-              'System Filters are those provided by the Adaptable Blotter (e.g. "Blanks", "Yeserday", "Positive"); you can choose which - if any - of these are available.',
-          },
-          {
             Name: 'Data Source Selector',
             Link: '/search/aggriddatasourcedemo',
             Description:
@@ -88,7 +58,43 @@ export function getDemoPageStructure(): DemoPageStructure {
         ],
       },
       {
-        CategoryName: 'Edit',
+        CategoryName: 'Filtering',
+        Link: '/filters',
+        Pages: [
+          {
+            Name: 'Quick Filter Bar',
+            Link: '/filters/aggridquickfilterdemo',
+            Description:
+              'A textbox below the Column Header that allows you to quickly search in a column (includes wildcards like ">").',
+          },
+          {
+            Name: 'Column Filters',
+            Link: '/filters/aggridcolumnfiltersdemo',
+            Description:
+              'A filter panel available as a dropdown from the Column Header which allows you to perform complex filtering for a particular column.  Can be saved as User Filters.',
+          },
+          {
+            Name: 'User Filters',
+            Link: '/filters/aggriduserfiltersdemo',
+            Description:
+              'Column Filters which have been named and saved and so are usable across multiple functions that use queries (like Conditional Styles, Reports or Advanced Search).',
+          },
+          {
+            Name: 'Named Filters',
+            Link: '/filters/aggridnamedfiltersdemo',
+            Description:
+              'Named Filters are provided by users at design-time and include a custom Predicate function that is run each time the filter is applied.',
+          },
+          {
+            Name: 'System Filters',
+            Link: '/filters/aggridsystemfiltersdemo',
+            Description:
+              'System Filters are those provided by the Adaptable Blotter (e.g. "Blanks", "Yeserday", "Positive"); you can choose which - if any - of these are available.',
+          },
+        ],
+      },
+      {
+        CategoryName: 'Editing',
         Link: '/edit',
         Pages: [
           {
@@ -263,7 +269,18 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Pie Charts (Column)',
             Link: '/charts/aggridpiechartscolumndemo',
             Description:
-              'Select a column (or cells within a column) and see it as a pie chart',
+              'Select a column (or cells within a column) and see it as a Pie Chart',
+          },
+          {
+            Name: 'Sparkline Charts',
+            Link: '/charts/aggridsparklinechartsdemo',
+            Description: 'To do...!!!!!!',
+          },
+          {
+            Name: 'Sparkline (Column)',
+            Link: '/charts/aggridsparklinecolumndemo',
+            Description:
+              'Select a column (or cells within a column) and see it as a Sparkline Chart',
           },
         ],
       },
@@ -376,30 +393,7 @@ export function getDemoPageStructure(): DemoPageStructure {
           },
         ],
       },
-      {
-        CategoryName: 'Partners',
-        Link: '/partners',
-        Pages: [
-          {
-            Name: 'Finsemble',
-            Link: '/partners/finsembledemo',
-            Description:
-              'We leverage the powerful offering to enable multiple Blotter to share state, data and events.',
-          },
-          {
-            Name: 'iPushPull',
-            Link: '/partners/ipushpulldemo',
-            Description:
-              'Export Blotter data to Excel (with Live Updates) or Symphony and elsewhere by using the services of our partner iPushPull.',
-          },
-          {
-            Name: 'OpenFin',
-            Link: '/partners/openfindemo',
-            Description:
-              'If you are using this popular container we offer "Live Updates" so that data exported to Excel updates in real time as the Blotter ticks or is edited.',
-          },
-        ],
-      },
+
       {
         CategoryName: 'Admin',
         Link: '/admin',
@@ -477,6 +471,24 @@ export function getDemoPageStructure(): DemoPageStructure {
           },
         ],
       },
+      /*
+      {
+        CategoryName: 'User Interface',
+        Link: '/userinterface',
+        Pages: [
+          {
+            Name: 'Column menu',
+            Link: '/userinterface/aggridcolumnmenudemo',
+            Description: 'Column Menu.',
+          },
+          {
+            Name: 'Context menu',
+            Link: '/userinterface/aggridcontextmenudemo',
+            Description: 'Context Menu.',
+          },
+        ],
+      },
+      */
       {
         CategoryName: 'Blotter Options',
         Link: '/blotteroptions',
@@ -522,6 +534,30 @@ export function getDemoPageStructure(): DemoPageStructure {
             Link: '/lookups/aggridpermittedvaluesdemo',
             Description:
               'Provide a list of column names and a list of values which should be displayed when getting distinct values for that column.',
+          },
+        ],
+      },
+      {
+        CategoryName: 'Partners',
+        Link: '/partners',
+        Pages: [
+          {
+            Name: 'Finsemble',
+            Link: '/partners/finsembledemo',
+            Description:
+              'We leverage the powerful offering to enable multiple Blotter to share state, data and events.',
+          },
+          {
+            Name: 'iPushPull',
+            Link: '/partners/ipushpulldemo',
+            Description:
+              'Export Blotter data to Excel (with Live Updates) or Symphony and elsewhere by using the services of our partner iPushPull.',
+          },
+          {
+            Name: 'OpenFin',
+            Link: '/partners/openfindemo',
+            Description:
+              'If you are using this popular container we offer "Live Updates" so that data exported to Excel updates in real time as the Blotter ticks or is edited.',
           },
         ],
       },

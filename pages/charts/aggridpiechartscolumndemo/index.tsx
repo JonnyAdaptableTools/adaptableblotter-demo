@@ -11,7 +11,7 @@ export default () => {
           <h4>Pie Charts (Column) Demo</h4>
           <p>
             You can see a pie (or doughnut) chart view of a single column by
-            clicking 'See as Pie Chart' in the Column Header Menu.
+            clicking 'View as Pie Chart' in the Column Header Menu.
           </p>
           <p>
             As with the main Pie Chart, you can create a threshold (as value or

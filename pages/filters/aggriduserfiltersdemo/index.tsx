@@ -4,42 +4,41 @@ import DynamicDemoPage from '../../../src/Helpers/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/search/aggridcolumnfiltersdemo')}
-      pageTitle={'Column Filters Demo'}
+      demo={import('../../../src/client/filter/aggriduserfiltersdemo')}
+      pageTitle={'User Filters Demo'}
       description={
         <div>
-          <h4>Column Filters Demo</h4>
+          <h4>User Filters Demo</h4>
           <p>
-            Each (filterable) column has a filters tab in the Column Menu (the
-            second option). Alternatively you can click on the filter icon next
-            to the filter bar if its showing.
+            User Filters are, essentially, saved and named Column Filters that
+            you can re-use throughout the application.
           </p>
           <p>
-            You can create a Column Filter by selecting column values and
-            filters (items in the long list) and / or create a range (e.g. > 15)
-            by using the operator dropdown at the top.
+            By creating a User Filter, you are able to define a particular set
+            of column data that has specific meaning to you and then use it not
+            only as a column filter, but also in queries more generally.
           </p>
           <p>
-            In this example we create filters on 3 columns: Employee (3
-            selected), Order Date ('This Year' filter) and Invoiced ('Between
-            10-300' range). Edit / clear filters in the individual columns or
-            via the Column Filter toolbar.
+            In this example we create 2 User Filters: <i>My Team</i> in the
+            'Employee' column that we then re-use a Column Filter, and{' '}
+            <i>Small Invoices</i> on the 'Invoiced' Column that we re-use in a
+            Conditional Style.{' '}
           </p>
           <p>
-            Note: You can show / hide the Quick Filter bar through the Column
-            Menu or by clicking the last button in the Column Filter toolbar.
+            We use both the User Filters in the 'Team Small Invoices' Report
+            which is the currently selected Export.
           </p>
           <p>
             <b>Adaptable Blotter Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/modules/_predefinedconfig_columnfilterstate_.html"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_userfilterstate_.userfilterstate.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_columnfilterapi_.columnfilterapi.html"
+              href="https://api.adaptableblotter.com/interfaces/_api_userfilterapi_.userfilterapi.html"
               target="_blank"
             >
               Blotter API

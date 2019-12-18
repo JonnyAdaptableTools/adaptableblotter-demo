@@ -22,7 +22,7 @@ const DemoBox = ({ href, children }: { href: string; children: ReactNode }) => {
 
 export default () => {
   let categoryPages = getDemoPageStructure().Categories.find(
-    c => c.CategoryName == 'Searching'
+    c => c.CategoryName == 'Filtering'
   )!.Pages;
 
   let demoLinks: any = categoryPages.map((page: DemoPage) => {
@@ -44,16 +44,16 @@ export default () => {
 
   return (
     <MainPage
-      pageTitle={'Search Demos'}
+      pageTitle={'Filter Demos'}
       description={
         <div>
-          <h4>Search Functions</h4>
+          <h4>Filter Functions</h4>
           <p>
-            There are a number of different ways to search for data in the
-            Adaptable Blotter:
+            There are a number of different ways to filter data in the Adaptable
+            Blotter:
           </p>
           <ul>{demoLinks}</ul>
-          Click on the buttons below to see a demo for each search function.
+          Click on the buttons below to see a demo for each filter function.
         </div>
       }
     >

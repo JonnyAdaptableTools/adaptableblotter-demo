@@ -7,6 +7,7 @@ import logo from '../../images/AdaptableBlotter.png';
 
 import './index.css';
 import GridLayout from '../../src/components/GridLayout';
+import { getDemoPageStructure, DemoPage } from '../../DemoList/demolist';
 
 const DemoBox = ({ href, children }: { href: string; children: ReactNode }) => {
   return (
@@ -22,6 +23,27 @@ const DemoBox = ({ href, children }: { href: string; children: ReactNode }) => {
 };
 
 export default () => {
+  let categoryPages = getDemoPageStructure().Categories.find(
+    c => c.CategoryName == 'Charts'
+  )!.Pages;
+
+  let demoLinks: any = categoryPages.map((page: DemoPage) => {
+    return (
+      <li>
+        <b>{page.Name}: </b> {page.Description}
+      </li>
+    );
+  });
+
+  let demoBoxes: any = categoryPages.map((page: DemoPage) => {
+    let title = page.Name + ' Demo';
+    return (
+      <DemoBox key={page.Name} href={page.Link}>
+        {title}
+      </DemoBox>
+    );
+  });
+
   return (
     <MainPage
       pageTitle={'Chart demos'}
@@ -49,22 +71,15 @@ export default () => {
             will update as you filter the Grid.
           </p>
           <p>
-            You can also access Pie Charts through the Column Header menu which
-            will show you a Pie Chart for all visible values in that column
-            (with summary rounding where applicable).
+            You can also access Pie Charts and Sparklines through the Column
+            Header menu which will show you a Pie Chart or Sparkline
+            respectively for all visible values in that column (with summary
+            rounding where applicable).
           </p>
         </div>
       }
     >
-      <GridLayout>
-        <DemoBox href="/charts/aggridcategorychartsdemo">
-          Category Charts demo
-        </DemoBox>
-        <DemoBox href="/charts/aggridpiechartsdemo">Pie Charts demo</DemoBox>
-        <DemoBox href="/charts/aggridpiechartscolumndemo">
-          Pie Charts (Column) demo
-        </DemoBox>
-      </GridLayout>
+      <GridLayout>{demoBoxes}</GridLayout>
     </MainPage>
   );
 };

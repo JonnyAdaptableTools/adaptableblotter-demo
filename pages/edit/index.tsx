@@ -24,7 +24,7 @@ const DemoBox = ({ href, children }: { href: string; children: ReactNode }) => {
 
 export default () => {
   let categoryPages = getDemoPageStructure().Categories.find(
-    c => c.CategoryName == 'Edit'
+    c => c.CategoryName == 'Editing'
   )!.Pages;
 
   let demoLinks: any = categoryPages.map((page: DemoPage) => {

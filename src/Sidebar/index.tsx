@@ -57,8 +57,9 @@ export default () => {
       });
       return (
         <Category
+          key={category.CategoryName}
           title={
-            <Link key={category.CategoryName} href={category.Link}>
+            <Link key={category.Link} href={category.Link}>
               <a>{category.CategoryName}</a>
             </Link>
           }

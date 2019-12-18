@@ -61,7 +61,8 @@ export default () => {
           break;
         case 'error':
           blotterApi.systemStatusApi.setErrorSystemStatus(
-            'The server is down!'
+            'The server is down!',
+            'Please do not make any edits until the server comes back up'
           );
           break;
         case 'clear':
