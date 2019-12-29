@@ -40,7 +40,7 @@ export default () => {
             distinct values normally.
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028584632-Query-Options"
               target="_blank"

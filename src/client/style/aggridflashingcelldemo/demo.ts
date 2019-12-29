@@ -1,9 +1,7 @@
 import * as Helper from '../../../Helpers/Helper';
 import AdaptableBlotter from '@adaptabletools/adaptableblotter/agGrid';
 import '@adaptabletools/adaptableblotter/index.css';
-
 import '@adaptabletools/adaptableblotter/themes/dark.css';
-
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-balham.css';
 import 'ag-grid-community/dist/styles/ag-theme-balham-dark.css';

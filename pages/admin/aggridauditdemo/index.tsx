@@ -30,7 +30,7 @@ export default () => {
             messages appear as you edit data and create objects in the Blotter.
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028585212-Audit-Events-API"
               target="_blank"

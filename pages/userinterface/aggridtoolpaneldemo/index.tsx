@@ -4,7 +4,7 @@ import DynamicDemoPage from '../../../src/Helpers/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/dashboard/aggridtoolpaneldemo')}
+      demo={import('../../../src/client/userinterface/aggridtoolpaneldemo')}
       pageTitle={'Tool Panel Demo'}
       description={
         <div>

@@ -24,7 +24,7 @@ export default () => {
             the Reminder so that it fires in 2 minutes time.
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028587312-Reminder-Config"
               target="_blank"

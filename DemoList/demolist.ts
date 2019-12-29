@@ -381,15 +381,10 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Select whether the Dasbhoard is visible, minimised (so only a button is shown) or hidden altogether.',
           },
           {
-            Name: 'Application Toolbar',
-            Link: '/dashboard/aggriddashboardapplicationtoolbardemo',
+            Name: 'Custom Toolbars',
+            Link: '/dashboard/aggriddashboardcustomtoolbarsdemo',
             Description:
-              'Use the Application Toolbar to render your own content in the Dashboard or to provide buttons (which when clicked trigger an Event that you can listen to).',
-          },
-          {
-            Name: 'Tool Panel',
-            Link: '/dashboard/aggridtoolpaneldemo',
-            Description: 'Work in progress....',
+              'Use Custom Toolbars to render your own content in the Dashboard or to provide buttons (which when clicked trigger an Event that you can listen to).',
           },
         ],
       },
@@ -476,14 +471,19 @@ export function getDemoPageStructure(): DemoPageStructure {
         Link: '/userinterface',
         Pages: [
           {
-            Name: 'Column menu',
+            Name: 'Column Menu',
             Link: '/userinterface/aggridcolumnmenudemo',
             Description: 'Column Menu.',
           },
           {
-            Name: 'Context menu',
+            Name: 'Context Menu',
             Link: '/userinterface/aggridcontextmenudemo',
             Description: 'Context Menu.',
+          },
+          {
+            Name: 'Tool Panel',
+            Link: '/userinterface/aggridtoolpaneldemo',
+            Description: 'Work in progress....',
           },
         ],
       },

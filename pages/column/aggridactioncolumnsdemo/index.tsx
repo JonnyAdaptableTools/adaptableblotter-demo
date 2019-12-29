@@ -61,7 +61,7 @@ export default () => {
             <i>blotterApi.gridApi.deleteGridData([args.data[0].id.rowData]);</i>
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_actioncolumnstate_.actioncolumnstate.html"
               target="_blank"

@@ -39,7 +39,7 @@ export default () => {
             <i>agSetColumnFilter</i> type.
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_blotteroptions_filteroptions_.filteroptions.html"
               target="_blank"

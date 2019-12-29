@@ -1,5 +1,3 @@
-import * as Helper from '../../../Helpers/Helper';
-
 import AdaptableBlotter from '@adaptabletools/adaptableblotter/agGrid';
 import '@adaptabletools/adaptableblotter/index.css';
 
@@ -17,8 +15,10 @@ import {
 
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import predefinedConfig from './config';
-import { SearchChangedInfo } from '@adaptabletools/adaptableblotter/App_Scripts/Api/Events/SearchChanged/SearchChangedInfo';
-import { BlotterSearchState } from '@adaptabletools/adaptableblotter/App_Scripts/Api/Events/SearchChanged/BlotterSearchState';
+import {
+  SearchChangedInfo,
+  BlotterSearchState,
+} from '@adaptabletools/adaptableblotter/App_Scripts/Api/Events/SearchChanged';
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
@@ -34,7 +34,6 @@ export default () => {
     primaryKey: 'tradeId',
     userName: 'Demo User',
     blotterId: 'Data Source Demo',
-
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };
@@ -42,11 +41,12 @@ export default () => {
   const blotterOptionsClone = cloneDeep(blotterOptions);
   const blotterApi = AdaptableBlotter.init(blotterOptions);
 
-  blotterApi.eventApi
-    .onSearchChanged()
-    .Subscribe((sender, searchChangedArgs) =>
-      listenToSearchChange(blotterApi, helperAgGrid, searchChangedArgs)
-    );
+  blotterApi.eventApi.on(
+    'SearchChanged',
+    (searchChangedArgs: SearchChangedEventArgs) => {
+      listenToSearchChange(blotterApi, helperAgGrid, searchChangedArgs);
+    }
+  );
 
   return {
     predefinedConfig,

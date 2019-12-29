@@ -5,36 +5,35 @@ export default () => {
   return (
     <DynamicDemoPage
       demo={import(
-        '../../../src/client/dashboard/aggriddashboardapplicationtoolbardemo'
+        '../../../src/client/dashboard/aggriddashboardcustomtoolbarsdemo'
       )}
-      pageTitle={'Application Toolbar Demo'}
+      pageTitle={'Custom Toolbars Demo'}
       description={
         <div>
-          <h4>Application Toolbar Demo</h4>
+          <h4>Custom Toolbars Demo</h4>
           <p>
-            The Application Toolbar is an empty toolbar provided by the
-            Adaptable Blotter, with the intention that users will render their
-            own content, and the Adaptable Blotter will manage toolbar
-            visibility as part of User State.
+            The Dashboard includes a Custom Toolbars collection to enable users
+            to render their own content, and the Adaptable Blotter will manage
+            toolbar visibility as part of User State.
           </p>
           <p>
-            The Application Toolbar contains 2 'Divs', each to cater for a
-            different use case:
+            Each Custom Toolbar contains 2 'Divs', each to cater for a different
+            use case:
           </p>
           <p>
             (1) Pre-populate the Toolbar with Button definitions (as part of{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_applicationstate_.applicationstate.html"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_dashboardstate_.dashboardstate.html"
               target="_blank"
             >
-              Application State
+              Dashboard State
             </a>
             ); when a button is clicked the{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_api_eventapi_.eventapi.html"
               target="_blank"
             >
-              ApplicationToolbarButtonClicked
+              ToolbarButtonClicked
             </a>{' '}
             event is fired. Note that we have also styled the buttons
             individually.
@@ -48,37 +47,30 @@ export default () => {
             >
               ToolbarVisibilityChanged
             </a>{' '}
-            event and if the Application Toolbar has become visible, then render
-            the content.
+            event and if the Toolbar has become visible, then render the
+            content.
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_applicationstate_.applicationstate.html"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_dashboardstate_.dashboardstate.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_applicationapi_.applicationapi.html"
+              href="https://api.adaptableblotter.com/interfaces/_api_dashboardapi_.dashboardapi.html"
               target="_blank"
             >
               Blotter API
             </a>
             ,{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029743092-Dashboard-FAQ"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360008819192-Adaptable-Blotter-State-FAQ"
               target="_blank"
             >
               FAQ
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755177-Styling-Functions"
-              target="_blank"
-            >
-              User Guide
             </a>
             .
           </p>

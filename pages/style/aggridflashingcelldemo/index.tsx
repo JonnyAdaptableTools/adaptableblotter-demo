@@ -22,7 +22,7 @@ export default () => {
             'Invoiced' column has different colours and a longer duration.
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_flashingcellstate_.flashingcellstate.html"
               target="_blank"

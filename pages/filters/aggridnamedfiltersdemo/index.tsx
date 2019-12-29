@@ -48,7 +48,7 @@ export default () => {
             evaluates true if date in cell was after a putative takeover date.
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_namedfilterstate_.namedfilterstate.html"
               target="_blank"

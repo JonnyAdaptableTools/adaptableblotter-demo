@@ -24,7 +24,7 @@ export default () => {
             see them and you can add them as a group or individual columns.
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_columncategorystate_.columncategorystate.html"
               target="_blank"

@@ -34,7 +34,7 @@ export default () => {
           </p>
 
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754817-Predefined-Config"
               target="_blank"

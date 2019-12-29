@@ -4,6 +4,61 @@ import { HelperAgGrid } from './HelperAgGrid';
 import { BlotterApi } from '@adaptabletools/adaptableblotter/types';
 
 export class TickingDataHelper {
+  public testTickingDataagGrid(
+    gridOptions: any,
+    blotterApi: BlotterApi,
+    tickingFrequency: number,
+    tradeCount: number
+  ) {
+    if (gridOptions != null && gridOptions.api != null) {
+      const helperAgGrid = new HelperAgGrid();
+
+      let useBlotterAPIUpdateGridData: boolean = false;
+      let useRowNodeSetDataValue: boolean = true;
+
+      setInterval(() => {
+        let tradeId = this.generateRandomInt(1, tradeCount);
+        let rowNode: RowNode = gridOptions.api!.getRowNode(tradeId);
+
+        const trade: ITrade = { ...gridOptions.rowData[tradeId] };
+        const randomInt = this.generateRandomInt(1, 2);
+        const numberToAdd: number = randomInt == 1 ? -0.5 : 0.5;
+        const directionToAdd: number = randomInt == 1 ? -0.01 : 0.01;
+        const newPrice = this.roundTo4Dp(trade.price + numberToAdd);
+        const bidOfferSpread = trade.bidOfferSpread;
+        const ask = this.roundTo4Dp(newPrice + bidOfferSpread / 2);
+        const bid = this.roundTo4Dp(newPrice - bidOfferSpread / 2);
+        const bloombergAsk = this.roundTo4Dp(ask + directionToAdd);
+        const bloombergBid = this.roundTo4Dp(bid - directionToAdd);
+        const notional = this.getRandomItem(helperAgGrid.getNotionals());
+        const changeOnYear = helperAgGrid.getMeaningfulDouble();
+
+        if (useBlotterAPIUpdateGridData) {
+          trade.price = newPrice;
+          trade.bid = bid;
+          trade.ask = ask;
+          trade.bloombergAsk = bloombergAsk;
+          trade.bloombergBid = bloombergBid;
+          trade.notional = notional;
+          trade.changeOnYear = changeOnYear;
+          blotterApi.gridApi.updateGridData([trade]);
+        }
+
+        if (useRowNodeSetDataValue) {
+          rowNode.setDataValue('price', newPrice);
+          rowNode.setDataValue('bid', bid);
+          rowNode.setDataValue('ask', ask);
+          rowNode.setDataValue('bloombergAsk', bloombergAsk);
+          rowNode.setDataValue('bloombergBid', bloombergBid);
+          rowNode.setDataValue('notional', notional);
+          rowNode.setDataValue('changeOnYear', changeOnYear);
+          rowNode.setDataValue('price', newPrice);
+          rowNode.setDataValue('price', newPrice);
+        }
+      }, tickingFrequency);
+    }
+  }
+
   public startTickingDataagGridOrders(
     gridOptions: any,
     tickingFrequency: number,

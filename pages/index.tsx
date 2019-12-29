@@ -138,25 +138,26 @@ export default () => {
           <br />
           However, for those who prefer to implement the tool using a JavaScript
           Framework / Library we provide 2 options:
-          <ul>
-            <li>
-              <a
-                href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754997-React-Wrapper"
-                target="_blank"
-              >
-                React Wrapper
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755017-Angular-Wrapper"
-                target="_blank"
-              >
-                Angular Wrapper
-              </a>
-            </li>
-          </ul>
         </p>
+        <ul>
+          <li>
+            <a
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754997-React-Wrapper"
+              target="_blank"
+            >
+              React Wrapper
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755017-Angular-Wrapper"
+              target="_blank"
+            >
+              Angular Wrapper
+            </a>
+          </li>
+        </ul>
+
         <p>
           <b>Help</b>
           <br />
@@ -176,33 +177,34 @@ export default () => {
           The Adaptable Blotter dev team produce some custom examples to fit
           particular use cases that our users have requested. <br />
           These are found on Github. These include:{' '}
-          <ul>
-            <li>
-              <a
-                href="https://github.com/AdaptableTools/example-adaptableblotter-angular-aggrid"
-                target="_blank"
-              >
-                Using the Angular wrapper
-              </a>{' '}
-            </li>
-            <li>
-              <a
-                href="https://github.com/AdaptableTools/example-adaptableblotter-ipushpull-integration"
-                target="_blank"
-              >
-                iPushPull Integration
-              </a>{' '}
-            </li>
-            <li>
-              <a
-                href="https://github.com/AdaptableTools/example-adaptableblotter-with-parceljs"
-                target="_blank"
-              >
-                Using ParcelJS to build a minified file
-              </a>{' '}
-            </li>
-          </ul>
         </p>
+        <ul>
+          <li>
+            <a
+              href="https://github.com/AdaptableTools/example-adaptableblotter-angular-aggrid"
+              target="_blank"
+            >
+              Using the Angular wrapper
+            </a>{' '}
+          </li>
+          <li>
+            <a
+              href="https://github.com/AdaptableTools/example-adaptableblotter-ipushpull-integration"
+              target="_blank"
+            >
+              iPushPull Integration
+            </a>{' '}
+          </li>
+          <li>
+            <a
+              href="https://github.com/AdaptableTools/example-adaptableblotter-with-parceljs"
+              target="_blank"
+            >
+              Using ParcelJS to build a minified file
+            </a>{' '}
+          </li>
+        </ul>
+
         <p>
           <b>Licence and Pricing</b>
           <br />

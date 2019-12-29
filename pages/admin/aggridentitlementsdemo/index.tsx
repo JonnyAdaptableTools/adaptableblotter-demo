@@ -28,7 +28,7 @@ export default () => {
             or as toolbars.
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028584252-Entitlements-Config"
               target="_blank"

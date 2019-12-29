@@ -1,16 +1,12 @@
-import * as Helper from '../../../Helpers/Helper';
-
 import AdaptableBlotter from '@adaptabletools/adaptableblotter/agGrid';
 import '@adaptabletools/adaptableblotter/index.css';
-
+import '@adaptabletools/adaptableblotter/themes/dark.css';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-balham.css';
+import 'ag-grid-community/dist/styles/ag-theme-balham-dark.css';
 import { cloneDeep } from 'lodash';
-
 import '../../../../DemoPage/aggriddemo.css';
-
 import { AdaptableBlotterOptions } from '@adaptabletools/adaptableblotter/types';
-
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import predefinedConfig from './config';
@@ -30,18 +26,16 @@ export default () => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     blotterId: 'Tool Panel Demo',
-
+    generalOptions: {
+      showAdaptableToolPanel: true,
+    },
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };
 
-  blotterOptions.generalOptions = {
-    showAdaptableBlotterToolPanel: true,
-  };
-
   const blotterOptionsClone = cloneDeep(blotterOptions);
   const blotterApi = AdaptableBlotter.init(blotterOptions);
-  gridOptions.api!.openToolPanel('adaptableBlotterToolPanel');
+  gridOptions.api!.openToolPanel('AdaptableToolPanel');
 
   return {
     predefinedConfig,
