@@ -5,11 +5,11 @@ export default () => {
   return (
     <DynamicDemoPage
       demo={import('../../../src/client/admin/aggridblotterapidemo')}
-      pageTitle={'Blotter API Demo'}
+      pageTitle={'Adaptable API Demo'}
       description={
         <div>
           <h4>
-            <h4>Blotter API Demo</h4>
+            <h4>Adaptable API Demo</h4>
           </h4>
           <p>
             The Adaptable Blotter includes a very rich API that offers full
@@ -21,7 +21,7 @@ export default () => {
               href="https://api.adaptableblotter.com/interfaces/_api_blotterapi_.blotterapi.html"
               target="_blank"
             >
-              Adaptable Blotter API
+              Adaptable API
             </a>
             , that allow you to do programmatically - through code - everything
             that is available via the GUI or Config,{' '}
@@ -46,7 +46,7 @@ export default () => {
               href="https://api.adaptableblotter.com/interfaces/_api_interface_iblotterapi_.iblotterapi.html"
               target="_blank"
             >
-              Blotter API
+              Adaptable API
             </a>
             ,{' '}
             <a

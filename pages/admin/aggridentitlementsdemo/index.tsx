@@ -40,7 +40,7 @@ export default () => {
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028585352-Entitlements-API"
               target="_blank"
             >
-              Blotter API
+              Adaptable API
             </a>
             ,{' '}
             <a

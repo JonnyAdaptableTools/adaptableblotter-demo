@@ -33,7 +33,7 @@ export default () => {
   const blotterOptions: AdaptableBlotterOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    blotterId: 'Blotter API Demo',
+    blotterId: 'Adaptable API Demo',
 
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
@@ -49,7 +49,7 @@ export default () => {
     testDiv.style.padding = '10px';
     var para = document.createElement('P');
     para.innerHTML =
-      'Using the Adaptable Blotter API: Click "Run Quick Search" (or "Clear Quick Search") to call the equivalent Quick Search API functions.  And use other buttons to set Dashboard visibility and load a layout.';
+      'Using the Adaptable API: Click "Run Quick Search" (or "Clear Quick Search") to call the equivalent Quick Search API functions.  And use other buttons to set Dashboard visibility and load a layout.';
     testDiv.appendChild(para);
 
     var textBox = document.createElement('input');

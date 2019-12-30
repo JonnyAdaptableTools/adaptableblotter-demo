@@ -41,7 +41,7 @@ export default () => {
               href="https://api.adaptableblotter.com/interfaces/_api_systemstatusapi_.systemstatusapi.html"
               target="_blank"
             >
-              Blotter API
+              Adaptable API
             </a>
             . In this example we set info, warning, success and error messages
             through the API - using Buttons in a{' '}
@@ -67,7 +67,7 @@ export default () => {
               href="https://api.adaptableblotter.com/interfaces/_api_systemstatusapi_.systemstatusapi.html"
               target="_blank"
             >
-              Blotter API
+              Adaptable API
             </a>
             ,{' '}
             <a
@@ -78,7 +78,7 @@ export default () => {
             </a>
             ,{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754957-Messages-and-Alerts"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754957-Run-Time-Access"
               target="_blank"
             >
               User Guide

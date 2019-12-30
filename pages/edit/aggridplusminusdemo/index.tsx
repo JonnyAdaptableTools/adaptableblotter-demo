@@ -37,7 +37,7 @@ export default () => {
               href="https://api.adaptableblotter.com/interfaces/_api_plusminusapi_.plusminusapi.html"
               target="_blank"
             >
-              Blotter API
+              Adaptable API
             </a>
             ,{' '}
             <a

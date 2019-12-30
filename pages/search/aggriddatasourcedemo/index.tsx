@@ -56,7 +56,7 @@ export default () => {
               href="https://api.adaptableblotter.com/interfaces/_api_datasourceapi_.datasourceapi.html"
               target="_blank"
             >
-              Blotter API
+              Adaptable API
             </a>
             ,{' '}
             <a

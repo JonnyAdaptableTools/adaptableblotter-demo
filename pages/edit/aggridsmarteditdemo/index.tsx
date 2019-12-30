@@ -37,7 +37,7 @@ export default () => {
               href="https://api.adaptableblotter.com/interfaces/_api_smarteditapi_.smarteditapi.html"
               target="_blank"
             >
-              Blotter API
+              Adaptable API
             </a>
             ,{' '}
             <a

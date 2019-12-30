@@ -405,10 +405,10 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Every data change, user action, state change and function action is auditable and availalbe for you to listen to in a number of ways, making support a breeze and enabling data playback.',
           },
           {
-            Name: 'Blotter API',
+            Name: 'Adaptable API',
             Link: '/admin/aggridblotterapidemo',
             Description:
-              'Access the Adaptable Blotter functionality and state through the Blotter API which contains hundreds of functions giving full programmatic access to everything the Adaptable Blotter provides.',
+              'Access the Adaptable Blotter functionality and state through the Adaptable API which contains hundreds of functions giving full programmatic access to everything the Adaptable Blotter provides.',
           },
           {
             Name: 'Big Data',

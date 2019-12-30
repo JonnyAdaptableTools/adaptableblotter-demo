@@ -46,7 +46,7 @@ export default () => {
               href="https://api.adaptableblotter.com/interfaces/_api_sparklinecolumnapi_.sparklinecolumnapi.html"
               target="_blank"
             >
-              Blotter API
+              Adaptable API
             </a>
             ,{' '}
             <a

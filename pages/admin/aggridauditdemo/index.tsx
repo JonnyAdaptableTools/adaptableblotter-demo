@@ -35,7 +35,7 @@ export default () => {
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028585212-Audit-Events-API"
               target="_blank"
             >
-              Blotter API
+              Adaptable API
             </a>
             ,{' '}
             <a
