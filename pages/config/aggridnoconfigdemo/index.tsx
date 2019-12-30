@@ -5,20 +5,20 @@ export default () => {
   return (
     <DynamicDemoPage
       demo={import('../../../src/client/config/aggridnoconfigdemo')}
-      pageTitle={'AdaptableBlotter.JS No Config Demo'}
+      pageTitle={'Adaptable No Config Demo'}
       description={
         <div>
           <h4>No Config Demo</h4>
           <p>
-            The Adaptable Blotter offers more than 30 functions to allow you to
-            search, filter, edit, audit, export and style your data in
-            cutting-edge and exciting ways.
+            Adaptable offers more than 30 functions to allow you to search,
+            filter, edit, audit, export and style your data in cutting-edge and
+            exciting ways.
           </p>
           <p>
             Typically you ship the Blotter with <b>Predefined Config</b>{' '}
             (searches, views, reports etc. created at design time). And you'll
-            set Blotter Options to non-default values to configure your grid to
-            precise requirements.
+            set Adaptable Options to non-default values to configure your grid
+            to precise requirements.
           </p>
           <p>
             You will also likely include Entitlements as part of Predfined

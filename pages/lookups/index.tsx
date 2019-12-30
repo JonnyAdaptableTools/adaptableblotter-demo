@@ -29,8 +29,8 @@ export default () => {
         <div>
           <h4>Column Values Lookup Demos</h4>
           <p>
-            There are a few places in the Adaptable Blotter when a list of
-            distinct column values is displayed.
+            There are a few places in Adaptable when a list of distinct column
+            values is displayed.
           </p>
           <p>
             For instance when using a Column Filter, or in the Column Values
@@ -40,26 +40,25 @@ export default () => {
             By default when showing list of available column values, the
             Adaptable Blotter will show the first 2,000 distinct values, but you
             can amend this by setting the <b>maxColumnValueItemsDisplayed</b>{' '}
-            property in Query Options section of Adaptable Blotter Options.{' '}
-            <br />
+            property in Query Options section of Adaptable Options. <br />
             Any values that exceed the count will be ignored. See the{' '}
             <b>Max Items Displayed Demo</b>.
           </p>
           <p>
-            There is a hierarchy for how the Adaptable Blotter will retrieve
-            this options as follows: (Note: in all 3 options, the Adaptable
-            Blotter will not show more values than that set in the
-            maxColumnValueItemsDisplayed property)
+            There is a hierarchy for how Adaptable will retrieve this options as
+            follows: (Note: in all 3 options, the Adaptable Blotter will not
+            show more values than that set in the maxColumnValueItemsDisplayed
+            property)
           </p>
           <ol>
             <li>
-              <b>Server Lookups:</b> You can provide the Adaptable Blotter
-              dynamically (through client-server communication) with the list of
-              values that can be displayed each time a list of distinct cell
-              values is required. <br />
+              <b>Server Lookups:</b> You can provide Adaptable dynamically
+              (through client-server communication) with the list of values that
+              can be displayed each time a list of distinct cell values is
+              required. <br />
               You set this through the <b>getColumnValues</b> property in Query
-              Options section of Adaptable Blotter Options. See the Server
-              Lookups demo for more information.
+              Options section of Adaptable Options. See the Server Lookups demo
+              for more information.
             </li>
             <li>
               <b>Permitted Column Values:</b> You can provide the Adaptable
@@ -72,8 +71,8 @@ export default () => {
             </li>
             <li>
               <b>Dynamic Values:</b> If no Server Lookups or Permitted Column
-              Values have been set for that column, the Adaptable Blotter will
-              dynamically retrieve all the distinct values for that column.
+              Values have been set for that column, Adaptable will dynamically
+              retrieve all the distinct values for that column.
               <br />
             </li>
           </ol>

@@ -49,7 +49,7 @@ export default () => {
       description={
         <div>
           <h4>Alerts and Messages Functions</h4>
-          <p>The Adaptable Blotter lets you send and receive messages.</p>
+          <p>Adaptable lets you send and receive messages.</p>
           <ul>{demoLinks}</ul>
           <p>
             {' '}

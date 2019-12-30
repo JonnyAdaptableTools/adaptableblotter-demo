@@ -15,9 +15,9 @@ export default () => {
             Cells) and you can create your own.
           </p>
           <p>
-            If using the Adaptable Blotter with our partners OpenFin, Glue42 or
-            iPushPull you can see exported data update in real time as your Grid
-            ticks. You can also schedule reports to export at particular times.
+            If using Adaptable with our partners OpenFin, Glue42 or iPushPull
+            you can see exported data update in real time as your Grid ticks.
+            You can also schedule reports to export at particular times.
           </p>
           <p>
             This example has 2 reports: 'My Team Big Invoice' which exports all

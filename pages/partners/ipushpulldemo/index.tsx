@@ -13,8 +13,8 @@ export default () => {
             <h4>iPushPull</h4>
           </p>
           <p>
-            The Adaptable Blotter natively exports data to the clipboard, csv,
-            JSON and (coming soon) PDF.
+            Adaptable natively exports data to the clipboard, csv, JSON and
+            (coming soon) PDF.
           </p>
           <p>
             However if want to share your reports more widely, (e.g. with

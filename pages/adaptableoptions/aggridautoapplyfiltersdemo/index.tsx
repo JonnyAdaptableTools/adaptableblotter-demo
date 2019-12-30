@@ -5,15 +5,15 @@ export default () => {
   return (
     <DynamicDemoPage
       demo={import(
-        '../../../src/client/blotteroptions/aggridautoapplyfiltersdemo'
+        '../../../src/client/adaptableoptions/aggridautoapplyfiltersdemo'
       )}
       pageTitle={'Auto Apply Filters Demo'}
       description={
         <div>
           <h4>Auto Apply Filters Demo</h4>
           <p>
-            By default the Adaptable Blotter will apply the column filters as
-            soon as an item in the filter menu is clicked.
+            By default Adaptable will apply the column filters as soon as an
+            item in the filter menu is clicked.
           </p>
           <p>
             However sometimes this is not the desired behaviour, particularly if
@@ -24,7 +24,7 @@ export default () => {
             If you want to do this, then simply set the <b>autoApplyFilter</b>{' '}
             in{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_blotteroptions_filteroptions_.filteroptions.html#autoapplyfilter"
+              href="https://api.adaptableblotter.com/interfaces/_adaptableoptions_filteroptions_.filteroptions.html#autoapplyfilter"
               target="_blank"
             >
               Filter Options

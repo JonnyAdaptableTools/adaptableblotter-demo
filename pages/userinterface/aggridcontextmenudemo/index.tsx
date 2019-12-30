@@ -10,9 +10,9 @@ export default () => {
         <div>
           <h4>Context Menu Demo</h4>
           <p>
-            The Adaptable Blotter provides a Context Menu - accessible when you
-            right-click in a cell - which includes shortcuts to functionality
-            relevant to that cell (and what is selected).
+            Adaptable provides a Context Menu - accessible when you right-click
+            in a cell - which includes shortcuts to functionality relevant to
+            that cell (and what is selected).
           </p>
           <p>
             You can add your own{' '}
@@ -36,7 +36,7 @@ export default () => {
             You can also choose which - if any - of the shipped Menu Items are
             available via the <b>showAdaptableContextMenu</b> property of{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_blotteroptions_userinterfaceoptions_.userinterfaceoptions.html#showadaptablecontextmenu"
+              href="https://api.adaptableblotter.com/interfaces/_adaptableoptions_userinterfaceoptions_.userinterfaceoptions.html#showadaptablecontextmenu"
               target="_blank"
             >
               User Interface Options
@@ -79,7 +79,7 @@ export default () => {
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_blotteroptions_userinterfaceoptions_.userinterfaceoptions.html"
+              href="https://api.adaptableblotter.com/interfaces/_adaptableoptions_userinterfaceoptions_.userinterfaceoptions.html"
               target="_blank"
             >
               User Interface Options

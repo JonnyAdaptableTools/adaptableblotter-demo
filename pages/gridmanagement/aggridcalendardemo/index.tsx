@@ -10,9 +10,9 @@ export default () => {
         <div>
           <h4>Calendar Demo</h4>
           <p>
-            Some functionality in the Adaptable Blotter (e.g. Filters or
-            Queries) requires knowledge of the user's when calculating Next or
-            Previous Working Day.
+            Some functionality in Adaptable (e.g. Filters or Queries) requires
+            knowledge of the user's when calculating Next or Previous Working
+            Day.
           </p>
           <p>
             To do this a Holiday Calendar is used. The default is 'United
@@ -21,8 +21,8 @@ export default () => {
           </p>
           <p>
             This example we have set the 'Current Calendar' in Config to be
-            France which is what the Adaptable Blotter will now use when working
-            out if a particular Date is a holiday or not.
+            France which is what Adaptable will now use when working out if a
+            particular Date is a holiday or not.
           </p>
           <p>
             <b>Adaptable Help Resources:</b>{' '}

@@ -18,33 +18,31 @@ import predefinedConfig from './config';
 export default () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
-
   let rowData = JSON.parse(JSON.stringify(json));
 
-  const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
+  const columndefs = helperAgGrid.getFilteredColumnSchema();
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
   gridOptions.floatingFilter = true;
 
-  const blotterOptions: AdaptableBlotterOptions = {
+  const adaptableOptions: AdaptableBlotterOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    blotterId: 'Query Ignore Case Demo',
-    queryOptions: {
-      ignoreCaseInQueries: false,
-      // maxColumnValueItemsDisplayed: 5,
-      //  columnValuesOnlyInQueries: true,
+    blotterId: 'Vendor Grid Filters Demo',
+    filterOptions: {
+      useAdaptableBlotterQuickFilter: false,
+      useAdaptableBlotterFilterForm: false,
     },
 
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };
 
-  const blotterOptionsClone = cloneDeep(blotterOptions);
-  const blotterApi = AdaptableBlotter.init(blotterOptions);
+  const adaptableOptionsClone = cloneDeep(adaptableOptions);
+  const blotterApi = AdaptableBlotter.init(adaptableOptions);
 
   return {
     predefinedConfig,
-    blotterOptions: blotterOptionsClone,
+    adaptableOptions: adaptableOptionsClone,
   };
 };

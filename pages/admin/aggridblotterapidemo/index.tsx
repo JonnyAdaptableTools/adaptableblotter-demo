@@ -12,8 +12,8 @@ export default () => {
             <h4>Adaptable API Demo</h4>
           </h4>
           <p>
-            The Adaptable Blotter includes a very rich API that offers full
-            programmatic access to all functionality and Blotter state.
+            Adaptable includes a very rich API that offers full programmatic
+            access to all functionality and Blotter state.
           </p>
           <p>
             There are hundreds of functions in the{' '}
@@ -27,10 +27,9 @@ export default () => {
             that is available via the GUI or Config,{' '}
           </p>
           <p>
-            This allows you to bypass the Adaptable Blotter GUI if you so desire
-            but still to have access to the core objects and thereby allow the
-            Adaptable Blotter to manage all the complexities around state
-            managements.
+            This allows you to bypass Adaptable GUI if you so desire but still
+            to have access to the core objects and thereby allow the Adaptable
+            Blotter to manage all the complexities around state managements.
           </p>
           <p>
             In this example we create our own form controls (external to the

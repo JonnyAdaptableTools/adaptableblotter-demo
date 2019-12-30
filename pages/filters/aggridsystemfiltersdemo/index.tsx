@@ -11,9 +11,9 @@ export default () => {
           <h4>System Filters Demo</h4>
 
           <p>
-            The Adaptable Blotter provides a range of useful System Filters
-            (e.g. 'Blanks', 'Zero', 'Yesterday') to complement any User Filters
-            or Named Filters provided by you.
+            Adaptable provides a range of useful System Filters (e.g. 'Blanks',
+            'Zero', 'Yesterday') to complement any User Filters or Named Filters
+            provided by you.
           </p>
           <p>
             They appear in italics at the top of the Column Filter form (above

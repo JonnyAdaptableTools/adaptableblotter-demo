@@ -10,12 +10,12 @@ export default () => {
       </p>
       <div id="launcherOpenfin">
         <p>
-          The Adaptable Blotter runs in the Broswer or Electron with all
-          functionality available for users (depending on their{' '}
+          Adaptable runs in the Broswer or Electron with all functionality
+          available for users (depending on their{' '}
           <a href="../../admin/aggridentitlementsdemo/">Entitlements</a>).
         </p>
         <p>
-          However if you are running the Adaptable Blotter inside the popular{' '}
+          However if you are running Adaptable inside the popular{' '}
           <a href="https://openfin.co/" target="_blank">
             OpenFin container{' '}
           </a>
@@ -38,8 +38,7 @@ export default () => {
               Run OpenFin
             </a>
           </b>{' '}
-          to see the Adaptable Blotter running inside OpenFin and then export
-          data to Excel.{' '}
+          to see Adaptable running inside OpenFin and then export data to Excel.{' '}
         </p>
         <p>
           (The link will download the OpenFin installer - click the exe to run

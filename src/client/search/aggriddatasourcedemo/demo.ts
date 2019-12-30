@@ -30,7 +30,7 @@ export default () => {
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, null);
 
-  const blotterOptions: AdaptableBlotterOptions = {
+  const adaptableOptions: AdaptableBlotterOptions = {
     primaryKey: 'tradeId',
     userName: 'Demo User',
     blotterId: 'Data Source Demo',
@@ -38,8 +38,8 @@ export default () => {
     predefinedConfig: predefinedConfig,
   };
 
-  const blotterOptionsClone = cloneDeep(blotterOptions);
-  const blotterApi = AdaptableBlotter.init(blotterOptions);
+  const adaptableOptionsClone = cloneDeep(adaptableOptions);
+  const blotterApi = AdaptableBlotter.init(adaptableOptions);
 
   blotterApi.eventApi.on(
     'SearchChanged',
@@ -50,7 +50,7 @@ export default () => {
 
   return {
     predefinedConfig,
-    blotterOptions: blotterOptionsClone,
+    adaptableOptions: adaptableOptionsClone,
   };
 
   function listenToSearchChange(

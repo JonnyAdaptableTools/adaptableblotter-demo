@@ -21,7 +21,7 @@ export default () => {
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, null);
 
-  const blotterOptions: AdaptableBlotterOptions = {
+  const adaptableOptions: AdaptableBlotterOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     blotterId: 'System Status Demo',
@@ -29,8 +29,8 @@ export default () => {
     predefinedConfig: predefinedConfig,
   };
 
-  const blotterOptionsClone = cloneDeep(blotterOptions);
-  let blotterApi = AdaptableBlotter.init(blotterOptions);
+  const adaptableOptionsClone = cloneDeep(adaptableOptions);
+  let blotterApi = AdaptableBlotter.init(adaptableOptions);
 
   blotterApi.eventApi.on('BlotterReady', () => {
     setTimeout(() => {
@@ -68,6 +68,6 @@ export default () => {
 
   return {
     predefinedConfig,
-    blotterOptions: blotterOptionsClone,
+    adaptableOptions: adaptableOptionsClone,
   };
 };

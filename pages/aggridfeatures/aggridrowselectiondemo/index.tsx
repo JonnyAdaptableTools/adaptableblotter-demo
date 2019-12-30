@@ -15,7 +15,7 @@ export default () => {
               href="https://api.adaptableblotter.com/interfaces/_api_eventapi_.eventapi.html"
               target="_blank"
             >
-              Adaptable Blotter events
+              Adaptable Events
             </a>{' '}
             is <b>SelectionChanged</b>.
           </p>
@@ -33,9 +33,9 @@ export default () => {
             group headers and grouped rows.
           </p>
           <p>
-            We are listening to the Adaptable Blotter SelectionChanged event and
-            printing out the results to the console. Open the console to see the
-            output each time cell or row selection changes.
+            We are listening to Adaptable SelectionChanged event and printing
+            out the results to the console. Open the console to see the output
+            each time cell or row selection changes.
           </p>
         </div>
       }

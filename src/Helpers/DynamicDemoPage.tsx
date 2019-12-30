@@ -8,15 +8,15 @@ type DynamicComponentType = {
 
 export default (props: { demo: any } & AgGridDemoPageProps) => {
   const [predefinedConfig, setPredefinedConfig] = useState<any>(null);
-  const [blotterOptions, setBlotterOptionsString] = useState<any>(null);
+  const [adaptableOptions, setBlotterOptionsString] = useState<any>(null);
 
-  const setBlotterOptions = (blotterOptions: any) => {
-    if (blotterOptions.vendorGrid) {
-      delete blotterOptions.vendorGrid.rowData;
+  const setAdaptableOptions = (adaptableOptions: any) => {
+    if (adaptableOptions.vendorGrid) {
+      delete adaptableOptions.vendorGrid.rowData;
     }
-    delete blotterOptions.licenceKey;
+    delete adaptableOptions.licenceKey;
 
-    const blotterOptionsString = JSON.stringify(blotterOptions, null, 2);
+    const blotterOptionsString = JSON.stringify(adaptableOptions, null, 2);
 
     setBlotterOptionsString(blotterOptionsString);
   };
@@ -36,14 +36,14 @@ export default (props: { demo: any } & AgGridDemoPageProps) => {
     <AgGridDemoPage
       {...pageProps}
       config={predefinedConfig}
-      blotterOptions={blotterOptions}
+      adaptableOptions={adaptableOptions}
     >
       <DynamicComponent
         onReady={info => {
           if (info) {
-            const { predefinedConfig, blotterOptions } = info;
+            const { predefinedConfig, adaptableOptions } = info;
             setPredefinedConfig(predefinedConfig);
-            setBlotterOptions(blotterOptions);
+            setAdaptableOptions(adaptableOptions);
           }
         }}
       />

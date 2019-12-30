@@ -25,9 +25,9 @@ export default () => {
             can edit them (e.g. change the line colour or show tooltips).
           </p>
           <p>
-            The Adaptable Blotter also allows you to create Sparklines on
-            numeric cell data. Select 'View As Sparkline' from the Column Header
-            menu to seek a Sparkline for all values in the Column.
+            Adaptable also allows you to create Sparklines on numeric cell data.
+            Select 'View As Sparkline' from the Column Header menu to seek a
+            Sparkline for all values in the Column.
           </p>
           <p>
             Alternatively you can select a group of cells in the Column and use

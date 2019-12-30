@@ -5,7 +5,7 @@ export default () => {
   return (
     <DynamicDemoPage
       demo={import('../../../src/client/config/aggridpredefinedconfigdemo')}
-      pageTitle={'AdaptableBlotter.JS Predefined Config Demo'}
+      pageTitle={'Adaptable Predefined Config Demo'}
       description={
         <div>
           <h4>Predefined Config Demo</h4>
@@ -27,10 +27,9 @@ export default () => {
             applied and some <a href="../../dashboard/">Dashboard</a> changes.
           </p>
           <p>
-            As well as pre-loading state the Adaptable Blotter also
-            automatically save state. Edit these objects or create some of your
-            own and refresh the page and you will see the Blotter will reload
-            with all your changes.
+            As well as pre-loading state Adaptable also automatically save
+            state. Edit these objects or create some of your own and refresh the
+            page and you will see the Blotter will reload with all your changes.
           </p>
 
           <p>

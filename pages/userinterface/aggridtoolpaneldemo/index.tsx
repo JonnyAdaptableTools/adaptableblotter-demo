@@ -16,8 +16,8 @@ export default () => {
             </b>
           </p>
           <p>
-            The Adaptable Blotter Tool Panel is designed for situations when
-            screen estate is limited and the Dashboard is too 'bulky'.
+            Adaptable Tool Panel is designed for situations when screen estate
+            is limited and the Dashboard is too 'bulky'.
           </p>
           <p>
             It is a standard{' '}

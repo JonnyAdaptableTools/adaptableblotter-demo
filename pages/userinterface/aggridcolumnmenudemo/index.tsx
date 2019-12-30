@@ -10,9 +10,9 @@ export default () => {
         <div>
           <h4>Column Menu Demo</h4>
           <p>
-            The Adaptable Blotter provides a Column Menu - accessible via the
-            Column Header - which includes shortcuts to all the popup screens
-            relevant to that column and its data type.
+            Adaptable provides a Column Menu - accessible via the Column Header
+            - which includes shortcuts to all the popup screens relevant to that
+            column and its data type.
           </p>
           <p>
             The Column Menu is context sensitive so the menu items shown are
@@ -40,7 +40,7 @@ export default () => {
             You can also choose which - if any - of the shipped Menu Items are
             available via the <b>showAdaptableColumnMenu</b> property of{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_blotteroptions_userinterfaceoptions_.userinterfaceoptions.html#showadaptablecolumnmenu"
+              href="https://api.adaptableblotter.com/interfaces/_adaptableoptions_userinterfaceoptions_.userinterfaceoptions.html#showadaptablecolumnmenu"
               target="_blank"
             >
               User Interface Options
@@ -66,7 +66,7 @@ export default () => {
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_blotteroptions_userinterfaceoptions_.userinterfaceoptions.html"
+              href="https://api.adaptableblotter.com/interfaces/_adaptableoptions_userinterfaceoptions_.userinterfaceoptions.html"
               target="_blank"
             >
               User Interface Options

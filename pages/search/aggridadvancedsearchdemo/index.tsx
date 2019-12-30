@@ -14,9 +14,9 @@ export default () => {
             across mutliple columns which can then be named, saved and re-used.
           </p>
           <p>
-            It uses the Adaptable Blotter Query (used in many Functions) that
-            allows selections to be performed on a mix of Column Values, Filters
-            and Ranges.
+            It uses Adaptable Query (used in many Functions) that allows
+            selections to be performed on a mix of Column Values, Filters and
+            Ranges.
           </p>
           <p>
             In this example we are searching for any rows where the Invoiced

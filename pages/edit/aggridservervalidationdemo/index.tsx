@@ -10,10 +10,9 @@ export default () => {
         <div>
           <h4>Server Validation Demo</h4>
           <p>
-            With Server Validation, you provide the Adaptable Blotter with a
-            function that returns a Promise and will run (presumably
-            server-side) each time a cell is edited allowing you to perform
-            advanced validation.{' '}
+            With Server Validation, you provide Adaptable with a function that
+            returns a Promise and will run (presumably server-side) each time a
+            cell is edited allowing you to perform advanced validation.{' '}
           </p>
           <p>
             The return value can be: nothing (the edit works - or you want to

@@ -29,7 +29,7 @@ export default () => {
             Note: we have also set the name of the Toolbar to 'Blotter Toolbar'
             (via the <i>HomeToolbarTitle</i> property in Dashboard Config. (If
             not set, it defaults to the 'blotterId' property in{' '}
-            <i>Blotter Options</i>).
+            <i>Adaptable Options</i>).
           </p>
         </div>
       }

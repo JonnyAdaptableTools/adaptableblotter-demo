@@ -39,7 +39,7 @@ export default () => {
   gridOptions.autoGroupColumnDef = autoGroupColumnDef;
   gridOptions.suppressRowClickSelection = true;
 
-  const blotterOptions: AdaptableBlotterOptions = {
+  const adaptableOptions: AdaptableBlotterOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     blotterId: 'Row Selection Demo',
@@ -48,8 +48,8 @@ export default () => {
     predefinedConfig: predefinedConfig,
   };
 
-  const blotterOptionsClone = cloneDeep(blotterOptions);
-  const blotterApi = AdaptableBlotter.init(blotterOptions);
+  const adaptableOptionsClone = cloneDeep(adaptableOptions);
+  const blotterApi = AdaptableBlotter.init(adaptableOptions);
 
   blotterApi.eventApi
     .onSelectionChanged()
@@ -59,7 +59,7 @@ export default () => {
 
   return {
     predefinedConfig,
-    blotterOptions: blotterOptionsClone,
+    adaptableOptions: adaptableOptionsClone,
   };
 
   function listenToSelectedChange(

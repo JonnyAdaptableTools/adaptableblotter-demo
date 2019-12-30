@@ -10,17 +10,16 @@ export default () => {
         <>
           <h4>Dark Theme Demo</h4>
           <p>
-            This demo shows how you can theme the Adaptable Blotter using the
-            shipped 'Dark Theme'. You can select this as your theme in the Theme
-            State.
+            This demo shows how you can theme Adaptable using the shipped 'Dark
+            Theme'. You can select this as your theme in the Theme State.
           </p>
           <p>
-            When you use this theme (or the Light Theme) the Adaptable Blotter
-            will automatically update the theme of the vendor grid to match your
+            When you use this theme (or the Light Theme) Adaptable will
+            automatically update the theme of the vendor grid to match your
             choice.
           </p>
           <p>
-            The Adaptable Blotter manages theming through{' '}
+            Adaptable manages theming through{' '}
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties"
               target="_blank"

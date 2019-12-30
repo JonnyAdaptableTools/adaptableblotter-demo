@@ -11,16 +11,15 @@ export default () => {
           <h4>Server Lookups Demo</h4>
           <p>
             By default when showing a list of filter values (or a list of
-            distinct column values when building a query) the Adaptable Blotter
-            will create the distinct list based on what is currently in the
-            DataSet.
+            distinct column values when building a query) Adaptable will create
+            the distinct list based on what is currently in the DataSet.
           </p>
           <p>
-            However sometimes you might want to provide the Adaptable Blotter
-            with a list of allowed values for lookups or filtering. You do this
-            through the <b>getColumnValues</b> property of{' '}
+            However sometimes you might want to provide Adaptable with a list of
+            allowed values for lookups or filtering. You do this through the{' '}
+            <b>getColumnValues</b> property of{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_blotteroptions_queryoptions_.queryoptions.html"
+              href="https://api.adaptableblotter.com/interfaces/_adaptableoptions_queryoptions_.queryoptions.html"
               target="_blank"
             >
               Query Options

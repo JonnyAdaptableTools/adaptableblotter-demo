@@ -13,8 +13,8 @@ export default () => {
           <h4>Custom Toolbars Demo</h4>
           <p>
             The Dashboard includes a Custom Toolbars collection to enable users
-            to render their own content, and the Adaptable Blotter will manage
-            toolbar visibility as part of User State.
+            to render their own content, and Adaptable will manage toolbar
+            visibility as part of User State.
           </p>
           <p>
             Each Custom Toolbar contains 2 'Divs', each to cater for a different

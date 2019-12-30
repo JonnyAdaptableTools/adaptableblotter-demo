@@ -11,7 +11,7 @@ body {
 
 p {
   line-height: 18px; /* within paragraph */
-  margin-bottom: 10px; /* between paragraphs */
+  margin-bottom: 12px; /* between paragraphs */
 }
 
 a:link {

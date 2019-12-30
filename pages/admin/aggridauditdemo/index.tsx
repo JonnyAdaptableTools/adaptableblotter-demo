@@ -11,8 +11,8 @@ export default () => {
           <h4>Audit Log Demo</h4>
           <p>
             Every grid event, mouse click, user action, cell edit etc. is
-            auditable by the Adaptable Blotter and available for you to listen
-            to and review - perfect for Support Teams or for data playback.
+            auditable by Adaptable and available for you to listen to and review
+            - perfect for Support Teams or for data playback.
           </p>
           <p>
             You can choose to send any (or all) of <b>Cell Edit</b>,{' '}

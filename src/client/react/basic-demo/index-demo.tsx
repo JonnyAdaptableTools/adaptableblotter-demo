@@ -31,7 +31,7 @@ const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
 
 const gridOptions = helperAgGrid.getGridOptions(columndefs, json);
 
-const adaptableblotterOptions: AdaptableBlotterOptions = {
+const adaptableOptions: AdaptableBlotterOptions = {
   primaryKey: 'OrderId',
   userName: 'demo user',
   blotterId: 'basic demo',
@@ -42,6 +42,6 @@ export default () => (
   <AdaptableBlotterReact
     style={{ height: '100%' }}
     gridOptions={gridOptions}
-    blotterOptions={adaptableBlotterOptions}
+    blotterOptions={adaptableOptions}
   />
 );

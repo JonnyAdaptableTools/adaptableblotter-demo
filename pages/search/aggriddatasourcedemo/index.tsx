@@ -27,7 +27,7 @@ export default () => {
           </p>
           <p>
             This allows you to perform the necessary search on the server and
-            return data to the Adaptable Blotter via the
+            return data to Adaptable via the
             <a
               href="https://api.adaptableblotter.com/interfaces/_api_gridapi_.gridapi.html"
               target="_blank"

@@ -143,7 +143,7 @@ export class HelperAgGrid {
     blotterId: string,
     config: any
   ): AdaptableBlotterOptions {
-    let blotterOptions: AdaptableBlotterOptions = {
+    let adaptableOptions: AdaptableBlotterOptions = {
       primaryKey: pk,
       vendorGrid: gridOptions,
       userName: 'Demo User',
@@ -160,7 +160,7 @@ export class HelperAgGrid {
         pieChartMaxItems: 50,
       },
     };
-    return blotterOptions;
+    return adaptableOptions;
   }
 
   private getAadaptableBlotterOptionsWithDivNames(
@@ -171,7 +171,7 @@ export class HelperAgGrid {
     gridName: string,
     abName: string
   ): AdaptableBlotterOptions {
-    let blotterOptions: AdaptableBlotterOptions = {
+    let adaptableOptions: AdaptableBlotterOptions = {
       primaryKey: pk,
       vendorGrid: gridOptions,
       userName: 'Demo User',
@@ -192,7 +192,7 @@ export class HelperAgGrid {
         pieChartMaxItems: 50,
       },
     };
-    return blotterOptions;
+    return adaptableOptions;
   }
 
   public getBasicNorthwindColumnSchema(): any[] {

@@ -15,8 +15,8 @@ export default () => {
             Adaptable Blotter works with any data set.
           </p>
           <p>
-            But we're often asked if the Adaptable Blotter works as well with
-            big data sets and the answer is yes.{' '}
+            But we're often asked if Adaptable works as well with big data sets
+            and the answer is yes.{' '}
           </p>
           <p>
             This demo contains 100,000 rows of <b>random meaningless data</b>{' '}

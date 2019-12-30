@@ -12,9 +12,8 @@ export default () => {
             <h4>Action Column Demo</h4>
           </h4>
           <p>
-            The Adaptable Blotter provides an Action Column function that allows
-            you to specify (and optionally render) a button to placed in a
-            column.
+            Adaptable provides an Action Column function that allows you to
+            specify (and optionally render) a button to placed in a column.
           </p>
           <p>
             When the button is clicked an{' '}

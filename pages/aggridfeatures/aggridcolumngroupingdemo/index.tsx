@@ -20,8 +20,8 @@ export default () => {
             <i>Shipping Details</i>
           </p>
           <p>
-            Note that the other functions in the Adaptable Blotter will 'honour'
-            this column grouping and work appropriately.
+            Note that the other functions in Adaptable will 'honour' this column
+            grouping and work appropriately.
           </p>
           <p>
             For instance if you load the <i>With Special Cols</i> Layout, you

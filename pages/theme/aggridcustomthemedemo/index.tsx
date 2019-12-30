@@ -10,8 +10,8 @@ export default () => {
         <>
           <h4>Custom Theme Demo</h4>
           <p>
-            The Adaptable Blotter ships with 2 themes - Dark or Light. But you
-            can create your own theme yourself through the use of{' '}
+            Adaptable ships with 2 themes - Dark or Light. But you can create
+            your own theme yourself through the use of{' '}
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties"
               target="_blank"

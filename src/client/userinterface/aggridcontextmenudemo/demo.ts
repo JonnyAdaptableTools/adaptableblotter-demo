@@ -26,7 +26,7 @@ export default () => {
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
   gridOptions.floatingFilter = true;
 
-  const blotterOptions: AdaptableBlotterOptions = {
+  const adaptableOptions: AdaptableBlotterOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     blotterId: 'Context Menu Demo',
@@ -50,12 +50,12 @@ export default () => {
     predefinedConfig: demoConfig,
   };
 
-  const blotterOptionsClone = cloneDeep(blotterOptions);
-  blotterApi = AdaptableBlotter.init(blotterOptions);
+  const adaptableOptionsClone = cloneDeep(adaptableOptions);
+  blotterApi = AdaptableBlotter.init(adaptableOptions);
 
   return {
     demoConfig,
-    blotterOptions: blotterOptionsClone,
+    adaptableOptions: adaptableOptionsClone,
   };
 };
 

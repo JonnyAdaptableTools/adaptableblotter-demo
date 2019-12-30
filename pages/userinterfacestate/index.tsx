@@ -29,13 +29,13 @@ export default () => {
         <div>
           <h4>User Interface State Demos</h4>
           <p>
-            Queries are a key element of the Adaptable Blotter - and they are
-            used by many functions, e.g. Advanced Search, Conditional Styles,
-            Reports, Alerts etc.
+            Queries are a key element of Adaptable - and they are used by many
+            functions, e.g. Advanced Search, Conditional Styles, Reports, Alerts
+            etc.
           </p>
           <p>
             As a result we have added a number of options to the Query Options
-            property in Blotter Options to allow you manage how Queries work.
+            property in Adaptable Options to allow you manage how Queries work.
           </p>
           <p>
             Some of these options also apply when using the column filter
@@ -47,9 +47,9 @@ export default () => {
           </p>
           <ul>
             <li>
-              <b>Server Lookups Demo:</b> Provide the Adaptable Blotter
-              dynamically with the list of values each time a list of distinct
-              cell values is required.
+              <b>Server Lookups Demo:</b> Provide Adaptable dynamically with the
+              list of values each time a list of distinct cell values is
+              required.
             </li>
             <li>
               <b>Ignore Case Demo:</b> By default case is ignored when running

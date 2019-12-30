@@ -51,8 +51,8 @@ export default () => {
         <div>
           <h4>Chart</h4>
           <p>
-            The Adaptable Blotter contains powerful charting capabilities
-            (courtesy of our partner{' '}
+            Adaptable contains powerful charting capabilities (courtesy of our
+            partner{' '}
             <a
               href=" https://www.infragistics.com/products/ignite-ui-react"
               target="_blank"

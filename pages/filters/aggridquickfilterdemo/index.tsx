@@ -12,7 +12,7 @@ export default () => {
           <p>
             The quick filter is the bar underneath the Column Header. If its set
             to visible in the underlying grid (for ag-Grid:
-            gridOptions.floatingfilter) it will work in the Adaptable Blotter.
+            gridOptions.floatingfilter) it will work in Adaptable.
           </p>
           <p>
             The quick filter allows you quick access to Column Filters so you

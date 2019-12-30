@@ -9,9 +9,9 @@ export default () => {
         <h4>Finsemble</h4>
       </p>
       <p>
-        The Adaptable Blotter is designed to run in single or multiple blotter
-        mode. Its easy to create many instances of the Blotter and have them
-        share data, events and state.
+        Adaptable is designed to run in single or multiple blotter mode. Its
+        easy to create many instances of the Blotter and have them share data,
+        events and state.
       </p>
       <p>
         However if you want to enjoy cutting-edge multiple blotter functionality
