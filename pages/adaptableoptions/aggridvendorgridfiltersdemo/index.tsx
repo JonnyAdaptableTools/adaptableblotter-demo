@@ -29,8 +29,8 @@ export default () => {
           </p>
           <p>
             Any filters created with these forms will NOT be stored with your
-            Adaptable Blotter state, e.g. if you type in the 'Ship Via' Floating
-            Filter bar, the Column Filter toolbar does <b>not</b> update.
+            Adaptable state, e.g. if you type in the 'Ship Via' Floating Filter
+            bar, the Column Filter toolbar does <b>not</b> update.
           </p>
           <p>
             This example we are using ag-Grid's Floating Filter and Filter Form.

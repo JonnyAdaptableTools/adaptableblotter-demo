@@ -10,7 +10,7 @@ export default () => {
         <div>
           <h4>Predefined Config Demo</h4>
           <p>
-            Typically you will pre-ship your Adaptable Blotter with 'Predefined
+            Typically you will pre-ship your Adaptable instance with 'Predefined
             Config' - ie objects that you have created at design time for your
             users to access when the application starts for the first time.
           </p>

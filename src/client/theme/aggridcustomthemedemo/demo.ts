@@ -25,7 +25,7 @@ export default () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
 
-  var blotterApi: BlotterApi;
+  var adaptableApi: BlotterApi;
   let rowData = JSON.parse(JSON.stringify(json));
 
   const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
@@ -42,12 +42,12 @@ export default () => {
   };
 
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  blotterApi = AdaptableBlotter.init(adaptableOptions);
+  adaptableApi = AdaptableBlotter.init(adaptableOptions);
 
-  blotterApi.eventApi.on(
+  adaptableApi.eventApi.on(
     'ThemeChanged',
     (themeChangedEventArgs: ThemeChangedEventArgs) => {
-      listenToThemeChanged(blotterApi, themeChangedEventArgs);
+      listenToThemeChanged(adaptableApi, themeChangedEventArgs);
     }
   );
 
@@ -58,7 +58,7 @@ export default () => {
 };
 
 function listenToThemeChanged(
-  blotterApi: BlotterApi,
+  adaptableApi: BlotterApi,
   args: ThemeChangedEventArgs
 ) {
   console.log(args);
@@ -82,8 +82,8 @@ function listenToThemeChanged(
     };
     rowStyles.push(evenStyle);
     rowStyles.push(oddStyle);
-    blotterApi.userInterfaceApi.setRowStyles(rowStyles);
+    adaptableApi.userInterfaceApi.setRowStyles(rowStyles);
   } else {
-    blotterApi.userInterfaceApi.clearRowStyles();
+    adaptableApi.userInterfaceApi.clearRowStyles();
   }
 }

@@ -16,7 +16,7 @@ import {
   MenuInfo,
 } from '@adaptabletools/adaptableblotter/App_Scripts/PredefinedConfig/Common/Menu';
 
-var blotterApi: BlotterApi;
+var adaptableApi: BlotterApi;
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
@@ -55,7 +55,7 @@ export default () => {
   };
 
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  blotterApi = AdaptableBlotter.init(adaptableOptions);
+  adaptableApi = AdaptableBlotter.init(adaptableOptions);
 
   return {
     demoConfig,
@@ -75,7 +75,7 @@ let demoConfig: PredefinedConfig = {
       {
         Label: 'Mimise Dashboard',
         UserMenuItemClickedFunction: () => {
-          blotterApi.dashboardApi.Minimise();
+          adaptableApi.dashboardApi.Minimise();
         },
       },
       {
@@ -84,25 +84,29 @@ let demoConfig: PredefinedConfig = {
           {
             Label: 'Set Error',
             UserMenuItemClickedFunction: () => {
-              blotterApi.systemStatusApi.setErrorSystemStatus('System Down');
+              adaptableApi.systemStatusApi.setErrorSystemStatus('System Down');
             },
           },
           {
             Label: 'Set Warning',
             UserMenuItemClickedFunction: () => {
-              blotterApi.systemStatusApi.setWarningSystemStatus('System Slow');
+              adaptableApi.systemStatusApi.setWarningSystemStatus(
+                'System Slow'
+              );
             },
           },
           {
             Label: 'Set Success',
             UserMenuItemClickedFunction: () => {
-              blotterApi.systemStatusApi.setSuccessSystemStatus('System Fine');
+              adaptableApi.systemStatusApi.setSuccessSystemStatus(
+                'System Fine'
+              );
             },
           },
           {
             Label: 'Set Info',
             UserMenuItemClickedFunction: () => {
-              blotterApi.systemStatusApi.setInfoSystemStatus(
+              adaptableApi.systemStatusApi.setInfoSystemStatus(
                 'Demos working fine'
               );
             },

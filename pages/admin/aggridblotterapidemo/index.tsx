@@ -33,7 +33,7 @@ export default () => {
           </p>
           <p>
             In this example we create our own form controls (external to the
-            Adaptable Blotter) but we call the QuickSearch API to run and clear
+            Adaptable instance) but we call the QuickSearch API to run and clear
             Quick Search, Dashboard API to manage Dashboard visibility, Layout
             API to load a layout and Column Chooser API to show the column
             chooser. Note that the functions run as if you were using the

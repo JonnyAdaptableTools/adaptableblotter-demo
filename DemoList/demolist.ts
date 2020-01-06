@@ -23,13 +23,13 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'No Config',
             Link: '/config/aggridnoconfigdemo',
             Description:
-              'An Adaptable Blotter with no Predefined Config supplied.  This is unlikely to be the case in a production scenario as you will pre-ship the Blotter with your objects.',
+              'An Adaptable instance with no Predefined Config supplied.  This is unlikely to be the case in a production scenario as you will pre-ship the Blotter with your objects.',
           },
           {
             Name: 'Predefined Config',
             Link: '/config/aggridpredefinedconfigdemo',
             Description:
-              'An Adaptable Blotter with lots of different Predefined Config elements supplied.',
+              'An Adaptable instance with lots of different Predefined Config elements supplied.',
           },
         ],
       },
@@ -426,7 +426,7 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'No Code',
             Link: '/admin/aggridnocodedemo',
             Description:
-              'Create an Adaptable Blotter instance dynamically from a JSON or Excel file that you provide; your Blotter will include the full range of functions and all the advanced functionality like state management and audit.',
+              'Create an Adaptable instance dynamically from a JSON or Excel file that you provide; your Blotter will include the full range of functions and all the advanced functionality like state management and audit.',
           },
         ],
       },

@@ -49,8 +49,8 @@ export default () => {
         <div>
           <h4>Search Functions</h4>
           <p>
-            There are a number of different ways to search for data in the
-            Adaptable Blotter:
+            There are a number of different ways to search for data in
+            Adaptable:
           </p>
           <ul>{demoLinks}</ul>
           Click on the buttons below to see a demo for each search function.

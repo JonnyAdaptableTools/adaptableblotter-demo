@@ -30,37 +30,39 @@ export default () => {
   };
 
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  let blotterApi = AdaptableBlotter.init(adaptableOptions);
+  let adaptableApi = AdaptableBlotter.init(adaptableOptions);
 
-  blotterApi.eventApi.on('BlotterReady', () => {
+  adaptableApi.eventApi.on('BlotterReady', () => {
     setTimeout(() => {
-      blotterApi.gridApi.setGridData(JSON.parse(JSON.stringify(json)));
+      adaptableApi.gridApi.setGridData(JSON.parse(JSON.stringify(json)));
     }, 500);
   });
 
-  blotterApi.eventApi.on(
+  adaptableApi.eventApi.on(
     'ToolbarButtonClicked',
     toolbarButtonClickedEventArgs => {
       switch (toolbarButtonClickedEventArgs.data[0].id.toolbarButton.Name) {
         case 'info':
-          blotterApi.systemStatusApi.setInfoSystemStatus('No issues');
+          adaptableApi.systemStatusApi.setInfoSystemStatus('No issues');
           break;
         case 'success':
-          blotterApi.systemStatusApi.setSuccessSystemStatus('All working fine');
+          adaptableApi.systemStatusApi.setSuccessSystemStatus(
+            'All working fine'
+          );
           break;
         case 'warning':
-          blotterApi.systemStatusApi.setWarningSystemStatus(
+          adaptableApi.systemStatusApi.setWarningSystemStatus(
             'Problems with server'
           );
           break;
         case 'error':
-          blotterApi.systemStatusApi.setErrorSystemStatus(
+          adaptableApi.systemStatusApi.setErrorSystemStatus(
             'The server is down!',
             'Please do not make any edits until the server comes back up'
           );
           break;
         case 'clear':
-          blotterApi.systemStatusApi.clearSystemStatus();
+          adaptableApi.systemStatusApi.clearSystemStatus();
           break;
       }
     }

@@ -11,8 +11,8 @@ export default () => {
           <h4>Big Data</h4>
           <p>
             Most of the demos on this site use a version of the Northwind Orders
-            demo that has 800 rows. This is done deliberately to show that the
-            Adaptable Blotter works with any data set.
+            demo that has 800 rows. This is done deliberately to show that
+            Adaptable works with any data set.
           </p>
           <p>
             But we're often asked if Adaptable works as well with big data sets

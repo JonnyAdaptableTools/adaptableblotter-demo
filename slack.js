@@ -64,4 +64,4 @@ function sendToSlack(s, theUsername, theIconUrl, theIconEmoji, theChannel) {
   });
 }
 
-sendToSlack(tag + ' of Adaptable Blotter demo has been deployed');
+sendToSlack(tag + ' of Adaptable demo has been deployed');

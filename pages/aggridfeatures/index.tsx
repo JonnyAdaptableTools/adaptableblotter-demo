@@ -51,8 +51,8 @@ export default () => {
           <h4>ag Grid Features Demos</h4>
           <p>
             ag-Grid provides many advanced features for (row and column)
-            grouping, pivoting, tree views and master-detail grids. The
-            Adaptable Blotter works well for each of these.
+            grouping, pivoting, tree views and master-detail grids. Adaptable
+            works well for each of these.
           </p>
           <ul>{demoLinks}</ul>
           Click on the buttons below to see a demo for each administrative task.

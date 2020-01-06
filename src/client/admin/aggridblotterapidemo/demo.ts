@@ -22,7 +22,7 @@ import predefinedConfig from './config';
 export default () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
-  let blotterApi: BlotterApi;
+  let adaptableApi: BlotterApi;
   let rowData = JSON.parse(JSON.stringify(json));
 
   const columndefs = helperAgGrid.getFilteredColumnSchema();
@@ -40,7 +40,7 @@ export default () => {
   };
 
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  blotterApi = AdaptableBlotter.init(adaptableOptions);
+  adaptableApi = AdaptableBlotter.init(adaptableOptions);
 
   const testDiv: HTMLElement | null = document.getElementById('aboveGridDiv');
   if (testDiv != null) {
@@ -111,7 +111,7 @@ export default () => {
     if (element != null) {
       let searchValue = element.value;
       if (searchValue != null && searchValue != '') {
-        blotterApi.quickSearchApi.applyQuickSearch(searchValue);
+        adaptableApi.quickSearchApi.applyQuickSearch(searchValue);
       }
     }
   }
@@ -120,27 +120,27 @@ export default () => {
     const element: any = document.getElementById('txtQuickSearchText');
     if (element != null) {
       element.value = '';
-      blotterApi.quickSearchApi.clearQuickSearch();
+      adaptableApi.quickSearchApi.clearQuickSearch();
     }
   }
 
   function minimiseDashboard() {
-    blotterApi.dashboardApi.Minimise();
+    adaptableApi.dashboardApi.Minimise();
   }
 
   function maximiseadshboard() {
-    blotterApi.dashboardApi.SetVisibility('Visible');
+    adaptableApi.dashboardApi.SetVisibility('Visible');
   }
 
   function showOrdersLayout() {
-    blotterApi.layoutApi.setLayout('Orders');
+    adaptableApi.layoutApi.setLayout('Orders');
   }
 
   function loadVileTheme() {
-    blotterApi.themeApi.loadTheme('vile-theme');
+    adaptableApi.themeApi.loadTheme('vile-theme');
   }
 
   function showColumnChooserPopup() {
-    blotterApi.columnChooserApi.showColumnChooserPopup();
+    adaptableApi.columnChooserApi.showColumnChooserPopup();
   }
 };

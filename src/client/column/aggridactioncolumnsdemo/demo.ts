@@ -10,17 +10,14 @@ import '../../../../DemoPage/aggriddemo.css';
 
 import {
   AdaptableBlotterOptions,
-  IAdaptableBlotter,
   BlotterApi,
 } from '@adaptabletools/adaptableblotter/types';
 
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import predefinedConfig from './config';
-import {
-  ActionColumnClickedEventArgs,
-  ActionColumnClickedInfo,
-} from '@adaptabletools/adaptableblotter/App_Scripts/Api/Events/BlotterEvents';
+import { ActionColumnClickedEventArgs } from '@adaptabletools/adaptableblotter-react-aggrid/adaptableblotter/App_Scripts/Api/Events/ActionColumnClicked';
+import { ActionColumnClickedInfo } from '@adaptabletools/adaptableblotter/App_Scripts/Api/Events/ActionColumnClicked';
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
@@ -43,12 +40,12 @@ export default () => {
   };
 
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  const blotterApi = AdaptableBlotter.init(adaptableOptions);
+  const adaptableApi = AdaptableBlotter.init(adaptableOptions);
 
-  blotterApi.eventApi.on(
+  adaptableApi.eventApi.on(
     'ActionColumnClicked',
     (actionColumnEventArgs: ActionColumnClickedEventArgs) => {
-      onActionColumnClicked(blotterApi, actionColumnEventArgs);
+      onActionColumnClicked(adaptableApi, actionColumnEventArgs);
     }
   );
   return {
@@ -57,7 +54,7 @@ export default () => {
   };
 
   function onActionColumnClicked(
-    blotterApi: BlotterApi,
+    adaptableApi: BlotterApi,
     actionColumnEventArgs: ActionColumnClickedEventArgs
   ) {
     let actionColumnClickedInfo: ActionColumnClickedInfo =
@@ -66,19 +63,21 @@ export default () => {
 
     if (actionColumnEventArgs.data[0].id.actionColumn.ColumnId == 'Plus') {
       let itemCount = rowData.ItemCount;
-      blotterApi.gridApi.setCellValue(
+      adaptableApi.gridApi.setCellValue(
         'ItemCount',
         itemCount + 1,
-        actionColumnClickedInfo.primaryKeyValue
+        actionColumnClickedInfo.primaryKeyValue,
+        true
       );
     } else if (
       actionColumnEventArgs.data[0].id.actionColumn.ColumnId == 'Minus'
     ) {
       let itemCount = rowData.ItemCount;
-      blotterApi.gridApi.setCellValue(
+      adaptableApi.gridApi.setCellValue(
         'ItemCount',
         itemCount - 1,
-        actionColumnClickedInfo.primaryKeyValue
+        actionColumnClickedInfo.primaryKeyValue,
+        true
       );
     } else if (
       actionColumnEventArgs.data[0].id.actionColumn.ColumnId == 'Multiply'
@@ -86,15 +85,16 @@ export default () => {
       let multiplier: number = rowData.ItemCost > 75 ? 2 : 3;
       let newItemCost = rowData.ItemCost * multiplier;
       newItemCost = Math.round(newItemCost * 100) / 100;
-      blotterApi.gridApi.setCellValue(
+      adaptableApi.gridApi.setCellValue(
         'ItemCost',
         newItemCost,
-        actionColumnClickedInfo.primaryKeyValue
+        actionColumnClickedInfo.primaryKeyValue,
+        true
       );
     } else if (
       actionColumnEventArgs.data[0].id.actionColumn.ColumnId == 'Action'
     ) {
-      blotterApi.gridApi.deleteGridData([actionColumnClickedInfo.rowData]);
+      adaptableApi.gridApi.deleteGridData([actionColumnClickedInfo.rowData]);
     }
   }
 };

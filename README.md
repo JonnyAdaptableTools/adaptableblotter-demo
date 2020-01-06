@@ -4,7 +4,7 @@ Repository for a demo that showcases the powerful, data-agnostic Adaptable.
 
 You can run Adaptable with a number of different dummy data sets. And there is also an option to run the Blotter with ag-Grid grouping and aggregation functions.
 
-## Adaptable Blotter
+## Adaptable
 
 Adaptable is a powerful HTML5 DataGrid add-on that integrates with the leading datagrid components and provides all the additional, rich functionality that financial and other advanced users expect from their grids and blotters.
 

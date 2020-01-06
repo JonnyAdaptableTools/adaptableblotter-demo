@@ -24,7 +24,7 @@ export default () => {
       </p>
       <p>
         We have a demo coming soon but in the meantime here are a couple of
-        videos that show how Finsemble enables multiple Adaptable Blotters to
+        videos that show how Finsemble enables multiple Adaptable instances to
         share state, data and events. .
       </p>
       <p>

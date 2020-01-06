@@ -37,7 +37,7 @@ export default () => {
   };
 
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  const blotterApi = AdaptableBlotter.init(adaptableOptionsClone);
+  const adaptableApi = AdaptableBlotter.init(adaptableOptionsClone);
 
   return {
     predefinedConfig,

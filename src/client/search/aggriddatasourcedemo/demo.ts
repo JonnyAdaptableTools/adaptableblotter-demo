@@ -39,12 +39,12 @@ export default () => {
   };
 
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  const blotterApi = AdaptableBlotter.init(adaptableOptions);
+  const adaptableApi = AdaptableBlotter.init(adaptableOptions);
 
-  blotterApi.eventApi.on(
+  adaptableApi.eventApi.on(
     'SearchChanged',
     (searchChangedArgs: SearchChangedEventArgs) => {
-      listenToSearchChange(blotterApi, helperAgGrid, searchChangedArgs);
+      listenToSearchChange(adaptableApi, helperAgGrid, searchChangedArgs);
     }
   );
 
@@ -54,7 +54,7 @@ export default () => {
   };
 
   function listenToSearchChange(
-    blotterApi: BlotterApi,
+    adaptableApi: BlotterApi,
     helperAgGrid: HelperAgGrid,
     searchChangedArgs: SearchChangedEventArgs
   ) {
@@ -68,23 +68,23 @@ export default () => {
           case 'Euro Trades':
             let euroTrades = helperAgGrid.getEuroTrades(500);
 
-            blotterApi.gridApi.setGridData(euroTrades);
+            adaptableApi.gridApi.setGridData(euroTrades);
             break;
 
           case 'Dollar Trades':
             let dollarTrades = helperAgGrid.getDollarTrades(200);
 
-            blotterApi.gridApi.setGridData(dollarTrades);
+            adaptableApi.gridApi.setGridData(dollarTrades);
             break;
 
           case 'GBP Trades':
             let sterlingTrades = helperAgGrid.getGBPTrades(12);
-            blotterApi.gridApi.setGridData(sterlingTrades);
+            adaptableApi.gridApi.setGridData(sterlingTrades);
             break;
 
           case '2019 Actiivty':
             let thisYearTrades = helperAgGrid.getThisYearTrades(300);
-            blotterApi.gridApi.setGridData(thisYearTrades);
+            adaptableApi.gridApi.setGridData(thisYearTrades);
             break;
         }
       }

@@ -53,8 +53,8 @@ export default () => {
           <ul>{demoLinks}</ul>
           <p>
             {' '}
-            Note: there is also the Audit Log which streams all actions in the
-            Adaptable Blotter to a destination of your choice.
+            Note: there is also the Audit Log which streams all actions in
+            Adaptable to a destination of your choice.
           </p>
           Click on the buttons below to see a demo for our Alert and Messaging
           functions.

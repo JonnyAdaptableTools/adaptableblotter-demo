@@ -36,9 +36,9 @@ export default () => {
   };
 
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  const blotterApi = AdaptableBlotter.init(adaptableOptions);
+  const adaptableApi = AdaptableBlotter.init(adaptableOptions);
 
-  blotterApi.eventApi.on(
+  adaptableApi.eventApi.on(
     'ToolbarVisibilityChanged',
     (toolbarVisibilityChangedEventArgs: ToolbarVisibilityChangedEventArgs) => {
       if (
@@ -50,13 +50,13 @@ export default () => {
 
         ReactDOM.render(
           toolbarContents,
-          blotterApi.dashboardApi.getCustomToolbarContentsDiv('Trades')
+          adaptableApi.dashboardApi.getCustomToolbarContentsDiv('Trades')
         );
       }
     }
   );
 
-  blotterApi.eventApi.on(
+  adaptableApi.eventApi.on(
     'ToolbarButtonClicked',
     (toolbarButtonClickedEventArgs: ToolbarButtonClickedEventArgs) => {
       alert(

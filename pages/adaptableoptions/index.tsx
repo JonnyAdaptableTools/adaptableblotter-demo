@@ -55,8 +55,8 @@ export default () => {
           </p>
           <p>
             This has a very large number of properties which allow you complete
-            control over how you set up your Adaptable Blotter, and we have used
-            many of them in the demos above (e.g. the Audit Log demo in the
+            control over how you set up your Adaptable instance, and we have
+            used many of them in the demos above (e.g. the Audit Log demo in the
             Admin section).
           </p>
           <p>

@@ -46,8 +46,8 @@ export default () => {
           windows menu under 'Adaptable Tools').
         </p>
         <p>
-          Alternatively watch the video below to see how OpenFin and the
-          Adaptable Blotter work together.
+          Alternatively watch the video below to see how OpenFin and Adaptable
+          work together.
         </p>
         <p>
           <iframe

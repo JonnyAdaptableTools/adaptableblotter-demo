@@ -1,8 +1,8 @@
 {
   "devtools_port": 9090,
   "startup_app": {
-    "name": "Dev - OpenFin with Adaptable Blotter",
-    "description": "Dev - OpenFin with Adaptable Blotter",
+    "name": "Dev - OpenFin with Adaptable",
+    "description": "Dev - OpenFin with Adaptable",
     "applicationIcon": "http://images8.webydo.com/92/9227175/3958/FB1B6AA0-1649-8F4A-7ED2-1F1B38CCFC1A.png",
     "url": "http://localhost:8080",
     "uuid": "dev-openfin-adaptable-blotter-demo",
@@ -20,9 +20,9 @@
   "splashScreenImage": "http://images8.webydo.com/92/9227175/3958/FB1B6AA0-1649-8F4A-7ED2-1F1B38CCFC1A.png",
   "shortcut": {
     "company": "Adaptable Tools",
-    "description": "Dev - Adaptable Blotter Demo",
+    "description": "Dev - Adaptable Demo",
     "icon": "http://images8.webydo.com/92/9227175/3958/FB1B6AA0-1649-8F4A-7ED2-1F1B38CCFC1A.png",
-    "name": "Dev - Adaptable Blotter Demo"
+    "name": "Dev - Adaptable Demo"
   },
   "appAssets": [
     {

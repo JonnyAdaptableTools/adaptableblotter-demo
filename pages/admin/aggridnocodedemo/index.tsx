@@ -10,7 +10,7 @@ export default () => {
         <div>
           <h4>No Code Demo</h4>
           <p>
-            The no code version allows you to create an Adaptable Blotter at
+            The No Code Plugin allows you to create an Adaptable instance at
             runtime from any JSON (and soon any Excel) file that you give it.
           </p>
           <p>
@@ -35,8 +35,8 @@ export default () => {
             >
               Adaptable Options
             </a>{' '}
-            that you would normally provide at design-time to ensure that the
-            Adaptable Blotter suits your requirements.
+            that you would normally provide at design-time to ensure that your
+            Adaptable instance suits your requirements.
           </p>
         </div>
       }

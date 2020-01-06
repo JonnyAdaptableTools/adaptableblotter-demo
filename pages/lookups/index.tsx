@@ -37,18 +37,17 @@ export default () => {
             section of the Query Builder, or in the Bulk Update function.
           </p>
           <p>
-            By default when showing list of available column values, the
-            Adaptable Blotter will show the first 2,000 distinct values, but you
-            can amend this by setting the <b>maxColumnValueItemsDisplayed</b>{' '}
-            property in Query Options section of Adaptable Options. <br />
+            By default when showing list of available column values, Adaptable
+            will show the first 2,000 distinct values, but you can amend this by
+            setting the <b>maxColumnValueItemsDisplayed</b> property in Query
+            Options section of Adaptable Options. <br />
             Any values that exceed the count will be ignored. See the{' '}
             <b>Max Items Displayed Demo</b>.
           </p>
           <p>
             There is a hierarchy for how Adaptable will retrieve this options as
-            follows: (Note: in all 3 options, the Adaptable Blotter will not
-            show more values than that set in the maxColumnValueItemsDisplayed
-            property)
+            follows: (Note: in all 3 options, Adaptable will not show more
+            values than that set in the maxColumnValueItemsDisplayed property)
           </p>
           <ol>
             <li>

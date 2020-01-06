@@ -39,11 +39,11 @@ export default () => {
   };
 
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  const blotterApi = AdaptableBlotter.init(adaptableOptions);
+  const adaptableApi = AdaptableBlotter.init(adaptableOptions);
 
   tickingDataHelper.startTickingDataagGridTradesUpdateData(
     gridOptions,
-    blotterApi,
+    adaptableApi,
     4000,
     tradeCount
   );

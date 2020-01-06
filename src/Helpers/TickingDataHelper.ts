@@ -6,7 +6,7 @@ import { BlotterApi } from '@adaptabletools/adaptableblotter/types';
 export class TickingDataHelper {
   public testTickingDataagGrid(
     gridOptions: any,
-    blotterApi: BlotterApi,
+    adaptableApi: BlotterApi,
     tickingFrequency: number,
     tradeCount: number
   ) {
@@ -41,7 +41,7 @@ export class TickingDataHelper {
           trade.bloombergBid = bloombergBid;
           trade.notional = notional;
           trade.changeOnYear = changeOnYear;
-          blotterApi.gridApi.updateGridData([trade]);
+          adaptableApi.gridApi.updateGridData([trade]);
         }
 
         if (useRowNodeSetDataValue) {
@@ -110,7 +110,7 @@ export class TickingDataHelper {
 
   public startTickingDataagGridTradesUpdateData(
     gridOptions: any,
-    blotterApi: BlotterApi,
+    adaptableApi: BlotterApi,
     tickingFrequency: number,
     tradeCount: number,
     updateNotional: boolean = false
@@ -152,7 +152,7 @@ export class TickingDataHelper {
           }
         }
 
-        blotterApi.gridApi.updateGridData([trade]);
+        adaptableApi.gridApi.updateGridData([trade]);
       }, tickingFrequency);
     }
   }

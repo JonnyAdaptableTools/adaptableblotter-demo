@@ -57,7 +57,9 @@ export default () => {
               API
             </a>
             :{' '}
-            <i>blotterApi.gridApi.deleteGridData([args.data[0].id.rowData]);</i>
+            <i>
+              adaptableApi.gridApi.deleteGridData([args.data[0].id.rowData]);
+            </i>
           </p>
           <p>
             <b>Adaptable Help Resources:</b>{' '}
