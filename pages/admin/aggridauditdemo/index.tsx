@@ -27,7 +27,7 @@ export default () => {
           <p>
             This example fires Cell Edit, User State and Function Applied events
             to the Console; open the Console in Developer Tools and see the
-            messages appear as you edit data and create objects in the Blotter.
+            messages appear as you edit data and create objects in Adaptable.
           </p>
           <p>
             <b>Adaptable Help Resources:</b>{' '}

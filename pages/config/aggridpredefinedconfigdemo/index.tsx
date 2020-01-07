@@ -29,7 +29,7 @@ export default () => {
           <p>
             As well as pre-loading state Adaptable also automatically save
             state. Edit these objects or create some of your own and refresh the
-            page and you will see the Blotter will reload with all your changes.
+            page and you will see Adaptable will reload with all your changes.
           </p>
 
           <p>

@@ -1,10 +1,10 @@
 import React from 'react';
 
-// import the blotter and types
+// import Adaptable and types
 import AdaptableBlotterReact from '@adaptabletools/adaptableblotter-react-aggrid';
 import { AdaptableBlotterOptions } from '@adaptabletools/adaptableblotter-react-aggrid';
 
-// import blotter css and themes
+// import Adaptable css and themes
 import '@adaptabletools/adaptableblotter-react-aggrid/base.css';
 import '@adaptabletools/adaptableblotter-react-aggrid/themes/light.css';
 import '@adaptabletools/adaptableblotter-react-aggrid/themes/dark.css';

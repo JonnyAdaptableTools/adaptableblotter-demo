@@ -13,7 +13,7 @@ export default () => {
           </h4>
           <p>
             Adaptable includes a very rich API that offers full programmatic
-            access to all functionality and Blotter state.
+            access to all functionality and Adaptable state.
           </p>
           <p>
             There are hundreds of functions in the{' '}
@@ -28,28 +28,28 @@ export default () => {
           </p>
           <p>
             This allows you to bypass Adaptable GUI if you so desire but still
-            to have access to the core objects and thereby allow the Adaptable
-            Blotter to manage all the complexities around state managements.
+            to have access to the core objects and thereby allow Adaptable to
+            manage all the complexities around state managements.
           </p>
           <p>
             In this example we create our own form controls (external to the
             Adaptable instance) but we call the QuickSearch API to run and clear
             Quick Search, Dashboard API to manage Dashboard visibility, Layout
             API to load a layout and Column Chooser API to show the column
-            chooser. Note that the functions run as if you were using the
-            Blotter and that all State is stored (refresh the page to see).
+            chooser. Note that the functions run as if you were using Adaptable
+            and that all State is stored (refresh the page to see).
           </p>
           <p>
             <b>Adaptable Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_interface_iblotterapi_.iblotterapi.html"
+              href="https://api.adaptableblotter.com/interfaces/_api_adaptableapi_.adaptableapi"
               target="_blank"
             >
               Adaptable API
             </a>
             ,{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754777-Blotter-API"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754777-Adaptable-API"
               target="_blank"
             >
               User Guide

@@ -23,7 +23,7 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'No Config',
             Link: '/config/aggridnoconfigdemo',
             Description:
-              'An Adaptable instance with no Predefined Config supplied.  This is unlikely to be the case in a production scenario as you will pre-ship the Blotter with your objects.',
+              'An Adaptable instance with no Predefined Config supplied.  This is unlikely to be the case in a production scenario as you will pre-ship Adaptable with your objects.',
           },
           {
             Name: 'Predefined Config',
@@ -53,7 +53,7 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Data Source Selector',
             Link: '/search/aggriddatasourcedemo',
             Description:
-              'A list of Data Sources provided at run-time (e.g. books, stored procs); when one is selected an event is fired that you can listen to and then populate the Blotter with data via the API.',
+              'A list of Data Sources provided at run-time (e.g. books, stored procs); when one is selected an event is fired that you can listen to and then populate Adaptable with data via the API.',
           },
         ],
       },
@@ -427,7 +427,7 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'No Code',
             Link: '/admin/aggridnocodedemo',
             Description:
-              'Create an Adaptable instance dynamically from a JSON or Excel file that you provide; your Blotter will include the full range of functions and all the advanced functionality like state management and audit.',
+              'Create an Adaptable instance dynamically from a JSON or Excel file that you provide; your Adaptable instance will include the full range of functions and all the advanced functionality like state management and audit.',
           },
         ],
       },
@@ -544,19 +544,19 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Finsemble',
             Link: '/partners/finsembledemo',
             Description:
-              'We leverage the powerful offering to enable multiple Blotter to share state, data and events.',
+              'We leverage the powerful offering to enable multiple Adaptable instances to share state, data and events.',
           },
           {
             Name: 'iPushPull',
             Link: '/partners/ipushpulldemo',
             Description:
-              'Export Blotter data to Excel (with Live Updates) or Symphony and elsewhere by using the services of our partner iPushPull.',
+              'Export Adaptable data to Excel (with Live Updates) or Symphony and elsewhere by using the services of our partner iPushPull.',
           },
           {
             Name: 'OpenFin',
             Link: '/partners/openfindemo',
             Description:
-              'If you are using this popular container we offer "Live Updates" so that data exported to Excel updates in real time as the Blotter ticks or is edited.',
+              'If you are using this popular container we offer "Live Updates" so that data exported to Excel updates in real time as Adaptable data ticks or is edited.',
           },
         ],
       },

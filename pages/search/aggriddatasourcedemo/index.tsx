@@ -39,7 +39,7 @@ export default () => {
           </p>
           <p>
             In this example we created 4 Data Sources. We subscribe to
-            SearchChanged event, fetch the relevant data and send to the Blotter
+            SearchChanged event, fetch the relevant data and send to Adaptable
             via the API. We also ouput the event info to the console for your
             convenience.
           </p>

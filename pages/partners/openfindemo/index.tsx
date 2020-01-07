@@ -24,9 +24,9 @@ export default () => {
         </p>
         <p>
           One of these is <b>Live Updates</b>. When running in OpenFin if you
-          export data to Excel, then any changes made to your data in the
-          Blotter (either user edits or ticking data changes) are immediately
-          reflected in Excel also.
+          export data to Excel, then any changes made to your data in Adaptable
+          (either user edits or ticking data changes) are immediately reflected
+          in Excel also.
         </p>
         <p>
           Try it for yourself:{' '}

@@ -45,7 +45,7 @@ export default () => {
   });
   return (
     <MainPage
-      pageTitle={'Blotter Option demos'}
+      pageTitle={'Adaptable Option demos'}
       description={
         <div>
           <h4>Adaptable Option Demos</h4>

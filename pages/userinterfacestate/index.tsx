@@ -57,7 +57,7 @@ export default () => {
             </li>
             <li>
               <b>Max Items Displayed Demo:</b> By default when showing list of
-              available column values the Blotter will show the first 5,000
+              available column values, Adaptable will show the first 5,000
               distinct values, but you can amend this number.
             </li>
           </ul>

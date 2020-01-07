@@ -60,10 +60,9 @@ export default () => {
               for more information.
             </li>
             <li>
-              <b>Permitted Column Values:</b> You can provide the Adaptable
-              Blotter at startup with a list of column names and a list of
-              values which should be displayed when getting distinct values for
-              that column.
+              <b>Permitted Column Values:</b> You can provide Adaptable at
+              startup with a list of column names and a list of values which
+              should be displayed when getting distinct values for that column.
               <br />
               You do this through UserInterface state section of Predefined
               Config. See the Permitted Values demo for more information.

@@ -27,8 +27,8 @@ export default () => {
           </p>
           <p>
             In this example we have created a 'Wimbledon Theme' that styles the
-            Blotter purple and green, with slightly rounded borders. Note that
-            we use{' '}
+            Adaptable instance purple and green, with slightly rounded borders.
+            Note that we use{' '}
             <a href="../../style/aggridrowstyledemo" target="_self">
               Row Styles
             </a>{' '}
@@ -43,7 +43,7 @@ export default () => {
             >
               Theme Predefined Config
             </a>{' '}
-            to tell the Blotter to load the ag-Grid <i>ag-theme-blue</i> theme
+            to tell Adaptable to load the ag-Grid <i>ag-theme-blue</i> theme
             also.
           </p>
           <p>

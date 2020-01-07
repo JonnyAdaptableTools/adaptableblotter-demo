@@ -22,7 +22,7 @@ export default () => {
           </p>
           <p>
             This is where <b>Named Filters</b> come in. You can create at{' '}
-            <b>design time</b> a Named Filter and provide the Blotter with the
+            <b>design time</b> a Named Filter and provide Adaptable with the
             Predicate function required to evaluate it.
           </p>
           <p>

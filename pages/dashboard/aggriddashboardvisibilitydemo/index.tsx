@@ -13,8 +13,8 @@ export default () => {
           <h4>Dashboard Visibility Demo</h4>
           <p>
             You can specify - through Predefined Config - the visibility and of
-            the Dashboard; options are: Visible (default), Minimised (just
-            Blotter name is shown) and Hidden.
+            the Dashboard; options are: Visible (default), Minimised (just the
+            instance name is shown) and Hidden.
           </p>
           <p>
             Minimise / maximise the Dashboard by clicking the cheveron in the
@@ -26,9 +26,9 @@ export default () => {
             startup.{' '}
           </p>
           <p>
-            Note: we have also set the name of the Toolbar to 'Blotter Toolbar'
-            (via the <i>HomeToolbarTitle</i> property in Dashboard Config. (If
-            not set, it defaults to the 'blotterId' property in{' '}
+            Note: we have also set the name of the Toolbar to 'Adaptable
+            Toolbar' (via the <i>HomeToolbarTitle</i> property in Dashboard
+            Config. (If not set, it defaults to the 'blotterId' property in{' '}
             <i>Adaptable Options</i>).
           </p>
         </div>

@@ -50,10 +50,7 @@ export default () => {
       description={
         <div>
           <h4>Edit Functions</h4>
-          <p>
-            There are a number of different ways to edit data in the Adaptable
-            Blotter:
-          </p>
+          <p>There are a number of different ways to edit data in Adaptable:</p>
           <ul>{demoLinks}</ul>
           Click on the buttons below to see a demo for each edit function.
         </div>

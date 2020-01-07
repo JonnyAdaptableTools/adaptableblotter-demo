@@ -14,8 +14,8 @@ export default () => {
             selected cells using a variety of mathematical operations.
           </p>
           <p>
-            You can create your own operations or use the ones shippped with the
-            Blotter (most of which work only on numeric columns).
+            You can create your own operations or use the ones shippped with
+            Adaptable (most of which work only on numeric columns).
           </p>
           <p>
             Try it: highlight a group of cells and see the value change in the

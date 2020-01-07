@@ -28,9 +28,9 @@ export default () => {
           </p>
           <p>
             This property allows you to provide a method which will get the
-            distinct values you want to show from the Server and return to the
-            Blotter. If the return list is empty then we will show the list from
-            the grid as normal.
+            distinct values you want to show from the Server and return to
+            Adaptable. If the return list is empty then we will show the list
+            from the grid as normal.
           </p>
           <p>
             This example provides custom value list for the 'Cust. Ref' and

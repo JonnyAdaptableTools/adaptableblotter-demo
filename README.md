@@ -2,7 +2,7 @@
 
 Repository for a demo that showcases the powerful, data-agnostic Adaptable.
 
-You can run Adaptable with a number of different dummy data sets. And there is also an option to run the Blotter with ag-Grid grouping and aggregation functions.
+You can run Adaptable with a number of different dummy data sets.
 
 ## Adaptable
 

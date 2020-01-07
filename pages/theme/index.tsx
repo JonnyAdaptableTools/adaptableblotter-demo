@@ -49,8 +49,8 @@ export default () => {
         <div>
           <h4>Theming Adaptable</h4>
           <p>
-            You can theme (ie. set up the look and feel of) the Adaptable
-            Blotter entirely through{' '}
+            You can theme (ie. set up the look and feel of) Adaptable entirely
+            through{' '}
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties"
               target="_blank"
