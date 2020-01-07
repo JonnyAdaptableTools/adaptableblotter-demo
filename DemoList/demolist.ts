@@ -274,7 +274,8 @@ export function getDemoPageStructure(): DemoPageStructure {
           {
             Name: 'Sparkline Charts',
             Link: '/charts/aggridsparklinechartsdemo',
-            Description: 'To do...!!!!!!',
+            Description:
+              'Create a saveable SparkLine chart, which will show data as a series of points or graphs',
           },
           {
             Name: 'Sparkline (Column)',

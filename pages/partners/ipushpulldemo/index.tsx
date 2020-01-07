@@ -59,7 +59,7 @@ export default () => {
               target="_blank"
             >
               iPushPull State
-            </a>{' '}
+            </a>
             ), select the folder / page in iPushPull which should display this
             data, and click 'Export to iPushPull'. You will now see your
             (ticking) Blotter data in iPushPull.
