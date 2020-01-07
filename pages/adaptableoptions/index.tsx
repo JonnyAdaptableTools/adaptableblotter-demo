@@ -24,7 +24,7 @@ const DemoBox = ({ href, children }: { href: string; children: ReactNode }) => {
 
 export default () => {
   let categoryPages = getDemoPageStructure().Categories.find(
-    c => c.CategoryName == 'Blotter Options'
+    c => c.CategoryName == 'Adaptable Options'
   )!.Pages;
 
   let demoLinks: any = categoryPages.map((page: DemoPage) => {
@@ -45,27 +45,27 @@ export default () => {
   });
   return (
     <MainPage
-      pageTitle={'Blotter Option demos'}
+      pageTitle={'Adaptable Option demos'}
       description={
         <div>
-          <h4>Blotter Option Demos</h4>
+          <h4>Adaptable Option Demos</h4>
           <p>
-            When you create an instance of the Adaptable Blotter you will create
-            an <b>AdaptableBlotterOptions</b> object.
+            When you create an instance of Adaptable you will create an{' '}
+            <b>AdaptableOptions</b> object.
           </p>
           <p>
             This has a very large number of properties which allow you complete
-            control over how you set up your Adaptable Blotter, and we have used
-            many of them in the demos above (e.g. the Audit Log demo in the
+            control over how you set up your Adaptable instance, and we have
+            used many of them in the demos above (e.g. the Audit Log demo in the
             Admin section).
           </p>
           <p>
             This section contains a series of demos each of which highlights a
-            different property in AdaptableBlotterOptions.
+            different property in AdaptableOptions.
           </p>
           <p>These include:</p>
           <ul>{demoLinks}</ul>
-          Click on the buttons below to see the Blotter Options demos.
+          Click on the buttons below to see the Adaptable Options demos.
         </div>
       }
     >

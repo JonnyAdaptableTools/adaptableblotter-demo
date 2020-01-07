@@ -29,8 +29,8 @@ export default () => {
         <div>
           <h4>Example Demos</h4>
           <p>
-            These demos show the Adaptable Blotter with dummy data that mimics
-            real life examples.
+            These demos show Adaptable with dummy data that mimics real life
+            examples.
           </p>
           <ul>
             <li>

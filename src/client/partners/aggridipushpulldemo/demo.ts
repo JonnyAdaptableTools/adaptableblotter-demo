@@ -40,7 +40,7 @@ export default () => {
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, trades);
 
-  const blotterOptions: AdaptableBlotterOptions = {
+  const adaptableOptions: AdaptableBlotterOptions = {
     primaryKey: 'tradeId',
     userName: 'Demo User',
     blotterId: 'iPushPull Demo',
@@ -48,8 +48,8 @@ export default () => {
     predefinedConfig: predefinedConfig,
   };
 
-  const blotterOptionsClone = cloneDeep(blotterOptions);
-  let blotterAPI: BlotterApi = AdaptableBlotter.init(blotterOptions);
+  const adaptableOptionsClone = cloneDeep(adaptableOptions);
+  let blotterAPI: BlotterApi = AdaptableBlotter.init(adaptableOptions);
 
   tickingDataHelper.startTickingDataagGridTradesUpdateData(
     gridOptions,
@@ -61,7 +61,7 @@ export default () => {
 
   return {
     // predefinedConfig,
-    blotterOptions: blotterOptionsClone,
+    adaptableOptions: adaptableOptionsClone,
   };
 };
 
@@ -69,7 +69,9 @@ let predefinedConfig: PredefinedConfig = {
   Partner: {
     iPushPull: {
       iPushPullInstance: ipushpull,
-      // Username: process.env.IPUSHPULL_USERNAME as string,
+      Username: process.env.IPUSHPULL_USERNAME,
+      Password: process.env.IPUSHPULL_PASSWORD,
+      ThrottleTime: 5000,
     },
   },
 };

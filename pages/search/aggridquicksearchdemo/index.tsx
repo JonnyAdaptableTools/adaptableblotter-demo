@@ -24,7 +24,7 @@ export default () => {
             columns that start with 'g'.
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_quicksearchstate_.quicksearchstate.html"
               target="_blank"
@@ -36,7 +36,7 @@ export default () => {
               href="https://api.adaptableblotter.com/interfaces/_api_quicksearchapi_.quicksearchapi.html"
               target="_blank"
             >
-              Blotter API
+              Adaptable API
             </a>
             ,{' '}
             <a

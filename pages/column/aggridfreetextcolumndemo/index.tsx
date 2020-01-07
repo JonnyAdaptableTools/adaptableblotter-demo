@@ -25,7 +25,7 @@ export default () => {
             the user's state and reloaded with the grid.
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_freetextcolumnstate_.freetextcolumnstate.html"
               target="_blank"
@@ -37,7 +37,7 @@ export default () => {
               href="https://api.adaptableblotter.com/interfaces/_api_freetextcolumnapi_.freetextcolumnapi.html"
               target="_blank"
             >
-              Blotter API
+              Adaptable API
             </a>
             ,{' '}
             <a

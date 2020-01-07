@@ -12,11 +12,11 @@ import {
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import {
-  ContextMenuInfo,
-  AdaptableBlotterMenuItem,
+  AdaptableMenuItem,
+  MenuInfo,
 } from '@adaptabletools/adaptableblotter/App_Scripts/PredefinedConfig/Common/Menu';
 
-var blotterApi: BlotterApi;
+var adaptableApi: BlotterApi;
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
@@ -29,20 +29,37 @@ export default () => {
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
   gridOptions.floatingFilter = true;
 
-  const blotterOptions: AdaptableBlotterOptions = {
+  const adaptableOptions: AdaptableBlotterOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     blotterId: 'Column Menu Demo',
-    vendorGrid: gridOptions,
+    generalOptions: {
+      showAdaptableColumnMenu: (
+        menuItem: AdaptableMenuItem,
+        menuInfo: MenuInfo
+      ) => {
+        if (
+          menuInfo.column.ColumnId === 'Employee' &&
+          (menuItem.FunctionName === 'ColumnChooser' ||
+            menuItem.FunctionName === 'PieChart')
+        ) {
+          return false;
+        } else if (menuInfo.column.ColumnId === 'ContactName') {
+          return false;
+        }
+        return true;
+      },
+    },
     predefinedConfig: demoConfig,
+    vendorGrid: gridOptions,
   };
 
-  const blotterOptionsClone = cloneDeep(blotterOptions);
-  blotterApi = AdaptableBlotter.init(blotterOptions);
+  const adaptableOptionsClone = cloneDeep(adaptableOptions);
+  adaptableApi = AdaptableBlotter.init(adaptableOptions);
 
   return {
     demoConfig,
-    blotterOptions: blotterOptionsClone,
+    adaptableOptions: adaptableOptionsClone,
   };
 };
 
@@ -56,24 +73,43 @@ let demoConfig: PredefinedConfig = {
   UserInterface: {
     ColumnMenuItems: [
       {
-        Label: 'Column Menu 1',
-        UserMenuItemClickedFunction: (contextMenuInfo: ContextMenuInfo) => {
-          console.log(contextMenuInfo.column.FriendlyName);
+        Label: 'Mimise Dashboard',
+        UserMenuItemClickedFunction: () => {
+          adaptableApi.dashboardApi.Minimise();
         },
-        Icon:
-          '<img border="0" width="15" height="10" src="https://flags.fmcdn.net/data/flags/mini/gb.png"/>',
       },
       {
-        Label: 'Column Menu 2',
-      },
-      {
-        Label: 'Column Menu 3',
+        Label: 'Set System Status',
         SubMenuItems: [
           {
-            Label: 'Column Sub Menu 1',
+            Label: 'Set Error',
+            UserMenuItemClickedFunction: () => {
+              adaptableApi.systemStatusApi.setErrorSystemStatus('System Down');
+            },
           },
           {
-            Label: 'Column Sub Menu 2',
+            Label: 'Set Warning',
+            UserMenuItemClickedFunction: () => {
+              adaptableApi.systemStatusApi.setWarningSystemStatus(
+                'System Slow'
+              );
+            },
+          },
+          {
+            Label: 'Set Success',
+            UserMenuItemClickedFunction: () => {
+              adaptableApi.systemStatusApi.setSuccessSystemStatus(
+                'System Fine'
+              );
+            },
+          },
+          {
+            Label: 'Set Info',
+            UserMenuItemClickedFunction: () => {
+              adaptableApi.systemStatusApi.setInfoSystemStatus(
+                'Demos working fine'
+              );
+            },
           },
         ],
       },

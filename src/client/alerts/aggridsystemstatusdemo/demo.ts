@@ -1,5 +1,3 @@
-import * as Helper from '../../../Helpers/Helper';
-
 import AdaptableBlotter from '@adaptabletools/adaptableblotter/agGrid';
 import '@adaptabletools/adaptableblotter/index.css';
 
@@ -14,7 +12,6 @@ import { AdaptableBlotterOptions } from '@adaptabletools/adaptableblotter/types'
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import predefinedConfig from './config';
-import { ApplicationToolbarButtonClickedEventArgs } from '@adaptabletools/adaptableblotter/App_Scripts/Api/Events/BlotterEvents';
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
@@ -24,7 +21,7 @@ export default () => {
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, null);
 
-  const blotterOptions: AdaptableBlotterOptions = {
+  const adaptableOptions: AdaptableBlotterOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     blotterId: 'System Status Demo',
@@ -32,73 +29,40 @@ export default () => {
     predefinedConfig: predefinedConfig,
   };
 
-  const blotterOptionsClone = cloneDeep(blotterOptions);
-  let blotterApi = AdaptableBlotter.init(blotterOptions);
+  const adaptableOptionsClone = cloneDeep(adaptableOptions);
+  let adaptableApi = AdaptableBlotter.init(adaptableOptions);
 
-  blotterApi.eventApi.on('BlotterReady', () => {
+  adaptableApi.eventApi.on('BlotterReady', () => {
     setTimeout(() => {
-      blotterApi.gridApi.setGridData(JSON.parse(JSON.stringify(json)));
+      adaptableApi.gridApi.setGridData(JSON.parse(JSON.stringify(json)));
     }, 500);
   });
 
-  blotterApi.eventApi.on(
-    'ApplicationToolbarButtonClicked',
-    applicationToolbarButtonClickedEventArgs => {
-      switch (
-        applicationToolbarButtonClickedEventArgs.data[0].id
-          .applicationToolbarButton.Name
-      ) {
+  adaptableApi.eventApi.on(
+    'ToolbarButtonClicked',
+    toolbarButtonClickedEventArgs => {
+      switch (toolbarButtonClickedEventArgs.data[0].id.toolbarButton.Name) {
         case 'info':
-          blotterApi.systemStatusApi.setInfoSystemStatus('No issues');
+          adaptableApi.systemStatusApi.setInfoSystemStatus('No issues');
           break;
         case 'success':
-          blotterApi.systemStatusApi.setSuccessSystemStatus('All working fine');
+          adaptableApi.systemStatusApi.setSuccessSystemStatus(
+            'All working fine'
+          );
           break;
         case 'warning':
-          blotterApi.systemStatusApi.setWarningSystemStatus(
+          adaptableApi.systemStatusApi.setWarningSystemStatus(
             'Problems with server'
           );
           break;
         case 'error':
-          blotterApi.systemStatusApi.setErrorSystemStatus(
+          adaptableApi.systemStatusApi.setErrorSystemStatus(
             'The server is down!',
             'Please do not make any edits until the server comes back up'
           );
           break;
         case 'clear':
-          blotterApi.systemStatusApi.clearSystemStatus();
-          break;
-      }
-    }
-  );
-
-  blotterApi.eventApi.on(
-    'ApplicationToolbarButtonClicked',
-    (
-      applicationToolbarButtonClickedEventArgs: ApplicationToolbarButtonClickedEventArgs
-    ) => {
-      let buttonName =
-        applicationToolbarButtonClickedEventArgs.data[0].id
-          .applicationToolbarButton.Name;
-
-      switch (buttonName) {
-        case 'setInfo':
-          blotterApi.systemStatusApi.setInfoSystemStatus(
-            '30 new records added today'
-          );
-          break;
-        case 'setWarning':
-          blotterApi.systemStatusApi.setWarningSystemStatus(
-            'Server is running slowly'
-          );
-          break;
-        case 'setError':
-          blotterApi.systemStatusApi.setErrorSystemStatus('Server is down!');
-          break;
-        case 'setSuccess':
-          blotterApi.systemStatusApi.setSuccessSystemStatus(
-            'Everything is fine'
-          );
+          adaptableApi.systemStatusApi.clearSystemStatus();
           break;
       }
     }
@@ -106,6 +70,6 @@ export default () => {
 
   return {
     predefinedConfig,
-    blotterOptions: blotterOptionsClone,
+    adaptableOptions: adaptableOptionsClone,
   };
 };

@@ -25,7 +25,7 @@ export default () => {
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, trades);
 
-  const blotterOptions: AdaptableBlotterOptions = {
+  const adaptableOptions: AdaptableBlotterOptions = {
     primaryKey: 'tradeId',
     userName: 'Demo User',
     blotterId: 'Sparkline Columns Demo',
@@ -34,11 +34,11 @@ export default () => {
     predefinedConfig: predefinedConfig,
   };
 
-  const blotterOptionsClone = cloneDeep(blotterOptions);
-  const blotterApi = AdaptableBlotter.init(blotterOptions);
+  const adaptableOptionsClone = cloneDeep(adaptableOptions);
+  const adaptableApi = AdaptableBlotter.init(adaptableOptions);
 
   return {
     predefinedConfig,
-    blotterOptions: blotterOptionsClone,
+    adaptableOptions: adaptableOptionsClone,
   };
 };

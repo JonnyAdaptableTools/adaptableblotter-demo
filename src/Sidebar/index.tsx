@@ -108,7 +108,7 @@ export default () => {
         <Link href="/">
           <a>Home</a>
         </Link>
-        <Link href="/AdaptableBlotterDemoList">
+        <Link href="/AdaptableDemoList">
           <a>Demo List</a>
         </Link>
         {demoPages}

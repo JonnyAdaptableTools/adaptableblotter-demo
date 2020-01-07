@@ -29,7 +29,7 @@ export default () => {
             apply also when you perfrom a Smart Edit or Bulk Update.
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_cellvalidationstate_.cellvalidationstate.htmll"
               target="_blank"
@@ -41,7 +41,7 @@ export default () => {
               href="https://api.adaptableblotter.com/interfaces/_api_cellvalidationapi_.cellvalidationapi.html"
               target="_blank"
             >
-              Blotter API
+              Adaptable API
             </a>
             ,{' '}
             <a

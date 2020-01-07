@@ -11,10 +11,9 @@ export default () => {
           <h4>Named Filters Demo</h4>
 
           <p>
-            The Adaptable Blotter has a range of powerful filter functions.
-            These include Column Filters, System Filters and User Filters (that
-            users create at run-time) and in most cases are sufficient for all
-            needs.
+            Adaptable has a range of powerful filter functions. These include
+            Column Filters, System Filters and User Filters (that users create
+            at run-time) and in most cases are sufficient for all needs.
           </p>
           <p>
             But occasionally you might want to filter a column based on other
@@ -23,7 +22,7 @@ export default () => {
           </p>
           <p>
             This is where <b>Named Filters</b> come in. You can create at{' '}
-            <b>design time</b> a Named Filter and provide the Blotter with the
+            <b>design time</b> a Named Filter and provide Adaptable with the
             Predicate function required to evaluate it.
           </p>
           <p>
@@ -48,7 +47,7 @@ export default () => {
             evaluates true if date in cell was after a putative takeover date.
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_namedfilterstate_.namedfilterstate.html"
               target="_blank"
@@ -60,7 +59,7 @@ export default () => {
               href="https://api.adaptableblotter.com/interfaces/_api_namedfilterapi_.namedfilterapi.html"
               target="_blank"
             >
-              Blotter API
+              Adaptable API
             </a>
             ,{' '}
             <a

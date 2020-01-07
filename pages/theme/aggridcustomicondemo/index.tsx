@@ -11,9 +11,9 @@ export default () => {
         <>
           <h4>Custom Icon Demo</h4>
           <p>
-            It is straightforward to change one of the icons provided by the
-            Adaptable Blotter with your own icon. Simply override the relevant
-            icon in your css with your preferred image.
+            It is straightforward to change one of the icons provided by
+            Adaptable with your own icon. Simply override the relevant icon in
+            your css with your preferred image.
           </p>
           <p>
             In this example we have supplied our own icons for the <b>Export</b>
@@ -43,7 +43,7 @@ export default () => {
           </p>
 
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755177-Styling-Functions"
               target="_blank"

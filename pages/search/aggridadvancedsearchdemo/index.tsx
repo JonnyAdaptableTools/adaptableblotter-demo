@@ -14,9 +14,9 @@ export default () => {
             across mutliple columns which can then be named, saved and re-used.
           </p>
           <p>
-            It uses the Adaptable Blotter Query (used in many Functions) that
-            allows selections to be performed on a mix of Column Values, Filters
-            and Ranges.
+            It uses Adaptable Query (used in many Functions) that allows
+            selections to be performed on a mix of Column Values, Filters and
+            Ranges.
           </p>
           <p>
             In this example we are searching for any rows where the Invoiced
@@ -25,7 +25,7 @@ export default () => {
             <i>Column Values</i>).
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_advancedsearchstate_.advancedsearchstate.html"
               target="_blank"
@@ -37,7 +37,7 @@ export default () => {
               href="https://api.adaptableblotter.com/interfaces/_api_advancedsearchapi_.advancedsearchapi.html"
               target="_blank"
             >
-              Blotter API
+              Adaptable API
             </a>
             ,{' '}
             <a

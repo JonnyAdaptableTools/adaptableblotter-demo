@@ -30,7 +30,7 @@ export default () => {
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, trades);
 
-  const blotterOptions: AdaptableBlotterOptions = {
+  const adaptableOptions: AdaptableBlotterOptions = {
     primaryKey: 'tradeId',
     userName: 'Demo User',
     blotterId: 'Updated Rows Demo',
@@ -38,17 +38,17 @@ export default () => {
     predefinedConfig: predefinedConfig,
   };
 
-  const blotterOptionsClone = cloneDeep(blotterOptions);
-  const blotterApi = AdaptableBlotter.init(blotterOptions);
+  const adaptableOptionsClone = cloneDeep(adaptableOptions);
+  const adaptableApi = AdaptableBlotter.init(adaptableOptions);
 
   tickingDataHelper.startTickingDataagGridTradesUpdateData(
     gridOptions,
-    blotterApi,
+    adaptableApi,
     4000,
     tradeCount
   );
   return {
     predefinedConfig,
-    blotterOptions: blotterOptionsClone,
+    adaptableOptions: adaptableOptionsClone,
   };
 };

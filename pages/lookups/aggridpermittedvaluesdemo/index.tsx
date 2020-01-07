@@ -10,10 +10,9 @@ export default () => {
         <div>
           <h4>Permitted Values Demo (User Inferface State)</h4>
           <p>
-            When the Adaptable Blotter wants to provide a list of values for a
-            column (e.g. in a column filter, or when building a query or in Bulk
-            Update) it will first get the list from Server Lookups if that has
-            been set.
+            When Adaptable wants to provide a list of values for a column (e.g.
+            in a column filter, or when building a query or in Bulk Update) it
+            will first get the list from Server Lookups if that has been set.
           </p>
           <p>
             If not then it will look for any Permitted Columns values for that
@@ -26,11 +25,11 @@ export default () => {
             displayed in the Column Filter (and Query Builder) for that column.
           </p>
           <p>
-            Note: if there are no Permitted Values, then the Adaptable Blotter
-            wtill dynamically build a list of distinct values for the column.
+            Note: if there are no Permitted Values, then Adaptable wtill
+            dynamically build a list of distinct values for the column.
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_designtimestate_userinterfacestate_.permittedcolumnvalues.html"
               target="_blank"

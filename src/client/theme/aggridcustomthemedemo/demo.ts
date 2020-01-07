@@ -25,14 +25,14 @@ export default () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
 
-  var blotterApi: BlotterApi;
+  var adaptableApi: BlotterApi;
   let rowData = JSON.parse(JSON.stringify(json));
 
   const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
 
-  const blotterOptions: AdaptableBlotterOptions = {
+  const adaptableOptions: AdaptableBlotterOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     blotterId: 'Custom Theme Demo',
@@ -41,24 +41,24 @@ export default () => {
     predefinedConfig: predefinedConfig,
   };
 
-  const blotterOptionsClone = cloneDeep(blotterOptions);
-  blotterApi = AdaptableBlotter.init(blotterOptions);
+  const adaptableOptionsClone = cloneDeep(adaptableOptions);
+  adaptableApi = AdaptableBlotter.init(adaptableOptions);
 
-  blotterApi.eventApi.on(
+  adaptableApi.eventApi.on(
     'ThemeChanged',
     (themeChangedEventArgs: ThemeChangedEventArgs) => {
-      listenToThemeChanged(blotterApi, themeChangedEventArgs);
+      listenToThemeChanged(adaptableApi, themeChangedEventArgs);
     }
   );
 
   return {
     predefinedConfig,
-    blotterOptions: blotterOptionsClone,
+    adaptableOptions: adaptableOptionsClone,
   };
 };
 
 function listenToThemeChanged(
-  blotterApi: BlotterApi,
+  adaptableApi: BlotterApi,
   args: ThemeChangedEventArgs
 ) {
   console.log(args);
@@ -82,8 +82,8 @@ function listenToThemeChanged(
     };
     rowStyles.push(evenStyle);
     rowStyles.push(oddStyle);
-    blotterApi.userInterfaceApi.setRowStyles(rowStyles);
+    adaptableApi.userInterfaceApi.setRowStyles(rowStyles);
   } else {
-    blotterApi.userInterfaceApi.clearRowStyles();
+    adaptableApi.userInterfaceApi.clearRowStyles();
   }
 }

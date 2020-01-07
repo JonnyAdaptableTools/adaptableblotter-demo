@@ -13,8 +13,8 @@ export default () => {
             <h4>iPushPull</h4>
           </p>
           <p>
-            The Adaptable Blotter natively exports data to the clipboard, csv,
-            JSON and (coming soon) PDF.
+            Adaptable natively exports data to the clipboard, csv, JSON and
+            (coming soon) PDF.
           </p>
           <p>
             However if want to share your reports more widely, (e.g. with
@@ -59,13 +59,13 @@ export default () => {
               target="_blank"
             >
               iPushPull State
-            </a>{' '}
+            </a>
             ), select the folder / page in iPushPull which should display this
             data, and click 'Export to iPushPull'. You will now see your
-            (ticking) Blotter data in iPushPull.
+            (ticking) Adaptable data in iPushPull.
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
               href="https://github.com/AdaptableTools/example-adaptableblotter-ipushpull-integration/blob/master/index.ts"
               target="_blank"
@@ -84,7 +84,7 @@ export default () => {
               href="https://api.adaptableblotter.com/interfaces/_api_partnerapi_.partnerapi.html"
               target="_blank"
             >
-              Blotter API
+              Adaptable API
             </a>{' '}
             |{' '}
             <a

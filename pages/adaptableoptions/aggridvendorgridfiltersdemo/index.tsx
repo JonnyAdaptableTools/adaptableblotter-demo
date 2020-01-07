@@ -5,16 +5,15 @@ export default () => {
   return (
     <DynamicDemoPage
       demo={import(
-        '../../../src/client/blotteroptions/aggridvendorgridfiltersdemo'
+        '../../../src/client/adaptableoptions/aggridvendorgridfiltersdemo'
       )}
       pageTitle={'Vendor Grid Filters Demo'}
       description={
         <div>
           <h4>Vendor Grid Filters Demo</h4>
           <p>
-            By default the Adaptable Blotter will use its Quick Filter (the row
-            under the toolbar) and FilterForm (the second item in the Column
-            menu).
+            By default Adaptable will use its Quick Filter (the row under the
+            toolbar) and FilterForm (the second item in the Column menu).
           </p>
           <p>
             If you prefer, you can use those provided by ag-Grid which are also
@@ -22,7 +21,7 @@ export default () => {
             <b>useAdaptableBlotterQuickFilter</b> and{' '}
             <b>useAdaptableBlotterFilterForm</b> properties in{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_blotteroptions_filteroptions_.filteroptions.html"
+              href="https://api.adaptableblotter.com/interfaces/_adaptableoptions_filteroptions_.filteroptions.html"
               target="_blank"
             >
               Filter Options
@@ -30,8 +29,8 @@ export default () => {
           </p>
           <p>
             Any filters created with these forms will NOT be stored with your
-            Adaptable Blotter state, e.g. if you type in the 'Ship Via' Floating
-            Filter bar, the Column Filter toolbar does <b>not</b> update.
+            Adaptable state, e.g. if you type in the 'Ship Via' Floating Filter
+            bar, the Column Filter toolbar does <b>not</b> update.
           </p>
           <p>
             This example we are using ag-Grid's Floating Filter and Filter Form.
@@ -39,12 +38,12 @@ export default () => {
             <i>agSetColumnFilter</i> type.
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_blotteroptions_filteroptions_.filteroptions.html"
+              href="https://api.adaptableblotter.com/interfaces/_adaptableoptions_filteroptions_.filteroptions.html"
               target="_blank"
             >
-              Blotter Options
+              Adaptable Options
             </a>
           </p>{' '}
         </div>

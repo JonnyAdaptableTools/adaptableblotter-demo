@@ -12,14 +12,14 @@ export default () => {
             <h4>Pivoting Demo</h4>
           </h4>
           <p>
-            ag-Grid has incredible pivoting capability; the Adaptable Blotter
-            knows when the grid's in pivoting mode (click 'Pivot Mode' checkbox
-            in the tool panel) and will react accordingly.
+            ag-Grid has incredible pivoting capability; Adaptable knows when the
+            grid's in pivoting mode (click 'Pivot Mode' checkbox in the tool
+            panel) and will react accordingly.
           </p>
           <p>
-            The Adaptable Blotter also allows you to save pivoting information
-            in your layout and then it will be available each time you select
-            that layout.
+            Adaptable also allows you to save pivoting information in your
+            layout and then it will be available each time you select that
+            layout.
           </p>
           <p>
             In this demo you can switch layouts between <i>Pivot View</i> and{' '}
@@ -27,7 +27,7 @@ export default () => {
             load.
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_layoutstate_.layoutstate.html"
               target="_blank"

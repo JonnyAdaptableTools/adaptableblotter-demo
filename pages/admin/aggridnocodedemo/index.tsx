@@ -10,7 +10,7 @@ export default () => {
         <div>
           <h4>No Code Demo</h4>
           <p>
-            The no code version allows you to create an Adaptable Blotter at
+            The No Code Plugin allows you to create an Adaptable instance at
             runtime from any JSON (and soon any Excel) file that you give it.
           </p>
           <p>
@@ -19,8 +19,8 @@ export default () => {
             to attach to the same source daily or multiple different sources.
           </p>
           <p>
-            Simply link to a file (or drag and drop) and the Adaptable Blotter
-            No Code Wizard will appear.
+            Simply link to a file (or drag and drop) and Adaptable No Code
+            Wizard will appear.
           </p>
           <p>
             In the first step it will read the file and work out which columns
@@ -30,13 +30,13 @@ export default () => {
           <p>
             In the second (optional) step you can set up many of the{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_blotteroptions_adaptableblotteroptions_.adaptableblotteroptions.html"
+              href="https://api.adaptableblotter.com/interfaces/_adaptableoptions_adaptableblotteroptions_.adaptableblotteroptions.html"
               target="_blank"
             >
-              Blotter Options
+              Adaptable Options
             </a>{' '}
-            that you would normally provide at design-time to ensure that the
-            Adaptable Blotter suits your requirements.
+            that you would normally provide at design-time to ensure that your
+            Adaptable instance suits your requirements.
           </p>
         </div>
       }

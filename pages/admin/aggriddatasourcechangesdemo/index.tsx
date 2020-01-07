@@ -19,8 +19,8 @@ export default () => {
             deleted (see the count in the Status Bar under the grid).
           </p>
           <p>
-            The Adaptable Blotter picks up these changes automatically and works
-            smoothly despite the repeated changes to the underlying data set.
+            Adaptable picks up these changes automatically and works smoothly
+            despite the repeated changes to the underlying data set.
           </p>
           <p>
             Note: we sort <b>Trade Id</b> column in descending order, filter{' '}

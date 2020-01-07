@@ -15,8 +15,8 @@ export default () => {
             Column Header menu.
           </p>
           <p>
-            When there are many values in each segment the Adaptable Blotter
-            will automatically group them for you.
+            When there are many values in each segment Adaptable will
+            automatically group them for you.
           </p>
           <p>
             You are able to sort and position the values how you want, and you
@@ -26,7 +26,7 @@ export default () => {
           <p>
             Note: In this example the{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_blotteroptions_chartoptions_.chartoptions.html"
+              href="https://api.adaptableblotter.com/interfaces/_adaptableoptions_chartoptions_.chartoptions.html"
               target="_blank"
             >
               Chart Options
@@ -37,7 +37,7 @@ export default () => {
             (and not in a popup).
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755217-Chart-Functionss"
               target="_blank"

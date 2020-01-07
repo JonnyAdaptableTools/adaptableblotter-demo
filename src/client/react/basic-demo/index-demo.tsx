@@ -1,10 +1,10 @@
 import React from 'react';
 
-// import the blotter and types
+// import Adaptable and types
 import AdaptableBlotterReact from '@adaptabletools/adaptableblotter-react-aggrid';
 import { AdaptableBlotterOptions } from '@adaptabletools/adaptableblotter-react-aggrid';
 
-// import blotter css and themes
+// import Adaptable css and themes
 import '@adaptabletools/adaptableblotter-react-aggrid/base.css';
 import '@adaptabletools/adaptableblotter-react-aggrid/themes/light.css';
 import '@adaptabletools/adaptableblotter-react-aggrid/themes/dark.css';
@@ -31,7 +31,7 @@ const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
 
 const gridOptions = helperAgGrid.getGridOptions(columndefs, json);
 
-const adaptableblotterOptions: AdaptableBlotterOptions = {
+const adaptableOptions: AdaptableBlotterOptions = {
   primaryKey: 'OrderId',
   userName: 'demo user',
   blotterId: 'basic demo',
@@ -42,6 +42,6 @@ export default () => (
   <AdaptableBlotterReact
     style={{ height: '100%' }}
     gridOptions={gridOptions}
-    blotterOptions={adaptableBlotterOptions}
+    blotterOptions={adaptableOptions}
   />
 );

@@ -23,13 +23,13 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'No Config',
             Link: '/config/aggridnoconfigdemo',
             Description:
-              'An Adaptable Blotter with no Predefined Config supplied.  This is unlikely to be the case in a production scenario as you will pre-ship the Blotter with your objects.',
+              'An Adaptable instance with no Predefined Config supplied.  This is unlikely to be the case in a production scenario as you will pre-ship Adaptable with your objects.',
           },
           {
             Name: 'Predefined Config',
             Link: '/config/aggridpredefinedconfigdemo',
             Description:
-              'An Adaptable Blotter with lots of different Predefined Config elements supplied.',
+              'An Adaptable instance with lots of different Predefined Config elements supplied.',
           },
         ],
       },
@@ -53,7 +53,7 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Data Source Selector',
             Link: '/search/aggriddatasourcedemo',
             Description:
-              'A list of Data Sources provided at run-time (e.g. books, stored procs); when one is selected an event is fired that you can listen to and then populate the Blotter with data via the API.',
+              'A list of Data Sources provided at run-time (e.g. books, stored procs); when one is selected an event is fired that you can listen to and then populate Adaptable with data via the API.',
           },
         ],
       },
@@ -89,7 +89,7 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'System Filters',
             Link: '/filters/aggridsystemfiltersdemo',
             Description:
-              'System Filters are those provided by the Adaptable Blotter (e.g. "Blanks", "Yeserday", "Positive"); you can choose which - if any - of these are available.',
+              'System Filters are those provided by Adaptable (e.g. "Blanks", "Yeserday", "Positive"); you can choose which - if any - of these are available.',
           },
         ],
       },
@@ -179,7 +179,7 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Row Style',
             Link: '/style/aggridrowstyledemo',
             Description:
-              'Choose to style rows in the Adaptable Blotter using your preferred colour scheme.',
+              'Choose to style rows in Adaptable using your preferred colour scheme.',
           },
         ],
       },
@@ -191,19 +191,19 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Dark Theme',
             Link: '/theme/aggriddarkthemedemo',
             Description:
-              'See the Adaptable Blotter using the shipped Dark Theme. When you use this theme the Adaptable Blotter will automatically update the underlying vendor grid to match.',
+              'See Adaptable using the shipped Dark Theme. When you use this theme Adaptable will automatically update the underlying vendor grid to match.',
           },
           {
             Name: 'Custom Theme',
             Link: '/theme/aggridcustomthemedemo',
             Description:
-              'See the Adaptable Blotter using a custom theme (based on Wimbledon tennis colours).',
+              'See Adaptable using a custom theme (based on Wimbledon tennis colours).',
           },
           {
             Name: 'Custom Icons',
             Link: '/theme/aggridcustomicondemo',
             Description:
-              'You can provide your own icons to the Adaptable Blotter to use in place of the defaults - this demo shows how.',
+              'You can provide your own icons to Adaptable to use in place of the defaults - this demo shows how.',
           },
         ],
       },
@@ -274,7 +274,8 @@ export function getDemoPageStructure(): DemoPageStructure {
           {
             Name: 'Sparkline Charts',
             Link: '/charts/aggridsparklinechartsdemo',
-            Description: 'To do...!!!!!!',
+            Description:
+              'Create a saveable SparkLine chart, which will show data as a series of points or graphs',
           },
           {
             Name: 'Sparkline (Column)',
@@ -330,7 +331,7 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Calendar',
             Link: '/gridmanagement/aggridcalendardemo',
             Description:
-              'Select which Holiday Calendar you wish the Adaptable Blotter to use when calculating Working Days (in Filters, Queries etc).',
+              'Select which Holiday Calendar you wish Adaptable to use when calculating Working Days (in Filters, Queries etc).',
           },
         ],
       },
@@ -366,7 +367,7 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Dashboard Toolbars',
             Link: '/dashboard/aggriddashboardtoolbarsdemo',
             Description:
-              'The Adaptable Blotter provides a number of Toolbars to provide easy access to functions. You can choose which ones you want in the Dashbboard',
+              'Adaptable provides a number of Toolbars to provide easy access to functions. You can choose which ones you want in the Dashbboard',
           },
           {
             Name: 'Dashboard Buttons',
@@ -381,15 +382,10 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Select whether the Dasbhoard is visible, minimised (so only a button is shown) or hidden altogether.',
           },
           {
-            Name: 'Application Toolbar',
-            Link: '/dashboard/aggriddashboardapplicationtoolbardemo',
+            Name: 'Custom Toolbars',
+            Link: '/dashboard/aggriddashboardcustomtoolbarsdemo',
             Description:
-              'Use the Application Toolbar to render your own content in the Dashboard or to provide buttons (which when clicked trigger an Event that you can listen to).',
-          },
-          {
-            Name: 'Tool Panel',
-            Link: '/dashboard/aggridtoolpaneldemo',
-            Description: 'Work in progress....',
+              'Use Custom Toolbars to render your own content in the Dashboard or to provide buttons (which when clicked trigger an Event that you can listen to).',
           },
         ],
       },
@@ -410,28 +406,28 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Every data change, user action, state change and function action is auditable and availalbe for you to listen to in a number of ways, making support a breeze and enabling data playback.',
           },
           {
-            Name: 'Blotter API',
+            Name: 'Adaptable API',
             Link: '/admin/aggridblotterapidemo',
             Description:
-              'Access the Adaptable Blotter functionality and state through the Blotter API which contains hundreds of functions giving full programmatic access to everything the Adaptable Blotter provides.',
+              'Access Adaptable functionality and state through the Adaptable API which contains hundreds of functions giving full programmatic access to everything Adaptable provides.',
           },
           {
             Name: 'Big Data',
             Link: '/admin/aggridbigdatademo',
             Description:
-              'See the Adaptable Blotter (and ag-Grid) with 100,000 rows of client side data.',
+              'See Adaptable (and ag-Grid) with 100,000 rows of client side data.',
           },
           {
             Name: 'Data Source Changes',
             Link: '/admin/aggriddatasourcechangesdemo',
             Description:
-              'Any changes made to the data source to the underlying DataGrid (in this example ag-Grid) is automatically reflected in the Adaptable Blotter and it will be picked up by all relevant functions.',
+              'Any changes made to the data source to the underlying DataGrid (in this example ag-Grid) is automatically reflected in Adaptable and it will be picked up by all relevant functions.',
           },
           {
             Name: 'No Code',
             Link: '/admin/aggridnocodedemo',
             Description:
-              'Create an Adaptable Blotter instance dynamically from a JSON or Excel file that you provide; your Blotter will include the full range of functions and all the advanced functionality like state management and audit.',
+              'Create an Adaptable instance dynamically from a JSON or Excel file that you provide; your Adaptable instance will include the full range of functions and all the advanced functionality like state management and audit.',
           },
         ],
       },
@@ -443,31 +439,31 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Row Grouping',
             Link: '/aggridfeatures/aggridrowgroupingdemo',
             Description:
-              'The Adaptable Blotter works fully when the ag-Grid column row grouping functionality is applied.',
+              'Adaptable works fully when the ag-Grid column row grouping functionality is applied.',
           },
           {
             Name: 'Column Grouping',
             Link: '/aggridfeatures/aggridcolumngroupingdemo',
             Description:
-              'The Adaptable Blotter works fully when the ag-Grid column banding (grouping) functionality is applied.',
+              'Adaptable works fully when the ag-Grid column banding (grouping) functionality is applied.',
           },
           {
             Name: 'Pivoting',
             Link: '/aggridfeatures/aggridpivotingdemo',
             Description:
-              'The Adaptable Blotter enables you to create layouts that take pivoting into account.',
+              'Adaptable enables you to create layouts that take pivoting into account.',
           },
           {
             Name: 'Master Detail',
             Link: '/aggridfeatures/aggridmasterdetaildemo',
             Description:
-              'The Adaptable Blotter supports Master / Detail grids where the underlying vendor grid offers it.',
+              'Adaptable supports Master / Detail grids where the underlying vendor grid offers it.',
           },
           {
             Name: 'Row Selection',
             Link: '/aggridfeatures/aggridrowselectiondemo',
             Description:
-              'The Adaptable Blotter fires an event each time the cell or row selection changes. This includes full detials of the cells and rows selected.',
+              'Adaptable fires an event each time the cell or row selection changes. This includes full detials of the cells and rows selected.',
           },
         ],
       },
@@ -476,36 +472,41 @@ export function getDemoPageStructure(): DemoPageStructure {
         Link: '/userinterface',
         Pages: [
           {
-            Name: 'Column menu',
+            Name: 'Column Menu',
             Link: '/userinterface/aggridcolumnmenudemo',
             Description: 'Column Menu.',
           },
           {
-            Name: 'Context menu',
+            Name: 'Context Menu',
             Link: '/userinterface/aggridcontextmenudemo',
             Description: 'Context Menu.',
+          },
+          {
+            Name: 'Tool Panel',
+            Link: '/userinterface/aggridtoolpaneldemo',
+            Description: 'Work in progress....',
           },
         ],
       },
       {
-        CategoryName: 'Blotter Options',
-        Link: '/blotteroptions',
+        CategoryName: 'Adaptable Options',
+        Link: '/adaptableoptions',
         Pages: [
           {
             Name: 'Ignore Case in Queries',
-            Link: '/blotteroptions/aggridignorecasequeriesdemo',
+            Link: '/adaptableoptions/aggridignorecasequeriesdemo',
             Description:
               'By default case is ignored when running queries against string columns but you can change this behaviour.',
           },
           {
             Name: 'Vendor Grid Filters',
-            Link: '/blotteroptions/aggridvendorgridfiltersdemo',
+            Link: '/adaptableoptions/aggridvendorgridfiltersdemo',
             Description:
-              'You can use the agGrid Floating Filter and Filter Form if you wish instead of the Adaptable Blotter Quick Filter and Filter Form respectively.',
+              'You can use the agGrid Floating Filter and Filter Form if you wish instead of Adaptable Quick Filter and Filter Form respectively.',
           },
           {
             Name: 'Auto Apply Filters',
-            Link: '/blotteroptions/aggridautoapplyfiltersdemo',
+            Link: '/adaptableoptions/aggridautoapplyfiltersdemo',
             Description:
               'In Column Filters the default is to filter each time a value in the dropdown is clicked. But if you prefer, you can apply the filters only after an "Apply" button is clicked (useful if doing server side filtering).',
           },
@@ -525,7 +526,7 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Server Lookups',
             Link: '/lookups/aggridserverlookupsdemo',
             Description:
-              'Provide the Adaptable Blotter dynamically with the list of values to be displayed each time distinct cell values are required.',
+              'Provide Adaptable dynamically with the list of values to be displayed each time distinct cell values are required.',
           },
           {
             Name: 'Permitted Values',
@@ -543,19 +544,19 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Finsemble',
             Link: '/partners/finsembledemo',
             Description:
-              'We leverage the powerful offering to enable multiple Blotter to share state, data and events.',
+              'We leverage the powerful offering to enable multiple Adaptable instances to share state, data and events.',
           },
           {
             Name: 'iPushPull',
             Link: '/partners/ipushpulldemo',
             Description:
-              'Export Blotter data to Excel (with Live Updates) or Symphony and elsewhere by using the services of our partner iPushPull.',
+              'Export Adaptable data to Excel (with Live Updates) or Symphony and elsewhere by using the services of our partner iPushPull.',
           },
           {
             Name: 'OpenFin',
             Link: '/partners/openfindemo',
             Description:
-              'If you are using this popular container we offer "Live Updates" so that data exported to Excel updates in real time as the Blotter ticks or is edited.',
+              'If you are using this popular container we offer "Live Updates" so that data exported to Excel updates in real time as Adaptable data ticks or is edited.',
           },
         ],
       },

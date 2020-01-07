@@ -10,12 +10,12 @@ export default () => {
       </p>
       <div id="launcherOpenfin">
         <p>
-          The Adaptable Blotter runs in the Broswer or Electron with all
-          functionality available for users (depending on their{' '}
+          Adaptable runs in the Broswer or Electron with all functionality
+          available for users (depending on their{' '}
           <a href="../../admin/aggridentitlementsdemo/">Entitlements</a>).
         </p>
         <p>
-          However if you are running the Adaptable Blotter inside the popular{' '}
+          However if you are running Adaptable inside the popular{' '}
           <a href="https://openfin.co/" target="_blank">
             OpenFin container{' '}
           </a>
@@ -24,9 +24,9 @@ export default () => {
         </p>
         <p>
           One of these is <b>Live Updates</b>. When running in OpenFin if you
-          export data to Excel, then any changes made to your data in the
-          Blotter (either user edits or ticking data changes) are immediately
-          reflected in Excel also.
+          export data to Excel, then any changes made to your data in Adaptable
+          (either user edits or ticking data changes) are immediately reflected
+          in Excel also.
         </p>
         <p>
           Try it for yourself:{' '}
@@ -38,8 +38,7 @@ export default () => {
               Run OpenFin
             </a>
           </b>{' '}
-          to see the Adaptable Blotter running inside OpenFin and then export
-          data to Excel.{' '}
+          to see Adaptable running inside OpenFin and then export data to Excel.{' '}
         </p>
         <p>
           (The link will download the OpenFin installer - click the exe to run
@@ -47,8 +46,8 @@ export default () => {
           windows menu under 'Adaptable Tools').
         </p>
         <p>
-          Alternatively watch the video below to see how OpenFin and the
-          Adaptable Blotter work together.
+          Alternatively watch the video below to see how OpenFin and Adaptable
+          work together.
         </p>
         <p>
           <iframe

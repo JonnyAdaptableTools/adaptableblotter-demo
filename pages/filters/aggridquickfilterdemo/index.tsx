@@ -12,7 +12,7 @@ export default () => {
           <p>
             The quick filter is the bar underneath the Column Header. If its set
             to visible in the underlying grid (for ag-Grid:
-            gridOptions.floatingfilter) it will work in the Adaptable Blotter.
+            gridOptions.floatingfilter) it will work in Adaptable.
           </p>
           <p>
             The quick filter allows you quick access to Column Filters so you
@@ -24,7 +24,7 @@ export default () => {
             be used here (e.g > 15, 's*', '1:10' [between 1 and 10]){' '}
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029896011-Filter-FAQ"
               target="_blank"

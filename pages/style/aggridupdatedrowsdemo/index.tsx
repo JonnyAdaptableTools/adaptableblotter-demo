@@ -29,7 +29,7 @@ export default () => {
             clear all updated rows through the Column Header Menu.
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_updatedrowstate_.updatedrowstate.html"
               target="_blank"
@@ -41,7 +41,7 @@ export default () => {
               href="https://api.adaptableblotter.com/interfaces/_api_updatedrowapi_.updatedrowapi.html"
               target="_blank"
             >
-              Blotter API
+              Adaptable API
             </a>
             ,{' '}
             <a

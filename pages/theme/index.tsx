@@ -47,10 +47,10 @@ export default () => {
       pageTitle={'Theme demos'}
       description={
         <div>
-          <h4>Theming the Adaptable Blotter</h4>
+          <h4>Theming Adaptable</h4>
           <p>
-            You can theme (ie. set up the look and feel of) the Adaptable
-            Blotter entirely through{' '}
+            You can theme (ie. set up the look and feel of) Adaptable entirely
+            through{' '}
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties"
               target="_blank"
@@ -65,14 +65,13 @@ export default () => {
           </p>
           <p>
             And if you want to get more detailed then you can change the details
-            of every control that the Adaptable Blotter provides (e.g. make
-            buttons rounded)
+            of every control that Adaptable provides (e.g. make buttons rounded)
           </p>
           <p>
-            The Adaptable Blotter provides out of the box 2 themes - a{' '}
-            <b>Dark Theme</b> and a <b>Light Theme</b>. Choosing either of these
-            2 themes will - depending on your Blotter Options - also update the
-            underlying vendor grid.
+            Adaptable provides out of the box 2 themes - a <b>Dark Theme</b> and
+            a <b>Light Theme</b>. Choosing either of these 2 themes will -
+            depending on your Adaptable Options - also update the underlying
+            vendor grid.
           </p>
           <p>
             You can change pretty much any aspect of the UI that we provide. For

@@ -48,7 +48,7 @@ export default ({
             style={{ marginBottom: 20, padding: 10, minWidth: '15rem' }}
             type="text"
             id="searchInput"
-            placeholder="Search Adaptable Blotter Demos"
+            placeholder="Search Adaptable Demos"
           />
         </div>
 

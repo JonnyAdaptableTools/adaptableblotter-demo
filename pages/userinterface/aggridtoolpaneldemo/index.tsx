@@ -4,7 +4,7 @@ import DynamicDemoPage from '../../../src/Helpers/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/dashboard/aggridtoolpaneldemo')}
+      demo={import('../../../src/client/userinterface/aggridtoolpaneldemo')}
       pageTitle={'Tool Panel Demo'}
       description={
         <div>
@@ -16,8 +16,8 @@ export default () => {
             </b>
           </p>
           <p>
-            The Adaptable Blotter Tool Panel is designed for situations when
-            screen estate is limited and the Dashboard is too 'bulky'.
+            Adaptable Tool Panel is designed for situations when screen estate
+            is limited and the Dashboard is too 'bulky'.
           </p>
           <p>
             It is a standard{' '}

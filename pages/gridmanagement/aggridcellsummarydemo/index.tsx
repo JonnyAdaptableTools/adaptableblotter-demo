@@ -14,8 +14,8 @@ export default () => {
             selected cells using a variety of mathematical operations.
           </p>
           <p>
-            You can create your own operations or use the ones shippped with the
-            Blotter (most of which work only on numeric columns).
+            You can create your own operations or use the ones shippped with
+            Adaptable (most of which work only on numeric columns).
           </p>
           <p>
             Try it: highlight a group of cells and see the value change in the
@@ -23,7 +23,7 @@ export default () => {
             operations or change the selected one by using the dropdown.
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_cellsummarystate_.cellsummarystate.html"
               target="_blank"
@@ -35,7 +35,7 @@ export default () => {
               href="https://api.adaptableblotter.com/interfaces/_api_cellsummaryapi_.cellsummaryapi.html"
               target="_blank"
             >
-              Blotter API
+              Adaptable API
             </a>
             ,{' '}
             <a

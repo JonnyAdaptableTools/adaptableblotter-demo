@@ -56,12 +56,12 @@ export default () => {
           <ul>{demoLinks}</ul>
           Click on the buttons below to see a demo for each styling function.
           <br />
-          If you want to theme the actual Adaptable Blotter itself (e.g. change
-          the colours, look and feel then please refer to the{' '}
+          If you want to theme the actual Adaptable instance itself (e.g. change
+          the colours and look and feel, please refer to the{' '}
           <a href="./theme" target="_self">
             Theming
           </a>{' '}
-          section).
+          demos).
         </div>
       }
     >

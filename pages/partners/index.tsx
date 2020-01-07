@@ -50,9 +50,9 @@ export default () => {
         <div>
           <h4>Partners</h4>
           <p>
-            The Adaptable Blotter partners with many of the other leading
-            FinTechs who are revolutionising the desktop. This section (under
-            development) will show some of the work we do in this regard.{' '}
+            Adaptable partners with many of the other leading FinTechs who are
+            revolutionising the desktop. This section (under development) will
+            show some of the work we do in this regard.{' '}
           </p>
           <p>Our partnerships include:</p>
           <ul>{demoLinks}</ul>

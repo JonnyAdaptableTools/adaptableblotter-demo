@@ -1,24 +1,17 @@
 import AdaptableBlotter from '@adaptabletools/adaptableblotter/agGrid';
 import '@adaptabletools/adaptableblotter/index.css';
-
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-balham.css';
 import { cloneDeep } from 'lodash';
-
 import '../../../../DemoPage/aggriddemo.css';
-
 import {
   AdaptableBlotterOptions,
-  IAdaptableBlotter,
+  ToolbarButtonClickedEventArgs,
+  ToolbarVisibilityChangedEventArgs,
 } from '@adaptabletools/adaptableblotter/types';
-
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import predefinedConfig from './config';
-import {
-  ToolbarVisibilityChangedEventArgs,
-  ApplicationToolbarButtonClickedEventArgs,
-} from '@adaptabletools/adaptableblotter/App_Scripts/Api/Events/BlotterEvents';
 import ReactDOM from 'react-dom';
 import { renderCustomDiv } from '.';
 import { Visibility } from '@adaptabletools/adaptableblotter/App_Scripts/PredefinedConfig/Common/Enums';
@@ -33,24 +26,23 @@ export default () => {
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
 
-  const blotterOptions: AdaptableBlotterOptions = {
+  const adaptableOptions: AdaptableBlotterOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    blotterId: 'Application Toolbar Demo',
+    blotterId: 'Custom Toolbars Demo',
 
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };
 
-  const blotterOptionsClone = cloneDeep(blotterOptions);
-  const blotterApi = AdaptableBlotter.init(blotterOptions);
+  const adaptableOptionsClone = cloneDeep(adaptableOptions);
+  const adaptableApi = AdaptableBlotter.init(adaptableOptions);
 
-  blotterApi.eventApi.on(
+  adaptableApi.eventApi.on(
     'ToolbarVisibilityChanged',
     (toolbarVisibilityChangedEventArgs: ToolbarVisibilityChangedEventArgs) => {
       if (
-        toolbarVisibilityChangedEventArgs.data[0].id.toolbar ===
-          'Application' &&
+        toolbarVisibilityChangedEventArgs.data[0].id.toolbar === 'Trades' &&
         toolbarVisibilityChangedEventArgs.data[0].id.visibility ==
           Visibility.Visible
       ) {
@@ -58,30 +50,26 @@ export default () => {
 
         ReactDOM.render(
           toolbarContents,
-          blotterApi.applicationApi.getApplicationToolbarContentsDiv()
+          adaptableApi.dashboardApi.getCustomToolbarContentsDiv('Trades')
         );
       }
     }
   );
 
-  blotterApi.eventApi.on(
-    'ApplicationToolbarButtonClicked',
-    (
-      applicationToolbarButtonClickedEventArgs: ApplicationToolbarButtonClickedEventArgs
-    ) => {
+  adaptableApi.eventApi.on(
+    'ToolbarButtonClicked',
+    (toolbarButtonClickedEventArgs: ToolbarButtonClickedEventArgs) => {
       alert(
         'name: ' +
-          applicationToolbarButtonClickedEventArgs.data[0].id
-            .applicationToolbarButton.Name +
+          toolbarButtonClickedEventArgs.data[0].id.toolbarButton.Name +
           ';caption: ' +
-          applicationToolbarButtonClickedEventArgs.data[0].id
-            .applicationToolbarButton.Caption
+          toolbarButtonClickedEventArgs.data[0].id.toolbarButton.Caption
       );
     }
   );
 
   return {
     predefinedConfig,
-    blotterOptions: blotterOptionsClone,
+    adaptableOptions: adaptableOptionsClone,
   };
 };

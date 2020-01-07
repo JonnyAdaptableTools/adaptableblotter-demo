@@ -17,7 +17,7 @@ export default () => {
           padding: 21,
         }}
       >
-        <h3>Adaptable Blotter Demos</h3>
+        <h3>Adaptable Demos</h3>
         <i>
           Version:&nbsp;
           {version}&nbsp;&nbsp;({versiondate})
@@ -26,45 +26,45 @@ export default () => {
         <br />
         <p>
           <h3>
-            The Adaptable Blotter is the most advanced and powerful HTML5
-            DataGrid Solution on the market today.
+            Adaptable is the most advanced and powerful HTML5 Data Management
+            Solution on the market today.
           </h3>
           It provides, out of the box, all the functionality that financial and
           other advanced users require to be productive and efficient. And which
           usually needs to be built on a bespoke basis for each project.
           <br />
-          AdaptableBlotter.JS sits on top of (and integrates with) a number of
-          HTML5 vendor DataGrids both vendor and open source.
+          Adaptable sits on top of (and integrates with) a number of HTML5
+          vendor DataGrids both vendor and open source.
           <br />
-          Adaptable Blotter.JS is fully data-agnostic and can work with any data
-          set, for any Desk, in any team, at any Location
+          Adaptable is fully data-agnostic and can work with any data set, for
+          any Desk, in any team, at any Location
           <br />
         </p>
         <p>
           <b>Functions</b> <br />
-          The Adaptable Blotter contains a large number of 'functions' each of
-          which corresponds to a particular DataGrid use case (e.g. Advanced
-          Search, Bulk Update, Pie Chart etc.) <br />
-          This site contains a bespoke demo for most of the functions in the
-          Adaptable Blotter.
+          Adaptable contains a large number of 'functions' each of which
+          corresponds to a particular DataGrid use case (e.g. Advanced Search,
+          Bulk Update, Pie Chart etc.) <br />
+          This site contains a bespoke demo for most of the functions in
+          Adaptable.
           <br />
         </p>
         <p>
           <b>The Demos</b> <br />
           There are many demos on this site each of which illustrate an
-          Adaptable Blotter function, or a Blooter Option, a UI feature or a
-          piece of admin or advanced functionality.
+          Adaptable function, or an Adaptable Option, a UI feature or a piece of
+          admin or advanced functionality.
           <br />
           You can see a full list of the available demos{' '}
-          <a href="/AdaptableBlotterDemoList" target="_self">
+          <a href="/AdaptableDemoList" target="_self">
             here
           </a>
           .
         </p>
         <p>
           <b>Predefined Config</b> <br />
-          When you release an application using the Adaptable Blotter you will
-          typically ship it with{' '}
+          When you release an application using Adaptable you will typically
+          ship it with{' '}
           <a
             href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754817-Predefined-Config"
             target="_blank"
@@ -74,18 +74,19 @@ export default () => {
           - state that you have created at design time (eg. searches, layouts,
           styles, entitlements etc.)
           <br />
-          You will also set up the Options you need for your Blotter using the{' '}
+          You will also set up the Options you need for your grid instance using
+          the{' '}
           <a
             href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754697#UUID-f8f5acaa-44e5-683e-8a60-6abdbbeb2302"
             target="_blank"
           >
-            Adaptable Blotter Options
+            Adaptable Options
           </a>{' '}
           object.
           <br />
           Each of these demos includes a small amount of Predefined Config
           relevant to that function in order to illustrate the potential usage,
-          and adds non-default Blotter Options that are required (you can see
+          and adds non-default Adaptable Options that are required (you can see
           both of these printed out underneath the demo).
           <br />
           The demos use the excellent{' '}
@@ -99,15 +100,15 @@ export default () => {
           >
             integrates very well
           </a>{' '}
-          with the Adaptable Blotter), and dummy data from the famous Microsoft
-          Northwind database (Orders table). <br />
+          with Adaptable), and dummy data from the famous Microsoft Northwind
+          database (Orders table). <br />
         </p>
 
         <p>
           <b>Integration</b>
           <br />
-          It is trivial to set up the Adaptable Blotter and can be done with a
-          single line of code.
+          It is trivial to set up Adaptable and can be done with a single line
+          of code.
           <br />
           See our{' '}
           <a
@@ -134,29 +135,30 @@ export default () => {
           <b>Framework Wrappers</b>
           <br />
           All the examples in this demo use the 'vanilla' JavaScript version of
-          the Adaptable Blotter.
+          Adaptable.
           <br />
           However, for those who prefer to implement the tool using a JavaScript
           Framework / Library we provide 2 options:
-          <ul>
-            <li>
-              <a
-                href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754997-React-Wrapper"
-                target="_blank"
-              >
-                React Wrapper
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755017-Angular-Wrapper"
-                target="_blank"
-              >
-                Angular Wrapper
-              </a>
-            </li>
-          </ul>
         </p>
+        <ul>
+          <li>
+            <a
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754997-React-Wrapper"
+              target="_blank"
+            >
+              React Wrapper
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755017-Angular-Wrapper"
+              target="_blank"
+            >
+              Angular Wrapper
+            </a>
+          </li>
+        </ul>
+
         <p>
           <b>Help</b>
           <br />
@@ -173,49 +175,50 @@ export default () => {
         <p>
           <b>Github Examples</b>
           <br />
-          The Adaptable Blotter dev team produce some custom examples to fit
-          particular use cases that our users have requested. <br />
+          Adaptable dev team produce some custom examples to fit particular use
+          cases that our users have requested. <br />
           These are found on Github. These include:{' '}
-          <ul>
-            <li>
-              <a
-                href="https://github.com/AdaptableTools/example-adaptableblotter-angular-aggrid"
-                target="_blank"
-              >
-                Using the Angular wrapper
-              </a>{' '}
-            </li>
-            <li>
-              <a
-                href="https://github.com/AdaptableTools/example-adaptableblotter-ipushpull-integration"
-                target="_blank"
-              >
-                iPushPull Integration
-              </a>{' '}
-            </li>
-            <li>
-              <a
-                href="https://github.com/AdaptableTools/example-adaptableblotter-with-parceljs"
-                target="_blank"
-              >
-                Using ParcelJS to build a minified file
-              </a>{' '}
-            </li>
-          </ul>
         </p>
+        <ul>
+          <li>
+            <a
+              href="https://github.com/AdaptableTools/example-adaptableblotter-angular-aggrid"
+              target="_blank"
+            >
+              Using the Angular wrapper
+            </a>{' '}
+          </li>
+          <li>
+            <a
+              href="https://github.com/AdaptableTools/example-adaptableblotter-ipushpull-integration"
+              target="_blank"
+            >
+              iPushPull Integration
+            </a>{' '}
+          </li>
+          <li>
+            <a
+              href="https://github.com/AdaptableTools/example-adaptableblotter-with-parceljs"
+              target="_blank"
+            >
+              Using ParcelJS to build a minified file
+            </a>{' '}
+          </li>
+        </ul>
+
         <p>
           <b>Licence and Pricing</b>
           <br />
-          The Adaptable Blotter requires a commerical licence sold on an annual
-          basis. This includes guaranteed quarterly (often monthly) updates
-          together with full ongoing support.
+          Adaptable requires a commerical licence sold on an annual basis. This
+          includes guaranteed quarterly (often monthly) updates together with
+          full ongoing support.
           <br />
           We provide a range of licence options to suit each use case,
           including: <b>End User</b>, <b>Team</b>, <b>Universal</b>,{' '}
           <b>Developer</b> and <b>Trial</b>.
           <br />
           To find out more about various options on offer and how to join the
-          Adaptable Blotter community, please{' '}
+          Adaptable community, please{' '}
           <a href="mailto:sales@adaptabletools.com">
             email Adaptable Tools Sales
           </a>
@@ -224,9 +227,9 @@ export default () => {
         <p>
           <b>Grid Gurus</b>
           <br />
-          When developing the Adaptable Blotter, the Adaptable Tools dev team
-          learned everything there is to know (and more!) about all the
-          DataGrids that we support, particularly the excellent ag-Grid.
+          When developing Adaptable, the Adaptable Tools dev team learned
+          everything there is to know (and more!) about all the DataGrids that
+          we support, particularly the excellent ag-Grid.
           <br />
           We researched all the multiple set up and configuration options, the
           different ways to get data into the grid, the various display modes,

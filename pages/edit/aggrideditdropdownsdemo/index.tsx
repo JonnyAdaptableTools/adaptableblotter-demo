@@ -10,9 +10,8 @@ export default () => {
         <div>
           <h4>Edit Dropdowns Demo</h4>
           <p>
-            By default when you edit a column the Adaptable Blotter will show
-            whichever cell editor you stipulated for that column when you set up
-            ag-Grid.
+            By default when you edit a column Adaptable will show whichever cell
+            editor you stipulated for that column when you set up ag-Grid.
           </p>
           <p>
             However, in the{' '}
@@ -27,9 +26,9 @@ export default () => {
           </p>
           <p>
             Simply list the columns that should display a Dropdown in the{' '}
-            <b>EditLookUpColumns</b> property and the Adaptable Blotter will do
-            the rest. If you wish, you may also provide a list of values to
-            display in the dropdown.
+            <b>EditLookUpColumns</b> property and Adaptable will do the rest. If
+            you wish, you may also provide a list of values to display in the
+            dropdown.
           </p>
           <p>
             If <b>no</b> values are provided then the Dropdown will be populated

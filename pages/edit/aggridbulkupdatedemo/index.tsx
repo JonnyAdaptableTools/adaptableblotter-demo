@@ -24,7 +24,7 @@ export default () => {
             tick.
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_bulkupdatestate_.bulkupdatestate.html"
               target="_blank"
@@ -36,7 +36,7 @@ export default () => {
               href="https://api.adaptableblotter.com/interfaces/_api_bulkupdateapi_.bulkupdateapi.html"
               target="_blank"
             >
-              Blotter API
+              Adaptable API
             </a>
             ,{' '}
             <a

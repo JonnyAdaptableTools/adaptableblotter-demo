@@ -12,9 +12,8 @@ export default () => {
             <h4>Action Column Demo</h4>
           </h4>
           <p>
-            The Adaptable Blotter provides an Action Column function that allows
-            you to specify (and optionally render) a button to placed in a
-            column.
+            Adaptable provides an Action Column function that allows you to
+            specify (and optionally render) a button to placed in a column.
           </p>
           <p>
             When the button is clicked an{' '}
@@ -58,10 +57,12 @@ export default () => {
               API
             </a>
             :{' '}
-            <i>blotterApi.gridApi.deleteGridData([args.data[0].id.rowData]);</i>
+            <i>
+              adaptableApi.gridApi.deleteGridData([args.data[0].id.rowData]);
+            </i>
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_actioncolumnstate_.actioncolumnstate.html"
               target="_blank"
@@ -73,7 +74,7 @@ export default () => {
               href="https://api.adaptableblotter.com/interfaces/_api_actioncolumnapi_.actioncolumnapi.html"
               target="_blank"
             >
-              Blotter API
+              Adaptable API
             </a>
             ,{' '}
             <a

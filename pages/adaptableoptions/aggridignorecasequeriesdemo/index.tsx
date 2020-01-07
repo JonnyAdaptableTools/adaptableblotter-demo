@@ -5,7 +5,7 @@ export default () => {
   return (
     <DynamicDemoPage
       demo={import(
-        '../../../src/client/blotteroptions/aggridignorecasequeriesdemo'
+        '../../../src/client/adaptableoptions/aggridignorecasequeriesdemo'
       )}
       pageTitle={'Ignore Case in Queries Demo'}
       description={
@@ -20,7 +20,7 @@ export default () => {
             However, if this is not your preferred behaviour, you can set the
             the <b>ignoreCaseInQueries</b> property of{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_blotteroptions_queryoptions_.queryoptions.html"
+              href="https://api.adaptableblotter.com/interfaces/_adaptableoptions_queryoptions_.queryoptions.html"
               target="_blank"
             >
               Query Options
@@ -33,12 +33,12 @@ export default () => {
             Change that to 'J' and it will highlight.
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_blotteroptions_queryoptions_.queryoptions.html"
+              href="https://api.adaptableblotter.com/interfaces/_adaptableoptions_queryoptions_.queryoptions.html"
               target="_blank"
             >
-              Blotter Options
+              Adaptable Options
             </a>
           </p>{' '}
         </div>

@@ -10,8 +10,8 @@ export default () => {
         <>
           <h4>Custom Theme Demo</h4>
           <p>
-            The Adaptable Blotter ships with 2 themes - Dark or Light. But you
-            can create your own theme yourself through the use of{' '}
+            Adaptable ships with 2 themes - Dark or Light. But you can create
+            your own theme yourself through the use of{' '}
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties"
               target="_blank"
@@ -27,8 +27,8 @@ export default () => {
           </p>
           <p>
             In this example we have created a 'Wimbledon Theme' that styles the
-            Blotter purple and green, with slightly rounded borders. Note that
-            we use{' '}
+            Adaptable instance purple and green, with slightly rounded borders.
+            Note that we use{' '}
             <a href="../../style/aggridrowstyledemo" target="_self">
               Row Styles
             </a>{' '}
@@ -43,11 +43,11 @@ export default () => {
             >
               Theme Predefined Config
             </a>{' '}
-            to tell the Blotter to load the ag-Grid <i>ag-theme-blue</i> theme
+            to tell Adaptable to load the ag-Grid <i>ag-theme-blue</i> theme
             also.
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_themestate_.themestate.html"
               target="_blank"
@@ -59,7 +59,7 @@ export default () => {
               href="https://api.adaptableblotter.com/interfaces/_api_themeapi_.themeapi.html"
               target="_blank"
             >
-              Blotter API
+              Adaptable API
             </a>
             ,{' '}
             <a

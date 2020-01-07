@@ -11,7 +11,7 @@ const arrowRight = (
 
 export type AgGridDemoPageProps = {
   config?: any;
-  blotterOptions?: any;
+  adaptableOptions?: any;
   className?: string;
   description: any;
 } & MainPageProps;
@@ -92,7 +92,7 @@ export default ({
   description,
   config,
   className,
-  blotterOptions,
+  adaptableOptions,
 }: AgGridDemoPageProps) => {
   if (config) {
     const removeUuid = (value: any): any => {
@@ -121,7 +121,7 @@ export default ({
       {children}
 
       <Snippet title={<b>Predefined Config</b>}>{config}</Snippet>
-      <Snippet title={<b>Blotter Options</b>}>{blotterOptions}</Snippet>
+      <Snippet title={<b>Adaptable Options</b>}>{adaptableOptions}</Snippet>
     </MainPage>
   );
 };

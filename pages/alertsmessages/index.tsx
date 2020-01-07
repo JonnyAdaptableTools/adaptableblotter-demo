@@ -49,12 +49,12 @@ export default () => {
       description={
         <div>
           <h4>Alerts and Messages Functions</h4>
-          <p>The Adaptable Blotter lets you send and receive messages.</p>
+          <p>Adaptable lets you send and receive messages.</p>
           <ul>{demoLinks}</ul>
           <p>
             {' '}
-            Note: there is also the Audit Log which streams all actions in the
-            Adaptable Blotter to a destination of your choice.
+            Note: there is also the Audit Log which streams all actions in
+            Adaptable to a destination of your choice.
           </p>
           Click on the buttons below to see a demo for our Alert and Messaging
           functions.

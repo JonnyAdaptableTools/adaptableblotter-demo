@@ -10,10 +10,9 @@ export default () => {
         <div>
           <h4>Server Validation Demo</h4>
           <p>
-            With Server Validation, you provide the Adaptable Blotter with a
-            function that returns a Promise and will run (presumably
-            server-side) each time a cell is edited allowing you to perform
-            advanced validation.{' '}
+            With Server Validation, you provide Adaptable with a function that
+            returns a Promise and will run (presumably server-side) each time a
+            cell is edited allowing you to perform advanced validation.{' '}
           </p>
           <p>
             The return value can be: nothing (the edit works - or you want to
@@ -33,7 +32,7 @@ export default () => {
             fails then no Server Validation is run.
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_cellvalidationstate_.cellvalidationstate.htmll"
               target="_blank"
@@ -45,7 +44,7 @@ export default () => {
               href="https://api.adaptableblotter.com/interfaces/_api_cellvalidationapi_.cellvalidationapi.html"
               target="_blank"
             >
-              Blotter API
+              Adaptable API
             </a>
             ,{' '}
             <a

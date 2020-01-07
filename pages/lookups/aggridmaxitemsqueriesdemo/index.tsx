@@ -11,14 +11,14 @@ export default () => {
           <h4>Max Items Displayed in Queries Demo</h4>
           <p>
             When getting distinct column values for display (either in the
-            column filter dropdown) the Adaptable Blotter will show the first
-            2,000 distinct values for that column.
+            column filter dropdown) Adaptable will show the first 2,000 distinct
+            values for that column.
           </p>
           <p>
             However, if you would prefer to return a larger result set, you can
             set the the <b>maxColumnValueItemsDisplayed</b> property of{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_blotteroptions_queryoptions_.queryoptions.html"
+              href="https://api.adaptableblotter.com/interfaces/_adaptableoptions_queryoptions_.queryoptions.html"
               target="_blank"
             >
               Query Options
@@ -31,12 +31,12 @@ export default () => {
             (instead of the many hundred we show in other demos).
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_blotteroptions_queryoptions_.queryoptions.html"
+              href="https://api.adaptableblotter.com/interfaces/_adaptableoptions_queryoptions_.queryoptions.html"
               target="_blank"
             >
-              Blotter Options
+              Adaptable Options
             </a>
           </p>
         </div>

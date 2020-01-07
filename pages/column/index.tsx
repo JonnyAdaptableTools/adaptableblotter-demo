@@ -50,8 +50,8 @@ export default () => {
         <div>
           <h4>Column Functions</h4>
           <p>
-            There are a number of different column-related functions in the
-            Adaptable Blotter, to cater for a wide variety of use cases.
+            There are a number of different column-related functions in
+            Adaptable, to cater for a wide variety of use cases.
           </p>
           <ul>{demoLinks}</ul>
           <p>

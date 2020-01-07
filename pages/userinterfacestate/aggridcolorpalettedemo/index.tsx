@@ -13,8 +13,8 @@ export default () => {
           <h4>Color Palette Demo (User Inferface State)</h4>
           <p>
             When getting distinct column values for display (either in the
-            column filter dropdown) the Adaptable Blotter will show the first
-            5,000 distinct values for that column.
+            column filter dropdown) Adaptable will show the first 5,000 distinct
+            values for that column.
           </p>
           <p>
             However, if you would prefer to return a larger result set, you can

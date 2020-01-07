@@ -27,7 +27,7 @@ export default () => {
           </p>
           <p>
             This allows you to perform the necessary search on the server and
-            return data to the Adaptable Blotter via the
+            return data to Adaptable via the
             <a
               href="https://api.adaptableblotter.com/interfaces/_api_gridapi_.gridapi.html"
               target="_blank"
@@ -39,12 +39,12 @@ export default () => {
           </p>
           <p>
             In this example we created 4 Data Sources. We subscribe to
-            SearchChanged event, fetch the relevant data and send to the Blotter
+            SearchChanged event, fetch the relevant data and send to Adaptable
             via the API. We also ouput the event info to the console for your
             convenience.
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_datasourcestate_.datasourcestate.html"
               target="_blank"
@@ -56,7 +56,7 @@ export default () => {
               href="https://api.adaptableblotter.com/interfaces/_api_datasourceapi_.datasourceapi.html"
               target="_blank"
             >
-              Blotter API
+              Adaptable API
             </a>
             ,{' '}
             <a

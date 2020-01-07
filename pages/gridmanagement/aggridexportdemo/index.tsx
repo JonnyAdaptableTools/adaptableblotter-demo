@@ -10,14 +10,14 @@ export default () => {
         <div>
           <h4>Export and Reports Demo</h4>
           <p>
-            You can export your data from the Grid via Reports. There are 3
-            which ship with the Blotter (All Rows, All Visible Rows, Selected
-            Cells) and you can create your own.
+            You can export your data from the Grid via Reports. There are 4
+            which ship with Adaptable (All Rows, All Visible Rows, Selected
+            Cells and Selected Rows) and you can create your own.
           </p>
           <p>
-            If using the Adaptable Blotter with our partners OpenFin, Glue42 or
-            iPushPull you can see exported data update in real time as your Grid
-            ticks. You can also schedule reports to export at particular times.
+            If using Adaptable with our partners OpenFin, Glue42 or iPushPull
+            you can see exported data update in real time as your Grid ticks.
+            You can also schedule reports to export at particular times.
           </p>
           <p>
             This example has 2 reports: 'My Team Big Invoice' which exports all
@@ -28,7 +28,7 @@ export default () => {
             the schedule to see it run at a time you provide).
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_exportstate_.exportstate.html"
               target="_blank"
@@ -40,7 +40,7 @@ export default () => {
               href="https://api.adaptableblotter.com/interfaces/_api_exportapi_.exportapi.html"
               target="_blank"
             >
-              Blotter API
+              Adaptable API
             </a>
             ,{' '}
             <a

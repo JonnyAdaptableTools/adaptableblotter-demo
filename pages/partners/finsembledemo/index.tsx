@@ -9,12 +9,12 @@ export default () => {
         <h4>Finsemble</h4>
       </p>
       <p>
-        The Adaptable Blotter is designed to run in single or multiple blotter
-        mode. Its easy to create many instances of the Blotter and have them
-        share data, events and state.
+        Adaptable is designed to run in single or multiple grid mode. Its easy
+        to create many Adaptable instances and have them share data, events and
+        state.
       </p>
       <p>
-        However if you want to enjoy cutting-edge multiple blotter functionality
+        However if you want to enjoy cutting-edge multiple grid functionality
         then we partner with{' '}
         <a href="https://www.chartiq.com/finsemble/" target="_blank">
           Finsemble
@@ -24,7 +24,7 @@ export default () => {
       </p>
       <p>
         We have a demo coming soon but in the meantime here are a couple of
-        videos that show how Finsemble enables multiple Adaptable Blotters to
+        videos that show how Finsemble enables multiple Adaptable instances to
         share state, data and events. .
       </p>
       <p>

@@ -34,7 +34,7 @@ export default () => {
       { statusPanel: 'agFilteredRowCountComponent' },
     ],
   };
-  const blotterOptions: AdaptableBlotterOptions = {
+  const adaptableOptions: AdaptableBlotterOptions = {
     primaryKey: 'tradeId',
     userName: 'Demo User',
     blotterId: 'DataSource Changes Demo',
@@ -43,8 +43,8 @@ export default () => {
     predefinedConfig: predefinedConfig,
   };
 
-  const blotterOptionsClone = cloneDeep(blotterOptions);
-  const blotterApi = AdaptableBlotter.init(blotterOptions);
+  const adaptableOptionsClone = cloneDeep(adaptableOptions);
+  const adaptableApi = AdaptableBlotter.init(adaptableOptions);
 
   // turn on mimicing adding rows
   tickingDataHelper.startTickingDataagGridAddRow(
@@ -63,6 +63,6 @@ export default () => {
 
   return {
     predefinedConfig,
-    blotterOptions: blotterOptionsClone,
+    adaptableOptions: adaptableOptionsClone,
   };
 };

@@ -11,9 +11,9 @@ export default () => {
           <h4>System Filters Demo</h4>
 
           <p>
-            The Adaptable Blotter provides a range of useful System Filters
-            (e.g. 'Blanks', 'Zero', 'Yesterday') to complement any User Filters
-            or Named Filters provided by you.
+            Adaptable provides a range of useful System Filters (e.g. 'Blanks',
+            'Zero', 'Yesterday') to complement any User Filters or Named Filters
+            provided by you.
           </p>
           <p>
             They appear in italics at the top of the Column Filter form (above
@@ -37,7 +37,7 @@ export default () => {
             used: Positive and Zero (both for Number columns).
           </p>
           <p>
-            <b>Adaptable Blotter Help Resources:</b>{' '}
+            <b>Adaptable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_systemfilterstate_.systemfilterstate.html"
               target="_blank"
@@ -49,7 +49,7 @@ export default () => {
               href="https://api.adaptableblotter.com/interfaces/_api_systemfilterapi_.systemfilterapi.html"
               target="_blank"
             >
-              Blotter API
+              Adaptable API
             </a>
             ,{' '}
             <a
