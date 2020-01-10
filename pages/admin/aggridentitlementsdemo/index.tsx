@@ -30,14 +30,14 @@ export default () => {
           <p>
             <b>Adaptable Help Resources:</b>{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028584252-Entitlements-Config"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_entitlementstate_.entitlementstate.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028585352-Entitlements-API"
+              href="https://api.adaptableblotter.com/interfaces/_api_entitlementsapi_.entitlementsapi.html"
               target="_blank"
             >
               Adaptable API

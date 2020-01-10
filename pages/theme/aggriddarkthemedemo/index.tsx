@@ -29,7 +29,7 @@ export default () => {
             ; we created the Dark Theme just by setting a few properties (mainly
             colours). You can see the css code{' '}
             <a
-              href="https://github.com/AdaptableTools/adaptableblotter/blob/dev/packages/adaptableblotter/App_Scripts/themes/dark.scss"
+              href="https://github.com/AdaptableTools/adaptableblotter/blob/master/packages/adaptableblotter/App_Scripts/themes/dark.scss"
               target="_blank"
             >
               here
@@ -57,7 +57,7 @@ export default () => {
             </a>{' '}
             ,{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360009005211-Theme-Picker-FAQ"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360030078271-Theme-Picker-FAQ"
               target="_blank"
             >
               FAQ

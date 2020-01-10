@@ -423,12 +423,14 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'Any changes made to the data source to the underlying DataGrid (in this example ag-Grid) is automatically reflected in Adaptable and it will be picked up by all relevant functions.',
           },
+          /*
           {
             Name: 'No Code',
             Link: '/admin/aggridnocodedemo',
             Description:
               'Create an Adaptable instance dynamically from a JSON or Excel file that you provide; your Adaptable instance will include the full range of functions and all the advanced functionality like state management and audit.',
           },
+          */
         ],
       },
       {
@@ -474,17 +476,20 @@ export function getDemoPageStructure(): DemoPageStructure {
           {
             Name: 'Column Menu',
             Link: '/userinterface/aggridcolumnmenudemo',
-            Description: 'Column Menu.',
+            Description:
+              'Add your custom menu items to the Column Header Menu (and also choose with shipped items are available)',
           },
           {
             Name: 'Context Menu',
             Link: '/userinterface/aggridcontextmenudemo',
-            Description: 'Context Menu.',
+            Description:
+              'Add your custom menu items to the (right-click) Context Menu (and choose with shipped items are available)',
           },
           {
-            Name: 'Tool Panel',
+            Name: 'Adaptable Tool Panel',
             Link: '/userinterface/aggridtoolpaneldemo',
-            Description: 'Work in progress....',
+            Description:
+              'Use the Adaptable Tool Panel as a Dashboard alternative for quick access to commonly used functions and screens',
           },
         ],
       },
@@ -496,13 +501,13 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Ignore Case in Queries',
             Link: '/adaptableoptions/aggridignorecasequeriesdemo',
             Description:
-              'By default case is ignored when running queries against string columns but you can change this behaviour.',
+              'By default case is ignored when running queries against string columns but you can change this behaviour',
           },
           {
             Name: 'Vendor Grid Filters',
             Link: '/adaptableoptions/aggridvendorgridfiltersdemo',
             Description:
-              'You can use the agGrid Floating Filter and Filter Form if you wish instead of Adaptable Quick Filter and Filter Form respectively.',
+              'You can use the agGrid Floating Filter and Filter Form if you wish instead of Adaptable Quick Filter and Filter Form respectively',
           },
           {
             Name: 'Auto Apply Filters',
@@ -520,19 +525,19 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Max Items Displayed',
             Link: '/lookups/aggridmaxitemsqueriesdemo',
             Description:
-              'Set the maximum number of distinct column values to show in column lookups and the Query Builder.',
+              'Set the maximum number of distinct column values to show in column lookups and the Query Builder',
           },
           {
             Name: 'Server Lookups',
             Link: '/lookups/aggridserverlookupsdemo',
             Description:
-              'Provide Adaptable dynamically with the list of values to be displayed each time distinct cell values are required.',
+              'Provide Adaptable dynamically with the list of values to be displayed each time distinct cell values are required',
           },
           {
             Name: 'Permitted Values',
             Link: '/lookups/aggridpermittedvaluesdemo',
             Description:
-              'Provide a list of column names and a list of values which should be displayed when getting distinct values for that column.',
+              'Provide a list of column names and a list of values which should be displayed when getting distinct values for that column',
           },
         ],
       },
@@ -544,19 +549,19 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Finsemble',
             Link: '/partners/finsembledemo',
             Description:
-              'We leverage the powerful offering to enable multiple Adaptable instances to share state, data and events.',
+              'We leverage the powerful offering to enable multiple Adaptable instances to share state, data and events',
           },
           {
             Name: 'iPushPull',
             Link: '/partners/ipushpulldemo',
             Description:
-              'Export Adaptable data to Excel (with Live Updates) or Symphony and elsewhere by using the services of our partner iPushPull.',
+              'Export Adaptable data to Excel (with Live Updates) or Symphony and elsewhere by using the services of our partner iPushPull',
           },
           {
             Name: 'OpenFin',
             Link: '/partners/openfindemo',
             Description:
-              'If you are using this popular container we offer "Live Updates" so that data exported to Excel updates in real time as Adaptable data ticks or is edited.',
+              'If you are using this popular container we offer "Live Updates" so that data exported to Excel updates in real time as Adaptable data ticks or is edited',
           },
         ],
       },

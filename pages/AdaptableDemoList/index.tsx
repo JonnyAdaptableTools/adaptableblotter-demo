@@ -5,7 +5,6 @@ import { ReactNode } from 'react-redux';
 
 import './index.scss';
 import {
-  DemoPageStructure,
   DemoPage,
   DemoCategory,
   getDemoPageStructure,
@@ -20,7 +19,7 @@ const DemoBox = ({
 }) => {
   return (
     <div className="demo-box">
-      <div>
+      <div style={{ marginLeft: '5px' }}>
         <h3>{title}</h3>
       </div>
       <div>{children}</div>

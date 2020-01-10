@@ -30,14 +30,14 @@ export default () => {
     userName: 'Demo User',
     blotterId: 'Auto Apply Filters Demo',
     filterOptions: {
-      autoApplyFilter: false,
+      //  autoApplyFilter: false,
     },
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };
 
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  const adaptableApi = AdaptableBlotter.init(adaptableOptionsClone);
+  const adaptableApi = AdaptableBlotter.init(adaptableOptions);
 
   return {
     predefinedConfig,

@@ -80,9 +80,7 @@ export function checkPriceIsPostive(numberToCheck: number): number {
   return numberToCheck;
 }
 
-export function getdemolicencekey(): any {
-  return process.env.VALID_BLOTTER_LICENSE;
-}
+
 
 export function ConvertExcelDate(dateToConvert: number) {
   if (dateToConvert.toString() == '') {

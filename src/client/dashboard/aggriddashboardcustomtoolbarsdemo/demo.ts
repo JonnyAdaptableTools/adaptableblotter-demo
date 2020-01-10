@@ -41,6 +41,7 @@ export default () => {
   adaptableApi.eventApi.on(
     'ToolbarVisibilityChanged',
     (toolbarVisibilityChangedEventArgs: ToolbarVisibilityChangedEventArgs) => {
+      console.log(toolbarVisibilityChangedEventArgs.data[0].id);
       if (
         toolbarVisibilityChangedEventArgs.data[0].id.toolbar === 'Trades' &&
         toolbarVisibilityChangedEventArgs.data[0].id.visibility ==

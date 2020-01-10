@@ -26,7 +26,7 @@ export default () => {
           <p>
             <b>Adaptable Help Resources:</b>{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028587312-Reminder-Config"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_reminderstate_.reminderstate.html"
               target="_blank"
             >
               Predefined Config
@@ -39,6 +39,12 @@ export default () => {
               User Guide
             </a>
             .
+          </p>
+          <p>
+            <i>Naftali</i> is <b>amazing</b> I love{' '}
+            <a href="https://www.liverpoolfootyclub.com/" target="_blank">
+              liverpool
+            </a>
           </p>
         </div>
       }

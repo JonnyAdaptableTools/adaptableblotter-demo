@@ -64,6 +64,12 @@ export default {
           'OrderCost',
           'PackageCost',
         ],
+        ColumnSorts: [
+          {
+            Column: 'ContactName',
+            SortOrder: 'Ascending',
+          },
+        ],
         GroupedColumns: ['Employee', 'ShipCountry'],
         Name: 'Grouping Layout',
       },
