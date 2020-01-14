@@ -110,7 +110,7 @@ export default ({
       pageTitle={pageTitle}
       description={description}
     >
-      <div id="adaptableBlotter" style={{ marginRight: 30 }} />
+      <div id="adaptable" style={{ marginRight: 30 }} />
       <p />
       <div
         id="grid"

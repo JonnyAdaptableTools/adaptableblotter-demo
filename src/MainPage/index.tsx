@@ -18,12 +18,12 @@ export default ({
   description,
 }: MainPageProps) => {
   useEffect(() => {
-    (window as any).docsearch({
-      apiKey: process.env.ALGOLIA_KEY,
-      indexName: 'adaptableblotter',
-      inputSelector: '#searchInput',
-      debug: true, // Set debug to true if you want to inspect the dropdown
-    });
+    // (window as any).docsearch({
+    //   apiKey: process.env.ALGOLIA_KEY,
+    //   indexName: 'adaptableblotter',
+    //   inputSelector: '#searchInput',
+    //   debug: true, // Set debug to true if you want to inspect the dropdown
+    // });
   });
 
   return (
