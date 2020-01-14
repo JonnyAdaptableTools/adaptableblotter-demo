@@ -8,7 +8,7 @@ type DynamicComponentType = {
 
 export default (props: { demo: any } & AgGridDemoPageProps) => {
   const [predefinedConfig, setPredefinedConfig] = useState<any>(null);
-  const [adaptableOptions, setBlotterOptionsString] = useState<any>(null);
+  const [adaptableOptions, setAdaptableOptionsString] = useState<any>(null);
 
   const setAdaptableOptions = (adaptableOptions: any) => {
     if (adaptableOptions.vendorGrid) {
@@ -16,9 +16,9 @@ export default (props: { demo: any } & AgGridDemoPageProps) => {
     }
     delete adaptableOptions.licenceKey;
 
-    const blotterOptionsString = JSON.stringify(adaptableOptions, null, 2);
+    const adaptableOptionsString = JSON.stringify(adaptableOptions, null, 2);
 
-    setBlotterOptionsString(blotterOptionsString);
+    setAdaptableOptionsString(adaptableOptionsString);
   };
 
   const { demo, ...pageProps } = props;

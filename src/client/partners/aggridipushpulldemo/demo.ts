@@ -11,6 +11,7 @@ import {
   PredefinedConfig,
   AdaptableApi,
 } from '@adaptabletools/adaptable/types';
+import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import { TickingDataHelper } from '../../../Helpers/TickingDataHelper';
 import { ITrade } from '../../../Helpers/Trade';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
@@ -39,6 +40,7 @@ export default () => {
   const trades: ITrade[] = helperAgGrid.getTrades(rowCount);
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, trades);
+  gridOptions.modules = AllEnterpriseModules;
 
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'tradeId',
@@ -66,12 +68,10 @@ export default () => {
 };
 
 let predefinedConfig: PredefinedConfig = {
-  Partner: {
-    iPushPull: {
-      iPushPullInstance: ipushpull,
-      Username: process.env.IPUSHPULL_USERNAME,
-      Password: process.env.IPUSHPULL_PASSWORD,
-      ThrottleTime: 5000,
-    },
+  IPushPull: {
+    iPushPullInstance: ipushpull,
+    Username: process.env.IPUSHPULL_USERNAME,
+    Password: process.env.IPUSHPULL_PASSWORD,
+    ThrottleTime: 5000,
   },
 };

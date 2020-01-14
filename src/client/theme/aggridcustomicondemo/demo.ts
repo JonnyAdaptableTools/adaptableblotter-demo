@@ -7,13 +7,10 @@ import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham-dark.css';
 
 import './index.css';
-
+import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import { cloneDeep } from 'lodash';
 import '../../../../DemoPage/aggriddemo.css';
-import {
-  AdaptableOptions,
-  IAdaptableBlotter,
-} from '@adaptabletools/adaptable/types';
+import { AdaptableOptions } from '@adaptabletools/adaptable/types';
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import predefinedConfig from './config';
@@ -27,6 +24,7 @@ export default () => {
   const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
+  gridOptions.modules = AllEnterpriseModules;
 
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',

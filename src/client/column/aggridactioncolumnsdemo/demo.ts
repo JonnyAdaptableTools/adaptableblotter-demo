@@ -1,7 +1,7 @@
 import Adaptable from '@adaptabletools/adaptable/agGrid';
 import '@adaptabletools/adaptable/index.css';
 import './actioncolumn.css';
-
+import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
 import { cloneDeep } from 'lodash';
@@ -22,13 +22,13 @@ import { ActionColumnClickedInfo } from '@adaptabletools/adaptable/src/Api/Event
 export default () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
-  // let adaptableBlotter: IAdaptableBlotter;
 
   let rowData = JSON.parse(JSON.stringify(json));
 
   const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
+  gridOptions.modules = AllEnterpriseModules;
 
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',

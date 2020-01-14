@@ -4,6 +4,7 @@ import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
 import { cloneDeep } from 'lodash';
 import '../../../../DemoPage/aggriddemo.css';
+import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import {
   AdaptableOptions,
   ToolbarButtonClickedEventArgs,
@@ -14,7 +15,6 @@ import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import predefinedConfig from './config';
 import ReactDOM from 'react-dom';
 import { renderCustomDiv } from '.';
-import { Visibility } from '@adaptabletools/adaptable/App_Scripts/PredefinedConfig/Common/Enums';
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
@@ -25,6 +25,7 @@ export default () => {
   const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
+  gridOptions.modules = AllEnterpriseModules;
 
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
@@ -44,8 +45,7 @@ export default () => {
       console.log(toolbarVisibilityChangedEventArgs.data[0].id);
       if (
         toolbarVisibilityChangedEventArgs.data[0].id.toolbar === 'Trades' &&
-        toolbarVisibilityChangedEventArgs.data[0].id.visibility ==
-          Visibility.Visible
+        toolbarVisibilityChangedEventArgs.data[0].id.visibility == 'Visible'
       ) {
         let toolbarContents: any = renderCustomDiv();
 

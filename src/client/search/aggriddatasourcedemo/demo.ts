@@ -4,7 +4,7 @@ import '@adaptabletools/adaptable/index.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
 import { cloneDeep } from 'lodash';
-
+import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import '../../../../DemoPage/aggriddemo.css';
 
 import {
@@ -17,8 +17,8 @@ import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import predefinedConfig from './config';
 import {
   SearchChangedInfo,
-  BlotterSearchState,
-} from '@adaptabletools/adaptable/App_Scripts/Api/Events/SearchChanged';
+  AdaptableSearchState,
+} from '@adaptabletools/adaptable/src/Api/Events/SearchChanged';
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
@@ -29,6 +29,7 @@ export default () => {
   const columndefs = helperAgGrid.getTradeSchema();
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, null);
+  gridOptions.modules = AllEnterpriseModules;
 
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'tradeId',
@@ -61,8 +62,8 @@ export default () => {
     let searchChangedInfo: SearchChangedInfo = searchChangedArgs.data[0].id;
     if (searchChangedInfo.searchChangedTrigger == 'DataSource') {
       console.log(searchChangedArgs);
-      let searchState: BlotterSearchState =
-        searchChangedArgs.data[0].id.blotterSearchState;
+      let searchState: AdaptableSearchState =
+        searchChangedArgs.data[0].id.AdaptableSearchState;
       if (searchState.dataSource != null) {
         switch (searchState.dataSource.Name) {
           case 'Euro Trades':

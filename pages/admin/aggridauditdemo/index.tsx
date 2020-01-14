@@ -30,7 +30,7 @@ export default () => {
             messages appear as you edit data and create objects in Adaptable.
           </p>
           <p>
-            <b>Adaptable Help Resources:</b>{' '}
+            <b>AdapTable Help Resources:</b>{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028585212-Audit-Events-API"
               target="_blank"

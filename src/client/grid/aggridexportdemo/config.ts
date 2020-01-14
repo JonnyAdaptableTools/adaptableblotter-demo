@@ -39,15 +39,6 @@ export default {
         ReportRowScope: 'ExpressionRows',
       },
       {
-        AutoExport: {
-          ExportDestination: 'CSV',
-          Schedule: {
-            Hour: 17,
-            Minute: 0,
-            OneOffDate: null,
-            DaysOfWeek: [1, 2, 3, 4, 5, 6, 0],
-          },
-        },
         ColumnIds: [
           'OrderId',
           'ChangeLastOrder',
@@ -61,6 +52,18 @@ export default {
         Name: 'Current Orders',
         ReportColumnScope: 'BespokeColumns',
         ReportRowScope: 'VisibleRows',
+      },
+    ],
+    ReportSchedules: [
+      {
+        ScheduleType: 'Report',
+        ReportName: 'Current Orders',
+        ExportDestination: 'CSV',
+        Schedule: {
+          DaysOfWeek: [1, 2, 3, 4, 5],
+          Hour: 17,
+          Minute: 30,
+        },
       },
     ],
   },

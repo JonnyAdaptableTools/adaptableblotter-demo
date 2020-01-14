@@ -33,7 +33,7 @@ export default () => {
             Change that to 'J' and it will highlight.
           </p>
           <p>
-            <b>Adaptable Help Resources:</b>{' '}
+            <b>AdapTable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_adaptableoptions_queryoptions_.queryoptions.html"
               target="_blank"

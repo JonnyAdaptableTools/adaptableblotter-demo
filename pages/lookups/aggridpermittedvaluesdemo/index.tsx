@@ -29,7 +29,7 @@ export default () => {
             dynamically build a list of distinct values for the column.
           </p>
           <p>
-            <b>Adaptable Help Resources:</b>{' '}
+            <b>AdapTable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_designtimestate_userinterfacestate_.permittedcolumnvalues.html"
               target="_blank"

@@ -51,7 +51,7 @@ export default () => {
             content.
           </p>
           <p>
-            <b>Adaptable Help Resources:</b>{' '}
+            <b>AdapTable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_dashboardstate_.dashboardstate.html"
               target="_blank"

@@ -39,7 +39,7 @@ export default () => {
             distinct values normally.
           </p>
           <p>
-            <b>Adaptable Help Resources:</b>{' '}
+            <b>AdapTable Help Resources:</b>{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028584632-Query-Options"
               target="_blank"

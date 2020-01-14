@@ -28,7 +28,7 @@ export default () => {
             the schedule to see it run at a time you provide).
           </p>
           <p>
-            <b>Adaptable Help Resources:</b>{' '}
+            <b>AdapTable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_exportstate_.exportstate.html"
               target="_blank"

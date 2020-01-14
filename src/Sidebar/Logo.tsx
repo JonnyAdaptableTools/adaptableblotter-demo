@@ -1,11 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import logo from '../../images/AdaptableBlotter.png';
+import logo from '../../images/Adaptable.png';
 
 export default () => (
-  <div
-    style={{ position: 'relative', paddingBottom: 120, background: 'white' }}
-  >
+  <div style={{ position: 'relative', paddingBottom: 90, background: 'white' }}>
     <Link href="/">
       <a
         style={{
@@ -22,7 +20,8 @@ export default () => (
             padding: 0,
             maxWidth: '90%',
             maxHeight: '90%',
-
+            marginTop: '5%',
+            marginBottom: '0%',
             position: 'absolute',
             top: 0,
           }}

@@ -7,6 +7,7 @@ import { cloneDeep } from 'lodash';
 
 import '../../../../DemoPage/aggriddemo.css';
 
+import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import { AdaptableOptions } from '@adaptabletools/adaptable/types';
 
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
@@ -26,6 +27,8 @@ export default () => {
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, trades);
   gridOptions.floatingFilter = true;
+  gridOptions.modules = AllEnterpriseModules;
+
   gridOptions.statusBar = {
     statusPanels: [
       { statusPanel: 'agTotalRowCountComponent', align: 'left' },

@@ -10,7 +10,7 @@ import { AdaptableOptions } from '@adaptabletools/adaptable/types';
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import predefinedConfig from './config';
-
+import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 export default () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
@@ -21,12 +21,13 @@ export default () => {
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData, false);
   gridOptions.sideBar = true;
+  gridOptions.modules = AllEnterpriseModules;
 
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Tool Panel Demo',
-    generalOptions: {
+    userInterfaceOptions: {
       showAdaptableToolPanel: true,
     },
     vendorGrid: gridOptions,

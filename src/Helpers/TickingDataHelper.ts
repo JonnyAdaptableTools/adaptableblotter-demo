@@ -13,7 +13,7 @@ export class TickingDataHelper {
     if (gridOptions != null && gridOptions.api != null) {
       const helperAgGrid = new HelperAgGrid();
 
-      let useBlotterAPIUpdateGridData: boolean = false;
+      let useAdaptableAPIUpdateGridData: boolean = false;
       let useRowNodeSetDataValue: boolean = true;
 
       setInterval(() => {
@@ -33,7 +33,7 @@ export class TickingDataHelper {
         const notional = this.getRandomItem(helperAgGrid.getNotionals());
         const changeOnYear = helperAgGrid.getMeaningfulDouble();
 
-        if (useBlotterAPIUpdateGridData) {
+        if (useAdaptableAPIUpdateGridData) {
           trade.price = newPrice;
           trade.bid = bid;
           trade.ask = ask;
@@ -61,47 +61,65 @@ export class TickingDataHelper {
 
   public startTickingDataagGridOrders(
     gridOptions: any,
+    adaptableApi: AdaptableApi,
     tickingFrequency: number,
     includeItemCount: boolean = false
   ) {
     if (gridOptions != null && gridOptions.api != null) {
       setInterval(() => {
-        let rowNode: RowNode = gridOptions.api!.getRowNode(
-          this.generateRandomInt(11074, 11142)
-        );
+        let orderId = this.generateRandomInt(11074, 11142); //11074
+
+        let rowNode: RowNode = gridOptions.api!.getRowNode(orderId);
         if (rowNode) {
-          if (!includeItemCount) {
-            let numberToAdd: number =
-              this.generateRandomInt(1, 2) == 1 ? -0.5 : 0.5;
+          //  const order: any = { ...gridOptions.rowData[tradeId] };
+          const order: any = { ...rowNode.data };
+          if (order) {
+            if (!includeItemCount) {
+              let numberToAdd: number =
+                this.generateRandomInt(1, 2) == 1 ? -0.5 : 0.5;
 
-            let columnName = 'ItemCost';
-            let initialItemCost = gridOptions.api.getValue(columnName, rowNode);
-            let newItemCost = this.roundTo4Dp(initialItemCost + numberToAdd);
+              let columnName = 'ItemCost';
+              let initialItemCost = gridOptions.api.getValue(
+                columnName,
+                rowNode
+              );
+              let newItemCost = this.roundTo4Dp(initialItemCost + numberToAdd);
+              order.ItemCost = newItemCost;
+              //     rowNode.setDataValue(columnName, newItemCost);
 
-            rowNode.setDataValue(columnName, newItemCost);
+              let itemCount = gridOptions.api.getValue('ItemCount', rowNode);
+              let newOrderCost = itemCount * newItemCost;
+              order.OrderCost = newOrderCost;
+              //   rowNode.setDataValue('OrderCost', newOrderCost);
 
-            let itemCount = gridOptions.api.getValue('ItemCount', rowNode);
-            let newOrderCost = itemCount * newItemCost;
-            rowNode.setDataValue('OrderCost', newOrderCost);
+              let packageCost = gridOptions.api.getValue(
+                'PackageCost',
+                rowNode
+              );
+              let newInvoicedCost = newOrderCost - packageCost;
+              order.InvoicedCost = newInvoicedCost;
+              //    rowNode.setDataValue('InvoicedCost', newInvoicedCost);
 
-            let packageCost = gridOptions.api.getValue('PackageCost', rowNode);
-            let newInvoicedCost = newOrderCost - packageCost;
-            rowNode.setDataValue('InvoicedCost', newInvoicedCost);
-
-            let incdec: number = this.generateRandomInt(1, 2) == 1 ? -1 : 1;
-            let changeLastOrder = gridOptions.api.getValue(
-              'ChangeLastOrder',
-              rowNode
-            );
-            rowNode.setDataValue('ChangeLastOrder', incdec + changeLastOrder);
-          } else {
-            let numberToAdd: number = this.generateRandomInt(1, 10);
-            let itemCount = gridOptions.api.getValue('ItemCount', rowNode);
-            if (numberToAdd < 8) {
-              rowNode.setDataValue('ItemCount', itemCount + 1);
+              let incdec: number = this.generateRandomInt(1, 2) == 1 ? -1 : 1;
+              let changeLastOrder = gridOptions.api.getValue(
+                'ChangeLastOrder',
+                rowNode
+              );
+              order.ChangeLastOrder = incdec + changeLastOrder;
+              //       rowNode.setDataValue('ChangeLastOrder', incdec + changeLastOrder);
             } else {
-              rowNode.setDataValue('ItemCount', itemCount * 3);
+              let numberToAdd: number = this.generateRandomInt(1, 10);
+              let itemCount = gridOptions.api.getValue('ItemCount', rowNode);
+              if (numberToAdd < 8) {
+                order.ItemCount = itemCount + 1;
+                //         rowNode.setDataValue('ItemCount', itemCount + 1);
+              } else {
+                order.ItemCount = itemCount * 3;
+                //          rowNode.setDataValue('ItemCount', itemCount * 3);
+              }
             }
+            // gridOptions.api!.updateRowData({ update: [order] });
+            adaptableApi.gridApi.updateGridData([order]);
           }
         }
       }, tickingFrequency);

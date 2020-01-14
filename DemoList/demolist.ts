@@ -485,9 +485,15 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'Add your custom menu items to the (right-click) Context Menu (and choose with shipped items are available)',
           },
+        ],
+      },
+      {
+        CategoryName: 'Tool Panel',
+        Link: '/toolpanel',
+        Pages: [
           {
             Name: 'Adaptable Tool Panel',
-            Link: '/userinterface/aggridtoolpaneldemo',
+            Link: '/toolpanel/aggridtoolpaneldemo',
             Description:
               'Use the Adaptable Tool Panel as a Dashboard alternative for quick access to commonly used functions and screens',
           },

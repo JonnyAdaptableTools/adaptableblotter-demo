@@ -25,7 +25,7 @@ export default () => {
             particular Date is a holiday or not.
           </p>
           <p>
-            <b>Adaptable Help Resources:</b>{' '}
+            <b>AdapTable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_calendarstate_.calendarstate.html"
               target="_blank"

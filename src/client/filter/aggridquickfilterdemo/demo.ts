@@ -8,8 +8,7 @@ import { cloneDeep } from 'lodash';
 import '../../../../DemoPage/aggriddemo.css';
 
 import { AdaptableOptions } from '@adaptabletools/adaptable/types';
-
-import json from '../../../../DataSets/Json/NorthwindOrders.json';
+import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import predefinedConfig from './config';
 
@@ -22,9 +21,8 @@ export default () => {
   const trades = helperAgGrid.getTrades(500);
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, trades);
-
-  //const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
   gridOptions.floatingFilter = true;
+  gridOptions.modules = AllEnterpriseModules;
 
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',

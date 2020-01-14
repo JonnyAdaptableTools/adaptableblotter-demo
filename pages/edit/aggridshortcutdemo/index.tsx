@@ -25,7 +25,7 @@ export default () => {
             appropriately.
           </p>
           <p>
-            <b>Adaptable Help Resources:</b>{' '}
+            <b>AdapTable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_shortcutstate_.shortcutstate.html"
               target="_blank"

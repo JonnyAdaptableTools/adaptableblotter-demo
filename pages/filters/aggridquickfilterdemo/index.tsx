@@ -24,7 +24,7 @@ export default () => {
             be used here (e.g > 15, 's*', '1:10' [between 1 and 10]){' '}
           </p>
           <p>
-            <b>Adaptable Help Resources:</b>{' '}
+            <b>AdapTable Help Resources:</b>{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029896011-Filter-FAQ"
               target="_blank"

@@ -8,6 +8,7 @@ import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
 import { startCase } from 'lodash';
 import '../../../../DemoPage/aggriddemo.css';
 
+import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import { AdaptableOptions } from '@adaptabletools/adaptable/types';
 
 import { IAdaptableBlotterWizard } from '@adaptabletools/adaptable/App_Scripts/BlotterInterfaces/IAdaptableBlotterWizard';

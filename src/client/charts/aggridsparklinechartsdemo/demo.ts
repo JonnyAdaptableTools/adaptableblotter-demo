@@ -9,8 +9,10 @@ import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham-dark.css';
 import { cloneDeep } from 'lodash';
 import '../../../../DemoPage/aggriddemo.css';
 import { AdaptableOptions } from '@adaptabletools/adaptable/types';
+import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import predefinedConfig from './config';
+import charts from '@adaptabletools/adaptable-plugin-charts';
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
@@ -21,12 +23,12 @@ export default () => {
   const trades = helperAgGrid.getTrades(300);
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, trades);
+  gridOptions.modules = AllEnterpriseModules;
 
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'tradeId',
     userName: 'Demo User',
     adaptableId: 'Sparkline Charts Demo',
-
     chartOptions: {
       displayOnStartUp: true,
       showModal: false,
@@ -34,6 +36,7 @@ export default () => {
     },
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
+    plugins: [charts()],
   };
 
   const adaptableOptionsClone = cloneDeep(adaptableOptions);

@@ -29,7 +29,7 @@ export default () => {
             apply also when you perfrom a Smart Edit or Bulk Update.
           </p>
           <p>
-            <b>Adaptable Help Resources:</b>{' '}
+            <b>AdapTable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_cellvalidationstate_.cellvalidationstate.htmll"
               target="_blank"

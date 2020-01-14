@@ -24,7 +24,7 @@ export default () => {
             toolbar).
           </p>
           <p>
-            <b>Adaptable Help Resources:</b>{' '}
+            <b>AdapTable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_alertstate_.alertstate.html"
               target="_blank"

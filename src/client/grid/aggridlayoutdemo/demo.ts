@@ -8,7 +8,7 @@ import { cloneDeep } from 'lodash';
 import '../../../../DemoPage/aggriddemo.css';
 
 import { AdaptableOptions } from '@adaptabletools/adaptable/types';
-
+import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import predefinedConfig from './config';
@@ -25,6 +25,7 @@ export default () => {
   gridOptions.defaultColDef = {
     sortable: true,
   };
+  gridOptions.modules = AllEnterpriseModules;
   gridOptions.sideBar = true;
 
   const adaptableOptions: AdaptableOptions = {

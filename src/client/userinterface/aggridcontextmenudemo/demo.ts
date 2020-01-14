@@ -11,11 +11,11 @@ import {
 } from '@adaptabletools/adaptable/types';
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
+import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import {
   AdaptableMenuItem,
   MenuInfo,
-} from '@adaptabletools/adaptable/App_Scripts/PredefinedConfig/Common/Menu';
-
+} from '@adaptabletools/adaptable/src/PredefinedConfig/Common/Menu';
 var adaptableApi: AdaptableApi;
 
 export default () => {
@@ -25,22 +25,23 @@ export default () => {
   const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
   gridOptions.floatingFilter = true;
+  gridOptions.modules = AllEnterpriseModules;
 
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Context Menu Demo',
-    generalOptions: {
+    userInterfaceOptions: {
       showAdaptableContextMenu: (
         menuItem: AdaptableMenuItem,
         menuInfo: MenuInfo
       ) => {
         if (
-          menuInfo.column.ColumnId === 'Employee' &&
+          menuInfo.Column.ColumnId === 'Employee' &&
           menuItem.FunctionName === 'ColumnChooser'
         ) {
           return false;
-        } else if (menuInfo.column.ColumnId === 'ContactName') {
+        } else if (menuInfo.Column.ColumnId === 'ContactName') {
           return false;
         }
         return true;

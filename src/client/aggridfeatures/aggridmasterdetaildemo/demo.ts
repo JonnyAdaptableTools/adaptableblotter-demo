@@ -5,6 +5,7 @@ import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
 import { cloneDeep } from 'lodash';
 
+import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import '../../../../DemoPage/aggriddemo.css';
 
 import { AdaptableOptions } from '@adaptabletools/adaptable/types';
@@ -20,6 +21,7 @@ export default () => {
   let footballDataHelper = new FootballDataHelper();
 
   const gridOptions = footballDataHelper.getMasterGridOptionsFootball();
+  gridOptions.modules = AllEnterpriseModules;
 
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'name',

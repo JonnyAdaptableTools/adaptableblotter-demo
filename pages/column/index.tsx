@@ -6,14 +6,14 @@ import { ReactNode } from 'react-redux';
 import './index.scss';
 import GridLayout from '../../src/components/GridLayout';
 import { getDemoPageStructure, DemoPage } from '../../DemoList/demolist';
-import logo from '../../images/AdaptableBlotter.png';
+import logo from '../../images/Adaptable.png';
 
 const DemoBox = ({ href, children }: { href: string; children: ReactNode }) => {
   return (
     <Link href={href}>
       <a>
         <div className="demo-box">
-          <img src={logo} style={{ maxWidth: '80%' }} />
+          <img src={logo} style={{ maxWidth: '80%', marginBottom: '5%' }} />
           <div>{children}</div>
         </div>
       </a>
@@ -38,7 +38,7 @@ export default () => {
     let title = page.Name + ' Demo';
     return (
       <DemoBox key={page.Name} href={page.Link}>
-        {title}
+        <div style={{ fontSize: 'larger' }}>{title}</div>
       </DemoBox>
     );
   });

@@ -24,7 +24,7 @@ export default () => {
             the Reminder so that it fires in 2 minutes time.
           </p>
           <p>
-            <b>Adaptable Help Resources:</b>{' '}
+            <b>AdapTable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_reminderstate_.reminderstate.html"
               target="_blank"
@@ -39,12 +39,6 @@ export default () => {
               User Guide
             </a>
             .
-          </p>
-          <p>
-            <i>Naftali</i> is <b>amazing</b> I love{' '}
-            <a href="https://www.liverpoolfootyclub.com/" target="_blank">
-              liverpool
-            </a>
           </p>
         </div>
       }

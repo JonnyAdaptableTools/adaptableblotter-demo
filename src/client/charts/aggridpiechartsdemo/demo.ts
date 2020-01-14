@@ -6,12 +6,13 @@ import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
 import { cloneDeep } from 'lodash';
 
 import '../../../../DemoPage/aggriddemo.css';
-
+import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import { AdaptableOptions } from '@adaptabletools/adaptable/types';
 
 import json from '../../../../DataSets/Json/worldstats.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import predefinedConfig from './config';
+import charts from '@adaptabletools/adaptable-plugin-charts';
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
@@ -22,12 +23,12 @@ export default () => {
   const columndefs = helperAgGrid.getWorldStatsSchema();
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
+  gridOptions.modules = AllEnterpriseModules;
 
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'Country',
     userName: 'Demo User',
     adaptableId: 'Pie Charts Demo',
-
     chartOptions: {
       displayOnStartUp: true,
       showModal: false,
@@ -35,6 +36,7 @@ export default () => {
     },
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
+    plugins: [charts()],
   };
 
   const adaptableOptionsClone = cloneDeep(adaptableOptions);

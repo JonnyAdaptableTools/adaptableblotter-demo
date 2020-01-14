@@ -8,11 +8,8 @@ import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham-dark.css';
 import { cloneDeep } from 'lodash';
 import '../../../../DemoPage/aggriddemo.css';
-import {
-  AdaptableOptions,
-  IAdaptableBlotter,
-} from '@adaptabletools/adaptable/types';
-
+import { AdaptableOptions } from '@adaptabletools/adaptable/types';
+import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import { TickingDataHelper } from '../../../Helpers/TickingDataHelper';
 import predefinedConfig from './config';
@@ -29,6 +26,7 @@ export default () => {
   const trades = helperAgGrid.getTrades(tradeCount);
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, trades);
+  gridOptions.modules = AllEnterpriseModules;
 
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'tradeId',

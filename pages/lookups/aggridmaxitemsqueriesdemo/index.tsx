@@ -31,7 +31,7 @@ export default () => {
             (instead of the many hundred we show in other demos).
           </p>
           <p>
-            <b>Adaptable Help Resources:</b>{' '}
+            <b>AdapTable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_adaptableoptions_queryoptions_.queryoptions.html"
               target="_blank"

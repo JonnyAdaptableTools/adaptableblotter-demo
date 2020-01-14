@@ -27,7 +27,7 @@ export default () => {
           </p>
 
           <p>
-            <b>Adaptable Help Resources:</b>{' '}
+            <b>AdapTable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_formatcolumnstate_.formatcolumnstate.html"
               target="_blank"

@@ -13,9 +13,8 @@ import { AdaptableOptions } from '@adaptabletools/adaptable/types';
 import json from '../../../../DataSets/Json/worldstats.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import predefinedConfig from './config';
-
 import charts from '@adaptabletools/adaptable-plugin-charts';
-import finance from '@adaptabletools/adaptable-plugin-finance';
+//import finance from '@adaptabletools/adaptable-plugin-finance';
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
@@ -26,14 +25,12 @@ export default () => {
   const columndefs = helperAgGrid.getWorldStatsSchema();
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
-
   gridOptions.modules = AllEnterpriseModules;
+
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'Country',
     userName: 'Demo User',
     adaptableId: 'Category Charts Demo',
-    plugins: [charts(), finance()],
-
     chartOptions: {
       displayOnStartUp: true,
       showModal: false,
@@ -41,6 +38,7 @@ export default () => {
     },
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
+    plugins: [charts()],
   };
 
   const adaptableOptionsClone = cloneDeep(adaptableOptions);

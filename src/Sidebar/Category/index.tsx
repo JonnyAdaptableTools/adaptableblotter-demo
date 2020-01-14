@@ -73,7 +73,7 @@ const Category = withRouter(
           }`}
         >
           {icon}
-          {title}
+          <div style={{ fontSize: 'larger' }}>{title}</div>
         </div>
         <div
           className="sidebar-category-content"

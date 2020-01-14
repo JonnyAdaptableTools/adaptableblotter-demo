@@ -65,7 +65,7 @@ export default () => {
             (ticking) Adaptable data in iPushPull.
           </p>
           <p>
-            <b>Adaptable Help Resources:</b>{' '}
+            <b>AdapTable Help Resources:</b>{' '}
             <a
               href="https://github.com/AdaptableTools/example-adaptableblotter-ipushpull-integration/blob/master/index.ts"
               target="_blank"

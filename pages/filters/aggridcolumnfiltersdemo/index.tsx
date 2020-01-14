@@ -30,7 +30,7 @@ export default () => {
             Menu or by clicking the last button in the Column Filter toolbar.
           </p>
           <p>
-            <b>Adaptable Help Resources:</b>{' '}
+            <b>AdapTable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/modules/_predefinedconfig_columnfilterstate_.html"
               target="_blank"

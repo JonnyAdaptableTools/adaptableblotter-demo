@@ -24,7 +24,7 @@ export default () => {
             Cost' one displays cell values as well as uses a non default colour.
           </p>
           <p>
-            <b>Adaptable Help Resources:</b>{' '}
+            <b>AdapTable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_percentbarstate_.percentbarstate.html"
               target="_blank"

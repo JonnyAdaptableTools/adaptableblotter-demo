@@ -40,7 +40,7 @@ export default () => {
             and that all State is stored (refresh the page to see).
           </p>
           <p>
-            <b>Adaptable Help Resources:</b>{' '}
+            <b>AdapTable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_api_adaptableapi_.adaptableapi"
               target="_blank"

@@ -23,7 +23,7 @@ export default () => {
             operations or change the selected one by using the dropdown.
           </p>
           <p>
-            <b>Adaptable Help Resources:</b>{' '}
+            <b>AdapTable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_cellsummarystate_.cellsummarystate.html"
               target="_blank"

@@ -3,7 +3,7 @@ import MainPage from '../../src/MainPage';
 import Link from 'next/link';
 import { ReactNode } from 'react-redux';
 
-import logo from '../../images/AdaptableBlotter.png';
+import logo from '../../images/Adaptable.png';
 
 import './index.scss';
 import GridLayout from '../../src/components/GridLayout';
@@ -13,7 +13,7 @@ const DemoBox = ({ href, children }: { href: string; children: ReactNode }) => {
     <Link href={href}>
       <a>
         <div className="demo-box">
-          <img src={logo} style={{ maxWidth: '80%' }} />
+          <img src={logo} style={{ maxWidth: '80%', marginBottom: '5%' }} />
           <div>{children}</div>
         </div>
       </a>

@@ -17,7 +17,7 @@ export default {
             },
           },
         },
-
+        ScheduleType: 'Reminder',
         Schedule: {
           DaysOfWeek: [1, 2, 3, 4, 5],
           Hour: 17,

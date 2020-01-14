@@ -79,7 +79,8 @@ const Snippet = ({
       >
         {arrowRight}
       </div>
-      {title} <CopyToClibpoard value={children} />
+      <div style={{ fontSize: 'larger' }}>{title}</div>{' '}
+      <CopyToClibpoard value={children} />
       <br />
       {expanded ? <pre>{children}</pre> : null}
     </div>

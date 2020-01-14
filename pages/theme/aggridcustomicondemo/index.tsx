@@ -43,7 +43,7 @@ export default () => {
           </p>
 
           <p>
-            <b>Adaptable Help Resources:</b>{' '}
+            <b>AdapTable Help Resources:</b>{' '}
             <a
               href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755177-Styling-Functions"
               target="_blank"

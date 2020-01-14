@@ -25,7 +25,7 @@ export default () => {
             Leverling'.
           </p>
           <p>
-            <b>Adaptable Help Resources:</b>{' '}
+            <b>AdapTable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_plusminusstate_.plusminusstate.html"
               target="_blank"

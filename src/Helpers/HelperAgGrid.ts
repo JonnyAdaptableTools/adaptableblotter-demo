@@ -1,9 +1,7 @@
-import * as Helper from './Helper';
-import { GridOptions } from '@ag-grid-community/all-modules/dist/lib/entities/gridOptions';
 import { AdaptableOptions } from '@adaptabletools/adaptable/types';
 import { LicenseManager } from '@ag-grid-enterprise/all-modules';
 import { ITrade } from './Trade';
-import { ColDef } from '@ag-grid-community/all-modules';
+import { ColDef, GridOptions } from '@ag-grid-community/all-modules';
 
 export class HelperAgGrid {
   private currencyFormatter = new Intl.NumberFormat('en-US', {
@@ -137,7 +135,7 @@ export class HelperAgGrid {
     return gridOptions;
   }
 
-  public getAdaptableBlotterOptions(
+  public getAdaptableOptions(
     gridOptions: GridOptions,
     pk: string,
     adaptableId: string,
@@ -147,23 +145,17 @@ export class HelperAgGrid {
       primaryKey: pk,
       vendorGrid: gridOptions,
       userName: 'Demo User',
-      adaptableId: blotterId,
-
+      adaptableId: adaptableId,
       predefinedConfig: config,
       layoutOptions: {
         includeVendorStateInLayouts: true,
         autoSaveLayouts: true,
       },
-      chartOptions: {
-        displayOnStartUp: true,
-        showModal: false,
-        pieChartMaxItems: 50,
-      },
     };
     return adaptableOptions;
   }
 
-  private getAadaptableBlotterOptionsWithDivNames(
+  private getAadaptableOptionsWithDivNames(
     gridOptions: GridOptions,
     pk: string,
     adaptableId: string,
@@ -175,7 +167,7 @@ export class HelperAgGrid {
       primaryKey: pk,
       vendorGrid: gridOptions,
       userName: 'Demo User',
-      adaptableId: blotterId,
+      adaptableId: adaptableId,
 
       predefinedConfig: config,
       layoutOptions: {
@@ -184,7 +176,7 @@ export class HelperAgGrid {
       },
       containerOptions: {
         vendorContainer: gridName,
-        adaptableBlotterContainer: abName,
+        adaptableContainer: abName,
       },
       chartOptions: {
         displayOnStartUp: true,

@@ -34,7 +34,7 @@ export default () => {
             the Context Menu to see a Sparkline just for the Selected values.
           </p>
           <p>
-            <b>Adaptable Help Resources:</b>{' '}
+            <b>AdapTable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_sparklinecolumnstate_.sparklinecolumnstate.html"
               target="_blank"

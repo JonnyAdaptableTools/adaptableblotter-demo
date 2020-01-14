@@ -8,10 +8,12 @@ import { cloneDeep } from 'lodash';
 import '../../../../DemoPage/aggriddemo.css';
 
 import { AdaptableOptions } from '@adaptabletools/adaptable/types';
-
+import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import predefinedConfig from './config';
+
+import finance from '@adaptabletools/adaptable-plugin-finance';
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
@@ -22,14 +24,15 @@ export default () => {
   const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
+  gridOptions.modules = AllEnterpriseModules;
 
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Cell Summary Demo',
-
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
+    plugins: [finance()],
   };
 
   const adaptableOptionsClone = cloneDeep(adaptableOptions);

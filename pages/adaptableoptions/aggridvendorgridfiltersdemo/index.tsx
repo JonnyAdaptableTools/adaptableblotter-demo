@@ -18,8 +18,8 @@ export default () => {
           <p>
             If you prefer, you can use those provided by ag-Grid which are also
             highly advanced. You do this by setting the{' '}
-            <b>useAdaptableBlotterQuickFilter</b> and{' '}
-            <b>useAdaptableBlotterFilterForm</b> properties in{' '}
+            <b>useAdaptableQuickFilter</b> and <b>useAdaptableFilterForm</b>{' '}
+            properties in{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_adaptableoptions_filteroptions_.filteroptions.html"
               target="_blank"
@@ -38,7 +38,7 @@ export default () => {
             <i>agSetColumnFilter</i> type.
           </p>
           <p>
-            <b>Adaptable Help Resources:</b>{' '}
+            <b>AdapTable Help Resources:</b>{' '}
             <a
               href="https://api.adaptableblotter.com/interfaces/_adaptableoptions_filteroptions_.filteroptions.html"
               target="_blank"
