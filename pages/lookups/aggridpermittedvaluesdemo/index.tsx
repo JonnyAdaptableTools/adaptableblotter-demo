@@ -10,7 +10,7 @@ export default () => {
         <div>
           <h4>Permitted Values Demo (User Inferface State)</h4>
           <p>
-            When Adaptable wants to provide a list of values for a column (e.g.
+            When AdapTable wants to provide a list of values for a column (e.g.
             in a column filter, or when building a query or in Bulk Update) it
             will first get the list from Server Lookups if that has been set.
           </p>
@@ -25,7 +25,7 @@ export default () => {
             displayed in the Column Filter (and Query Builder) for that column.
           </p>
           <p>
-            Note: if there are no Permitted Values, then Adaptable wtill
+            Note: if there are no Permitted Values, then AdapTable wtill
             dynamically build a list of distinct values for the column.
           </p>
           <p>

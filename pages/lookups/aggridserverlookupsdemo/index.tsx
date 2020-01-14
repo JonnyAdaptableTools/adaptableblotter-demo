@@ -11,11 +11,11 @@ export default () => {
           <h4>Server Lookups Demo</h4>
           <p>
             By default when showing a list of filter values (or a list of
-            distinct column values when building a query) Adaptable will create
+            distinct column values when building a query) AdapTable will create
             the distinct list based on what is currently in the DataSet.
           </p>
           <p>
-            However sometimes you might want to provide Adaptable with a list of
+            However sometimes you might want to provide AdapTable with a list of
             allowed values for lookups or filtering. You do this through the{' '}
             <b>getColumnValues</b> property of{' '}
             <a
@@ -29,7 +29,7 @@ export default () => {
           <p>
             This property allows you to provide a method which will get the
             distinct values you want to show from the Server and return to
-            Adaptable. If the return list is empty then we will show the list
+            AdapTable. If the return list is empty then we will show the list
             from the grid as normal.
           </p>
           <p>

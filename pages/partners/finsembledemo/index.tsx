@@ -9,8 +9,8 @@ export default () => {
         <h4>Finsemble</h4>
       </p>
       <p>
-        Adaptable is designed to run in single or multiple grid mode. Its easy
-        to create many Adaptable instances and have them share data, events and
+        AdapTable is designed to run in single or multiple grid mode. Its easy
+        to create many AdapTable instances and have them share data, events and
         state.
       </p>
       <p>
@@ -24,7 +24,7 @@ export default () => {
       </p>
       <p>
         We have a demo coming soon but in the meantime here are a couple of
-        videos that show how Finsemble enables multiple Adaptable instances to
+        videos that show how Finsemble enables multiple AdapTable instances to
         share state, data and events. .
       </p>
       <p>

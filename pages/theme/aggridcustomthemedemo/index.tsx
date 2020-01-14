@@ -10,7 +10,7 @@ export default () => {
         <>
           <h4>Custom Theme Demo</h4>
           <p>
-            Adaptable ships with 2 themes - Dark or Light. But you can create
+            AdapTable ships with 2 themes - Dark or Light. But you can create
             your own theme yourself through the use of{' '}
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties"
@@ -27,7 +27,7 @@ export default () => {
           </p>
           <p>
             In this example we have created a 'Wimbledon Theme' that styles the
-            Adaptable instance purple and green, with slightly rounded borders.
+            AdapTable instance purple and green, with slightly rounded borders.
             Note that we use{' '}
             <a href="../../style/aggridrowstyledemo" target="_self">
               Row Styles
@@ -43,7 +43,7 @@ export default () => {
             >
               Theme Predefined Config
             </a>{' '}
-            to tell Adaptable to load the ag-Grid <i>ag-theme-blue</i> theme
+            to tell AdapTable to load the ag-Grid <i>ag-theme-blue</i> theme
             also.
           </p>
           <p>

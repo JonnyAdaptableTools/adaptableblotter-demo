@@ -51,7 +51,7 @@ export default () => {
         <div>
           <h4>Chart</h4>
           <p>
-            Adaptable contains powerful charting capabilities (courtesy of our
+            AdapTable contains powerful charting capabilities (courtesy of our
             partner{' '}
             <a
               href=" https://www.infragistics.com/products/ignite-ui-react"

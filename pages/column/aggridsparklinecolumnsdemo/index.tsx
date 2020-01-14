@@ -25,7 +25,7 @@ export default () => {
             can edit them (e.g. change the line colour or show tooltips).
           </p>
           <p>
-            Adaptable also allows you to create Sparklines on numeric cell data.
+            AdapTable also allows you to create Sparklines on numeric cell data.
             Select 'View As Sparkline' from the Column Header menu to seek a
             Sparkline for all values in the Column.
           </p>

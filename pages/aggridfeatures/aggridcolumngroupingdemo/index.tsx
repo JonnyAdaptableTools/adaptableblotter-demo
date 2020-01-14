@@ -20,7 +20,7 @@ export default () => {
             <i>Shipping Details</i>
           </p>
           <p>
-            Note that the other functions in Adaptable will 'honour' this column
+            Note that the other functions in AdapTable will 'honour' this column
             grouping and work appropriately.
           </p>
           <p>

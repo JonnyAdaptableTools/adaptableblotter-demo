@@ -27,7 +27,7 @@ export default () => {
           </p>
           <p>
             This allows you to perform the necessary search on the server and
-            return data to Adaptable via the
+            return data to AdapTable via the
             <a
               href="https://api.adaptableblotter.com/interfaces/_api_gridapi_.gridapi.html"
               target="_blank"
@@ -39,7 +39,7 @@ export default () => {
           </p>
           <p>
             In this example we created 4 Data Sources. We subscribe to
-            SearchChanged event, fetch the relevant data and send to Adaptable
+            SearchChanged event, fetch the relevant data and send to AdapTable
             via the API. We also ouput the event info to the console for your
             convenience.
           </p>

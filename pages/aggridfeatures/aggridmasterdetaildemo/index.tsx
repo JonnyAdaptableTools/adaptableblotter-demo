@@ -12,7 +12,7 @@ export default () => {
             <h4>Master Detail Demo</h4>
           </h4>
           <p>
-            This demo show how Master / Details can work in Adaptable if it is
+            This demo show how Master / Details can work in AdapTable if it is
             something that is offered by the underlying vendor grid (which is in
             this example that uses ag-Grid) using some football teams.
           </p>

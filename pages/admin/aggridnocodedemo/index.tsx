@@ -10,16 +10,16 @@ export default () => {
         <div>
           <h4>No Code Demo</h4>
           <p>
-            The No Code Plugin allows you to create an Adaptable instance at
+            The No Code Plugin allows you to create an AdapTable instance at
             runtime from any JSON (and soon any Excel) file that you give it.
           </p>
           <p>
-            It will dynamically provide a fully functional Adaptable including
+            It will dynamically provide a fully functional AdapTable including
             advanced features like state management and audit log, enabling you
             to attach to the same source daily or multiple different sources.
           </p>
           <p>
-            Simply link to a file (or drag and drop) and Adaptable No Code
+            Simply link to a file (or drag and drop) and AdapTable No Code
             Wizard will appear.
           </p>
           <p>
@@ -36,7 +36,7 @@ export default () => {
               Adaptable Options
             </a>{' '}
             that you would normally provide at design-time to ensure that your
-            Adaptable instance suits your requirements.
+            AdapTable instance suits your requirements.
           </p>
         </div>
       }

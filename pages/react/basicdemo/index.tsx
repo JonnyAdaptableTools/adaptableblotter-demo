@@ -17,7 +17,7 @@ export default () => {
       pageTitle={'Adaptable React ag-Grid Demo'}
       description={
         <h4>
-          A demo of Adaptable instantiated using the{' '}
+          A demo of AdapTable instantiated using the{' '}
           <a
             href="https://github.com/JonnyAdaptableTools/adaptableblotter/blob/master/packages/adaptableblotter-react-aggrid/"
             target="_blank"

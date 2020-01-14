@@ -11,7 +11,7 @@ export default () => {
           <h4>Max Items Displayed in Queries Demo</h4>
           <p>
             When getting distinct column values for display (either in the
-            column filter dropdown) Adaptable will show the first 2,000 distinct
+            column filter dropdown) AdapTable will show the first 2,000 distinct
             values for that column.
           </p>
           <p>

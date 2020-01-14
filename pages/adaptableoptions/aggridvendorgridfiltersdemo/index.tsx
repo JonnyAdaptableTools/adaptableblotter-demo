@@ -12,7 +12,7 @@ export default () => {
         <div>
           <h4>Vendor Grid Filters Demo</h4>
           <p>
-            By default Adaptable will use its Quick Filter (the row under the
+            By default AdapTable will use its Quick Filter (the row under the
             toolbar) and FilterForm (the second item in the Column menu).
           </p>
           <p>
@@ -29,7 +29,7 @@ export default () => {
           </p>
           <p>
             Any filters created with these forms will NOT be stored with your
-            Adaptable state, e.g. if you type in the 'Ship Via' Floating Filter
+            AdapTable state, e.g. if you type in the 'Ship Via' Floating Filter
             bar, the Column Filter toolbar does <b>not</b> update.
           </p>
           <p>

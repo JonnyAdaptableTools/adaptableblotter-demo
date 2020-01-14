@@ -19,7 +19,7 @@ export default () => {
             deleted (see the count in the Status Bar under the grid).
           </p>
           <p>
-            Adaptable picks up these changes automatically and works smoothly
+            AdapTable picks up these changes automatically and works smoothly
             despite the repeated changes to the underlying data set.
           </p>
           <p>

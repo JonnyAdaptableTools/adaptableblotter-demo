@@ -12,8 +12,8 @@ export default () => {
             <h4>Adaptable API Demo</h4>
           </h4>
           <p>
-            Adaptable includes a very rich API that offers full programmatic
-            access to all functionality and Adaptable state.
+            AdapTable includes a very rich API that offers full programmatic
+            access to all functionality and AdapTable state.
           </p>
           <p>
             There are hundreds of functions in the{' '}
@@ -27,16 +27,16 @@ export default () => {
             that is available via the GUI or Config,{' '}
           </p>
           <p>
-            This allows you to bypass Adaptable GUI if you so desire but still
-            to have access to the core objects and thereby allow Adaptable to
-            manage all the complexities around state managements.
+            This allows you to bypass the AdapTable GUI if you so desire but
+            still to have access to the core objects and thereby allow AdapTable
+            to manage all the complexities around state managements.
           </p>
           <p>
             In this example we create our own form controls (external to the
-            Adaptable instance) but we call the QuickSearch API to run and clear
+            AdapTable instance) but we call the QuickSearch API to run and clear
             Quick Search, Dashboard API to manage Dashboard visibility, Layout
             API to load a layout and Column Chooser API to show the column
-            chooser. Note that the functions run as if you were using Adaptable
+            chooser. Note that the functions run as if you were using AdapTable
             and that all State is stored (refresh the page to see).
           </p>
           <p>

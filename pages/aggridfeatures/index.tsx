@@ -51,7 +51,7 @@ export default () => {
           <h4>ag Grid Features Demos</h4>
           <p>
             ag-Grid provides many advanced features for (row and column)
-            grouping, pivoting, tree views and master-detail grids. Adaptable
+            grouping, pivoting, tree views and master-detail grids. AdapTable
             works well for each of these.
           </p>
           <ul>{demoLinks}</ul>

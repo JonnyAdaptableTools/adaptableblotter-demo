@@ -11,7 +11,7 @@ export default () => {
           <h4>Audit Log Demo</h4>
           <p>
             Every grid event, mouse click, user action, cell edit etc. is
-            auditable by Adaptable and available for you to listen to and review
+            auditable by AdapTable and available for you to listen to and review
             - perfect for Support Teams or for data playback.
           </p>
           <p>
@@ -27,7 +27,7 @@ export default () => {
           <p>
             This example fires Cell Edit, User State and Function Applied events
             to the Console; open the Console in Developer Tools and see the
-            messages appear as you edit data and create objects in Adaptable.
+            messages appear as you edit data and create objects in AdapTable.
           </p>
           <p>
             <b>AdapTable Help Resources:</b>{' '}

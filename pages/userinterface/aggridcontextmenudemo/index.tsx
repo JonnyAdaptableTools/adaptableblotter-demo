@@ -10,7 +10,7 @@ export default () => {
         <div>
           <h4>Context Menu Demo</h4>
           <p>
-            Adaptable provides a Context Menu - accessible when you right-click
+            AdapTable provides a Context Menu - accessible when you right-click
             in a cell - which includes shortcuts to functionality relevant to
             that cell (and what is selected).
           </p>

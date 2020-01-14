@@ -15,7 +15,7 @@ export default () => {
             Column Header menu.
           </p>
           <p>
-            When there are many values in each segment Adaptable will
+            When there are many values in each segment AdapTable will
             automatically group them for you.
           </p>
           <p>

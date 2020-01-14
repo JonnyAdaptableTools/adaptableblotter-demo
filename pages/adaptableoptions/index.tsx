@@ -50,12 +50,12 @@ export default () => {
         <div>
           <h4>Adaptable Option Demos</h4>
           <p>
-            When you create an instance of Adaptable you will create an{' '}
+            When you create an instance of AdapTable you will create an{' '}
             <b>AdaptableOptions</b> object.
           </p>
           <p>
             This has a very large number of properties which allow you complete
-            control over how you set up your Adaptable instance, and we have
+            control over how you set up your AdapTable instance, and we have
             used many of them in the demos above (e.g. the Audit Log demo in the
             Admin section).
           </p>

@@ -12,12 +12,12 @@ export default () => {
             <h4>Pivoting Demo</h4>
           </h4>
           <p>
-            ag-Grid has incredible pivoting capability; Adaptable knows when the
+            ag-Grid has incredible pivoting capability; AdapTable knows when the
             grid's in pivoting mode (click 'Pivot Mode' checkbox in the tool
             panel) and will react accordingly.
           </p>
           <p>
-            Adaptable also allows you to save pivoting information in your
+            AdapTable also allows you to save pivoting information in your
             layout and then it will be available each time you select that
             layout.
           </p>

@@ -11,7 +11,7 @@ export default () => {
           <h4>Named Filters Demo</h4>
 
           <p>
-            Adaptable has a range of powerful filter functions. These include
+            AdapTable has a range of powerful filter functions. These include
             Column Filters, System Filters and User Filters (that users create
             at run-time) and in most cases are sufficient for all needs.
           </p>
@@ -22,7 +22,7 @@ export default () => {
           </p>
           <p>
             This is where <b>Named Filters</b> come in. You can create at{' '}
-            <b>design time</b> a Named Filter and provide Adaptable with the
+            <b>design time</b> a Named Filter and provide AdapTable with the
             Predicate function required to evaluate it.
           </p>
           <p>

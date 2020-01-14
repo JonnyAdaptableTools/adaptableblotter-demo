@@ -50,7 +50,7 @@ export default () => {
       description={
         <div>
           <h4>Edit Functions</h4>
-          <p>There are a number of different ways to edit data in Adaptable:</p>
+          <p>There are a number of different ways to edit data in AdapTable:</p>
           <ul>{demoLinks}</ul>
           Click on the buttons below to see a demo for each edit function.
         </div>

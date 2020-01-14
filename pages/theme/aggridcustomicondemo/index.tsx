@@ -12,7 +12,7 @@ export default () => {
           <h4>Custom Icon Demo</h4>
           <p>
             It is straightforward to change one of the icons provided by
-            Adaptable with your own icon. Simply override the relevant icon in
+            AdapTable with your own icon. Simply override the relevant icon in
             your css with your preferred image.
           </p>
           <p>

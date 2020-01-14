@@ -15,7 +15,7 @@ export default () => {
           </p>
           <p>
             You can create your own operations or use the ones shippped with
-            Adaptable (most of which work only on numeric columns).
+            AdapTable (most of which work only on numeric columns).
           </p>
           <p>
             Try it: highlight a group of cells and see the value change in the

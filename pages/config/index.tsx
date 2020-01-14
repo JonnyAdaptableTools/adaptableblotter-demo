@@ -29,24 +29,25 @@ export default () => {
         <div>
           <h4>Predefined Configuration</h4>
           <p>
-            Typically you will ship your Adaptable instance with Predefined
+            Typically you will ship your AdapTable instance with Predefined
             Configuration so that your users open their application at first use
             and see it pre-loaded with Searches, Styles, Edit Rules, Reports etc
             that match their needs.
           </p>
           <p>
             Additionally Predefined Configuration will include 'Entitlements' -
-            stipulating which Adaptable functions they are allowed to access.
+            stipulating which AdapTable functions they are allowed to access.
           </p>
           <p>This section contains 2 grids: </p>
           <p>
-            One is loaded with NO Predfined Configuration so it shows how the
-            Adaptable looks straight out of the box with all the defaults
+            One is loaded with NO Predfined Configuration so it shows how
+            AdapTable looks straight out of the box with all the defaults
             chosen.
           </p>
           <p>
-            And the second Adaptable does have Predefined Configuration so its
-            pre-loaded with styles, reports, layouts etc.
+            And the second grid contains an AdapTable instance which does have
+            Predefined Configuration so its pre-loaded with styles, reports,
+            layouts etc.
           </p>
         </div>
       }

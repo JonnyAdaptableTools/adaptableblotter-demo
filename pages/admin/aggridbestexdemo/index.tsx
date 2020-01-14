@@ -23,7 +23,7 @@ export default () => {
           <p>
             This example fires Cell Edit, User State and Function Applied events
             to the Console; open the Console in Developer Tools and see the
-            messages appear as you edit data and create objects in Adaptable.
+            messages appear as you edit data and create objects in AdapTable.
           </p>
         </div>
       }

@@ -16,7 +16,7 @@ export default () => {
             </b>
           </p>
           <p>
-            Adaptable Tool Panel is designed for situations when screen estate
+            AdapTable Tool Panel is designed for situations when screen estate
             is limited and the Dashboard is too 'bulky'.
           </p>
           <p>

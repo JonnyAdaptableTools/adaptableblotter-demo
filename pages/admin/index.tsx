@@ -53,7 +53,7 @@ export default () => {
           <p>
             Administrators are able to set up the Grid exactly how they like,
             permission users, and have full visibility over all that goes on in
-            Adaptable.
+            AdapTable.
           </p>
           <ul>{demoLinks}</ul>
           Click on the buttons below to see a demo for each administrative task.

@@ -33,7 +33,7 @@ export default () => {
             group headers and grouped rows.
           </p>
           <p>
-            We are listening to Adaptable SelectionChanged event and printing
+            We are listening to AdapTable SelectionChanged event and printing
             out the results to the console. Open the console to see the output
             each time cell or row selection changes.
           </p>

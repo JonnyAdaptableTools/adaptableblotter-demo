@@ -10,12 +10,12 @@ export default () => {
       </p>
       <div id="launcherOpenfin">
         <p>
-          Adaptable runs in the Broswer or Electron with all functionality
+          AdapTable runs in the Broswer or Electron with all functionality
           available for users (depending on their{' '}
           <a href="../../admin/aggridentitlementsdemo/">Entitlements</a>).
         </p>
         <p>
-          However if you are running Adaptable inside the popular{' '}
+          However if you are running AdapTable inside the popular{' '}
           <a href="https://openfin.co/" target="_blank">
             OpenFin container{' '}
           </a>
@@ -24,7 +24,7 @@ export default () => {
         </p>
         <p>
           One of these is <b>Live Updates</b>. When running in OpenFin if you
-          export data to Excel, then any changes made to your data in Adaptable
+          export data to Excel, then any changes made to your data in AdapTable
           (either user edits or ticking data changes) are immediately reflected
           in Excel also.
         </p>
@@ -38,7 +38,7 @@ export default () => {
               Run OpenFin
             </a>
           </b>{' '}
-          to see Adaptable running inside OpenFin and then export data to Excel.{' '}
+          to see AdapTable running inside OpenFin and then export data to Excel.{' '}
         </p>
         <p>
           (The link will download the OpenFin installer - click the exe to run
@@ -46,7 +46,7 @@ export default () => {
           windows menu under 'Adaptable Tools').
         </p>
         <p>
-          Alternatively watch the video below to see how OpenFin and Adaptable
+          Alternatively watch the video below to see how OpenFin and AdapTable
           work together.
         </p>
         <p>

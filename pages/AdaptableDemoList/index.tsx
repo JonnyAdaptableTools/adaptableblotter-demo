@@ -93,7 +93,7 @@ export default () => {
       pageTitle={'Alphabetical list'}
       description={
         <div>
-          <h4>Adaptable Demos</h4>
+          <h4>AdapTable Demos</h4>
           <div
             style={{
               display: 'flex',

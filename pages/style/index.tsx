@@ -56,7 +56,7 @@ export default () => {
           <ul>{demoLinks}</ul>
           Click on the buttons below to see a demo for each styling function.
           <br />
-          If you want to theme the actual Adaptable instance itself (e.g. change
+          If you want to theme the actual AdapTable instance itself (e.g. change
           the colours and look and feel, please refer to the{' '}
           <a href="./theme" target="_self">
             Theming

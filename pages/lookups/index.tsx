@@ -29,7 +29,7 @@ export default () => {
         <div>
           <h4>Column Values Lookup Demos</h4>
           <p>
-            There are a few places in Adaptable when a list of distinct column
+            There are a few places in AdapTable when a list of distinct column
             values is displayed.
           </p>
           <p>
@@ -37,7 +37,7 @@ export default () => {
             section of the Query Builder, or in the Bulk Update function.
           </p>
           <p>
-            By default when showing list of available column values, Adaptable
+            By default when showing list of available column values, AdapTable
             will show the first 2,000 distinct values, but you can amend this by
             setting the <b>maxColumnValueItemsDisplayed</b> property in Query
             Options section of Adaptable Options. <br />
@@ -45,13 +45,13 @@ export default () => {
             <b>Max Items Displayed Demo</b>.
           </p>
           <p>
-            There is a hierarchy for how Adaptable will retrieve this options as
-            follows: (Note: in all 3 options, Adaptable will not show more
+            There is a hierarchy for how AdapTable will retrieve this options as
+            follows: (Note: in all 3 options, AdapTable will not show more
             values than that set in the maxColumnValueItemsDisplayed property)
           </p>
           <ol>
             <li>
-              <b>Server Lookups:</b> You can provide Adaptable dynamically
+              <b>Server Lookups:</b> You can provide AdapTable dynamically
               (through client-server communication) with the list of values that
               can be displayed each time a list of distinct cell values is
               required. <br />
@@ -60,7 +60,7 @@ export default () => {
               for more information.
             </li>
             <li>
-              <b>Permitted Column Values:</b> You can provide Adaptable at
+              <b>Permitted Column Values:</b> You can provide AdapTable at
               startup with a list of column names and a list of values which
               should be displayed when getting distinct values for that column.
               <br />
@@ -69,7 +69,7 @@ export default () => {
             </li>
             <li>
               <b>Dynamic Values:</b> If no Server Lookups or Permitted Column
-              Values have been set for that column, Adaptable will dynamically
+              Values have been set for that column, AdapTable will dynamically
               retrieve all the distinct values for that column.
               <br />
             </li>

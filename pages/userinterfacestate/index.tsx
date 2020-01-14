@@ -29,7 +29,7 @@ export default () => {
         <div>
           <h4>User Interface State Demos</h4>
           <p>
-            Queries are a key element of Adaptable - and they are used by many
+            Queries are a key element of AdapTable - and they are used by many
             functions, e.g. Advanced Search, Conditional Styles, Reports, Alerts
             etc.
           </p>
@@ -47,7 +47,7 @@ export default () => {
           </p>
           <ul>
             <li>
-              <b>Server Lookups Demo:</b> Provide Adaptable dynamically with the
+              <b>Server Lookups Demo:</b> Provide AdapTable dynamically with the
               list of values each time a list of distinct cell values is
               required.
             </li>
@@ -57,7 +57,7 @@ export default () => {
             </li>
             <li>
               <b>Max Items Displayed Demo:</b> By default when showing list of
-              available column values, Adaptable will show the first 5,000
+              available column values, AdapTable will show the first 5,000
               distinct values, but you can amend this number.
             </li>
           </ul>

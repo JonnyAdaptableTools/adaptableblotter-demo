@@ -10,7 +10,7 @@ export default () => {
         <div>
           <h4>Calendar Demo</h4>
           <p>
-            Some functionality in Adaptable (e.g. Filters or Queries) requires
+            Some functionality in AdapTable (e.g. Filters or Queries) requires
             knowledge of the user's when calculating Next or Previous Working
             Day.
           </p>
@@ -21,7 +21,7 @@ export default () => {
           </p>
           <p>
             This example we have set the 'Current Calendar' in Config to be
-            France which is what Adaptable will now use when working out if a
+            France which is what AdapTable will now use when working out if a
             particular Date is a holiday or not.
           </p>
           <p>

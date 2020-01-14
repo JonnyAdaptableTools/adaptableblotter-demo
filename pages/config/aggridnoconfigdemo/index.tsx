@@ -10,12 +10,12 @@ export default () => {
         <div>
           <h4>No Config Demo</h4>
           <p>
-            Adaptable offers more than 30 functions to allow you to search,
+            AdapTable offers more than 30 functions to allow you to search,
             filter, edit, audit, export and style your data in cutting-edge and
             exciting ways.
           </p>
           <p>
-            Typically you ship the Adaptable instance with{' '}
+            Typically you ship the AdapTable instance with{' '}
             <b>Predefined Config</b> (searches, views, reports etc. created at
             design time). And you'll set Adaptable Options to non-default values
             to configure your grid to precise requirements.

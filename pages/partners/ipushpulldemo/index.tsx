@@ -10,10 +10,10 @@ export default () => {
       description={
         <div>
           <p>
-            <h4>iPushPull</h4>
+            <h4>iPushPull / AdapTable Demo</h4>
           </p>
           <p>
-            Adaptable natively exports data to the clipboard, csv, JSON and
+            AdapTable natively exports data to the clipboard, csv, JSON and
             (coming soon) PDF.
           </p>
           <p>
@@ -36,33 +36,28 @@ export default () => {
             </a>{' '}
             (which will include your credentials) in the{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_partnerstate_.ipushpullstate.html"
-              target="_blank"
-            >
-              iPushPull property
-            </a>{' '}
-            of{' '}
-            <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_partnerstate_.partnerstate.html"
-              target="_blank"
-            >
-              Partner State
-            </a>{' '}
-            in Predefined Config.
-          </p>
-          <p>
-            To export data: simply select <i>Start Sync with iPushPull</i> from
-            the Dropdown in the Export toolbar, type your iPushPull username and
-            password (which you can supply in{' '}
-            <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_partnerstate_.ipushpullstate.html"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_ipushpullstate_.ipushpullstate.html"
               target="_blank"
             >
               iPushPull State
-            </a>
-            ), select the folder / page in iPushPull which should display this
-            data, and click 'Export to iPushPull'. You will now see your
-            (ticking) Adaptable data in iPushPull.
+            </a>{' '}
+            section of Predefined Config.
+          </p>
+          <p>
+            To export data you first need to login using your iPushPull username
+            and password, which you can supply in{' '}
+            <a
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_ipushpullstate_.ipushpullstate.html"
+              target="_blank"
+            >
+              iPushPull State
+            </a>{' '}
+            (together with an auto login option).{' '}
+          </p>
+          <p>
+            Then select a report, and the iPushPull folder / page which should
+            display this data. You can either send a 'Snapshot' (one-off)
+            report, or start streaming live AdapTable data to iPushPull.
           </p>
           <p>
             <b>AdapTable Help Resources:</b>{' '}
@@ -74,14 +69,14 @@ export default () => {
             </a>{' '}
             |{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_partnerstate_.ipushpullstate.html"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_ipushpullstate_.ipushpullstate.html"
               target="_blank"
             >
               Predefined Config
             </a>{' '}
             |{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_partnerapi_.partnerapi.html"
+              href="https://api.adaptableblotter.com/interfaces/_api_ipushpullapi_.ipushpullapi.html"
               target="_blank"
             >
               Adaptable API

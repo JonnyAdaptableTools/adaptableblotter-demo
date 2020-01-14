@@ -50,7 +50,7 @@ export default () => {
         <div>
           <h4>Grid Management Functions</h4>
           <p>
-            There are a many functions in Adaptable which let you set up the
+            There are a many functions in AdapTable which let you set up the
             Grid and columns exactly how you want:
           </p>
           <ul>{demoLinks}</ul>

@@ -10,7 +10,7 @@ export default () => {
         <div>
           <h4>Column Menu Demo</h4>
           <p>
-            Adaptable provides a Column Menu - accessible via the Column Header
+            AdapTable provides a Column Menu - accessible via the Column Header
             - which includes shortcuts to all the popup screens relevant to that
             column and its data type.
           </p>

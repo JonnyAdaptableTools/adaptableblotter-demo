@@ -11,7 +11,7 @@ export default () => {
           <h4>System Filters Demo</h4>
 
           <p>
-            Adaptable provides a range of useful System Filters (e.g. 'Blanks',
+            AdapTable provides a range of useful System Filters (e.g. 'Blanks',
             'Zero', 'Yesterday') to complement any User Filters or Named Filters
             provided by you.
           </p>

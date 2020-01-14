@@ -20,7 +20,7 @@ export default () => {
           <p>
             Most columns show a simple count of distinct values (e.g. try
             'Employee' column). However where there are multiple values for that
-            column, Adaptable will automatically group them (e.g. try 'Invoiced'
+            column, AdapTable will automatically group them (e.g. try 'Invoiced'
             column).
           </p>
           <p>

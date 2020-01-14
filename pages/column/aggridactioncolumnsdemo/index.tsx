@@ -12,7 +12,7 @@ export default () => {
             <h4>Action Column Demo</h4>
           </h4>
           <p>
-            Adaptable provides an Action Column function that allows you to
+            AdapTable provides an Action Column function that allows you to
             specify (and optionally render) a button to placed in a column.
           </p>
           <p>

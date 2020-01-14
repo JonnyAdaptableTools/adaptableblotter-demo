@@ -49,7 +49,7 @@ export default () => {
         <div>
           <h4>Filter Functions</h4>
           <p>
-            There are a number of different ways to filter data in Adaptable:
+            There are a number of different ways to filter data in AdapTable:
           </p>
           <ul>{demoLinks}</ul>
           Click on the buttons below to see a demo for each filter function.

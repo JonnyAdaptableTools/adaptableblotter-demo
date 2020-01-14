@@ -12,10 +12,10 @@ export default () => {
           <p>
             Most of the demos on this site use a version of the Northwind Orders
             demo that has 800 rows. This is done deliberately to show that
-            Adaptable works with any data set.
+            AdapTable works with any data set.
           </p>
           <p>
-            But we're often asked if Adaptable works as well with big data sets
+            But we're often asked if AdapTable works as well with big data sets
             and the answer is yes.{' '}
           </p>
           <p>
