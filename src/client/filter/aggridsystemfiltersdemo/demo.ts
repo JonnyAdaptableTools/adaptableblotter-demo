@@ -1,15 +1,13 @@
-import * as Helper from '../../../Helpers/Helper';
+import Adaptable from '@adaptabletools/adaptable/agGrid';
+import '@adaptabletools/adaptable/index.css';
 
-import AdaptableBlotter from '@adaptabletools/adaptableblotter/agGrid';
-import '@adaptabletools/adaptableblotter/index.css';
-
-import 'ag-grid-community/dist/styles/ag-grid.css';
-import 'ag-grid-community/dist/styles/ag-theme-balham.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
 import { cloneDeep } from 'lodash';
 
 import '../../../../DemoPage/aggriddemo.css';
 
-import { AdaptableBlotterOptions } from '@adaptabletools/adaptableblotter/types';
+import { AdaptableOptions } from '@adaptabletools/adaptable/types';
 
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
@@ -26,17 +24,17 @@ export default () => {
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
   gridOptions.floatingFilter = true;
 
-  const adaptableOptions: AdaptableBlotterOptions = {
+  const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    blotterId: 'System Filters Demo',
+    adaptableId: 'System Filters Demo',
 
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };
 
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  const adaptableApi = AdaptableBlotter.init(adaptableOptions);
+  const adaptableApi = Adaptable.init(adaptableOptions);
 
   return {
     predefinedConfig,

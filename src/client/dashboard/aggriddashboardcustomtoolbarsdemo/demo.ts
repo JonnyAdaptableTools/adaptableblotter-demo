@@ -1,20 +1,20 @@
-import AdaptableBlotter from '@adaptabletools/adaptableblotter/agGrid';
-import '@adaptabletools/adaptableblotter/index.css';
-import 'ag-grid-community/dist/styles/ag-grid.css';
-import 'ag-grid-community/dist/styles/ag-theme-balham.css';
+import Adaptable from '@adaptabletools/adaptable/agGrid';
+import '@adaptabletools/adaptable/index.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
 import { cloneDeep } from 'lodash';
 import '../../../../DemoPage/aggriddemo.css';
 import {
-  AdaptableBlotterOptions,
+  AdaptableOptions,
   ToolbarButtonClickedEventArgs,
   ToolbarVisibilityChangedEventArgs,
-} from '@adaptabletools/adaptableblotter/types';
+} from '@adaptabletools/adaptable/types';
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import predefinedConfig from './config';
 import ReactDOM from 'react-dom';
 import { renderCustomDiv } from '.';
-import { Visibility } from '@adaptabletools/adaptableblotter/App_Scripts/PredefinedConfig/Common/Enums';
+import { Visibility } from '@adaptabletools/adaptable/App_Scripts/PredefinedConfig/Common/Enums';
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
@@ -26,17 +26,17 @@ export default () => {
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
 
-  const adaptableOptions: AdaptableBlotterOptions = {
+  const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    blotterId: 'Custom Toolbars Demo',
+    adaptableId: 'Custom Toolbars Demo',
 
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };
 
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  const adaptableApi = AdaptableBlotter.init(adaptableOptions);
+  const adaptableApi = Adaptable.init(adaptableOptions);
 
   adaptableApi.eventApi.on(
     'ToolbarVisibilityChanged',

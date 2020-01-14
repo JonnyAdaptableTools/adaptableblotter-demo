@@ -1,3 +1,3 @@
-import { PredefinedConfig } from '@adaptabletools/adaptableblotter/types';
+import { PredefinedConfig } from '@adaptabletools/adaptable/types';
 
 export default {} as PredefinedConfig;

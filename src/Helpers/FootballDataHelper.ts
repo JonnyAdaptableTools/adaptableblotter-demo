@@ -1,4 +1,4 @@
-import { ColDef, GridOptions } from 'ag-grid-community';
+import { ColDef, GridOptions } from '@ag-grid-community/all-modules';
 
 export interface IFootballTeam {
   name: string;

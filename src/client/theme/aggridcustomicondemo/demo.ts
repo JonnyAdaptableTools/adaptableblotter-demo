@@ -1,21 +1,19 @@
-import * as Helper from '../../../Helpers/Helper';
+import Adaptable from '@adaptabletools/adaptable/agGrid';
+import '@adaptabletools/adaptable/index.css';
+import '@adaptabletools/adaptable/themes/dark.css';
 
-import AdaptableBlotter from '@adaptabletools/adaptableblotter/agGrid';
-import '@adaptabletools/adaptableblotter/index.css';
-import '@adaptabletools/adaptableblotter/themes/dark.css';
-
-import 'ag-grid-community/dist/styles/ag-grid.css';
-import 'ag-grid-community/dist/styles/ag-theme-balham.css';
-import 'ag-grid-community/dist/styles/ag-theme-balham-dark.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham-dark.css';
 
 import './index.css';
 
 import { cloneDeep } from 'lodash';
 import '../../../../DemoPage/aggriddemo.css';
 import {
-  AdaptableBlotterOptions,
+  AdaptableOptions,
   IAdaptableBlotter,
-} from '@adaptabletools/adaptableblotter/types';
+} from '@adaptabletools/adaptable/types';
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import predefinedConfig from './config';
@@ -30,17 +28,17 @@ export default () => {
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
 
-  const adaptableOptions: AdaptableBlotterOptions = {
+  const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    blotterId: 'Custom Icon Demo',
+    adaptableId: 'Custom Icon Demo',
 
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };
 
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  const adaptableApi = AdaptableBlotter.init(adaptableOptions);
+  const adaptableApi = Adaptable.init(adaptableOptions);
 
   return {
     predefinedConfig,

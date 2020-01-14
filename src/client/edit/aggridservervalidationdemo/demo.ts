@@ -1,21 +1,20 @@
-import * as Helper from '../../../Helpers/Helper';
-import AdaptableBlotter from '@adaptabletools/adaptableblotter/agGrid';
-import '@adaptabletools/adaptableblotter/index.css';
+import Adaptable from '@adaptabletools/adaptable/agGrid';
+import '@adaptabletools/adaptable/index.css';
 
-import '@adaptabletools/adaptableblotter/themes/dark.css';
+import '@adaptabletools/adaptable/themes/dark.css';
 
-import 'ag-grid-community/dist/styles/ag-grid.css';
-import 'ag-grid-community/dist/styles/ag-theme-balham.css';
-import 'ag-grid-community/dist/styles/ag-theme-balham-dark.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham-dark.css';
 import { cloneDeep } from 'lodash';
 import '../../../../DemoPage/aggriddemo.css';
-import { AdaptableBlotterOptions } from '@adaptabletools/adaptableblotter/types';
+import { AdaptableOptions } from '@adaptabletools/adaptable/types';
 
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import predefinedConfig from './config';
-import { DataChangedInfo } from '@adaptabletools/adaptableblotter/App_Scripts/BlotterOptions/CommonObjects/DataChangedInfo';
-import { ValidationResult } from '@adaptabletools/adaptableblotter/App_Scripts/BlotterOptions/EditOptions';
+import { DataChangedInfo } from '@adaptabletools/adaptable/App_Scripts/BlotterOptions/CommonObjects/DataChangedInfo';
+import { ValidationResult } from '@adaptabletools/adaptable/App_Scripts/BlotterOptions/EditOptions';
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
@@ -27,10 +26,10 @@ export default () => {
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
 
-  const adaptableOptions: AdaptableBlotterOptions = {
+  const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    blotterId: 'Server Validation Demo',
+    adaptableId: 'Server Validation Demo',
     editOptions: {
       validateOnServer: (dataChangedInfo: DataChangedInfo) => {
         return new Promise((resolve, reject) => {
@@ -70,7 +69,7 @@ export default () => {
   }
 
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  const adaptableApi = AdaptableBlotter.init(adaptableOptions);
+  const adaptableApi = Adaptable.init(adaptableOptions);
 
   return {
     predefinedConfig,

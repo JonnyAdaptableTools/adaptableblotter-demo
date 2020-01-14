@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 import PACKAGE from '../package.json';
 
-import '@adaptabletools/adaptableblotter/index.css';
+import '@adaptabletools/adaptable/index.css';
 
 import MainPage from '../src/MainPage';
 

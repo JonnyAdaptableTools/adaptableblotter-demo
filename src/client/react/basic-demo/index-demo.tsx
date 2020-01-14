@@ -1,25 +1,24 @@
 import React from 'react';
 
 // import Adaptable and types
-import AdaptableBlotterReact from '@adaptabletools/adaptableblotter-react-aggrid';
-import { AdaptableBlotterOptions } from '@adaptabletools/adaptableblotter-react-aggrid';
+import AdaptableBlotterReact from '@adaptabletools/adaptable-react-aggrid';
+import { AdaptableOptions } from '@adaptabletools/adaptable-react-aggrid';
 
 // import Adaptable css and themes
-import '@adaptabletools/adaptableblotter-react-aggrid/base.css';
-import '@adaptabletools/adaptableblotter-react-aggrid/themes/light.css';
-import '@adaptabletools/adaptableblotter-react-aggrid/themes/dark.css';
+import '@adaptabletools/adaptable-react-aggrid/base.css';
+import '@adaptabletools/adaptable-react-aggrid/themes/light.css';
+import '@adaptabletools/adaptable-react-aggrid/themes/dark.css';
 
 // import aggrid themes
-import 'ag-grid-community/dist/styles/ag-grid.css';
-import 'ag-grid-community/dist/styles/ag-theme-balham.css';
-import 'ag-grid-community/dist/styles/ag-theme-balham-dark.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham-dark.css';
 
-import { LicenseManager } from 'ag-grid-enterprise';
+import { LicenseManager } from '@ag-grid-enterprise/all-modules';
 import '../../../../DemoPage/aggriddemo.css';
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
-import * as Helper from '../../../Helpers/Helper';
 
 const helperAgGrid = new HelperAgGrid();
 helperAgGrid.setUpAgGridLicence();
@@ -31,10 +30,10 @@ const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
 
 const gridOptions = helperAgGrid.getGridOptions(columndefs, json);
 
-const adaptableOptions: AdaptableBlotterOptions = {
+const adaptableOptions: AdaptableOptions = {
   primaryKey: 'OrderId',
   userName: 'demo user',
-  blotterId: 'basic demo',
+  adaptableId: 'basic demo',
 };
 
 export default () => (

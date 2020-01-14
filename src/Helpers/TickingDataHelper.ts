@@ -1,12 +1,12 @@
-import { GridOptions, RowNode } from 'ag-grid-community';
+import { GridOptions, RowNode } from '@ag-grid-community/all-modules';
 import { ITrade } from './Trade';
 import { HelperAgGrid } from './HelperAgGrid';
-import { BlotterApi } from '@adaptabletools/adaptableblotter/types';
+import { AdaptableApi } from '@adaptabletools/adaptable/types';
 
 export class TickingDataHelper {
   public testTickingDataagGrid(
     gridOptions: any,
-    adaptableApi: BlotterApi,
+    adaptableApi: AdaptableApi,
     tickingFrequency: number,
     tradeCount: number
   ) {
@@ -110,7 +110,7 @@ export class TickingDataHelper {
 
   public startTickingDataagGridTradesUpdateData(
     gridOptions: any,
-    adaptableApi: BlotterApi,
+    adaptableApi: AdaptableApi,
     tickingFrequency: number,
     tradeCount: number,
     updateNotional: boolean = false

@@ -1,9 +1,9 @@
 import * as Helper from './Helper';
-import { GridOptions } from 'ag-grid-community/dist/lib/entities/gridOptions';
-import { AdaptableBlotterOptions } from '@adaptabletools/adaptableblotter/types';
-import { LicenseManager } from 'ag-grid-enterprise';
+import { GridOptions } from '@ag-grid-community/all-modules/dist/lib/entities/gridOptions';
+import { AdaptableOptions } from '@adaptabletools/adaptable/types';
+import { LicenseManager } from '@ag-grid-enterprise/all-modules';
 import { ITrade } from './Trade';
-import { ColDef } from 'ag-grid-community';
+import { ColDef } from '@ag-grid-community/all-modules';
 
 export class HelperAgGrid {
   private currencyFormatter = new Intl.NumberFormat('en-US', {
@@ -140,14 +140,14 @@ export class HelperAgGrid {
   public getAdaptableBlotterOptions(
     gridOptions: GridOptions,
     pk: string,
-    blotterId: string,
+    adaptableId: string,
     config: any
-  ): AdaptableBlotterOptions {
-    let adaptableOptions: AdaptableBlotterOptions = {
+  ): AdaptableOptions {
+    let adaptableOptions: AdaptableOptions = {
       primaryKey: pk,
       vendorGrid: gridOptions,
       userName: 'Demo User',
-      blotterId: blotterId,
+      adaptableId: blotterId,
 
       predefinedConfig: config,
       layoutOptions: {
@@ -166,16 +166,16 @@ export class HelperAgGrid {
   private getAadaptableBlotterOptionsWithDivNames(
     gridOptions: GridOptions,
     pk: string,
-    blotterId: string,
+    adaptableId: string,
     config: any,
     gridName: string,
     abName: string
-  ): AdaptableBlotterOptions {
-    let adaptableOptions: AdaptableBlotterOptions = {
+  ): AdaptableOptions {
+    let adaptableOptions: AdaptableOptions = {
       primaryKey: pk,
       vendorGrid: gridOptions,
       userName: 'Demo User',
-      blotterId: blotterId,
+      adaptableId: blotterId,
 
       predefinedConfig: config,
       layoutOptions: {

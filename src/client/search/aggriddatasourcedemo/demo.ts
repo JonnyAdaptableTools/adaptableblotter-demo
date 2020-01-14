@@ -1,24 +1,24 @@
-import AdaptableBlotter from '@adaptabletools/adaptableblotter/agGrid';
-import '@adaptabletools/adaptableblotter/index.css';
+import Adaptable from '@adaptabletools/adaptable/agGrid';
+import '@adaptabletools/adaptable/index.css';
 
-import 'ag-grid-community/dist/styles/ag-grid.css';
-import 'ag-grid-community/dist/styles/ag-theme-balham.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
 import { cloneDeep } from 'lodash';
 
 import '../../../../DemoPage/aggriddemo.css';
 
 import {
-  AdaptableBlotterOptions,
+  AdaptableOptions,
   SearchChangedEventArgs,
-  BlotterApi,
-} from '@adaptabletools/adaptableblotter/types';
+  AdaptableApi,
+} from '@adaptabletools/adaptable/types';
 
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import predefinedConfig from './config';
 import {
   SearchChangedInfo,
   BlotterSearchState,
-} from '@adaptabletools/adaptableblotter/App_Scripts/Api/Events/SearchChanged';
+} from '@adaptabletools/adaptable/App_Scripts/Api/Events/SearchChanged';
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
@@ -30,16 +30,16 @@ export default () => {
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, null);
 
-  const adaptableOptions: AdaptableBlotterOptions = {
+  const adaptableOptions: AdaptableOptions = {
     primaryKey: 'tradeId',
     userName: 'Demo User',
-    blotterId: 'Data Source Demo',
+    adaptableId: 'Data Source Demo',
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };
 
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  const adaptableApi = AdaptableBlotter.init(adaptableOptions);
+  const adaptableApi = Adaptable.init(adaptableOptions);
 
   adaptableApi.eventApi.on(
     'SearchChanged',
@@ -54,7 +54,7 @@ export default () => {
   };
 
   function listenToSearchChange(
-    adaptableApi: BlotterApi,
+    adaptableApi: AdaptableApi,
     helperAgGrid: HelperAgGrid,
     searchChangedArgs: SearchChangedEventArgs
   ) {

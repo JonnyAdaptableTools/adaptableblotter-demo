@@ -1,24 +1,22 @@
-import * as Helper from '../../../Helpers/Helper';
-
 import AdaptableBlotter, {
   AdaptableBlotterWizard,
-} from '@adaptabletools/adaptableblotter/agGrid';
-import '@adaptabletools/adaptableblotter/index.css';
+} from '@adaptabletools/adaptable/agGrid';
+import '@adaptabletools/adaptable/index.css';
 
-import 'ag-grid-community/dist/styles/ag-grid.css';
-import 'ag-grid-community/dist/styles/ag-theme-balham.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
 import { startCase } from 'lodash';
 import '../../../../DemoPage/aggriddemo.css';
 
-import { AdaptableBlotterOptions } from '@adaptabletools/adaptableblotter/types';
+import { AdaptableOptions } from '@adaptabletools/adaptable/types';
 
-import { IAdaptableBlotterWizard } from '@adaptabletools/adaptableblotter/App_Scripts/BlotterInterfaces/IAdaptableBlotterWizard';
-import { ColDef } from 'ag-grid-community';
+import { IAdaptableBlotterWizard } from '@adaptabletools/adaptable/App_Scripts/BlotterInterfaces/IAdaptableBlotterWizard';
+import { ColDef } from '@ag-grid-community/all-modules';
 
 export default () => {
-  const adaptableBlotterOptions: AdaptableBlotterOptions = {
+  const adaptableBlotterOptions: AdaptableOptions = {
     primaryKey: 'dtmKey', // will be added later ...
-    //blotterId: 'Position Monitor',
+    //adaptableId: 'Position Monitor',
     userName: 'No Data User',
     // predefinedConfig: demoConfig,
   };

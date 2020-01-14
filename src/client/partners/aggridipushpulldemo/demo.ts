@@ -1,16 +1,16 @@
-import AdaptableBlotter from '@adaptabletools/adaptableblotter/agGrid';
-import '@adaptabletools/adaptableblotter/index.css';
-import '@adaptabletools/adaptableblotter/themes/dark.css';
-import 'ag-grid-community/dist/styles/ag-grid.css';
-import 'ag-grid-community/dist/styles/ag-theme-balham.css';
-import 'ag-grid-community/dist/styles/ag-theme-balham-dark.css';
+import Adaptable from '@adaptabletools/adaptable/agGrid';
+import '@adaptabletools/adaptable/index.css';
+import '@adaptabletools/adaptable/themes/dark.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham-dark.css';
 import { cloneDeep } from 'lodash';
 import '../../../../DemoPage/aggriddemo.css';
 import {
-  AdaptableBlotterOptions,
+  AdaptableOptions,
   PredefinedConfig,
-  BlotterApi,
-} from '@adaptabletools/adaptableblotter/types';
+  AdaptableApi,
+} from '@adaptabletools/adaptable/types';
 import { TickingDataHelper } from '../../../Helpers/TickingDataHelper';
 import { ITrade } from '../../../Helpers/Trade';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
@@ -40,16 +40,16 @@ export default () => {
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, trades);
 
-  const adaptableOptions: AdaptableBlotterOptions = {
+  const adaptableOptions: AdaptableOptions = {
     primaryKey: 'tradeId',
     userName: 'Demo User',
-    blotterId: 'iPushPull Demo',
+    adaptableId: 'iPushPull Demo',
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };
 
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  let blotterAPI: BlotterApi = AdaptableBlotter.init(adaptableOptions);
+  let blotterAPI: AdaptableApi = Adaptable.init(adaptableOptions);
 
   tickingDataHelper.startTickingDataagGridTradesUpdateData(
     gridOptions,

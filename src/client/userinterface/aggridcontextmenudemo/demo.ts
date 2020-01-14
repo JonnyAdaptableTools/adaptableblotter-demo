@@ -1,22 +1,22 @@
-import AdaptableBlotter from '@adaptabletools/adaptableblotter/agGrid';
-import '@adaptabletools/adaptableblotter/index.css';
-import 'ag-grid-community/dist/styles/ag-grid.css';
-import 'ag-grid-community/dist/styles/ag-theme-balham.css';
+import Adaptable from '@adaptabletools/adaptable/agGrid';
+import '@adaptabletools/adaptable/index.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
 import { cloneDeep } from 'lodash';
 import '../../../../DemoPage/aggriddemo.css';
 import {
-  AdaptableBlotterOptions,
+  AdaptableOptions,
   PredefinedConfig,
-  BlotterApi,
-} from '@adaptabletools/adaptableblotter/types';
+  AdaptableApi,
+} from '@adaptabletools/adaptable/types';
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import {
   AdaptableMenuItem,
   MenuInfo,
-} from '@adaptabletools/adaptableblotter/App_Scripts/PredefinedConfig/Common/Menu';
+} from '@adaptabletools/adaptable/App_Scripts/PredefinedConfig/Common/Menu';
 
-var adaptableApi: BlotterApi;
+var adaptableApi: AdaptableApi;
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
@@ -26,10 +26,10 @@ export default () => {
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
   gridOptions.floatingFilter = true;
 
-  const adaptableOptions: AdaptableBlotterOptions = {
+  const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    blotterId: 'Context Menu Demo',
+    adaptableId: 'Context Menu Demo',
     generalOptions: {
       showAdaptableContextMenu: (
         menuItem: AdaptableMenuItem,
@@ -51,7 +51,7 @@ export default () => {
   };
 
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  adaptableApi = AdaptableBlotter.init(adaptableOptions);
+  adaptableApi = Adaptable.init(adaptableOptions);
 
   return {
     demoConfig,

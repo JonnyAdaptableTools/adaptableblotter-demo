@@ -17,7 +17,7 @@ export default () => {
           <p>
             It contains 2 tabs: <b>Grid Properties</b> which provides licence,
             column and row information for the grid, and{' '}
-            <b>Adaptable Options</b> which displays your AdaptableBlotterOptions
+            <b>Adaptable Options</b> which displays your AdaptableOptions
             values.
           </p>
           <p>
