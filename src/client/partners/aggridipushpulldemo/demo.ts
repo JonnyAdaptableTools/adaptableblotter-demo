@@ -36,7 +36,7 @@ export default () => {
   let tickingDataHelper = new TickingDataHelper();
   const columndefs = helperAgGrid.getTradeSchema();
 
-  let rowCount: number = 21;
+  let rowCount: number = 50;
   const trades: ITrade[] = helperAgGrid.getTrades(rowCount);
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, trades);
@@ -74,5 +74,11 @@ let predefinedConfig: PredefinedConfig = {
     Password: process.env.IPUSHPULL_PASSWORD,
     ThrottleTime: 5000,
     //   AutoLogin: true,
+  },
+  Dashboard: {
+    VisibleToolbars: ['IPushPull'],
+  },
+  Theme: {
+    CurrentTheme: 'dark',
   },
 };

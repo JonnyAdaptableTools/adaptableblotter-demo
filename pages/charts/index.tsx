@@ -49,12 +49,12 @@ export default () => {
       pageTitle={'Chart demos'}
       description={
         <div>
-          <h4>Chart</h4>
+          <h4>Charts</h4>
           <p>
             AdapTable contains powerful charting capabilities (courtesy of our
             partner{' '}
             <a
-              href=" https://www.infragistics.com/products/ignite-ui-react"
+              href="https://www.infragistics.com/products/ignite-ui-react"
               target="_blank"
             >
               Infragistics
@@ -62,8 +62,20 @@ export default () => {
             ).
           </p>
           <p>
-            These examples show the Category and Pie (Doughnut) charts but other
-            types are coming soon.
+            {' '}
+            To run charts you need to install the{' '}
+            <a
+              href="https://api.adaptableblotter.com/interfaces/_adaptableoptions_adaptableoptions_.adaptableoptions.html#plugins"
+              target="_blank"
+            >
+              Charts plugin
+            </a>{' '}
+            in your 'package.json' and then add it to the 'plugins' section of{' '}
+            <i>AdaptableOptions</i>.
+          </p>
+          <p>
+            These examples show the Category, Sparkline and Pie (Doughnut)
+            charts but other types are coming soon.
           </p>
           <p>
             All charts are 'live', so that they update in line with changes to
