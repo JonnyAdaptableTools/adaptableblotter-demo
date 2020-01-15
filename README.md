@@ -1,6 +1,6 @@
-# adaptableblotter-demo
+# adaptable-demo
 
-Repository for a demo that showcases the powerful, data-agnostic Adaptable.
+Repository for a demo that showcases AdapTable, the powerful, data-agnostic tool.
 
 You can run Adaptable with a number of different dummy data sets.
 
