@@ -24,7 +24,7 @@ const DemoBox = ({ href, children }: { href: string; children: ReactNode }) => {
 
 export default () => {
   let categoryPages = getDemoPageStructure().Categories.find(
-    c => c.CategoryName == 'User Interface'
+    c => c.CategoryName == 'Tool Panel'
   )!.Pages;
 
   let demoLinks: any = categoryPages.map((page: DemoPage) => {
@@ -45,11 +45,10 @@ export default () => {
   });
   return (
     <MainPage
-      pageTitle={'User Interface demos'}
+      pageTitle={'Tool Panel demos'}
       description={
         <div>
-          <h4>User Interface</h4>
-          <p>To Do</p>
+          <h4>Tool Panel</h4>
           <p>See the examples in this section to find out more.</p>
           <ul>{demoLinks}</ul>
         </div>

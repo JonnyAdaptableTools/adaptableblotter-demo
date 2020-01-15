@@ -174,6 +174,20 @@ export default () => {
           .
         </p>
         <p>
+          <b>Version</b>
+          <br />
+          The demos on this site use Version 6 of AdapTable. This contains some
+          big changes (and improvements) from previous versions. If you are new
+          to Version 6 please read the{' '}
+          <a
+            href="https://github.com/AdaptableTools/adaptable/blob/dev/packages/adaptable/upgrade-guide.md"
+            target="_blank"
+          >
+            Upgrade Guide
+          </a>
+          .
+        </p>
+        <p>
           <b>Github Examples</b>
           <br />
           The AdapTable dev team have produced some custom examples to fit
