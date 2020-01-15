@@ -34,7 +34,8 @@ export default () => {
 
           <p>
             In this example we have stipulated that just 2 System Filters are
-            used: Positive and Zero (both for Number columns).
+            used: Positive and Zero (both for Number columns) and then used it
+            on 'Order Chg.' column.
           </p>
           <p>
             <b>AdapTable Help Resources:</b>{' '}

@@ -29,12 +29,12 @@ export default {
         Filter: {
           FilterExpressions: [
             {
-              ColumnId: 'OrderDate',
-              Filters: ['This Year'],
+              ColumnId: 'ChangeLastOrder',
+              Filters: ['Positive'],
             },
           ],
         },
-        ColumnId: 'OrderDate',
+        ColumnId: 'ChangeLastOrder',
       },
       {
         Filter: {

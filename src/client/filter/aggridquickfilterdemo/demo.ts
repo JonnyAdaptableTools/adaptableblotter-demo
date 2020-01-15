@@ -23,6 +23,12 @@ export default () => {
   const gridOptions = helperAgGrid.getGridOptions(columndefs, trades);
   gridOptions.floatingFilter = true;
   gridOptions.modules = AllEnterpriseModules;
+  gridOptions.statusBar = {
+    statusPanels: [
+      { statusPanel: 'agTotalRowCountComponent', align: 'left' },
+      { statusPanel: 'agFilteredRowCountComponent' },
+    ],
+  };
 
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',

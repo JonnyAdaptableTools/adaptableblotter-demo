@@ -7,26 +7,24 @@ export default {
         Expression: {
           ColumnValueExpressions: [
             {
-              ColumnDisplayValues: [
-                'Janet Leverling',
-                'Margaret Peacock',
-                'Robert King',
-              ],
+              ColumnDisplayValues: ['Margaret Peacock', 'Robert King'],
               ColumnId: 'Employee',
             },
           ],
+
           FilterExpressions: [
             {
-              ColumnId: 'OrderDate',
-              Filters: ['This Year'],
+              ColumnId: 'ChangeLastOrder',
+              Filters: ['Positive'],
             },
           ],
+
           RangeExpressions: [
             {
               ColumnId: 'InvoicedCost',
               Ranges: [
                 {
-                  Operand1: '300',
+                  Operand1: '1200',
                   Operand1Type: 'Value',
                   Operand2: '',
                   Operand2Type: 'Value',

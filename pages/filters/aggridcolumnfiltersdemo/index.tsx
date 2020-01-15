@@ -21,7 +21,7 @@ export default () => {
           </p>
           <p>
             In this example we create filters on 3 columns: Employee (3
-            selected), Order Date ('This Year' filter) and Invoiced ('Between
+            selected), Order Chg. ('Positive' filter) and Invoiced ('Between
             10-300' range). Edit / clear filters in the individual columns or
             via the Column Filter toolbar.
           </p>

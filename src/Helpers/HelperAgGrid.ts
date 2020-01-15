@@ -194,13 +194,13 @@ export class HelperAgGrid {
     schema.push(this.getContactDef());
     schema.push(this.getEmployeeDef());
     schema.push(this.getOrderDateDef());
+    schema.push(this.getChangeLastOrderDef());
     schema.push(this.getInvoicedDef());
     schema.push(this.getOrderCostDef());
     schema.push(this.getPackageCostDef());
     schema.push(this.getItemCostDef());
     schema.push(this.getItemCountDef());
     schema.push(this.getCompanyDef());
-    schema.push(this.getChangeLastOrderDef());
     schema.push(this.getShipViaDef());
     schema.push(this.getFreightDef());
     schema.push(this.getShipNameDef());
@@ -1065,7 +1065,7 @@ export class HelperAgGrid {
   }
   private getChangeLastOrderDef(): any {
     return {
-      headerName: 'Change Last Order',
+      headerName: 'Order Chg.',
       field: 'ChangeLastOrder',
       cellClass: 'number-cell',
       editable: true,
