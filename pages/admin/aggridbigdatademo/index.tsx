@@ -20,8 +20,8 @@ export default () => {
           </p>
           <p>
             This demo contains 100,000 rows of <b>random meaningless data</b>{' '}
-            which ticks many thousands of times a second (also updating the
-            Percent Bar in Change column).
+            which ticks many thousands of times a second using batch updates
+            (also updating, as a result, the Change column and its Percent Bar).
           </p>
           <p>
             The ag-Grid Status Bar at the bottom of the grid will display the
