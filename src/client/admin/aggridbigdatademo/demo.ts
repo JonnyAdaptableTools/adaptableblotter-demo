@@ -51,7 +51,7 @@ export default () => {
 
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
   const adaptableApi = Adaptable.init(adaptableOptions);
-  tickingDataHelper.startTickingDataagGridTrade(gridOptions, 20);
+  tickingDataHelper.startTickingDataagGridTrade(adaptableApi, gridOptions, 20);
   return {
     predefinedConfig,
     adaptableOptions: adaptableOptionsClone,

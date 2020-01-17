@@ -176,6 +176,7 @@ export class TickingDataHelper {
   }
 
   public startTickingDataagGridTrade(
+    api: AdaptableApi,
     gridOptions: any,
     tickingFrequency: number
   ) {
@@ -204,7 +205,11 @@ export class TickingDataHelper {
             //    trade.notional = this.generateRandomInt(1, 50);
             trade.changeOnYear = this.generateRandomInt(-150, 150);
 
-            rowNode.setData(trade);
+            let config = {
+              batchUpdate: true,
+              // callback: test,
+            };
+            api.gridApi.updateGridData([trade], config);
           }
         }
       }, tickingFrequency);

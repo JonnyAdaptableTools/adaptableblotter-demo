@@ -125,11 +125,11 @@ export default () => {
   }
 
   function minimiseDashboard() {
-    adaptableApi.dashboardApi.Minimise();
+    adaptableApi.dashboardApi.minimise();
   }
 
   function maximiseadshboard() {
-    adaptableApi.dashboardApi.SetVisibility('Visible');
+    adaptableApi.dashboardApi.setVisibility('Visible');
   }
 
   function showOrdersLayout() {

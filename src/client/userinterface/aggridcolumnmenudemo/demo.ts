@@ -76,7 +76,7 @@ let demoConfig: PredefinedConfig = {
       {
         Label: 'Mimise Dashboard',
         UserMenuItemClickedFunction: () => {
-          adaptableApi.dashboardApi.Minimise();
+          adaptableApi.dashboardApi.minimise();
         },
       },
       {
