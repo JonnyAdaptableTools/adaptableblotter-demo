@@ -2,7 +2,7 @@ import { PredefinedConfig } from '@adaptabletools/adaptable/types';
 
 export default {
   UserInterface: {
-    PermittedColumnValues: [
+    PermittedValuesColumns: [
       {
         ColumnId: 'ContactName',
         PermittedValues: [
@@ -19,6 +19,10 @@ export default {
           'Martín Sommer',
           'Pedro Afonso',
         ],
+      },
+      {
+        ColumnId: 'Employee',
+        PermittedValues: ['Janet Leverling', 'Robert King', 'Summer Intern'],
       },
     ],
   },

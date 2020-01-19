@@ -16,13 +16,20 @@ export default () => {
           </p>
           <p>
             If not then it will look for any Permitted Columns values for that
-            column. These are set through the PermittedColumnValues property in
-            the User Interace section of Predefined Config.
+            column. These are set through the{' '}
+            <a
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_userinterfacestate_.userinterfacestate.html"
+              target="_blank"
+            >
+              PermittedValuesColumns
+            </a>{' '}
+            property in the User Interface section of Predefined Config.
           </p>
           <p>
-            In this example we have set Permitted Column Values for the{' '}
-            <i>Contact</i> Column so that only those values we have listed are
-            displayed in the Column Filter (and Query Builder) for that column.
+            In this example we have set Permitted Column Values for{' '}
+            <i>Contact</i> and <i>Employee</i> Columns so that only the
+            restricted set of values we have listed are displayed in their
+            Column Filters (and in Query Builder).
           </p>
           <p>
             Note: if there are no Permitted Values, then AdapTable wtill
@@ -31,10 +38,17 @@ export default () => {
           <p>
             <b>AdapTable Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_designtimestate_userinterfacestate_.permittedcolumnvalues.html"
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_userinterfacestate_.permittedvaluescolumn.html"
               target="_blank"
             >
               Predefined Config
+            </a>
+            ,{' '}
+            <a
+              href="https://api.adaptableblotter.com/interfaces/_api_userinterfaceapi_.userinterfaceapi.html"
+              target="_blank"
+            >
+              Adaptable API
             </a>
           </p>
         </div>
