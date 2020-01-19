@@ -1,6 +1,6 @@
 # adaptable-demo
 
-Repository for the demo site that showcases AdapTable - the market-leading Data Management toolkit developed by [Adaptable Tools](www.adaptabletools.com)
+Repository for the [demo site](https://demo.adaptableblotter.com) that showcases AdapTable - the market-leading Data Management toolkit developed by [Adaptable Tools](www.adaptabletools.com)
 
 It contains multiple demos each showing a different feature, function or option in AdapTable (using dummy data sets).
 
@@ -8,7 +8,7 @@ It contains multiple demos each showing a different feature, function or option 
 
 AdapTable is a powerful HTML5 DataGrid add-on that integrates with the leading datagrid components and provides all the additional, rich functionality that financial and other advanced users expect from their grids, tables and blotters.
 
-It offers - out of the box - incredibly powerful searching, filtering, sorting, styling and editing functionality. It also provides unparalleled validation and audit functions, vital in the current regulatory and compliance environment. Try it out for yourself at https://demo.adaptableblotter.com.
+It offers - out of the box - incredibly powerful searching, filtering, sorting, styling and editing functionality. It also provides unparalleled validation and audit functions, vital in the current regulatory and compliance environment.
 
 More grid components are being added all the time so contact us if you would like us to implement your favourite HTML5 grid control.
 
