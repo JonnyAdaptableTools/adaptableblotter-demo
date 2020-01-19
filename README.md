@@ -1,6 +1,6 @@
 # adaptable-demo
 
-Repository for a demo that showcases AdapTable - the powerful, market-leading data manipulation tool.
+Repository for a demo that showcases AdapTable, the powerful, data-agnostic tool.
 
 You can run AdapTable with a number of different dummy data sets.
 
@@ -30,5 +30,3 @@ An AdapTable licence includes regular updates and full support. Please contact t
 Further information about AdapTable is available at www.adaptabletools.com. And there is detailed Help at https://adaptabletools.zendesk.com/hc/en-us.
 
 For all enquiries please email the [Adaptable Tools Support Team](mailto:support@adaptabletools.com).
-
-[![Build Status](https://travis-ci.org/JonnyAdaptableTools/adaptableblotter.svg?branch=master)](https://travis-ci.org/JonnyAdaptableTools/adaptableblotter)
