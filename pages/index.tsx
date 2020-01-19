@@ -78,7 +78,7 @@ export default () => {
           You will also set up the Options you need for your grid instance using
           the{' '}
           <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754697#UUID-f8f5acaa-44e5-683e-8a60-6abdbbeb2302"
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754498-Adaptable-Options"
             target="_blank"
           >
             Adaptable Options

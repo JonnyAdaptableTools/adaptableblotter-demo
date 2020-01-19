@@ -61,7 +61,7 @@ export default () => {
     'ToolbarButtonClicked',
     (toolbarButtonClickedEventArgs: ToolbarButtonClickedEventArgs) => {
       alert(
-        'name: ' +
+        'you clicked: name: ' +
           toolbarButtonClickedEventArgs.data[0].id.toolbarButton.Name +
           ';caption: ' +
           toolbarButtonClickedEventArgs.data[0].id.toolbarButton.Caption

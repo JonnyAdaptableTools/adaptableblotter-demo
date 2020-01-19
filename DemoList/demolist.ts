@@ -340,6 +340,12 @@ export function getDemoPageStructure(): DemoPageStructure {
         Link: '/alertsmessages',
         Pages: [
           {
+            Name: 'System Status',
+            Link: '/alertsmessages/aggridsystemstatusdemo',
+            Description:
+              'Have your users be notified automatically when something happens to the System (or Server) that they need to know.',
+          },
+          {
             Name: 'Alert',
             Link: '/alertsmessages/aggridalertdemo',
             Description:
@@ -352,10 +358,10 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Set up scheduled notifications so you can be reminded of important actions.',
           },
           {
-            Name: 'System Status',
-            Link: '/alertsmessages/aggridsystemstatusdemo',
+            Name: 'Schedules',
+            Link: '/alertsmessages/aggridschedulesdemo',
             Description:
-              'Have your users be notified automatically when something happens to the System (or Server) that they need to know.',
+              'Create schedules for Reminders, Exports and Live Data Reports',
           },
         ],
       },

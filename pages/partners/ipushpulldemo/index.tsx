@@ -13,13 +13,9 @@ export default () => {
             <h4>iPushPull / AdapTable Demo</h4>
           </p>
           <p>
-            AdapTable natively exports data to the clipboard, csv, JSON and
-            (coming soon) PDF.
-          </p>
-          <p>
-            However if want to share your reports more widely, (e.g. with
-            Symphony chat correspondents or you want to see Live Excel) then we
-            you can do so via our partner{' '}
+            If you want to share your AdapTable reports more widely, (e.g. with
+            Symphony chat correspondents or you want to see Live Excel) then you
+            can do so via our partner{' '}
             <a href="https://www.ipushpull.com/" target="_blank">
               iPushpull
             </a>
@@ -55,9 +51,14 @@ export default () => {
             (together with an auto login option).{' '}
           </p>
           <p>
-            Then select a report, and the iPushPull folder / page which should
-            display this data. You can either send a 'Snapshot' (one-off)
-            report, or start streaming live AdapTable data to iPushPull.
+            Then select a report, and choose the iPushPull folder / page which
+            should display this data. You can either export a 'Snapshot'
+            (one-off) report, or start streaming live AdapTable data to
+            iPushPull.
+          </p>
+          <p>
+            There is also an option to add new iPushPull pages (and more
+            functionality coming soon...).
           </p>
           <p>
             <b>AdapTable Help Resources:</b>{' '}

@@ -9,16 +9,16 @@ export default {
         Title: 'Trades',
         ToolbarButtons: [
           {
-            Name: 'btnNewTrade',
-            Caption: 'New Trade',
+            Name: 'ToolbarButton1',
+            Caption: '1st Button',
             ButtonStyle: {
               Variant: 'text',
               Tone: 'success',
             },
           },
           {
-            Name: 'btnRefreshGrid',
-            Caption: 'Refresh Grid',
+            Name: 'ToolbarButton2',
+            Caption: '2nd Button',
             ButtonStyle: {
               Variant: 'raised',
               Tone: 'accent',

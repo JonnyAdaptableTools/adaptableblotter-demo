@@ -36,11 +36,6 @@ export default () => {
             site used for the shipped icons, but they can come from anywhere you
             specify.
           </p>
-          <p>
-            Note that the new icon appears not only in the toolbar but also in
-            the functions menu dropdown and anywhere else where the icon is
-            referenced.
-          </p>
 
           <p>
             <b>AdapTable Help Resources:</b>{' '}
@@ -57,3 +52,12 @@ export default () => {
     />
   );
 };
+
+/*
+<p>
+            Note that the new icon appears not only in the toolbar but also in
+            the functions menu dropdown and anywhere else where the icon is
+            referenced.
+          </p>
+
+          */

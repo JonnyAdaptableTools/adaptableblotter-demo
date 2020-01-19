@@ -20,16 +20,16 @@ export function renderCustomDiv(): any {
       <button
         className="ab-SimpleButton ab-SimpleButton--variant-outlined"
         onClick={() => {
-          alert('creating trade');
+          alert('clicked rendered button');
         }}
         style={{ marginRight: '3px' }}
       >
-        Create New Trade
+        Rendered Button
       </button>
       <select className="ab-Dropdown" style={{ marginRight: '3px' }}>
-        <option>Book 1</option>
-        <option>Book 2</option>
-        <option>Book 3</option>
+        <option>Rendered Dropdown 1</option>
+        <option>Rendered Dropdown 2</option>
+        <option>Rendered Dropdown 3</option>
       </select>
     </div>
   );

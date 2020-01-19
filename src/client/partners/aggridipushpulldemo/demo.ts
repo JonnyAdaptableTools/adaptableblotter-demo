@@ -81,4 +81,57 @@ let predefinedConfig: PredefinedConfig = {
   Theme: {
     CurrentTheme: 'dark',
   },
+  FlashingCell: {
+    FlashingCells: [
+      {
+        ColumnId: 'price',
+        DownColor: '#FF0000',
+        FlashingCellDuration: 500,
+        IsLive: true,
+        UpColor: '#008000',
+      },
+      {
+        ColumnId: 'bid',
+        DownColor: '#FF0000',
+        FlashingCellDuration: 500,
+        IsLive: true,
+        UpColor: '#008000',
+      },
+      {
+        ColumnId: 'ask',
+        DownColor: '#FF0000',
+        FlashingCellDuration: 500,
+        IsLive: true,
+        UpColor: '#008000',
+      },
+      {
+        ColumnId: 'bloombergAsk',
+        DownColor: '#FF0000',
+        FlashingCellDuration: 500,
+        IsLive: true,
+        UpColor: '#008000',
+      },
+      {
+        ColumnId: 'bloombergBid',
+        DownColor: '#FF0000',
+        FlashingCellDuration: 500,
+        IsLive: true,
+        UpColor: '#008000',
+      },
+      {
+        ColumnId: 'notional',
+        DownColor: '#FF0000',
+        FlashingCellDuration: 500,
+        IsLive: true,
+        UpColor: '#008000',
+      },
+      {
+        ColumnId: 'changeOnYear',
+        DownColor: '#FF0000',
+        FlashingCellDuration: 500,
+        IsLive: true,
+        UpColor: '#008000',
+      },
+    ],
+  },
 };
