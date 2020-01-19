@@ -6,7 +6,7 @@ You can run AdapTable with a number of different dummy data sets.
 
 ## AdapTable
 
-AdapTable is a powerful HTML5 DataGrid add-on that integrates with the leading datagrid components and provides all the additional, rich functionality that financial and other advanced users expect from their grids and blotters.
+AdapTable is a powerful HTML5 DataGrid add-on that integrates with the leading datagrid components and provides all the additional, rich functionality that financial and other advanced users expect from their grids, tables and blotters.
 
 It offers - out of the box - incredibly powerful searching, filtering, sorting, styling and editing functionality. It also provides unparalleled validation and audit functions, vital in the current regulatory and compliance environment. Try it out for yourself at https://demo.adaptableblotter.com.
 
@@ -16,14 +16,13 @@ AdapTable is fully data agnostic and can work with any data set you provide it w
 
 ## Licences
 
-AdapTable is a commercial product and requires a purchased licence for use.
-There are 3 licence types available (all sold on an annual basis):
+A licence for AdapTable provides access to all product features as well as quarterly updates and enhancements through the lifetime of the licence, comprehensive support, and access to all 3rd party libraries.
 
-- _Community_ - free for charities, students in full time education and open-source projects.
-- _End User_ - licences are sold in bands depending on the number of end users
-- _Universal_ - unlimited users and usage.
+Licences can be purchased individually, for a team (minimum 30 end-users), for an organisation or for integration into software for onward sale.
 
-An AdapTable licence includes regular updates and full support. Please contact the [Adaptable Tools Sales Team](mailto:sales@adaptabletools.com) for more information.
+We can make a trial licence available for a short period of time to allow you to try out AdapTable for yourself.
+
+Please contact [`sales@adaptabletools.com`](mailto:sales@adaptabletools.com) for more information.
 
 ## Help
 
