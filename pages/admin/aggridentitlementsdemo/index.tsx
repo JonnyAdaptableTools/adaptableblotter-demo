@@ -23,9 +23,14 @@ export default () => {
           <p>
             This example we have created 3 Entitlements. We have made 'Layout'
             to be ReadOnly so we can use existing layouts but we cannot edit or
-            delete them (or create new ones). 'Advanced Search' and 'Column
-            Category' are hidden which means they are not available in the menu,
-            or as toolbars.
+            delete them (or create new ones) - either in the Dashboard or the
+            Tool Panel.
+          </p>
+          <p>
+            {' '}
+            'Advanced Search' and 'Column Category' both have an Entitlement of
+            'hidden' which means they are not available in the menu, or as
+            toolbars.
           </p>
           <p>
             <b>AdapTable Help Resources:</b>{' '}

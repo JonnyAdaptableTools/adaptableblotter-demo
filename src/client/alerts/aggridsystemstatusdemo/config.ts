@@ -11,7 +11,7 @@ export default {
         ToolbarButtons: [
           {
             Name: 'info',
-            Caption: 'Info',
+            Caption: 'Set Info',
             ButtonStyle: {
               Variant: 'text',
               Tone: 'info',
@@ -19,7 +19,7 @@ export default {
           },
           {
             Name: 'success',
-            Caption: 'Success',
+            Caption: 'Set Success',
             ButtonStyle: {
               Variant: 'text',
               Tone: 'success',
@@ -27,7 +27,7 @@ export default {
           },
           {
             Name: 'warning',
-            Caption: 'Warning',
+            Caption: 'Set Warning',
             ButtonStyle: {
               Variant: 'text',
               Tone: 'warning',
@@ -35,7 +35,7 @@ export default {
           },
           {
             Name: 'error',
-            Caption: 'Error',
+            Caption: 'Set Error',
             ButtonStyle: {
               Variant: 'text',
               Tone: 'error',
@@ -43,7 +43,7 @@ export default {
           },
           {
             Name: 'clear',
-            Caption: 'Clear',
+            Caption: 'Clear Message',
             //   Variant: 'raised',
           },
         ],
@@ -52,8 +52,8 @@ export default {
   },
   SystemStatus: {
     ShowAlert: false,
-    DefaultStatusMessage: 'Everything is fine',
-    DefaultStatusType: 'Success',
+    //  DefaultStatusMessage: 'Everything is fine',
+    //  DefaultStatusType: 'Success',
     StatusMessage: 'Server running slowly',
     StatusType: 'Warning',
   },

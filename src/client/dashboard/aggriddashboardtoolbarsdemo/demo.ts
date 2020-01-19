@@ -28,7 +28,6 @@ export default () => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Toolbars Demo',
-
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };

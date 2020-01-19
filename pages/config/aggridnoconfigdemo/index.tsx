@@ -27,7 +27,7 @@ export default () => {
           </p>
           <p>
             This basic example has <b>no</b> Predefined Configuration (or
-            Entitlements) and no overriden Adaptable Objects. So all the
+            Entitlements) and no overriden AdapTable Objects. So all the
             functionality (e.g. 30 functions, Column Header, Quick Filter etc.)
             is available in a default way.
           </p>

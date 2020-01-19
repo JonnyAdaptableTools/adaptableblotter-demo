@@ -29,7 +29,9 @@ export default () => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Entitlements Demo',
-
+    userInterfaceOptions: {
+      showAdaptableToolPanel: true,
+    },
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };

@@ -27,9 +27,11 @@ export default () => {
             rejected outright.{' '}
           </p>
           <p>
-            <b>Note:</b> Cell Validation takes precedence. We have also created
-            a rule that an edit cannot increase in value by 15; if that rule
-            fails then no Server Validation is run.
+            <b>Note:</b>{' '}
+            <a href="./aggridcellvalidationdemo">Cell Validation</a> takes
+            precedence: we have also created a Cell Validation rule that an edit
+            cannot increase in value by 15; if that rule fails then no Server
+            Validation is run.
           </p>
           <p>
             <b>AdapTable Help Resources:</b>{' '}

@@ -33,7 +33,7 @@ export default () => {
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
   let adaptableApi = Adaptable.init(adaptableOptions);
 
-  adaptableApi.eventApi.on('BlotterReady', () => {
+  adaptableApi.eventApi.on('AdaptableReady', () => {
     setTimeout(() => {
       adaptableApi.gridApi.setGridData(JSON.parse(JSON.stringify(json)));
     }, 500);

@@ -23,13 +23,13 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'No Config',
             Link: '/config/aggridnoconfigdemo',
             Description:
-              'An Adaptable instance with no Predefined Config supplied.  This is unlikely to be the case in a production scenario as you will pre-ship Adaptable with your objects.',
+              'An AdapTable instance with no Predefined Config supplied.  This is unlikely to be the case in a production scenario as you will pre-ship AdapTable with your objects.',
           },
           {
             Name: 'Predefined Config',
             Link: '/config/aggridpredefinedconfigdemo',
             Description:
-              'An Adaptable instance with lots of different Predefined Config elements supplied.',
+              'An AdapTable instance with lots of different Predefined Config elements supplied.',
           },
         ],
       },
@@ -53,7 +53,7 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Data Source Selector',
             Link: '/search/aggriddatasourcedemo',
             Description:
-              'A list of Data Sources provided at run-time (e.g. books, stored procs); when one is selected an event is fired that you can listen to and then populate Adaptable with data via the API.',
+              'A list of Data Sources provided at run-time (e.g. books, stored procs); when one is selected an event is fired that you can listen to and then populate AdapTable with data via the API.',
           },
         ],
       },
@@ -89,7 +89,7 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'System Filters',
             Link: '/filters/aggridsystemfiltersdemo',
             Description:
-              'System Filters are those provided by Adaptable (e.g. "Blanks", "Yeserday", "Positive"); you can choose which - if any - of these are available.',
+              'System Filters are those provided by AdapTable (e.g. "Blanks", "Yeserday", "Positive"); you can choose which - if any - of these are available.',
           },
         ],
       },
@@ -179,7 +179,7 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Row Style',
             Link: '/style/aggridrowstyledemo',
             Description:
-              'Choose to style rows in Adaptable using your preferred colour scheme.',
+              'Choose to style rows in AdapTable using your preferred colour scheme.',
           },
         ],
       },
@@ -191,19 +191,19 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Dark Theme',
             Link: '/theme/aggriddarkthemedemo',
             Description:
-              'See Adaptable using the shipped Dark Theme. When you use this theme Adaptable will automatically update the underlying vendor grid to match.',
+              'See AdapTable using the shipped Dark Theme. When you use this theme AdapTable will automatically update the underlying vendor grid to match.',
           },
           {
             Name: 'Custom Theme',
             Link: '/theme/aggridcustomthemedemo',
             Description:
-              'See Adaptable using a custom theme (based on Wimbledon tennis colours).',
+              'See AdapTable using a custom theme (based on Wimbledon tennis colours).',
           },
           {
             Name: 'Custom Icons',
             Link: '/theme/aggridcustomicondemo',
             Description:
-              'You can provide your own icons to Adaptable to use in place of the defaults - this demo shows how.',
+              'You can provide your own icons to AdapTable to use in place of the defaults - this demo shows how.',
           },
         ],
       },
@@ -331,7 +331,7 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Calendar',
             Link: '/gridmanagement/aggridcalendardemo',
             Description:
-              'Select which Holiday Calendar you wish Adaptable to use when calculating Working Days (in Filters, Queries etc).',
+              'Select which Holiday Calendar you wish AdapTable to use when calculating Working Days (in Filters, Queries etc).',
           },
         ],
       },
@@ -367,7 +367,7 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Dashboard Toolbars',
             Link: '/dashboard/aggriddashboardtoolbarsdemo',
             Description:
-              'Adaptable provides a number of Toolbars to provide easy access to functions. You can choose which ones you want in the Dashbboard',
+              'AdapTable provides a number of Toolbars to provide easy access to functions. You can choose which ones you want in the Dashbboard',
           },
           {
             Name: 'Dashboard Buttons',
@@ -409,26 +409,26 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Adaptable API',
             Link: '/admin/aggridblotterapidemo',
             Description:
-              'Access Adaptable functionality and state through the Adaptable API which contains hundreds of functions giving full programmatic access to everything Adaptable provides.',
+              'Access AdapTable functionality and state through the Adaptable API which contains hundreds of functions giving full programmatic access to everything AdapTable provides.',
           },
           {
             Name: 'Big Data',
             Link: '/admin/aggridbigdatademo',
             Description:
-              'See Adaptable (and ag-Grid) with 100,000 rows of client side data.',
+              'See AdapTable (and ag-Grid) with 100,000 rows of client side data.',
           },
           {
             Name: 'Data Source Changes',
             Link: '/admin/aggriddatasourcechangesdemo',
             Description:
-              'Any changes made to the data source to the underlying DataGrid (in this example ag-Grid) is automatically reflected in Adaptable and it will be picked up by all relevant functions.',
+              'Any changes made to the data source to the underlying DataGrid (in this example ag-Grid) is automatically reflected in AdapTable and it will be picked up by all relevant functions.',
           },
           /*
           {
             Name: 'No Code',
             Link: '/admin/aggridnocodedemo',
             Description:
-              'Create an Adaptable instance dynamically from a JSON or Excel file that you provide; your Adaptable instance will include the full range of functions and all the advanced functionality like state management and audit.',
+              'Create an AdapTable instance dynamically from a JSON or Excel file that you provide; your AdapTable instance will include the full range of functions and all the advanced functionality like state management and audit.',
           },
           */
         ],
@@ -441,31 +441,31 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Row Grouping',
             Link: '/aggridfeatures/aggridrowgroupingdemo',
             Description:
-              'Adaptable works fully when the ag-Grid column row grouping functionality is applied.',
+              'AdapTable works fully when the ag-Grid column row grouping functionality is applied.',
           },
           {
             Name: 'Column Grouping',
             Link: '/aggridfeatures/aggridcolumngroupingdemo',
             Description:
-              'Adaptable works fully when the ag-Grid column banding (grouping) functionality is applied.',
+              'AdapTable works fully when the ag-Grid column banding (grouping) functionality is applied.',
           },
           {
             Name: 'Pivoting',
             Link: '/aggridfeatures/aggridpivotingdemo',
             Description:
-              'Adaptable enables you to create layouts that take pivoting into account.',
+              'AdapTable enables you to create layouts that take pivoting into account.',
           },
           {
             Name: 'Master Detail',
             Link: '/aggridfeatures/aggridmasterdetaildemo',
             Description:
-              'Adaptable supports Master / Detail grids where the underlying vendor grid offers it.',
+              'AdapTable supports Master / Detail grids where the underlying vendor grid offers it.',
           },
           {
             Name: 'Row Selection',
             Link: '/aggridfeatures/aggridrowselectiondemo',
             Description:
-              'Adaptable fires an event each time the cell or row selection changes. This includes full detials of the cells and rows selected.',
+              'AdapTable fires an event each time the cell or row selection changes. This includes full detials of the cells and rows selected.',
           },
         ],
       },
@@ -518,13 +518,19 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Vendor Grid Filters',
             Link: '/adaptableoptions/aggridvendorgridfiltersdemo',
             Description:
-              'You can use the agGrid Floating Filter and Filter Form if you wish instead of Adaptable Quick Filter and Filter Form respectively',
+              'You can use the agGrid Floating Filter and Filter Form if you wish instead of AdapTable Quick Filter and Filter Form respectively',
           },
           {
             Name: 'Auto Apply Filters',
             Link: '/adaptableoptions/aggridautoapplyfiltersdemo',
             Description:
               'In Column Filters the default is to filter each time a value in the dropdown is clicked. But if you prefer, you can apply the filters only after an "Apply" button is clicked (useful if doing server side filtering).',
+          },
+          {
+            Name: 'Quick Search Columns',
+            Link: '/adaptableoptions/aggridexcludecolumnsfromquicksearchdemo',
+            Description:
+              'Provide a function which will specify if some columns should be excluded from Quick Search results.',
           },
         ],
       },
@@ -542,7 +548,7 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Server Lookups',
             Link: '/lookups/aggridserverlookupsdemo',
             Description:
-              'Provide Adaptable dynamically with the list of values to be displayed each time distinct cell values are required',
+              'Provide AdapTable dynamically with the list of values to be displayed each time distinct cell values are required',
           },
           {
             Name: 'Permitted Values',
@@ -560,19 +566,19 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Finsemble',
             Link: '/partners/finsembledemo',
             Description:
-              'We leverage the powerful offering to enable multiple Adaptable instances to share state, data and events',
+              'We leverage the powerful offering to enable multiple AdapTable instances to share state, data and events',
           },
           {
             Name: 'iPushPull',
             Link: '/partners/ipushpulldemo',
             Description:
-              'Export Adaptable data to Excel (with Live Updates) or Symphony and elsewhere by using the services of our partner iPushPull',
+              'Export AdapTable data to Excel (with Live Updates) or Symphony and elsewhere by using the services of our partner iPushPull',
           },
           {
             Name: 'OpenFin',
             Link: '/partners/openfindemo',
             Description:
-              'If you are using this popular container we offer "Live Updates" so that data exported to Excel updates in real time as Adaptable data ticks or is edited',
+              'If you are using this popular container we offer "Live Updates" so that data exported to Excel updates in real time as AdapTable data ticks or is edited',
           },
         ],
       },
