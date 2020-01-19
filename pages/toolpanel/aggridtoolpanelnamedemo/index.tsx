@@ -4,34 +4,29 @@ import DynamicDemoPage from '../../../src/Helpers/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/toolpanel/aggridtoolpaneldemo')}
-      pageTitle={'Tool Panel Demo'}
+      demo={import('../../../src/client/toolpanel/aggridtoolpanelnamedemo')}
+      pageTitle={'Tool Panel Name Demo'}
       description={
         <div>
-          <h4>Tool Panel Demo</h4>
+          <h4>Tool Panel Name Demo</h4>
           <p>
-            The AdapTable Tool Panel is designed for situations when screen
-            estate is limited and the Dashboard is too 'bulky'.
+            By default the name of the AdapTable Tool Panel (which appears down
+            the side of the control) is 'AdapTable'.
           </p>
           <p>
-            It is a standard{' '}
+            You can change this by setting the <b>adaptableToolPanelTitle</b>{' '}
+            property in{' '}
             <a
-              href="https://www.ag-grid.com/javascript-grid-tool-panel-component/#example-custom-stats-tool-panel-component"
+              href="https://api.adaptableblotter.com/interfaces/_adaptableoptions_userinterfaceoptions_.userinterfaceoptions.html#adaptabletoolpaneltitle"
               target="_blank"
             >
-              ag-Grid Custom Tool Panel Component
-            </a>{' '}
-            with one control to map each Dashboard Toolbar.
-          </p>{' '}
-          <p>
-            You can set with Tool Panel elememt are availalbe and which are
-            visible through Tool Panel state (again similar to how the Dashboard
-            works).
+              UserInterfaceOptions
+            </a>
+            .
           </p>
           <p>
-            In this example we have set the Dashboard to hidden and set the
-            Toolpanel to show on open. You can 'restore' the Dashboard via the
-            dropdown in the 'Dashboard' Toolbar control.
+            In this example we have set the name of the Tool Panel to 'Grid
+            Management'
           </p>
           <p>
             <b>AdapTable Help Resources:</b>{' '}

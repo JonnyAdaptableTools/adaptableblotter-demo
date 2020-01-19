@@ -497,6 +497,11 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'Use the Adaptable Tool Panel as a Dashboard alternative for quick access to commonly used functions and screens',
           },
+          {
+            Name: 'Tool Panel Name',
+            Link: '/toolpanel/aggridtoolpanelnamedemo',
+            Description: 'Set your own name for the Tool Panel',
+          },
         ],
       },
       {
