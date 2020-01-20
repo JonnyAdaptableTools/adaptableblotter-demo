@@ -180,7 +180,7 @@ export default () => {
           big changes (and improvements) from previous versions. If you are new
           to Version 6 please read the{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/dev/packages/adaptable/upgrade-guide.md"
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/upgrade-guide.md"
             target="_blank"
           >
             Upgrade Guide
