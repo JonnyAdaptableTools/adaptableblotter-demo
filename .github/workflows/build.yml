@@ -28,7 +28,7 @@ jobs:
         with:
           path: demo
 
-      - uses: 'demo/.github/actions/set-npmrc'
+      - uses: './demo/.github/actions/set-npmrc'
 
       - name: Echo whoami
         run: npm whoami --registry=https://registry.adaptabletools.com
