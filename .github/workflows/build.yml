@@ -46,9 +46,9 @@ jobs:
 
       - name: Cache next builds
         uses: actions/cache@v1
-        working-directory: demo
+        # working-directory: demo
         with:
-          path: ./.next/cache
+          path: ./demo/.next/cache
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
       - name: Executing npm install
