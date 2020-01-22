@@ -28,7 +28,12 @@ jobs:
         with:
           path: adaptable-demo
 
+      - run: pwd
+      - run: ls
       - run: cd adaptable-demo
+      - run: pwd
+      - run: ls
+
       - uses: './.github/actions/set-npmrc'
 
       - name: Echo whoami
