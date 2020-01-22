@@ -35,7 +35,7 @@ git config user.email "actions@users.noreply.github.com"
 git remote add publisher "${remote_repo}"
 
 git checkout master;
-
+rm -fr dist
 mv ../demo/dist .;
 git add -A;
 git commit -m "Automated publish: ${COMMIT_MESSAGE} ${GITHUB_SHA}" || exit 0;
