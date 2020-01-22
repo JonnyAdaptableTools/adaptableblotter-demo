@@ -40,7 +40,6 @@ jobs:
 
       - name: Cache node modules
         uses: actions/cache@v1
-        working-directory: demo
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -61,6 +60,7 @@ jobs:
         working-directory: demo
         env:
           CI: true
+
       - name: echo COMMIT_MESSAGE
         run: echo ${COMMIT_MESSAGE}
 
