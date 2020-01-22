@@ -51,15 +51,15 @@ jobs:
       #     path: ./demo/.next/cache
       #     key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
-      - name: Executing npm install
-        run: npm i
-        working-directory: demo
+      # - name: Executing npm install
+      #   run: npm i
+      #   working-directory: demo
 
-      - name: Building
-        run: npm run build
-        working-directory: demo
-        env:
-          CI: true
+      # - name: Building
+      #   run: npm run build
+      #   working-directory: demo
+      #   env:
+      #     CI: true
 
       - name: echo COMMIT_MESSAGE
         run: echo ${COMMIT_MESSAGE}
@@ -72,7 +72,7 @@ jobs:
           path: demo-dist
 
       - name: move dist to demo-dist
-        run: rm -fr demo-dist/dist && mv demo/dist demo-dist
+        run: rm -fr demo-dist/dist && mkdir demo-dist/dist && mv demo/images demo-dist/dist
 
       - uses: './demo/.github/actions/git-push-action'
         name: Push changes
