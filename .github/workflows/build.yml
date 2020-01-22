@@ -29,9 +29,10 @@ jobs:
         with:
           path: demo
 
-      - name: setup .npmrc
+      - name: setup npmrc
         uses: './demo/.github/actions/set-npmrc'
-        working-directory: demo
+
+      - run: cp .npmrc demo
 
       - name: Echo whoami
         run: npm whoami --registry=https://registry.adaptabletools.com
