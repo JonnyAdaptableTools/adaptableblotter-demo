@@ -19,13 +19,16 @@ jobs:
       VALID_BLOTTER_LICENSE: ${{ secrets.VALID_BLOTTER_LICENSE }}
 
     steps:
-      - uses: actions/checkout@v2
-
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
 
+      - uses: actions/checkout@v2
+        with:
+          path: adaptable-demo
+
+      - run: cd adaptable-demo
       - uses: './.github/actions/set-npmrc'
 
       - name: Echo whoami
@@ -39,13 +42,18 @@ jobs:
       - name: Executing npm install
         run: npm i
 
-      - name: Building
-        run: npm run build
-        env:
-          CI: true
+      # - name: Building
+      #   run: npm run build
+      #   env:
+      #     CI: true
 
       - name: list dist
         run: ls dist
+
+      - run: cd ..
+
+      - run: mkdir adaptable-demo/dist
+      - run: mv adaptable-demo/images adaptable-demo/dist
 
       - name: checkout adaptable-demo-dist repo
         uses: actions/checkout@v2
@@ -54,7 +62,7 @@ jobs:
           path: adaptable-demo-dist
 
       - name: move dist to adaptable-demo-dist
-        run: mv dist adaptable-demo-dist
+        run: mv adaptable-demo/dist adaptable-demo-dist
 
       - name: push
         run: cd adaptable-demo-dist && git add dist && git commit -m "update" && git push origin master
