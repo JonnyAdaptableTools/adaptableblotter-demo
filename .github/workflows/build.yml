@@ -63,7 +63,7 @@ jobs:
         run: mv demo/dist demo-dist
 
       - name: ls
-        run: ls
+        run: ls && ls dist
         working-directory: demo-dist
 
       - name: Set git config
@@ -71,6 +71,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "BUILD IT"
+
       - name: push
         working-directory: demo-dist
         run: git add dist && git commit -m ${COMMIT_MESSAGE}
