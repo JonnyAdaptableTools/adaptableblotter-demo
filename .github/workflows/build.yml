@@ -72,13 +72,14 @@ jobs:
         working-directory: demo-dist
         run: git add dist && git commit -m "update"
 
-      - name: Push changes
+      - uses: './demo/.github/actions/git-push-action'
+        name: Push changes
         working-directory: demo-dist
-        uses: './demo/.github/actions/git-push-action'
+
         with:
+          github_token: ${{ secrets.AB_DEPLOY_GITHUB_TOKEN }}
           branch: master
           repository: adaptable-demo-dist
-          github_token: ${{ secrets.AB_DEPLOY_GITHUB_TOKEN }}
     # - name: Building core
     #   run: cd packages/adaptable && npm run build-prod-no-cleanup
     # - name: Executing npm install in react
