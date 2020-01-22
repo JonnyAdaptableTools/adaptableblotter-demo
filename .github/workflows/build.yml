@@ -38,19 +38,19 @@ jobs:
         run: npm whoami --registry=https://registry.adaptabletools.com
         working-directory: demo
 
-      # - name: Cache node modules
-      #   uses: actions/cache@v1
-      #   working-directory: demo
-      #   with:
-      #     path: ~/.npm
-      #     key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      - name: Cache node modules
+        uses: actions/cache@v1
+        working-directory: demo
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
-      # - name: Cache next builds
-      #   uses: actions/cache@v1
-      #   working-directory: demo
-      #   with:
-      #     path: ./.next/cache
-      #     key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      - name: Cache next builds
+        uses: actions/cache@v1
+        working-directory: demo
+        with:
+          path: ./.next/cache
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
       - name: Executing npm install
         run: npm i
