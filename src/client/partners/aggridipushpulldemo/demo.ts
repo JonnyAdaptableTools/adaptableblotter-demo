@@ -76,7 +76,7 @@ let predefinedConfig: PredefinedConfig = {
     //   AutoLogin: true,
   },
   Dashboard: {
-    VisibleToolbars: ['IPushPull'],
+    VisibleToolbars: ['IPushPull', 'CellSummary'],
   },
   Theme: {
     CurrentTheme: 'dark',
