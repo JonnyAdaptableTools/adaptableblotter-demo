@@ -16,6 +16,7 @@ jobs:
       ALGOLIA_KEY: ${{ secrets.ALGOLIA_KEY }}
       IPUSHPULL_USERNAME: ${{ secrets.IPUSHPULL_USERNAME }}
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
       VALID_BLOTTER_LICENSE: ${{ secrets.VALID_BLOTTER_LICENSE }}
 
     steps:
