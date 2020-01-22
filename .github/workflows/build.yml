@@ -31,11 +31,7 @@ jobs:
         with:
           path: demo
 
-      - run: pwd
-      - run: ls
-      - run: cd demo
-      - run: pwd
-      - run: ls
+      - run: pwd && ls && cd demo && pwd && ls
 
       - uses: './.github/actions/set-npmrc'
 
