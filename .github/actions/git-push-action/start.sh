@@ -22,14 +22,20 @@ fi
 
 cd ${INPUT_DIRECTORY}
 
-
 echo "ACTOR AND TOKEN - ${GITHUB_ACTOR}:${INPUT_GITHUB_TOKEN}";
 
 remote_repo="https://${GITHUB_ACTOR}:${INPUT_GITHUB_TOKEN}@github.com/${REPOSITORY}.git"
 
+git remote add publisher "${remote_repo}"
+
+git checkout master;
+
+mv ../demo/dist .;
+git add -A;
+git commit -m "Automated publish: ${COMMIT_MESSAGE} ${GITHUB_SHA}" || exit 0;
 
 git log;
 git status;
 # git remote add publisher "${remote_repo}"
 
-git push origin master;
+git push publisher master;

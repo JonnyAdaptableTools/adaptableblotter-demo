@@ -53,28 +53,28 @@ jobs:
       - name: echo COMMIT_MESSAGE
         run: echo ${COMMIT_MESSAGE}
 
-      - name: checkout adaptable-demo-dist repo
-        uses: actions/checkout@v2
-        with:
-          repository: AdaptableTools/adaptable-demo-dist
-          path: demo-dist
+      # - name: checkout adaptable-demo-dist repo
+      #   uses: actions/checkout@v2
+      #   with:
+      #     repository: AdaptableTools/adaptable-demo-dist
+      #     path: demo-dist
 
-      - name: move dist to demo-dist
-        run: mv demo/dist demo-dist
+      # - name: move dist to demo-dist
+      #   run: mv demo/dist demo-dist
 
-      - name: ls
-        run: ls && ls dist && ls dist/images
-        working-directory: demo-dist
+      # - name: ls
+      #   run: ls && ls dist && ls dist/images
+      #   working-directory: demo-dist
 
-      - name: Set git config
-        working-directory: demo-dist
-        run: |
-          git config user.email "action@github.com"
-          git config user.name "BUILD IT"
+      # - name: Set git config
+      #   working-directory: demo-dist
+      #   run: |
+      #     git config user.email "action@github.com"
+      #     git config user.name "BUILD IT"
 
-      - name: push
-        working-directory: demo-dist
-        run: git add dist && git commit -m ${COMMIT_MESSAGE}
+      # - name: push
+      #   working-directory: demo-dist
+      #   run: git add dist && git commit -m ${COMMIT_MESSAGE}
 
       - uses: './demo/.github/actions/git-push-action'
         name: Push changes
