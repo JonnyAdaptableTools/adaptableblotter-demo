@@ -30,7 +30,7 @@ export default () => {
             particular DataType (e.g. Data). You provide this information
             together with the predicate function in the{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_namedfilterstate_.namedfilterstate.html"
+              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_namedfilterstate_.namedfilterstate.html"
               target="_blank"
             >
               Named Filters
@@ -49,14 +49,14 @@ export default () => {
           <p>
             <b>AdapTable Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_namedfilterstate_.namedfilterstate.html"
+              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_namedfilterstate_.namedfilterstate.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_namedfilterapi_.namedfilterapi.html"
+              href="https://api.adaptabletools.com/interfaces/_api_namedfilterapi_.namedfilterapi.html"
               target="_blank"
             >
               Adaptable API

@@ -18,7 +18,7 @@ export default () => {
             If not then it will look for any Permitted Columns values for that
             column. These are set through the{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_userinterfacestate_.userinterfacestate.html"
+              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_userinterfacestate_.userinterfacestate.html"
               target="_blank"
             >
               PermittedValuesColumns
@@ -38,14 +38,14 @@ export default () => {
           <p>
             <b>AdapTable Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_userinterfacestate_.permittedvaluescolumn.html"
+              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_userinterfacestate_.permittedvaluescolumn.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_userinterfaceapi_.userinterfaceapi.html"
+              href="https://api.adaptabletools.com/interfaces/_api_userinterfaceapi_.userinterfaceapi.html"
               target="_blank"
             >
               Adaptable API

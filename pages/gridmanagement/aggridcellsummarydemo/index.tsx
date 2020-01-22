@@ -28,7 +28,7 @@ export default () => {
             ('VWAP' and 'Only'); this is becuase we have installed and included
             the{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_adaptableoptions_adaptableoptions_.adaptableoptions.html#plugins"
+              href="https://api.adaptabletools.com/interfaces/_adaptableoptions_adaptableoptions_.adaptableoptions.html#plugins"
               target="_blank"
             >
               Financial plugin
@@ -38,14 +38,14 @@ export default () => {
           <p>
             <b>AdapTable Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_cellsummarystate_.cellsummarystate.html"
+              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_cellsummarystate_.cellsummarystate.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_cellsummaryapi_.cellsummaryapi.html"
+              href="https://api.adaptabletools.com/interfaces/_api_cellsummaryapi_.cellsummaryapi.html"
               target="_blank"
             >
               Adaptable API

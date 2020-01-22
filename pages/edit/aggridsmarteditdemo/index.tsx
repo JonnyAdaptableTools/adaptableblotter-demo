@@ -27,14 +27,14 @@ export default () => {
           <p>
             <b>AdapTable Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_smarteditstate_.smarteditstate.html"
+              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_smarteditstate_.smarteditstate.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_smarteditapi_.smarteditapi.html"
+              href="https://api.adaptabletools.com/interfaces/_api_smarteditapi_.smarteditapi.html"
               target="_blank"
             >
               Adaptable API

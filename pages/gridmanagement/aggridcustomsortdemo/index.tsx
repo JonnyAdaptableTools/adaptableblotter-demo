@@ -28,14 +28,14 @@ export default () => {
           <p>
             <b>AdapTable Help Resources:</b>{' '}
             <a
-              href=" https://api.adaptableblotter.com/interfaces/_predefinedconfig_customsortstate_.customsortstate.html"
+              href=" https://api.adaptabletools.com/interfaces/_predefinedconfig_customsortstate_.customsortstate.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_customsortapi_.customsortapi.html"
+              href="https://api.adaptabletools.com/interfaces/_api_customsortapi_.customsortapi.html"
               target="_blank"
             >
               Adaptable API

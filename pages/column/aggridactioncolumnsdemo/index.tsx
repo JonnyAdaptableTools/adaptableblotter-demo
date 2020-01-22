@@ -18,7 +18,7 @@ export default () => {
           <p>
             When the button is clicked an{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_eventapi_.eventapi.html"
+              href="https://api.adaptabletools.com/interfaces/_api_eventapi_.eventapi.html"
               target="_blank"
             >
               On('ActionColumnClicked')
@@ -51,7 +51,7 @@ export default () => {
             Lastly we created an Action column to <b>delete a row</b> which was
             trivial to implement with just one line of code using the{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_gridapi_.gridapi.html#deletegriddata"
+              href="https://api.adaptabletools.com/interfaces/_api_gridapi_.gridapi.html#deletegriddata"
               target="_blank"
             >
               API
@@ -64,14 +64,14 @@ export default () => {
           <p>
             <b>AdapTable Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_actioncolumnstate_.actioncolumnstate.html"
+              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_actioncolumnstate_.actioncolumnstate.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_actioncolumnapi_.actioncolumnapi.html"
+              href="https://api.adaptabletools.com/interfaces/_api_actioncolumnapi_.actioncolumnapi.html"
               target="_blank"
             >
               Adaptable API

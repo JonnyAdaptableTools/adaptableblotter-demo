@@ -17,7 +17,7 @@ export default () => {
             You can change this by setting the <b>adaptableToolPanelTitle</b>{' '}
             property in{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_adaptableoptions_userinterfaceoptions_.userinterfaceoptions.html#adaptabletoolpaneltitle"
+              href="https://api.adaptabletools.com/interfaces/_adaptableoptions_userinterfaceoptions_.userinterfaceoptions.html#adaptabletoolpaneltitle"
               target="_blank"
             >
               UserInterfaceOptions
@@ -31,14 +31,14 @@ export default () => {
           <p>
             <b>AdapTable Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_toolpanelstate_.toolpanelstate.html"
+              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_toolpanelstate_.toolpanelstate.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_toolpanelapi_.toolpanelapi.html"
+              href="https://api.adaptabletools.com/interfaces/_api_toolpanelapi_.toolpanelapi.html"
               target="_blank"
             >
               Adaptable API

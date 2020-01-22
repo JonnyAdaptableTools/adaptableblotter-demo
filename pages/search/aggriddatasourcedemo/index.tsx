@@ -17,7 +17,7 @@ export default () => {
           <p>
             When a Data Source is selected, the{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_eventapi_.eventapi.html"
+              href="https://api.adaptabletools.com/interfaces/_api_eventapi_.eventapi.html"
               target="_blank"
             >
               on('SearchChanged') event
@@ -29,7 +29,7 @@ export default () => {
             This allows you to perform the necessary search on the server and
             return data to AdapTable via the
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_gridapi_.gridapi.html"
+              href="https://api.adaptabletools.com/interfaces/_api_gridapi_.gridapi.html"
               target="_blank"
             >
               Grid APi
@@ -46,14 +46,14 @@ export default () => {
           <p>
             <b>AdapTable Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_datasourcestate_.datasourcestate.html"
+              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_datasourcestate_.datasourcestate.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_datasourceapi_.datasourceapi.html"
+              href="https://api.adaptabletools.com/interfaces/_api_datasourceapi_.datasourceapi.html"
               target="_blank"
             >
               Adaptable API

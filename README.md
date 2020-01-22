@@ -8,7 +8,7 @@ It contains multiple demos each showing a different feature, function or option 
 
 AdapTable is a powerful HTML5 DataGrid add-on that integrates with the leading datagrid components and provides all the additional, rich functionality that financial and other advanced users expect from their grids, tables and blotters.
 
-It offers - out of the box - incredibly powerful searching, filtering, sorting, styling and editing functionality. It also provides unparalleled validation and audit functions, vital in the current regulatory and compliance environment.
+It offers - out of the box - incredibly powerful searching, filtering, sorting, styling and editing functionality. It also provides unparalleled validation and audit functions, vital in the current regulatory and compliance environment. Try it out for yourself at https://demo.adaptabletools.com.
 
 More grid components are being added all the time so contact us if you would like us to implement your favourite HTML5 grid control.
 
@@ -28,7 +28,7 @@ Please contact [`sales@adaptabletools.com`](mailto:sales@adaptabletools.com) for
 
 Further information about AdapTable is available at our [Website](www.adaptabletools.com) and our [Help Site](https://adaptabletools.zendesk.com/hc/en-us)
 
-Developers can learn how to access AdapTable programmatically at [AdapTable Developer Documentation](https://api.adaptableblotter.com) 
+Developers can learn how to access AdapTable programmatically at [AdapTable Developer Documentation](https://api.adaptableblotter.com)
 
 ## Support
 

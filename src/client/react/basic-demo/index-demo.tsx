@@ -1,7 +1,7 @@
 import React from 'react';
 
 // import Adaptable and types
-import AdaptableBlotterReact from '@adaptabletools/adaptable-react-aggrid';
+import AdaptableReact from '@adaptabletools/adaptable-react-aggrid';
 import { AdaptableOptions } from '@adaptabletools/adaptable-react-aggrid';
 
 // import Adaptable css and themes
@@ -37,7 +37,7 @@ const adaptableOptions: AdaptableOptions = {
 };
 
 export default () => (
-  <AdaptableBlotterReact
+  <AdaptableReact
     style={{ height: '100%' }}
     gridOptions={gridOptions}
     adaptableOptions={adaptableOptions}

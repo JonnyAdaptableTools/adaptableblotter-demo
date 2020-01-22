@@ -19,7 +19,7 @@ export default () => {
             allowed values for lookups or filtering. You do this through the{' '}
             <b>getColumnValues</b> property of{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_adaptableoptions_queryoptions_.queryoptions.html"
+              href="https://api.adaptabletools.com/interfaces/_adaptableoptions_queryoptions_.queryoptions.html"
               target="_blank"
             >
               Query Options
