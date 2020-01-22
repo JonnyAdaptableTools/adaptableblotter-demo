@@ -31,6 +31,9 @@ remote_repo="https://${GITHUB_ACTOR}:${INPUT_GITHUB_TOKEN}@github.com/${REPOSITO
 git config user.email "action@github.com"
 git config user.name "SHIP IT"
 
+rm -fr dist
+mv ../demo/dist .;
+
 git add -A
 git commit -m ${COMMIT_MESSAGE}
 
