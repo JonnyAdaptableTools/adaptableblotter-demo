@@ -48,9 +48,9 @@ jobs:
       #   env:
       #     CI: true
 
-      - name: list dist
-        run: ls dist
-        working-directory: demo
+      # - name: list dist
+      #   run: ls dist
+      #   working-directory: demo
 
       - run: mkdir demo/dist
       - run: mv demo/images demo/dist
