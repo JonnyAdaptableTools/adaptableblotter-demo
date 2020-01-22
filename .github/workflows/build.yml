@@ -66,6 +66,7 @@ jobs:
         run: mv demo/dist demo-dist
 
       - name: ls
+        run: ls
         working-directory: demo-dist
       # - name: push
       #   run: cd adaptable-demo-dist && git add dist && git commit -m "update" && git push origin master
