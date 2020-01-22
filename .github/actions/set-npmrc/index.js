@@ -1,11 +1,18 @@
 const core = require('@actions/core');
 const fs = require('fs');
+const { context } = require('@actions/github');
 
 async function run() {
   try {
     if (!process.env.NPM_TOKEN) {
       throw `Env variable NPM_TOKEN not defined!`;
     }
+
+    const { sha, payload } = context;
+    const message = payload.commits.map(commit => commit.message).join('. ');
+
+    core.exportVariable('COMMIT_MESSAGE', message);
+
     const contents = `@adaptabletools:registry=https://registry.adaptabletools.com
 //registry.adaptabletools.com/:_authToken=${process.env.NPM_TOKEN}
 package-lock=false`;
