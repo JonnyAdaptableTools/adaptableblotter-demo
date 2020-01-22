@@ -117,7 +117,7 @@ jobs:
     #     cmd_to_execute: $WILL_RELEASE_CMD
     # - run: git diff
     # - run: cat package.json
-    # - name: Push changes
+    # - name: Push changes #
     #   uses: "./.github/actions/git-push-action"
     #   with:
     #       branch: master
