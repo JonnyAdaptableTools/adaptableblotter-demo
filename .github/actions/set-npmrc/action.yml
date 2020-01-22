@@ -1,0 +1,5 @@
+name: 'set-npmrc'
+description: 'Setup .npmrc file'
+runs:
+  using: 'node12'
+  main: 'out/index.js'

@@ -1,0 +1,109 @@
+name: RELEASE
+
+on:
+  push:
+    branches:
+      - dev
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    env:
+      AG_GRID_LICENSE: ${{ secrets.AG_GRID_LICENSE }}
+      ALGOLIA_KEY: ${{ secrets.ALGOLIA_KEY }}
+      IPUSHPULL_USERNAME: ${{ secrets.IPUSHPULL_USERNAME }}
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      VALID_BLOTTER_LICENSE: ${{ secrets.VALID_BLOTTER_LICENSE }}
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - uses: './.github/actions/set-npmrc'
+
+      - name: Echo whoami
+        run: npm whoami --registry=https://registry.adaptabletools.com
+
+      - name: Set git config
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "BUILD IT"
+
+      - name: Executing npm install
+        run: npm i
+
+      - name: Building
+        run: npm run build
+        env:
+          CI: true
+
+      - name: list dist
+        run: ls dist
+    # - name: Building core
+    #   run: cd packages/adaptable && npm run build-prod-no-cleanup
+    # - name: Executing npm install in react
+    #   run: npm run install-react
+    #   env:
+    #     CI: true
+    # - name: Building react
+    #   run: cd packages/adaptable-react-aggrid && npm run build-prod-no-cleanup
+    # - name: Executing npm install in angular
+    #   run: npm run install-angular
+    #   env:
+    #     CI: true
+    # - name: Building angular
+    #   run: cd packages/adaptable-ng-aggrid && npm run build-prod-no-cleanup
+    # - name: Executing npm install in nocode
+    #   run: npm run install-nocode
+    #   env:
+    #     CI: true
+    # # - name: Building nocode
+    # #   run: cd packages/adaptable-nocode && npm run build-prod-no-cleanup
+    # - name: Executing npm install in plugins/charts
+    #   run: npm run install-plugins-charts
+    #   env:
+    #     CI: true
+    # - name: Building plugins-charts
+    #   run: cd packages/plugins/charts && npm run build-prod-no-cleanup
+    # - name: Executing npm install in plugins/finance
+    #   run: npm run install-plugins-finance
+    #   env:
+    #     CI: true
+    # - name: Building plugins-finance
+    #   run: cd packages/plugins/finance && npm run build-prod-no-cleanup
+    # - name: Ship it
+    #   uses: "./.github/actions/execute-cmd"
+    #   with:
+    #     cmd_to_execute: $WILL_RELEASE_CMD
+    # - run: git diff
+    # - run: cat package.json
+    # - name: Push changes
+    #   uses: "./.github/actions/git-push-action"
+    #   with:
+    #       branch: master
+    #       github_token: ${{ secrets.AB_DEPLOY_GITHUB_TOKEN }}
+    # - name: Send version to slack
+    #   uses: "./.github/actions/send-version-to-slack"
+    #   with:
+    #       slack_webhook_notify: ${{ secrets.SLACK_WEBHOOK_NOTIFY }}
+    #node scripts/registry-publish.js
+#     - name: Executing npm install in react
+#       run: npm install --prefix packages/adaptable-react-aggrid
+#       env:
+#         CI: true
+#     - name: tsc-react
+#       run: npm run --prefix packages/adaptable-react-aggrid tsc
+#     - name: Executing npm install in angular
+#       run: npm install --prefix packages/adaptable-ng-aggrid
+#       env:
+#         CI: true
+#     - name: tsc-angular
+#       run: npm run --prefix packages/adaptable-ng-aggrid link-core && npm run --prefix packages/adaptable-ng-aggrid tsc
+
