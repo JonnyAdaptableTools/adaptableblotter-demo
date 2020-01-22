@@ -19,7 +19,7 @@ jobs:
       VALID_BLOTTER_LICENSE: ${{ secrets.VALID_BLOTTER_LICENSE }}
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
@@ -46,6 +46,18 @@ jobs:
 
       - name: list dist
         run: ls dist
+
+      - name: checkout adaptable-demo-dist repo
+        uses: actions/checkout@v2
+        with:
+          repository: AdaptableTools/adaptable-demo-dist
+          path: adaptable-demo-dist
+
+      - name: move dist to adaptable-demo-dist
+        run: mv dist adaptable-demo-dist
+
+      - name: push
+        run: cd adaptable-demo-dist && git add dist && git commit -m "update" && git push origin master
     # - name: Building core
     #   run: cd packages/adaptable && npm run build-prod-no-cleanup
     # - name: Executing npm install in react
