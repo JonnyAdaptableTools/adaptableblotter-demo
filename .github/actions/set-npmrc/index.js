@@ -8,10 +8,12 @@ async function run() {
       throw `Env variable NPM_TOKEN not defined!`;
     }
 
-    const { sha, payload } = context;
+    const { payload } = context;
     const message = payload.commits.map(commit => commit.message).join('. ');
 
     core.exportVariable('COMMIT_MESSAGE', message);
+
+    console.log('comit message', message);
 
     const contents = `@adaptabletools:registry=https://registry.adaptabletools.com
 //registry.adaptabletools.com/:_authToken=${process.env.NPM_TOKEN}

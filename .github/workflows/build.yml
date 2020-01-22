@@ -34,9 +34,9 @@ jobs:
         run: npm whoami --registry=https://registry.adaptabletools.com
         working-directory: demo
 
-      - name: Executing npm install
-        run: npm i
-        working-directory: demo
+      # - name: Executing npm install
+      #   run: npm i
+      #   working-directory: demo
 
       # - name: Building
       #   run: npm run build
@@ -49,6 +49,9 @@ jobs:
 
       - run: mkdir demo/dist
       - run: mv demo/images demo/dist
+
+      - name: echo COMMIT_MESSAGE
+        run: echo ${COMMIT_MESSAGE}
 
       - name: checkout adaptable-demo-dist repo
         uses: actions/checkout@v2
