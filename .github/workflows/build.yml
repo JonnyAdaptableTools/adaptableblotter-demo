@@ -61,7 +61,6 @@ jobs:
         working-directory: demo
         env:
           CI: true
-
       - name: echo COMMIT_MESSAGE
         run: echo ${COMMIT_MESSAGE}
 
