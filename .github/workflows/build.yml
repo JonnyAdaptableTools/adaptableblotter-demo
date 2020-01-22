@@ -78,6 +78,8 @@ jobs:
 
       - uses: './demo/.github/actions/git-push-action'
         name: Push changes
+        env:
+          github_token: ${{ secrets.AB_DEPLOY_GITHUB_TOKEN }}
         with:
           github_token: ${{ secrets.AB_DEPLOY_GITHUB_TOKEN }}
           branch: master

@@ -25,7 +25,8 @@ cd ${INPUT_DIRECTORY}
 echo "ACTOR AND TOKEN - ${GITHUB_ACTOR}:${INPUT_GITHUB_TOKEN}";
 
 remote_repo="https://${GITHUB_ACTOR}:${INPUT_GITHUB_TOKEN}@github.com/${REPOSITORY}.git"
-
+git config user.name "Automated Publisher"
+git config user.email "actions@users.noreply.github.com"
 git remote add publisher "${remote_repo}"
 
 git checkout master;
