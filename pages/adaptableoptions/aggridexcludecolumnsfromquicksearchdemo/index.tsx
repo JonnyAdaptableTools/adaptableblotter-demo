@@ -19,7 +19,7 @@ export default () => {
             If you wish to exclude certain columns from being included, provide
             a <b>excludeColumnFromQuickSearch</b> function in{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_adaptableoptions_searchoptions_.searchoptions.html#excludecolumnfromquicksearch"
+              href="https://api.adaptabletools.com/interfaces/_adaptableoptions_searchoptions_.searchoptions.html#excludecolumnfromquicksearch"
               target="_blank"
             >
               Search Options
@@ -34,7 +34,7 @@ export default () => {
           <p>
             <b>AdapTable Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_adaptableoptions_searchoptions_.searchoptions.html"
+              href="https://api.adaptabletools.com/interfaces/_adaptableoptions_searchoptions_.searchoptions.html"
               target="_blank"
             >
               Adaptable Options

@@ -21,7 +21,7 @@ export default () => {
             <b>useAdaptableQuickFilter</b> and <b>useAdaptableFilterForm</b>{' '}
             properties in{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_adaptableoptions_filteroptions_.filteroptions.html"
+              href="https://api.adaptabletools.com/interfaces/_adaptableoptions_filteroptions_.filteroptions.html"
               target="_blank"
             >
               Filter Options
@@ -40,7 +40,7 @@ export default () => {
           <p>
             <b>AdapTable Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_adaptableoptions_filteroptions_.filteroptions.html"
+              href="https://api.adaptabletools.com/interfaces/_adaptableoptions_filteroptions_.filteroptions.html"
               target="_blank"
             >
               Adaptable Options

@@ -17,14 +17,14 @@ export default () => {
           <p>
             You can add your own{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_userinterfacestate_.usermenuitem.html"
+              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_userinterfacestate_.usermenuitem.html"
               target="_blank"
             >
               User Menu Item(s)
             </a>{' '}
             to the Context Menu - through{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_userinterfacestate_.userinterfacestate.html"
+              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_userinterfacestate_.userinterfacestate.html"
               target="_blank"
             >
               User Interface State
@@ -36,7 +36,7 @@ export default () => {
             You can also choose which - if any - of the shipped Menu Items are
             available via the <b>showAdaptableContextMenu</b> property of{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_adaptableoptions_userinterfaceoptions_.userinterfaceoptions.html#showadaptablecontextmenu"
+              href="https://api.adaptabletools.com/interfaces/_adaptableoptions_userinterfaceoptions_.userinterfaceoptions.html#showadaptablecontextmenu"
               target="_blank"
             >
               User Interface Options
@@ -48,14 +48,14 @@ export default () => {
           <p>
             The 2 arguments to the function are{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_common_menu_.adaptablemenuitem.html"
+              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_common_menu_.adaptablemenuitem.html"
               target="_blank"
             >
               Adaptable Menu Item
             </a>{' '}
             (the menu item to show) and{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_common_menu_.menuinfo.html"
+              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_common_menu_.menuinfo.html"
               target="_blank"
             >
               Menu Info
@@ -65,21 +65,21 @@ export default () => {
           <p>
             <b>AdapTable Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_userinterfacestate_.userinterfacestate.html"
+              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_userinterfacestate_.userinterfacestate.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_userinterfaceapi_.userinterfaceapi.html"
+              href="https://api.adaptabletools.com/interfaces/_api_userinterfaceapi_.userinterfaceapi.html"
               target="_blank"
             >
               Adaptable API
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_adaptableoptions_userinterfaceoptions_.userinterfaceoptions.html"
+              href="https://api.adaptabletools.com/interfaces/_adaptableoptions_userinterfaceoptions_.userinterfaceoptions.html"
               target="_blank"
             >
               User Interface Options

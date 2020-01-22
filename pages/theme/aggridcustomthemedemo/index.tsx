@@ -38,7 +38,7 @@ export default () => {
             We have also created a 'Blue Theme'. When this loads we leverage the{' '}
             <b>VendorGridClassName</b> of{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_themestate_.themestate.html"
+              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_themestate_.themestate.html"
               target="_blank"
             >
               Theme Predefined Config
@@ -49,14 +49,14 @@ export default () => {
           <p>
             <b>AdapTable Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_themestate_.themestate.html"
+              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_themestate_.themestate.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_themeapi_.themeapi.html"
+              href="https://api.adaptabletools.com/interfaces/_api_themeapi_.themeapi.html"
               target="_blank"
             >
               Adaptable API

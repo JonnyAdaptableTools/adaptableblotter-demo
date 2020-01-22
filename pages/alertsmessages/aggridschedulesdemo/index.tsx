@@ -33,21 +33,21 @@ export default () => {
           <p>
             <b>AdapTable Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_reminderstate_.reminderstate.html"
+              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_reminderstate_.reminderstate.html"
               target="_blank"
             >
               Predefined Config (Reminder)
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_exportstate_.exportstate.html"
+              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_exportstate_.exportstate.html"
               target="_blank"
             >
               Predefined Config (Export)
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_scheduleapi_.scheduleapi.html"
+              href="https://api.adaptabletools.com/interfaces/_api_scheduleapi_.scheduleapi.html"
               target="_blank"
             >
               Adaptable API

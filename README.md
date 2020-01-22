@@ -8,7 +8,7 @@ You can run AdapTable with a number of different dummy data sets.
 
 AdapTable is a powerful HTML5 DataGrid add-on that integrates with the leading datagrid components and provides all the additional, rich functionality that financial and other advanced users expect from their grids, tables and blotters.
 
-It offers - out of the box - incredibly powerful searching, filtering, sorting, styling and editing functionality. It also provides unparalleled validation and audit functions, vital in the current regulatory and compliance environment. Try it out for yourself at https://demo.adaptableblotter.com.
+It offers - out of the box - incredibly powerful searching, filtering, sorting, styling and editing functionality. It also provides unparalleled validation and audit functions, vital in the current regulatory and compliance environment. Try it out for yourself at https://demo.adaptabletools.com.
 
 More grid components are being added all the time so contact us if you would like us to implement your favourite HTML5 grid control.
 

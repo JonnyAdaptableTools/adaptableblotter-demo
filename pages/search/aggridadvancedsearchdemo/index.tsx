@@ -27,14 +27,14 @@ export default () => {
           <p>
             <b>AdapTable Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_advancedsearchstate_.advancedsearchstate.html"
+              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_advancedsearchstate_.advancedsearchstate.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_advancedsearchapi_.advancedsearchapi.html"
+              href="https://api.adaptabletools.com/interfaces/_api_advancedsearchapi_.advancedsearchapi.html"
               target="_blank"
             >
               Adaptable API

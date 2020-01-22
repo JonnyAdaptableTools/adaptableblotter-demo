@@ -32,14 +32,14 @@ export default () => {
           <p>
             <b>AdapTable Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/modules/_predefinedconfig_columnfilterstate_.html"
+              href="https://api.adaptabletools.com/modules/_predefinedconfig_columnfilterstate_.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_columnfilterapi_.columnfilterapi.html"
+              href="https://api.adaptabletools.com/interfaces/_api_columnfilterapi_.columnfilterapi.html"
               target="_blank"
             >
               Adaptable API

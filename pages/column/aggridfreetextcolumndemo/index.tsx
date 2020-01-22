@@ -27,14 +27,14 @@ export default () => {
           <p>
             <b>AdapTable Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_freetextcolumnstate_.freetextcolumnstate.html"
+              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_freetextcolumnstate_.freetextcolumnstate.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_freetextcolumnapi_.freetextcolumnapi.html"
+              href="https://api.adaptabletools.com/interfaces/_api_freetextcolumnapi_.freetextcolumnapi.html"
               target="_blank"
             >
               Adaptable API

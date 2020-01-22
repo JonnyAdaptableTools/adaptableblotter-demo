@@ -26,14 +26,14 @@ export default () => {
           <p>
             <b>AdapTable Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_bulkupdatestate_.bulkupdatestate.html"
+              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_bulkupdatestate_.bulkupdatestate.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_bulkupdateapi_.bulkupdateapi.html"
+              href="https://api.adaptabletools.com/interfaces/_api_bulkupdateapi_.bulkupdateapi.html"
               target="_blank"
             >
               Adaptable API

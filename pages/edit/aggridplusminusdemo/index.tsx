@@ -27,14 +27,14 @@ export default () => {
           <p>
             <b>AdapTable Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_plusminusstate_.plusminusstate.html"
+              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_plusminusstate_.plusminusstate.html"
               target="_blank"
             >
               Predefined Config
             </a>
             ,{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_api_plusminusapi_.plusminusapi.html"
+              href="https://api.adaptabletools.com/interfaces/_api_plusminusapi_.plusminusapi.html"
               target="_blank"
             >
               Adaptable API

@@ -26,7 +26,7 @@ export default () => {
           <p>
             <b>AdapTable Help Resources:</b>{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_reminderstate_.reminderstate.html"
+              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_reminderstate_.reminderstate.html"
               target="_blank"
             >
               Predefined Config
