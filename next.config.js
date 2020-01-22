@@ -5,6 +5,7 @@ const Dotenv = require('dotenv-webpack');
 
 const withCSS = require('@zeit/next-css');
 const withSass = require('@zeit/next-sass');
+// const withTypescript = require('@zeit/next-typescript');
 const withImages = require('next-images');
 const withFonts = require('next-fonts');
 const withPlugins = require('next-compose-plugins');
@@ -55,6 +56,7 @@ module.exports = withPlugins(
     //     transpileModules: ['igniteui-react-core', 'igniteui-react-charts'],
     //   },
     // ],
+    // [withTypescript],
   ],
   withApp
 );

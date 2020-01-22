@@ -1,7 +1,12 @@
 import { AdaptableOptions } from '@adaptabletools/adaptable/types';
 import { LicenseManager } from '@ag-grid-enterprise/all-modules';
 import { ITrade } from './Trade';
-import { ColDef, GridOptions, Module, GridReadyEvent } from '@ag-grid-community/all-modules';
+import {
+  ColDef,
+  GridOptions,
+  Module,
+  GridReadyEvent,
+} from '@ag-grid-community/all-modules';
 
 export class HelperAgGrid {
   private currencyFormatter = new Intl.NumberFormat('en-US', {
@@ -118,17 +123,21 @@ export class HelperAgGrid {
       },
       columnDefs: columndefs,
       rowData: data,
-      onGridReady: function({ columnApi, api }: GridReadyEvent) {
+      onGridReady: function(gridReady: GridReadyEvent) {
         //we do it twice as sometimes when the dataset is small columns that werent visible at all will become
         //visible and won't be autosized
-        columnApi!.autoSizeAllColumns();
-        setTimeout(() => columnApi!.autoSizeAllColumns(), 1);
+        if (!gridReady.columnApi) {
+          throw 'NO COLUMN API FOUND!';
+          return;
+        }
+        gridReady.columnApi!.autoSizeAllColumns();
+        setTimeout(() => gridReady.columnApi!.autoSizeAllColumns(), 1);
 
         if (closeSideBar) {
-          api!.closeToolPanel();
+          gridReady.api!.closeToolPanel();
         }
-        api!.addEventListener('newColumnsLoaded', function() {
-          columnApi!.autoSizeAllColumns();
+        gridReady.api!.addEventListener('newColumnsLoaded', function() {
+          gridReady.columnApi!.autoSizeAllColumns();
         });
       },
     };
