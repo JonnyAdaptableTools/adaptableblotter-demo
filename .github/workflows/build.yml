@@ -40,6 +40,7 @@ jobs:
 
       - name: Building
         run: npm run build
+        working-directory: demo
         env:
           CI: true
 
