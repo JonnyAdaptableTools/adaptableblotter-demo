@@ -1,6 +1,6 @@
 import { PredefinedConfig } from '@adaptabletools/adaptable/types';
 
-export default {
+export default ({
   Dashboard: {
     VisibleToolbars: ['SmartEdit', 'Export', 'Chart'],
   },
@@ -125,4 +125,4 @@ export default {
       },
     ],
   },
-} as PredefinedConfig;
+} as any) as PredefinedConfig;

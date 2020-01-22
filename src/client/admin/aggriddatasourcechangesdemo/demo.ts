@@ -45,7 +45,7 @@ export default () => {
   };
 
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  const adaptableApi = Adaptable.init(adaptableOptions);
+  Adaptable.init(adaptableOptions);
 
   // turn on mimicing adding rows
   tickingDataHelper.startTickingDataagGridAddRow(

@@ -41,15 +41,9 @@ export default () => {
     predefinedConfig: predefinedConfig,
   };
 
-  const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  const adaptableApi = Adaptable.init(adaptableOptions);
-
-  return {
-    predefinedConfig,
-    adaptableOptions: adaptableOptionsClone,
-  };
-
-  function getValuesForColumn(columnName: string): IServerColumnValues {
+  function getValuesForColumn(
+    columnName: string
+  ): IServerColumnValues | undefined {
     let vals;
 
     if (columnName === 'country') {
@@ -64,4 +58,12 @@ export default () => {
       ColumnValues: vals,
     };
   }
+
+  const adaptableOptionsClone = cloneDeep(adaptableOptions);
+  Adaptable.init(adaptableOptions);
+
+  return {
+    predefinedConfig,
+    adaptableOptions: adaptableOptionsClone,
+  };
 };

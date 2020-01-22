@@ -21,19 +21,18 @@ export default () => {
   const trades = helperAgGrid.getTrades(500);
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, trades);
-  gridOptions.modules = AllEnterpriseModules;
 
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'tradeId',
     userName: 'Demo User',
     adaptableId: 'Sparkline Columns Demo',
-    vendorGrid: gridOptions,
+    vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
     predefinedConfig: predefinedConfig,
     plugins: [charts()],
   };
 
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  const adaptableApi = Adaptable.init(adaptableOptions);
+  Adaptable.init(adaptableOptions);
 
   return {
     predefinedConfig,

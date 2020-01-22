@@ -22,19 +22,18 @@ export default () => {
   const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
-  gridOptions.modules = AllEnterpriseModules;
 
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Visibility Demo',
 
-    vendorGrid: gridOptions,
+    vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
     predefinedConfig: predefinedConfig,
   };
 
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  const adaptableApi = Adaptable.init(adaptableOptions);
+  Adaptable.init(adaptableOptions);
 
   return {
     predefinedConfig,

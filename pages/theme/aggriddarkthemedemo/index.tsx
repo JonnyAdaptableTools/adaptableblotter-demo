@@ -29,7 +29,7 @@ export default () => {
             ; we created the Dark Theme just by setting a few properties (mainly
             colours). You can see the css code{' '}
             <a
-              href="https://github.com/AdaptableTools/adaptableblotter/blob/master/packages/adaptableblotter/App_Scripts/themes/dark.scss"
+              href="https://github.com/AdaptableTools/adaptableblotter/blob/master/packages/adaptableblotter/src/themes/dark.scss"
               target="_blank"
             >
               here

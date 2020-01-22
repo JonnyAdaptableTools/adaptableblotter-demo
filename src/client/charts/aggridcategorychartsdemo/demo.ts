@@ -25,7 +25,6 @@ export default () => {
   const columndefs = helperAgGrid.getWorldStatsSchema();
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
-  gridOptions.modules = AllEnterpriseModules;
 
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'Country',
@@ -36,13 +35,13 @@ export default () => {
       showModal: false,
       pieChartMaxItems: 50,
     },
-    vendorGrid: gridOptions,
+    vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
     predefinedConfig: predefinedConfig,
     plugins: [charts()],
   };
 
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  const adaptableApi = Adaptable.init(adaptableOptions);
+  Adaptable.init(adaptableOptions);
 
   return {
     predefinedConfig,

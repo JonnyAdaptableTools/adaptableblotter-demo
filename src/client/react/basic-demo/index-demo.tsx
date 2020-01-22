@@ -22,7 +22,7 @@ import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 
 const helperAgGrid = new HelperAgGrid();
 helperAgGrid.setUpAgGridLicence();
-Helper.MakeAllRecordsColumnsDateProperDates(json);
+// Helper.MakeAllRecordsColumnsDateProperDates(json);
 
 LicenseManager.setLicenseKey(process.env.AG_GRID_LICENSE as string);
 
@@ -40,6 +40,6 @@ export default () => (
   <AdaptableBlotterReact
     style={{ height: '100%' }}
     gridOptions={gridOptions}
-    blotterOptions={adaptableOptions}
+    adaptableOptions={adaptableOptions}
   />
 );

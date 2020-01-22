@@ -3,7 +3,7 @@ import { withRouter } from 'next/router';
 import ArrowDown from './arrow-down';
 import ArrowRight from './arrow-right';
 
-const preventDefault = e => e.preventDefault();
+const preventDefault = (e: any) => e.preventDefault();
 
 const store = (global as any).localStorage || {
   getItem: () => {},

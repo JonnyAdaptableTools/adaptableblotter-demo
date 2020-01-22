@@ -23,7 +23,6 @@ export default () => {
   const trades = helperAgGrid.getTrades(300);
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, trades);
-  gridOptions.modules = AllEnterpriseModules;
 
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'tradeId',
@@ -34,13 +33,13 @@ export default () => {
       showModal: false,
       pieChartMaxItems: 50,
     },
-    vendorGrid: gridOptions,
+    vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
     predefinedConfig: predefinedConfig,
     plugins: [charts()],
   };
 
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  const adaptableApi = Adaptable.init(adaptableOptions);
+  Adaptable.init(adaptableOptions);
 
   return {
     predefinedConfig,

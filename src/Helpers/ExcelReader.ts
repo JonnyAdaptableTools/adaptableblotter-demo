@@ -36,7 +36,7 @@ export class ExcelReader {
     var colNamesLength = colNames.length;
 
     for (var i = 1; i < dataRowCount; i++) {
-      var returnData = {};
+      var returnData: any = {};
 
       for (var x = 0; x < colNamesLength; x++) {
         let currentColKey = colKeys[x];

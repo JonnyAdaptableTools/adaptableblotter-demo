@@ -8,7 +8,7 @@ export default {
         Scope: {
           ColumnIds: ['OrderId'],
         },
-        FilterPredicate: (_record, _columnId, cellValue) => {
+        FilterPredicate: (_record, _columnId) => {
           let invoiced: number = _record.data.InvoicedCost;
           let itemCount: number = _record.data.ItemCount;
           return invoiced > 1000 && itemCount > 10 ? true : false;

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import NextLink from 'next/link';
 
 import { withRouter } from 'next/router';

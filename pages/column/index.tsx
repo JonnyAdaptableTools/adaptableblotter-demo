@@ -1,19 +1,20 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import MainPage from '../../src/MainPage';
 import Link from 'next/link';
-import { ReactNode } from 'react-redux';
 
 import './index.scss';
 import GridLayout from '../../src/components/GridLayout';
 import { getDemoPageStructure, DemoPage } from '../../DemoList/demolist';
-import logo from '../../images/Adaptable.png';
 
 const DemoBox = ({ href, children }: { href: string; children: ReactNode }) => {
   return (
     <Link href={href}>
       <a>
         <div className="demo-box">
-          <img src={logo} style={{ maxWidth: '80%', marginBottom: '5%' }} />
+          <img
+            src={'/images/Adaptable.png'}
+            style={{ maxWidth: '80%', marginBottom: '5%' }}
+          />
           <div>{children}</div>
         </div>
       </a>

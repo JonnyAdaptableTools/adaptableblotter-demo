@@ -25,7 +25,6 @@ export default () => {
   const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
-  gridOptions.modules = AllEnterpriseModules;
 
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
@@ -33,7 +32,7 @@ export default () => {
     adaptableId: 'Server Validation Demo',
     editOptions: {
       validateOnServer: (dataChangedInfo: DataChangedInfo) => {
-        return new Promise((resolve, reject) => {
+        return new Promise(resolve => {
           setTimeout(
             () => resolve(getServerEditResponse(dataChangedInfo)),
             500
@@ -41,7 +40,7 @@ export default () => {
         });
       },
     },
-    vendorGrid: gridOptions,
+    vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
     predefinedConfig: predefinedConfig,
   };
 
@@ -70,7 +69,7 @@ export default () => {
   }
 
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  const adaptableApi = Adaptable.init(adaptableOptions);
+  Adaptable.init(adaptableOptions);
 
   return {
     predefinedConfig,

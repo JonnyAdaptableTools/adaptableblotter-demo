@@ -5,7 +5,6 @@ const Dotenv = require('dotenv-webpack');
 
 const withCSS = require('@zeit/next-css');
 const withSass = require('@zeit/next-sass');
-const withTypescript = require('@zeit/next-typescript');
 const withImages = require('next-images');
 const withFonts = require('next-fonts');
 const withPlugins = require('next-compose-plugins');
@@ -26,7 +25,9 @@ const withApp = Object.assign({
     ];
 
     // needed in order to avoid 2 copies of react being included, which makes hooks not work
-    config.resolve = config.resolve || {};
+    config.resolve = {
+      ...config.resolve,
+    };
     config.resolve.alias = config.resolve.alias || {};
     config.resolve.alias.react = path.resolve('./node_modules/react');
     config.resolve.alias['react-dom'] = path.resolve(
@@ -54,7 +55,6 @@ module.exports = withPlugins(
     //     transpileModules: ['igniteui-react-core', 'igniteui-react-charts'],
     //   },
     // ],
-    [withTypescript],
   ],
   withApp
 );

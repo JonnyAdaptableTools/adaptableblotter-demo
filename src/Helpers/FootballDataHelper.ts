@@ -1,4 +1,4 @@
-import { ColDef, GridOptions } from '@ag-grid-community/all-modules';
+import { ColDef, GridOptions, Module } from '@ag-grid-community/all-modules';
 
 export interface IFootballTeam {
   name: string;
@@ -17,7 +17,7 @@ export interface IFootballPlayer {
 }
 
 export class FootballDataHelper {
-  public getMasterGridOptionsFootball(): GridOptions {
+  public getMasterGridOptionsFootball(): GridOptions & { modules?: Module[] } {
     return {
       columnDefs: this.getMasterFootballSchema(),
       rowData: this.getFootballData(),

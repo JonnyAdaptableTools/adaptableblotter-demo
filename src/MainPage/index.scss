@@ -1,3 +1,43 @@
+$bp0: 40rem;
+$bp1: 52rem;
+$bp2: 64rem;
+
+:root {
+  --ab-breakpoint-0: #{$bp0};
+  --ab-breakpoint-1: #{$bp1};
+  --ab-breakpoint-2: #{$bp2};
+
+  --ab-max-content-size: 70rem;
+  --ab-link_color: rgb(18, 127, 196);
+  --ab-link_text-decoration: underline;
+
+  --ab-space-0: 0px;
+  --ab-space-1: 0.25rem;
+  --ab-space-2: 0.5rem;
+  --ab-space-3: 1rem;
+  --ab-space-4: 2rem;
+  --ab-space-5: 4rem;
+  --ab-space-55: 6rem;
+  --ab-space-6: 8rem;
+  --ab-space-7: 16rem;
+
+  --ab-font-size-0: 0.5rem; //8px for 1rem=16px
+  --ab-font-size-1: 0.625rem; //10px for 1rem=16px
+  --ab-font-size-2: 0.75rem; //12px for 1rem=16px
+  --ab-font-size-3: 0.875rem; //14px for 1rem=16px
+  --ab-font-size-4: 1rem;
+  --ab-font-size-5: 1.25rem; //20px for 1rem=16px
+  --ab-font-size-6: 1.5rem; //24px for 1rem=16px
+  --ab-font-size-7: 2.25rem; //36px for 1rem=16px
+  --ab-font-size-8: 3rem; //36px for 1rem=16px
+
+  --ab-color-blue-opaque: rgba(10, 111, 159); //rgba(18, 127, 196, 0.97);
+  --ab-color-blue: rgba(10, 111, 159, 0.95); //rgba(18, 127, 196, 0.97);
+  --ab-color-text: #333;
+  --ab-color-footer-bg: #637b9b;
+  --ab-color-washedblue: rgb(239, 239, 244);
+}
+
 html,
 body,
 #__next {

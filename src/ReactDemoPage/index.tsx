@@ -1,8 +1,6 @@
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
 
-import logo from '../../images/Adaptable.png';
-
 import './index.css';
 
 type TypeProps = {
@@ -18,7 +16,7 @@ export default ({ pageTitle, children, description }: TypeProps) => {
         <title>{pageTitle}</title>
       </Head>
       <nav style={{ marginBottom: 0, display: 'flex', flexFlow: 'row' }}>
-        <img src={logo} height="50" />
+        <img src={'/images/Adaptable.png'} height="50" />
 
         {description}
       </nav>

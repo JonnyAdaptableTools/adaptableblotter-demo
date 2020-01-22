@@ -7,13 +7,15 @@ import { cloneDeep } from 'lodash';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import '../../../../DemoPage/aggriddemo.css';
 
-import { AdaptableOptions } from '@adaptabletools/adaptable/types';
+import {
+  AdaptableOptions,
+  SelectionChangedEventArgs,
+} from '@adaptabletools/adaptable/types';
 
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import predefinedConfig from './config';
 import { GridOptions, ColDef } from '@ag-grid-community/all-modules';
-import { SelectionChangedEventArgs } from '@adaptabletools/adaptable/App_Scripts/Api/Events/BlotterEvents';
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
@@ -50,11 +52,7 @@ export default () => {
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
   const adaptableApi = Adaptable.init(adaptableOptions);
 
-  adaptableApi.eventApi
-    .onSelectionChanged()
-    .Subscribe((sender, selectedChangedArgs) =>
-      listenToSelectedChange(selectedChangedArgs)
-    );
+  adaptableApi.eventApi.on('SelectionChanged', listenToSelectedChange);
 
   return {
     predefinedConfig,

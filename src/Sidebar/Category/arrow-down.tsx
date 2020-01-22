@@ -1,5 +1,10 @@
-import React from 'react';
-export default ({ size = 24, ...props }: { size?: number }) => (
+import React, { HTMLAttributes } from 'react';
+export default ({
+  size = 24,
+  ...props
+}: {
+  size?: number;
+} & HTMLAttributes<SVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}

@@ -24,7 +24,6 @@ export default () => {
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
   gridOptions.floatingFilter = true;
   gridOptions.singleClickEdit = true;
-  gridOptions.modules = AllEnterpriseModules;
 
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
@@ -36,12 +35,12 @@ export default () => {
       //  columnValuesOnlyInQueries: true,
     },
 
-    vendorGrid: gridOptions,
+    vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
     predefinedConfig: predefinedConfig,
   };
 
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  const adaptableApi = Adaptable.init(adaptableOptions);
+  Adaptable.init(adaptableOptions);
 
   return {
     predefinedConfig,

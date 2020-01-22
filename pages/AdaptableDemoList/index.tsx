@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import MainPage from '../../src/MainPage';
 import Link from 'next/link';
-import { ReactNode } from 'react-redux';
 
 import './index.scss';
 import {

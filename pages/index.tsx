@@ -1,8 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import PACKAGE from '../package.json';
-
-import '@adaptabletools/adaptable/index.css';
 
 import MainPage from '../src/MainPage';
 

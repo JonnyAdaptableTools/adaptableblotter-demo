@@ -22,7 +22,7 @@ export default () => {
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, trades);
   gridOptions.floatingFilter = true;
-  gridOptions.modules = AllEnterpriseModules;
+
   gridOptions.statusBar = {
     statusPanels: [
       { statusPanel: 'agTotalRowCountComponent', align: 'left' },
@@ -35,12 +35,12 @@ export default () => {
     userName: 'Demo User',
     adaptableId: 'Quick Filter  Demo',
 
-    vendorGrid: gridOptions,
+    vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
     predefinedConfig: predefinedConfig,
   };
 
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  const adaptableApi = Adaptable.init(adaptableOptions);
+  Adaptable.init(adaptableOptions);
 
   return {
     predefinedConfig,

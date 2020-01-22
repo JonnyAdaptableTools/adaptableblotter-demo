@@ -1,7 +1,7 @@
 import React, { ReactNode, useEffect } from 'react';
 import Head from 'next/head';
 
-import './index.css';
+import './index.scss';
 import Sidebar from '../Sidebar';
 
 export type MainPageProps = {
@@ -18,12 +18,14 @@ export default ({
   description,
 }: MainPageProps) => {
   useEffect(() => {
-    (window as any).docsearch({
-      apiKey: process.env.ALGOLIA_KEY,
-      indexName: 'adaptableblotter',
-      inputSelector: '#searchInput',
-      debug: true, // Set debug to true if you want to inspect the dropdown
-    });
+    if (process.env.ALGOLIA_KEY) {
+      (window as any).docsearch({
+        apiKey: process.env.ALGOLIA_KEY,
+        indexName: 'adaptableblotter',
+        inputSelector: '#searchInput',
+        debug: true, // Set debug to true if you want to inspect the dropdown
+      });
+    }
   });
 
   return (

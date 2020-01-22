@@ -1,7 +1,7 @@
 import { AdaptableOptions } from '@adaptabletools/adaptable/types';
 import { LicenseManager } from '@ag-grid-enterprise/all-modules';
 import { ITrade } from './Trade';
-import { ColDef, GridOptions } from '@ag-grid-community/all-modules';
+import { ColDef, GridOptions, Module } from '@ag-grid-community/all-modules';
 
 export class HelperAgGrid {
   private currencyFormatter = new Intl.NumberFormat('en-US', {
@@ -98,7 +98,7 @@ export class HelperAgGrid {
     columndefs: any,
     data: any,
     closeSideBar: boolean = true
-  ): GridOptions {
+  ): GridOptions & { modules?: Module[] } {
     let gridOptions: GridOptions = {
       animateRows: true,
       enableRangeSelection: true,
@@ -947,7 +947,7 @@ export class HelperAgGrid {
     };
   }
   private getOrderDateDef(): ColDef {
-    return {
+    return ({
       headerName: 'Order Date',
       field: 'OrderDate',
       editable: true,
@@ -958,10 +958,10 @@ export class HelperAgGrid {
       filter: true,
       sortable: true,
       type: 'abColDefDate',
-    };
+    } as any) as ColDef;
   }
   private getInvoicedDef(): ColDef {
-    return {
+    return ({
       headerName: 'Invoiced',
       field: 'InvoicedCost',
       cellClass: 'number-cell',
@@ -970,10 +970,10 @@ export class HelperAgGrid {
       filter: true,
       sortable: true,
       type: 'abColDefNumber',
-    };
+    } as any) as ColDef;
   }
   private getOrderCostDef(): ColDef {
-    return {
+    return ({
       headerName: 'Order Cost',
       field: 'OrderCost',
       cellClass: 'number-cell',
@@ -982,7 +982,7 @@ export class HelperAgGrid {
       filter: true,
       sortable: true,
       type: 'abColDefNumber',
-    };
+    } as any) as ColDef;
   }
   private getPackageCostDef(): any {
     return {
@@ -1349,7 +1349,7 @@ export class HelperAgGrid {
     let tradeCurrency = currency
       ? currency
       : this.getRandomItem(this.getCurrencies());
-    var trade = {
+    var trade: ITrade = {
       tradeId: i,
       history: [...new Array(this.generateRandomInt(5, 20))].map(_ =>
         this.generateRandomInt(1, 30)
@@ -1376,7 +1376,7 @@ export class HelperAgGrid {
       indicativeBid: this.roundTo4Dp(bid - 0.02),
       markitAsk: this.roundTo4Dp(ask + 0.03),
       markitBid: this.roundTo4Dp(bid - 0.03),
-      percentChange: this.generateRandomNullableDouble(),
+      percentChange: this.generateRandomNullableDouble() as number,
       lastUpdated: this.generateRandomDateAndTime(-7, 0),
       lastUpdatedBy: this.getRandomItem(this.getNames()),
     };
@@ -1419,7 +1419,9 @@ export class HelperAgGrid {
     return trades;
   }
 
-  protected generateRandomNullableString(myString: string): string {
+  protected generateRandomNullableString(
+    myString: string | null
+  ): string | null {
     var randomInt = this.generateRandomInt(1, 10);
     if (randomInt > 7) {
       myString = null;
@@ -1489,7 +1491,9 @@ export class HelperAgGrid {
 
   protected generateCounterparty(): string {
     var counterparties = this.getCounterparties();
-    return counterparties[this.generateRandomInt(0, counterparties.length - 1)];
+    return (counterparties[
+      this.generateRandomInt(0, counterparties.length - 1)
+    ] as any) as string;
   }
 
   protected generateCurrency(): string {
@@ -1644,6 +1648,7 @@ export class HelperAgGrid {
       case 'NR':
         return 'NR';
     }
+    return '';
   }
 
   protected getNames(): string[] {
@@ -1689,8 +1694,8 @@ export class HelperAgGrid {
     return Math.random();
   }
 
-  protected generateRandomNullableDouble(): number {
-    var myValue = this.generateRandomDouble();
+  protected generateRandomNullableDouble(): number | null {
+    var myValue: number | null = this.generateRandomDouble();
     var randomInt = this.generateRandomInt(1, 10);
     if (randomInt > 7) {
       myValue = null;
@@ -1706,7 +1711,7 @@ export class HelperAgGrid {
   private fourDecimalPlaceFormatter = (params: any) => {
     return params.value ? this.roundTo4Dp(params.value) : null;
   };
-  private twoDecimalPlaceFormatter = (params: any) => {
-    return params.value ? this.roundTo2Dp(params.value) : null;
-  };
+  // private twoDecimalPlaceFormatter = (params: any) => {
+  //   return params.value ? this.roundTo2Dp(params.value) : null;
+  // };
 }

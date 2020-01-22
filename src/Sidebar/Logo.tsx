@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import logo from '../../images/Adaptable.png';
 
 export default () => (
   <div style={{ position: 'relative', paddingBottom: 90, background: 'white' }}>
@@ -15,7 +14,7 @@ export default () => (
         }}
       >
         <img
-          src={logo}
+          src={'/images/Adaptable.png'}
           style={{
             padding: 0,
             maxWidth: '90%',
