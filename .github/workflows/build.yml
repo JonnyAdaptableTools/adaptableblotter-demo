@@ -29,7 +29,8 @@ jobs:
         with:
           path: demo
 
-      - uses: './demo/.github/actions/set-npmrc'
+      - name: setup .npmrc
+        uses: './demo/.github/actions/set-npmrc'
         working-directory: demo
 
       - name: Echo whoami
