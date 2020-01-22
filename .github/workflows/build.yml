@@ -53,11 +53,11 @@ jobs:
       - name: echo COMMIT_MESSAGE
         run: echo ${COMMIT_MESSAGE}
 
-      - name: checkout adaptable-demo-dist repo
-        uses: actions/checkout@v2
-        with:
-          repository: AdaptableTools/adaptable-demo-dist
-          path: demo-dist
+      # - name: checkout adaptable-demo-dist repo
+      #   uses: actions/checkout@v2
+      #   with:
+      #     repository: AdaptableTools/adaptable-demo-dist
+      #     path: demo-dist
 
       # - name: move dist to demo-dist
       #   run: mv demo/dist demo-dist
@@ -83,7 +83,7 @@ jobs:
         with:
           github_token: ${{ secrets.AB_DEPLOY_GITHUB_TOKEN }}
           branch: master
-          directory: demo-dist
+          # directory: demo-dist
           repository: AdaptableTools/adaptable-demo-dist
     # - name: Building core
     #   run: cd packages/adaptable && npm run build-prod-no-cleanup #
