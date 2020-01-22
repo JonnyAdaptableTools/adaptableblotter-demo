@@ -1,6 +1,6 @@
 # adaptable-demo
 
-Repository for a demo that showcases AdapTable, the powerful, data-agnostic tool.
+Repository for the demo site that showcases AdapTable, the powerful, data-agnostic tool.
 
 You can run AdapTable with a number of different dummy data sets.
 
