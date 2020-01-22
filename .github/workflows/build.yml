@@ -75,7 +75,6 @@ jobs:
       - uses: './demo/.github/actions/git-push-action'
         name: Push changes
         working-directory: demo-dist
-
         with:
           github_token: ${{ secrets.AB_DEPLOY_GITHUB_TOKEN }}
           branch: master
