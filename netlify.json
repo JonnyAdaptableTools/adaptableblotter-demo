@@ -4,10 +4,5 @@
       "onBuild": "npm run build"
     },
     "publish": "dist"
-  },
-  "plugins": [
-    {
-      "package": "./plugins/next-cache"
-    }
-  ]
+  }
 }
