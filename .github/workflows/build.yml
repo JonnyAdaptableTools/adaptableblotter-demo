@@ -24,27 +24,25 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - run: pwd
-      - run: ls
-
       - uses: actions/checkout@v2
         with:
           path: demo
 
-      - run: pwd && ls && cd demo && pwd && ls
-
       - uses: './.github/actions/set-npmrc'
+        working-directory: demo
 
       - name: Echo whoami
         run: npm whoami --registry=https://registry.adaptabletools.com
+        working-directory: demo
 
-      - name: Set git config
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "BUILD IT"
+      # - name: Set git config
+      #   run: |
+      #     git config --local user.email "action@github.com"
+      #     git config --local user.name "BUILD IT"
 
       - name: Executing npm install
         run: npm i
+        working-directory: demo
 
       # - name: Building
       #   run: npm run build
@@ -53,23 +51,24 @@ jobs:
 
       - name: list dist
         run: ls dist
+        working-directory: demo
 
-      - run: cd ..
-
-      - run: mkdir adaptable-demo/dist
-      - run: mv adaptable-demo/images adaptable-demo/dist
+      - run: mkdir demo/dist
+      - run: mv demo/images demo/dist
 
       - name: checkout adaptable-demo-dist repo
         uses: actions/checkout@v2
         with:
           repository: AdaptableTools/adaptable-demo-dist
-          path: adaptable-demo-dist
+          path: demo-dist
 
-      - name: move dist to adaptable-demo-dist
-        run: mv adaptable-demo/dist adaptable-demo-dist
+      - name: move dist to demo-dist
+        run: mv demo/dist demo-dist
 
-      - name: push
-        run: cd adaptable-demo-dist && git add dist && git commit -m "update" && git push origin master
+      - name: ls
+        working-directory: demo-dist
+      # - name: push
+      #   run: cd adaptable-demo-dist && git add dist && git commit -m "update" && git push origin master
     # - name: Building core
     #   run: cd packages/adaptable && npm run build-prod-no-cleanup
     # - name: Executing npm install in react
