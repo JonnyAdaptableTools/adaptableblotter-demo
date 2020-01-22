@@ -27,8 +27,8 @@ cd ${INPUT_DIRECTORY}
 
 remote_repo="https://${GITHUB_ACTOR}:${INPUT_GITHUB_TOKEN}@github.com/${REPOSITORY}.git"
 
-git clone --depth 1 "${remote_repo}" demo-dist
-cd demo-dist
+# git clone --depth 1 "${remote_repo}" demo-dist
+# cd demo-dist
 echo "ACTOR AND TOKEN - ${GITHUB_ACTOR}:${INPUT_GITHUB_TOKEN}:${REPOSITORY}";
 git config user.name "Automated Publisher"
 git config user.email "actions@users.noreply.github.com"
