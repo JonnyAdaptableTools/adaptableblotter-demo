@@ -24,13 +24,16 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - run: pwd
+      - run: ls
+
       - uses: actions/checkout@v2
         with:
-          path: adaptable-demo
+          path: demo
 
       - run: pwd
       - run: ls
-      - run: cd adaptable-demo
+      - run: cd demo
       - run: pwd
       - run: ls
 
