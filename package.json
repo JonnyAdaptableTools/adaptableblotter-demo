@@ -1,6 +1,6 @@
 {
   "name": "adaptableblotter-demo",
-  "version": "6.0.0",
+  "version": "6.0.3",
   "description": "Demo",
   "main": "index.js",
   "dependencies": {
@@ -61,7 +61,7 @@
     "openfin": "openfin -l -c app-dev.json",
     "dev": "next",
     "next": "next",
-    "build": "NODE_OPTIONS='--max-old-space-size=4096' next build && NODE_OPTIONS='--max-old-space-size=4096' next export -o dist && cp _headers dist && cp app-demo.json dist && cp -R ExtLibs dist && cp _redirects dist  && cp .npmrc dist"
+    "build": "NODE_OPTIONS='--max-old-space-size=4096' next build && NODE_OPTIONS='--max-old-space-size=4096' next export -o dist && cp _headers dist && cp app-demo.json dist && cp -R ExtLibs dist && cp _redirects dist"
   },
   "repository": {
     "type": "git",
