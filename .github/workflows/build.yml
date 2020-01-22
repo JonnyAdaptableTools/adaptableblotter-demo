@@ -63,7 +63,7 @@ jobs:
         run: mv demo/dist demo-dist
 
       - name: ls
-        run: ls && ls dist
+        run: ls && ls dist && ls dist/images
         working-directory: demo-dist
 
       - name: Set git config
