@@ -34,11 +34,6 @@ jobs:
         run: npm whoami --registry=https://registry.adaptabletools.com
         working-directory: demo
 
-      # - name: Set git config
-      #   run: |
-      #     git config --local user.email "action@github.com"
-      #     git config --local user.name "BUILD IT"
-
       - name: Executing npm install
         run: npm i
         working-directory: demo
@@ -67,8 +62,15 @@ jobs:
       - name: ls
         run: ls
         working-directory: demo-dist
-      # - name: push
-      #   run: cd adaptable-demo-dist && git add dist && git commit -m "update" && git push origin master
+
+      - name: Set git config
+        working-directory: demo-dist
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "BUILD IT"
+      - name: push
+        working-directory: demo-dist
+        run: git add dist && git commit -m "update" && git push origin master
     # - name: Building core
     #   run: cd packages/adaptable && npm run build-prod-no-cleanup
     # - name: Executing npm install in react
