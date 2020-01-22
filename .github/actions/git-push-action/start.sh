@@ -27,4 +27,9 @@ echo "ACTOR AND TOKEN - ${GITHUB_ACTOR}:${INPUT_GITHUB_TOKEN}";
 
 remote_repo="https://${GITHUB_ACTOR}:${INPUT_GITHUB_TOKEN}@github.com/${REPOSITORY}.git"
 
-git push "${remote_repo}" HEAD:${INPUT_BRANCH} --follow-tags $_FORCE_OPTION;
+
+git log;
+git status;
+# git remote add publisher "${remote_repo}"
+
+git push origin master;

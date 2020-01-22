@@ -69,8 +69,8 @@ jobs:
       - name: Set git config
         working-directory: demo-dist
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "BUILD IT"
+          git config user.email "action@github.com"
+          git config user.name "BUILD IT"
 
       - name: push
         working-directory: demo-dist
