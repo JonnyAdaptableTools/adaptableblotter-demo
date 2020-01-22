@@ -41,3 +41,4 @@ git status;
 # git remote add publisher "${remote_repo}"
 
 git push publisher master;
+# git push "${remote_repo}" HEAD:${INPUT_BRANCH} --follow-tags $_FORCE_OPTION;
