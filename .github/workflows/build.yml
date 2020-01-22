@@ -83,7 +83,7 @@ jobs:
           directory: demo-dist
           repository: AdaptableTools/adaptable-demo-dist
     # - name: Building core
-    #   run: cd packages/adaptable && npm run build-prod-no-cleanup
+    #   run: cd packages/adaptable && npm run build-prod-no-cleanup #
     # - name: Executing npm install in react
     #   run: npm run install-react
     #   env:
