@@ -34,21 +34,14 @@ jobs:
         run: npm whoami --registry=https://registry.adaptabletools.com
         working-directory: demo
 
-      # - name: Executing npm install
-      #   run: npm i
-      #   working-directory: demo
+      - name: Executing npm install
+        run: npm i
+        working-directory: demo
 
-      # - name: Building
-      #   run: npm run build
-      #   env:
-      #     CI: true
-
-      # - name: list dist
-      #   run: ls dist
-      #   working-directory: demo
-
-      - run: mkdir demo/dist
-      - run: mv demo/images demo/dist
+      - name: Building
+        run: npm run build
+        env:
+          CI: true
 
       - name: echo COMMIT_MESSAGE
         run: echo ${COMMIT_MESSAGE}
@@ -60,8 +53,8 @@ jobs:
           repository: AdaptableTools/adaptable-demo-dist
           path: demo-dist
 
-      # - name: move dist to demo-dist
-      #   run: mv demo/dist demo-dist
+      - name: move dist to demo-dist
+        run: rm -fr demo-dist/dist && mv demo/dist demo-dist
 
       # - name: ls
       #   run: ls && ls dist && ls dist/images
@@ -84,6 +77,7 @@ jobs:
           branch: master
           directory: demo-dist
           repository: AdaptableTools/adaptable-demo-dist
+          commit_message: ${COMMIT_MESSAGE}
     # - name: Building core
     #   run: cd packages/adaptable && npm run build-prod-no-cleanup #
     # - name: Executing npm install in react
