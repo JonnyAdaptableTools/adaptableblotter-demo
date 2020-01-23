@@ -72,7 +72,12 @@ jobs:
           path: demo-dist
 
       - name: move dist to demo-dist
-        run: rm -fr demo-dist/dist && mv demo/dist demo-dist
+        run: rm -fr ./demo-dist/dist && mv ./demo/dist ./demo-dist
+
+      - run: ls && ls dist
+        working-directory: demo-dist
+      - run: git status
+        working-directory: demo-dist
 
       - uses: './demo/.github/actions/git-push-action'
         name: Push changes
