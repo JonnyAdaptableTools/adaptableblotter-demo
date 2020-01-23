@@ -32,7 +32,7 @@ git config user.email "action@github.com"
 git config user.name "SHIP IT"
 
 git add -A
-git commit -m ${COMMIT_MESSAGE}
+git commit -m "${COMMIT_MESSAGE}"
 
 git log;
 git status;
