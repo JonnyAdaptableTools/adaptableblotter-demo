@@ -15,7 +15,7 @@ export default () => {
             Cells and Selected Rows) and you can create your own.
           </p>
           <p>
-            If using AdapTable with our partners OpenFin, Glue42 or iPushPull
+            If using AdapTable with our partners OpenFin, Glue42 or ipushpull
             you can see exported data update in real time as your Grid ticks.
             You can also schedule reports to export at particular times.
           </p>
