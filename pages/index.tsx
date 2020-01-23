@@ -43,10 +43,11 @@ export default () => {
           <b>Functions</b> <br />
           AdapTable contains a large number of 'functions' each of which
           corresponds to a particular DataGrid use case (e.g. Advanced Search,
-          Bulk Update, Pie Chart etc.) <br />
+          Bulk Update, Pie Chart etc)
+        </p>
+        <p>
           This site contains a bespoke demo for most of the functions in
           AdapTable.
-          <br />
         </p>
         <p>
           <b>The Demos</b> <br />
