@@ -1,9 +1,6 @@
 #!/bin/sh
 set -e
 
-# echo "resetting now"
-# git reset --hard
-
 INPUT_BRANCH=${INPUT_BRANCH:-master}
 INPUT_FORCE=${INPUT_FORCE:-false}
 INPUT_DIRECTORY=${INPUT_DIRECTORY:-'.'}
@@ -24,18 +21,15 @@ fi
 
 cd ${INPUT_DIRECTORY}
 
-
-echo "ACTOR AND TOKEN - ${GITHUB_ACTOR}:${INPUT_GITHUB_TOKEN}";
-
 remote_repo="https://${GITHUB_ACTOR}:${INPUT_GITHUB_TOKEN}@github.com/${REPOSITORY}.git"
+
 git config user.email "action@github.com"
 git config user.name "SHIP IT"
 
 git add -A
-git commit -m "${COMMIT_MESSAGE}"
+git commit -m "${INPUT_COMMIT_MESSAGE}"
 
 git log;
 git status;
-# git remote add publisher "${remote_repo}"
 
-git push origin master;
+git push "${remote_repo}" HEAD:${INPUT_BRANCH}
