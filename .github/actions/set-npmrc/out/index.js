@@ -1100,6 +1100,12 @@ module.exports = /******/ (function(modules, runtime) {
 
           core.exportVariable('COMMIT_MESSAGE', message);
 
+          const currentBranch = process.env.GITHUB_REF.split('/')
+            .slice(2)
+            .join('');
+
+          core.exportVariable('CURRENT_BRANCH', currentBranch);
+
           console.log('comit message', message);
 
           const contents = `@adaptabletools:registry=https://registry.adaptabletools.com
