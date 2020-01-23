@@ -22,7 +22,15 @@ export default () => {
           </p>
           <p>
             In this example we have selected the 'Smart Edit, 'Alert, 'Bulk
-            Update' and 'Chart' toolbars.
+            Update' and 'Chart' toolbars (for the latter we needed to install
+            the{' '}
+            <a
+              href="https://api.adaptabletools.com/interfaces/_adaptableoptions_adaptableoptions_.adaptableoptions.html#plugins"
+              target="_blank"
+            >
+              Charts plugin
+            </a>
+            ).
           </p>
         </div>
       }

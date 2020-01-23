@@ -50,7 +50,7 @@ export default () => {
             </a>
             ,{' '}
             <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002449458-Sparkline-Column-FAQ"
+              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002449478-Sparkline-Column-FAQ"
               target="_blank"
             >
               FAQ
