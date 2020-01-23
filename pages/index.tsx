@@ -203,7 +203,7 @@ export default () => {
               href="https://github.com/AdaptableTools/example-adaptableblotter-ipushpull-integration"
               target="_blank"
             >
-              iPushPull Integration
+              ipushpull Integration
             </a>{' '}
           </li>
           <li>

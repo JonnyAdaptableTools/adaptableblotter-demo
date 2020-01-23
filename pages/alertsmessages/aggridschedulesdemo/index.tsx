@@ -11,7 +11,7 @@ export default () => {
           <h4>Schedules Demo</h4>
           <p>
             The Schedule function 'wraps' all the fucnctions that include
-            scheduling functionality (i.e. Reminders, Export and iPushPull)
+            scheduling functionality (i.e. Reminders, Export and ipushpull)
           </p>
           <p>
             You can use the Schedule function to create a new Schedule of any
