@@ -61,15 +61,19 @@ const Category = withRouter(
 
     const Arrow = expanded ? ArrowDown : ArrowRight;
 
+    const [_, refresh] = useState(0);
+
     useEffect(() => {
       if (expanded) {
         // have to do this because of a bug when picking up SSR-ed content
         contentRef.current!.style.display = style.display;
+        refresh(_ + 1);
       }
     }, []);
 
-    const icon = (global as any).document ? (
+    const icon = (
       <Arrow
+        key={_}
         onMouseDown={preventDefault}
         onClick={() => {
           setExpanded(!expanded);
@@ -84,7 +88,7 @@ const Category = withRouter(
           display: 'inline-block',
         }}
       />
-    ) : null;
+    );
 
     const active = expanded
       ? router.pathname === title.props.href
