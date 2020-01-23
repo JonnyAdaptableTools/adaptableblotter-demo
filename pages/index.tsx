@@ -10,11 +10,7 @@ const versiondate = new Date().toISOString().slice(0, 10);
 export default () => {
   return (
     <MainPage pageTitle="AdapTable Demos">
-      <div
-        style={{
-          padding: 21,
-        }}
-      >
+      <div>
         <h3>AdapTable Demos</h3>
         <i>
           Version:&nbsp;

@@ -1,16 +1,21 @@
+:root {
+  --sidebar_font-size: var(--ab-font-size-4);
+}
+
 .sidebar {
   height: 100%;
   z-index: 1;
+  font-size: var(--sidebar_font-size);
   position: relative;
   min-width: 14rem;
-  background-color: #245a96;
+  background-color: var(--ab-color-blue);
   overflow-x: hidden;
   a {
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding-top: var(--ab-space-1);
+    padding-bottom: var(--ab-space-1);
     padding-right: 20px;
     text-decoration: none;
-    font-size: 14px;
+
     color: #f1f1f1;
     display: block;
     fill: currentColor;
@@ -73,12 +78,13 @@
     padding-top: 15px;
   }
   .sidebar a {
-    font-size: 18px;
+    // font-size: 18px;
   }
 }
 
 .sidebar .sidebar-container {
   padding: 10px 0px;
+  padding-top: 0px;
 }
 .sidebar .sidebar-container > * {
   padding: 4px 20px;

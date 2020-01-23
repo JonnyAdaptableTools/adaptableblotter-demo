@@ -6,7 +6,7 @@ import { withRouter } from 'next/router';
 import Category from './Category';
 
 import './index.scss';
-import Logo from './Logo';
+
 import {
   getDemoPageStructure,
   DemoCategory,
@@ -78,32 +78,20 @@ export default () => {
         flexFlow: 'column',
       }}
     >
-      <Logo />
       <div className="sidebar-container" style={{ flex: 1, overflow: 'auto' }}>
-        <h3 style={{ color: 'white', fontWeight: 200, marginTop: 0 }}>Demos</h3>
-        <div
+        <h3
           style={{
-            padding: '10px 20px',
-            display: 'inline-flex',
-            justifyContent: 'center',
+            display: 'flex',
             flexFlow: 'row',
+            justifyContent: 'center',
+            color: 'white',
+            fontWeight: 200,
+            marginTop: 'var(--ab-space-3)',
+            fontSize: 'var(--ab-font-size-6)',
           }}
         >
-          <button
-            title="Clear all state from all demos to return to original predefined config"
-            style={{
-              padding: '2px 4px',
-              cursor: 'pointer',
-              marginBottom: '10px',
-            }}
-            onClick={() => {
-              localStorage.clear();
-              window.location.href = window.location.href;
-            }}
-          >
-            Clear state
-          </button>
-        </div>
+          AdapTable Demos
+        </h3>
 
         <Link href="/">
           <a>Home</a>

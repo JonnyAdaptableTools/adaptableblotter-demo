@@ -23,7 +23,9 @@ const useExpanded = (defaultValue: boolean, key: string) => {
     (value: boolean) => {
       requestAnimationFrame(() => {
         store.setItem(key, JSON.stringify(value));
-        setExpanded(value);
+        requestAnimationFrame(() => {
+          setExpanded(value);
+        });
       });
     },
   ];
@@ -73,7 +75,7 @@ const Category = withRouter(
           }`}
         >
           {icon}
-          <div style={{ fontSize: 'larger' }}>{title}</div>
+          {title}
         </div>
         <div
           className="sidebar-category-content"

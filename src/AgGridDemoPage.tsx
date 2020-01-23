@@ -60,27 +60,34 @@ const Snippet = ({
   }
   return (
     <div className="config">
-      <div
-        title={`Click to ${expanded ? 'collapse' : 'expand'}`}
-        onClick={() => {
-          setExpanded(!expanded);
-        }}
-        style={{
-          display: 'inline-block',
-          position: 'relative',
-          top: 4,
-          userSelect: 'none',
-          cursor: 'pointer',
-          marginRight: 10,
-          transition: 'transform 0.2s',
-          transform: !expanded ? 'rotate(0deg)' : 'rotate(90deg)',
-          transformOrigin: 'center',
-        }}
-      >
-        {arrowRight}
+      <div style={{ display: 'flex', flexFlow: 'row', alignItems: 'center' }}>
+        <div
+          title={`Click to ${expanded ? 'collapse' : 'expand'}`}
+          onClick={() => {
+            setExpanded(!expanded);
+          }}
+          style={{
+            display: 'flex',
+            flexFlow: 'row',
+            marginRight: 'var(--ab-space-2)',
+            alignItems: 'center',
+            userSelect: 'none',
+            cursor: 'pointer',
+          }}
+        >
+          {React.cloneElement(arrowRight, {
+            style: {
+              marginRight: 'var(--ab-space-2)',
+              transition: 'transform 0.2s',
+              transform: !expanded ? 'rotate(0deg)' : 'rotate(90deg)',
+              transformOrigin: 'center',
+            },
+          })}
+          {title}{' '}
+        </div>
+
+        <CopyToClibpoard value={children} />
       </div>
-      <div style={{ fontSize: 'larger' }}>{title}</div>{' '}
-      <CopyToClibpoard value={children} />
       <br />
       {expanded ? <pre>{children}</pre> : null}
     </div>
@@ -111,13 +118,9 @@ export default ({
       pageTitle={pageTitle}
       description={description}
     >
-      <div id="adaptable" style={{ marginRight: 30 }} />
+      <div id="adaptable" />
       <p />
-      <div
-        id="grid"
-        className="ag-theme-balham"
-        style={{ height: 600, marginRight: 30 }}
-      />
+      <div id="grid" className="ag-theme-balham" style={{ height: 600 }} />
 
       {children}
 

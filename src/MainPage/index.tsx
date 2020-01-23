@@ -3,6 +3,7 @@ import Head from 'next/head';
 
 import './index.scss';
 import Sidebar from '../Sidebar';
+import Logo from '../components/Logo';
 
 export type MainPageProps = {
   pageTitle: string;
@@ -45,13 +46,42 @@ export default ({
       <Sidebar />
 
       <div className="main">
-        <div style={{ textAlign: 'right' }}>
+        <div
+          style={{
+            display: 'flex',
+            flexFlow: 'row',
+            alignItems: 'center',
+            justifyContent: 'flex-end',
+          }}
+        >
+          <Logo />
+          <div style={{ flex: 1 }}></div>
           <input
-            style={{ marginBottom: 20, padding: 10, minWidth: '15rem' }}
+            style={{
+              padding: 'var(--ab-space-2)',
+              minWidth: '15rem',
+            }}
             type="text"
             id="searchInput"
             placeholder="Search AdapTable Demos"
           />
+        </div>
+        <div style={{ textAlign: 'right' }}>
+          <button
+            title="Clear all state from all demos to return to original predefined config"
+            style={{
+              padding: 'var(--ab-space-1) var(--ab-space-2)',
+              cursor: 'pointer',
+              fontSize: 'var(--sidebar_font-size)',
+              marginBottom: 'var(--ab-space-3)',
+            }}
+            onClick={() => {
+              localStorage.clear();
+              window.location.href = window.location.href;
+            }}
+          >
+            Clear state
+          </button>
         </div>
 
         {description ? (

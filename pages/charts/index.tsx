@@ -6,21 +6,7 @@ import './index.css';
 import GridLayout from '../../src/components/GridLayout';
 import { getDemoPageStructure, DemoPage } from '../../DemoList/demolist';
 
-const DemoBox = ({ href, children }: { href: string; children: ReactNode }) => {
-  return (
-    <Link href={href}>
-      <a>
-        <div className="demo-box">
-          <img
-            src={'/images/Adaptable.png'}
-            style={{ maxWidth: '80%', marginBottom: '5%' }}
-          />
-          <div>{children}</div>
-        </div>
-      </a>
-    </Link>
-  );
-};
+import DemoBox from '../../src/components/DemoBox';
 
 export default () => {
   let categoryPages = getDemoPageStructure().Categories.find(
@@ -39,7 +25,7 @@ export default () => {
     let title = page.Name + ' Demo';
     return (
       <DemoBox key={page.Name} href={page.Link}>
-        <div style={{ fontSize: 'larger' }}>{title}</div>
+        {title}
       </DemoBox>
     );
   });

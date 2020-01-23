@@ -13,6 +13,7 @@ export default (props: { demo: any } & AgGridDemoPageProps) => {
   const setAdaptableOptions = (adaptableOptions: any) => {
     if (adaptableOptions.vendorGrid) {
       delete adaptableOptions.vendorGrid.rowData;
+      delete adaptableOptions.vendorGrid.modules;
     }
     delete adaptableOptions.licenceKey;
 

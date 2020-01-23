@@ -15,6 +15,7 @@ $bp2: 64rem;
   --ab-space-1: 0.25rem;
   --ab-space-2: 0.5rem;
   --ab-space-3: 1rem;
+  --ab-space-3-5: 1.5rem;
   --ab-space-4: 2rem;
   --ab-space-5: 4rem;
   --ab-space-55: 6rem;
@@ -47,6 +48,11 @@ body,
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
+}
+
+.ab-Dashboard {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
 }
 
 p {
@@ -96,7 +102,7 @@ h5 {
 .demodescription {
   background-color: #f7f7f7;
   margin-bottom: 10px;
-  padding: 7px;
+  padding: var(--ab-space-3);
 }
 .ab--theme-dark .demodescription {
   background: #272b30;
@@ -105,17 +111,15 @@ h5 {
 
 .config {
   background-color: #f5f5f5;
-  margin-left: 30px;
-  margin-right: 30px;
   margin-top: 20px;
-  padding: 10px;
+  padding: var(--ab-space-3);
   font-family: 'Courier New', Courier, monospace;
   position: relative;
 }
 
 .main {
-  margin-top: 10px;
-  padding: 20px;
+  margin-top: var(--ab-space-3);
+  padding: var(--ab-space-3-5);
   flex: 1;
   overflow: auto;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
