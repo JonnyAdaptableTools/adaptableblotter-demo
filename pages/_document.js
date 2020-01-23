@@ -18,6 +18,10 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
           />
+          <link
+            href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap"
+            rel="stylesheet"
+          ></link>
         </Head>
         <body className="">
           <Main key="main" />

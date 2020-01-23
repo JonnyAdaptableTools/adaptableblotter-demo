@@ -69,7 +69,7 @@ const Snippet = ({
           style={{
             display: 'flex',
             flexFlow: 'row',
-            marginRight: 'var(--ab-space-2)',
+            marginRight: 'var(--demo-space-2)',
             alignItems: 'center',
             userSelect: 'none',
             cursor: 'pointer',
@@ -77,7 +77,7 @@ const Snippet = ({
         >
           {React.cloneElement(arrowRight, {
             style: {
-              marginRight: 'var(--ab-space-2)',
+              marginRight: 'var(--demo-space-2)',
               transition: 'transform 0.2s',
               transform: !expanded ? 'rotate(0deg)' : 'rotate(90deg)',
               transformOrigin: 'center',

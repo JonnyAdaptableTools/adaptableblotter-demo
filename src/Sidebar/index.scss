@@ -1,5 +1,5 @@
 :root {
-  --sidebar_font-size: var(--ab-font-size-4);
+  --sidebar_font-size: var(--demo-font-size-4);
 }
 
 .sidebar {
@@ -8,11 +8,11 @@
   font-size: var(--sidebar_font-size);
   position: relative;
   min-width: 14rem;
-  background-color: var(--ab-color-blue);
+  background-color: var(--demo-color-blue);
   overflow-x: hidden;
   a {
-    padding-top: var(--ab-space-1);
-    padding-bottom: var(--ab-space-1);
+    padding-top: var(--demo-space-1);
+    padding-bottom: var(--demo-space-1);
     padding-right: 20px;
     text-decoration: none;
 
@@ -33,18 +33,23 @@
     &:focus,
     &:hover,
     &:active {
-      color: #245a96;
-      background: white;
+      color: var(--demo-color-blue);
+      background: rgba(255, 255, 255, 0.9);
     }
   }
   .sidebar-category-title.sidebar-category-title--active {
+    & {
+      background: rgba(255, 255, 255, 0.9);
+      .active-link {
+        background: transparent;
+      }
+    }
     &,
     & a,
     & a:focus,
     & a:hover,
     & a:active {
-      color: #245a96;
-      background: white;
+      color: var(--demo-color-blue);
     }
   }
 }
@@ -53,8 +58,8 @@
 .sidebar .active-link:focus,
 .sidebar .active-link:hover,
 .sidebar .active-link:active {
-  color: #245a96;
-  background: white;
+  color: var(--demo-color-blue);
+  // background: white;
 }
 
 .sidebar .sidebar-category.sidebar-category {
@@ -64,6 +69,7 @@
 .sidebar-category-title {
   display: flex;
   flex-flow: row;
+  font-weight: 700;
 }
 .sidebar-category > .sidebar-category-title {
   padding-left: 20px;

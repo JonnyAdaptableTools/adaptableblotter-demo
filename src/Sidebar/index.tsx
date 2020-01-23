@@ -86,8 +86,8 @@ export default () => {
             justifyContent: 'center',
             color: 'white',
             fontWeight: 200,
-            marginTop: 'var(--ab-space-3)',
-            fontSize: 'var(--ab-font-size-6)',
+            marginTop: 'var(--demo-space-3)',
+            fontSize: 'var(--demo-font-size-6)',
           }}
         >
           AdapTable Demos

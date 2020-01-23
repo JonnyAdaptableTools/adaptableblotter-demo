@@ -58,7 +58,7 @@ export default ({
           <div style={{ flex: 1 }}></div>
           <input
             style={{
-              padding: 'var(--ab-space-2)',
+              padding: 'var(--demo-space-2)',
               minWidth: '15rem',
             }}
             type="text"
@@ -70,10 +70,10 @@ export default ({
           <button
             title="Clear all state from all demos to return to original predefined config"
             style={{
-              padding: 'var(--ab-space-1) var(--ab-space-2)',
+              padding: 'var(--demo-space-1) var(--demo-space-2)',
               cursor: 'pointer',
               fontSize: 'var(--sidebar_font-size)',
-              marginBottom: 'var(--ab-space-3)',
+              marginBottom: 'var(--demo-space-3)',
             }}
             onClick={() => {
               localStorage.clear();

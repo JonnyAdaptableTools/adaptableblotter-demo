@@ -1,4 +1,10 @@
-import React, { ReactNode, ReactElement, useState } from 'react';
+import React, {
+  ReactNode,
+  ReactElement,
+  useState,
+  useEffect,
+  useRef,
+} from 'react';
 import { withRouter } from 'next/router';
 import ArrowDown from './arrow-down';
 import ArrowRight from './arrow-right';
@@ -12,20 +18,22 @@ const store = (global as any).localStorage || {
 const useExpanded = (defaultValue: boolean, key: string) => {
   key = `expandstate-${key}`;
   const storageValue = store.getItem(key) || null;
+  if (key === '/admin') {
+    console.log('value', storageValue);
+  }
 
   const currentValue =
     storageValue == null ? defaultValue : JSON.parse(storageValue);
 
-  const [expanded, setExpanded] = useState(currentValue);
+  const [_, refresh] = useState(1);
 
   return [
-    expanded,
+    currentValue,
     (value: boolean) => {
       requestAnimationFrame(() => {
         store.setItem(key, JSON.stringify(value));
-        requestAnimationFrame(() => {
-          setExpanded(value);
-        });
+
+        refresh(_ + 1);
       });
     },
   ];
@@ -42,10 +50,25 @@ const Category = withRouter(
     title: ReactElement;
   }) => {
     const key = title.props.href;
+
     const [expanded, setExpanded] = useExpanded(false, key);
 
+    const style = {
+      display: expanded ? 'block' : 'none',
+    };
+
+    const contentRef = useRef<HTMLDivElement>(null);
+
     const Arrow = expanded ? ArrowDown : ArrowRight;
-    const icon = (
+
+    useEffect(() => {
+      if (expanded) {
+        // have to do this because of a bug when picking up SSR-ed content
+        contentRef.current!.style.display = style.display;
+      }
+    }, []);
+
+    const icon = (global as any).document ? (
       <Arrow
         onMouseDown={preventDefault}
         onClick={() => {
@@ -54,14 +77,14 @@ const Category = withRouter(
         size={22}
         style={{
           marginRight: 8,
-          marginTop: 2,
+          marginTop: 5,
           cursor: 'pointer',
           fill: 'currentColor',
           verticalAlign: 'middle',
           display: 'inline-block',
         }}
       />
-    );
+    ) : null;
 
     const active = expanded
       ? router.pathname === title.props.href
@@ -79,9 +102,8 @@ const Category = withRouter(
         </div>
         <div
           className="sidebar-category-content"
-          style={{
-            display: expanded ? 'block' : 'none',
-          }}
+          style={style}
+          ref={contentRef}
         >
           {children}
         </div>

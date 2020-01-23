@@ -1,42 +1,43 @@
+@import '~normalize.css/normalize.css';
 $bp0: 40rem;
 $bp1: 52rem;
 $bp2: 64rem;
 
 :root {
-  --ab-breakpoint-0: #{$bp0};
-  --ab-breakpoint-1: #{$bp1};
-  --ab-breakpoint-2: #{$bp2};
+  --demo-breakpoint-0: #{$bp0};
+  --demo-breakpoint-1: #{$bp1};
+  --demo-breakpoint-2: #{$bp2};
 
-  --ab-max-content-size: 70rem;
-  --ab-link_color: rgb(18, 127, 196);
-  --ab-link_text-decoration: underline;
+  --demo-max-content-size: 70rem;
+  --demo-link_color: rgb(18, 127, 196);
+  --demo-link_text-decoration: underline;
 
-  --ab-space-0: 0px;
-  --ab-space-1: 0.25rem;
-  --ab-space-2: 0.5rem;
-  --ab-space-3: 1rem;
-  --ab-space-3-5: 1.5rem;
-  --ab-space-4: 2rem;
-  --ab-space-5: 4rem;
-  --ab-space-55: 6rem;
-  --ab-space-6: 8rem;
-  --ab-space-7: 16rem;
+  --demo-space-0: 0px;
+  --demo-space-1: 0.25rem;
+  --demo-space-2: 0.5rem;
+  --demo-space-3: 1rem;
+  --demo-space-3-5: 1.5rem;
+  --demo-space-4: 2rem;
+  --demo-space-5: 4rem;
+  --demo-space-55: 6rem;
+  --demo-space-6: 8rem;
+  --demo-space-7: 16rem;
 
-  --ab-font-size-0: 0.5rem; //8px for 1rem=16px
-  --ab-font-size-1: 0.625rem; //10px for 1rem=16px
-  --ab-font-size-2: 0.75rem; //12px for 1rem=16px
-  --ab-font-size-3: 0.875rem; //14px for 1rem=16px
-  --ab-font-size-4: 1rem;
-  --ab-font-size-5: 1.25rem; //20px for 1rem=16px
-  --ab-font-size-6: 1.5rem; //24px for 1rem=16px
-  --ab-font-size-7: 2.25rem; //36px for 1rem=16px
-  --ab-font-size-8: 3rem; //36px for 1rem=16px
+  --demo-font-size-0: 0.5rem; //8px for 1rem=16px
+  --demo-font-size-1: 0.625rem; //10px for 1rem=16px
+  --demo-font-size-2: 0.75rem; //12px for 1rem=16px
+  --demo-font-size-3: 0.875rem; //14px for 1rem=16px
+  --demo-font-size-4: 1rem;
+  --demo-font-size-5: 1.25rem; //20px for 1rem=16px
+  --demo-font-size-6: 1.5rem; //24px for 1rem=16px
+  --demo-font-size-7: 2.25rem; //36px for 1rem=16px
+  --demo-font-size-8: 3rem; //36px for 1rem=16px
 
-  --ab-color-blue-opaque: rgba(10, 111, 159); //rgba(18, 127, 196, 0.97);
-  --ab-color-blue: rgba(10, 111, 159, 0.95); //rgba(18, 127, 196, 0.97);
-  --ab-color-text: #333;
-  --ab-color-footer-bg: #637b9b;
-  --ab-color-washedblue: rgb(239, 239, 244);
+  --demo-color-blue-opaque: rgba(10, 111, 159); //rgba(18, 127, 196, 0.97);
+  --demo-color-blue: rgba(10, 111, 159, 0.95); //rgba(18, 127, 196, 0.97);
+  --demo-color-text: #333;
+  --demo-color-footer-bg: #637b9b;
+  --demo-color-washedblue: rgb(239, 239, 244);
 }
 
 html,
@@ -46,8 +47,16 @@ body,
 }
 
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-family: 'Lato', BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    'Helvetica', 'Arial', sans-serif !important;
+
+  font-size: 16px;
+
+  -webkit-font-smoothing: antialiased;
+  color: #333;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .ab-Dashboard {
@@ -102,7 +111,7 @@ h5 {
 .demodescription {
   background-color: #f7f7f7;
   margin-bottom: 10px;
-  padding: var(--ab-space-3);
+  padding: var(--demo-space-3);
 }
 .ab--theme-dark .demodescription {
   background: #272b30;
@@ -112,15 +121,14 @@ h5 {
 .config {
   background-color: #f5f5f5;
   margin-top: 20px;
-  padding: var(--ab-space-3);
+  padding: var(--demo-space-3);
   font-family: 'Courier New', Courier, monospace;
   position: relative;
 }
 
 .main {
-  margin-top: var(--ab-space-3);
-  padding: var(--ab-space-3-5);
+  margin-top: var(--demo-space-3);
+  padding: var(--demo-space-3-5);
   flex: 1;
   overflow: auto;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
