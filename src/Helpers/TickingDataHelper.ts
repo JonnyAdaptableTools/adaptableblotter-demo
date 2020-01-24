@@ -67,8 +67,9 @@ export class TickingDataHelper {
   ) {
     if (gridOptions != null && gridOptions.api != null) {
       setInterval(() => {
-        let orderId = this.generateRandomInt(11074, 11142); //11074
-
+        let possIds: number[] = [10982, 10949, 10810, 10620, 10339];
+        let test: number = this.generateRandomInt(0, 4);
+        let orderId = possIds[test];
         let rowNode: RowNode = gridOptions.api!.getRowNode(orderId);
         if (rowNode) {
           //  const order: any = { ...gridOptions.rowData[tradeId] };
@@ -107,6 +108,8 @@ export class TickingDataHelper {
               );
               order.ChangeLastOrder = incdec + changeLastOrder;
               //       rowNode.setDataValue('ChangeLastOrder', incdec + changeLastOrder);
+
+              order.ItemCount = this.generateRandomInt(1, 2000);
             } else {
               let numberToAdd: number = this.generateRandomInt(1, 10);
               let itemCount = gridOptions.api.getValue('ItemCount', rowNode);
@@ -119,6 +122,32 @@ export class TickingDataHelper {
               }
             }
             // gridOptions.api!.updateRowData({ update: [order] });
+            adaptableApi.gridApi.updateGridData([order]);
+          }
+        }
+      }, tickingFrequency);
+    }
+  }
+
+  public startTickingDataagGridPivot(
+    gridOptions: any,
+    adaptableApi: AdaptableApi,
+    tickingFrequency: number
+  ) {
+    if (gridOptions != null && gridOptions.api != null) {
+      setInterval(() => {
+        let possIds: number[] = [10982, 10949, 10810, 10620, 10339];
+        let test: number = this.generateRandomInt(0, 4);
+        let orderId = possIds[test];
+        let rowNode: RowNode = gridOptions.api!.getRowNode(orderId);
+        if (rowNode) {
+          const order: any = { ...rowNode.data };
+          if (order) {
+            let invoicedCost = gridOptions.api.getValue(
+              'InvoicedCost',
+              rowNode
+            );
+            order.InvoicedCost = invoicedCost + 5;
             adaptableApi.gridApi.updateGridData([order]);
           }
         }

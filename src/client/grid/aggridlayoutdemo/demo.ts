@@ -13,10 +13,12 @@ import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import predefinedConfig from './config';
 
+import { TickingDataHelper } from '../../../Helpers/TickingDataHelper';
+
 export default () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
-
+  let tickingDataHelper = new TickingDataHelper();
   let rowData = JSON.parse(JSON.stringify(json));
 
   const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
@@ -38,6 +40,8 @@ export default () => {
 
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
   const adaptableApi = Adaptable.init(adaptableOptions);
+
+  tickingDataHelper.startTickingDataagGridPivot(gridOptions, adaptableApi, 500);
 
   return {
     predefinedConfig,
