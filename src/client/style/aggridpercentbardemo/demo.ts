@@ -28,7 +28,7 @@ export default () => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Percent Bar Demo',
+    adaptableId: 'Percentbar Demo',
 
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
