@@ -17,7 +17,7 @@ export default () => {
             Symphony chat correspondents or you want to see Live Excel) then you
             can do so via our partner{' '}
             <a href="https://www.ipushpull.com/" target="_blank">
-              iPushpull
+              ipushpull
             </a>
             .
           </p>

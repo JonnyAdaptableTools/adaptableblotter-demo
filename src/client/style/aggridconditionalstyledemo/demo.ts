@@ -28,7 +28,7 @@ export default () => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Conditional Style Demo',
+    adaptableId: 'Cond Style Demo',
 
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
