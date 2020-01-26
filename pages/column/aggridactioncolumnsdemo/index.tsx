@@ -49,7 +49,7 @@ export default () => {
           </p>
           <p>
             Lastly we created an Action column to <b>delete a row</b> which was
-            trivial to implement with just one line of code using the{' '}
+            straightforward to implement with just one line of code using the{' '}
             <a
               href="https://api.adaptabletools.com/interfaces/_api_gridapi_.gridapi.html#deletegriddata"
               target="_blank"

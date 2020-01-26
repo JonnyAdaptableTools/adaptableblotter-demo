@@ -32,6 +32,15 @@ export class HelperAgGrid {
     }
   };
 
+  private shipViaPivotComparator(a: any, b: any) {
+    var requiredOrder = [
+      'Speedy Express',
+      'Federal Shipping',
+      'United Package',
+    ];
+    return requiredOrder.indexOf(a) - requiredOrder.indexOf(b);
+  }
+
   private shortDateFormatter = new Intl.DateTimeFormat('en-GB');
   private shortDateFormatteragGrid = (params: any) => {
     try {
@@ -554,44 +563,6 @@ export class HelperAgGrid {
     return schema;
   }
 
-  public getPivotingNorthwindColumnSchema(): any[] {
-    var schema = [];
-
-    //   enableRowGroup: true,
-    //     enablePivot: true,
-    //   enableValue: true,
-
-    schema.push(this.getCustRefDef());
-    schema.push(this.getContactDef());
-    let employeeColDef = this.getEmployeeDef();
-    employeeColDef.enablePivot = true;
-    schema.push(employeeColDef);
-    let shipCountryColDef = this.getShipCountryDef();
-    shipCountryColDef.enablePivot = true;
-    shipCountryColDef.enableRowGroup = true;
-    schema.push(shipCountryColDef);
-    schema.push(this.getOrderColumnDef());
-    schema.push(this.getPackageCostDef());
-
-    let itemCountColDef = this.getItemCountDef();
-    itemCountColDef.enableValue = true;
-    schema.push(itemCountColDef);
-    let itemCostColDef = this.getItemCostDef();
-    itemCostColDef.enableValue = true;
-    schema.push(itemCostColDef);
-    let orderCostColDef = this.getOrderCostDef();
-    orderCostColDef.enableValue = true;
-    schema.push(orderCostColDef);
-    let invoicedColDef = this.getInvoicedDef();
-    invoicedColDef.enableValue = true;
-    schema.push(invoicedColDef);
-
-    schema.push(this.getCompanyDef());
-    schema.push(this.getShipNameDef());
-
-    return schema;
-  }
-
   public getWorldStatsSchema(): any[] {
     var schema = [];
     schema.push({
@@ -941,6 +912,7 @@ export class HelperAgGrid {
       editable: true,
       sortable: true,
       enableRowGroup: true,
+      enablePivot: true,
       type: 'abColDefString',
     };
   }
@@ -952,6 +924,7 @@ export class HelperAgGrid {
       editable: true,
       sortable: true,
       enableRowGroup: true,
+      enablePivot: true,
       type: 'abColDefString',
     };
   }
@@ -978,6 +951,7 @@ export class HelperAgGrid {
       editable: true,
       filter: true,
       sortable: true,
+      enableValue: true,
       type: 'abColDefNumber',
     } as any) as ColDef;
   }
@@ -989,6 +963,7 @@ export class HelperAgGrid {
       cellRenderer: this.currencyRendereragGrid,
       editable: true,
       filter: true,
+      enableValue: true,
       sortable: true,
       type: 'abColDefNumber',
     } as any) as ColDef;
@@ -1013,6 +988,7 @@ export class HelperAgGrid {
       editable: true,
       filter: true,
       sortable: true,
+      enableValue: true,
       cellRenderer: this.currencyRendereragGrid,
       type: 'abColDefNumber',
     };
@@ -1025,6 +1001,7 @@ export class HelperAgGrid {
       editable: true,
       filter: true,
       sortable: true,
+      enableValue: true,
       type: 'abColDefNumber',
     };
   }
@@ -1046,6 +1023,9 @@ export class HelperAgGrid {
       filter: 'text',
       editable: true,
       sortable: true,
+      enableRowGroup: true,
+      enablePivot: true,
+      pivotComparator: this.shipViaPivotComparator,
       type: 'abColDefString',
     };
   }
@@ -1090,7 +1070,8 @@ export class HelperAgGrid {
       filter: 'agSetColumnFilter',
       editable: true,
       sortable: true,
-      type: 'abColDefString',
+      enablePivot: true,
+      enableRowGroup: true,
     };
   }
   private getShippedDateDef(): any {

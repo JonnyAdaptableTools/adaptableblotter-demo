@@ -129,8 +129,8 @@ export default () => {
           </a>
           .
           <br />
-          It is trivial to set up AdapTable and can be done with very little
-          code.
+          It is straightforward to set up AdapTable and can be done with very
+          little code.
           <br />
           See the{' '}
           <a
