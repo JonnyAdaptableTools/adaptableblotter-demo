@@ -112,8 +112,8 @@ const HelpResources = ({ children }: { children: string }) => {
   return (
     <div className="helpResource">
       <div style={{ display: 'flex', flexFlow: 'row', alignItems: 'center' }}>
-        <span style={{ marginLeft: '10px' }}>
-          {<h4>AdapTable Help Resources: </h4>}{' '}
+        <span style={{ marginLeft: '5px' }}>
+          {<b>AdapTable Help Resources: </b>}{' '}
         </span>
         <span style={{ marginLeft: '5px' }}>{children}</span>
       </div>
