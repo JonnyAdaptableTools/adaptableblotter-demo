@@ -8,8 +8,6 @@ export default () => {
       pageTitle={'System Filters Demo'}
       description={
         <div>
-          <h4>System Filters Demo</h4>
-
           <p>
             AdapTable provides a range of useful System Filters (e.g. 'Blanks',
             'Zero', 'Yesterday') to complement any User Filters or Named Filters
@@ -37,37 +35,38 @@ export default () => {
             used: Positive and Zero (both for Number columns) and then used it
             on 'Order Chg.' column.
           </p>
-          <p>
-            <b>AdapTable Help Resources:</b>{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_systemfilterstate_.systemfilterstate.html"
-              target="_blank"
-            >
-              Predefined Config
-            </a>
-            ,{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_api_systemfilterapi_.systemfilterapi.html"
-              target="_blank"
-            >
-              Adaptable API
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029896011-Filter-FAQ"
-              target="_blank"
-            >
-              FAQ
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754677-Filters"
-              target="_blank"
-            >
-              User Guide
-            </a>
-            .
-          </p>
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_systemfilterstate_.systemfilterstate.html"
+            target="_blank"
+          >
+            Predefined Config
+          </a>
+          ,{' '}
+          <a
+            href="https://api.adaptabletools.com/interfaces/_api_systemfilterapi_.systemfilterapi.html"
+            target="_blank"
+          >
+            Adaptable API
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029896011-Filter-FAQ"
+            target="_blank"
+          >
+            FAQ
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754677-Filters"
+            target="_blank"
+          >
+            User Guide
+          </a>
+          .
         </div>
       }
     />

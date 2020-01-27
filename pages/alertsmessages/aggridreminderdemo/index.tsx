@@ -8,7 +8,6 @@ export default () => {
       pageTitle={'Reminder Demo'}
       description={
         <div>
-          <h4>Reminder Demo</h4>
           <p>
             Create scheduled reminders so you dont forget to do important grid
             actions.
@@ -23,23 +22,24 @@ export default () => {
             17:30 to remind the user to export data. Try: change the schedule in
             the Reminder so that it fires in 2 minutes time.
           </p>
-          <p>
-            <b>AdapTable Help Resources:</b>{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_reminderstate_.reminderstate.html"
-              target="_blank"
-            >
-              Predefined Config
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755197-Grid-Functions"
-              target="_blank"
-            >
-              User Guide
-            </a>
-            .
-          </p>
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_reminderstate_.reminderstate.html"
+            target="_blank"
+          >
+            Predefined Config
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755197-Grid-Functions"
+            target="_blank"
+          >
+            User Guide
+          </a>
+          .
         </div>
       }
     />

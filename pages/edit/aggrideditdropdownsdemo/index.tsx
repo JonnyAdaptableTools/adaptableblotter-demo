@@ -8,7 +8,6 @@ export default () => {
       pageTitle={'Edit Dropdowns Demo'}
       description={
         <div>
-          <h4>Edit Dropdowns Demo</h4>
           <p>
             By default when you edit a column AdapTable will show whichever cell
             editor you stipulated for that column when you set up ag-Grid.

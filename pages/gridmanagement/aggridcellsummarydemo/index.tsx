@@ -8,7 +8,6 @@ export default () => {
       pageTitle={'Cell Summary Demo'}
       description={
         <div>
-          <h4>Cell Summary Demo</h4>
           <p>
             Use Cell Summary to see summary information about a group of
             selected cells using a variety of mathematical operations.
@@ -35,30 +34,31 @@ export default () => {
             </a>{' '}
             (one of the Plugins that Adaptable provides).
           </p>
-          <p>
-            <b>AdapTable Help Resources:</b>{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_cellsummarystate_.cellsummarystate.html"
-              target="_blank"
-            >
-              Predefined Config
-            </a>
-            ,{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_api_cellsummaryapi_.cellsummaryapi.html"
-              target="_blank"
-            >
-              Adaptable API
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755197-Grid-Functions"
-              target="_blank"
-            >
-              User Guide
-            </a>
-            .
-          </p>
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_cellsummarystate_.cellsummarystate.html"
+            target="_blank"
+          >
+            Predefined Config
+          </a>
+          ,{' '}
+          <a
+            href="https://api.adaptabletools.com/interfaces/_api_cellsummaryapi_.cellsummaryapi.html"
+            target="_blank"
+          >
+            Adaptable API
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755197-Grid-Functions"
+            target="_blank"
+          >
+            User Guide
+          </a>
+          .
         </div>
       }
     />

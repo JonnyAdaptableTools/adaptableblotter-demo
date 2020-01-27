@@ -8,34 +8,32 @@ export default () => {
       pageTitle={'Pivoting Demo'}
       description={
         <div>
-          <h4>
-            <h4>Pivoting Demo</h4>
-          </h4>
           <p>
             ag-Grid has incredible pivoting capability; AdapTable knows when the
             grid's in pivoting mode (click 'Pivot Mode' checkbox in the tool
             panel) and will react accordingly.
           </p>
           <p>
-            AdapTable also allows you to save pivoting information in your
-            layout and then it will be available each time you select that
-            layout.
+            AdapTable also allows you to specify - and save - pivoting
+            information in your layout and then it will be available each time
+            you select that layout.
           </p>
           <p>
             In this demo you can switch layouts between <i>Pivot View</i> and{' '}
             <i>Non Pivot View</i> and the correct layout (and Pivot Mode) will
             load.
           </p>
-          <p>
-            <b>AdapTable Help Resources:</b>{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_layoutstate_.layoutstate.html"
-              target="_blank"
-            >
-              Predefined Config
-            </a>
-            .
-          </p>
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_layoutstate_.layoutstate.html"
+            target="_blank"
+          >
+            Predefined Config
+          </a>
+          .
         </div>
       }
     />

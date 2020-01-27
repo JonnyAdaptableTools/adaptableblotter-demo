@@ -8,8 +8,6 @@ export default () => {
       pageTitle={'Named Filters Demo'}
       description={
         <div>
-          <h4>Named Filters Demo</h4>
-
           <p>
             AdapTable has a range of powerful filter functions. These include
             Column Filters, System Filters and User Filters (that users create
@@ -46,44 +44,45 @@ export default () => {
             (3) <b>Post Takeover</b> which operates on all Date columns and
             evaluates true if date in cell was after a putative takeover date.
           </p>
-          <p>
-            <b>AdapTable Help Resources:</b>{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_namedfilterstate_.namedfilterstate.html"
-              target="_blank"
-            >
-              Predefined Config
-            </a>
-            ,{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_api_namedfilterapi_.namedfilterapi.html"
-              target="_blank"
-            >
-              Adaptable API
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029896011-Filter-FAQ"
-              target="_blank"
-            >
-              FAQ
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002179298-Named-Filters-Videos"
-              target="_blank"
-            >
-              Videos
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755137-Search-Functions"
-              target="_blank"
-            >
-              User Guide
-            </a>
-            .
-          </p>
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_namedfilterstate_.namedfilterstate.html"
+            target="_blank"
+          >
+            Predefined Config
+          </a>
+          ,{' '}
+          <a
+            href="https://api.adaptabletools.com/interfaces/_api_namedfilterapi_.namedfilterapi.html"
+            target="_blank"
+          >
+            Adaptable API
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029896011-Filter-FAQ"
+            target="_blank"
+          >
+            FAQ
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002179298-Named-Filters-Videos"
+            target="_blank"
+          >
+            Videos
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755137-Search-Functions"
+            target="_blank"
+          >
+            User Guide
+          </a>
+          .
         </div>
       }
     />

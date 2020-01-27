@@ -8,7 +8,6 @@ export default () => {
       pageTitle={'Cell Validation Demo'}
       description={
         <div>
-          <h4>Cell Validation Demo</h4>
           <p>
             Use Cell Validation to create rules that will disallow edits (or
             show warnings) if the data changes in ways that you wish to prevent
@@ -28,44 +27,45 @@ export default () => {
             more than doubles in value. <b>Note:</b> these cell validation rules
             apply also when you perfrom a Smart Edit or Bulk Update.
           </p>
-          <p>
-            <b>AdapTable Help Resources:</b>{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_cellvalidationstate_.cellvalidationstate.htmll"
-              target="_blank"
-            >
-              Predefined Config
-            </a>
-            ,{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_api_cellvalidationapi_.cellvalidationapi.html"
-              target="_blank"
-            >
-              Adaptable API
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360030078191-Cell-Validation-FAQ"
-              target="_blank"
-            >
-              FAQ
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028638052-Cell-Validation-Videos"
-              target="_blank"
-            >
-              Videos
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754698-Edit-Functions"
-              target="_blank"
-            >
-              User Guide
-            </a>
-            .
-          </p>
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_cellvalidationstate_.cellvalidationstate.htmll"
+            target="_blank"
+          >
+            Predefined Config
+          </a>
+          ,{' '}
+          <a
+            href="https://api.adaptabletools.com/interfaces/_api_cellvalidationapi_.cellvalidationapi.html"
+            target="_blank"
+          >
+            Adaptable API
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360030078191-Cell-Validation-FAQ"
+            target="_blank"
+          >
+            FAQ
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028638052-Cell-Validation-Videos"
+            target="_blank"
+          >
+            Videos
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754698-Edit-Functions"
+            target="_blank"
+          >
+            User Guide
+          </a>
+          .
         </div>
       }
     />

@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'Big Data Demo'}
       description={
         <div>
-          <h4>Big Data Demo</h4>
+          ={' '}
           <p>
             Most of the demos on this site use a version of the Northwind Orders
             demo that has 800 rows. This is done deliberately to show that

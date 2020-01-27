@@ -52,6 +52,7 @@ export default ({
             flexFlow: 'row',
             alignItems: 'center',
             justifyContent: 'flex-end',
+            marginBottom: 'var(--demo-space-3)',
           }}
         >
           <Logo />
@@ -64,23 +65,22 @@ export default ({
             type="text"
             id="searchInput"
             placeholder="Search AdapTable Demos"
-          />
-        </div>
-        <div style={{ textAlign: 'right' }}>
+          />{' '}
           <button
             title="Clear all state from all demos to return to original predefined config"
             style={{
-              padding: 'var(--demo-space-1) var(--demo-space-2)',
+              padding: 'var(--demo-space-2) var(--demo-space-2)',
               cursor: 'pointer',
               fontSize: 'var(--sidebar_font-size)',
-              marginBottom: 'var(--demo-space-3)',
+              // marginBottom: 'var(--demo-space-1)',
+              marginLeft: 'var(--demo-space-2)',
             }}
             onClick={() => {
               localStorage.clear();
               window.location.href = window.location.href;
             }}
           >
-            Clear state
+            Clear Demos State
           </button>
         </div>
 

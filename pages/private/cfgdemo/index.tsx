@@ -8,7 +8,6 @@ export default () => {
       pageTitle={'CFG Demo'}
       description={
         <div>
-          <h4>CFG Demo</h4>
           <p>
             We can add some explanation of the Grid here - this page is private
             and cannot be reached by any links.

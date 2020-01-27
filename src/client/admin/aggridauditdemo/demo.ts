@@ -5,7 +5,11 @@ import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
 import { cloneDeep } from 'lodash';
 
-import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
+import {
+  AllEnterpriseModules,
+  GridOptions,
+  Module,
+} from '@ag-grid-enterprise/all-modules';
 import '../../../../DemoPage/aggriddemo.css';
 
 import { AdaptableOptions } from '@adaptabletools/adaptable/types';
@@ -22,7 +26,9 @@ export default () => {
 
   const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
 
-  const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
+  const gridOptions: GridOptions & {
+    modules?: Module[];
+  } = helperAgGrid.getGridOptions(columndefs, rowData);
   gridOptions.modules = AllEnterpriseModules;
 
   const adaptableOptions: AdaptableOptions = {

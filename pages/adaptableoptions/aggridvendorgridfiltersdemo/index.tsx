@@ -10,7 +10,6 @@ export default () => {
       pageTitle={'Vendor Grid Filters Demo'}
       description={
         <div>
-          <h4>Vendor Grid Filters Demo</h4>
           <p>
             By default AdapTable will use its Quick Filter (the row under the
             toolbar) and FilterForm (the second item in the Column menu).
@@ -37,15 +36,16 @@ export default () => {
             The Employee and Ship Country columns are using the{' '}
             <i>agSetColumnFilter</i> type.
           </p>
-          <p>
-            <b>AdapTable Help Resources:</b>{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_adaptableoptions_filteroptions_.filteroptions.html"
-              target="_blank"
-            >
-              Adaptable Options
-            </a>
-          </p>{' '}
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://api.adaptabletools.com/interfaces/_adaptableoptions_filteroptions_.filteroptions.html"
+            target="_blank"
+          >
+            Adaptable Options
+          </a>
         </div>
       }
     />

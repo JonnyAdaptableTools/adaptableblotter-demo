@@ -10,7 +10,6 @@ export default () => {
       pageTitle={'Ignore Case in Queries Demo'}
       description={
         <div>
-          <h4>Ignore Case in Queries Demo</h4>
           <p>
             By default case is ignored when running Queries against string
             columns. This is for Quick Search, Filters, and wherever we run a
@@ -32,15 +31,16 @@ export default () => {
             Search and you will see that Janet Leverling does not highlight.
             Change that to 'J' and it will highlight.
           </p>
-          <p>
-            <b>AdapTable Help Resources:</b>{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_adaptableoptions_queryoptions_.queryoptions.html"
-              target="_blank"
-            >
-              Adaptable Options
-            </a>
-          </p>{' '}
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://api.adaptabletools.com/interfaces/_adaptableoptions_queryoptions_.queryoptions.html"
+            target="_blank"
+          >
+            Adaptable Options
+          </a>
         </div>
       }
     />

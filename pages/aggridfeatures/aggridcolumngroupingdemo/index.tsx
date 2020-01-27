@@ -10,9 +10,6 @@ export default () => {
       pageTitle={'Column Grouping Demo'}
       description={
         <div>
-          <h4>
-            <h4>Column Grouping Demo</h4>
-          </h4>
           <p>
             3 sets of <b>column groups</b> have been created (this is where
             columns are 'banded' together and cannot be separated from each

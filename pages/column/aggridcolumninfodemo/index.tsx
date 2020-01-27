@@ -8,7 +8,6 @@ export default () => {
       pageTitle={'Column Info Demo'}
       description={
         <div>
-          <h4>Column Info Demo</h4>
           <p>
             Column Info function provides quick at a glance summary of any
             objects (e.g. sorts, filters or styles) associated with any Column.
@@ -25,16 +24,17 @@ export default () => {
             Info in the header menu to see all these objects and add / edit as
             required.
           </p>
-          <p>
-            <b>AdapTable Help Resources:</b>{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755157-Column-Management-Functions"
-              target="_blank"
-            >
-              User Guide
-            </a>
-            .
-          </p>
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755157-Column-Management-Functions"
+            target="_blank"
+          >
+            User Guide
+          </a>
+          .
         </div>
       }
     />

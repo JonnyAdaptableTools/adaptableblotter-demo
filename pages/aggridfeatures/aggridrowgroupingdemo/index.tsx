@@ -8,9 +8,6 @@ export default () => {
       pageTitle={'Row Grouping Demo'}
       description={
         <div>
-          <h4>
-            <h4>Row Grouping Demo</h4>
-          </h4>
           <p>
             3 columns have <b>row grouping</b> applied on them:{' '}
             <i>Ship Country</i> (on by default), <i>Employee</i> and{' '}

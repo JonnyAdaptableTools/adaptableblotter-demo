@@ -10,7 +10,6 @@ export default () => {
       pageTitle={'Custom Toolbars Demo'}
       description={
         <div>
-          <h4>Custom Toolbars Demo</h4>
           <p>
             The Dashboard includes a Custom Toolbars collection to enable users
             to render their own content, and AdapTable will manage toolbar
@@ -50,30 +49,31 @@ export default () => {
             event and if the Toolbar has become visible, then render the
             content.
           </p>
-          <p>
-            <b>AdapTable Help Resources:</b>{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_dashboardstate_.dashboardstate.html"
-              target="_blank"
-            >
-              Predefined Config
-            </a>
-            ,{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_api_dashboardapi_.dashboardapi.html"
-              target="_blank"
-            >
-              Adaptable API
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360008819192-Adaptable-Blotter-State-FAQ"
-              target="_blank"
-            >
-              FAQ
-            </a>
-            .
-          </p>
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_dashboardstate_.dashboardstate.html"
+            target="_blank"
+          >
+            Predefined Config
+          </a>
+          ,{' '}
+          <a
+            href="https://api.adaptabletools.com/interfaces/_api_dashboardapi_.dashboardapi.html"
+            target="_blank"
+          >
+            Adaptable API
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360008819192-Adaptable-Blotter-State-FAQ"
+            target="_blank"
+          >
+            FAQ
+          </a>
+          .
         </div>
       }
     />

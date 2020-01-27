@@ -3,24 +3,11 @@ export default {
     CurrentLayout: 'Pivot View',
     Layouts: [
       {
-        Columns: [
-          'CustomerReference',
-          'ContactName',
-          'Employee',
-          'ShipCountry',
-          'OrderId',
-          'PackageCost',
-          'ItemCount',
-          'ItemCost',
-          'OrderCost',
-          'InvoicedCost',
-          'CompanyName',
-          'ShipName',
-        ],
+        Columns: [],
         ColumnSorts: [],
         GroupedColumns: ['ShipCountry'],
         PivotDetails: {
-          PivotColumns: ['Employee'],
+          PivotColumns: ['ShipVia'],
           AggregationColumns: ['InvoicedCost', 'ItemCost'],
         },
         Name: 'Pivot View',

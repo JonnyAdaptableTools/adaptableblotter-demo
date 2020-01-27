@@ -7,10 +7,9 @@ export default () => {
       demo={import(
         '../../../src/client/userinterfacestate/aggridcolorpalettedemo'
       )}
-      pageTitle={'Color Palette Demo'}
+      pageTitle={'Color Palette Demo (User Inferface State)'}
       description={
         <div>
-          <h4>Color Palette Demo (User Inferface State)</h4>
           <p>
             When getting distinct column values for display (either in the
             column filter dropdown) AdapTable will show the first 5,000 distinct

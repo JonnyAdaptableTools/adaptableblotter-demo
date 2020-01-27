@@ -10,7 +10,6 @@ export default () => {
       pageTitle={'Auto Apply Filters Demo'}
       description={
         <div>
-          <h4>Auto Apply Filters Demo</h4>
           <p>
             By default AdapTable will apply the column filters as soon as an
             item in the filter menu is clicked.

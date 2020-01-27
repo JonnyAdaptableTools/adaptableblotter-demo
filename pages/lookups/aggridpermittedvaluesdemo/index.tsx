@@ -5,10 +5,9 @@ export default () => {
   return (
     <DynamicDemoPage
       demo={import('../../../src/client/lookups/aggridpermittedvaluesdemo')}
-      pageTitle={'Permitted Values Demo'}
+      pageTitle={'Permitted Values Demo (User Inferface State)'}
       description={
         <div>
-          <h4>Permitted Values Demo (User Inferface State)</h4>
           <p>
             When AdapTable wants to provide a list of values for a column (e.g.
             in a column filter, or when building a query or in Bulk Update) it
@@ -35,22 +34,23 @@ export default () => {
             Note: if there are no Permitted Values, then AdapTable wtill
             dynamically build a list of distinct values for the column.
           </p>
-          <p>
-            <b>AdapTable Help Resources:</b>{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_userinterfacestate_.permittedvaluescolumn.html"
-              target="_blank"
-            >
-              Predefined Config
-            </a>
-            ,{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_api_userinterfaceapi_.userinterfaceapi.html"
-              target="_blank"
-            >
-              Adaptable API
-            </a>
-          </p>
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_userinterfacestate_.permittedvaluescolumn.html"
+            target="_blank"
+          >
+            Predefined Config
+          </a>
+          ,{' '}
+          <a
+            href="https://api.adaptabletools.com/interfaces/_api_userinterfaceapi_.userinterfaceapi.html"
+            target="_blank"
+          >
+            Adaptable API
+          </a>
         </div>
       }
     />

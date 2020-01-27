@@ -5,10 +5,9 @@ export default () => {
   return (
     <DynamicDemoPage
       demo={import('../../../src/client/grid/aggridexportdemo')}
-      pageTitle={'Export Demo'}
+      pageTitle={'Export and Reports Demo'}
       description={
         <div>
-          <h4>Export and Reports Demo</h4>
           <p>
             You can export your data from the Grid via Reports. There are 4
             which ship with AdapTable (All Rows, All Visible Rows, Selected
@@ -27,37 +26,38 @@ export default () => {
             (exporting to CSV) automatically every day at 17:30 (you can edit
             the schedule to see it run at a time you provide).
           </p>
-          <p>
-            <b>AdapTable Help Resources:</b>{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_exportstate_.exportstate.html"
-              target="_blank"
-            >
-              Predefined Config
-            </a>
-            ,{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_api_exportapi_.exportapi.html"
-              target="_blank"
-            >
-              Adaptable API
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002179358-Export-FAQ"
-              target="_blank"
-            >
-              FAQ
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755197-Grid-Functions"
-              target="_blank"
-            >
-              User Guide
-            </a>
-            .
-          </p>
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_exportstate_.exportstate.html"
+            target="_blank"
+          >
+            Predefined Config
+          </a>
+          ,{' '}
+          <a
+            href="https://api.adaptabletools.com/interfaces/_api_exportapi_.exportapi.html"
+            target="_blank"
+          >
+            Adaptable API
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002179358-Export-FAQ"
+            target="_blank"
+          >
+            FAQ
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755197-Grid-Functions"
+            target="_blank"
+          >
+            User Guide
+          </a>
+          .
         </div>
       }
     />

@@ -8,9 +8,6 @@ export default () => {
       pageTitle={'Adaptable API Demo'}
       description={
         <div>
-          <h4>
-            <h4>Adaptable API Demo</h4>
-          </h4>
           <p>
             AdapTable includes a very rich API that offers full programmatic
             access to all functionality and AdapTable state.
@@ -39,23 +36,24 @@ export default () => {
             chooser. Note that the functions run as if you were using AdapTable
             and that all State is stored (refresh the page to see).
           </p>
-          <p>
-            <b>AdapTable Help Resources:</b>{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_api_adaptableapi_.adaptableapi"
-              target="_blank"
-            >
-              Adaptable API
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754777-Adaptable-API"
-              target="_blank"
-            >
-              User Guide
-            </a>{' '}
-            .
-          </p>
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://api.adaptabletools.com/interfaces/_api_adaptableapi_.adaptableapi"
+            target="_blank"
+          >
+            Adaptable API
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754777-Adaptable-API"
+            target="_blank"
+          >
+            User Guide
+          </a>{' '}
+          .
         </div>
       }
     />

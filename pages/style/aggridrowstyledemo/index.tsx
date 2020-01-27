@@ -8,7 +8,6 @@ export default () => {
       pageTitle={'Row Style Demo'}
       description={
         <div>
-          <h4>Row Style Demo</h4>
           <p>
             By default ag-Grid will display according to the{' '}
             <a

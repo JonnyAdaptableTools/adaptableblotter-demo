@@ -8,7 +8,6 @@ export default () => {
       pageTitle={'Bond Pricer Demo'}
       description={
         <div>
-          <h4>Bond Pricer Demo</h4>
           <p>To do</p>
         </div>
       }
