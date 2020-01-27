@@ -6,12 +6,9 @@ export default () => {
   return (
     <DynamicDemoPage
       demo={import('../../../src/client/partners/aggridipushpulldemo')}
-      pageTitle={'ipushpull Demo'}
+      pageTitle={'ipushpull / AdapTable Demo'}
       description={
         <div>
-          <p>
-            <h4>ipushpull / AdapTable Demo</h4>
-          </p>
           <p>
             If you want to share your AdapTable reports more widely, (e.g. with
             Symphony chat correspondents or you want to see Live Excel) then you
@@ -60,51 +57,52 @@ export default () => {
             There is also an option to add new ipushpull pages (and more
             functionality coming soon...).
           </p>
-          <p>
-            <b>AdapTable Help Resources:</b>{' '}
-            <a
-              href="https://github.com/AdaptableTools/example-adaptableblotter-ipushpull-integration/blob/master/index.ts"
-              target="_blank"
-            >
-              Github Example
-            </a>{' '}
-            |{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_ipushpullstate_.ipushpullstate.html"
-              target="_blank"
-            >
-              Predefined Config
-            </a>{' '}
-            |{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_api_ipushpullapi_.ipushpullapi.html"
-              target="_blank"
-            >
-              Adaptable API
-            </a>{' '}
-            |{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360004099278-iPushPull-FAQ"
-              target="_blank"
-            >
-              FAQ
-            </a>{' '}
-            |{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360004003298-iPushPull"
-              target="_blank"
-            >
-              Videos
-            </a>{' '}
-            |{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360004256778#UUID-bea0c942-9326-7490-30b2-9a75709ac7d6"
-              target="_blank"
-            >
-              User Guide
-            </a>
-            .
-          </p>
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://github.com/AdaptableTools/example-adaptableblotter-ipushpull-integration/blob/master/index.ts"
+            target="_blank"
+          >
+            Github Example
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_ipushpullstate_.ipushpullstate.html"
+            target="_blank"
+          >
+            Predefined Config
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://api.adaptabletools.com/interfaces/_api_ipushpullapi_.ipushpullapi.html"
+            target="_blank"
+          >
+            Adaptable API
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360004099278-iPushPull-FAQ"
+            target="_blank"
+          >
+            FAQ
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360004003298-iPushPull"
+            target="_blank"
+          >
+            Videos
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360004256778#UUID-bea0c942-9326-7490-30b2-9a75709ac7d6"
+            target="_blank"
+          >
+            User Guide
+          </a>
+          .
         </div>
       }
     />

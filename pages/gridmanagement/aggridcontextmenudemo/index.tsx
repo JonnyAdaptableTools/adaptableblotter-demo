@@ -8,7 +8,6 @@ export default () => {
       pageTitle={'Context Menu Demo'}
       description={
         <div>
-          <h4>Context Menu Demo</h4>
           <p>
             The Grid Info button (the button in the Home Toolbar with the info
             sign) provides at a glace summary information about your instance of

@@ -8,7 +8,6 @@ export default () => {
       pageTitle={'System Status Demo'}
       description={
         <div>
-          <h4>System Status Demo</h4>
           <p>
             The System Status function is provided for you to show messages to
             your Users at run-time if something important has happened to the
@@ -53,38 +52,38 @@ export default () => {
             </a>
             .
           </p>
-
-          <p>
-            <b>AdapTable Help Resources:</b>{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_systemstatusstate_.systemstatusstate.html"
-              target="_blank"
-            >
-              Predefined Config
-            </a>
-            ,{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_api_systemstatusapi_.systemstatusapi.html"
-              target="_blank"
-            >
-              Adaptable API
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029895931-Alert-Functions-FAQ"
-              target="_blank"
-            >
-              FAQ
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754957-Run-Time-Access"
-              target="_blank"
-            >
-              User Guide
-            </a>
-            .
-          </p>
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_systemstatusstate_.systemstatusstate.html"
+            target="_blank"
+          >
+            Predefined Config
+          </a>
+          ,{' '}
+          <a
+            href="https://api.adaptabletools.com/interfaces/_api_systemstatusapi_.systemstatusapi.html"
+            target="_blank"
+          >
+            Adaptable API
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029895931-Alert-Functions-FAQ"
+            target="_blank"
+          >
+            FAQ
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754957-Run-Time-Access"
+            target="_blank"
+          >
+            User Guide
+          </a>
+          .
         </div>
       }
     />

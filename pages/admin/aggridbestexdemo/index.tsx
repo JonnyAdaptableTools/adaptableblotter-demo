@@ -8,7 +8,6 @@ export default () => {
       pageTitle={'Best Execution Demo'}
       description={
         <div>
-          <h4>Best Execution Demo</h4>
           <p>To do</p>
           <p>
             You can choose to send any (or all) of <b>Cell Edit</b>,{' '}

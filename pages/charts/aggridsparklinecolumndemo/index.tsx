@@ -5,10 +5,9 @@ export default () => {
   return (
     <DynamicDemoPage
       demo={import('../../../src/client/charts/aggridsparklinecolumndemo')}
-      pageTitle={'SparklineColumn Demo'}
+      pageTitle={'Sparkline (Column) Demo'}
       description={
         <div>
-          <h4>Sparkline (Column) Demo</h4>
           <p>
             You can see a Sparkline view of any <b>numeric column</b> by
             clicking 'View as Sparkline' in the Column Header Menu.

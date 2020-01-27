@@ -126,6 +126,30 @@ h5 {
   position: relative;
 }
 
+.description {
+  background-color: #f5f5f5;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: var(--demo-space-2);
+  // width: max-content;
+  //  font-family: 'Courier New', Courier, monospace;
+  position: relative;
+
+  pre {
+    font-family: inherit;
+    white-space: normal;
+  }
+}
+
+.helpResource {
+  background-color: #f5f5f5;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: var(--demo-space-0);
+  //font-family: 'verdana';
+  // position: relative;
+}
+
 .main {
   margin-top: var(--demo-space-3);
   padding: var(--demo-space-3-5);

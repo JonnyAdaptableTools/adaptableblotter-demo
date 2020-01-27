@@ -8,7 +8,6 @@ export default () => {
       pageTitle={'Tool Panel Demo'}
       description={
         <div>
-          <h4>Tool Panel Demo</h4>
           <p>
             The AdapTable Tool Panel is designed for situations when screen
             estate is limited and the Dashboard is too 'bulky'.
@@ -33,37 +32,38 @@ export default () => {
             Toolpanel to show on open. You can 'restore' the Dashboard via the
             dropdown in the 'Dashboard' Toolbar control.
           </p>
-          <p>
-            <b>AdapTable Help Resources:</b>{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_toolpanelstate_.toolpanelstate.html"
-              target="_blank"
-            >
-              Predefined Config
-            </a>
-            ,{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_api_toolpanelapi_.toolpanelapi.html"
-              target="_blank"
-            >
-              Adaptable API
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360004952777-ToolPanel-FAQ"
-              target="_blank"
-            >
-              FAQ
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002774498-Dashboard"
-              target="_blank"
-            >
-              User Guide
-            </a>
-            .
-          </p>
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_toolpanelstate_.toolpanelstate.html"
+            target="_blank"
+          >
+            Predefined Config
+          </a>
+          ,{' '}
+          <a
+            href="https://api.adaptabletools.com/interfaces/_api_toolpanelapi_.toolpanelapi.html"
+            target="_blank"
+          >
+            Adaptable API
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360004952777-ToolPanel-FAQ"
+            target="_blank"
+          >
+            FAQ
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002774498-Dashboard"
+            target="_blank"
+          >
+            User Guide
+          </a>
+          .
         </div>
       }
     />

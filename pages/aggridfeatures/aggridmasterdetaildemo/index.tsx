@@ -8,9 +8,6 @@ export default () => {
       pageTitle={'Master Detail Demo'}
       description={
         <div>
-          <h4>
-            <h4>Master Detail Demo</h4>
-          </h4>
           <p>
             This demo show how Master / Details can work in AdapTable if it is
             something that is offered by the underlying vendor grid (which is in

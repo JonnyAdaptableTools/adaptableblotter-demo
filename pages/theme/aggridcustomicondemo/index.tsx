@@ -8,8 +8,7 @@ export default () => {
       pageTitle={'Custom Icon Demo'}
       className="custom-icon-demo"
       description={
-        <>
-          <h4>Custom Icon Demo</h4>
+        <div>
           <p>
             It is straightforward to change one of the icons provided by
             AdapTable with your own icon. Simply override the relevant icon in
@@ -36,18 +35,18 @@ export default () => {
             site used for the shipped icons, but they can come from anywhere you
             specify.
           </p>
-
-          <p>
-            <b>AdapTable Help Resources:</b>{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755177-Styling-Functions"
-              target="_blank"
-            >
-              User Guide
-            </a>
-            .
-          </p>
-        </>
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755177-Styling-Functions"
+            target="_blank"
+          >
+            User Guide
+          </a>
+          .
+        </div>
       }
     />
   );

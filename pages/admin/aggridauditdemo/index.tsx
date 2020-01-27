@@ -8,7 +8,6 @@ export default () => {
       pageTitle={'Audit Log Demo'}
       description={
         <div>
-          <h4>Audit Log Demo</h4>
           <p>
             Every grid event, mouse click, user action, cell edit etc. is
             auditable by AdapTable and available for you to listen to and review
@@ -29,29 +28,30 @@ export default () => {
             to the Console; open the Console in Developer Tools and see the
             messages appear as you edit data and create objects in AdapTable.
           </p>
-          <p>
-            <b>AdapTable Help Resources:</b>{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028585212-Audit-Events-API"
-              target="_blank"
-            >
-              Adaptable API
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360008819232-Audit-Log-FAQ"
-              target="_blank"
-            >
-              FAQ
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754518-Audit-Log"
-              target="_blank"
-            >
-              User Guide
-            </a>
-          </p>
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028585212-Audit-Events-API"
+            target="_blank"
+          >
+            Adaptable API
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360008819232-Audit-Log-FAQ"
+            target="_blank"
+          >
+            FAQ
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754518-Audit-Log"
+            target="_blank"
+          >
+            User Guide
+          </a>
         </div>
       }
     />

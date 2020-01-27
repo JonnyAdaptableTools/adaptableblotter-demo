@@ -5,10 +5,9 @@ export default () => {
   return (
     <DynamicDemoPage
       demo={import('../../../src/client/config/aggridnoconfigdemo')}
-      pageTitle={'Adaptable No Config Demo'}
+      pageTitle={'No Config Demo'}
       description={
         <div>
-          <h4>No Config Demo</h4>
           <p>
             AdapTable offers more than 30 functions to allow you to search,
             filter, edit, audit, export and style your data in cutting-edge and

@@ -5,10 +5,9 @@ export default () => {
   return (
     <DynamicDemoPage
       demo={import('../../../src/client/config/aggridpredefinedconfigdemo')}
-      pageTitle={'Adaptable Predefined Config Demo'}
+      pageTitle={'Predefined Config Demo'}
       description={
         <div>
-          <h4>Predefined Config Demo</h4>
           <p>
             Typically you will pre-ship your AdapTable instance with 'Predefined
             Config' - ie objects that you have created at design time for your
@@ -31,31 +30,31 @@ export default () => {
             state. Edit these objects or create some of your own and refresh the
             page and you will see Adaptable will reload with all your changes.
           </p>
-
-          <p>
-            <b>AdapTable Help Resources:</b>{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754817-Predefined-Config"
-              target="_blank"
-            >
-              Predefined Config
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360008819312-Configuration-FAQ"
-              target="_blank"
-            >
-              FAQ
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754837-User-State"
-              target="_blank"
-            >
-              User Guide
-            </a>
-            .
-          </p>
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754817-Predefined-Config"
+            target="_blank"
+          >
+            Predefined Config
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360008819312-Configuration-FAQ"
+            target="_blank"
+          >
+            FAQ
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754837-User-State"
+            target="_blank"
+          >
+            User Guide
+          </a>
+          .
         </div>
       }
     />

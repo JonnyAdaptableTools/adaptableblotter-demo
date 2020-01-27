@@ -7,8 +7,7 @@ export default () => {
       demo={import('../../../src/client/theme/aggridcustomthemedemo')}
       pageTitle={'Custom Theme Demo'}
       description={
-        <>
-          <h4>Custom Theme Demo</h4>
+        <div>
           <p>
             AdapTable ships with 2 themes - Dark or Light. But you can create
             your own theme yourself through the use of{' '}
@@ -46,38 +45,39 @@ export default () => {
             to tell AdapTable to load the ag-Grid <i>ag-theme-blue</i> theme
             also.
           </p>
-          <p>
-            <b>AdapTable Help Resources:</b>{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_themestate_.themestate.html"
-              target="_blank"
-            >
-              Predefined Config
-            </a>
-            ,{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_api_themeapi_.themeapi.html"
-              target="_blank"
-            >
-              Adaptable API
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360009005211-Theme-Picker-FAQ"
-              target="_blank"
-            >
-              FAQ
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755177-Styling-Functions"
-              target="_blank"
-            >
-              User Guide
-            </a>
-            .
-          </p>
-        </>
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_themestate_.themestate.html"
+            target="_blank"
+          >
+            Predefined Config
+          </a>
+          ,{' '}
+          <a
+            href="https://api.adaptabletools.com/interfaces/_api_themeapi_.themeapi.html"
+            target="_blank"
+          >
+            Adaptable API
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360009005211-Theme-Picker-FAQ"
+            target="_blank"
+          >
+            FAQ
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755177-Styling-Functions"
+            target="_blank"
+          >
+            User Guide
+          </a>
+          .
+        </div>
       }
     />
   );
