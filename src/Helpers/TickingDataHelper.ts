@@ -67,10 +67,8 @@ export class TickingDataHelper {
   ) {
     if (gridOptions != null && gridOptions.api != null) {
       setInterval(() => {
-        let possIds: number[] = [10982, 10949, 10810, 10620, 10339];
-        let test: number = this.generateRandomInt(0, 4);
-        let orderId = possIds[test];
-        let rowNode: RowNode = gridOptions.api!.getRowNode(orderId);
+        let index: number = this.generateRandomInt(11084, 11142);
+        let rowNode: RowNode = gridOptions.api!.getRowNode(index);
         if (rowNode) {
           //  const order: any = { ...gridOptions.rowData[tradeId] };
           const order: any = { ...rowNode.data };
