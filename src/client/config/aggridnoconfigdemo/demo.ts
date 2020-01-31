@@ -38,6 +38,9 @@ export default () => {
   Adaptable.init(adaptableOptions);
 
   return {
+    unload: () => {
+      console.log('noconfigunload');
+    },
     predefinedConfig,
     adaptableOptions: adaptableOptionsClone,
   };
