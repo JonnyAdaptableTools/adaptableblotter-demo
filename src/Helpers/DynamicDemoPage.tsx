@@ -2,6 +2,8 @@ import React, { useState, useMemo, useEffect } from 'react';
 import AgGridDemoPage, { AgGridDemoPageProps } from '../AgGridDemoPage';
 import dynamic from 'next/dynamic';
 
+import Router from 'next/router';
+
 type DynamicComponentType = {
   onReady: (config: any) => void;
 };
@@ -42,9 +44,17 @@ export default (props: { demo: any } & AgGridDemoPageProps) => {
       <DynamicComponent
         onReady={info => {
           if (info) {
-            const { predefinedConfig, adaptableOptions } = info;
+            const { predefinedConfig, adaptableOptions, unload } = info;
             setPredefinedConfig(predefinedConfig);
             setAdaptableOptions(adaptableOptions);
+
+            if (typeof unload === 'function') {
+              const doUnload = () => {
+                unload();
+                Router.events.off('routeChangeStart', doUnload);
+              };
+              Router.events.on('routeChangeStart', doUnload);
+            }
           }
         }}
       />
