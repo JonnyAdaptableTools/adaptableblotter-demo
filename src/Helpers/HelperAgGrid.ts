@@ -947,6 +947,7 @@ export class HelperAgGrid {
       headerName: 'Invoiced',
       field: 'InvoicedCost',
       cellClass: 'number-cell',
+      aggFunc: 'sum',
       cellRenderer: this.currencyRendereragGrid,
       editable: true,
       filter: true,
@@ -989,6 +990,7 @@ export class HelperAgGrid {
       filter: true,
       sortable: true,
       enableValue: true,
+      aggFunc: 'sum',
       cellRenderer: this.currencyRendereragGrid,
       type: 'abColDefNumber',
     };

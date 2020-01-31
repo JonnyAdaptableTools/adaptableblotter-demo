@@ -19,32 +19,46 @@ export default () => {
         <p>
           <h3>
             AdapTable is the most advanced and powerful HTML5 Data Management
-            Solution on the market today.
+            Solution available today.
           </h3>
-          AdapTable provides, out of the box, all the functionality that
-          financial and other advanced users require to be productive and
-          efficient; and which is typically built on a bespoke basis for each
-          project.
+          <b>
+            AdapTable provides all the functionality users need to manage data.
+          </b>{' '}
           <br />
-          AdapTable sits on top of (and integrates with) a number of HTML5
-          vendor DataGrids both vendor and open source.
+          AdapTable allows users to control data easily, helping them to be
+          productive and efficient, while replacing risk-laden, expensive,
+          time-consuming and unique builds. <br />
+          AdapTable sits on top of a number of HTML5 DataGrids, both vendor and
+          open source, with which it integrates, allowing you to make the
+          choices in underlying technologies that work for you.
           <br />
           AdapTable is fully data-agnostic and can work with any data set, for
-          any desk, in any team, in any organisation, in any Location
-          <br />
+          any desk, in any team, in any organisation, in any location.
         </p>
         <p>
           <b>Functions</b> <br />
-          AdapTable contains a large number of <i>Functions</i>, each of which
-          corresponds to a particular DataGrid use case (e.g. Advanced Search,
-          Bulk Update, Pie Chart etc)
-          <br />
+          AdapTable contains a large number of <b>Functions</b> (e.g. Advanced
+          Search, Bulk Update, Pie Chart etc). <br />
           Each function has its own 'popup screen' and many also have their own
           toolbars or tool panels for easy access.
+          <br />
+          All functions are available to all users (depending on the{' '}
+          <a href="./admin/aggridentitlementsdemo" target="_blank">
+            <b>entitlements</b>
+          </a>{' '}
+          you set). The combination of a selection from these functions is what
+          drives client problem solving.
+          <br />
+          We can work with you to establish how the function set can help
+          resolve your issues, creating the fastest, most easy to use
+          applications delivering productivity and profit enhancements.
         </p>
         <p>
           <b>Key Concepts</b> <br />
-          When you release an application using AdapTable you will typically
+          AdapTable offers full functionality out of the box, and can be up and
+          running within your application within moments of being downloaded,
+          using a single line of code. <br />
+          But when you release an application using AdapTable you will typically
           ship it with{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_predefinedconfig_predefinedconfig_.predefinedconfig.html"
@@ -54,8 +68,7 @@ export default () => {
           </a>{' '}
           - objects that you have created at design time (eg. searches, layouts,
           styles, entitlements etc.) that you would like to be available when it
-          first loads.
-          <br />
+          first loads. <br />
           You set this Predefined Config as a property of{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_adaptableoptions_adaptableoptions_.adaptableoptions"
@@ -64,8 +77,7 @@ export default () => {
             <b>Adaptable Options</b>
           </a>{' '}
           - the object that allows you set up AdapTable to meet your precise
-          requirements.
-          <br />
+          requirements. <br />
           AdaptableOptions is the only property required by AdapTable's
           constructor which returns the{' '}
           <a
@@ -74,30 +86,30 @@ export default () => {
           >
             <b>Adaptable Api</b>
           </a>{' '}
-          giving you full run-time, code, access to all AdapTable functionality
+          giving you full run-time, code access to all AdapTable functionality
           and state.
-          <br />
         </p>
         <p>
           <b>The Demos</b> <br />
-          There are a very large number of{' '}
+          There is a very large number of{' '}
           <a href="/AdaptableDemoList" target="_self">
             demos
           </a>{' '}
-          on this site. They can be divided into 4 groups:
+          on this site, allowing you to look at whatever aspects of AdapTable
+          most excite you. Each demo seeks to do one of four things:
           <ul>
             <li>
-              Demonstrating each AdapTable function sorted by type (e.g. Search,
-              Edit etc.)
+              To demonstrate how an AdapTable function operates. These are
+              sorted by type (e.g. Search, Edit etc.)
             </li>
             <li>
-              Showing key UI elements (e.g. Dashboard, Tool Panel, Context and
+              To show key UI elements (e.g. Dashboard, Tool Panel, Context and
               Column Menus etc.)
             </li>
-            <li>Illustrating some of the Adaptable Options on offer.</li>
+            <li>To illustrate some of the AdapTable Options on offer.</li>
             <li>
-              Showcasing key admin elements like Audit Log, Big Data, the
-              Adaptable Api etc.
+              To showcasing key admin elements like Audit Log, Big Data, the
+              AdapTable Api etc.
             </li>
           </ul>
           Each demo includes a small amount of relevant Predefined Config in
@@ -116,7 +128,7 @@ export default () => {
           >
             integrates very well
           </a>{' '}
-          with AdapTable), and data from the Microsoft Northwind database
+          with AdapTable), and dummy data from the Microsoft Northwind database
           (Orders table). <br />
         </p>
 
@@ -252,7 +264,7 @@ export default () => {
         <p>
           <b>Licence and Pricing</b>
           <br />
-          AdapTable requires a commerical licence sold on an annual basis. This
+          AdapTable requires a commercial licence sold on an annual basis. This
           includes guaranteed quarterly (often monthly) updates together with
           full ongoing support.
           <br />
@@ -270,26 +282,28 @@ export default () => {
         <p>
           <b>Grid Gurus</b>
           <br />
-          When developing AdapTable, the Adaptable Tools dev team learned
+          To develop AdapTable, the Adaptable Tools Development Team learned
           everything there is to know (and more!) about all the DataGrids that
-          we support, particularly the excellent ag-Grid.
+          we support, including the hugely popular ag-Grid.
           <br />
-          We researched all the multiple set up and configuration options, the
-          different ways to get data into the grid, the various display modes,
+          We researched multiple set up and configuration options, the different
+          ways to get data into the grid, the various display modes, when and
           whether to use server or client, when to group, aggregate or pivot,
-          how best to update data and much, much more. <br />
-          Our{' '}
+          how best to update data and much more.
+          <br />
+          Through our{' '}
           <b>
-            <i>Grid Guru Service</i>
+            <i>Grid Gurus' Service</i>
           </b>{' '}
-          puts that unrivalled knowledge to good use by working with you when
-          you set up your DataGrid to ensure that you are making the right
-          decisions for your project and requirements. <br />
-          We will work (on-site if you prefer) to set up your Grid in a bespoke
-          fashion so that is ideally aligned with your use cases. This is
-          particularly important at the start of the project when making the
-          right architectural and design decisions can save you lots of money,
-          time and support heartache down the line...
+          you can deploy that unrivalled knowledge alongside your own team to
+          help shape DataGrid projects and ensure that they meet your
+          requirements as cost and time-effectively as possible. Adaptable
+          Tools’ Grid Gurus can work on-site or off-site to set up your Grid in
+          a bespoke fashion so that it has optimal alignment to your use cases.
+          <br />
+          This is particularly important at the start of the project when making
+          the right architectural and design decisions can save money, time and
+          support heartache down the line...
           <br />
         </p>
         <p>
