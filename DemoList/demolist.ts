@@ -575,10 +575,10 @@ export function getDemoPageStructure(): DemoPageStructure {
               'We leverage the powerful offering to enable multiple AdapTable instances to share state, data and events',
           },
           {
-            Name: 'iPushPull',
+            Name: 'ipushpull',
             Link: '/partners/ipushpulldemo',
             Description:
-              'Export AdapTable data to Excel (with Live Updates) or Symphony and elsewhere by using the services of our partner iPushPull',
+              'Export AdapTable data to Excel (with Live Updates) or Symphony and elsewhere by using the services of our partner ipushpull',
           },
           {
             Name: 'OpenFin',

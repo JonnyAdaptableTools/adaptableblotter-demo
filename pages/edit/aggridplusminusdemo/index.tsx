@@ -8,7 +8,6 @@ export default () => {
       pageTitle={'Plus Minus Demo'}
       description={
         <div>
-          <h4>Plus Minus Demo</h4>
           <p>
             Plus Minus function allows you to creage 'Nudge Rules' which react
             to the '+' or '-' keys being pressed in numeric cells.
@@ -24,44 +23,45 @@ export default () => {
             which will increment / decrement by 20 if Employee is 'Janet
             Leverling'.
           </p>
-          <p>
-            <b>AdapTable Help Resources:</b>{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_plusminusstate_.plusminusstate.html"
-              target="_blank"
-            >
-              Predefined Config
-            </a>
-            ,{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_api_plusminusapi_.plusminusapi.html"
-              target="_blank"
-            >
-              Adaptable API
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029742892-Plus-Minus-FAQ"
-              target="_blank"
-            >
-              FAQ
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360030079731-Plus-Minus-Videos"
-              target="_blank"
-            >
-              Videos
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754698-Edit-Functions"
-              target="_blank"
-            >
-              User Guide
-            </a>
-            .
-          </p>
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_plusminusstate_.plusminusstate.html"
+            target="_blank"
+          >
+            Predefined Config
+          </a>
+          ,{' '}
+          <a
+            href="https://api.adaptabletools.com/interfaces/_api_plusminusapi_.plusminusapi.html"
+            target="_blank"
+          >
+            Adaptable API
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029742892-Plus-Minus-FAQ"
+            target="_blank"
+          >
+            FAQ
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360030079731-Plus-Minus-Videos"
+            target="_blank"
+          >
+            Videos
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754698-Edit-Functions"
+            target="_blank"
+          >
+            User Guide
+          </a>
+          .
         </div>
       }
     />

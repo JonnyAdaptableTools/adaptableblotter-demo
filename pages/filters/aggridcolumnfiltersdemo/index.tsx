@@ -8,7 +8,6 @@ export default () => {
       pageTitle={'Column Filters Demo'}
       description={
         <div>
-          <h4>Column Filters Demo</h4>
           <p>
             Each (filterable) column has a filters tab in the Column Menu (the
             second option). Alternatively you can click on the filter icon next
@@ -29,44 +28,45 @@ export default () => {
             Note: You can show / hide the Quick Filter bar through the Column
             Menu or by clicking the last button in the Column Filter toolbar.
           </p>
-          <p>
-            <b>AdapTable Help Resources:</b>{' '}
-            <a
-              href="https://api.adaptabletools.com/modules/_predefinedconfig_columnfilterstate_.html"
-              target="_blank"
-            >
-              Predefined Config
-            </a>
-            ,{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_api_columnfilterapi_.columnfilterapi.html"
-              target="_blank"
-            >
-              Adaptable API
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029896011-Filter-FAQ"
-              target="_blank"
-            >
-              FAQ
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028637912-Filtering-Videos"
-              target="_blank"
-            >
-              Videos
-            </a>
-            ,{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755137-Search-Functions"
-              target="_blank"
-            >
-              User Guide
-            </a>
-            .
-          </p>
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://api.adaptabletools.com/modules/_predefinedconfig_columnfilterstate_.html"
+            target="_blank"
+          >
+            Predefined Config
+          </a>
+          ,{' '}
+          <a
+            href="https://api.adaptabletools.com/interfaces/_api_columnfilterapi_.columnfilterapi.html"
+            target="_blank"
+          >
+            Adaptable API
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029896011-Filter-FAQ"
+            target="_blank"
+          >
+            FAQ
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028637912-Filtering-Videos"
+            target="_blank"
+          >
+            Videos
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755137-Search-Functions"
+            target="_blank"
+          >
+            User Guide
+          </a>
+          .
         </div>
       }
     />

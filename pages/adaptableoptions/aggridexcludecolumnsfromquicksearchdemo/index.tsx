@@ -10,7 +10,6 @@ export default () => {
       pageTitle={'Exclude Quick Search Columns Demo'}
       description={
         <div>
-          <h4>Exclude Quick Search Columns Demo</h4>
           <p>
             By default AdapTable will search every visible column when running
             Quick Seach.
@@ -31,15 +30,16 @@ export default () => {
             In this example our function will exclude the <i>Contact</i> Column
             which is why 'Maria Larsson' does not show up in the result set.
           </p>
-          <p>
-            <b>AdapTable Help Resources:</b>{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_adaptableoptions_searchoptions_.searchoptions.html"
-              target="_blank"
-            >
-              Adaptable Options
-            </a>
-          </p>{' '}
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://api.adaptabletools.com/interfaces/_adaptableoptions_searchoptions_.searchoptions.html"
+            target="_blank"
+          >
+            Adaptable Options
+          </a>
         </div>
       }
     />

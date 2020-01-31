@@ -8,7 +8,6 @@ export default () => {
       pageTitle={'Sparkline Charts Demo'}
       description={
         <div>
-          <h4>Sparkline Charts Demo</h4>
           <p>Sparklines enable you to see your data as a range.</p>
           <p>
             They are most useful, and most typically used, within a column (see
@@ -27,15 +26,16 @@ export default () => {
             By default all charts are live so as you change the data in the grid
             the chart will update automatically.
           </p>
-          <p>
-            <b>AdapTable Help Resources:</b>{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755217-Chart-Functionss"
-              target="_blank"
-            >
-              User Guide
-            </a>
-          </p>
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755217-Chart-Functionss"
+            target="_blank"
+          >
+            User Guide
+          </a>
         </div>
       }
     />

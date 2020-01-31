@@ -8,7 +8,6 @@ export default () => {
       pageTitle={'Pie Charts Demo'}
       description={
         <div>
-          <h4>Pie Charts Demo</h4>
           <p>
             Pie Charts enable you to see your data in a segmented way. You can
             run pie charts either through the Charting Wizard or through a
@@ -36,15 +35,16 @@ export default () => {
             <i>showModal</i> to false so that the chart appears above the grid
             (and not in a popup).
           </p>
-          <p>
-            <b>AdapTable Help Resources:</b>{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755217-Chart-Functionss"
-              target="_blank"
-            >
-              User Guide
-            </a>
-          </p>
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755217-Chart-Functionss"
+            target="_blank"
+          >
+            User Guide
+          </a>
         </div>
       }
     />

@@ -11,12 +11,10 @@ export default () => {
   return (
     <MainPage pageTitle="AdapTable Demos">
       <div>
-        <h3>AdapTable Demos</h3>
         <i>
           Version:&nbsp;
           {version}&nbsp;&nbsp;({versiondate})
         </i>
-        <br />
         <br />
         <p>
           <h3>
@@ -25,106 +23,131 @@ export default () => {
           </h3>
           AdapTable provides, out of the box, all the functionality that
           financial and other advanced users require to be productive and
-          efficient. And which usually needs to be built on a bespoke basis for
-          each project.
+          efficient; and which is typically built on a bespoke basis for each
+          project.
           <br />
           AdapTable sits on top of (and integrates with) a number of HTML5
           vendor DataGrids both vendor and open source.
           <br />
           AdapTable is fully data-agnostic and can work with any data set, for
-          any Desk, in any team, at any Location
+          any desk, in any team, in any organisation, in any Location
           <br />
         </p>
         <p>
           <b>Functions</b> <br />
-          AdapTable contains a large number of 'functions' each of which
+          AdapTable contains a large number of <i>Functions</i>, each of which
           corresponds to a particular DataGrid use case (e.g. Advanced Search,
           Bulk Update, Pie Chart etc)
-        </p>
-        <p>
-          This site contains a bespoke demo for most of the functions in
-          AdapTable.
-        </p>
-        <p>
-          <b>The Demos</b> <br />
-          There are many demos on this site each of which illustrate an
-          AdapTable function, or an <i>AdaptableOption</i>, a UI feature or a
-          piece of admin or advanced functionality.
           <br />
-          You can see a full list of the available demos{' '}
-          <a href="/AdaptableDemoList" target="_self">
-            here
-          </a>
-          .
+          Each function has its own 'popup screen' and many also have their own
+          toolbars or tool panels for easy access.
         </p>
         <p>
-          <b>Predefined Config</b> <br />
+          <b>Key Concepts</b> <br />
           When you release an application using AdapTable you will typically
           ship it with{' '}
           <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754817-Predefined-Config"
+            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_predefinedconfig_.predefinedconfig.html"
             target="_blank"
           >
-            Predefined Config
+            <b>Predefined Config</b>
           </a>{' '}
-          - state that you have created at design time (eg. searches, layouts,
-          styles, entitlements etc.)
+          - objects that you have created at design time (eg. searches, layouts,
+          styles, entitlements etc.) that you would like to be available when it
+          first loads.
           <br />
-          You will also set up the Options you need for your grid instance using
-          the{' '}
+          You set this Predefined Config as a property of{' '}
           <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754498-Adaptable-Options"
+            href="https://api.adaptabletools.com/interfaces/_adaptableoptions_adaptableoptions_.adaptableoptions"
             target="_blank"
           >
-            Adaptable Options
+            <b>Adaptable Options</b>
           </a>{' '}
-          object.
+          - the object that allows you set up AdapTable to meet your precise
+          requirements.
           <br />
-          Each of these demos includes a small amount of Predefined Config
-          relevant to that function in order to illustrate the potential usage,
-          and adds non-default <i>AdaptableOptions</i> that are required (you
-          can see both of these printed out underneath the demo).
+          AdaptableOptions is the only property required by AdapTable's
+          constructor which returns the{' '}
+          <a
+            href="https://api.adaptabletools.com/interfaces/_api_adaptableapi_.adaptableapi"
+            target="_blank"
+          >
+            <b>Adaptable Api</b>
+          </a>{' '}
+          giving you full run-time, code, access to all AdapTable functionality
+          and state.
           <br />
-          The demos use the excellent{' '}
+        </p>
+        <p>
+          <b>The Demos</b> <br />
+          There are a very large number of{' '}
+          <a href="/AdaptableDemoList" target="_self">
+            demos
+          </a>{' '}
+          on this site. They can be divided into 4 groups:
+          <ul>
+            <li>
+              Demonstrating each AdapTable function sorted by type (e.g. Search,
+              Edit etc.)
+            </li>
+            <li>
+              Showing key UI elements (e.g. Dashboard, Tool Panel, Context and
+              Column Menus etc.)
+            </li>
+            <li>Illustrating some of the Adaptable Options on offer.</li>
+            <li>
+              Showcasing key admin elements like Audit Log, Big Data, the
+              Adaptable Api etc.
+            </li>
+          </ul>
+          Each demo includes a small amount of relevant Predefined Config in
+          order to illustrate the potential usage, and adds any non-default{' '}
+          <i>AdaptableOptions</i> propertiues that are required (both of which
+          are printed out underneath the demo for your convenience).
+          <br />
+          The demos use the excellent, market-leading{' '}
           <a href="https://www.ag-grid.com/" target="_blank">
             ag-Grid
           </a>{' '}
-          as the underlying grid control (which{' '}
+          as the underlying DataGrid (which{' '}
           <a
             href="https://medium.com/ag-grid/getting-more-from-your-datagrid-introducing-adaptable-blotter-2be5debd7e46"
             target="_blank"
           >
             integrates very well
           </a>{' '}
-          with AdapTable), and dummy data from the famous Microsoft Northwind
-          database (Orders table). <br />
+          with AdapTable), and data from the Microsoft Northwind database
+          (Orders table). <br />
         </p>
 
         <p>
-          <b>Integration</b>
+          <b>Installation and Integration</b>
           <br />
-          It is trivial to set up AdapTable and can be done with a single line
-          of code.
-          <br />
-          See our{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754578-Integration"
-            target="_blank"
-          >
-            Integration Help Pages
-          </a>{' '}
-          for more information and also this{' '}
-          <a href="https://yg0we.codesandbox.io/" target="_blank">
-            Live Example
-          </a>{' '}
-          (which you can download and experiment with it yourself using this{' '}
-          <a
-            href="https://codesandbox.io/s/adaptableblotterbasic-yg0we"
-            target="_blank"
-          >
-            Sandbox
+          AdapTable is distributed via a{' '}
+          <a href="https://registry.adaptabletools.com" target="_blank">
+            private npm registry
           </a>
-          ).
+          .
+          <br />
+          It is straightforward to set up AdapTable and can be done with very
+          little code.
+          <br />
+          See the{' '}
+          <a
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/README.md"
+            target="_blank"
+          >
+            ReadMe guide
+          </a>{' '}
+          for more information on installation and integration, or take a look
+          at{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754618-ag-Grid-Example"
+            target="_blank"
+          >
+            this example
+          </a>
+          .
           <br />
         </p>
         <p>
@@ -134,42 +157,45 @@ export default () => {
           AdapTable.
           <br />
           However, for those who prefer to implement the tool using a JavaScript
-          Framework / Library we provide 2 options:
+          Framework / Library we (currently) provide 2 options:
+          <ul>
+            <li>
+              <a
+                href="https://github.com/AdaptableTools/adaptable/tree/master/packages/adaptable-react-aggrid"
+                target="_blank"
+              >
+                React Wrapper
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/AdaptableTools/adaptable/tree/master/packages/adaptable-ng-aggrid"
+                target="_blank"
+              >
+                Angular Wrapper
+              </a>
+            </li>
+          </ul>
         </p>
-        <ul>
-          <li>
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754997-React-Wrapper"
-              target="_blank"
-            >
-              React Wrapper
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755017-Angular-Wrapper"
-              target="_blank"
-            >
-              Angular Wrapper
-            </a>
-          </li>
-        </ul>
-
         <p>
           <b>Help</b>
           <br />
-          If you require further information please visit our{' '}
+          If you require further information please read our{' '}
+          <a href="http://api.adaptabletools.com" target="_blank">
+            developer documentation
+          </a>{' '}
+          , visit our{' '}
           <a href="http://adaptabletools.com" target="_blank">
-            Website
+            website
           </a>{' '}
           or use the{' '}
           <a href="https://adaptabletools.zendesk.com/hc/en-us" target="_blank">
-            Online Help
+            online help
           </a>
           .
         </p>
         <p>
-          <b>Version</b>
+          <b>AdapTable Version</b>
           <br />
           The demos on this site use Version 6 of AdapTable. This contains some
           big changes (and improvements) from previous versions. If you are new
@@ -183,11 +209,10 @@ export default () => {
           .
         </p>
         <p>
-          <b>Github Examples</b>
+          <b>Custom Examples (on Github)</b>
           <br />
-          The AdapTable dev team have produced some custom examples to fit
-          particular use cases that our users have requested. <br />
-          These are found on Github. These include:{' '}
+          We have produced some custom examples to fit particular use cases that
+          our users have requested. These include:
         </p>
         <ul>
           <li>
@@ -195,7 +220,15 @@ export default () => {
               href="https://github.com/AdaptableTools/example-adaptableblotter-angular-aggrid"
               target="_blank"
             >
-              Using the Angular wrapper
+              Using the Angular Wrapper
+            </a>{' '}
+          </li>
+          <li>
+            <a
+              href="https://github.com/AdaptableTools/example-adaptable-react-aggrid"
+              target="_blank"
+            >
+              Using the React Wrapper
             </a>{' '}
           </li>
           <li>
@@ -203,7 +236,7 @@ export default () => {
               href="https://github.com/AdaptableTools/example-adaptableblotter-ipushpull-integration"
               target="_blank"
             >
-              iPushPull Integration
+              ipushpull Integration
             </a>{' '}
           </li>
           <li>

@@ -8,7 +8,6 @@ export default () => {
       pageTitle={'Row Selection Demo'}
       description={
         <div>
-          <h4>Row Selection Demo</h4>
           <p>
             One of the many{' '}
             <a

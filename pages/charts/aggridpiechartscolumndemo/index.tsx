@@ -8,7 +8,6 @@ export default () => {
       pageTitle={'Pie Charts Column Demo'}
       description={
         <div>
-          <h4>Pie Charts (Column) Demo</h4>
           <p>
             You can see a pie (or doughnut) chart view of a single column by
             clicking 'View as Pie Chart' in the Column Header Menu.

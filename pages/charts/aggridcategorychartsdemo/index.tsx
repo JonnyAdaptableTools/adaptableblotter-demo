@@ -8,7 +8,6 @@ export default () => {
       pageTitle={'Category Charts Demo'}
       description={
         <div>
-          <h4>Category Charts Demo</h4>
           <p>
             Category Charts enable you to see your data in a number of formats
             eg. column, line, waterfall, etc.
@@ -21,15 +20,16 @@ export default () => {
             By default all charts are live so as you change the data in the grid
             the chart will update automatically.
           </p>
-          <p>
-            <b>AdapTable Help Resources:</b>{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755217-Chart-Functionss"
-              target="_blank"
-            >
-              User Guide
-            </a>
-          </p>
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755217-Chart-Functionss"
+            target="_blank"
+          >
+            User Guide
+          </a>
         </div>
       }
     />

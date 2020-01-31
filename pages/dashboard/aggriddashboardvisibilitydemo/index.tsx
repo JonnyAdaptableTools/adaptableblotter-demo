@@ -10,7 +10,6 @@ export default () => {
       pageTitle={'Dashboard Visibility Demo'}
       description={
         <div>
-          <h4>Dashboard Visibility Demo</h4>
           <p>
             You can specify - through Predefined Config - the visibility and of
             the Dashboard; options are: Visible (default), Minimised (just the

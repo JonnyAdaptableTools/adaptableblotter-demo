@@ -45,7 +45,7 @@ export default () => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'tradeId',
     userName: 'Demo User',
-    adaptableId: 'iPushPull Demo',
+    adaptableId: 'ipushpull Demo',
     vendorGrid: gridOptions,
     predefinedConfig: predefinedConfig,
   };

@@ -8,7 +8,6 @@ export default () => {
       pageTitle={'DataSource Changes Demo'}
       description={
         <div>
-          <h4>DataSource Changes Demo</h4>
           <p>
             This demo illustrates what happens when the dataset which provides
             the Data Source for the underlying grid changes.

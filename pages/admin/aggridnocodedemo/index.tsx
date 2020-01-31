@@ -8,7 +8,6 @@ export default () => {
       pageTitle={'No Code Demo'}
       description={
         <div>
-          <h4>No Code Demo</h4>
           <p>
             The No Code Plugin allows you to create an AdapTable instance at
             runtime from any JSON (and soon any Excel) file that you give it.

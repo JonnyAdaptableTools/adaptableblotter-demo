@@ -13,7 +13,8 @@ export type AgGridDemoPageProps = {
   config?: any;
   adaptableOptions?: any;
   className?: string;
-  description: any;
+  description?: any;
+  helpResources?: any;
 } & MainPageProps;
 
 const CopyToClibpoard = ({ value }: { value: string }) => {
@@ -50,17 +51,28 @@ const CopyToClibpoard = ({ value }: { value: string }) => {
 const Snippet = ({
   title,
   children,
+  shouldCopy,
+  className,
 }: {
   title: ReactNode;
   children: string;
+  shouldCopy: boolean;
+  className: string;
 }) => {
   const [expanded, setExpanded] = useState(true);
   if (!children) {
     return null;
   }
   return (
-    <div className="config">
-      <div style={{ display: 'flex', flexFlow: 'row', alignItems: 'center' }}>
+    <div className={className}>
+      <div
+        style={{
+          display: 'flex',
+          flexFlow: 'row',
+          alignItems: 'center',
+          //  flexWrap: 'wrap',
+        }}
+      >
         <div
           title={`Click to ${expanded ? 'collapse' : 'expand'}`}
           onClick={() => {
@@ -83,13 +95,28 @@ const Snippet = ({
               transformOrigin: 'center',
             },
           })}
-          {title}{' '}
+          {title}
         </div>
-
-        <CopyToClibpoard value={children} />
+        {shouldCopy && <CopyToClibpoard value={children} />}
       </div>
-      <br />
+
       {expanded ? <pre>{children}</pre> : null}
+    </div>
+  );
+};
+
+const HelpResources = ({ children }: { children: string }) => {
+  if (!children) {
+    return null;
+  }
+  return (
+    <div className="helpResource">
+      <div style={{ display: 'flex', flexFlow: 'row', alignItems: 'center' }}>
+        <span style={{ marginLeft: '5px' }}>
+          {<b>AdapTable Help Resources: </b>}{' '}
+        </span>
+        <span style={{ marginLeft: '5px' }}>{children}</span>
+      </div>
     </div>
   );
 };
@@ -101,7 +128,9 @@ export default ({
   config,
   className,
   adaptableOptions,
-}: AgGridDemoPageProps) => {
+  helpResources,
+}: //testDescription,
+AgGridDemoPageProps) => {
   if (config) {
     const removeUuid = (value: any): any => {
       if (value && value.Uuid) {
@@ -113,19 +142,36 @@ export default ({
   }
 
   return (
-    <MainPage
-      className={className}
-      pageTitle={pageTitle}
-      description={description}
-    >
+    <MainPage className={className} pageTitle={pageTitle}>
+      <Snippet
+        title={<b>{pageTitle}</b>}
+        shouldCopy={false}
+        className={'description'}
+      >
+        {description}
+      </Snippet>
+      <HelpResources>{helpResources}</HelpResources>
       <div id="adaptable" />
       <p />
       <div id="grid" className="ag-theme-balham" style={{ height: 600 }} />
 
       {children}
 
-      <Snippet title={<b>Predefined Config</b>}>{config}</Snippet>
-      <Snippet title={<b>Adaptable Options</b>}>{adaptableOptions}</Snippet>
+      <Snippet
+        title={<b>Predefined Config</b>}
+        shouldCopy={true}
+        className={'config'}
+      >
+        {config}
+      </Snippet>
+
+      <Snippet
+        title={<b>Adaptable Options</b>}
+        shouldCopy={true}
+        className={'config'}
+      >
+        {adaptableOptions}
+      </Snippet>
     </MainPage>
   );
 };

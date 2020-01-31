@@ -8,7 +8,6 @@ export default () => {
       pageTitle={'Server Lookups Demo'}
       description={
         <div>
-          <h4>Server Lookups Demo</h4>
           <p>
             By default when showing a list of filter values (or a list of
             distinct column values when building a query) AdapTable will create
@@ -38,15 +37,16 @@ export default () => {
             query only a subset of values are shown; other columns display
             distinct values normally.
           </p>
-          <p>
-            <b>AdapTable Help Resources:</b>{' '}
-            <a
-              href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028584632-Query-Options"
-              target="_blank"
-            >
-              User Guide
-            </a>
-          </p>{' '}
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028584632-Query-Options"
+            target="_blank"
+          >
+            User Guide
+          </a>
         </div>
       }
     />

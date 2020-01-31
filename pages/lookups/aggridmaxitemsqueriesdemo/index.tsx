@@ -5,10 +5,9 @@ export default () => {
   return (
     <DynamicDemoPage
       demo={import('../../../src/client/lookups/aggridmaxitemsqueriesdemo')}
-      pageTitle={'Max Items in Queries Demo'}
+      pageTitle={'Max Items Displayed in Queries Demo'}
       description={
         <div>
-          <h4>Max Items Displayed in Queries Demo</h4>
           <p>
             When getting distinct column values for display (either in the
             column filter dropdown) AdapTable will show the first 2,000 distinct
@@ -30,15 +29,16 @@ export default () => {
             the 'Contact' column and you will see only 20 items displayed
             (instead of the many hundred we show in other demos).
           </p>
-          <p>
-            <b>AdapTable Help Resources:</b>{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_adaptableoptions_queryoptions_.queryoptions.html"
-              target="_blank"
-            >
-              Adaptable Options
-            </a>
-          </p>
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://api.adaptabletools.com/interfaces/_adaptableoptions_queryoptions_.queryoptions.html"
+            target="_blank"
+          >
+            Adaptable Options
+          </a>
         </div>
       }
     />
