@@ -55,6 +55,9 @@ export default () => {
   Adaptable.init(adaptableOptions);
 
   return {
+    unload: () => {
+      adaptableOptions.auditOptions = undefined;
+    },
     predefinedConfig,
     adaptableOptions: adaptableOptionsClone,
   };

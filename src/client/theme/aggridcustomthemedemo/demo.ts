@@ -61,7 +61,6 @@ function listenToThemeChanged(
   adaptableApi: AdaptableApi,
   args: ThemeChangedEventArgs
 ) {
-  console.log(args);
   if (args.data[0].id.themeName === 'wimbledon-theme') {
     let rowStyles: RowStyle[] = [];
     let evenStyle: RowStyle = {

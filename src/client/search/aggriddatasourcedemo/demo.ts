@@ -66,7 +66,6 @@ export default () => {
   ) {
     let searchChangedInfo: SearchChangedInfo = searchChangedArgs.data[0].id;
     if (searchChangedInfo.searchChangedTrigger == 'DataSource') {
-      console.log(searchChangedArgs);
       let searchState: AdaptableSearchState =
         searchChangedArgs.data[0].id.AdaptableSearchState;
       if (searchState.dataSource != null) {

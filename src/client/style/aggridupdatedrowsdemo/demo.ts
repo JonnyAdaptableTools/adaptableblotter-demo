@@ -44,6 +44,9 @@ export default () => {
     tradeCount
   );
   return {
+    unload: () => {
+      tickingDataHelper.turnOffTicking();
+    },
     predefinedConfig,
     adaptableOptions: adaptableOptionsClone,
   };

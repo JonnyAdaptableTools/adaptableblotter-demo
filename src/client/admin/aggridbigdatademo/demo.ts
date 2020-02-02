@@ -53,6 +53,9 @@ export default () => {
   const adaptableApi = Adaptable.init(adaptableOptions);
   tickingDataHelper.startTickingDataagGridTrade(adaptableApi, gridOptions, 20);
   return {
+    unload: () => {
+      tickingDataHelper.turnOffTicking();
+    },
     predefinedConfig,
     adaptableOptions: adaptableOptionsClone,
   };

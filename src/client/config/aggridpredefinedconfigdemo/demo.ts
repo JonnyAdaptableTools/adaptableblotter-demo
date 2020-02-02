@@ -35,9 +35,6 @@ export default () => {
   Adaptable.init(adaptableOptions);
 
   return {
-    unload: () => {
-      console.log('with configunload');
-    },
     predefinedConfig,
     adaptableOptions: adaptableOptionsClone,
   };

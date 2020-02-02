@@ -41,6 +41,9 @@ export default () => {
     200
   );
   return {
+    unload: () => {
+      tickingDataHelper.turnOffTicking();
+    },
     predefinedConfig,
     adaptableOptions: adaptableOptionsClone,
   };

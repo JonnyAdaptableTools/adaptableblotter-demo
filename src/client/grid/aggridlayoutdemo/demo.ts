@@ -44,6 +44,9 @@ export default () => {
   tickingDataHelper.startTickingDataagGridPivot(gridOptions, adaptableApi, 500);
 
   return {
+    unload: () => {
+      tickingDataHelper.turnOffTicking();
+    },
     predefinedConfig,
     adaptableOptions: adaptableOptionsClone,
   };
