@@ -158,6 +158,12 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Style an entire column so that it has a distinctive look.',
           },
           {
+            Name: 'Gradient Column',
+            Link: '/style/aggridgradientcolumndemo',
+            Description:
+              'Style a column so that each cell is shaded in proportion of its value to that of the maximum value.',
+          },
+          {
             Name: 'Flashing Cell',
             Link: '/style/aggridflashingcelldemo',
             Description:

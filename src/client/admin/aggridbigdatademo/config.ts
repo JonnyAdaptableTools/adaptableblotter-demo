@@ -30,8 +30,8 @@ export default {
     PercentBars: [
       {
         ColumnId: 'changeOnYear',
-        MaxValue: 150,
-        MinValue: -150,
+        PositiveValue: 150,
+        NegativeValue: -150,
         PositiveColor: '#006400',
         NegativeColor: '#a52a2a',
         ShowValue: false,

@@ -990,7 +990,7 @@ export class HelperAgGrid {
       filter: true,
       sortable: true,
       enableValue: true,
-      aggFunc: 'sum',
+      aggFunc: 'avg',
       cellRenderer: this.currencyRendereragGrid,
       type: 'abColDefNumber',
     };
@@ -1004,6 +1004,7 @@ export class HelperAgGrid {
       filter: true,
       sortable: true,
       enableValue: true,
+      aggFunc: 'sum',
       type: 'abColDefNumber',
     };
   }

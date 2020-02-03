@@ -57,8 +57,8 @@ export default () => {
           <b>Key Concepts</b> <br />
           AdapTable offers full functionality out of the box, and can be up and
           running within your application within moments of being downloaded,
-          using a single line of code. <br />
-          But when you release an application using AdapTable you will typically
+          using just a few lines of code. <br />
+          When you release an application using AdapTable you will typically
           ship it with{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_predefinedconfig_predefinedconfig_.predefinedconfig.html"
@@ -99,7 +99,7 @@ export default () => {
           most excite you. Each demo seeks to do one of four things:
           <ul>
             <li>
-              To demonstrate how an AdapTable function operates. These are
+              To demonstrate how an AdapTable function operates; these are
               sorted by type (e.g. Search, Edit etc.)
             </li>
             <li>
@@ -108,7 +108,7 @@ export default () => {
             </li>
             <li>To illustrate some of the AdapTable Options on offer.</li>
             <li>
-              To showcasing key admin elements like Audit Log, Big Data, the
+              To show-case key admin elements like Audit Log, Big Data, the
               AdapTable Api etc.
             </li>
           </ul>
@@ -248,7 +248,7 @@ export default () => {
               href="https://github.com/AdaptableTools/example-adaptableblotter-ipushpull-integration"
               target="_blank"
             >
-              ipushpull Integration
+              Integration with ipushpull
             </a>{' '}
           </li>
           <li>

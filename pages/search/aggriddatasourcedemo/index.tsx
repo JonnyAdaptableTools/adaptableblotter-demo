@@ -14,27 +14,37 @@ export default () => {
             .
           </p>
           <p>
+            They are particularly useful if you have a list of Stored Procedures
+            you want to to run, or a hardcoded list of named entities like Books
+            or Entitlements.
+          </p>
+          <p>
             When a Data Source is selected, the{' '}
             <a
               href="https://api.adaptabletools.com/interfaces/_api_eventapi_.eventapi.html"
               target="_blank"
             >
               on('SearchChanged') event
-            </a>
-            fires - stating what triggered the event and providing full state
-            details (including the selected DataSource).
+            </a>{' '}
+            fires - stating what triggered the event and providing the search
+            and filter sections of the State (including the selected
+            DataSource).
           </p>
           <p>
-            This allows you to perform the necessary search on the server and
-            return data to AdapTable via the
+            This allows you to perform the necessary actions on the server and
+            return data to AdapTable via the{' '}
             <a
               href="https://api.adaptabletools.com/interfaces/_api_gridapi_.gridapi.html"
               target="_blank"
             >
               Grid APi
             </a>{' '}
-            <i>setGridData</i> method. (A forthcoming release will provide
-            parameterised queries functionality.)
+            <i>setGridData</i> method.{' '}
+          </p>
+          <p>
+            Note: A forthcoming release will provide parameterised queries
+            functionality so you can more easily control what is searched for on
+            the server.
           </p>
           <p>
             In this example we created 4 Data Sources. We subscribe to
@@ -58,6 +68,13 @@ export default () => {
             target="_blank"
           >
             Adaptable API
+          </a>
+          ,{' '}
+          <a
+            href="https://api.adaptabletools.com/interfaces/_adaptableoptions_searchoptions_.searchoptions.html#serversearchoption"
+            target="_blank"
+          >
+            Server Searching
           </a>
           ,{' '}
           <a

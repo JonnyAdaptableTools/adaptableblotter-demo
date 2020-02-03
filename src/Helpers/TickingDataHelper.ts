@@ -73,13 +73,15 @@ export class TickingDataHelper {
     gridOptions: any,
     adaptableApi: AdaptableApi,
     tickingFrequency: number,
+    startOrderId: number,
+    endOrderId: number,
     includeItemCount: boolean = false
   ) {
     if (gridOptions != null && gridOptions.api != null) {
       this.isTicking = true;
       setInterval(() => {
         if (this.isTicking) {
-          let index: number = this.generateRandomInt(11084, 11142);
+          let index: number = this.generateRandomInt(startOrderId, endOrderId);
           let rowNode: RowNode = gridOptions.api!.getRowNode(index);
           if (rowNode) {
             //  const order: any = { ...gridOptions.rowData[tradeId] };
