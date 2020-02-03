@@ -16,6 +16,7 @@
     "@types/lodash": "^4.14.149",
     "@types/react-redux": "^7.1.6",
     "@zeit/next-typescript": "^1.1.1",
+    "babel-plugin-macros": "^2.8.0",
     "convert-excel-to-json": "^1.6.1",
     "copy-to-clipboard": "^3.2.0",
     "ipushpull-js": "^2.18.12",
@@ -23,6 +24,7 @@
     "latest": "^0.2.0",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
+    "raw.macro": "^0.3.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },

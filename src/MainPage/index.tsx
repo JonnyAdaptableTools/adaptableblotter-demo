@@ -61,6 +61,11 @@ export default ({
             style={{
               padding: 'var(--demo-space-2)',
               minWidth: '15rem',
+              border: '1px solid var(--ab-color-inputborder)',
+              color: 'var(--ab-color-inputcolor)',
+              borderRadius: 'var(--ab__border-radius)',
+
+              background: 'var(--ab-color-defaultbackground)',
             }}
             type="text"
             id="searchInput"
@@ -74,6 +79,10 @@ export default ({
               fontSize: 'var(--sidebar_font-size)',
               // marginBottom: 'var(--demo-space-1)',
               marginLeft: 'var(--demo-space-2)',
+              background: 'var(--ab-cmp-button-background)',
+              borderRadius: 'var(--ab-cmp-button-border-radius)',
+              color: 'var(--ab-color-text-on-defaultbackground)',
+              border: '1px solid var(--ab-color-inputborder)',
             }}
             onClick={() => {
               localStorage.clear();

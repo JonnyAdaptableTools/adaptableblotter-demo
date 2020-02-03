@@ -19,6 +19,8 @@ export default () => {
   init(columndefs, rowData);
 
   return {
+    predefinedConfig: {},
+    adaptableOptions: {},
     code,
   };
 };

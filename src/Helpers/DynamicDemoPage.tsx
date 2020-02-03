@@ -11,6 +11,7 @@ type DynamicComponentType = {
 export default (props: { demo: any } & AgGridDemoPageProps) => {
   const [predefinedConfig, setPredefinedConfig] = useState<any>(null);
   const [adaptableOptions, setAdaptableOptionsString] = useState<any>(null);
+  const [exampleCode, setExampleCode] = useState<any>('');
 
   const setAdaptableOptions = (adaptableOptions: any) => {
     if (adaptableOptions.vendorGrid) {
@@ -40,21 +41,31 @@ export default (props: { demo: any } & AgGridDemoPageProps) => {
       {...pageProps}
       config={predefinedConfig}
       adaptableOptions={adaptableOptions}
+      exampleCode={exampleCode}
     >
       <DynamicComponent
         onReady={info => {
           if (info) {
-            const { predefinedConfig, adaptableOptions, unload } = info;
-            setPredefinedConfig(predefinedConfig);
-            setAdaptableOptions(adaptableOptions);
-
-            if (typeof unload === 'function') {
-              const doUnload = () => {
-                unload();
-                Router.events.off('routeChangeStart', doUnload);
-              };
-              Router.events.on('routeChangeStart', doUnload);
+            console.log(info);
+            const { code, predefinedConfig, adaptableOptions, unload } = info;
+            setExampleCode(code);
+            if (predefinedConfig) {
+              setPredefinedConfig(predefinedConfig);
             }
+
+            if (adaptableOptions) {
+              setAdaptableOptions(adaptableOptions);
+            }
+
+            const doUnload = () => {
+              document.documentElement.classList.remove('ab--theme-dark');
+              if (typeof unload === 'function') {
+                unload();
+              }
+              Router.events.off('routeChangeStart', doUnload);
+            };
+
+            Router.events.on('routeChangeStart', doUnload);
           }
         }}
       />

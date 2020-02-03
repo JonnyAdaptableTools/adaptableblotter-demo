@@ -4,7 +4,7 @@ import { cloneDeepWith } from 'lodash';
 import MainPage, { MainPageProps } from './MainPage';
 
 const arrowRight = (
-  <svg width="24" height="24" viewBox="0 0 24 24">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
     <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
   </svg>
 );
@@ -13,6 +13,7 @@ export type AgGridDemoPageProps = {
   config?: any;
   adaptableOptions?: any;
   className?: string;
+  exampleCode?: string;
   description?: any;
   helpResources?: any;
 } & MainPageProps;
@@ -126,6 +127,7 @@ export default ({
   children,
   description,
   config,
+  exampleCode,
   className,
   adaptableOptions,
   helpResources,
@@ -157,21 +159,29 @@ AgGridDemoPageProps) => {
 
       {children}
 
-      <Snippet
-        title={<b>Predefined Config</b>}
-        shouldCopy={true}
-        className={'config'}
-      >
-        {config}
-      </Snippet>
+      {exampleCode ? (
+        <Snippet title={<b>Code</b>} shouldCopy={true} className={'config'}>
+          {exampleCode}
+        </Snippet>
+      ) : (
+        <>
+          <Snippet
+            title={<b>Predefined Config</b>}
+            shouldCopy={true}
+            className={'config'}
+          >
+            {config}
+          </Snippet>
 
-      <Snippet
-        title={<b>Adaptable Options</b>}
-        shouldCopy={true}
-        className={'config'}
-      >
-        {adaptableOptions}
-      </Snippet>
+          <Snippet
+            title={<b>Adaptable Options</b>}
+            shouldCopy={true}
+            className={'config'}
+          >
+            {adaptableOptions}
+          </Snippet>
+        </>
+      )}
     </MainPage>
   );
 };
