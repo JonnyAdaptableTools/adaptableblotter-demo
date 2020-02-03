@@ -1,18 +1,14 @@
-import Adaptable from '@adaptabletools/adaptable/agGrid';
-
 import '@adaptabletools/adaptable/index.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
-
-import { GridOptions, GridReadyEvent } from '@ag-grid-community/all-modules';
+import Adaptable from '@adaptabletools/adaptable/agGrid';
+import { GridOptions } from '@ag-grid-community/all-modules';
 import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
 } from '@adaptabletools/adaptable/types';
-
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
-
 import {
   AdaptableMenuItem,
   MenuInfo,
@@ -20,7 +16,7 @@ import {
 
 var adaptableApi: AdaptableApi;
 
-let demoConfig: PredefinedConfig = {
+const demoConfig: PredefinedConfig = {
   Dashboard: {
     VisibleToolbars: ['QuickSearch', 'SystemStatus'],
   },
@@ -74,17 +70,18 @@ let demoConfig: PredefinedConfig = {
   },
 } as PredefinedConfig;
 
-export default (columndefs: any[], rowData: any[]) => {
+export default (columnDefs: any[], rowData: any[]) => {
   let gridOptions: GridOptions = {
+    columnDefs,
+    rowData,
     animateRows: true,
     enableRangeSelection: true,
-
     suppressAggFuncInHeader: true,
     sideBar: true,
     suppressMenuHide: true,
-
+    floatingFilter: true,
     columnTypes: {
-      // not required but helpful for column data type identification
+      // not strictly required but useful for column data type identification
       abColDefNumber: {},
       abColDefString: {},
       abColDefBoolean: {},
@@ -92,17 +89,6 @@ export default (columndefs: any[], rowData: any[]) => {
       abColDefObject: {},
       abColDefNumberArray: {},
     },
-    columnDefs: columndefs,
-    rowData,
-    onGridReady: function(gridReady: GridReadyEvent) {
-      gridReady.columnApi!.autoSizeAllColumns();
-      setTimeout(() => gridReady.columnApi!.autoSizeAllColumns(), 1);
-
-      gridReady.api!.addEventListener('newColumnsLoaded', function() {
-        gridReady.columnApi!.autoSizeAllColumns();
-      });
-    },
-    floatingFilter: true,
   };
 
   const adaptableOptions: AdaptableOptions = {
@@ -130,6 +116,6 @@ export default (columndefs: any[], rowData: any[]) => {
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-
-  Adaptable.init(adaptableOptions);
+  adaptableApi = Adaptable.init(adaptableOptions);
+  return { adaptableOptions, adaptableApi };
 };

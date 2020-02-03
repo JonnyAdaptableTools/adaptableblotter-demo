@@ -6,7 +6,9 @@ import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 
 import init from './code';
+import { GridReadyEvent } from '@ag-grid-community/all-modules';
 const code = raw('./code.ts');
+console.log();
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
@@ -16,7 +18,20 @@ export default () => {
 
   const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
 
-  init(columndefs, rowData);
+  const { adaptableOptions, adaptableApi } = init(columndefs, rowData);
+
+  adaptableOptions.vendorGrid.onGridReady = function(
+    gridReady: GridReadyEvent
+  ) {
+    gridReady.columnApi!.autoSizeAllColumns();
+    setTimeout(() => gridReady.columnApi!.autoSizeAllColumns(), 1);
+
+    gridReady.api!.addEventListener('newColumnsLoaded', function() {
+      gridReady.columnApi!.autoSizeAllColumns();
+    });
+
+    gridReady.api!.closeToolPanel();
+  };
 
   return {
     code,
