@@ -13,6 +13,7 @@ export type AgGridDemoPageProps = {
   config?: any;
   adaptableOptions?: any;
   className?: string;
+  exampleCode?: string;
   description?: any;
   helpResources?: any;
 } & MainPageProps;
@@ -126,6 +127,7 @@ export default ({
   children,
   description,
   config,
+  exampleCode,
   className,
   adaptableOptions,
   helpResources,
@@ -157,21 +159,29 @@ AgGridDemoPageProps) => {
 
       {children}
 
-      <Snippet
-        title={<b>Predefined Config</b>}
-        shouldCopy={true}
-        className={'config'}
-      >
-        {config}
-      </Snippet>
+      {exampleCode ? (
+        <Snippet title={<b>Code</b>} shouldCopy={true} className={'config'}>
+          {exampleCode}
+        </Snippet>
+      ) : (
+        <>
+          <Snippet
+            title={<b>Predefined Config</b>}
+            shouldCopy={true}
+            className={'config'}
+          >
+            {config}
+          </Snippet>
 
-      <Snippet
-        title={<b>Adaptable Options</b>}
-        shouldCopy={true}
-        className={'config'}
-      >
-        {adaptableOptions}
-      </Snippet>
+          <Snippet
+            title={<b>Adaptable Options</b>}
+            shouldCopy={true}
+            className={'config'}
+          >
+            {adaptableOptions}
+          </Snippet>
+        </>
+      )}
     </MainPage>
   );
 };
