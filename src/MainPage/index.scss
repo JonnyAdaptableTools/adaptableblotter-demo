@@ -59,11 +59,6 @@ body {
   line-height: 1.5;
 }
 
-.ab-Dashboard {
-  padding-right: 0px !important;
-  padding-left: 0px !important;
-}
-
 a:link {
   color: steelblue;
   text-decoration: none;
@@ -114,15 +109,28 @@ h5 {
 }
 
 .config {
-  background-color: #f5f5f5;
   margin-top: 20px;
   padding: var(--demo-space-3);
   font-family: 'Courier New', Courier, monospace;
   position: relative;
 }
 
+.ab--theme-dark {
+  .config,
+  .description,
+  .helpResource {
+    color: white;
+    background: var(--ab-dashboard__background);
+    border-radius: var(--ab-space-2);
+  }
+}
+
+.description,
+.config,
+.helpResource {
+  background: var(--ab-color-primarylight);
+}
 .description {
-  background-color: #f5f5f5;
   margin-top: 10px;
   margin-bottom: 10px;
   padding: var(--demo-space-2);
@@ -137,7 +145,6 @@ h5 {
 }
 
 .helpResource {
-  background-color: #f5f5f5;
   margin-top: 10px;
   margin-bottom: 10px;
   padding: var(--demo-space-2);

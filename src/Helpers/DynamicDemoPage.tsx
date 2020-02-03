@@ -48,13 +48,15 @@ export default (props: { demo: any } & AgGridDemoPageProps) => {
             setPredefinedConfig(predefinedConfig);
             setAdaptableOptions(adaptableOptions);
 
-            if (typeof unload === 'function') {
-              const doUnload = () => {
+            const doUnload = () => {
+              document.documentElement.classList.remove('ab--theme-dark');
+              if (typeof unload === 'function') {
                 unload();
-                Router.events.off('routeChangeStart', doUnload);
-              };
-              Router.events.on('routeChangeStart', doUnload);
-            }
+              }
+              Router.events.off('routeChangeStart', doUnload);
+            };
+
+            Router.events.on('routeChangeStart', doUnload);
           }
         }}
       />
