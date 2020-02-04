@@ -112,10 +112,10 @@ export default () => {
               AdapTable Api etc.
             </li>
           </ul>
-          Each demo includes a small amount of relevant Predefined Config in
-          order to illustrate the potential usage, and adds any non-default{' '}
-          <i>AdaptableOptions</i> propertiues that are required (both of which
-          are printed out underneath the demo for your convenience).
+          Each demo provides, below the grid, all the code that was used. This
+          typically includes some Predefined Config and non-default{' '}
+          <i>AdaptableOptions</i> properties that were required for that
+          specific example.
           <br />
           The demos use the excellent, market-leading{' '}
           <a href="https://www.ag-grid.com/" target="_blank">
