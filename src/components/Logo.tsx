@@ -14,6 +14,7 @@ export default () => (
     >
       <img
         src={'/images/Adaptable.png'}
+        // src={'/images/AdaptableWhite.png'}
         style={{
           padding: 0,
 

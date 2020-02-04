@@ -13,7 +13,9 @@ export default () => {
       pageTitle={'Config demos'}
       description={
         <div>
-          <h4>Predefined Configuration</h4>
+          <h4>Getting Started</h4>
+          <p>Para on Todo</p>
+          <b>Predefined Config</b>{' '}
           <p>
             Typically you will ship your AdapTable instance with Predefined
             Configuration so that your users open their application at first use
@@ -24,25 +26,26 @@ export default () => {
             Additionally Predefined Configuration will include 'Entitlements' -
             stipulating which AdapTable functions they are allowed to access.
           </p>
-          <p>This section contains 2 grids: </p>
-          <p>
-            One is loaded with NO Predfined Configuration so it shows how
-            AdapTable looks straight out of the box with all the defaults
-            chosen.
-          </p>
-          <p>
-            And the second grid contains an AdapTable instance which does have
-            Predefined Configuration so its pre-loaded with styles, reports,
-            layouts etc.
-          </p>
+          <p>This section contains 2 relevant examples: </p>
+          <ul>
+            <li>
+              One is loaded with NO Predfined Configuration so it shows how
+              AdapTable looks straight out of the box with all the defaults
+              chosen.
+            </li>
+            <li>
+              One containing an AdapTable instance which does have Predefined
+              Configuration so its pre-loaded with styles, reports, layouts etc.
+            </li>
+          </ul>
         </div>
       }
     >
       <GridLayout>
-        <DemoBox href="/config/aggridnoconfigdemo">
+        <DemoBox href="/gettingstarted/aggridnoconfigdemo">
           No Predefined Config demo
         </DemoBox>
-        <DemoBox href="/config/aggridpredefinedconfigdemo">
+        <DemoBox href="/gettingstarted/aggridpredefinedconfigdemo">
           Predefined Config demo
         </DemoBox>
       </GridLayout>

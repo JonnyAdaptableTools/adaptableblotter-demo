@@ -81,7 +81,6 @@ export default (columnDefs: any[], rowData: any[]) => {
     suppressMenuHide: true,
     floatingFilter: true,
     columnTypes: {
-      // not strictly required but useful for column data type identification
       abColDefNumber: {},
       abColDefString: {},
       abColDefBoolean: {},
@@ -117,5 +116,6 @@ export default (columnDefs: any[], rowData: any[]) => {
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
   adaptableApi = Adaptable.init(adaptableOptions);
+
   return { adaptableOptions, adaptableApi };
 };

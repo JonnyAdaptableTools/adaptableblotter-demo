@@ -4,7 +4,9 @@ import DynamicDemoPage from '../../../src/Helpers/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/config/aggridpredefinedconfigdemo')}
+      demo={import(
+        '../../../src/client/gettingstarted/aggridpredefinedconfigdemo'
+      )}
       pageTitle={'Predefined Config Demo'}
       description={
         <div>

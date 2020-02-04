@@ -155,7 +155,11 @@ AgGridDemoPageProps) => {
       <HelpResources>{helpResources}</HelpResources>
       <div id="adaptable" />
       <p />
-      <div id="grid" className="ag-theme-balham" style={{ height: 600 }} />
+      <div
+        id="grid"
+        className="ag-theme-balham"
+        style={{ height: 600, width: '98%' }}
+      />
 
       {children}
 

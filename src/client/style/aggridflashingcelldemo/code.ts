@@ -65,7 +65,6 @@ export default (columndefs: any[], rowData: any[]) => {
     suppressMenuHide: true,
 
     columnTypes: {
-      // not required but helpful for column data type identification
       abColDefNumber: {},
       abColDefString: {},
       abColDefBoolean: {},

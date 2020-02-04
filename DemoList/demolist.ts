@@ -16,18 +16,24 @@ export function getDemoPageStructure(): DemoPageStructure {
   let pageStructure: DemoPageStructure = {
     Categories: [
       {
-        CategoryName: 'Config',
-        Link: '/config',
+        CategoryName: 'Getting Started',
+        Link: '/gettingstarted',
         Pages: [
           {
+            Name: 'Basic Set Up',
+            Link: '/gettingstarted/aggridbasicsetupdemo',
+            Description:
+              'Showing how to create a basic instance of AdapTable using ag-Grid.',
+          },
+          {
             Name: 'No Config',
-            Link: '/config/aggridnoconfigdemo',
+            Link: '/gettingstarted/aggridnoconfigdemo',
             Description:
               'An AdapTable instance with no Predefined Config supplied.  This is unlikely to be the case in a production scenario as you will pre-ship AdapTable with your objects.',
           },
           {
             Name: 'Predefined Config',
-            Link: '/config/aggridpredefinedconfigdemo',
+            Link: '/gettingstarted/aggridpredefinedconfigdemo',
             Description:
               'An AdapTable instance with lots of different Predefined Config elements supplied.',
           },

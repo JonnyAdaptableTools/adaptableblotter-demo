@@ -122,7 +122,6 @@ export class HelperAgGrid {
       suppressMenuHide: true,
 
       columnTypes: {
-        // not required but helpful for column data type identification
         abColDefNumber: {},
         abColDefString: {},
         abColDefBoolean: {},
