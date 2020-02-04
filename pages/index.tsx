@@ -153,11 +153,8 @@ export default () => {
           </a>{' '}
           for more information on installation and integration, or take a look
           at{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754618-ag-Grid-Example"
-            target="_blank"
-          >
-            this example
+          <a href="./gettingstarted/aggridbasicsetupdemo" target="_blank">
+            the Basic Set Up demo
           </a>
           .
           <br />

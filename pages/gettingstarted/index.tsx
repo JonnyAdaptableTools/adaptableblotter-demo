@@ -10,11 +10,24 @@ import DemoBox from '../../src/components/DemoBox';
 export default () => {
   return (
     <MainPage
-      pageTitle={'Config demos'}
+      pageTitle={'Getting Started demos'}
       description={
         <div>
-          <h4>Getting Started</h4>
-          <p>Para on Todo</p>
+          <h4>Getting Started Demos</h4>
+          <p>
+            The demos in this section are designed to introduce you to basic
+            concepts in AdapTable and to get up and running quickly.{' '}
+          </p>
+          <b>Set up</b>{' '}
+          <p>
+            Its just a few lines of code to set up an instance of AdapTable and
+            get immediate access to a huge range of features that would
+            otherwise take many months to build.{' '}
+          </p>
+          <p>
+            The basic set up demo shows how to set up AdapTable using dummy data
+            in a series of small steps.
+          </p>
           <b>Predefined Config</b>{' '}
           <p>
             Typically you will ship your AdapTable instance with Predefined
@@ -42,6 +55,9 @@ export default () => {
       }
     >
       <GridLayout>
+        <DemoBox href="/gettingstarted/aggridbasicsetupdemo">
+          Basic Set Up demo
+        </DemoBox>
         <DemoBox href="/gettingstarted/aggridnoconfigdemo">
           No Predefined Config demo
         </DemoBox>

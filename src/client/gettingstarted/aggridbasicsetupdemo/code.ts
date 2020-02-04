@@ -1,28 +1,56 @@
-// Import Adaptable Styles
-import '@adaptabletools/adaptable/index.css';
+/*  
+Note: below is the JavaScript code required to instantiate AdapTable.
+It assumes an HTML page with 2 <div> elements as follows:
+<body>    
+    ....    
+    <!-- div for adaptable - always name this 'adaptable'-->    
+    <div id="adaptable"></div>    
 
-// Import ag-Grid Styles
+    <!-- div for underlying vendor grid - always name this 'grid' -->    
+    <div id="grid" class="ag-balham"></div>        
+    ....
+</body>
+*/
+
+// Import Adaptable Styles
+// You will always need to import 'index.css'; import 'dark.css' for our dark theme (these are the 2 shipped themes AdapTable provides)
+// If you create a custom theme then add the .css file here
+import '@adaptabletools/adaptable/index.css';
+import '@adaptabletools/adaptable/themes/dark.css';
+
+// Import ag-Grid Styles you require - in this case the Balham light and dark themes (our defaults)
 import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham-dark.css';
 
-// Import Adaptable object and any types we need from Adaptable/types
+// Import the Adaptable object from the appropriate vendorGrid sub folder - in this case ag-Grid
 import Adaptable from '@adaptabletools/adaptable/agGrid';
+
+//Import any Adaptable types required
 import {
   AdaptableOptions,
   PredefinedConfig,
+  AdaptableApi,
 } from '@adaptabletools/adaptable/types';
 
-// Import ag-grid objects from Community
+// Import ag-grid objects from Community - this is always required by AdapTable
 import { GridOptions, ColDef } from '@ag-grid-community/all-modules';
 
-// Import any ag-Grid Enterprise modules we need (all community modules will have been provided)
+// Import any ag-Grid Enterprise modules you need (v.22 of ag-Grid introduced modularisation)
+// AdapTable requires that you install '@ag-grid-community/all-modules', but you can add as many Enterprise modules as you wish
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
-// Step 1: Create any Predefined Config to ship AdapTable to meet your requirements
+// Import any Adaptable plugins that we want to use - in this case 'ChartsPlugin'
+import ChartsPlugin from '@adaptabletools/adaptable-plugin-charts';
+
+// Step 1: Create any Predefined Config to ship AdapTable to meet your requirements. In this example we do 3 things:
+// a: Set the Toolbars to be QuickSearch, SystemStatus and Theme
+// b: Set a default System Status message which will display when not overriden by a newer one
+// c: Set the Adaptable theme to be 'Dark'
 // Here we set a couple of Dashboard toolbars and set a System Status message
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleToolbars: ['QuickSearch', 'SystemStatus'],
+    VisibleToolbars: ['QuickSearch', 'SystemStatus', 'Theme'],
   },
   SystemStatus: {
     DefaultStatusMessage: 'All working fine',
@@ -64,16 +92,19 @@ const rowdada: any[] = [
 ];
 
 // Step 4: Create ag-Grid GridOptions object - using the Column Schema and Row Data previously created
+// Note: We don't instantiate the ag-Grid here - AdapTable will do that later internally and wire everything up
+// Instead, we just create the GridOptions property and later set it as vendorGrid property in AdaptableOptions
 export default () => {
   let gridOptions: GridOptions = {
     columnDefs: columnSchema,
     rowData: rowdada,
     enableRangeSelection: true,
+    sideBar: true,
     suppressAggFuncInHeader: true,
     suppressMenuHide: true,
     floatingFilter: true,
     columnTypes: {
-      // not strictly required but useful for column data type identification
+      // not strictly required but very useful for column data type identification
       abColDefNumber: {},
       abColDefString: {},
       abColDefBoolean: {},
@@ -83,23 +114,34 @@ export default () => {
     },
   };
 
-  // Step 5: Create an AdaptableOptions object which defines how AdapTable should work
-  // Pass in the GridOptions object as the vendorGrid property (and add any Enterprise modules)
+  // Step 5: Create an AdaptableOptions object which defines how AdapTable should work and contains all it needs
+  // We only need to add values for non-mandatory properties where you are unhappy with the default options
+  // Full list of options and defaults at: https://api.adaptabletools.com/interfaces/_adaptableoptions_adaptableoptions_.adaptableoptions
+  // In this case we have just set the showAdaptableToolPanel to true in UserInterfaceOptions
+  // 2 mandatory properties are 'primaryKey' (to allow us to identify each cell) and 'adaptableId' (a unique name for this instance)
+  // Another is 'vendorGrid' (a reference to the underlying grid  - in this case the gridOptions we created above which we pass in)
+  // Note that we attach any Enterprise modules to the 'modules' property of vendorGrid
+  // Another important property is predefinedConfig where we attach the 'demoConfig' we created above
+  // Finally add any plugins required by adding them to the 'plugins' property - in this example the 'ChartsPlugin'
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Basic Setup Demo',
+    userInterfaceOptions: {
+      showAdaptableToolPanel: true,
+    },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
+    plugins: [ChartsPlugin()],
   };
 
   // Step 6: Instantiate AdapTable using the Static Contstructor passing in the AdaptableOptions object
   // Note that the constructor returns the AdaptableApi object which gives run time access to AdapTable functions
   // Pass in the GridOptions object as the vendorGrid property (and add any Enterprise modules)
-  const adaptableApi = Adaptable.init(adaptableOptions);
+  const adaptableApi: AdaptableApi = Adaptable.init(adaptableOptions);
 
   // Step 7 (optional): Listen to the AdaptableReady event to do anything required at startup
-  // Here we are using the AdaptableApi to run a quick search
+  // Here we are using the AdaptableApi to run a quick search via code
   adaptableApi.eventApi.on('AdaptableReady', () => {
     adaptableApi.quickSearchApi.applyQuickSearch('o*');
   });
