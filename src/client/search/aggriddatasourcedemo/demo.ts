@@ -1,112 +1,37 @@
-import Adaptable from '@adaptabletools/adaptable/agGrid';
-import '@adaptabletools/adaptable/index.css';
+import raw from 'raw.macro';
 
-import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
-import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
-import { cloneDeep } from 'lodash';
-import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import '../../../../DemoPage/aggriddemo.css';
 
-import {
-  AdaptableOptions,
-  SearchChangedEventArgs,
-  AdaptableApi,
-} from '@adaptabletools/adaptable/types';
-
+import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
-import predefinedConfig from './config';
-import {
-  SearchChangedInfo,
-  AdaptableSearchState,
-} from '@adaptabletools/adaptable/src/Api/Events/SearchChanged';
+
+import init from './code';
+import { GridReadyEvent } from '@ag-grid-community/all-modules';
+const code = raw('./code.ts');
+console.log();
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
 
-  //  let rowData = JSON.parse(JSON.stringify(json));
-
   const columndefs = helperAgGrid.getTradeSchema();
 
-  const gridOptions = helperAgGrid.getGridOptions(columndefs, null);
-  gridOptions.modules = AllEnterpriseModules;
-  gridOptions.statusBar = {
-    statusPanels: [
-      { statusPanel: 'agTotalRowCountComponent', align: 'left' },
-      { statusPanel: 'agFilteredRowCountComponent' },
-    ],
-  };
-  const adaptableOptions: AdaptableOptions = {
-    primaryKey: 'tradeId',
-    userName: 'Demo User',
-    adaptableId: 'Data Source Demo',
-    vendorGrid: gridOptions,
-    predefinedConfig: predefinedConfig,
-  };
+  const { adaptableOptions, adaptableApi } = init(columndefs);
 
-  const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  const adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableOptions.vendorGrid.onGridReady = function(
+    gridReady: GridReadyEvent
+  ) {
+    gridReady.columnApi!.autoSizeAllColumns();
+    setTimeout(() => gridReady.columnApi!.autoSizeAllColumns(), 1);
 
-  adaptableApi.eventApi.on(
-    'SearchChanged',
-    (searchChangedArgs: SearchChangedEventArgs) => {
-      listenToSearchChange(adaptableApi, helperAgGrid, searchChangedArgs);
-    }
-  );
+    gridReady.api!.addEventListener('newColumnsLoaded', function() {
+      gridReady.columnApi!.autoSizeAllColumns();
+    });
+
+    gridReady.api!.closeToolPanel();
+  };
 
   return {
-    predefinedConfig,
-    adaptableOptions: adaptableOptionsClone,
+    code,
   };
-
-  function listenToSearchChange(
-    adaptableApi: AdaptableApi,
-    helperAgGrid: HelperAgGrid,
-    searchChangedArgs: SearchChangedEventArgs
-  ) {
-    let searchChangedInfo: SearchChangedInfo = searchChangedArgs.data[0].id;
-    if (searchChangedInfo.searchChangedTrigger == 'DataSource') {
-      console.log(searchChangedInfo);
-      let searchState: AdaptableSearchState =
-        searchChangedArgs.data[0].id.AdaptableSearchState;
-      if (searchState.dataSource != null) {
-        switch (searchState.dataSource.Name) {
-          case 'Euro Trades':
-            let euroTrades = helperAgGrid.getEuroTrades(500);
-
-            adaptableApi.gridApi.setGridData(euroTrades);
-            break;
-
-          case 'Dollar Trades':
-            let dollarTrades = helperAgGrid.getDollarTrades(200);
-
-            adaptableApi.gridApi.setGridData(dollarTrades);
-            break;
-
-          case 'GBP Trades':
-            let sterlingTrades = helperAgGrid.getGBPTrades(12);
-            adaptableApi.gridApi.setGridData(sterlingTrades);
-            break;
-
-          case '2019 Actiivty':
-            let thisYearTrades = helperAgGrid.getThisYearTrades(300);
-            adaptableApi.gridApi.setGridData(thisYearTrades);
-            break;
-        }
-      }
-    }
-  }
 };
-
-/*
- DataSourceParams: [
-          {
-            Name: 'Hello',
-            DataType: 'String',
-          },
-          {
-            Name: 'Age',
-            DataType: 'Number',
-          },
-        ],
-        */

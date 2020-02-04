@@ -6,7 +6,6 @@ import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 
 import init from './code';
 const code = raw('./code.ts');
-console.log(333333334444);
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();

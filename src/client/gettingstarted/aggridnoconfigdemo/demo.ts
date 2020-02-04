@@ -1,18 +1,14 @@
-import Adaptable from '@adaptabletools/adaptable/agGrid';
-import '@adaptabletools/adaptable/index.css';
+import raw from 'raw.macro';
 
-import '@adaptabletools/adaptable/themes/dark.css';
-
-import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
-import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
-import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham-dark.css';
-import { cloneDeep } from 'lodash';
 import '../../../../DemoPage/aggriddemo.css';
-import { AdaptableOptions } from '@adaptabletools/adaptable/types';
-import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
+
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
-import predefinedConfig from './config';
+
+import init from './code';
+import { GridReadyEvent } from '@ag-grid-community/all-modules';
+const code = raw('./code.ts');
+console.log();
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
@@ -22,23 +18,22 @@ export default () => {
 
   const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
 
-  const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
-  gridOptions.floatingFilter = true;
+  const { adaptableOptions, adaptableApi } = init(columndefs, rowData);
+  console.log(1);
+  adaptableOptions.vendorGrid.onGridReady = function(
+    gridReady: GridReadyEvent
+  ) {
+    gridReady.columnApi!.autoSizeAllColumns();
+    setTimeout(() => gridReady.columnApi!.autoSizeAllColumns(), 1);
 
-  const adaptableOptions: AdaptableOptions = {
-    primaryKey: 'OrderId',
-    userName: 'Demo User',
-    adaptableId: 'No Config Demo',
+    gridReady.api!.addEventListener('newColumnsLoaded', function() {
+      gridReady.columnApi!.autoSizeAllColumns();
+    });
 
-    vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
-    predefinedConfig: predefinedConfig,
+    gridReady.api!.closeToolPanel();
   };
 
-  const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  Adaptable.init(adaptableOptions);
-
   return {
-    predefinedConfig,
-    adaptableOptions: adaptableOptionsClone,
+    code,
   };
 };
