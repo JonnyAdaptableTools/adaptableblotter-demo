@@ -15,37 +15,29 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
-  UserInterface: {
-    PermittedValuesColumns: [
+  Dashboard: {
+    VisibleButtons: ['FormatColumn'],
+  },
+  FormatColumn: {
+    FormatColumns: [
       {
-        ColumnId: 'ContactName',
-        PermittedValues: [
-          'Elizabeth Lincoln',
-          'Mario Pontes',
-          'Maria Larsson',
-          'Roland Mendel',
-          'Catherine Dewey',
-        ],
-      },
-    ],
-    EditLookUpColumns: [
-      {
-        ColumnId: 'CustomerReference',
-        LookUpValues: [
-          'SANTG',
-          'LINOD',
-          'ROMEY',
-          'FRANK',
-          'ALFKI',
-          'REGGC',
-          'GODOS',
-        ],
+        ColumnId: 'OrderDate',
+        Style: {
+          FontWeight: 'Bold',
+          FontSize: 'XSmall',
+          FontStyle: 'Italic',
+          ClassName: '',
+        },
       },
       {
-        ColumnId: 'ContactName',
-      },
-      {
-        ColumnId: 'Employee',
+        ColumnId: 'OrderId',
+        Style: {
+          BackColor: '#d4fb79',
+          ForeColor: '#8b0000',
+          FontWeight: 'Normal',
+          FontStyle: 'Normal',
+          ClassName: '',
+        },
       },
     ],
   },
@@ -60,7 +52,7 @@ export default (columnDefs: any[], rowData: any[]) => {
     suppressAggFuncInHeader: true,
     sideBar: true,
     suppressMenuHide: true,
-    singleClickEdit: true,
+    floatingFilter: true,
     columnTypes: {
       abColDefNumber: {},
       abColDefString: {},
@@ -74,10 +66,7 @@ export default (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Edit Lookup Columns Demo',
-    queryOptions: {
-      ignoreCaseInQueries: false,
-    },
+    adaptableId: 'Format Col Demo',
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

@@ -15,37 +15,57 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
-  UserInterface: {
-    PermittedValuesColumns: [
+  Dashboard: {
+    VisibleButtons: ['GradientColumn'],
+  },
+  GradientColumn: {
+    GradientColumns: [
       {
-        ColumnId: 'ContactName',
-        PermittedValues: [
-          'Elizabeth Lincoln',
-          'Mario Pontes',
-          'Maria Larsson',
-          'Roland Mendel',
-          'Catherine Dewey',
-        ],
+        ColumnId: 'ChangeLastOrder',
+        NegativeValue: -41,
+        PositiveValue: 56,
+        NegativeColor: '#FF0000',
+        PositiveColor: '#00CC00',
+        BaseValue: 0,
+      },
+      {
+        ColumnId: 'ItemCount',
+        PositiveValue: 21,
+        PositiveColor: '#008000',
+        BaseValue: 5,
+      },
+      {
+        ColumnId: 'PackageCost',
+        PositiveValue: 20,
+        PositiveColor: '#FF8000',
+        BaseValue: 2.7,
       },
     ],
-    EditLookUpColumns: [
+  },
+  Layout: {
+    CurrentLayout: 'Orders',
+    Layouts: [
       {
-        ColumnId: 'CustomerReference',
-        LookUpValues: [
-          'SANTG',
-          'LINOD',
-          'ROMEY',
-          'FRANK',
-          'ALFKI',
-          'REGGC',
-          'GODOS',
+        ColumnSorts: [
+          {
+            Column: 'Employee',
+            SortOrder: 'Ascending',
+          },
         ],
-      },
-      {
-        ColumnId: 'ContactName',
-      },
-      {
-        ColumnId: 'Employee',
+        Columns: [
+          'OrderId',
+          'ChangeLastOrder',
+          'Employee',
+          'Freight',
+          'InvoicedCost',
+          'ItemCost',
+          'ItemCount',
+          'OrderCost',
+          'OrderDate',
+          'PackageCost',
+        ],
+
+        Name: 'Orders',
       },
     ],
   },
@@ -60,7 +80,7 @@ export default (columnDefs: any[], rowData: any[]) => {
     suppressAggFuncInHeader: true,
     sideBar: true,
     suppressMenuHide: true,
-    singleClickEdit: true,
+    floatingFilter: true,
     columnTypes: {
       abColDefNumber: {},
       abColDefString: {},
@@ -74,10 +94,7 @@ export default (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Edit Lookup Columns Demo',
-    queryOptions: {
-      ignoreCaseInQueries: false,
-    },
+    adaptableId: 'Gradient Column Demo',
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

@@ -16,8 +16,8 @@ import { AdaptableOptions } from '@adaptabletools/adaptable/types';
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import predefinedConfig from './config';
-import { AdaptableReadyInfo } from '@adaptabletools/adaptable/src/Api/Events/AdaptableReady';
 import { TickingDataHelper } from '../../../Helpers/TickingDataHelper';
+import { AdaptableReadyInfo } from '@adaptabletools/adaptable/src/Api/Events/AdaptableReady';
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();

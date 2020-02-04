@@ -3,6 +3,7 @@ import '@adaptabletools/adaptable/themes/dark.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham-dark.css';
+import './index.css';
 import Adaptable from '@adaptabletools/adaptable/agGrid';
 import { GridOptions } from '@ag-grid-community/all-modules';
 import {
@@ -15,39 +16,8 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
-  UserInterface: {
-    PermittedValuesColumns: [
-      {
-        ColumnId: 'ContactName',
-        PermittedValues: [
-          'Elizabeth Lincoln',
-          'Mario Pontes',
-          'Maria Larsson',
-          'Roland Mendel',
-          'Catherine Dewey',
-        ],
-      },
-    ],
-    EditLookUpColumns: [
-      {
-        ColumnId: 'CustomerReference',
-        LookUpValues: [
-          'SANTG',
-          'LINOD',
-          'ROMEY',
-          'FRANK',
-          'ALFKI',
-          'REGGC',
-          'GODOS',
-        ],
-      },
-      {
-        ColumnId: 'ContactName',
-      },
-      {
-        ColumnId: 'Employee',
-      },
-    ],
+  Dashboard: {
+    VisibleToolbars: ['Export', 'Alert'],
   },
 } as PredefinedConfig;
 
@@ -60,7 +30,7 @@ export default (columnDefs: any[], rowData: any[]) => {
     suppressAggFuncInHeader: true,
     sideBar: true,
     suppressMenuHide: true,
-    singleClickEdit: true,
+    floatingFilter: true,
     columnTypes: {
       abColDefNumber: {},
       abColDefString: {},
@@ -74,10 +44,7 @@ export default (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Edit Lookup Columns Demo',
-    queryOptions: {
-      ignoreCaseInQueries: false,
-    },
+    adaptableId: 'Custom Icon Demo',
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

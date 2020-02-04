@@ -15,37 +15,32 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
-  UserInterface: {
-    PermittedValuesColumns: [
+  Dashboard: {
+    VisibleButtons: ['PercentBar'],
+  },
+  PercentBar: {
+    PercentBars: [
       {
-        ColumnId: 'ContactName',
-        PermittedValues: [
-          'Elizabeth Lincoln',
-          'Mario Pontes',
-          'Maria Larsson',
-          'Roland Mendel',
-          'Catherine Dewey',
-        ],
-      },
-    ],
-    EditLookUpColumns: [
-      {
-        ColumnId: 'CustomerReference',
-        LookUpValues: [
-          'SANTG',
-          'LINOD',
-          'ROMEY',
-          'FRANK',
-          'ALFKI',
-          'REGGC',
-          'GODOS',
-        ],
+        ColumnId: 'ChangeLastOrder',
+        PositiveValue: 56,
+        NegativeValue: -41,
+        NegativeColor: '#FF0000',
+        PositiveColor: '#008000',
+        ShowValue: false,
       },
       {
-        ColumnId: 'ContactName',
+        ColumnId: 'InvoicedCost',
+        PositiveValue: 2810.5056,
+        NegativeColor: '#FF0000',
+        PositiveColor: '#008000',
+        ShowValue: false,
       },
       {
-        ColumnId: 'Employee',
+        ColumnId: 'ItemCost',
+        PositiveValue: 199.46,
+        NegativeColor: '#FF0000',
+        PositiveColor: '#ffff00',
+        ShowValue: true,
       },
     ],
   },
@@ -60,7 +55,7 @@ export default (columnDefs: any[], rowData: any[]) => {
     suppressAggFuncInHeader: true,
     sideBar: true,
     suppressMenuHide: true,
-    singleClickEdit: true,
+    floatingFilter: true,
     columnTypes: {
       abColDefNumber: {},
       abColDefString: {},
@@ -74,10 +69,7 @@ export default (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Edit Lookup Columns Demo',
-    queryOptions: {
-      ignoreCaseInQueries: false,
-    },
+    adaptableId: 'Percentbar Demo',
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

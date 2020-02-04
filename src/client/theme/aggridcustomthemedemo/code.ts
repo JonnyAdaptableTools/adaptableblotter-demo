@@ -3,51 +3,37 @@ import '@adaptabletools/adaptable/themes/dark.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham-dark.css';
+import './custometheme.css';
 import Adaptable from '@adaptabletools/adaptable/agGrid';
 import { GridOptions } from '@ag-grid-community/all-modules';
 import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
+  ThemeChangedEventArgs,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
+import { RowStyle } from '@adaptabletools/adaptable/src/PredefinedConfig/UserInterfaceState';
 
 var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
-  UserInterface: {
-    PermittedValuesColumns: [
+  Dashboard: {
+    VisibleToolbars: ['Theme', 'Export', 'Layout'],
+  },
+  Theme: {
+    UserThemes: [
       {
-        ColumnId: 'ContactName',
-        PermittedValues: [
-          'Elizabeth Lincoln',
-          'Mario Pontes',
-          'Maria Larsson',
-          'Roland Mendel',
-          'Catherine Dewey',
-        ],
+        Name: 'wimbledon-theme',
+        Description: 'Wimbledon',
+      },
+      {
+        Name: 'BlueTheme',
+        Description: 'Blue theme',
+        VendorGridClassName: 'ag-theme-blue',
       },
     ],
-    EditLookUpColumns: [
-      {
-        ColumnId: 'CustomerReference',
-        LookUpValues: [
-          'SANTG',
-          'LINOD',
-          'ROMEY',
-          'FRANK',
-          'ALFKI',
-          'REGGC',
-          'GODOS',
-        ],
-      },
-      {
-        ColumnId: 'ContactName',
-      },
-      {
-        ColumnId: 'Employee',
-      },
-    ],
+    CurrentTheme: 'wimbledon-theme',
   },
 } as PredefinedConfig;
 
@@ -60,7 +46,7 @@ export default (columnDefs: any[], rowData: any[]) => {
     suppressAggFuncInHeader: true,
     sideBar: true,
     suppressMenuHide: true,
-    singleClickEdit: true,
+    floatingFilter: true,
     columnTypes: {
       abColDefNumber: {},
       abColDefString: {},
@@ -74,14 +60,41 @@ export default (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Edit Lookup Columns Demo',
-    queryOptions: {
-      ignoreCaseInQueries: false,
-    },
+    adaptableId: 'Custom Theme Demo',
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
   adaptableApi = Adaptable.init(adaptableOptions);
+
+  adaptableApi.eventApi.on(
+    'ThemeChanged',
+    (themeChangedEventArgs: ThemeChangedEventArgs) => {
+      if (themeChangedEventArgs.data[0].id.themeName === 'wimbledon-theme') {
+        let rowStyles: RowStyle[] = [];
+        let evenStyle: RowStyle = {
+          Style: {
+            ForeColor: 'white',
+            BackColor: '#462376',
+            FontWeight: 'Bold',
+          },
+          RowType: 'Even',
+        };
+        let oddStyle: RowStyle = {
+          Style: {
+            ForeColor: 'white',
+            BackColor: '#0e6537',
+            FontStyle: 'Italic',
+          },
+          RowType: 'Odd',
+        };
+        rowStyles.push(evenStyle);
+        rowStyles.push(oddStyle);
+        adaptableApi.userInterfaceApi.setRowStyles(rowStyles);
+      } else {
+        adaptableApi.userInterfaceApi.clearRowStyles();
+      }
+    }
+  );
 
   return { adaptableOptions, adaptableApi };
 };
