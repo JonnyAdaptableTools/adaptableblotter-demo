@@ -16,56 +16,19 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleButtons: ['CellValidation'],
-    VisibleToolbars: ['QuickSearch', 'BulkUpdate', 'SmartEdit'],
-  },
-  CellValidation: {
-    CellValidations: [
-      {
-        ActionMode: 'Stop Edit',
-        ColumnId: 'CustomerReference',
-        Range: {
-          Operator: 'AnyChange',
-          Operand1: '',
-          Operand2: '',
-          Operand1Type: 'Value',
-          Operand2Type: 'Value',
-        },
-      },
-      {
-        ActionMode: 'Show Warning',
-        ColumnId: 'Employee',
-        Range: {
-          Operator: 'AnyChange',
-          Operand1: '',
-          Operand2: '',
-          Operand1Type: 'Value',
-          Operand2Type: 'Value',
-        },
-      },
-      {
-        ActionMode: 'Stop Edit',
-        ColumnId: 'InvoicedCost',
-        Range: {
-          Operator: 'GreaterThan',
-          Operand1: 3000,
-          Operand2: '',
-          Operand1Type: 'Value',
-          Operand2Type: 'Value',
-        },
-      },
-      {
-        ActionMode: 'Show Warning',
-        ColumnId: 'OrderCost',
-        Range: {
-          Operator: 'PercentChange',
-          Operand1: 100,
-          Operand2: '',
-          Operand1Type: 'Value',
-          Operand2Type: 'Value',
-        },
-      },
+    VisibleButtons: [
+      'Dashboard',
+      'ColumnChooser',
+      'Chart',
+      'SmartEdit',
+      'Alert',
+      'Reminder',
     ],
+    ShowSystemStatusButton: false,
+    ShowAboutButton: false,
+    ShowColumnsDropdown: false,
+    ShowToolbarsDropdown: false,
+    HomeToolbarTitle: 'Changed in Config',
   },
 } as PredefinedConfig;
 
@@ -91,7 +54,7 @@ export default (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Cell Validating Demo',
+    adaptableId: 'Dashboard Buttons Demo',
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

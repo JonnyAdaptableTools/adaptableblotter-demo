@@ -57,7 +57,6 @@ export default (columndefs: any[], rowData: any[]) => {
     animateRows: true,
     enableRangeSelection: true,
     floatingFilter: false,
-    suppressAggFuncInHeader: true,
     sideBar: true,
     suppressMenuHide: true,
 

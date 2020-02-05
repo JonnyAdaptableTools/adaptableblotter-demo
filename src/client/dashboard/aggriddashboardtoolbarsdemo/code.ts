@@ -11,61 +11,13 @@ import {
   AdaptableApi,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
+import charts from '@adaptabletools/adaptable-plugin-charts';
 
 var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleButtons: ['CellValidation'],
-    VisibleToolbars: ['QuickSearch', 'BulkUpdate', 'SmartEdit'],
-  },
-  CellValidation: {
-    CellValidations: [
-      {
-        ActionMode: 'Stop Edit',
-        ColumnId: 'CustomerReference',
-        Range: {
-          Operator: 'AnyChange',
-          Operand1: '',
-          Operand2: '',
-          Operand1Type: 'Value',
-          Operand2Type: 'Value',
-        },
-      },
-      {
-        ActionMode: 'Show Warning',
-        ColumnId: 'Employee',
-        Range: {
-          Operator: 'AnyChange',
-          Operand1: '',
-          Operand2: '',
-          Operand1Type: 'Value',
-          Operand2Type: 'Value',
-        },
-      },
-      {
-        ActionMode: 'Stop Edit',
-        ColumnId: 'InvoicedCost',
-        Range: {
-          Operator: 'GreaterThan',
-          Operand1: 3000,
-          Operand2: '',
-          Operand1Type: 'Value',
-          Operand2Type: 'Value',
-        },
-      },
-      {
-        ActionMode: 'Show Warning',
-        ColumnId: 'OrderCost',
-        Range: {
-          Operator: 'PercentChange',
-          Operand1: 100,
-          Operand2: '',
-          Operand1Type: 'Value',
-          Operand2Type: 'Value',
-        },
-      },
-    ],
+    VisibleToolbars: ['SmartEdit', 'Alert', 'BulkUpdate', 'Chart'],
   },
 } as PredefinedConfig;
 
@@ -91,9 +43,10 @@ export default (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Cell Validating Demo',
+    adaptableId: 'Dashboard Toolbars Demo',
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
+    plugins: [charts()],
   };
   adaptableApi = Adaptable.init(adaptableOptions);
 

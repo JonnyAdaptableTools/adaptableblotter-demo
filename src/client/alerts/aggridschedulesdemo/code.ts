@@ -81,7 +81,7 @@ export default (columnDefs: any[], rowData: any[]) => {
     rowData,
     animateRows: true,
     enableRangeSelection: true,
-    suppressAggFuncInHeader: true,
+
     sideBar: true,
     suppressMenuHide: true,
     floatingFilter: true,

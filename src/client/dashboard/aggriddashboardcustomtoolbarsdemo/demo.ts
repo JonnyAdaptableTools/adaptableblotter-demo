@@ -1,20 +1,13 @@
-import Adaptable from '@adaptabletools/adaptable/agGrid';
-import '@adaptabletools/adaptable/index.css';
-import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
-import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
-import { cloneDeep } from 'lodash';
+import raw from 'raw.macro';
+
 import '../../../../DemoPage/aggriddemo.css';
-import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
-import {
-  AdaptableOptions,
-  ToolbarButtonClickedEventArgs,
-  ToolbarVisibilityChangedEventArgs,
-} from '@adaptabletools/adaptable/types';
+
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
-import predefinedConfig from './config';
-import ReactDOM from 'react-dom';
-import { renderCustomDiv } from '.';
+
+import init from './code';
+import { GridReadyEvent } from '@ag-grid-community/all-modules';
+const code = raw('./code.ts');
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
@@ -24,51 +17,22 @@ export default () => {
 
   const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
 
-  const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
+  const { adaptableOptions, adaptableApi } = init(columndefs, rowData);
 
-  const adaptableOptions: AdaptableOptions = {
-    primaryKey: 'OrderId',
-    userName: 'Demo User',
-    adaptableId: 'Custom Toolbars Demo',
+  adaptableOptions.vendorGrid.onGridReady = function(
+    gridReady: GridReadyEvent
+  ) {
+    gridReady.columnApi!.autoSizeAllColumns();
+    setTimeout(() => gridReady.columnApi!.autoSizeAllColumns(), 1);
 
-    vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
-    predefinedConfig: predefinedConfig,
+    gridReady.api!.addEventListener('newColumnsLoaded', function() {
+      gridReady.columnApi!.autoSizeAllColumns();
+    });
+
+    gridReady.api!.closeToolPanel();
   };
 
-  const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  const adaptableApi = Adaptable.init(adaptableOptions);
-
-  adaptableApi.eventApi.on(
-    'ToolbarVisibilityChanged',
-    (toolbarVisibilityChangedEventArgs: ToolbarVisibilityChangedEventArgs) => {
-      if (
-        toolbarVisibilityChangedEventArgs.data[0].id.toolbar === 'Trades' &&
-        toolbarVisibilityChangedEventArgs.data[0].id.visibility == 'Visible'
-      ) {
-        let toolbarContents: any = renderCustomDiv();
-
-        ReactDOM.render(
-          toolbarContents,
-          adaptableApi.dashboardApi.getCustomToolbarContentsDiv('Trades')
-        );
-      }
-    }
-  );
-
-  adaptableApi.eventApi.on(
-    'ToolbarButtonClicked',
-    (toolbarButtonClickedEventArgs: ToolbarButtonClickedEventArgs) => {
-      alert(
-        'you clicked: name: ' +
-          toolbarButtonClickedEventArgs.data[0].id.toolbarButton.Name +
-          ';caption: ' +
-          toolbarButtonClickedEventArgs.data[0].id.toolbarButton.Caption
-      );
-    }
-  );
-
   return {
-    predefinedConfig,
-    adaptableOptions: adaptableOptionsClone,
+    code,
   };
 };

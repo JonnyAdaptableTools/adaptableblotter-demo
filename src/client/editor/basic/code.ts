@@ -15,7 +15,6 @@ export default (columndefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     animateRows: true,
     enableRangeSelection: true,
-    suppressAggFuncInHeader: true,
     sideBar: true,
     suppressMenuHide: true,
 
