@@ -20,14 +20,16 @@ export default () => {
 
   const { adaptableOptions, adaptableApi } = init(columndefs, rowData);
 
-  tickingDataHelper.startTickingDataagGridOrders(
-    adaptableOptions.vendorGrid,
-    adaptableApi,
-    750,
-    11084,
-    11142,
-    true
-  );
+  adaptableApi.eventApi.on('AdaptableReady', () => {
+    tickingDataHelper.startTickingDataagGridOrders(
+      adaptableOptions.vendorGrid,
+      adaptableApi,
+      750,
+      11084,
+      11142,
+      true
+    );
+  });
 
   adaptableOptions.vendorGrid.onGridReady = function(
     gridReady: GridReadyEvent

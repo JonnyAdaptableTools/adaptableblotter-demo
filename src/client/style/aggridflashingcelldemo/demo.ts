@@ -32,13 +32,16 @@ export default () => {
     gridReady.api!.closeToolPanel();
   };
 
-  tickingDataHelper.startTickingDataagGridOrders(
-    adaptableOptions.vendorGrid,
-    adaptableApi,
-    200,
-    11084,
-    11142
-  );
+  adaptableApi.eventApi.on('AdaptableReady', () => {
+    tickingDataHelper.startTickingDataagGridOrders(
+      adaptableOptions.vendorGrid,
+      adaptableApi,
+      200,
+      11084,
+      11142
+    );
+  });
+
   return {
     unload: () => {
       tickingDataHelper.turnOffTicking();

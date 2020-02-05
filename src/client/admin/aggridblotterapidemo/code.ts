@@ -1,0 +1,167 @@
+import '@adaptabletools/adaptable/index.css';
+import '@adaptabletools/adaptable/themes/dark.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham-dark.css';
+import Adaptable from '@adaptabletools/adaptable/agGrid';
+import { GridOptions } from '@ag-grid-community/all-modules';
+import {
+  AdaptableOptions,
+  PredefinedConfig,
+  AdaptableApi,
+} from '@adaptabletools/adaptable/types';
+import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
+
+var adaptableApi: AdaptableApi;
+
+const demoConfig: PredefinedConfig = {
+  Dashboard: {
+    VisibleToolbars: ['QuickSearch', 'Layout', 'Theme'],
+  },
+  Layout: {
+    CurrentLayout: 'Shipping',
+    Layouts: [
+      {
+        Columns: ['OrderId', 'Employee', 'ShipCountry', 'Freight'],
+        ColumnSorts: [],
+        Name: 'Orders',
+      },
+      {
+        Columns: ['OrderId', 'ShipVia', 'Freight', 'ShipName', 'ShipCountry'],
+        ColumnSorts: [
+          {
+            Column: 'ShipName',
+            SortOrder: 'Ascending',
+          },
+        ],
+        Name: 'Shipping',
+      },
+    ],
+  },
+} as PredefinedConfig;
+
+export default (columnDefs: any[], rowData: any[]) => {
+  let gridOptions: GridOptions = {
+    columnDefs,
+    rowData,
+    animateRows: true,
+    enableRangeSelection: true,
+    sideBar: true,
+    suppressMenuHide: true,
+    floatingFilter: true,
+    columnTypes: {
+      abColDefNumber: {},
+      abColDefString: {},
+      abColDefBoolean: {},
+      abColDefDate: {},
+      abColDefObject: {},
+      abColDefNumberArray: {},
+    },
+  };
+
+  const testDiv: HTMLElement | null = document.getElementById('aboveGridDiv');
+  if (testDiv != null) {
+    testDiv.style.backgroundColor = 'lightGray';
+    testDiv.style.marginBottom = '10px';
+    testDiv.style.padding = '10px';
+    var para = document.createElement('P');
+    para.innerHTML = '<b>Using the Adaptable API</b><br/>';
+    para.innerHTML +=
+      'Click "Run Quick Search" (or "Clear Quick Search") to call the equivalent Quick Search API functions.<br/>';
+    para.innerHTML +=
+      'And use other buttons to set Dashboard visibility, load a layout and display a popup.';
+    testDiv.appendChild(para);
+
+    var textBox = document.createElement('input');
+    textBox.id = 'txtQuickSearchText';
+    textBox.name = 'txtQuickSearchText';
+    textBox.style.marginRight = '10px';
+    testDiv.appendChild(textBox);
+
+    var runQuickSearchButton = document.createElement('BUTTON');
+    runQuickSearchButton.innerHTML = 'Run Quick Search';
+    runQuickSearchButton.onclick = () => runQuickSearchViaAPI();
+    runQuickSearchButton.style.marginRight = '10px';
+    testDiv.appendChild(runQuickSearchButton);
+
+    var clearQuickSearchButton = document.createElement('BUTTON');
+    clearQuickSearchButton.innerHTML = 'Clear Quick Search';
+    clearQuickSearchButton.onclick = () => clearQuickSearchViaAPI();
+    clearQuickSearchButton.style.marginRight = '50px';
+    testDiv.appendChild(clearQuickSearchButton);
+
+    var minimiseDasahboardButton = document.createElement('BUTTON');
+    minimiseDasahboardButton.innerHTML = 'Minimise Dasbhoard';
+    minimiseDasahboardButton.onclick = () => minimiseDashboard();
+    minimiseDasahboardButton.style.marginRight = '10px';
+    testDiv.appendChild(minimiseDasahboardButton);
+
+    var deleteFirstRowButton = document.createElement('BUTTON');
+    deleteFirstRowButton.innerHTML = 'Delete First Row';
+    deleteFirstRowButton.onclick = () => deleteFirstRow();
+    deleteFirstRowButton.style.marginRight = '30px';
+    testDiv.appendChild(deleteFirstRowButton);
+
+    var showOrdersLayoutButton = document.createElement('BUTTON');
+    showOrdersLayoutButton.innerHTML = 'Load Orders Layout';
+    showOrdersLayoutButton.onclick = () => showOrdersLayout();
+    showOrdersLayoutButton.style.marginRight = '10px';
+    testDiv.appendChild(showOrdersLayoutButton);
+
+    var showColumnChooserPopupButton = document.createElement('BUTTON');
+    showColumnChooserPopupButton.innerHTML = 'Show Column Chooser';
+    showColumnChooserPopupButton.onclick = () => showColumnChooserPopup();
+    showColumnChooserPopupButton.style.marginRight = '10px';
+    testDiv.appendChild(showColumnChooserPopupButton);
+  }
+
+  const adaptableOptions: AdaptableOptions = {
+    primaryKey: 'OrderId',
+    userName: 'Demo User',
+    adaptableId: 'Adaptable Api Demo',
+    predefinedConfig: demoConfig,
+    vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
+  };
+  adaptableApi = Adaptable.init(adaptableOptions);
+
+  function runQuickSearchViaAPI() {
+    const element: any = document.getElementById('txtQuickSearchText');
+    if (element != null) {
+      let searchValue = element.value;
+      if (searchValue != null && searchValue != '') {
+        adaptableApi.quickSearchApi.applyQuickSearch(searchValue);
+      }
+    }
+  }
+
+  function clearQuickSearchViaAPI() {
+    const element: any = document.getElementById('txtQuickSearchText');
+    if (element != null) {
+      element.value = '';
+      adaptableApi.quickSearchApi.clearQuickSearch();
+    }
+  }
+
+  function minimiseDashboard() {
+    adaptableApi.dashboardApi.minimise();
+  }
+
+  function deleteFirstRow() {
+    let firstRow: any = adaptableOptions.vendorGrid.api.getDisplayedRowAtIndex(
+      0
+    );
+    if (firstRow && firstRow.data) {
+      adaptableApi.gridApi.deleteGridData([firstRow.data]);
+    }
+  }
+
+  function showOrdersLayout() {
+    adaptableApi.layoutApi.setLayout('Orders');
+  }
+
+  function showColumnChooserPopup() {
+    adaptableApi.columnChooserApi.showColumnChooserPopup();
+  }
+
+  return { adaptableOptions, adaptableApi };
+};

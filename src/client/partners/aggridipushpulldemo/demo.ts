@@ -53,13 +53,15 @@ export default () => {
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
   let blotterAPI: AdaptableApi = Adaptable.init(adaptableOptions);
 
-  tickingDataHelper.startTickingDataagGridTradesUpdateData(
-    gridOptions,
-    blotterAPI,
-    1000,
-    rowCount,
-    true
-  );
+  blotterAPI.eventApi.on('AdaptableReady', () => {
+    tickingDataHelper.startTickingDataagGridTradesUpdateData(
+      gridOptions,
+      blotterAPI,
+      1000,
+      rowCount,
+      true
+    );
+  });
 
   return {
     unload: () => {

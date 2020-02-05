@@ -45,13 +45,15 @@ export default () => {
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
   const adaptableApi = Adaptable.init(adaptableOptions);
 
-  tickingDataHelper.startTickingDataagGridOrders(
-    gridOptions,
-    adaptableApi,
-    100,
-    10248,
-    11142
-  );
+  adaptableApi.eventApi.on('AdaptableReady', () => {
+    tickingDataHelper.startTickingDataagGridOrders(
+      gridOptions,
+      adaptableApi,
+      100,
+      10248,
+      11142
+    );
+  });
 
   adaptableApi.eventApi.on('AdaptableReady', (info: AdaptableReadyInfo) => {
     // to set a pinned row (in this case the 5th row in our data source)

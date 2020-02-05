@@ -17,11 +17,13 @@ export default () => {
 
   const { adaptableOptions, adaptableApi } = init(columndefs, rowData);
 
-  tickingDataHelper.startTickingDataagGridPivot(
-    adaptableOptions.vendorGrid,
-    adaptableApi,
-    500
-  );
+  adaptableApi.eventApi.on('AdaptableReady', () => {
+    tickingDataHelper.startTickingDataagGridPivot(
+      adaptableOptions.vendorGrid,
+      adaptableApi,
+      500
+    );
+  });
 
   adaptableOptions.vendorGrid.onGridReady = function(
     gridReady: GridReadyEvent

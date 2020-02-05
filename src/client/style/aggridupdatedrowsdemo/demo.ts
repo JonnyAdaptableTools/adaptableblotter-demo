@@ -37,12 +37,15 @@ export default () => {
   const adaptableOptionsClone = cloneDeep(adaptableOptions);
   const adaptableApi = Adaptable.init(adaptableOptions);
 
-  tickingDataHelper.startTickingDataagGridTradesUpdateData(
-    gridOptions,
-    adaptableApi,
-    4000,
-    tradeCount
-  );
+  adaptableApi.eventApi.on('AdaptableReady', () => {
+    tickingDataHelper.startTickingDataagGridTradesUpdateData(
+      gridOptions,
+      adaptableApi,
+      4000,
+      tradeCount
+    );
+  });
+
   return {
     unload: () => {
       tickingDataHelper.turnOffTicking();
