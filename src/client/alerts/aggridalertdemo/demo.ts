@@ -1,19 +1,14 @@
-import Adaptable from '@adaptabletools/adaptable/agGrid';
-import '@adaptabletools/adaptable/index.css';
+import raw from 'raw.macro';
 
-import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
-import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
-import { cloneDeep } from 'lodash';
-import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import '../../../../DemoPage/aggriddemo.css';
-
-import { AdaptableOptions } from '@adaptabletools/adaptable/types';
 
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 
-import predefinedConfig from './config';
+import init from './code';
+import { GridReadyEvent } from '@ag-grid-community/all-modules';
 import { TickingDataHelper } from '../../../Helpers/TickingDataHelper';
+const code = raw('./code.ts');
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
@@ -23,32 +18,34 @@ export default () => {
 
   const columndefs = helperAgGrid.getFlashingCellColumnSchema();
 
-  const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
-  gridOptions.modules = AllEnterpriseModules;
+  const { adaptableOptions, adaptableApi } = init(columndefs, rowData);
 
-  const adaptableOptions: AdaptableOptions = {
-    primaryKey: 'OrderId',
-    userName: 'Demo User',
-    adaptableId: 'Alert Demo',
-    vendorGrid: gridOptions,
-    predefinedConfig: predefinedConfig,
-  };
-
-  const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  const adaptableApi = Adaptable.init(adaptableOptions);
   tickingDataHelper.startTickingDataagGridOrders(
-    gridOptions,
+    adaptableOptions.vendorGrid,
     adaptableApi,
     750,
     11084,
     11142,
     true
   );
+
+  adaptableOptions.vendorGrid.onGridReady = function(
+    gridReady: GridReadyEvent
+  ) {
+    gridReady.columnApi!.autoSizeAllColumns();
+    setTimeout(() => gridReady.columnApi!.autoSizeAllColumns(), 1);
+
+    gridReady.api!.addEventListener('newColumnsLoaded', function() {
+      gridReady.columnApi!.autoSizeAllColumns();
+    });
+
+    gridReady.api!.closeToolPanel();
+  };
+
   return {
     unload: () => {
       tickingDataHelper.turnOffTicking();
     },
-    predefinedConfig,
-    adaptableOptions: adaptableOptionsClone,
+    code,
   };
 };

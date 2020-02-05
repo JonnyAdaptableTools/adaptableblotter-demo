@@ -46,7 +46,6 @@ export default (props: { demo: any } & AgGridDemoPageProps) => {
       <DynamicComponent
         onReady={info => {
           if (info) {
-            console.log(info);
             const { code, predefinedConfig, adaptableOptions, unload } = info;
             setExampleCode(code);
             if (predefinedConfig) {
