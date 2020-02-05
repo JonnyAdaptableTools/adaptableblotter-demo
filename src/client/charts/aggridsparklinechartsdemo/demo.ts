@@ -1,18 +1,10 @@
-import Adaptable from '@adaptabletools/adaptable/agGrid';
-import '@adaptabletools/adaptable/index.css';
-
-import '@adaptabletools/adaptable/themes/dark.css';
-
-import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
-import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
-import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham-dark.css';
-import { cloneDeep } from 'lodash';
+import raw from 'raw.macro';
 import '../../../../DemoPage/aggriddemo.css';
-import { AdaptableOptions } from '@adaptabletools/adaptable/types';
-import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
+import json from '../../../../DataSets/Json/worldstats.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
-import predefinedConfig from './config';
-import charts from '@adaptabletools/adaptable-plugin-charts';
+import init from './code';
+import { GridReadyEvent } from '@ag-grid-community/all-modules';
+const code = raw('./code.ts');
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
@@ -20,29 +12,24 @@ export default () => {
 
   const columndefs = helperAgGrid.getTradeSchema();
 
-  const trades = helperAgGrid.getTrades(300);
+  const rowData = helperAgGrid.getTrades(300);
 
-  const gridOptions = helperAgGrid.getGridOptions(columndefs, trades);
+  const { adaptableOptions, adaptableApi } = init(columndefs, rowData);
 
-  const adaptableOptions: AdaptableOptions = {
-    primaryKey: 'tradeId',
-    userName: 'Demo User',
-    adaptableId: 'Sparkline Charts Demo',
-    chartOptions: {
-      displayOnStartUp: true,
-      showModal: false,
-      pieChartMaxItems: 50,
-    },
-    vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
-    predefinedConfig: predefinedConfig,
-    plugins: [charts()],
+  adaptableOptions.vendorGrid.onGridReady = function(
+    gridReady: GridReadyEvent
+  ) {
+    gridReady.columnApi!.autoSizeAllColumns();
+    setTimeout(() => gridReady.columnApi!.autoSizeAllColumns(), 1);
+
+    gridReady.api!.addEventListener('newColumnsLoaded', function() {
+      gridReady.columnApi!.autoSizeAllColumns();
+    });
+
+    gridReady.api!.closeToolPanel();
   };
 
-  const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  Adaptable.init(adaptableOptions);
-
   return {
-    predefinedConfig,
-    adaptableOptions: adaptableOptionsClone,
+    code,
   };
 };
