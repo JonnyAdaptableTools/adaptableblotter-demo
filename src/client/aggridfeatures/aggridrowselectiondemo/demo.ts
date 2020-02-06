@@ -1,21 +1,13 @@
-import Adaptable from '@adaptabletools/adaptable/agGrid';
-import '@adaptabletools/adaptable/index.css';
+import raw from 'raw.macro';
 
-import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
-import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
-import { cloneDeep } from 'lodash';
-import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import '../../../../DemoPage/aggriddemo.css';
-
-import {
-  AdaptableOptions,
-  SelectionChangedEventArgs,
-} from '@adaptabletools/adaptable/types';
 
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
-import predefinedConfig from './config';
-import { GridOptions, ColDef } from '@ag-grid-community/all-modules';
+
+import init from './code';
+import { GridReadyEvent } from '@ag-grid-community/all-modules';
+const code = raw('./code.ts');
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
@@ -24,45 +16,23 @@ export default () => {
   let rowData = JSON.parse(JSON.stringify(json));
 
   const columndefs = helperAgGrid.getRowSelectionNorthwindColumnSchema();
-  let autoGroupColumnDef: ColDef = {
-    headerName: 'Employee',
-    field: 'employee',
-    width: 200,
-    cellRenderer: 'agGroupCellRenderer',
-    cellRendererParams: {
-      checkbox: true,
-    },
+
+  const { adaptableOptions, adaptableApi } = init(columndefs, rowData);
+
+  adaptableOptions.vendorGrid.onGridReady = function(
+    gridReady: GridReadyEvent
+  ) {
+    gridReady.columnApi!.autoSizeAllColumns();
+    setTimeout(() => gridReady.columnApi!.autoSizeAllColumns(), 1);
+
+    gridReady.api!.addEventListener('newColumnsLoaded', function() {
+      gridReady.columnApi!.autoSizeAllColumns();
+    });
+
+    gridReady.api!.closeToolPanel();
   };
-
-  const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
-  gridOptions.rowSelection = 'multiple';
-  gridOptions.autoGroupColumnDef = autoGroupColumnDef;
-  gridOptions.suppressRowClickSelection = true;
-  gridOptions.modules = AllEnterpriseModules;
-
-  const adaptableOptions: AdaptableOptions = {
-    primaryKey: 'OrderId',
-    userName: 'Demo User',
-    adaptableId: 'Row Selection Demo',
-
-    vendorGrid: gridOptions,
-    predefinedConfig: predefinedConfig,
-  };
-
-  const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  const adaptableApi = Adaptable.init(adaptableOptions);
-
-  adaptableApi.eventApi.on('SelectionChanged', listenToSelectedChange);
 
   return {
-    predefinedConfig,
-    adaptableOptions: adaptableOptionsClone,
+    code,
   };
-
-  function listenToSelectedChange(
-    selectedChangedArgs: SelectionChangedEventArgs
-  ) {
-    console.log('Selection Has Changed');
-    console.log(selectedChangedArgs.data[0].id);
-  }
 };

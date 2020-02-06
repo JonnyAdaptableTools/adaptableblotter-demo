@@ -1,45 +1,35 @@
-import Adaptable from '@adaptabletools/adaptable/agGrid';
-import '@adaptabletools/adaptable/index.css';
-import '@adaptabletools/adaptable/themes/dark.css';
-import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
-import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
-import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham-dark.css';
-import { cloneDeep } from 'lodash';
+import raw from 'raw.macro';
 import '../../../../DemoPage/aggriddemo.css';
-import { AdaptableOptions } from '@adaptabletools/adaptable/types';
-import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import { TickingDataHelper } from '../../../Helpers/TickingDataHelper';
-import predefinedConfig from './config';
+import { GridReadyEvent } from '@ag-grid-community/all-modules';
+import init from './code';
+const code = raw('./code.ts');
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
   const tickingDataHelper = new TickingDataHelper();
-
   const columndefs = helperAgGrid.getTradeSchema();
-
   const tradeCount: number = 200;
+  const rowData = helperAgGrid.getTrades(tradeCount);
+  const { adaptableOptions, adaptableApi } = init(columndefs, rowData);
 
-  const trades = helperAgGrid.getTrades(tradeCount);
+  adaptableOptions.vendorGrid.onGridReady = function(
+    gridReady: GridReadyEvent
+  ) {
+    gridReady.columnApi!.autoSizeAllColumns();
+    setTimeout(() => gridReady.columnApi!.autoSizeAllColumns(), 1);
 
-  const gridOptions = helperAgGrid.getGridOptions(columndefs, trades);
-  gridOptions.modules = AllEnterpriseModules;
-
-  const adaptableOptions: AdaptableOptions = {
-    primaryKey: 'tradeId',
-    userName: 'Demo User',
-    adaptableId: 'Updated Rows Demo',
-    vendorGrid: gridOptions,
-    predefinedConfig: predefinedConfig,
+    gridReady.api!.addEventListener('newColumnsLoaded', function() {
+      gridReady.columnApi!.autoSizeAllColumns();
+    });
+    gridReady.api!.closeToolPanel();
   };
-
-  const adaptableOptionsClone = cloneDeep(adaptableOptions);
-  const adaptableApi = Adaptable.init(adaptableOptions);
 
   adaptableApi.eventApi.on('AdaptableReady', () => {
     tickingDataHelper.startTickingDataagGridTradesUpdateData(
-      gridOptions,
+      adaptableOptions.vendorGrid,
       adaptableApi,
       4000,
       tradeCount
@@ -50,7 +40,6 @@ export default () => {
     unload: () => {
       tickingDataHelper.turnOffTicking();
     },
-    predefinedConfig,
-    adaptableOptions: adaptableOptionsClone,
+    code,
   };
 };

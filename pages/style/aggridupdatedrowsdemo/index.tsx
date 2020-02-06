@@ -10,8 +10,8 @@ export default () => {
         <div>
           <p>
             Updated Rows are designed for when rows <b>change rarely</b> and you
-            wish to see what has changed. (For fast ticking data use the
-            Flashing Cell funtion).
+            wish to see what has changed. (For fast ticking data use the{' '}
+            <a href="./aggridflashingcelldemo">Flashing Cell</a> function).
           </p>
           <p>
             If the function is enabled, then each time a cell value changes the
