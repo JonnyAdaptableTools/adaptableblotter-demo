@@ -34,7 +34,7 @@ export default () => {
       pageTitle={'Theme demos'}
       description={
         <div>
-          <h4>Theming AdAdapTableaptable</h4>
+          <h4>Theming AdapTable</h4>
           <p>
             You can theme (ie. set up the look and feel of) AdapTable entirely
             through{' '}

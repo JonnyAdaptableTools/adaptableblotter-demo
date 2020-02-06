@@ -11,7 +11,6 @@ import {
   AdaptableApi,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
-import { IServerColumnValues } from '@adaptabletools/adaptable/src/AdaptableOptions/QueryOptions';
 
 var adaptableApi: AdaptableApi;
 
@@ -70,51 +69,6 @@ export default (columnDefs: any[], rowData: any[]) => {
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
   adaptableApi = Adaptable.init(adaptableOptions);
-
-  function getValuesForColumn(
-    columnName: string
-  ): IServerColumnValues | undefined {
-    let vals;
-    if (columnName === 'CustomerReference') {
-      vals = [
-        'MEREP',
-        'TOMSP',
-        'WARTH',
-        'BLONP',
-        'BERGS',
-        'FOLKO',
-        'PRINI',
-        'LEHMS',
-        'SPLIR',
-        'BOTTM',
-        'ERNSH',
-        'HUNGO',
-        'REGGC',
-      ];
-    } else if (columnName === 'ContactName') {
-      vals = [
-        'Jean Fresnière',
-        'Karin Josephs',
-        'Pirkko Koskitalo',
-        'Frédérique Citeaux',
-        'Elizabeth Brown',
-        'Maria Larsson',
-        'Art Braunschweiger',
-        'Roland Mendel',
-        'Elizabeth Lincoln',
-        'Patricia McKenna',
-        'Pedro Afonso',
-        'Philip Cramer',
-        'Maurizio Moroni',
-      ];
-    } else {
-      return undefined; // not nice and we need to fix
-    }
-    return {
-      DistinctCriteriaPairValue: 'DisplayValue',
-      ColumnValues: vals,
-    };
-  }
 
   return { adaptableOptions, adaptableApi };
 };
