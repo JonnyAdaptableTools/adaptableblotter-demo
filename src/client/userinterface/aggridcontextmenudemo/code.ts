@@ -7,12 +7,10 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
-} from '@adaptabletools/adaptable/types';
-import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
-import {
   AdaptableMenuItem,
   MenuInfo,
-} from '@adaptabletools/adaptable/src/PredefinedConfig/Common/Menu';
+} from '@adaptabletools/adaptable/types';
+import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
 var adaptableApi: AdaptableApi;
 

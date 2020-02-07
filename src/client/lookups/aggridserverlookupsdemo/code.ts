@@ -9,9 +9,9 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
+  IServerColumnValues,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
-import { IServerColumnValues } from '@adaptabletools/adaptable/src/AdaptableOptions/QueryOptions';
 
 var adaptableApi: AdaptableApi;
 

@@ -11,9 +11,9 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
+  AdaptableReadyInfo,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
-import { AdaptableReadyInfo } from '@adaptabletools/adaptable/src/Api/Events/AdaptableReady';
 
 var adaptableApi: AdaptableApi;
 

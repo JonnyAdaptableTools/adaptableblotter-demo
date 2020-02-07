@@ -12,9 +12,9 @@ import {
   PredefinedConfig,
   AdaptableApi,
   ActionColumnClickedEventArgs,
+  ActionColumnClickedInfo,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
-import { ActionColumnClickedInfo } from '@adaptabletools/adaptable/src/Api/Events/ActionColumnClicked';
 
 var adaptableApi: AdaptableApi;
 

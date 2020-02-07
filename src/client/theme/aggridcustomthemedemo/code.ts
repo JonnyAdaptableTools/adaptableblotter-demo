@@ -11,9 +11,9 @@ import {
   PredefinedConfig,
   AdaptableApi,
   ThemeChangedEventArgs,
+  RowStyle,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
-import { RowStyle } from '@adaptabletools/adaptable/src/PredefinedConfig/UserInterfaceState';
 
 var adaptableApi: AdaptableApi;
 

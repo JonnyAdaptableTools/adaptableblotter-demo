@@ -9,10 +9,10 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
+  DataChangedInfo,
+  ValidationResult,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
-import { DataChangedInfo } from '@adaptabletools/adaptable/src/AdaptableOptions/CommonObjects/DataChangedInfo';
-import { ValidationResult } from '@adaptabletools/adaptable/src/AdaptableOptions/EditOptions';
 
 var adaptableApi: AdaptableApi;
 

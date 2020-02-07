@@ -10,12 +10,10 @@ import {
   PredefinedConfig,
   AdaptableApi,
   SearchChangedEventArgs,
-} from '@adaptabletools/adaptable/types';
-import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
-import {
   SearchChangedInfo,
   AdaptableSearchState,
-} from '@adaptabletools/adaptable/src/Api/Events/SearchChanged';
+} from '@adaptabletools/adaptable/types';
+import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 
 var adaptableApi: AdaptableApi;

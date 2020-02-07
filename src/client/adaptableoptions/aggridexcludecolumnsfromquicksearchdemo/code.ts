@@ -9,9 +9,9 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
+  AdaptableColumn,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
-import { AdaptableColumn } from '@adaptabletools/adaptable/src/PredefinedConfig/Common/AdaptableColumn';
 
 var adaptableApi: AdaptableApi;
 
