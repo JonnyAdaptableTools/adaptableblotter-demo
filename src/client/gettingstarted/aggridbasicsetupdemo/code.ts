@@ -33,11 +33,11 @@ import {
   AdaptableApi,
 } from '@adaptabletools/adaptable/types';
 
-// Import ag-grid objects from Community - this is always required by AdapTable
+// Import ag-grid objects from Community - this is always required by AdapTable and must be installed
 import { GridOptions, ColDef } from '@ag-grid-community/all-modules';
 
 // Import any ag-Grid Enterprise modules you need (v.22 of ag-Grid introduced modularisation)
-// AdapTable requires that you install '@ag-grid-community/all-modules', but you can add as many Enterprise modules as you wish
+// You can add as many individual Enterprise modules as you wish, or (as in this case) import AllEnterpriseModules
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
 // Import any Adaptable plugins that we want to use - in this case 'ChartsPlugin'
@@ -47,7 +47,7 @@ import ChartsPlugin from '@adaptabletools/adaptable-plugin-charts';
 // a: Set the Toolbars to be QuickSearch, SystemStatus and Theme
 // b: Set a default System Status message which will display when not overriden by a newer one
 // c: Set the Adaptable theme to be 'Dark'
-// Here we set a couple of Dashboard toolbars and set a System Status message
+// Here we select a couple of Dashboard toolbars and set a System Status message
 const demoConfig: PredefinedConfig = {
   Dashboard: {
     VisibleToolbars: ['QuickSearch', 'SystemStatus', 'Theme'],
@@ -86,8 +86,14 @@ const columnSchema: ColDef[] = [
 // Step 3: Get your data (in the real world this will be dynamically sourced)
 const rowdada: any[] = [
   { make: 'Toyota', model: 'Celica', price: 35000 },
+  { make: 'Toyota', model: 'Yaris', price: 40000 },
+  { make: 'Toyota', model: 'Corolla', price: 28000 },
   { make: 'Ford', model: 'Mondeo', price: 32000 },
-  { make: 'Porsche', model: 'Boxter', price: 72000 },
+  { make: 'Ford', model: 'Fiesta', price: 35000 },
+  { make: 'Ford', model: 'Focus', price: 26750 },
+  { make: 'Ford', model: 'Galaxy', price: 41000 },
+  { make: 'Porsche', model: 'Boxter', price: 72500 },
+  { make: 'Porsche', model: 'Mission', price: 81000 },
   { make: 'Mitsubbishi', model: 'Outlander', price: 97800 },
 ];
 
