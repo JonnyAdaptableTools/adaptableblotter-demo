@@ -21,17 +21,31 @@ const demoConfig: PredefinedConfig = {
   CustomSort: {
     CustomSorts: [
       {
-        ColumnId: 'Employee',
-        SortedValues: ['Margaret Peacock', 'Janet Leverling', 'Nancy Davolio'],
-      },
-      {
         ColumnId: 'ContactName',
         SortedValues: [
           'Palle Ibsen',
           'Jaime Yorres',
           'Aria Cruz',
+          'Roland Mendel',
           'Fran Wilson',
+          'Georg Pipps',
+          'Bernardo Batista',
         ],
+      },
+      {
+        ColumnId: 'Employee',
+        CustomSortComparerFunction: (
+          valueA: any,
+          valueB: any,
+          nodeA: any,
+          nodeB: any
+        ) => {
+          const fullName = valueA.split(' ');
+          const fullNameB = valueB.split(' ');
+          return fullName[fullName.length - 1] > fullNameB[fullNameB.length - 1]
+            ? 1
+            : -1;
+        },
       },
     ],
   },
@@ -41,7 +55,6 @@ export default (columnDefs: any[], rowData: any[]) => {
   let gridOptions: GridOptions = {
     columnDefs,
     rowData,
-    animateRows: true,
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,

@@ -18,7 +18,7 @@ export default () => {
   const columndefs = helperAgGrid.getConditionalstyleNorthwindColumnSchema();
 
   const { adaptableOptions, adaptableApi } = init(columndefs, rowData);
-
+  console.log(103);
   adaptableOptions.vendorGrid.onGridReady = function(
     gridReady: GridReadyEvent
   ) {

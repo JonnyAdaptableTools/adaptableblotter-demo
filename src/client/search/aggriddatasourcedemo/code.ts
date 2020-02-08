@@ -48,7 +48,6 @@ export default (columnDefs: any[]) => {
   let gridOptions: GridOptions = {
     columnDefs,
     rowData: undefined,
-    animateRows: true,
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,

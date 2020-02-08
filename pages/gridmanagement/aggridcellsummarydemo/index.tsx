@@ -13,26 +13,32 @@ export default () => {
             selected cells using a variety of mathematical operations.
           </p>
           <p>
-            You can create your own operations or use the ones shippped with
-            AdapTable (most of which work only on numeric columns).
+            AdapTable ships with a number of 'Summary Operations' that you can
+            use (some of which work only on numeric columns).
           </p>
-
           <p>
             Try it: highlight a group of cells and see the value change in the
             Cell Summmary toolbar. Click the 'info' button to see results of all
             operations or change the selected one by using the dropdown.
-          </p>
+          </p>{' '}
           <p>
-            You will notice that the example includes 2 financial summaries
-            ('VWAP' and 'Only'); this is becuase we have installed and included
-            the{' '}
+            Note that the dropdown includes 2 financial summaries ('VWAP' and
+            'Only'); this is becuase we installed and included the{' '}
             <a
               href="https://api.adaptabletools.com/interfaces/_adaptableoptions_adaptableoptions_.adaptableoptions.html#plugins"
               target="_blank"
             >
               Financial plugin
             </a>{' '}
-            (one of the Plugins that Adaptable provides).
+            (one of the Plugins that AdapTable provides).
+          </p>
+          <p>
+            You can also create your own Summary Operations by providing a
+            function which will be evaluated each time the summary is run.{' '}
+          </p>
+          <p>
+            In this example we have provided an 'Oldest' function which runs
+            only on Date columns and returns the oldest date in the selection.
           </p>
         </div>
       }

@@ -13,7 +13,6 @@ import { AdaptableOptions } from '@adaptabletools/adaptable/types';
 
 export default (columndefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
-    animateRows: true,
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,

@@ -25,7 +25,7 @@ export default () => {
   new AdaptableNoCodeWizard(adaptableOptions, {
     /*
       onInit: ({ adaptableOptions, gridOptions }) => {
-        adaptableOptions.filterOptions =
+        adaptableOptions.filterOptions 
           adaptableOptions.filterOptions || {};
         gridOptions.columnDefs = gridOptions.columnDefs!.map(c => {
           return {

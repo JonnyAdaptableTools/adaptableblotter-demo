@@ -2,16 +2,11 @@ import '@adaptabletools/adaptable/index.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
 import Adaptable from '@adaptabletools/adaptable/agGrid';
-import {
-  GridOptions,
-  ModelUpdatedEvent,
-  IClientSideRowModel,
-} from '@ag-grid-community/all-modules';
+import { GridOptions } from '@ag-grid-community/all-modules';
 import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
-  AdaptableReadyInfo,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -23,7 +18,6 @@ export default (columnDefs: any[], rowData: any[]) => {
   let gridOptions: GridOptions = {
     columnDefs,
     rowData,
-    animateRows: true,
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
@@ -46,24 +40,11 @@ export default (columnDefs: any[], rowData: any[]) => {
     userName: 'Demo User',
     adaptableId: 'Row Grouping Demo',
     predefinedConfig: demoConfig,
+    generalOptions: {
+      showGroupingTotalsAsHeader: true,
+    },
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
   adaptableApi = Adaptable.init(adaptableOptions);
-
-  adaptableApi.eventApi.on('AdaptableReady', (info: AdaptableReadyInfo) => {
-    let gridOptions: GridOptions = info.vendorGrid as GridOptions;
-
-    gridOptions.onModelUpdated = (event: ModelUpdatedEvent) => {
-      const pinnedData = event.api.getPinnedTopRow(0);
-      const model = event.api.getModel() as IClientSideRowModel;
-      const rootNode = model.getRootNode();
-      if (!pinnedData) {
-        event.api.setPinnedTopRowData([rootNode.aggData]);
-      } else {
-        pinnedData.updateData(rootNode.aggData);
-      }
-    };
-  });
-
   return { adaptableOptions, adaptableApi };
 };

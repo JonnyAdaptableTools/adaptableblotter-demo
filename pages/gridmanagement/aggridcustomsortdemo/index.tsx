@@ -9,27 +9,42 @@ export default () => {
       description={
         <div>
           <p>
-            Custom Sort function allows you to specify a custom sort order when
-            a column is sorted (as opposed to the default alphabetical or
-            numbered sort).
+            Custom Sort function allows you to specify a bespoke custom sort
+            order when a column is sorted (in place of the default alphabetical
+            or numbered sort).
           </p>
           <p>
-            This is ideal for both columns where the default sort order doesnt
-            make sense (e.g. a 'Ratings' or 'Tenor' column) or where each user
-            will have their own preffeed non standard sort (e.g. Sector or
-            Currency).
+            This is ideal for columns where the default sort order doesnt make
+            sense (e.g. a 'Ratings' or 'Tenor' column) where you will want to
+            provide a standard non-alphabetical sort.
           </p>
           <p>
-            This example we created Custom Sorts on 'Employee' and 'Contact'
-            columns. Click the header to sort and you will see that they get
-            sorted according to the Custom Sort order (and not alphabetically).
+            It is also suitable for columns where some users might have their
+            own preferred non standard sort (e.g. a 'Sector' column).
+          </p>
+          <p>
+            You can provide a hard-coded, sorted list of values which will be
+            used to sort the column when the header is clicked (e.g. in the
+            'Contact' column below).{' '}
+          </p>
+          <p>
+            Or you can provide a{' '}
+            <a
+              href="https://api.adaptableblotter.com/modules/_predefinedconfig_customsortstate_.html#customsortcomparerfunction"
+              target="_blank"
+            >
+              function
+            </a>{' '}
+            that's evaluated each time sort is run (it receives the cell value
+            and the rest of the row). We use this function to sort the Employee
+            column by surname.
           </p>
         </div>
       }
       helpResources={
         <div>
           <a
-            href=" https://api.adaptabletools.com/interfaces/_predefinedconfig_customsortstate_.customsortstate.html"
+            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_customsortstate_.customsortstate.html"
             target="_blank"
           >
             Predefined Config
