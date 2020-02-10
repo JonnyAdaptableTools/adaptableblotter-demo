@@ -14,6 +14,7 @@ export default () => {
   helperAgGrid.setUpAgGridLicence();
   const tickingDataHelper = new TickingDataHelper();
   let rowData = JSON.parse(JSON.stringify(json));
+  helperAgGrid.convertExcelDates(rowData);
 
   const columndefs = helperAgGrid.getFlashingCellColumnSchema();
 
