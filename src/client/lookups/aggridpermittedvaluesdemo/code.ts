@@ -38,6 +38,10 @@ const demoConfig: PredefinedConfig = {
         ColumnId: 'Employee',
         PermittedValues: ['Janet Leverling', 'Robert King', 'Summer Intern'],
       },
+      {
+        ColumnId: 'OrderDate',
+        PermittedValues: [''],
+      },
     ],
   },
 } as PredefinedConfig;
