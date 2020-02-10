@@ -14,8 +14,8 @@ export default () => {
             AdapTable works with any data set.
           </p>
           <p>
-            But we're often asked if AdapTable works as well with big data sets
-            and the answer is yes.{' '}
+            But we're often asked if AdapTable works as well with very big data
+            sets and the answer is yes.{' '}
           </p>
           <p>
             This demo contains 100,000 rows of <b>random meaningless data</b>{' '}
@@ -23,10 +23,10 @@ export default () => {
             (also updating, as a result, the Change column and its Percent Bar).
           </p>
           <p>
-            The ag-Grid Status Bar at the bottom of the grid will display the
-            total (and filtered) number of rows. Create filters, searches, and
-            styles, and you will see that even with a very large dataset
-            everything still works.
+            The Status Bar at the bottom of the grid displays the total (and
+            filtered) number of rows. As you create filters, searches, and
+            styles, you'll see that even with a large dataset everything still
+            works quickly.
           </p>
           <p>
             <b>Note:</b> If you have a DataSet with many hundreds of thousands

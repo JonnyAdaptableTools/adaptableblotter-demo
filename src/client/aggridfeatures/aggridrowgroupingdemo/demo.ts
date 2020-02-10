@@ -15,6 +15,7 @@ export default () => {
   helperAgGrid.setUpAgGridLicence();
   const tickingDataHelper = new TickingDataHelper();
   let rowData = JSON.parse(JSON.stringify(json));
+  console.log(103);
 
   const columndefs = helperAgGrid.getRowGroupingNorthwindColumnSchema();
 
