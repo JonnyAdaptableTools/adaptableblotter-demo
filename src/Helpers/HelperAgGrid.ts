@@ -1701,6 +1701,21 @@ export class HelperAgGrid {
   private fourDecimalPlaceFormatter = (params: any) => {
     return params.value ? this.roundTo4Dp(params.value) : null;
   };
+
+  public convertExcelDates(rowData: any) {
+    for (let i = 0; i < rowData.length; i++) {
+      let row = rowData[i];
+      if (row) {
+        if (row.OrderDate) {
+          row.OrderDate = new Date(row.OrderDate);
+        }
+        if (row.ShippedDate) {
+          row.ShippedDate = new Date(row.ShippedDate);
+        }
+      }
+    }
+    return rowData;
+  }
   // private twoDecimalPlaceFormatter = (params: any) => {
   //   return params.value ? this.roundTo2Dp(params.value) : null;
   // };
