@@ -12,6 +12,7 @@ export default () => {
   helperAgGrid.setUpAgGridLicence();
   let tickingDataHelper = new TickingDataHelper();
   let rowData = JSON.parse(JSON.stringify(json));
+  helperAgGrid.convertExcelDates(rowData);
 
   const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
 
