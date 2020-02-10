@@ -9,11 +9,10 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
+  SelectedCellInfo,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import finance from '@adaptabletools/adaptable-plugin-finance';
-import { SelectedCellInfo } from '@adaptabletools/adaptable/src/Utilities/Interface/Selection/SelectedCellInfo';
-import { DataType } from '@adaptabletools/adaptable/src/PredefinedConfig/Common/Enums';
 
 var adaptableApi: AdaptableApi;
 
@@ -34,7 +33,7 @@ const demoConfig: PredefinedConfig = {
         }) => {
           let dateValues: Date[] = [];
           operationParam.selectedCellInfo.Columns.filter(
-            c => c.DataType === DataType.Date
+            c => c.DataType === 'Date'
           ).forEach(dc => {
             let gridCells = operationParam.selectedCellInfo.GridCells.filter(
               gc => gc.columnId == dc.ColumnId

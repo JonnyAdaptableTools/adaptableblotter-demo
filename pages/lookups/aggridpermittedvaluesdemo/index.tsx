@@ -25,13 +25,18 @@ export default () => {
             property in the User Interface section of Predefined Config.
           </p>
           <p>
-            In this example we have set Permitted Column Values for{' '}
-            <i>Contact</i> and <i>Employee</i> Columns so that only the
-            restricted set of values we have listed are displayed in their
-            Column Filters (and in Query Builder).
+            In this example we set Permitted Column Values for <i>Contact</i>{' '}
+            and <i>Employee</i> columns so only the restricted set of values we
+            have listed are displayed in their Column Filters (and in Query
+            Builder).
           </p>
           <p>
-            Note: if there are no Permitted Values, then AdapTable wtill
+            Additionally we set an empty array [' '] for the <i>Order Date</i>{' '}
+            Column so that NO distinct column values are diplayed, and only the
+            System Filters for Date columns are shown.
+          </p>
+          <p>
+            Note: if there are no Permitted Values, then AdapTable will
             dynamically build a list of distinct values for the column.
           </p>
         </div>
