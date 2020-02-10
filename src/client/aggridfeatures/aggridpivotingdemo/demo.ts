@@ -10,6 +10,7 @@ export default () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
   let rowData = JSON.parse(JSON.stringify(json));
+  helperAgGrid.convertExcelDates(rowData);
 
   const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
 

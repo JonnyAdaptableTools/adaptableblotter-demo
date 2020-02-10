@@ -15,7 +15,7 @@ export default () => {
   helperAgGrid.setUpAgGridLicence();
   const tickingDataHelper = new TickingDataHelper();
   let rowData = JSON.parse(JSON.stringify(json));
-  console.log(103);
+  helperAgGrid.convertExcelDates(rowData);
 
   const columndefs = helperAgGrid.getRowGroupingNorthwindColumnSchema();
 
