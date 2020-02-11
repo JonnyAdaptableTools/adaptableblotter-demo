@@ -25,10 +25,14 @@ export default () => {
             property in the User Interface section of Predefined Config.
           </p>
           <p>
-            In this example we set Permitted Column Values for <i>Contact</i>{' '}
-            and <i>Employee</i> columns so only the restricted set of values we
-            have listed are displayed in their Column Filters (and in Query
-            Builder).
+            Here we set 'hard-coded' Permitted Column Values for <i>Contact</i>{' '}
+            and <i>Employee</i> columns so only this list of values is displayed
+            in their Column Filters (and Query Builder).
+          </p>
+          <p>
+            For the <i>Cust Ref.</i> column we provide a function that will be
+            evaluated each time the list is required; this allows you to get the
+            values from your local store or via an external look-up.
           </p>
           <p>
             Additionally we set an empty array [' '] for the <i>Order Date</i>{' '}
