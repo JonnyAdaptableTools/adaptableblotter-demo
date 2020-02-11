@@ -113,7 +113,7 @@ export class HelperAgGrid {
     data: any,
     closeSideBar: boolean = true
   ): GridOptions & { modules?: Module[] } {
-    let gridOptions: GridOptions = {
+    const gridOptions: GridOptions = {
       enableRangeSelection: true,
       floatingFilter: false,
       sideBar: true,

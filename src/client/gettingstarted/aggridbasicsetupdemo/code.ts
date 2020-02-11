@@ -101,7 +101,7 @@ const rowdada: any[] = [
 // Note: We don't instantiate the ag-Grid here - AdapTable will do that later internally and wire everything up
 // Instead, we just create the GridOptions property and later set it as vendorGrid property in AdaptableOptions
 export default () => {
-  let gridOptions: GridOptions = {
+  const gridOptions: GridOptions = {
     columnDefs: columnSchema,
     rowData: rowdada,
     enableRangeSelection: true,

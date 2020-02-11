@@ -15,7 +15,7 @@ var adaptableApi: AdaptableApi;
 const demoConfig: PredefinedConfig = {} as PredefinedConfig;
 
 export default (columnDefs: any[], rowData: any[]) => {
-  let gridOptions: GridOptions = {
+  const gridOptions: GridOptions = {
     columnDefs,
     rowData,
     enableRangeSelection: true,

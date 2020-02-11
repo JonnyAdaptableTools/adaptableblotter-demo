@@ -14,7 +14,7 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 var adaptableApi: AdaptableApi;
 
 export default (columnDefs: any[], rowData: any[]) => {
-  let gridOptions: GridOptions = {
+  const gridOptions: GridOptions = {
     columnDefs,
     rowData,
     enableRangeSelection: true,
