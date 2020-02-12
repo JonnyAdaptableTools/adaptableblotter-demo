@@ -18,6 +18,8 @@ export default ({
   children,
   description,
 }: MainPageProps) => {
+  const [darkTheme, setDarkTheme] = React.useState(false);
+
   useEffect(() => {
     if (process.env.ALGOLIA_KEY) {
       (window as any).docsearch({
@@ -28,6 +30,29 @@ export default ({
       });
     }
   });
+
+  useEffect(() => {
+    const oldAdd = document.documentElement.classList.add;
+    const oldRemove = document.documentElement.classList.remove;
+
+    const check = () => {
+      const darkTheme = document.documentElement.classList.contains(
+        'ab--theme-dark'
+      );
+      setDarkTheme(darkTheme);
+    };
+
+    document.documentElement.classList.add = (...args: any[]) => {
+      oldAdd.call(document.documentElement.classList, ...args);
+      check();
+    };
+    document.documentElement.classList.remove = (...args: any[]) => {
+      oldRemove.call(document.documentElement.classList, ...args);
+      check();
+    };
+    check();
+  }, []);
+
   return (
     <div
       className={className}
@@ -54,7 +79,7 @@ export default ({
             marginBottom: 'var(--demo-space-3)',
           }}
         >
-          <Logo />
+          <Logo dark={darkTheme} />
           <div style={{ flex: 1 }}></div>
           <input
             style={{

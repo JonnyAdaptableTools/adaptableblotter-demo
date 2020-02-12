@@ -1,26 +1,38 @@
 import React from 'react';
 import Link from 'next/link';
 
-export default () => (
-  <Link href="/">
-    <a
-      style={{
-        // position: 'absolute',
-        // height: '100%',
-        // width: '100%',
-        display: 'flex',
-        justifyContent: 'center',
-      }}
-    >
-      <img
-        src={'/images/Adaptable.png'}
-        // src={'/images/AdaptableWhite.png'}
-        style={{
-          padding: 0,
+const loadImage = (src: string) => {
+  const image = typeof Image !== 'undefined' ? new Image() : { src: '' };
+  image.src = src;
+};
 
-          height: 60,
+const light = '/images/Adaptable.png';
+const dark = '/images/AdaptableWhite.png';
+loadImage(light);
+loadImage(dark);
+
+export default (props: { dark: boolean }) => {
+  return (
+    <Link href="/">
+      <a
+        style={{
+          // position: 'absolute',
+          // height: '100%',
+          // width: '100%',
+          display: 'flex',
+          justifyContent: 'center',
         }}
-      />
-    </a>
-  </Link>
-);
+      >
+        <img
+          src={props.dark ? dark : light}
+          // src={'/images/AdaptableWhite.png'}
+          style={{
+            padding: 0,
+
+            height: 60,
+          }}
+        />
+      </a>
+    </Link>
+  );
+};
