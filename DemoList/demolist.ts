@@ -13,7 +13,7 @@ export interface DemoPageStructure {
 }
 
 export function getDemoPageStructure(): DemoPageStructure {
-  let pageStructure: DemoPageStructure = {
+  const pageStructure: DemoPageStructure = {
     Categories: [
       {
         CategoryName: 'Getting Started',
