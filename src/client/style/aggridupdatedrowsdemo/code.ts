@@ -18,6 +18,7 @@ const demoConfig: PredefinedConfig = {
   UpdatedRow: {
     EnableUpdatedRow: true,
     JumpToRow: true,
+    NeutralColor: 'lightblue',
   },
 } as PredefinedConfig;
 

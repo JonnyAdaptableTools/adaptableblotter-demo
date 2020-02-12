@@ -25,11 +25,11 @@ const demoConfig: PredefinedConfig = {
         ColumnId: 'Multiply',
         ButtonText: 'Click',
         ShouldRenderPredicate: params => {
-          //   return params.rowData.counterparty != 'BNP';
           return params.rowData.Employee != 'Margaret Peacock';
         },
         RenderFunction: params => {
-          return params.rowData.ItemCost > 75
+          return params.rowData.Employee == 'Robert King' ||
+            params.rowData.Employee == 'Janet Leverling'
             ? '<button style="color:blue; font-weight:bold">Double</button>'
             : '<button style="color:red; font-weight:bold; font-style:italic">Treble</button>';
         },
@@ -103,8 +103,8 @@ export default (columnDefs: any[], rowData: any[]) => {
       let actionColumnClickedInfo: ActionColumnClickedInfo =
         actionColumnEventArgs.data[0].id;
       let rowData: any = actionColumnClickedInfo.rowData;
-
-      if (actionColumnEventArgs.data[0].id.actionColumn.ColumnId == 'Plus') {
+      const column = actionColumnEventArgs.data[0].id.actionColumn;
+      if (column.ColumnId == 'Plus') {
         let itemCount = rowData.ItemCount;
         adaptableApi.gridApi.setCellValue(
           'ItemCount',
@@ -112,9 +112,7 @@ export default (columnDefs: any[], rowData: any[]) => {
           actionColumnClickedInfo.primaryKeyValue,
           true
         );
-      } else if (
-        actionColumnEventArgs.data[0].id.actionColumn.ColumnId == 'Minus'
-      ) {
+      } else if (column.ColumnId == 'Minus') {
         let itemCount = rowData.ItemCount;
         adaptableApi.gridApi.setCellValue(
           'ItemCount',
@@ -122,10 +120,12 @@ export default (columnDefs: any[], rowData: any[]) => {
           actionColumnClickedInfo.primaryKeyValue,
           true
         );
-      } else if (
-        actionColumnEventArgs.data[0].id.actionColumn.ColumnId == 'Multiply'
-      ) {
-        let multiplier: number = rowData.ItemCost > 75 ? 2 : 3;
+      } else if (column.ColumnId == 'Multiply') {
+        let multiplier: number =
+          rowData.Employee == 'Robert King' ||
+          rowData.Employee == 'Janet Leverling'
+            ? 2
+            : 3;
         let newItemCost = rowData.ItemCost * multiplier;
         newItemCost = Math.round(newItemCost * 100) / 100;
         adaptableApi.gridApi.setCellValue(
@@ -134,9 +134,7 @@ export default (columnDefs: any[], rowData: any[]) => {
           actionColumnClickedInfo.primaryKeyValue,
           true
         );
-      } else if (
-        actionColumnEventArgs.data[0].id.actionColumn.ColumnId == 'Action'
-      ) {
+      } else if (column.ColumnId == 'Action') {
         adaptableApi.gridApi.deleteGridData([actionColumnClickedInfo.rowData]);
       }
     }

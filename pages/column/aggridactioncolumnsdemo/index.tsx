@@ -10,7 +10,7 @@ export default () => {
         <div>
           <p>
             AdapTable provides an Action Column function that allows you to
-            specify (and optionally render) a button to placed in a column.
+            specify (and optionally render) a button to be placed in a column.
           </p>
           <p>
             When the button is clicked an{' '}
@@ -20,43 +20,76 @@ export default () => {
             >
               On('ActionColumnClicked')
             </a>{' '}
-            event fires, providing details of column clicked and current data in
-            the row; subscribe to this event and perform any additional logic
-            that is required.
+            event fires, providing details of which column was clicked and the
+            current data in its row.{' '}
           </p>
           <p>
-            You can, optionally, provide a <b>ShouldRenderPredicate</b> function
-            which decides whether the button appears and a <b>RenderFunction</b>{' '}
-            function that allows you provide your own button implementation.
+            You can subscribe to this event and perform any additional logic or
+            functionality that is required.
           </p>
           <p>
-            In this example we have created Action Columns <b>Plus</b> and{' '}
-            <b>Minus</b> and in the onActionColumnClicked event handler we
-            update the <i>Item Count</i> column (though we do also have a{' '}
+            You can, also, provide 2 optional functions when creating an Action
+            Column:
+            <ul>
+              <li>
+                {' '}
+                <b>
+                  <a
+                    href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_actioncolumnstate_.actioncolumn.html#shouldrenderpredicate"
+                    target="_blank"
+                  >
+                    ShouldRenderPredicate
+                  </a>{' '}
+                </b>{' '}
+                - this will return true or false to determine whether the button
+                will be displayed.
+              </li>
+              <li>
+                <b>
+                  <a
+                    href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_actioncolumnstate_.actioncolumn.html#renderfunction"
+                    target="_blank"
+                  >
+                    RenderFunction
+                  </a>{' '}
+                </b>{' '}
+                - this allows you to create a button that matches your style and
+                requirements - and allows you to provide differently styled
+                buttons depending on the data in each row.
+              </li>
+            </ul>
+          </p>
+          <p>
+            Here we created <b>Plus</b> and <b>Minus</b> Action Columns; in the
+            onActionColumnClicked event handler we update the <i>Item Count</i>{' '}
+            column (though we do also have a{' '}
             <a href="../../edit/aggridplusminusdemo" target="_blank">
               Plus/Minus Function
             </a>
             ).
           </p>
           <p>
-            We also created a <b>Multiply</b> Action Column which doubles or
-            trebles the <i>Item Cost</i> column. We've applied our own rendering
-            function for the button, with logic to say it shouldn't appear if
-            Employee is Margaret.
+            We also created a <b>Multiply</b> Action Column which updates the{' '}
+            <i>Item Cost</i> column. We supplied a <i>ShouldRenderPredicate</i>{' '}
+            to say the button shouldn't appear if Employee is 'Margaret
+            Peacock', and a <i>RenderFunction</i> to say that we double if the
+            Employee is 'Robert King' or 'Janet Leverling' and treble it
+            otherwise.
           </p>
           <p>
-            Lastly we created an Action column to <b>delete a row</b> which was
-            straightforward to implement with just one line of code using the{' '}
+            Lastly we created an Action column with the text <b>Delete Row</b>{' '}
+            and does exactly that.
+          </p>
+          <p>
+            Note: the delete row and all the cell updates were performed by
+            using various functions in the{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_api_gridapi_.gridapi.html#deletegriddata"
+              href="https://api.adaptabletools.com/interfaces/_api_gridapi_.gridapi.html"
               target="_blank"
             >
-              API
-            </a>
-            :{' '}
-            <i>
-              adaptableApi.gridApi.deleteGridData([args.data[0].id.rowData]);
-            </i>
+              gridApi
+            </a>{' '}
+            section of AdaptableApi.
           </p>
         </div>
       }

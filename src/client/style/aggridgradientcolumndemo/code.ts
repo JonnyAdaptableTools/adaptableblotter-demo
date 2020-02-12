@@ -30,15 +30,15 @@ const demoConfig: PredefinedConfig = {
       },
       {
         ColumnId: 'ItemCount',
-        PositiveValue: 21,
+        PositiveValue: 170,
         PositiveColor: '#008000',
-        BaseValue: 5,
+        BaseValue: 100,
       },
       {
         ColumnId: 'PackageCost',
         PositiveValue: 20,
         PositiveColor: '#FF8000',
-        BaseValue: 2.7,
+        BaseValue: 0,
       },
     ],
   },

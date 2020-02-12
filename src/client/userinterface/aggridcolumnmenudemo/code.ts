@@ -3,6 +3,7 @@ import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
 import Adaptable from '@adaptabletools/adaptable/agGrid';
 import { GridOptions } from '@ag-grid-community/all-modules';
+import charts from '@adaptabletools/adaptable-plugin-charts';
 import {
   AdaptableOptions,
   PredefinedConfig,
@@ -96,13 +97,13 @@ export default (columnDefs: any[], rowData: any[]) => {
         menuInfo: MenuInfo
       ) => {
         if (
-          menuInfo.Column.ColumnId === 'Employee' &&
+          menuInfo.Column.ColumnId === 'ContactName' &&
           (menuItem.FunctionName === 'ColumnChooser' ||
             menuItem.FunctionName === 'PieChart')
         ) {
           return false;
         }
-        if (menuInfo.Column.ColumnId === 'ContactName') {
+        if (menuInfo.Column.ColumnId === 'CustomerReference') {
           return false;
         }
         return true;
@@ -110,6 +111,7 @@ export default (columnDefs: any[], rowData: any[]) => {
     },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
+    plugins: [charts()],
   };
   adaptableApi = Adaptable.init(adaptableOptions);
 

@@ -20,6 +20,7 @@ const demoConfig: PredefinedConfig = {
     RowStyles: [
       /*
       // Use this if you want to style ALL rows
+      // As with all our Styles you can either use some properties or a cssClassName
       {
         Style: {
           ForeColor: 'yellow',
@@ -31,20 +32,28 @@ const demoConfig: PredefinedConfig = {
       },
       */
       {
+        // For even row style we are going to reference just a class name (this css class is in the imported 'rowstyle.css')
+        // the css looks like this:
+        /*
+        .evenRowStyle {
+          background: lightyellow !important;
+          color: brown;
+          font-weight: normal !important;
+          font-style: bold !important;
+        }         
+        */
         Style: {
-          //  ForeColor: 'yellow',
-          //  BackColor: 'orange',
-          //  FontWeight: 'Bold',
           ClassName: 'evenRowStyle',
         },
         RowType: 'Even',
       },
       {
+        // For odd rows we will create the style ourselvves
         Style: {
           ForeColor: 'lightyellow',
           BackColor: 'brown',
           FontStyle: 'Italic',
-          //  ClassName: 'oddRowStyle',
+          FontWeight: 'Bold',
         },
         RowType: 'Odd',
       },

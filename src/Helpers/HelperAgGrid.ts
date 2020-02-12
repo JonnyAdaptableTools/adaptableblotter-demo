@@ -1716,6 +1716,19 @@ export class HelperAgGrid {
     }
     return rowData;
   }
+
+  public updateItemCount(rowData: any) {
+    for (let i = 0; i < rowData.length; i++) {
+      let row = rowData[i];
+      if (row) {
+        if (row.ItemCount) {
+          let increment: Number = this.generateRandomInt(1, 50) + 100;
+          row.ItemCount = row.ItemCount + increment;
+        }
+      }
+    }
+    return rowData;
+  }
   // private twoDecimalPlaceFormatter = (params: any) => {
   //   return params.value ? this.roundTo2Dp(params.value) : null;
   // };

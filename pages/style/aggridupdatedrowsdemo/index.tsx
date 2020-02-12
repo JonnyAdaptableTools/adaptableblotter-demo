@@ -19,13 +19,24 @@ export default () => {
             to display the updated row.
           </p>
           <p>
-            If the change occurs in a numeric or date cell then the row will
-            dispaly the 'Up' or 'Down' colour depending on the direction of the
-            change. For other cells it wil use the 'neutral' colour.
+            If the data change occurs in a numeric or date cell, then the row
+            will display the 'Up' or 'Down' colour depending on the direction of
+            the change. For other cell typess it wil use the 'neutral' colour.
           </p>
           <p>
-            You can clear an updated row through the Context Menu, and you can
-            clear all updated rows through the Column Header Menu.
+            By default the up, down and neutral colours are green, red and gray
+            respectively but this can be changed in your{' '}
+            <a
+              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_updatedrowstate_.updatedrowstate.html"
+              target="_blank"
+            >
+              Updated Rows Predefined Config
+            </a>{' '}
+            ; here we set 'neutral' to 'lightblue'.
+          </p>
+          <p>
+            You can clear a single updated row through the Context Menu, and you
+            can clear all updated rows through the Column Header Menu.
           </p>
         </div>
       }

@@ -32,21 +32,27 @@ export default () => {
             >
               User Interface State
             </a>
-            ; in this example we added 'Minimise Dashboard' and 'Set System
+            .
+          </p>
+          <p>
+            In this example we added 'Minimise Dashboard' and 'Set System
             Status' menu items (with the latter having sub menu items).
           </p>
           <p>
-            You can also choose which - if any - of the shipped Menu Items are
-            available via the <b>showAdaptableColumnMenu</b> property of{' '}
+            You can also choose which - if any - of AdapTable's shipped Column
+            Menu items are available by using the <b>showAdaptableColumnMenu</b>{' '}
+            function property in{' '}
             <a
               href="https://api.adaptabletools.com/interfaces/_adaptableoptions_userinterfaceoptions_.userinterfaceoptions.html#showadaptablecolumnmenu"
               target="_blank"
             >
               User Interface Options
             </a>
-            ; in this example we removed the <i>Column Chooser</i> and{' '}
-            <i>PieChart</i> menu items for the 'Employee' column and all the
-            menu items for the 'Contact' column.
+          </p>
+          <p>
+            In this example we removed the <i>'Show Column Chooser'</i> and{' '}
+            <i>'View as PieChart'</i> menu items for the 'Contact' column and we
+            removed all AdapTable menu items for the 'Cust. Ref' column.
           </p>
         </div>
       }

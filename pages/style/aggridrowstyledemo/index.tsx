@@ -30,19 +30,30 @@ export default () => {
             .
           </p>
           <p>
-            The <i>RowStyles</i> array can take up to 3 properties: 'All' (which
-            is used for all rows and will ignore other properties), 'Even' or
-            'Odd'; for the last 2 properties you can supply either, both or
-            none.
+            The <i>RowStyles</i> array can include 'Odd' and 'Even' properties
+            which will style as their names suggest; you can provide just one of
+            these properties but typicallly both will be supplied.{' '}
           </p>
           <p>
+            Alternatively you can provide an 'All' property. This will style{' '}
+            <b>all rows</b> (and will ignore the Even and Odd properties if they
+            are also supplied).
+          </p>
+          <p>
+            Each of the 3 types of properties will use an{' '}
+            <a
+              href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_common_adaptablestyle_.adaptablestyle.html"
+              target="_blank"
+            >
+              AdaptableStyle
+            </a>{' '}
+            object - this can either include a list of style values (e.g.
+            'ForeColor') or a cssClass name (which you must then provide in your
+            css).
+          </p>{' '}
+          <p>
             In this example we have set an Even Row style (using a classname
-            property - we need to make sure that we provide a css style of that
-            name) and an Odd Row Style that uses the{' '}
-            <a href="" target="_blank">
-              IStyle
-            </a>
-            object that we populate.
+            property) and an Odd Row Style that uses the AdaptableStyle object.
           </p>
         </div>
       }

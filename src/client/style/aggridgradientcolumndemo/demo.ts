@@ -15,6 +15,7 @@ export default () => {
 
   let rowData = JSON.parse(JSON.stringify(json));
   helperAgGrid.convertExcelDates(rowData);
+  helperAgGrid.updateItemCount(rowData);
 
   const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
 

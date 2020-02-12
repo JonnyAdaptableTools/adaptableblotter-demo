@@ -9,9 +9,9 @@ export default () => {
       description={
         <div>
           <p>
-            Gradient columns are styled dynamically so that the each cell is
-            coloured according to its value in relation to a given base value
-            and maximum value.
+            Gradient columns are styled dynamically so that each cell in the
+            column is coloured according to its value in relation to a given
+            base value and maximum value.
           </p>
           <p>
             When you create a Gradient Column you set a base value, a maximum
@@ -19,18 +19,23 @@ export default () => {
             is to the maximum value the closer its colour to the set one.
           </p>
           <p>
-            Creating a base value allows you to ensure that the cell is measured
-            against possible values only (e.g. a cell with 1,001 with a base of
-            1,000 and a maximum of 2,000 will be very pale.)
+            By default the base value is 0, but you can set a different base
+            value. This ensures the cell is measured against possible values
+            only, and the gradient begins from the lowest potential cell value.
           </p>
           <p>
             You can also select a negative maximum value and a negative colour
             for columns which contain negative values.
           </p>
           <p>
-            In this example we have set Gradient Columns for{' '}
-            <b>Change on Order</b> (using positive and negative values),{' '}
-            <b>Item Count</b> and <b>Package Cost</b> (using bespoke colours).
+            Here we set Gradient Columns for <b>Order Chg.</b> (using positive
+            and negative values), <b>Item Count</b> and <b>Package Cost</b>{' '}
+            (using bespoke colours).
+          </p>
+          <p>
+            Note that the <b>Item Count</b> Gradient Column has a base value of
+            100 (and a maximum value of 170) to ensure that the cells are
+            accurately coloured.
           </p>
         </div>
       }
