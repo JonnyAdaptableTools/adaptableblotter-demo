@@ -20,11 +20,11 @@ export default () => {
           </p>
           <p>
             And you can decide how the Audit Log will make these messages
-            available: stream to an HTTP Channel, log to the Console or fire an
-            event.
+            available: stream to an HTTP Channel, log to the Console, fire an
+            Alert or publish an event.
           </p>
           <p>
-            This example fires Cell Edit, User State and Function Applied events
+            This example sends Cell Edit, User State and Function Applied events
             to the Console; open the Console in Developer Tools and see the
             messages appear as you edit data and create objects in AdapTable.
           </p>
@@ -33,10 +33,10 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028585212-Audit-Events-API"
+            href="https://api.adaptabletools.com/interfaces/_adaptableoptions_auditoptions_.auditoptions.html"
             target="_blank"
           >
-            Adaptable API
+            Audit Options
           </a>
           ,{' '}
           <a
