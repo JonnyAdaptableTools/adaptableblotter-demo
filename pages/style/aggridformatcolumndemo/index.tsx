@@ -15,14 +15,17 @@ export default () => {
           </p>
           <p>
             Format Columns are created using the same Style builder as Quick
-            Search and Conditional Styles. Alternatively you can specify a css
-            style name in Format Colunn Predefined Config (which you must
-            provide).
+            Search and Conditional Styles, which allows you to name key elements
+            of the style.{' '}
+          </p>
+          <p>
+            Alternatively you can specify a css style name in Format Colunn
+            Predefined Config (which you must provide in your css).
           </p>
           <p>
             This example has 2 Format Columns: The <b>Order Id</b> column is
             lime green with a red fore colour, and the <b>Order Date</b> column
-            is italicised with a smaller font.
+            is bold and italicised and with a smaller font.
           </p>
         </div>
       }

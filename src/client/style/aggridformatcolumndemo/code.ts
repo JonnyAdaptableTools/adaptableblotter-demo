@@ -26,7 +26,6 @@ const demoConfig: PredefinedConfig = {
           FontWeight: 'Bold',
           FontSize: 'XSmall',
           FontStyle: 'Italic',
-          ClassName: '',
         },
       },
       {
@@ -34,9 +33,6 @@ const demoConfig: PredefinedConfig = {
         Style: {
           BackColor: '#d4fb79',
           ForeColor: '#8b0000',
-          FontWeight: 'Normal',
-          FontStyle: 'Normal',
-          ClassName: '',
         },
       },
     ],

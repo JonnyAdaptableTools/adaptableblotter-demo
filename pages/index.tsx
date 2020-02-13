@@ -99,16 +99,16 @@ export default () => {
           most excite you. Each demo seeks to do one of four things:
           <ul>
             <li>
-              To demonstrate how an AdapTable function operates; these are
-              sorted by type (e.g. Search, Edit etc.)
+              Demonstrate how an AdapTable function operates; these are sorted
+              by type (e.g. Search, Edit etc.)
             </li>
             <li>
-              To show key UI elements (e.g. Dashboard, Tool Panel, Context and
+              Show key UI elements (e.g. Dashboard, Tool Panel, Context and
               Column Menus etc.)
             </li>
-            <li>To illustrate some of the AdapTable Options on offer.</li>
+            <li>Illustrate some of the AdapTable Options on offer.</li>
             <li>
-              To show-case key admin elements like Audit Log, Big Data, the
+              Show-case key admin elements like Audit Log, Big Data, the
               AdapTable Api etc.
             </li>
           </ul>

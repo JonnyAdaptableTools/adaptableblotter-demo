@@ -54,9 +54,10 @@ const demoConfig: PredefinedConfig = {
 } as PredefinedConfig;
 
 export default (columnDefs: any[], rowData: any[]) => {
-  const gridOptions: GridOptions = {
+  let gridOptions: GridOptions = {
     columnDefs,
     rowData,
+    animateRows: true,
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
