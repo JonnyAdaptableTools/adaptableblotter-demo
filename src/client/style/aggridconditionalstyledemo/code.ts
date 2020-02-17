@@ -57,13 +57,14 @@ const demoConfig: PredefinedConfig = {
           ForeColor: '#000000',
         },
         ConditionalStyleScope: 'Row',
+        ExcludeGroupedRows: true,
         Expression: {
           RangeExpressions: [
             {
               ColumnId: 'ItemCost',
               Ranges: [
                 {
-                  Operand1: '80',
+                  Operand1: '60',
                   Operand1Type: 'Value',
                   Operand2: '',
                   Operand2Type: 'Value',

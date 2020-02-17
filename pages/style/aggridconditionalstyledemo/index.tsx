@@ -18,11 +18,22 @@ export default () => {
             Alternatively you can specify a css style name (which you provide).
           </p>
           <p>
-            This example has 4 Conditional Styles: (1, 2) The 'Change Last
-            Order' column is green when positive and red when negative; (3) Any
-            row where the 'Item Cost' column is > 80 has a yellow background and
-            italic foreground; and (4) the font is bold where the 'Package Cost'
-            column is less than 10.
+            This example has 4 Conditional Styles:
+            <ul>
+              <li>
+                The 'Change Last Order' column has 2 styles: it is green when
+                positive and red when negative;
+              </li>
+              <li>
+                Any row where the 'Item Cost' column is > 80 is italicised with
+                a yellow background (note that
+                <i>ExcludeGroupedRows</i> is <b>true</b> so the style is not
+                applied on grouped rows.)
+              </li>
+              <li>
+                The font is bold where the 'Package Cost' column is less than 10
+              </li>
+            </ul>
           </p>
         </div>
       }
