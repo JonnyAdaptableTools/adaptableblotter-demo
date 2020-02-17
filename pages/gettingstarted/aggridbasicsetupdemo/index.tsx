@@ -23,7 +23,7 @@ export default () => {
               Server Searching
             </a>
             ,{' '}
-            <a href="../admin/aggridauditdemo" target="_blank">
+            <a href="../auditlog/aggridauditdemo" target="_blank">
               Audit Log
             </a>
             , or{' '}

@@ -407,7 +407,36 @@ export function getDemoPageStructure(): DemoPageStructure {
           },
         ],
       },
-
+      {
+        CategoryName: 'Audit Log',
+        Link: '/auditlog',
+        Pages: [
+          {
+            Name: 'Audit to Channel',
+            Link: '/auditlog/aggridauditchanneldemo',
+            Description:
+              'Sends all Audit Log messages to an Http Channel so you can hook it up to listening software like Elastic Stack for full oversight of everything that takes place in AdapTable.',
+          },
+          {
+            Name: 'Audit to Console',
+            Link: '/auditlog/aggridauditconsoledemo',
+            Description:
+              'Sends all Audit Log messages to the Console - particularly useful for Support or for when debugging.',
+          },
+          {
+            Name: 'Audit as Event',
+            Link: '/auditlog/aggridauditeventdemo',
+            Description:
+              'Publishes an event whenever an Audit Log message is triggered - you can listen to Audit Events the same way as for all AdapTable events.',
+          },
+          {
+            Name: 'Audit as Alert',
+            Link: '/auditlog/aggridauditalertdemo',
+            Description:
+              'Fires an AdapTable Alert whenever an Audit Log message is triggered - ideally used for more occasional scenarios (e.g. the Function Applied Audit type).',
+          },
+        ],
+      },
       {
         CategoryName: 'Admin',
         Link: '/admin',
@@ -416,12 +445,6 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Entitlements',
             Link: '/admin/aggridentitlementsdemo',
             Description: 'Manage which functions your users have access to.',
-          },
-          {
-            Name: 'Audit Log',
-            Link: '/admin/aggridauditdemo',
-            Description:
-              'Every data change, user action, state change and function action is auditable and availalbe for you to listen to in a number of ways, making support a breeze and enabling data playback.',
           },
           {
             Name: 'Adaptable API',

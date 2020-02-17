@@ -10,10 +10,6 @@ import {
   AdaptableApi,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
-import {
-  AuditLogEventArgs,
-  DataChangedDetails,
-} from '@adaptabletools/adaptable/src/Api/Events/AuditEvents';
 
 var adaptableApi: AdaptableApi;
 
@@ -38,39 +34,23 @@ export default (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Audit Log Demo',
+    adaptableId: 'Audit Channel Demo',
     auditOptions: {
+      httpChannel:
+        'https://adaptable-auditlog.netlify.com/.netlify/functions/auditlog',
       auditUserStateChanges: {
-        auditToConsole: true,
+        auditToHttpChannel: true,
       },
       auditFunctionEvents: {
-        auditToConsole: true,
-        //  auditAsAlert: true,
         auditToHttpChannel: true,
       },
       auditCellEdits: {
-        auditToConsole: true,
-        auditAsEvent: true,
+        auditToHttpChannel: true,
       },
     },
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
   adaptableApi = Adaptable.init(adaptableOptions);
-
-  adaptableApi.auditEventApi.on(
-    'AuditCellEdited',
-    (auditLogEventArgs: AuditLogEventArgs) => {
-      const dataChangeDetails: DataChangedDetails | undefined =
-        auditLogEventArgs.data[0].id.data_change_details;
-      alert(
-        'you changed "' +
-          dataChangeDetails?.previous_value +
-          '" to: "' +
-          dataChangeDetails?.new_value +
-          '"'
-      );
-    }
-  );
 
   return { adaptableOptions, adaptableApi };
 };

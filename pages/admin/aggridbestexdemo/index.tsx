@@ -11,8 +11,8 @@ export default () => {
           <p>To do</p>
           <p>
             You can choose to send any (or all) of <b>Cell Edit</b>,{' '}
-            <b>User State</b>, <b>Function Applied</b> and <b>Internal State</b>{' '}
-            changes to the Audit Log.{' '}
+            <b>Ticking Data</b>, <b>User State</b>, <b>Function Applied</b> and{' '}
+            <b>Internal State</b> changes to the Audit Log.{' '}
           </p>
           <p>
             And you can decide how the Audit Log will make these messages

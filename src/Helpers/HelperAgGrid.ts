@@ -1072,6 +1072,7 @@ export class HelperAgGrid {
       sortable: true,
       enablePivot: true,
       enableRowGroup: true,
+      type: 'abColDefString',
     };
   }
   private getShippedDateDef(): any {
