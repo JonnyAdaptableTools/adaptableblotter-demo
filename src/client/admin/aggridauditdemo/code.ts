@@ -7,10 +7,13 @@ import Adaptable from '@adaptabletools/adaptable/agGrid';
 import { GridOptions } from '@ag-grid-community/all-modules';
 import {
   AdaptableOptions,
-  PredefinedConfig,
   AdaptableApi,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
+import {
+  AuditLogEventArgs,
+  DataChangedDetails,
+} from '@adaptabletools/adaptable/src/Api/Events/AuditEvents';
 
 var adaptableApi: AdaptableApi;
 
@@ -42,14 +45,32 @@ export default (columnDefs: any[], rowData: any[]) => {
       },
       auditFunctionEvents: {
         auditToConsole: true,
+        //  auditAsAlert: true,
+        auditToHttpChannel: true,
       },
       auditCellEdits: {
         auditToConsole: true,
+        auditAsEvent: true,
       },
     },
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
   adaptableApi = Adaptable.init(adaptableOptions);
+
+  adaptableApi.auditEventApi.on(
+    'AuditCellEdited',
+    (auditLogEventArgs: AuditLogEventArgs) => {
+      const dataChangeDetails: DataChangedDetails | undefined =
+        auditLogEventArgs.data[0].id.data_change_details;
+      alert(
+        'you changed "' +
+          dataChangeDetails?.previous_value +
+          '" to: "' +
+          dataChangeDetails?.new_value +
+          '"'
+      );
+    }
+  );
 
   return { adaptableOptions, adaptableApi };
 };
