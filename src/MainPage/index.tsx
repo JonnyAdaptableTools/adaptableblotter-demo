@@ -12,6 +12,28 @@ export type MainPageProps = {
   description?: ReactNode;
 };
 
+const wait = (time: number) =>
+  new Promise(resolve => {
+    setTimeout(() => {
+      resolve();
+    }, time);
+  });
+
+const initDocsearch = async () => {
+  if (!(window as any).docsearch) {
+    await wait(500);
+    initDocsearch();
+    return;
+  }
+
+  (window as any).docsearch({
+    apiKey: process.env.ALGOLIA_KEY,
+    indexName: 'adaptableblotter',
+    inputSelector: '#searchInput',
+    debug: true, // Set debug to true if you want to inspect the dropdown
+  });
+};
+
 export default ({
   className,
   pageTitle,
@@ -22,12 +44,7 @@ export default ({
 
   useEffect(() => {
     if (process.env.ALGOLIA_KEY) {
-      (window as any).docsearch({
-        apiKey: process.env.ALGOLIA_KEY,
-        indexName: 'adaptableblotter',
-        inputSelector: '#searchInput',
-        debug: true, // Set debug to true if you want to inspect the dropdown
-      });
+      initDocsearch();
     }
   });
 
