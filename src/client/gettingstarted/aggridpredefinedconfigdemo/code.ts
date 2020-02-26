@@ -44,8 +44,6 @@ const demoConfig: PredefinedConfig = {
                 {
                   Operand1: '500',
                   Operand1Type: 'Value',
-                  Operand2: '',
-                  Operand2Type: 'Value',
                   Operator: 'GreaterThan',
                 },
               ],
@@ -114,8 +112,6 @@ const demoConfig: PredefinedConfig = {
                 {
                   Operand1: '2000',
                   Operand1Type: 'Value',
-                  Operand2: '',
-                  Operand2Type: 'Value',
                   Operator: 'GreaterThan',
                 },
               ],

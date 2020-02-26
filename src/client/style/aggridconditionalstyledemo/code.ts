@@ -66,8 +66,6 @@ const demoConfig: PredefinedConfig = {
                 {
                   Operand1: '60',
                   Operand1Type: 'Value',
-                  Operand2: '',
-                  Operand2Type: 'Value',
                   Operator: 'GreaterThan',
                 },
               ],
@@ -89,8 +87,6 @@ const demoConfig: PredefinedConfig = {
                 {
                   Operand1: '10',
                   Operand1Type: 'Value',
-                  Operand2: '',
-                  Operand2Type: 'Value',
                   Operator: 'LessThan',
                 },
               ],

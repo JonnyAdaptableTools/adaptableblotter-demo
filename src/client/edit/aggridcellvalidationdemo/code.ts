@@ -37,10 +37,6 @@ const demoConfig: PredefinedConfig = {
         ColumnId: 'Employee',
         Range: {
           Operator: 'AnyChange',
-          Operand1: '',
-          Operand2: '',
-          Operand1Type: 'Value',
-          Operand2Type: 'Value',
         },
       },
       {
@@ -49,9 +45,7 @@ const demoConfig: PredefinedConfig = {
         Range: {
           Operator: 'GreaterThan',
           Operand1: 3000,
-          Operand2: '',
           Operand1Type: 'Value',
-          Operand2Type: 'Value',
         },
       },
       {
@@ -60,9 +54,7 @@ const demoConfig: PredefinedConfig = {
         Range: {
           Operator: 'PercentChange',
           Operand1: 100,
-          Operand2: '',
           Operand1Type: 'Value',
-          Operand2Type: 'Value',
         },
       },
     ],

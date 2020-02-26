@@ -75,8 +75,6 @@ const demoConfig: PredefinedConfig = {
                 {
                   Operand1: 'm',
                   Operand1Type: 'Value',
-                  Operand2: '',
-                  Operand2Type: 'Value',
                   Operator: 'Contains',
                 },
               ],

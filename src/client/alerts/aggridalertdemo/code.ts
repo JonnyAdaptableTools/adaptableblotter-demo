@@ -27,8 +27,6 @@ const demoConfig: PredefinedConfig = {
         Range: {
           Operand1: '2000',
           Operand1Type: 'Value',
-          Operand2: '',
-          Operand2Type: 'Value',
           Operator: 'GreaterThan',
         },
         AlertProperties: {
@@ -41,8 +39,6 @@ const demoConfig: PredefinedConfig = {
         Range: {
           Operand1: '100',
           Operand1Type: 'Value',
-          Operand2: '',
-          Operand2Type: 'Value',
           Operator: 'PercentChange',
         },
         AlertProperties: {

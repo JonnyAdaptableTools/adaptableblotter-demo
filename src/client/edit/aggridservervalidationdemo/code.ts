@@ -29,8 +29,6 @@ const demoConfig: PredefinedConfig = {
         Range: {
           Operand1: '15',
           Operand1Type: 'Value',
-          Operand2: '',
-          Operand2Type: 'Value',
           Operator: 'ValueChange',
         },
       },

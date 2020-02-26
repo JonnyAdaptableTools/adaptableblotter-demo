@@ -17,7 +17,6 @@ export default () => {
   let rowData = JSON.parse(JSON.stringify(json));
 
   const columndefs = helperAgGrid.getFlashingCellColumnSchema();
-
   const { adaptableOptions, adaptableApi } = init(columndefs, rowData);
 
   adaptableApi.eventApi.on('AdaptableReady', () => {

@@ -98,9 +98,7 @@ const demoConfig: PredefinedConfig = {
         Range: {
           Operator: 'None',
           Operand1: '',
-          Operand2: '',
           Operand1Type: 'Value',
-          Operand2Type: 'Value',
         },
       },
     ],
