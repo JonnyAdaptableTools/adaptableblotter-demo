@@ -19,7 +19,7 @@ export default () => {
         <p>
           <h3>
             AdapTable is the most advanced and powerful HTML5 Data Management
-            Solution available today.
+            Solution available today
           </h3>
           <b>
             AdapTable provides all the functionality users need to manage data.
