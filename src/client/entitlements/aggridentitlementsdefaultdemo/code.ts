@@ -1,8 +1,8 @@
-import '@adaptabletools/adaptable/index.css';
-import '@adaptabletools/adaptable/themes/dark.css';
-import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
-import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
-import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham-dark.css';
+import './node_modules/@adaptabletools/adaptable/index.css';
+import './node_modules/@adaptabletools/adaptable/themes/dark.css';
+import './node_modules/@ag-grid-community/all-modules/dist/styles/ag-grid.css';
+import './node_modules/@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
+import './node_modules/@ag-grid-community/all-modules/dist/styles/ag-theme-balham-dark.css';
 import Adaptable from '@adaptabletools/adaptable/agGrid';
 import { GridOptions } from '@ag-grid-community/all-modules';
 import {
@@ -16,7 +16,92 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleToolbars: ['BulkUpdate'],
+    VisibleToolbars: ['Export', 'Layout'],
+  },
+  Entitlements: {
+    FunctionEntitlements: [
+      {
+        FunctionName: 'ColumnCategory',
+        AccessLevel: 'Hidden',
+      },
+      {
+        FunctionName: 'AdvancedSearch',
+        AccessLevel: 'Hidden',
+      },
+      {
+        FunctionName: 'Layout',
+        AccessLevel: 'ReadOnly',
+      },
+    ],
+  },
+  Layout: {
+    CurrentLayout: 'Orders View',
+    Layouts: [
+      {
+        Columns: [
+          'OrderId',
+          'OrderDate',
+          'CustomerReference',
+          'CompanyName',
+          'ContactName',
+          'InvoicedCost',
+          'ChangeLastOrder',
+          'OrderCost',
+          'PackageCost',
+          'ItemCost',
+          'ItemCount',
+        ],
+        ColumnSorts: [],
+        Name: 'Orders View',
+      },
+      {
+        Columns: [
+          'OrderId',
+          'ShipVia',
+          'Freight',
+          'ShipName',
+          'ShipCountry',
+          'ShippedDate',
+          'CustomerReference',
+        ],
+        ColumnSorts: [],
+        Name: 'Shipping View',
+      },
+    ],
+  },
+  Export: {
+    CurrentReport: 'My Team Big Invoice',
+    Reports: [
+      {
+        Expression: {
+          ColumnValueExpressions: [
+            {
+              ColumnId: 'Employee',
+              ColumnDisplayValues: [
+                'Robert King',
+                'Margaret Peacock',
+                'Anne Dodsworth',
+              ],
+            },
+          ],
+          RangeExpressions: [
+            {
+              ColumnId: 'InvoicedCost',
+              Ranges: [
+                {
+                  Operator: 'GreaterThan',
+                  Operand1: '1000',
+                  Operand1Type: 'Value',
+                },
+              ],
+            },
+          ],
+        },
+        Name: 'My Team Big Invoice',
+        ReportColumnScope: 'AllColumns',
+        ReportRowScope: 'ExpressionRows',
+      },
+    ],
   },
 } as PredefinedConfig;
 
@@ -41,7 +126,7 @@ export default (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Bulk Update Demo',
+    adaptableId: 'Entitlements Demo',
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
