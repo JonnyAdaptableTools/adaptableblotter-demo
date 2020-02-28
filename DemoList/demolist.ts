@@ -408,6 +408,41 @@ export function getDemoPageStructure(): DemoPageStructure {
         ],
       },
       {
+        CategoryName: 'Tool Panel',
+        Link: '/toolpanel',
+        Pages: [
+          {
+            Name: 'Adaptable Tool Panel',
+            Link: '/toolpanel/aggridtoolpaneldemo',
+            Description:
+              'Use the Adaptable Tool Panel as a Dashboard alternative for quick access to commonly used functions and screens',
+          },
+          {
+            Name: 'Tool Panel Name',
+            Link: '/toolpanel/aggridtoolpanelnamedemo',
+            Description: 'Set your own name for the Tool Panel',
+          },
+        ],
+      },
+      {
+        CategoryName: 'User Interface',
+        Link: '/userinterface',
+        Pages: [
+          {
+            Name: 'Column Menu',
+            Link: '/userinterface/aggridcolumnmenudemo',
+            Description:
+              'Add your custom menu items to the Column Header Menu (and also choose with shipped items are available)',
+          },
+          {
+            Name: 'Context Menu',
+            Link: '/userinterface/aggridcontextmenudemo',
+            Description:
+              'Add your custom menu items to the (right-click) Context Menu (and choose with shipped items are available)',
+          },
+        ],
+      },
+      {
         CategoryName: 'Audit Log',
         Link: '/auditlog',
         Pages: [
@@ -442,11 +477,6 @@ export function getDemoPageStructure(): DemoPageStructure {
         Link: '/admin',
         Pages: [
           {
-            Name: 'Entitlements',
-            Link: '/admin/aggridentitlementsdemo',
-            Description: 'Manage which functions your users have access to.',
-          },
-          {
             Name: 'Adaptable API',
             Link: '/admin/aggridblotterapidemo',
             Description:
@@ -472,6 +502,30 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Create an AdapTable instance dynamically from a JSON or Excel file that you provide; your AdapTable instance will include the full range of functions and all the advanced functionality like state management and audit.',
           },
           */
+        ],
+      },
+      {
+        CategoryName: 'Entitlements',
+        Link: '/entitlements',
+        Pages: [
+          {
+            Name: 'Entitlements: List',
+            Link: '/entitlements/aggridentitlementslistdemo',
+            Description:
+              'Provide a list at in Predefined Config specifying which functions Users are permissioned for.',
+          },
+          {
+            Name: 'Entitlements: Func',
+            Link: '/entitlements/aggridentitlementsfunctiondemo',
+            Description:
+              'Supply a function (that can use external lookups or systems) which will be run each time an Entitlement is required.',
+          },
+          {
+            Name: 'Entitlements: Default',
+            Link: '/entitlements/aggridentitlementsdefaultdemo',
+            Description:
+              'Set a default Entitlement Access Level to be used if not Entitlement is explicitly provided.',
+          },
         ],
       },
       {
@@ -510,41 +564,7 @@ export function getDemoPageStructure(): DemoPageStructure {
           },
         ],
       },
-      {
-        CategoryName: 'User Interface',
-        Link: '/userinterface',
-        Pages: [
-          {
-            Name: 'Column Menu',
-            Link: '/userinterface/aggridcolumnmenudemo',
-            Description:
-              'Add your custom menu items to the Column Header Menu (and also choose with shipped items are available)',
-          },
-          {
-            Name: 'Context Menu',
-            Link: '/userinterface/aggridcontextmenudemo',
-            Description:
-              'Add your custom menu items to the (right-click) Context Menu (and choose with shipped items are available)',
-          },
-        ],
-      },
-      {
-        CategoryName: 'Tool Panel',
-        Link: '/toolpanel',
-        Pages: [
-          {
-            Name: 'Adaptable Tool Panel',
-            Link: '/toolpanel/aggridtoolpaneldemo',
-            Description:
-              'Use the Adaptable Tool Panel as a Dashboard alternative for quick access to commonly used functions and screens',
-          },
-          {
-            Name: 'Tool Panel Name',
-            Link: '/toolpanel/aggridtoolpanelnamedemo',
-            Description: 'Set your own name for the Tool Panel',
-          },
-        ],
-      },
+
       {
         CategoryName: 'Adaptable Options',
         Link: '/adaptableoptions',
