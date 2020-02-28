@@ -18,14 +18,7 @@ export default () => {
             In this example we have supplied our own icons for the <b>Export</b>{' '}
             and <b>Alert</b> functions toolbars. We overrode the{' '}
             <i>.ab-Icon--export</i> and <i>.ab-Icon--alert </i> properties in
-            our css with the new images. (See{' '}
-            <a
-              href="https://github.com/AdaptableTools/adaptableblotter-demo/blob/master/src/client/theme/aggridcustomicondemo/index.css"
-              target="_blank"
-            >
-              source code
-            </a>{' '}
-            here).
+            our css with the new images.
           </p>
           <p>
             We downloaded the new icons from the same{' '}

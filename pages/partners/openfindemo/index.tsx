@@ -12,7 +12,8 @@ export default () => {
         <p>
           AdapTable runs in the Broswer or Electron with all functionality
           available for users (depending on their{' '}
-          <a href="../../admin/aggridentitlementsdemo/">Entitlements</a>).
+          <a href="../../entitlements/">Entitlements</a>
+          ).
         </p>
         <p>
           However if you are running AdapTable inside the popular{' '}

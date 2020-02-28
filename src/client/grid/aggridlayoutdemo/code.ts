@@ -36,6 +36,7 @@ const demoConfig: PredefinedConfig = {
           'OrderDate',
           'ItemCost',
           'ItemCount',
+          'Comments',
           'Avg Item Cost',
           'CustomerReference',
           'CompanyName',
@@ -67,6 +68,7 @@ const demoConfig: PredefinedConfig = {
       },
       {
         Columns: [
+          'ShipVia',
           'CustomerReference',
           'ContactName',
           'InvoicedCost',
@@ -77,12 +79,8 @@ const demoConfig: PredefinedConfig = {
           'ChangeLastOrder',
           'OrderCost',
           'PackageCost',
-        ],
-        ColumnSorts: [
-          {
-            Column: 'ContactName',
-            SortOrder: 'Ascending',
-          },
+          'Employee',
+          'ShipCountry',
         ],
         GroupedColumns: ['Employee', 'ShipCountry'],
         Name: 'Grouping Layout',
@@ -101,8 +99,44 @@ const demoConfig: PredefinedConfig = {
         },
         Name: 'Pivot Layout',
       },
+      {
+        Columns: [
+          'ShipVia',
+          'Comments',
+          'CustomerReference',
+          'Avg Item Cost',
+          'ContactName',
+          'InvoicedCost',
+          'OrderCost',
+          'Employee',
+          'ShipCountry',
+        ],
+        ColumnSorts: [
+          {
+            Column: 'ShipName',
+            SortOrder: 'Ascending',
+          },
+          { Column: 'ShipVia', SortOrder: 'Descending' },
+        ],
+        GroupedColumns: ['Employee'],
+        Name: 'Advanced Layout',
+      },
     ],
   },
+  FreeTextColumn: {
+    FreeTextColumns: [
+      {
+        ColumnId: 'Comments',
+        DefaultValue: '',
+        FreeTextStoredValues: [
+          { PrimaryKey: 11137, FreeText: 'Dispatch asap' },
+          { PrimaryKey: 11133, FreeText: 'Angry customer' },
+          { PrimaryKey: 11128, FreeText: 'Important order' },
+        ],
+      },
+    ],
+  },
+
   CustomSort: {
     CustomSorts: [
       {
@@ -135,6 +169,11 @@ export default (columnDefs: any[], rowData: any[]) => {
     userName: 'Demo User',
     adaptableId: 'Layout Demo',
     predefinedConfig: demoConfig,
+    layoutOptions: {
+      autoSizeColumnsInDefaultLayout: true,
+      autoSizeColumnsInLayout: true,
+      autoSizeColumnsInPivotLayout: true,
+    },
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
   adaptableApi = Adaptable.init(adaptableOptions);
