@@ -9,22 +9,34 @@ export default () => {
       description={
         <div>
           <p>
-            Use Layouts to manage sets of column visibility, order, sorting and
-            grouping.
+            Use Layouts to manage sets of column visibility and order. Layouts
+            can also include column sorting, grouping and pivoting information
+            and can save automatially when changed
           </p>
           <p>
-            Whereas the search functions determine <b>row </b>visibility,
-            layouts manage <b>column</b> visibility and order (plus sorting,
-            grouping and pivoting). They can include all grid state (e.g.
-            grouping) and save automatially when changed.
+            The search and filter functions determine <b>row</b> visibility and
+            order, while layouts manage <b>column</b> visibility and order. .
           </p>
           <p>
-            This example has 4 layouts: <i>Simple Layout</i>: a basic layout
-            (which includes a Calculated Column; <i>Sorting Layout</i> which
-            contains 2 sorted columns (one with a Custom Sort);{' '}
-            <i>Grouping Layout</i>: which groups on the 'Employee' and 'Ship
-            Country' column; and <i>Pivoting Layout</i> which stores pivoting
-            information.
+            This example has 5 layouts:
+            <ul>
+              <li>
+                <i>Simple Layout</i>: a basic layout (which includes a
+                Calculated Column;{' '}
+              </li>
+              <li>
+                <i>Sorting Layout</i> which contains 2 sorted columns (one with
+                a Custom Sort);
+              </li>
+              <li>
+                <i>Grouping Layout</i>: which groups on the 'Employee' and 'Ship
+                Country' column;
+              </li>
+              <i>Pivoting Layout</i> which stores pivoting information.
+              <li>
+                <i>Advanced Layout</i>: bit of everything
+              </li>
+            </ul>{' '}
           </p>
         </div>
       }

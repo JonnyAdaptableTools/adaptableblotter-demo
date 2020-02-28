@@ -7,31 +7,27 @@ export default () => {
       demo={import(
         '../../../src/client/entitlements/aggridentitlementsdefaultdemo'
       )}
-      pageTitle={'Entitlements Minimal Demo'}
+      pageTitle={'Entitlements DefaultAccessLevel Demo'}
       description={
         <div>
           <p>
-            As well as allowing you create objects for users to have access to
-            when the system starts for the first time, Predefined Config also
-            includes Entitlments (also known as Permissions).
+            When setting Entitlemens you can provide a value for the{' '}
+            <b>DefaultAccessLevel</b> property.
           </p>
           <p>
-            For each function you can set Entitlement for each User to be 'Full'
-            (the Default), 'ReadOnly' (typically you can access existing object
-            but not create/edit/ delete) or 'Hidden' (function is entirely
-            absent).
+            If not provided this property will default to 'Full' which means
+            that every Function will be available and you need to set those that
+            are not.
           </p>
           <p>
-            This example we have created 3 Entitlements. We have made 'Layout'
-            to be ReadOnly so we can use existing layouts but we cannot edit or
-            delete them (or create new ones) - either in the Dashboard or the
-            Tool Panel.
+            You can change this default behaviour by, for example, setting the
+            DefaultAccessLevel to 'Hidden', so that only those Functions
+            explicitly entitled will be available.
           </p>
           <p>
-            {' '}
-            'Advanced Search' and 'Column Category' both have an Entitlement of
-            'hidden' which means they are not available in the menu, or as
-            toolbars.
+            In this example we have set the DefaultAccessLevel to 'Hidden' and
+            then explicity entitled just those Functions we want our users to
+            access.
           </p>
         </div>
       }
