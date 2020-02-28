@@ -39,7 +39,7 @@ export default () => {
                 of <i>Hidden</i> (presumably it wants a non-editable grid).
               </li>
               <li>
-                For a list of other functions it mimics a call to an external
+                For some other functions it mimics a call to an external
                 Permissions Service (which returns an AccessLevel of{' '}
                 <i>ReadOnly</i>)
               </li>

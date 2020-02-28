@@ -9,6 +9,8 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
+  AdaptableFunctionName,
+  AccessLevel,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -19,20 +21,29 @@ const demoConfig: PredefinedConfig = {
     VisibleToolbars: ['Export', 'Layout'],
   },
   Entitlements: {
-    FunctionEntitlements: [
-      {
-        FunctionName: 'ColumnCategory',
-        AccessLevel: 'Hidden',
-      },
-      {
-        FunctionName: 'AdvancedSearch',
-        AccessLevel: 'Hidden',
-      },
-      {
-        FunctionName: 'Layout',
-        AccessLevel: 'ReadOnly',
-      },
-    ],
+    EntitlementLookUpFunction: (
+      functionName: AdaptableFunctionName,
+      userName: string,
+      adaptableId: string
+    ) => {
+      switch (functionName) {
+        // We want a readonly grid so lets hide all editing functions
+        case 'BulkUpdate':
+        case 'CellValidation':
+        case 'PlusMinus':
+        case 'SmartEdit':
+        case 'Shortcut':
+          return 'Hidden';
+        case 'AdvancedSearch':
+        case 'Export':
+        case 'Layout':
+          return getMockPermissionServerResult(
+            functionName,
+            userName,
+            adaptableId
+          );
+      }
+    },
   },
   Layout: {
     CurrentLayout: 'Orders View',
@@ -134,3 +145,11 @@ export default (columnDefs: any[], rowData: any[]) => {
 
   return { adaptableOptions, adaptableApi };
 };
+
+function getMockPermissionServerResult(
+  functionName: AdaptableFunctionName,
+  userName: string,
+  adaptableId: string
+): AccessLevel {
+  return 'ReadOnly';
+}

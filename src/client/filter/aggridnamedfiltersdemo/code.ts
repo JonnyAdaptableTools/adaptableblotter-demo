@@ -48,7 +48,7 @@ const demoConfig: PredefinedConfig = {
         },
         FilterPredicate: (_record, _columnId, cellValue) => {
           let dateToTest = cellValue as Date;
-          let takeOverDate = new Date('2017-03-21');
+          let takeOverDate = new Date('2019-09-21');
           return dateToTest > takeOverDate;
         },
       },

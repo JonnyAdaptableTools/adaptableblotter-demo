@@ -8,7 +8,7 @@ import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import init from './code';
 import { GridReadyEvent } from '@ag-grid-community/all-modules';
 const code = raw('./code.ts');
-
+console.log(13);
 export default () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
