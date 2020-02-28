@@ -5,47 +5,33 @@ export default () => {
   return (
     <DynamicDemoPage
       demo={import(
-        '../../../src/client/entitlements/aggridentitlementslistdemo'
+        '../../../src/client/entitlements/aggridentitlementsdefaultdemo'
       )}
-      pageTitle={'Entitlements List Demo'}
+      pageTitle={'Entitlements Minimal Demo'}
       description={
         <div>
           <p>
-            One way to provide Entitlements in Predefined Config is through a
-            'hard-coded' list via the <b>FunctionEntitlements</b> property.
+            As well as allowing you create objects for users to have access to
+            when the system starts for the first time, Predefined Config also
+            includes Entitlments (also known as Permissions).
           </p>
           <p>
-            This allows you to provide a list of Entitlements - essentially a{' '}
-            <b>FunctionName</b> and an <b>AccessLevel</b> (either <i>Full</i>,{' '}
-            <i>ReadOnly</i> or <i>Hidden</i>).
+            For each function you can set Entitlement for each User to be 'Full'
+            (the Default), 'ReadOnly' (typically you can access existing object
+            but not create/edit/ delete) or 'Hidden' (function is entirely
+            absent).
           </p>
           <p>
-            Any Function not given an Entitlement automatically takes the Access
-            Level of 'Full'; however this can be changed through setting the{' '}
-            <b>DefaultAccessLevel</b> property (see{' '}
-            <a href="./aggridentitlementsdefaultdemo">Default Demo</a>
-            ).
+            This example we have created 3 Entitlements. We have made 'Layout'
+            to be ReadOnly so we can use existing layouts but we cannot edit or
+            delete them (or create new ones) - either in the Dashboard or the
+            Tool Panel.
           </p>
           <p>
-            In this example we have created 3 Entitlements (one for each
-            AccessLevel):
-            <ul>
-              <li>
-                AdvancedSearch - set to <i>Hidden</i> with the result that the
-                Advanced Search Toolbar, ToolPanel and Menu Option are not
-                available anywhere in AdapTable and cannot be accessed by users.
-              </li>
-              <li>
-                Layout - set to <i>ReadOnly</i> with the result that the Layout
-                Toolbar (and menu option) is visible and Layouts can be
-                selected, but they cannot be created, edited or deleted.
-              </li>
-              <li>
-                Export - set to <i>Full</i> (not strictly required as its the{' '}
-                <i>DefaultAccessLevel</i> but here for display purposes) which
-                means it can be used without restriction.
-              </li>
-            </ul>
+            {' '}
+            'Advanced Search' and 'Column Category' both have an Entitlement of
+            'hidden' which means they are not available in the menu, or as
+            toolbars.
           </p>
         </div>
       }
