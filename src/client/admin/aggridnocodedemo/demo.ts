@@ -11,7 +11,7 @@ import '../../../../DemoPage/aggriddemo.css';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import { AdaptableOptions } from '@adaptabletools/adaptable/types';
 
-import { IAdaptableNoCodeWizard } from '@adaptabletools/adaptable/src/AdaptableInterfaces/IAdaptableNoCodeWizard';
+//import { IAdaptableNoCodeWizard } from '@adaptabletools/adaptable/src/AdaptableInterfaces/IAdaptableNoCodeWizard';
 // import { IAdaptableBlotterWizard } from '@adaptabletools/adaptable/src/BlotterInterfaces/IAdaptableBlotterWizard';
 import { ColDef } from '@ag-grid-community/all-modules';
 
