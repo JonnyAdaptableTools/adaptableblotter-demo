@@ -29,6 +29,7 @@ const demoConfig: PredefinedConfig = {
       },
       {
         Columns: [
+          'ShipVia',
           'CustomerReference',
           'ContactName',
           'Employee',
@@ -42,8 +43,21 @@ const demoConfig: PredefinedConfig = {
           'CompanyName',
           'ShipName',
         ],
-        ColumnSorts: [],
+        ColumnSorts: [
+          {
+            Column: 'ShipVia',
+            SortOrder: 'Ascending',
+          },
+        ],
         Name: 'Non Pivot View',
+      },
+    ],
+  },
+  CustomSort: {
+    CustomSorts: [
+      {
+        ColumnId: 'ShipVia',
+        SortedValues: ['Speedy Express', 'United Package', 'Federal Shipping'],
       },
     ],
   },

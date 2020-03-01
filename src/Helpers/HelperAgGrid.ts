@@ -32,15 +32,6 @@ export class HelperAgGrid {
     }
   };
 
-  private shipViaPivotComparator(a: any, b: any) {
-    var requiredOrder = [
-      'Speedy Express',
-      'Federal Shipping',
-      'United Package',
-    ];
-    return requiredOrder.indexOf(a) - requiredOrder.indexOf(b);
-  }
-
   private shortDateFormatter = new Intl.DateTimeFormat('en-GB');
   private shortDateFormatteragGrid = (params: any) => {
     try {
@@ -1025,7 +1016,6 @@ export class HelperAgGrid {
       sortable: true,
       enableRowGroup: true,
       enablePivot: true,
-      pivotComparator: this.shipViaPivotComparator,
       type: 'abColDefString',
     };
   }
@@ -1221,7 +1211,6 @@ export class HelperAgGrid {
       },
       valueParser: this.dateParseragGrid,
       valueFormatter: this.shortDateFormatteragGrid,
-      filter: 'agDateColumnFilter',
       type: 'abColDefDate',
     });
     schema.push({
