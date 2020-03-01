@@ -18,22 +18,23 @@ export default () => {
 
   const { adaptableOptions, adaptableApi } = init(columndefs, rowData);
 
+  console.log(1);
   adaptableApi.eventApi.on('AdaptableReady', () => {
-    tickingDataHelper.startTickingDataagGridPivot(
-      adaptableOptions.vendorGrid,
-      adaptableApi,
-      500
-    );
+    //  tickingDataHelper.startTickingDataagGridPivot(
+    //     adaptableOptions.vendorGrid,
+    //    adaptableApi,
+    //    500
+    //    );
   });
 
   adaptableOptions.vendorGrid.onGridReady = function(
     gridReady: GridReadyEvent
   ) {
     gridReady.columnApi!.autoSizeAllColumns();
-    setTimeout(() => gridReady.columnApi!.autoSizeAllColumns(), 1);
+    // setTimeout(() => gridReady.columnApi!.autoSizeAllColumns(), 1);
 
     gridReady.api!.addEventListener('newColumnsLoaded', function() {
-      gridReady.columnApi!.autoSizeAllColumns();
+      //  gridReady.columnApi!.autoSizeAllColumns();
     });
 
     gridReady.api!.closeToolPanel();

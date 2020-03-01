@@ -17,27 +17,51 @@ export default () => {
             The search and filter functions determine <b>row</b> visibility and
             order, while layouts manage <b>column</b> visibility and order. .
           </p>
-          <p>
-            This example has 5 layouts:
-            <ul>
-              <li>
-                <i>Simple Layout</i>: a basic layout (which includes a
-                Calculated Column;{' '}
-              </li>
-              <li>
-                <i>Sorting Layout</i> which contains 2 sorted columns (one with
-                a Custom Sort);
-              </li>
-              <li>
-                <i>Grouping Layout</i>: which groups on the 'Employee' and 'Ship
-                Country' column;
-              </li>
-              <i>Pivoting Layout</i> which stores pivoting information.
-              <li>
-                <i>Advanced Layout</i>: bit of everything
-              </li>
-            </ul>{' '}
-          </p>
+          <p>This example contains 5 layouts: </p>
+          <ol>
+            <li>
+              {' '}
+              <b>Simple Layout</b>: a basic layout but which includes a
+              Calculated Column (<i>Avg Item Cost</i>) and a FreeText Column (
+              <i>Comments</i>){' '}
+            </li>
+            <li>
+              {' '}
+              <b>Sorting Layout</b>: a layout which contains 2 sorted columns,
+              one of which has a Custom Sort (<i>ShipVia</i>)
+            </li>
+            <li>
+              {' '}
+              <b>Grouping Layout</b>: which groups on the <i>Employee</i> and{' '}
+              <i>Ship Country</i> columns
+            </li>
+            <li>
+              {' '}
+              <b>Pivoting Layout</b> which defines the following pivoting
+              definition:
+              <ul>
+                <li>
+                  Pivot on the <i>ShipVia</i> column (the <b>PivotColumns</b>{' '}
+                  property) - note that we automatically uses the Custom Sort
+                  defined for that this column.
+                </li>
+                <li>
+                  Group on the <i>Employee</i> column (the <b>GroupedColumns</b>{' '}
+                  property)
+                </li>
+                <li>
+                  Show aggregation totals for the <i>InvoicedCost</i> (sum) and{' '}
+                  <i>ItemCost</i> (avg) columns (the <b>AggregationColumns</b>{' '}
+                  property)
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              {' '}
+              <b>Advanced Layout</b>: bit of everything
+            </li>
+          </ol>{' '}
         </div>
       }
       helpResources={

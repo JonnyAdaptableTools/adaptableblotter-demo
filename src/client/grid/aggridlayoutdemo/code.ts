@@ -18,11 +18,32 @@ const demoConfig: PredefinedConfig = {
   Dashboard: {
     VisibleToolbars: ['Layout'],
   },
+  CustomSort: {
+    CustomSorts: [
+      {
+        ColumnId: 'ShipVia',
+        SortedValues: ['Speedy Express', 'United Package', 'Federal Shipping'],
+      },
+    ],
+  },
   CalculatedColumn: {
     CalculatedColumns: [
       {
         ColumnExpression: 'Col("ItemCost") / Col("ItemCount")',
         ColumnId: 'Avg Item Cost',
+      },
+    ],
+  },
+  FreeTextColumn: {
+    FreeTextColumns: [
+      {
+        ColumnId: 'Comments',
+        DefaultValue: '',
+        FreeTextStoredValues: [
+          { PrimaryKey: 11137, FreeText: 'Dispatch asap' },
+          { PrimaryKey: 11133, FreeText: 'Angry customer' },
+          { PrimaryKey: 11128, FreeText: 'Important order' },
+        ],
       },
     ],
   },
@@ -75,10 +96,6 @@ const demoConfig: PredefinedConfig = {
           'ChangeLastOrder',
           'OrderCost',
           'PackageCost',
-          'InvoicedCost',
-          'ChangeLastOrder',
-          'OrderCost',
-          'PackageCost',
           'Employee',
           'ShipCountry',
         ],
@@ -92,9 +109,9 @@ const demoConfig: PredefinedConfig = {
           'Employee',
           'ShipCountry',
         ],
-        GroupedColumns: ['ShipCountry'],
+        GroupedColumns: ['Employee'],
         PivotDetails: {
-          PivotColumns: ['Employee'],
+          PivotColumns: ['ShipVia'],
           AggregationColumns: ['InvoicedCost', 'ItemCost'],
         },
         Name: 'Pivot Layout',
@@ -120,28 +137,6 @@ const demoConfig: PredefinedConfig = {
         ],
         GroupedColumns: ['Employee'],
         Name: 'Advanced Layout',
-      },
-    ],
-  },
-  FreeTextColumn: {
-    FreeTextColumns: [
-      {
-        ColumnId: 'Comments',
-        DefaultValue: '',
-        FreeTextStoredValues: [
-          { PrimaryKey: 11137, FreeText: 'Dispatch asap' },
-          { PrimaryKey: 11133, FreeText: 'Angry customer' },
-          { PrimaryKey: 11128, FreeText: 'Important order' },
-        ],
-      },
-    ],
-  },
-
-  CustomSort: {
-    CustomSorts: [
-      {
-        ColumnId: 'ShipName',
-        SortedValues: ["La maison d'Asie", 'Que Delícia', 'Santé Gourmet'],
       },
     ],
   },
