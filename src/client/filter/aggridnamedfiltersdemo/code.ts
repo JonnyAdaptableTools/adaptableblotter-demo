@@ -47,9 +47,8 @@ const demoConfig: PredefinedConfig = {
           DataType: 'Date',
         },
         FilterPredicate: (_record, _columnId, cellValue) => {
-          let dateToTest = cellValue as Date;
           let takeOverDate = new Date('2019-09-21');
-          return dateToTest > takeOverDate;
+          return (cellValue as Date) > takeOverDate;
         },
       },
       {
@@ -58,9 +57,7 @@ const demoConfig: PredefinedConfig = {
           ColumnIds: ['LastUpdatedTime'],
         },
         FilterPredicate: (_record, _columnId, cellValue) => {
-          let dateToTest = cellValue as Date;
-          var hour = dateToTest.getHours();
-          return hour > 17;
+          return (cellValue as Date).getHours() > 17;
         },
       },
     ],
