@@ -12,11 +12,11 @@ const code = raw('./code.ts');
 export default () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
-
+  console.log(1);
   let rowData = JSON.parse(JSON.stringify(json));
   helperAgGrid.convertExcelDates(rowData);
 
-  const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
+  const columndefs = helperAgGrid.getNorthwindColumnSchemaWithLastUpdatedTime();
 
   const { adaptableOptions, adaptableApi } = init(columndefs, rowData);
 

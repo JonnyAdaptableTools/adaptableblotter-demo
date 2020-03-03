@@ -25,8 +25,8 @@ export default () => {
           </p>
           <p>
             Named Filters operate either on a Single Column or all Columns of a
-            particular DataType (e.g. Data). You provide this information
-            together with the predicate function in the{' '}
+            DataType (e.g. Date). You provide this (together with the predicate
+            function) in{' '}
             <a
               href="https://api.adaptabletools.com/interfaces/_predefinedconfig_namedfilterstate_.namedfilterstate.html"
               target="_blank"
@@ -36,14 +36,27 @@ export default () => {
             section of Config.
           </p>
           <p>
-            In this example we created 3 Named Filters and associated Predicate
-            Functions: (1) <b>High</b> on <i>OrderId</i> Column that evaluates
-            based on data in <i>Invoiced</i> and <i>ItemCount</i> columns; (2){' '}
-            <b>New Starter</b> on <i>Employee</i> column which mimics a lookup
-            to an internal CRM system (and which is also a column filter); and
-            (3) <b>Post Takeover</b> which operates on all Date columns and
-            evaluates true if date in cell was after a putative takeover date.
+            In this example we created 4 Named Filters and associated Predicate
+            Functions:{' '}
           </p>
+          <ol>
+            <li>
+              <b>High</b> on <i>OrderId</i> Column that evaluates based on data
+              in <i>Invoiced</i> and <i>ItemCount</i> columns
+            </li>
+            <li>
+              <b>New Starter</b> on <i>Employee</i> column which mimics a lookup
+              to an internal CRM system (and which is also a column filter)
+            </li>
+            <li>
+              <b>Post Takeover</b> which operates on all Date columns and
+              evaluates true if date in cell was after a putative takeover date.
+            </li>
+            <li>
+              <b>After Work</b> which operates on the <i>LastUpdatedTime</i>{' '}
+              Column and returns any time after 5pm.
+            </li>
+          </ol>
         </div>
       }
       helpResources={

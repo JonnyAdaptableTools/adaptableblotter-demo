@@ -52,6 +52,17 @@ const demoConfig: PredefinedConfig = {
           return dateToTest > takeOverDate;
         },
       },
+      {
+        Name: 'After Work',
+        Scope: {
+          ColumnIds: ['LastUpdatedTime'],
+        },
+        FilterPredicate: (_record, _columnId, cellValue) => {
+          let dateToTest = cellValue as Date;
+          var hour = dateToTest.getHours();
+          return hour > 17;
+        },
+      },
     ],
   },
   ColumnFilter: {

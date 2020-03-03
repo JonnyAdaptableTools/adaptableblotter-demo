@@ -48,6 +48,10 @@ export class HelperAgGrid {
     }
   };
 
+  private timeFormatter = (params: any) => {
+    return params.value ? params.value.toLocaleTimeString() : null;
+  };
+
   private boolParseragGrid = (params: any) => {
     try {
       return `<input type='checkbox'   ${params.value ? 'checked' : ''} />`;
@@ -212,7 +216,15 @@ export class HelperAgGrid {
     schema.push(this.getShipNameDef());
     schema.push(this.getShipCountryDef());
     schema.push(this.getShippedDateDef());
+    schema.push(this.getLastUpdatedTimeDef());
+
     return schema;
+  }
+
+  public getNorthwindColumnSchemaWithLastUpdatedTime(): any[] {
+    var returnSchema = this.getBasicNorthwindColumnSchema();
+    returnSchema.splice(5, 0, this.getLastUpdatedTimeDef());
+    return returnSchema;
   }
 
   public getShortNorthwindColumnSchema(): any[] {
@@ -1078,6 +1090,17 @@ export class HelperAgGrid {
       type: 'abColDefDate',
     };
   }
+  private getLastUpdatedTimeDef(): any {
+    return {
+      headerName: 'Last Updated',
+      field: 'LastUpdatedTime',
+      editable: false,
+      valueFormatter: this.timeFormatter,
+      filter: true,
+      sortable: true,
+      type: 'abColDefDate',
+    };
+  }
 
   private getBasicTradeSchema(): ColDef[] {
     var schema: any[] = [];
@@ -1701,6 +1724,9 @@ export class HelperAgGrid {
         }
         if (row.ShippedDate) {
           row.ShippedDate = new Date(row.ShippedDate);
+        }
+        if (row.LastUpdatedTime) {
+          row.LastUpdatedTime = new Date(row.LastUpdatedTime);
         }
       }
     }
