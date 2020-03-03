@@ -32,6 +32,10 @@ const demoConfig: PredefinedConfig = {
         AccessLevel: 'Full',
       },
       {
+        FunctionName: 'ColumnChooser',
+        AccessLevel: 'Full',
+      },
+      {
         FunctionName: 'Dashboard',
         AccessLevel: 'Hidden',
       },
@@ -39,7 +43,6 @@ const demoConfig: PredefinedConfig = {
         FunctionName: 'Export',
         AccessLevel: 'ReadOnly',
       },
-
       {
         FunctionName: 'Layout',
         AccessLevel: 'ReadOnly',

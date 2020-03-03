@@ -158,7 +158,7 @@ AgGridDemoPageProps) => {
       <div
         id="grid"
         className="ag-theme-balham"
-        style={{ height: 600, width: '98%' }}
+        style={{ height: 700, width: '95%' }}
       />
 
       {children}

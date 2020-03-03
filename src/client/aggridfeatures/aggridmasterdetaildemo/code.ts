@@ -55,7 +55,7 @@ export default (columnDefs: any[], detailColumnDefs: any[], rowData: any[]) => {
   };
 
   const adaptableOptions: AdaptableOptions = {
-    primaryKey: 'OrderId',
+    primaryKey: 'name',
     userName: 'Demo User',
     adaptableId: 'Master Detail Demo',
     layoutOptions: {

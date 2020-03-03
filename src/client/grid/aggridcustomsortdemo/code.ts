@@ -33,6 +33,10 @@ const demoConfig: PredefinedConfig = {
         ],
       },
       {
+        ColumnId: 'ShipVia',
+        SortedValues: ['Speedy Express', 'United Package', 'Federal Shipping'],
+      },
+      {
         ColumnId: 'Employee',
         CustomSortComparerFunction: (
           valueA: any,
@@ -40,12 +44,57 @@ const demoConfig: PredefinedConfig = {
           nodeA: any,
           nodeB: any
         ) => {
+          if (!valueA || !valueB) {
+            return 0;
+          }
+
           const fullName = valueA.split(' ');
           const fullNameB = valueB.split(' ');
           return fullName[fullName.length - 1] > fullNameB[fullNameB.length - 1]
             ? 1
             : -1;
         },
+      },
+    ],
+  },
+  Layout: {
+    CurrentLayout: 'Sorting Layout',
+    Layouts: [
+      {
+        Name: 'Sorting Layout',
+        ColumnSorts: [
+          {
+            Column: 'Employee',
+            SortOrder: 'Ascending',
+          },
+          { Column: 'ContactName', SortOrder: 'Descending' },
+        ],
+        Columns: [
+          'ContactName',
+          'OrderId',
+          'ShipVia',
+          'Freight',
+          'Employee',
+          'ShipName',
+          'ShipCountry',
+          'ShippedDate',
+          'CustomerReference',
+        ],
+      },
+
+      {
+        Columns: [
+          'CustomerReference',
+          'ContactName',
+          'ShipName',
+          'ShipCountry',
+        ],
+        GroupedColumns: ['ShipCountry'],
+        PivotDetails: {
+          PivotColumns: ['ShipVia'],
+          AggregationColumns: ['InvoicedCost', 'ItemCost'],
+        },
+        Name: 'Pivot Layout',
       },
     ],
   },

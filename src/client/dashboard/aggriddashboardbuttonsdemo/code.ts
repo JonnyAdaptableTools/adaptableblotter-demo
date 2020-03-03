@@ -17,6 +17,8 @@ var adaptableApi: AdaptableApi;
 const demoConfig: PredefinedConfig = {
   Dashboard: {
     VisibleButtons: [
+      'GridInfo',
+      'SystemStatus',
       'Dashboard',
       'ColumnChooser',
       'Chart',
@@ -24,8 +26,6 @@ const demoConfig: PredefinedConfig = {
       'Alert',
       'Reminder',
     ],
-    ShowSystemStatusButton: false,
-    ShowAboutButton: false,
     ShowColumnsDropdown: false,
     ShowToolbarsDropdown: false,
     HomeToolbarTitle: 'Changed in Config',

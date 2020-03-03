@@ -15,6 +15,14 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
+  Entitlements: {
+    FunctionEntitlements: [
+      {
+        FunctionName: 'Shortcut',
+        AccessLevel: 'Full',
+      },
+    ],
+  },
   Shortcut: {
     Shortcuts: [
       {

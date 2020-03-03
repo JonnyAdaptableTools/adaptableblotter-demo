@@ -17,38 +17,6 @@ export interface IFootballPlayer {
 }
 
 export class FootballDataHelper {
-  public getMasterGridOptionsFootball(): GridOptions & { modules?: Module[] } {
-    return {
-      columnDefs: this.getMasterFootballSchema(),
-      rowData: this.getFootballData(),
-      masterDetail: true,
-      detailCellRendererParams: {
-        // provide detail grid options
-        detailGridOptions: this.getDetailGridOptionsFootball(),
-
-        // extract and supply row data for detail
-        getDetailRowData: function(params: any) {
-          params.successCallback(params.data.squad);
-        },
-      },
-      isRowMaster: function(dataItem) {
-        return dataItem ? dataItem.squad.length > 0 : false;
-      },
-      enableRangeSelection: true,
-      floatingFilter: true,
-      suppressColumnVirtualisation: false,
-      suppressMenuHide: true,
-      sideBar: undefined,
-      columnTypes: {
-        abColDefNumber: {},
-        abColDefString: {},
-        abColDefBoolean: {},
-        abColDefDate: {},
-        abColDefObject: {},
-      },
-    };
-  }
-
   public getMasterFootballSchema(): ColDef[] {
     var schema: any[] = [];
     schema.push({

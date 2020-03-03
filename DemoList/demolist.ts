@@ -557,6 +557,12 @@ export function getDemoPageStructure(): DemoPageStructure {
               'AdapTable supports Master / Detail grids where the underlying vendor grid offers it.',
           },
           {
+            Name: 'Tree Data View',
+            Link: '/aggridfeatures/aggridtreegriddemo',
+            Description:
+              'AdapTable supports ag-Grid Tree Views with all standard filtering and styling functionality included.',
+          },
+          {
             Name: 'Row Selection',
             Link: '/aggridfeatures/aggridrowselectiondemo',
             Description:
