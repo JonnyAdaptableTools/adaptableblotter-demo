@@ -8,8 +8,7 @@ export class CabinetMinisterDataHelper {
         portfolio: 'Education',
         salary: 140000,
         privyCounsellor: true,
-
-        dateAppointed: '21 May 2017',
+        dateAppointed: '24 July 2019',
       },
       {
         government: ['Gavin Williamson', 'Nick Gibb'],
@@ -20,6 +19,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: true,
+        dateAppointed: '12 May 2015',
       },
       {
         government: ['Gavin Williamson', 'Michelle Donelan'],
@@ -30,6 +30,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
+        dateAppointed: '13 February 2020',
       },
       {
         government: ['Gavin Williamson', 'Baroness Berridge'],
@@ -40,6 +41,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
+        dateAppointed: '13 February 2020',
       },
       {
         government: ['Gavin Williamson', 'Gillian Keegan'],
@@ -50,6 +52,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
+        dateAppointed: '14 February 2020',
       },
       {
         government: ['Gavin Williamson', 'Vicky Ford'],
@@ -60,6 +63,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
+        dateAppointed: '14 February 2020',
       },
       {
         government: ['Grant Shapps'],
@@ -68,8 +72,7 @@ export class CabinetMinisterDataHelper {
         portfolio: 'Transport',
         salary: 140000,
         privyCounsellor: true,
-
-        //appointed:
+        dateAppointed: '24 July 2019',
       },
       {
         government: ['Grant Shapps', 'Chris Heaton-Harris'],
@@ -80,6 +83,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
+        dateAppointed: '25 July 2019',
       },
       {
         government: ['Grant Shapps', 'Andrew Stephenson'],
@@ -90,6 +94,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
+        dateAppointed: '13 February 2020',
       },
       {
         government: ['Grant Shapps', 'Kelly Tolhurst'],
@@ -100,6 +105,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
+        dateAppointed: '13 February 2020',
       },
       {
         government: ['Grant Shapps', 'Rachel Maclean'],
@@ -110,6 +116,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
+        dateAppointed: '13 February 2020',
       },
       {
         government: ['Grant Shapps', 'Baroness Vere of Norbiton'],
@@ -120,6 +127,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
+        dateAppointed: '23 April 2019',
       },
       {
         government: ['Priti Patel'],
@@ -128,8 +136,7 @@ export class CabinetMinisterDataHelper {
         portfolio: 'Home Office',
         salary: 140000,
         privyCounsellor: true,
-
-        //appointed:
+        dateAppointed: '24 July 2019',
       },
       {
         government: ['Priti Patel', 'James Brokenshire'],
@@ -140,6 +147,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: true,
+        dateAppointed: '13 February 2020',
       },
       {
         government: ['Priti Patel', 'Kit Malthouse'],
@@ -150,6 +158,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
+        dateAppointed: '14 February 2020',
       },
       {
         government: ['Priti Patel', 'Baroness Williams of Trafford'],
@@ -160,6 +169,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: true,
+        dateAppointed: '17 July 2016',
       },
       {
         government: ['Priti Patel', 'Victoria Atkins'],
@@ -170,6 +180,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
+        dateAppointed: '9 November 2017',
       },
       {
         government: ['Priti Patel', 'Kevin Foster'],
@@ -180,6 +191,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
+        dateAppointed: '16 December 2019',
       },
       {
         government: ['Priti Patel', 'Chris Philp'],
@@ -190,6 +202,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
+        dateAppointed: '13 February 2020',
       },
       {
         government: ['Ben Wallace'],
@@ -198,8 +211,7 @@ export class CabinetMinisterDataHelper {
         portfolio: 'Defence',
         salary: 140000,
         privyCounsellor: true,
-
-        //appointed:
+        dateAppointed: '24 July 2019',
       },
       {
         government: ['Ben Wallace', 'Jeremy Quin'],
@@ -210,6 +222,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
+        dateAppointed: '13 February 2020',
       },
       {
         government: ['Ben Wallace', 'Baroness Goldie '],
@@ -220,6 +233,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
+        dateAppointed: '13 February 2020',
       },
       {
         government: ['Ben Wallace', 'James Heappey'],
@@ -230,6 +244,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
+        dateAppointed: '13 February 2020',
       },
       {
         government: ['Ben Wallace', 'Johnny Mercer'],
@@ -240,6 +255,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
+        dateAppointed: '28 July 2019',
       },
       {
         government: ['Dominic Raab'],
@@ -248,8 +264,7 @@ export class CabinetMinisterDataHelper {
         portfolio: 'Foreign Office',
         salary: 140000,
         privyCounsellor: true,
-
-        //appointed:
+        dateAppointed: '24 July 2019',
       },
       {
         government: ['Dominic Raab', 'James Cleverly'],
@@ -260,6 +275,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: true,
+        dateAppointed: '13 February 2020',
       },
       {
         government: ['Dominic Raab', 'Nigel Adams'],
@@ -270,6 +286,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
+        dateAppointed: '13 February 2020',
       },
       {
         government: ['Dominic Raab', 'Lord Ahmad of Wimbledon'],
@@ -280,6 +297,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
+        dateAppointed: '14 February 2020',
       },
       {
         government: ['Dominic Raab', 'Lord Goldsmith of Richmond Park'],
@@ -290,6 +308,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
+        dateAppointed: '13 February 2020',
       },
       {
         government: ['Dominic Raab', 'James Duddridge'],
@@ -300,6 +319,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
+        dateAppointed: '13 February 2020',
       },
       {
         government: ['Dominic Raab', 'Wendy Morton'],
@@ -310,6 +330,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
+        dateAppointed: '13 February 2020',
       },
       {
         government: ['Dominic Raab', 'Baroness Sugg'],
@@ -320,6 +341,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
+        dateAppointed: '13 February 2020',
       },
       {
         government: ['Rishi Sunak'],
@@ -328,8 +350,7 @@ export class CabinetMinisterDataHelper {
         portfolio: 'Treasury',
         salary: 140000,
         privyCounsellor: true,
-
-        //appointed:
+        dateAppointed: '13 February 2020',
       },
       {
         government: ['Rishi Sunak', 'Stephen Barclay'],
@@ -340,6 +361,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: true,
+        dateAppointed: '13 February 2020',
       },
       {
         government: ['Rishi Sunak', 'Jesse Norman'],
@@ -350,6 +372,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: true,
+        dateAppointed: '23 May 2019',
       },
       {
         government: ['Rishi Sunak', 'Lord Agnew of Oulton'],
@@ -360,6 +383,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
+        dateAppointed: '14 February 2020',
       },
       {
         government: ['Rishi Sunak', 'John Glen'],
@@ -370,6 +394,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
+        dateAppointed: '9 January 2018',
       },
       {
         government: ['Rishi Sunak', 'Kemi Badenoch'],
@@ -380,6 +405,7 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
+        dateAppointed: '13 February 2020',
       },
     ];
     return cabinetData;

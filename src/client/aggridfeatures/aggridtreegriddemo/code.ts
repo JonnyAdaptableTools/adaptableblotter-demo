@@ -12,7 +12,22 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
 var adaptableApi: AdaptableApi;
 
-const demoConfig: PredefinedConfig = {} as PredefinedConfig;
+const demoConfig: PredefinedConfig = {
+  NamedFilter: {
+    NamedFilters: [
+      {
+        Name: 'Appointed In Reshuffle',
+        Scope: {
+          ColumnIds: ['dateAppointed'],
+        },
+        FilterPredicate: (_record, _columnId, cellValue) => {
+          let reshuffleDate = new Date('2020-02-13');
+          return cellValue === '13 February 2020';
+        },
+      },
+    ],
+  },
+} as PredefinedConfig;
 
 export default (rowData: any[]) => {
   // lets create the ColumnDefs inline as they are unique to this demo
@@ -67,15 +82,13 @@ export default (rowData: any[]) => {
     autoGroupColumnDef: {
       headerName: 'HM Government',
       cellRendererParams: {
-        suppressCount: true,
+        //  suppressCount: true,  // uncomment this line if you dont want to see the number of sub-rows in each top row
       },
     },
     enableRangeSelection: true,
     floatingFilter: true,
     suppressColumnVirtualisation: false,
     suppressMenuHide: true,
-    sideBar: true,
-    rowSelection: 'multiple',
     columnTypes: {
       abColDefNumber: {},
       abColDefString: {},
