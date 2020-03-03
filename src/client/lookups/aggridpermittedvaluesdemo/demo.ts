@@ -17,7 +17,6 @@ export default () => {
   helperAgGrid.convertExcelDates(rowData);
 
   const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
-  console.log(1);
   const { adaptableOptions, adaptableApi } = init(columndefs, rowData);
 
   adaptableOptions.vendorGrid.onGridReady = function(

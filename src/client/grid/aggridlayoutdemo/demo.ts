@@ -18,7 +18,6 @@ export default () => {
 
   const { adaptableOptions, adaptableApi } = init(columndefs, rowData);
 
-  console.log(1);
   adaptableApi.eventApi.on('AdaptableReady', () => {
     //  tickingDataHelper.startTickingDataagGridPivot(
     //     adaptableOptions.vendorGrid,

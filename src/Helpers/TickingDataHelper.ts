@@ -6,12 +6,6 @@ import { AdaptableApi } from '@adaptabletools/adaptable/types';
 export class TickingDataHelper {
   private isTicking: boolean = false;
 
-  private isTickingSet(): boolean {
-    console.log('hecking');
-    console.log(this.isTicking);
-    return this.isTicking;
-  }
-
   public testTickingDataagGrid(
     gridOptions: any,
     adaptableApi: AdaptableApi,

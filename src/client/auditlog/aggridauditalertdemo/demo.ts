@@ -21,7 +21,6 @@ export default () => {
 
   const { adaptableOptions, adaptableApi } = init(columndefs, rowData);
 
-  console.log(1);
   adaptableOptions.vendorGrid.onGridReady = function(
     gridReady: GridReadyEvent
   ) {
