@@ -25,22 +25,25 @@ export default (rowData: any[]) => {
       sortable: true,
       cellClass: 'number-cell',
     },
-    { field: 'title', filter: true, sortable: true, enableRowGroup: true },
-    { field: 'area', filter: true, sortable: true },
+    { field: 'title', filter: true, sortable: true, enableRowGroup: true }, // enableRowGroup will be ignored
+    { field: 'portfolio', filter: true, sortable: true },
     {
       field: 'salary',
       editable: true,
       sortable: true,
+      filter: true,
       cellClass: 'number-cell',
     },
     {
       field: 'staff',
       aggFunc: 'sum',
+      filter: true,
       cellClass: 'number-cell',
     },
     {
       field: 'budget',
       aggFunc: 'sum',
+      filter: true,
       cellClass: 'number-cell',
     },
     {

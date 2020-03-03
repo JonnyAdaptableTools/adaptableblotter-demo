@@ -15,7 +15,7 @@ export default () => {
   const rowData = cabinetMinisterHelper.getCabinetData();
   convertExcelDates(rowData);
   const { adaptableOptions, adaptableApi } = init(rowData);
-  console.log(231);
+  console.log(23231);
   adaptableApi.eventApi.on('AdaptableReady', () => {
     tickingDataHelper.useTickingDataTreeGrid(adaptableOptions.vendorGrid, 20);
   });

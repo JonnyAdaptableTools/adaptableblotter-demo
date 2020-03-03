@@ -30,7 +30,8 @@ export default () => {
           </p>
           <p>
             We have (completely randomly) added fictitous 'Staff' and 'Budget'
-            cols that tick 1,000 times a second purely for demo purposes.
+            cols. These both tick > 1,000 times a second - purely for demo
+            purposes.
           </p>
           <p>
             See more about Tree Data:{' '}
