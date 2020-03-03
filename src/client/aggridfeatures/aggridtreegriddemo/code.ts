@@ -17,7 +17,8 @@ const demoConfig: PredefinedConfig = {} as PredefinedConfig;
 export default (rowData: any[]) => {
   // lets create the ColumnDefs inline as they are unique to this demo
   const columnDefs: ColDef[] = [
-    // we're using the auto group column by default!
+    // here we are using the auto group column by default
+    // alternatively you can use Custom Column Group: see https://www.ag-grid.com/javascript-grid-tree-data/#configuring-a-group-column
     {
       field: 'cabinetId',
       filter: true,
@@ -34,28 +35,27 @@ export default (rowData: any[]) => {
     },
     {
       field: 'staff',
-      editable: true,
-      sortable: true,
       aggFunc: 'sum',
       cellClass: 'number-cell',
     },
     {
       field: 'budget',
-      editable: true,
-      sortable: true,
       aggFunc: 'sum',
       cellClass: 'number-cell',
     },
+    {
+      field: 'dateAppointed',
+      sortable: true,
+      filter: true,
+      type: 'abColDefDate',
+    },
     { field: 'privyCounsellor', editable: true, sortable: true },
-    { field: 'memberOfCommons', editable: true, sortable: true },
-    { field: 'memberOfLords', editable: true, sortable: true },
-    { field: 'dateAppointed', editable: true, sortable: true },
   ];
 
   const gridOptions: GridOptions = {
     columnDefs: columnDefs,
     rowData: rowData,
-    treeData: true, // enable Tree Data mode
+    treeData: true, // important as it will enable Tree Data mode
     animateRows: true,
     groupDefaultExpanded: -1, // expand all groups by default
     getDataPath: function(data) {

@@ -13,9 +13,9 @@ export default () => {
   const tickingDataHelper = new TickingDataHelper();
   let cabinetMinisterHelper = new CabinetMinisterDataHelper();
   const rowData = cabinetMinisterHelper.getCabinetData();
-
+  convertExcelDates(rowData);
   const { adaptableOptions, adaptableApi } = init(rowData);
-
+  console.log(231);
   adaptableApi.eventApi.on('AdaptableReady', () => {
     tickingDataHelper.useTickingDataTreeGrid(adaptableOptions.vendorGrid, 20);
   });
@@ -39,4 +39,16 @@ export default () => {
     },
     code,
   };
+
+  function convertExcelDates(rowData: any) {
+    for (let i = 0; i < rowData.length; i++) {
+      let row = rowData[i];
+      if (row) {
+        if (row.appointed) {
+          row.appointed = new Date(row.appointed);
+        }
+      }
+    }
+    return rowData;
+  }
 };

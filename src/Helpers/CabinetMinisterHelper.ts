@@ -8,9 +8,8 @@ export class CabinetMinisterDataHelper {
         area: 'Education',
         salary: 140000,
         privyCounsellor: true,
-        memberOfCommons: true,
-        memberOfLords: false,
-        //appointed:
+
+        dateAppointed: '21 May 2017',
       },
       {
         government: ['Gavin Williamson', 'Nick Gibb'],
@@ -21,8 +20,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: true,
-        memberOfCommons: true,
-        memberOfLords: false,
       },
       {
         government: ['Gavin Williamson', 'Michelle Donelan'],
@@ -33,8 +30,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
-        memberOfCommons: true,
-        memberOfLords: false,
       },
       {
         government: ['Gavin Williamson', 'Baroness Berridge'],
@@ -45,8 +40,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
-        memberOfCommons: false,
-        memberOfLords: true,
       },
       {
         government: ['Gavin Williamson', 'Gillian Keegan'],
@@ -57,8 +50,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
-        memberOfCommons: true,
-        memberOfLords: false,
       },
       {
         government: ['Gavin Williamson', 'Vicky Ford'],
@@ -69,8 +60,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
-        memberOfCommons: true,
-        memberOfLords: false,
       },
       {
         government: ['Grant Shapps'],
@@ -79,8 +68,7 @@ export class CabinetMinisterDataHelper {
         area: 'Transport',
         salary: 140000,
         privyCounsellor: true,
-        memberOfCommons: true,
-        memberOfLords: false,
+
         //appointed:
       },
       {
@@ -92,8 +80,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
-        memberOfCommons: true,
-        memberOfLords: false,
       },
       {
         government: ['Grant Shapps', 'Andrew Stephenson'],
@@ -104,8 +90,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
-        memberOfCommons: true,
-        memberOfLords: false,
       },
       {
         government: ['Grant Shapps', 'Kelly Tolhurst'],
@@ -116,8 +100,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
-        memberOfCommons: true,
-        memberOfLords: false,
       },
       {
         government: ['Grant Shapps', 'Rachel Maclean'],
@@ -128,8 +110,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
-        memberOfCommons: true,
-        memberOfLords: false,
       },
       {
         government: ['Grant Shapps', 'Baroness Vere of Norbiton'],
@@ -140,8 +120,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
-        memberOfCommons: false,
-        memberOfLords: true,
       },
       {
         government: ['Priti Patel'],
@@ -150,8 +128,7 @@ export class CabinetMinisterDataHelper {
         area: 'Home Office',
         salary: 140000,
         privyCounsellor: true,
-        memberOfCommons: true,
-        memberOfLords: false,
+
         //appointed:
       },
       {
@@ -163,8 +140,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: true,
-        memberOfCommons: true,
-        memberOfLords: false,
       },
       {
         government: ['Priti Patel', 'Kit Malthouse'],
@@ -175,8 +150,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
-        memberOfCommons: true,
-        memberOfLords: false,
       },
       {
         government: ['Priti Patel', 'Baroness Williams of Trafford'],
@@ -187,8 +160,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: true,
-        memberOfCommons: false,
-        memberOfLords: true,
       },
       {
         government: ['Priti Patel', 'Victoria Atkins'],
@@ -199,8 +170,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
-        memberOfCommons: true,
-        memberOfLords: false,
       },
       {
         government: ['Priti Patel', 'Kevin Foster'],
@@ -211,8 +180,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
-        memberOfCommons: true,
-        memberOfLords: false,
       },
       {
         government: ['Priti Patel', 'Chris Philp'],
@@ -223,8 +190,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
-        memberOfCommons: true,
-        memberOfLords: false,
       },
       {
         government: ['Ben Wallace'],
@@ -233,8 +198,7 @@ export class CabinetMinisterDataHelper {
         area: 'Defence',
         salary: 140000,
         privyCounsellor: true,
-        memberOfCommons: true,
-        memberOfLords: false,
+
         //appointed:
       },
       {
@@ -246,8 +210,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
-        memberOfCommons: true,
-        memberOfLords: false,
       },
       {
         government: ['Ben Wallace', 'Baroness Goldie '],
@@ -258,8 +220,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
-        memberOfCommons: false,
-        memberOfLords: true,
       },
       {
         government: ['Ben Wallace', 'James Heappey'],
@@ -270,8 +230,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
-        memberOfCommons: true,
-        memberOfLords: false,
       },
       {
         government: ['Ben Wallace', 'Johnny Mercer'],
@@ -282,8 +240,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
-        memberOfCommons: true,
-        memberOfLords: false,
       },
       {
         government: ['Dominic Raab'],
@@ -292,8 +248,7 @@ export class CabinetMinisterDataHelper {
         area: 'Foreign Office',
         salary: 140000,
         privyCounsellor: true,
-        memberOfCommons: true,
-        memberOfLords: false,
+
         //appointed:
       },
       {
@@ -305,8 +260,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: true,
-        memberOfCommons: true,
-        memberOfLords: false,
       },
       {
         government: ['Dominic Raab', 'Nigel Adams'],
@@ -317,8 +270,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
-        memberOfCommons: true,
-        memberOfLords: false,
       },
       {
         government: ['Dominic Raab', 'Lord Ahmad of Wimbledon'],
@@ -329,8 +280,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
-        memberOfCommons: false,
-        memberOfLords: true,
       },
       {
         government: ['Dominic Raab', 'Lord Goldsmith of Richmond Park'],
@@ -341,8 +290,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
-        memberOfCommons: false,
-        memberOfLords: true,
       },
       {
         government: ['Dominic Raab', 'James Duddridge'],
@@ -353,8 +300,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
-        memberOfCommons: true,
-        memberOfLords: false,
       },
       {
         government: ['Dominic Raab', 'Wendy Morton'],
@@ -365,8 +310,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
-        memberOfCommons: true,
-        memberOfLords: false,
       },
       {
         government: ['Dominic Raab', 'Baroness Sugg'],
@@ -377,8 +320,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
-        memberOfCommons: false,
-        memberOfLords: true,
       },
       {
         government: ['Rishi Sunak'],
@@ -387,8 +328,7 @@ export class CabinetMinisterDataHelper {
         area: 'Treasury',
         salary: 140000,
         privyCounsellor: true,
-        memberOfCommons: true,
-        memberOfLords: false,
+
         //appointed:
       },
       {
@@ -400,8 +340,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: true,
-        memberOfCommons: true,
-        memberOfLords: false,
       },
       {
         government: ['Rishi Sunak', 'Jesse Norman'],
@@ -412,8 +350,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: true,
-        memberOfCommons: true,
-        memberOfLords: false,
       },
       {
         government: ['Rishi Sunak', 'Lord Agnew of Oulton'],
@@ -424,8 +360,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
-        memberOfCommons: false,
-        memberOfLords: true,
       },
       {
         government: ['Rishi Sunak', 'John Glen'],
@@ -436,8 +370,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
-        memberOfCommons: true,
-        memberOfLords: false,
       },
       {
         government: ['Rishi Sunak', 'Kemi Badenoch'],
@@ -448,8 +380,6 @@ export class CabinetMinisterDataHelper {
         staff: this.generateRandomInt(10, 200),
         budget: this.generateRandomInt(120000, 300000),
         privyCounsellor: false,
-        memberOfCommons: true,
-        memberOfLords: false,
       },
     ];
     return cabinetData;
