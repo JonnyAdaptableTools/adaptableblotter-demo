@@ -1098,6 +1098,7 @@ export class HelperAgGrid {
       valueFormatter: this.timeFormatter,
       filter: true,
       sortable: true,
+      cellStyle: { ' text-align': 'right' },
       type: 'abColDefDate',
     };
   }

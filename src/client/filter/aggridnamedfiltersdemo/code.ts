@@ -77,6 +77,15 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
+  UserInterface: {
+    PermittedValuesColumns: [
+      {
+        // For LastUpdatedTime column we return an array with a single empty value as it makes no sense to see each time value
+        ColumnId: 'LastUpdatedTime',
+        PermittedValues: [''],
+      },
+    ],
+  },
 } as PredefinedConfig;
 
 export default (columnDefs: any[], rowData: any[]) => {
