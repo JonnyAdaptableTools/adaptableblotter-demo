@@ -35,6 +35,13 @@ export default () => {
           </a>
           ,{' '}
           <a
+            href="https://github.com/AdaptableTools/adaptable/blob/dev/packages/adaptable/readme/Functions/adavanced_search_function.md"
+            target="_blank"
+          >
+            Read Me
+          </a>
+          ,{' '}
+          <a
             href="https://api.adaptabletools.com/interfaces/_src_api_advancedsearchapi_.advancedsearchapi.html"
             target="_blank"
           >
