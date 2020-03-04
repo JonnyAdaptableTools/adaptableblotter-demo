@@ -28,14 +28,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_shortcutstate_.shortcutstate.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_shortcutstate_.shortcutstate.html"
             target="_blank"
           >
             Predefined Config
           </a>
           ,{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_api_shortcutapi_.shortcutapi.html"
+            href="https://api.adaptabletools.com/interfaces/_src_api_shortcutapi_.shortcutapi.html"
             target="_blank"
           >
             Adaptable API

@@ -35,14 +35,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_sparklinecolumnstate_.sparklinecolumnstate.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_sparklinecolumnstate_.sparklinecolumnstate.html"
             target="_blank"
           >
             Predefined Config
           </a>
           ,{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_api_sparklinecolumnapi_.sparklinecolumnapi.html"
+            href="https://api.adaptabletools.com/interfaces/_src_api_sparklinecolumnapi_.sparklinecolumnapi.html"
             target="_blank"
           >
             Adaptable API

@@ -15,7 +15,7 @@ export default () => {
           <p>
             However, in the{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_userinterfacestate_.userinterfacestate.html"
+              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_userinterfacestate_.userinterfacestate.html"
               target="_blank"
             >
               User Interface

@@ -40,14 +40,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_conditionalstylestate_.conditionalstylestate.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_conditionalstylestate_.conditionalstylestate.html"
             target="_blank"
           >
             Predefined Config
           </a>
           ,{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_api_conditionalstyleapi_.conditionalstyleapi.html"
+            href="https://api.adaptabletools.com/interfaces/_src_api_conditionalstyleapi_.conditionalstyleapi.html"
             target="_blank"
           >
             Adaptable API

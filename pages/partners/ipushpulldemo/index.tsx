@@ -29,7 +29,7 @@ export default () => {
             </a>{' '}
             (which will include your credentials) in the{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_ipushpullstate_.ipushpullstate.html"
+              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_ipushpullstate_.ipushpullstate.html"
               target="_blank"
             >
               ipushpull State
@@ -40,7 +40,7 @@ export default () => {
             To export data you first need to login using your ipushpull username
             and password, which you can supply in{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_ipushpullstate_.ipushpullstate.html"
+              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_ipushpullstate_.ipushpullstate.html"
               target="_blank"
             >
               ipushpull State
@@ -69,14 +69,14 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_ipushpullstate_.ipushpullstate.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_ipushpullstate_.ipushpullstate.html"
             target="_blank"
           >
             Predefined Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_api_ipushpullapi_.ipushpullapi.html"
+            href="https://api.adaptabletools.com/interfaces/_src_api_ipushpullapi_.ipushpullapi.html"
             target="_blank"
           >
             Adaptable API

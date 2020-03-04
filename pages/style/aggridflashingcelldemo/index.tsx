@@ -25,14 +25,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_flashingcellstate_.flashingcellstate.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_flashingcellstate_.flashingcellstate.html"
             target="_blank"
           >
             Predefined Config
           </a>
           ,{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_api_flashingcellapi_.flashingcellapi.html"
+            href="https://api.adaptabletools.com/interfaces/_src_api_flashingcellapi_.flashingcellapi.html"
             target="_blank"
           >
             Adaptable API

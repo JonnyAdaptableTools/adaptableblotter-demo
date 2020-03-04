@@ -21,7 +21,7 @@ export default () => {
           <p>
             When a Data Source is selected, the{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_api_eventapi_.eventapi.html"
+              href="https://api.adaptabletools.com/interfaces/_src_api_eventapi_.eventapi.html"
               target="_blank"
             >
               on('SearchChanged') event
@@ -34,7 +34,7 @@ export default () => {
             This allows you to perform the necessary actions on the server and
             return data to AdapTable via the{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_api_gridapi_.gridapi.html"
+              href="https://api.adaptabletools.com/interfaces/_src_api_gridapi_.gridapi.html"
               target="_blank"
             >
               Grid APi
@@ -57,21 +57,21 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_datasourcestate_.datasourcestate.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_datasourcestate_.datasourcestate.html"
             target="_blank"
           >
             Predefined Config
           </a>
           ,{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_api_datasourceapi_.datasourceapi.html"
+            href="https://api.adaptabletools.com/interfaces/_src_api_datasourceapi_.datasourceapi.html"
             target="_blank"
           >
             Adaptable API
           </a>
           ,{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_adaptableoptions_searchoptions_.searchoptions.html#serversearchoption"
+            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_searchoptions_.searchoptions.html#serversearchoption"
             target="_blank"
           >
             Server Searching

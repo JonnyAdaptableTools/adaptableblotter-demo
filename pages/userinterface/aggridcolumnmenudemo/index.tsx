@@ -20,14 +20,14 @@ export default () => {
           <p>
             You can add your own{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_userinterfacestate_.usermenuitem.html"
+              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_userinterfacestate_.usermenuitem.html"
               target="_blank"
             >
               User Menu Item(s)
             </a>{' '}
             to the Column Menu - through{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_userinterfacestate_.userinterfacestate.html"
+              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_userinterfacestate_.userinterfacestate.html"
               target="_blank"
             >
               User Interface State
@@ -43,7 +43,7 @@ export default () => {
             Menu items are available by using the <b>showAdaptableColumnMenu</b>{' '}
             function property in{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_adaptableoptions_userinterfaceoptions_.userinterfaceoptions.html#showadaptablecolumnmenu"
+              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_userinterfaceoptions_.userinterfaceoptions.html#showadaptablecolumnmenu"
               target="_blank"
             >
               User Interface Options
@@ -59,21 +59,21 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_userinterfacestate_.userinterfacestate.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_userinterfacestate_.userinterfacestate.html"
             target="_blank"
           >
             Predefined Config
           </a>
           ,{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_api_userinterfaceapi_.userinterfaceapi.html"
+            href="https://api.adaptabletools.com/interfaces/_src_api_userinterfaceapi_.userinterfaceapi.html"
             target="_blank"
           >
             Adaptable API
           </a>
           ,{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_adaptableoptions_userinterfaceoptions_.userinterfaceoptions.html"
+            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_userinterfaceoptions_.userinterfaceoptions.html"
             target="_blank"
           >
             User Interface Options

@@ -22,14 +22,14 @@ export default () => {
           <p>
             (1) Pre-populate the Toolbar with Button definitions (as part of{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_dashboardstate_.dashboardstate.html"
+              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_dashboardstate_.dashboardstate.html"
               target="_blank"
             >
               Dashboard State
             </a>
             ); when a button is clicked the{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_api_eventapi_.eventapi.html"
+              href="https://api.adaptabletools.com/interfaces/_src_api_eventapi_.eventapi.html"
               target="_blank"
             >
               ToolbarButtonClicked
@@ -41,7 +41,7 @@ export default () => {
             (2) Render the Toolbar with any content that is required; listen to
             the{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_api_eventapi_.eventapi.html#on"
+              href="https://api.adaptabletools.com/interfaces/_src_api_eventapi_.eventapi.html#on"
               target="_blank"
             >
               ToolbarVisibilityChanged
@@ -54,14 +54,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_dashboardstate_.dashboardstate.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_dashboardstate_.dashboardstate.html"
             target="_blank"
           >
             Predefined Config
           </a>
           ,{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_api_dashboardapi_.dashboardapi.html"
+            href="https://api.adaptabletools.com/interfaces/_src_api_dashboardapi_.dashboardapi.html"
             target="_blank"
           >
             Adaptable API

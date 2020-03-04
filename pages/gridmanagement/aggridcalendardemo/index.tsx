@@ -28,14 +28,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_calendarstate_.calendarstate.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_calendarstate_.calendarstate.html"
             target="_blank"
           >
             Predefined Config
           </a>
           ,{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_api_calendarapi_.calendarapi.html"
+            href="https://api.adaptabletools.com/interfaces/_src_api_calendarapi_.calendarapi.html"
             target="_blank"
           >
             Adaptable API

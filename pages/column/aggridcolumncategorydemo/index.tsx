@@ -27,14 +27,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_columncategorystate_.columncategorystate.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_columncategorystate_.columncategorystate.html"
             target="_blank"
           >
             Predefined Config
           </a>
           ,{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_api_columncategoryapi_.columncategoryapi.html"
+            href="https://api.adaptabletools.com/interfaces/_src_api_columncategoryapi_.columncategoryapi.html"
             target="_blank"
           >
             Adaptable API

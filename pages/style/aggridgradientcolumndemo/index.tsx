@@ -42,14 +42,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_gradientcolumnstate_.gradientcolumnstate.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_gradientcolumnstate_.gradientcolumnstate.html"
             target="_blank"
           >
             Predefined Config
           </a>
           ,{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_api_gradientcolumnapi_.gradientcolumnapi.html"
+            href="https://api.adaptabletools.com/interfaces/_src_api_gradientcolumnapi_.gradientcolumnapi.html"
             target="_blank"
           >
             Adaptable API

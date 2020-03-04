@@ -67,14 +67,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_layoutstate_.layoutstate.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_layoutstate_.layoutstate.html"
             target="_blank"
           >
             Predefined Config
           </a>
           ,{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_api_layoutapi_.layoutapi.html"
+            href="https://api.adaptabletools.com/interfaces/_src_api_layoutapi_.layoutapi.html"
             target="_blank"
           >
             Adaptable API

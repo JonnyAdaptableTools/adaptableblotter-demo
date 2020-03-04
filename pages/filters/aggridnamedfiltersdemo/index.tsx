@@ -28,7 +28,7 @@ export default () => {
             DataType (e.g. Date). You provide this (together with the predicate
             function) in{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_namedfilterstate_.namedfilterstate.html"
+              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_namedfilterstate_.namedfilterstate.html"
               target="_blank"
             >
               Named Filters
@@ -62,14 +62,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_namedfilterstate_.namedfilterstate.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_namedfilterstate_.namedfilterstate.html"
             target="_blank"
           >
             Predefined Config
           </a>
           ,{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_api_namedfilterapi_.namedfilterapi.html"
+            href="https://api.adaptabletools.com/interfaces/_src_api_namedfilterapi_.namedfilterapi.html"
             target="_blank"
           >
             Adaptable API

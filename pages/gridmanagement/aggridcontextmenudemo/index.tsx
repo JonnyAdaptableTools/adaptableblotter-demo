@@ -23,7 +23,7 @@ export default () => {
             You can turn this off by setting <i>ShowAboutButton</i> to false in
             in{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_dashboardstate_.dashboardstate.html"
+              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_dashboardstate_.dashboardstate.html"
               target="_blank"
             >
               Dashboard Config

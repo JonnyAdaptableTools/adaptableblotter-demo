@@ -25,7 +25,7 @@ export default () => {
             Note that the dropdown includes 2 financial summaries ('VWAP' and
             'Only'); this is becuase we installed and included the{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_adaptableoptions_adaptableoptions_.adaptableoptions.html#plugins"
+              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_adaptableoptions_.adaptableoptions.html#plugins"
               target="_blank"
             >
               Financial plugin
@@ -45,14 +45,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_cellsummarystate_.cellsummarystate.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_cellsummarystate_.cellsummarystate.html"
             target="_blank"
           >
             Predefined Config
           </a>
           ,{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_api_cellsummaryapi_.cellsummaryapi.html"
+            href="https://api.adaptabletools.com/interfaces/_src_api_cellsummaryapi_.cellsummaryapi.html"
             target="_blank"
           >
             Adaptable API

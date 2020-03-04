@@ -21,7 +21,7 @@ export default () => {
           <p>
             By default <b>all</b> System Filters will be shown. However in{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_systemfilterstate_.systemfilterstate.html"
+              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_systemfilterstate_.systemfilterstate.html"
               target="_blank"
             >
               Sytem Filter State
@@ -40,14 +40,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_systemfilterstate_.systemfilterstate.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_systemfilterstate_.systemfilterstate.html"
             target="_blank"
           >
             Predefined Config
           </a>
           ,{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_api_systemfilterapi_.systemfilterapi.html"
+            href="https://api.adaptabletools.com/interfaces/_src_api_systemfilterapi_.systemfilterapi.html"
             target="_blank"
           >
             Adaptable API

@@ -61,7 +61,7 @@ export default () => {
           When you release an application using AdapTable you will typically
           ship it with{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_predefinedconfig_.predefinedconfig.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_predefinedconfig_.predefinedconfig.html"
             target="_blank"
           >
             <b>Predefined Config</b>
@@ -71,7 +71,7 @@ export default () => {
           first loads. <br />
           You set this Predefined Config as a property of{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_adaptableoptions_adaptableoptions_.adaptableoptions"
+            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_adaptableoptions_.adaptableoptions"
             target="_blank"
           >
             <b>Adaptable Options</b>
@@ -81,7 +81,7 @@ export default () => {
           AdaptableOptions is the only property required by AdapTable's
           constructor which returns the{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_api_adaptableapi_.adaptableapi"
+            href="https://api.adaptabletools.com/interfaces/_src_api_adaptableapi_.adaptableapi"
             target="_blank"
           >
             <b>Adaptable Api</b>

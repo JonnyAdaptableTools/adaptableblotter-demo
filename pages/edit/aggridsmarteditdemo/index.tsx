@@ -28,14 +28,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_smarteditstate_.smarteditstate.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_smarteditstate_.smarteditstate.html"
             target="_blank"
           >
             Predefined Config
           </a>
           ,{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_api_smarteditapi_.smarteditapi.html"
+            href="https://api.adaptabletools.com/interfaces/_src_api_smarteditapi_.smarteditapi.html"
             target="_blank"
           >
             Adaptable API

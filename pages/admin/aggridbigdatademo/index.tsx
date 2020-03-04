@@ -32,7 +32,7 @@ export default () => {
             <b>Note:</b> If you have a DataSet with many hundreds of thousands
             of rows then you will probably want to use{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_adaptableoptions_searchoptions_.searchoptions.html#serversearchoption"
+              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_searchoptions_.searchoptions.html#serversearchoption"
               target="_blank"
             >
               Server Searching

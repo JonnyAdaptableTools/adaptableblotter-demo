@@ -17,7 +17,7 @@ export default () => {
             This is, of course, a very basic implementation, e.g. we have not
             set up advanced features like{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_adaptableoptions_searchoptions_.searchoptions.html#serversearchoption"
+              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_searchoptions_.searchoptions.html#serversearchoption"
               target="_blank"
             >
               Server Searching
@@ -28,7 +28,7 @@ export default () => {
             </a>
             , or{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_adaptableoptions_configserveroptions_.configserveroptions.html"
+              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_configserveroptions_.configserveroptions.html"
               target="_blank"
             >
               Config Server
@@ -60,7 +60,7 @@ export default () => {
                 Write any{' '}
                 <b>
                   <a
-                    href="https://api.adaptabletools.com/interfaces/_predefinedconfig_predefinedconfig_.predefinedconfig.html"
+                    href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_predefinedconfig_.predefinedconfig.html"
                     target="_blank"
                   >
                     Predefined Config
@@ -72,7 +72,7 @@ export default () => {
                 Create an{' '}
                 <b>
                   <a
-                    href="https://api.adaptabletools.com/interfaces/_adaptableoptions_adaptableoptions_.adaptableoptions"
+                    href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_adaptableoptions_.adaptableoptions"
                     target="_blank"
                   >
                     AdaptableOptions
@@ -85,7 +85,7 @@ export default () => {
                 and retrieving an{' '}
                 <b>
                   <a
-                    href="https://api.adaptabletools.com/interfaces/_api_adaptableapi_.adaptableapi"
+                    href="https://api.adaptabletools.com/interfaces/_src_api_adaptableapi_.adaptableapi"
                     target="_blank"
                   >
                     AdaptableApi
@@ -126,14 +126,14 @@ export default () => {
           </a>
           ,{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_predefinedconfig_.predefinedconfig.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_predefinedconfig_.predefinedconfig.html"
             target="_blank"
           >
             Predefined Config
           </a>
           ,{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_api_adaptableapi_.adaptableapi"
+            href="https://api.adaptabletools.com/interfaces/_src_api_adaptableapi_.adaptableapi"
             target="_blank"
           >
             Adaptable API

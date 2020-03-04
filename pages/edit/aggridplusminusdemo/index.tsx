@@ -28,14 +28,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_plusminusstate_.plusminusstate.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_plusminusstate_.plusminusstate.html"
             target="_blank"
           >
             Predefined Config
           </a>
           ,{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_api_plusminusapi_.plusminusapi.html"
+            href="https://api.adaptabletools.com/interfaces/_src_api_plusminusapi_.plusminusapi.html"
             target="_blank"
           >
             Adaptable API

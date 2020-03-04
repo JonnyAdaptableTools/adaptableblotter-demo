@@ -28,14 +28,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_freetextcolumnstate_.freetextcolumnstate.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_freetextcolumnstate_.freetextcolumnstate.html"
             target="_blank"
           >
             Predefined Config
           </a>
           ,{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_api_freetextcolumnapi_.freetextcolumnapi.html"
+            href="https://api.adaptabletools.com/interfaces/_src_api_freetextcolumnapi_.freetextcolumnapi.html"
             target="_blank"
           >
             Adaptable API

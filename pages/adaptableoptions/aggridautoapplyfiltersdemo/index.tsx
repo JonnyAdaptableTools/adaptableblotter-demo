@@ -23,7 +23,7 @@ export default () => {
             If you want to do this, then simply set the <b>autoApplyFilter</b>{' '}
             in{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_adaptableoptions_filteroptions_.filteroptions.html#autoapplyfilter"
+              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_filteroptions_.filteroptions.html#autoapplyfilter"
               target="_blank"
             >
               Filter Options

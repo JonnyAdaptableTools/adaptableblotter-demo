@@ -15,7 +15,7 @@ export default () => {
           <p>
             When the button is clicked an{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_api_eventapi_.eventapi.html"
+              href="https://api.adaptabletools.com/interfaces/_src_api_eventapi_.eventapi.html"
               target="_blank"
             >
               On('ActionColumnClicked')
@@ -84,7 +84,7 @@ export default () => {
             Note: the delete row and all the cell updates were performed by
             using various functions in the{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_api_gridapi_.gridapi.html"
+              href="https://api.adaptabletools.com/interfaces/_src_api_gridapi_.gridapi.html"
               target="_blank"
             >
               gridApi
@@ -96,14 +96,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_actioncolumnstate_.actioncolumnstate.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_actioncolumnstate_.actioncolumnstate.html"
             target="_blank"
           >
             Predefined Config
           </a>
           ,{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_api_actioncolumnapi_.actioncolumnapi.html"
+            href="https://api.adaptabletools.com/interfaces/_src_api_actioncolumnapi_.actioncolumnapi.html"
             target="_blank"
           >
             Adaptable API

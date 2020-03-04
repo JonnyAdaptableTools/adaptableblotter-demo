@@ -45,14 +45,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_themestate_.themestate.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_themestate_.themestate.html"
             target="_blank"
           >
             Predefined Config
           </a>
           ,{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_api_themeapi_.themeapi.html"
+            href="https://api.adaptabletools.com/interfaces/_src_api_themeapi_.themeapi.html"
             target="_blank"
           >
             Adaptable API

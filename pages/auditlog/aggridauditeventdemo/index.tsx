@@ -37,7 +37,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_adaptableoptions_auditoptions_.auditoptions.html"
+            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_auditoptions_.auditoptions.html"
             target="_blank"
           >
             Audit Options

@@ -27,7 +27,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_reminderstate_.reminderstate.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_reminderstate_.reminderstate.html"
             target="_blank"
           >
             Predefined Config

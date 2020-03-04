@@ -17,7 +17,7 @@ export default () => {
             However, if you would prefer to return a larger result set, you can
             set the the <b>maxColumnValueItemsDisplayed</b> property of{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_adaptableoptions_queryoptions_.queryoptions.html"
+              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_queryoptions_.queryoptions.html"
               target="_blank"
             >
               Query Options
@@ -34,7 +34,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_adaptableoptions_queryoptions_.queryoptions.html"
+            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_queryoptions_.queryoptions.html"
             target="_blank"
           >
             Adaptable Options

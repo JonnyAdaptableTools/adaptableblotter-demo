@@ -44,14 +44,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_customsortstate_.customsortstate.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_customsortstate_.customsortstate.html"
             target="_blank"
           >
             Predefined Config
           </a>
           ,{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_api_customsortapi_.customsortapi.html"
+            href="https://api.adaptabletools.com/interfaces/_src_api_customsortapi_.customsortapi.html"
             target="_blank"
           >
             Adaptable API

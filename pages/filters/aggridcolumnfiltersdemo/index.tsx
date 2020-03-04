@@ -40,7 +40,7 @@ export default () => {
           </a>
           ,{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_api_columnfilterapi_.columnfilterapi.html"
+            href="https://api.adaptabletools.com/interfaces/_src_api_columnfilterapi_.columnfilterapi.html"
             target="_blank"
           >
             Adaptable API

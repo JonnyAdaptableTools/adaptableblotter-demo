@@ -27,7 +27,7 @@ export default () => {
             By default the up, down and neutral colours are green, red and gray
             respectively but this can be changed in your{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_predefinedconfig_updatedrowstate_.updatedrowstate.html"
+              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_updatedrowstate_.updatedrowstate.html"
               target="_blank"
             >
               Updated Rows Predefined Config
@@ -43,14 +43,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_updatedrowstate_.updatedrowstate.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_updatedrowstate_.updatedrowstate.html"
             target="_blank"
           >
             Predefined Config
           </a>
           ,{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_api_updatedrowapi_.updatedrowapi.html"
+            href="https://api.adaptabletools.com/interfaces/_src_api_updatedrowapi_.updatedrowapi.html"
             target="_blank"
           >
             Adaptable API

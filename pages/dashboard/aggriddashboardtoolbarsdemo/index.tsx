@@ -24,7 +24,7 @@ export default () => {
             Update' and 'Chart' toolbars (for the latter we needed to install
             the{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_adaptableoptions_adaptableoptions_.adaptableoptions.html#plugins"
+              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_adaptableoptions_.adaptableoptions.html#plugins"
               target="_blank"
             >
               Charts plugin

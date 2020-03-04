@@ -27,14 +27,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_dashboardstate_.dashboardstate.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_dashboardstate_.dashboardstate.html"
             target="_blank"
           >
             Predefined Config
           </a>
           ,{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_api_dashboardapi_.dashboardapi.html"
+            href="https://api.adaptabletools.com/interfaces/_src_api_dashboardapi_.dashboardapi.html"
             target="_blank"
           >
             Adaptable API

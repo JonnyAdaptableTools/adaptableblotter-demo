@@ -122,7 +122,7 @@ export default () => {
 
   // Step 5: Create an AdaptableOptions object which defines how AdapTable should work and contains all it needs
   // We only need to add values for non-mandatory properties where you are unhappy with the default options
-  // Full list of options and defaults at: https://api.adaptabletools.com/interfaces/_adaptableoptions_adaptableoptions_.adaptableoptions
+  // Full list of options and defaults at: https://api.adaptabletools.com/interfaces/_src_adaptableoptions_adaptableoptions_.adaptableoptions
   // In this case we have just set the showAdaptableToolPanel to true in UserInterfaceOptions
   // 2 mandatory properties are 'primaryKey' (to allow us to identify each cell) and 'adaptableId' (a unique name for this instance)
   // Another is 'vendorGrid' (a reference to the underlying grid  - in this case the gridOptions we created above which we pass in)

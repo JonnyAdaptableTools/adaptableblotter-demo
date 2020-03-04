@@ -27,14 +27,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_predefinedconfig_percentbarstate_.percentbarstate.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_percentbarstate_.percentbarstate.html"
             target="_blank"
           >
             Predefined Config
           </a>
           ,{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_api_percentbarapi_.percentbarapi.html"
+            href="https://api.adaptabletools.com/interfaces/_src_api_percentbarapi_.percentbarapi.html"
             target="_blank"
           >
             Adaptable API
