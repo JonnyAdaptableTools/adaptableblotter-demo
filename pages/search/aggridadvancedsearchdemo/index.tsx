@@ -13,9 +13,13 @@ export default () => {
             across mutliple columns which can then be named, saved and re-used.
           </p>
           <p>
-            It uses Adaptable Query (used in many Functions) that allows
-            selections to be performed on a mix of Column Values, Filters and
-            Ranges.
+            It contains an Expression / Query - something used in many
+            AdaptableFunctions) that allows selections to be performed on a mix
+            of Column Values, Filters and Ranges.
+          </p>
+          <p>
+            When an Advanced Search is applied, AdapTable will only display
+            those rows that match <b>all</b> of the Conditions in the Query.
           </p>
           <p>
             In this example we are searching for any rows where the Invoiced
@@ -32,43 +36,28 @@ export default () => {
             target="_blank"
           >
             Predefined Config
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/dev/packages/adaptable/readme/Functions/adavanced_search_function.md"
+            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_searchoptions_.searchoptions.html"
             target="_blank"
           >
-            Read Me
-          </a>
-          ,{' '}
+            Search Options
+          </a>{' '}
+          |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_advancedsearchapi_.advancedsearchapi.html"
             target="_blank"
           >
             Adaptable API
           </a>
-          ,{' '}
+          |{' '}
           <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029895971-Advanced-Search-FAQ"
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/Functions/adavanced_search_function.md"
             target="_blank"
           >
-            FAQ
-          </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028637652-Advanced-Search-Videos"
-            target="_blank"
-          >
-            Videos
-          </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755137-Search-Functions"
-            target="_blank"
-          >
-            User Guide
-          </a>
-          .
+            Read Me
+          </a>{' '}
         </div>
       }
     />
