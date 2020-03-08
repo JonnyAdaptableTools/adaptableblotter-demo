@@ -1086,6 +1086,7 @@ export class HelperAgGrid {
       valueParser: this.dateParseragGrid,
       valueFormatter: this.shortDateFormatteragGrid,
       filter: true,
+      hide: true,
       sortable: true,
       type: 'abColDefDate',
     };

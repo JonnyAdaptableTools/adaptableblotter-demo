@@ -36,6 +36,79 @@ export default () => {
           any desk, in any team, in any organisation, in any location.
         </p>
         <p>
+          <b>The Demos</b> <br />
+          There is a very large number of{' '}
+          <a href="/AdaptableDemoList" target="_self">
+            demos
+          </a>{' '}
+          on this site, allowing you to look at whatever aspects of AdapTable
+          most excite you. Each demo seeks to do one of four things:
+          <ul>
+            <li>
+              Demonstrate how an AdapTable function operates; these are sorted
+              by type (e.g. Search, Edit etc.)
+            </li>
+            <li>
+              Show key UI elements (e.g. Dashboard, Tool Panel, Context and
+              Column Menus etc.)
+            </li>
+            <li>Illustrate some of the AdapTable Options on offer.</li>
+            <li>
+              Show-case key admin elements like Audit Log, Big Data, the
+              AdapTable Api etc.
+            </li>
+          </ul>
+          Each demo provides, below the grid, all the code that was used. This
+          typically includes some Predefined Config and non-default{' '}
+          <i>AdaptableOptions</i> properties that were required for that
+          specific example.
+          <br />
+          The demos use the excellent, market-leading{' '}
+          <a href="https://www.ag-grid.com/" target="_blank">
+            ag-Grid
+          </a>{' '}
+          as the underlying DataGrid (which{' '}
+          <a
+            href="https://medium.com/ag-grid/getting-more-from-your-datagrid-introducing-adaptable-blotter-2be5debd7e46"
+            target="_blank"
+          >
+            integrates very well
+          </a>{' '}
+          with AdapTable), and dummy data from the Microsoft Northwind database
+          (Orders table). <br />
+        </p>
+        <p>
+          <b>Recently Added Demos</b> <br />
+          We continually add new demos to this site as we add additional
+          features or in response to user queries. Demos added in the last few
+          weeks include:
+          <ul>
+            <li>
+              <a href="./style/aggridgradientcolumndemo">Gradient Column</a> -
+              show column values as Gradients
+            </li>
+            <li>
+              <a href="http://localhost:3000/edit/aggridservervalidationdemo">
+                Server Validation
+              </a>{' '}
+              - perform essential validation externally (as well as using{' '}
+              <a href="http://localhost:3000/edit/aggridcellvalidationdemo">
+                Cell Validation
+              </a>{' '}
+              )
+            </li>
+            <li>
+              <a href="./userinterface/aggridcolumnmenudemo">Column Menu</a> and{' '}
+              <a href="./userinterface/aggridcontextmenudemo">Context Menu</a> -
+              add your own bespoke menu items.
+            </li>
+            <li>
+              <a href="./aggridfeatures/aggridtreegriddemo">Tree Data View</a> -
+              use AdapTable with data that has a natural tree structure.
+            </li>
+          </ul>
+        </p>
+        <p>
           <b>Functions</b> <br />
           AdapTable contains a large number of <b>Functions</b> (e.g. Advanced
           Search, Bulk Update, Pie Chart etc). <br />
@@ -88,48 +161,6 @@ export default () => {
           </a>{' '}
           giving you full run-time, code access to all AdapTable functionality
           and state.
-        </p>
-        <p>
-          <b>The Demos</b> <br />
-          There is a very large number of{' '}
-          <a href="/AdaptableDemoList" target="_self">
-            demos
-          </a>{' '}
-          on this site, allowing you to look at whatever aspects of AdapTable
-          most excite you. Each demo seeks to do one of four things:
-          <ul>
-            <li>
-              Demonstrate how an AdapTable function operates; these are sorted
-              by type (e.g. Search, Edit etc.)
-            </li>
-            <li>
-              Show key UI elements (e.g. Dashboard, Tool Panel, Context and
-              Column Menus etc.)
-            </li>
-            <li>Illustrate some of the AdapTable Options on offer.</li>
-            <li>
-              Show-case key admin elements like Audit Log, Big Data, the
-              AdapTable Api etc.
-            </li>
-          </ul>
-          Each demo provides, below the grid, all the code that was used. This
-          typically includes some Predefined Config and non-default{' '}
-          <i>AdaptableOptions</i> properties that were required for that
-          specific example.
-          <br />
-          The demos use the excellent, market-leading{' '}
-          <a href="https://www.ag-grid.com/" target="_blank">
-            ag-Grid
-          </a>{' '}
-          as the underlying DataGrid (which{' '}
-          <a
-            href="https://medium.com/ag-grid/getting-more-from-your-datagrid-introducing-adaptable-blotter-2be5debd7e46"
-            target="_blank"
-          >
-            integrates very well
-          </a>{' '}
-          with AdapTable), and dummy data from the Microsoft Northwind database
-          (Orders table). <br />
         </p>
 
         <p>
