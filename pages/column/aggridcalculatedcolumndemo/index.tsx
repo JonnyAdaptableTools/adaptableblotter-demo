@@ -36,38 +36,31 @@ export default () => {
       helpResources={
         <div>
           <a
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/Functions/calculated_column_function.md"
+            target="_blank"
+          >
+            Read Me
+          </a>{' '}
+          |{' '}
+          <a
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_calculatedcolumnstate_.calculatedcolumnstate.html"
             target="_blank"
           >
             Predefined Config
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_calculatedcolumnapi_.calculatedcolumnapi.html"
             target="_blank"
           >
             Adaptable API
-          </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360030078351-Calculated-Column-FAQ"
-            target="_blank"
-          >
-            FAQ
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
             href="https://adaptabletools.zendesk.com/hc/en-us/articles/360030078491-Calculated-Column-Videos"
             target="_blank"
           >
             Videos
-          </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360003213038-Special-Column-Functions"
-            target="_blank"
-          >
-            User Guide
           </a>
           .
         </div>

@@ -31,29 +31,29 @@ export default () => {
             target="_blank"
           >
             Predefined Config
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_bulkupdateapi_.bulkupdateapi.html"
             target="_blank"
           >
             Adaptable API
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
             href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029742872-Bulk-Update-FAQ"
             target="_blank"
           >
             FAQ
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
             href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028638032-Bulk-Update-Videos"
             target="_blank"
           >
             Videos
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
             href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754698-Edit-Functions"
             target="_blank"
