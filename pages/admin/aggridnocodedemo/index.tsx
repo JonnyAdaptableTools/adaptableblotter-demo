@@ -29,7 +29,7 @@ export default () => {
           <p>
             In the second (optional) step you can set up many of the{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_adaptableblotteroptions_.adaptableblotteroptions.html"
+              href="https://api.adaptabletools.com/modules/_src_adaptableoptions_adaptableoptions_.html"
               target="_blank"
             >
               Adaptable Options

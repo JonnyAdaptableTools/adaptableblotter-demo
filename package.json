@@ -7,6 +7,7 @@
     "@adaptabletools/adaptable": "^6.0.17",
     "@adaptabletools/adaptable-plugin-charts": "^6.0.17",
     "@adaptabletools/adaptable-plugin-finance": "^6.0.17",
+    "@adaptabletools/adaptable-plugin-nocode-aggrid": "^6.0.17",
     "@adaptabletools/adaptable-react-aggrid": "^6.0.17",
     "@ag-grid-community/all-modules": "^22.1.1",
     "@ag-grid-community/react": "^22.1.2",

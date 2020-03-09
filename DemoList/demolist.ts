@@ -500,14 +500,13 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'Any changes made to the data source to the underlying DataGrid (in this example ag-Grid) is automatically reflected in AdapTable and it will be picked up by all relevant functions.',
           },
-          /*
+
           {
             Name: 'No Code',
             Link: '/admin/aggridnocodedemo',
             Description:
               'Create an AdapTable instance dynamically from a JSON or Excel file that you provide; your AdapTable instance will include the full range of functions and all the advanced functionality like state management and audit.',
           },
-          */
         ],
       },
       {
