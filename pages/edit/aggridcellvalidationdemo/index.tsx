@@ -32,7 +32,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_cellvalidationstate_.cellvalidationstate.htmll"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_cellvalidationstate_.cellvalidationstate.html"
             target="_blank"
           >
             Predefined Config

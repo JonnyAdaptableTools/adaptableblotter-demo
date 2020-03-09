@@ -329,7 +329,13 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Grid Info',
             Link: '/gridmanagement/aggridgridinfodemo',
             Description:
-              'Click in the "info" button in the Home Toolbar to see summary information about the grid, your licence and the Options you have set.',
+              'Click the "info" button in the Home Toolbar to see summary information about the grid, your licence and the Options you have set.',
+          },
+          {
+            Name: 'Column Chooser',
+            Link: '/gridmanagement/aggridcolumnchooserdemo',
+            Description:
+              'Set column visiblity and order through an intuitive column management screen.',
           },
           /*
           {
