@@ -13,7 +13,7 @@ export default () => {
   const tickingDataHelper = new TickingDataHelper();
   let cabinetMinisterHelper = new CabinetMinisterDataHelper();
   const rowData = cabinetMinisterHelper.getCabinetData();
-  convertExcelDates(rowData);
+  convertExcelData(rowData);
   const { adaptableOptions, adaptableApi } = init(rowData);
 
   adaptableApi.eventApi.on('AdaptableReady', () => {
@@ -40,7 +40,7 @@ export default () => {
     code,
   };
 
-  function convertExcelDates(rowData: any) {
+  function convertExcelData(rowData: any) {
     for (let i = 0; i < rowData.length; i++) {
       let row = rowData[i];
       if (row) {

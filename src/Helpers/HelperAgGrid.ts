@@ -1106,8 +1106,8 @@ export class HelperAgGrid {
   }
   private getIsValidDef(): any {
     return {
-      headerName: 'Live',
-      field: 'isLive',
+      headerName: 'Is Valid',
+      field: 'IsValid',
       editable: false,
       filter: true,
       cellRenderer: (params: any) =>
@@ -1729,7 +1729,7 @@ export class HelperAgGrid {
     return params.value ? this.roundTo4Dp(params.value) : null;
   };
 
-  public convertExcelDates(rowData: any) {
+  public convertExcelData(rowData: any) {
     for (let i = 0; i < rowData.length; i++) {
       let row = rowData[i];
       if (row) {
@@ -1741,6 +1741,9 @@ export class HelperAgGrid {
         }
         if (row.LastUpdatedTime) {
           row.LastUpdatedTime = new Date(row.LastUpdatedTime);
+        }
+        if (row.IsValid) {
+          row.IsValid = row.IsValid === 'TRUE' ? true : false;
         }
       }
     }

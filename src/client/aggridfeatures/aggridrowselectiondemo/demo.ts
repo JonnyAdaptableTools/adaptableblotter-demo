@@ -14,7 +14,7 @@ export default () => {
   helperAgGrid.setUpAgGridLicence();
 
   let rowData = JSON.parse(JSON.stringify(json));
-  helperAgGrid.convertExcelDates(rowData);
+  helperAgGrid.convertExcelData(rowData);
 
   const columndefs = helperAgGrid.getRowSelectionNorthwindColumnSchema();
 
