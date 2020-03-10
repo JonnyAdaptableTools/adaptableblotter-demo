@@ -221,9 +221,10 @@ export class HelperAgGrid {
     return schema;
   }
 
-  public getNorthwindColumnSchemaWithLastUpdatedTime(): any[] {
+  public getFullNorthwindColumnSchema(): any[] {
     var returnSchema = this.getBasicNorthwindColumnSchema();
     returnSchema.splice(5, 0, this.getLastUpdatedTimeDef());
+    returnSchema.splice(8, 0, this.getIsValidDef());
     return returnSchema;
   }
 
@@ -1101,6 +1102,17 @@ export class HelperAgGrid {
       sortable: true,
       cellStyle: { ' text-align': 'right' },
       type: 'abColDefDate',
+    };
+  }
+  private getIsValidDef(): any {
+    return {
+      headerName: 'Live',
+      field: 'isLive',
+      editable: false,
+      filter: true,
+      cellRenderer: (params: any) =>
+        `<input disabled type='checkbox' ${params.value ? 'checked' : ''} />`,
+      type: 'abColDefBoolean',
     };
   }
 
