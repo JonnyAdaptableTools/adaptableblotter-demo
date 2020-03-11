@@ -15,6 +15,7 @@ export default () => {
             layout, etc) and then reload the other tab - should be syncronized
             and pick things up from where they were in the initial tab.
           </p>
+          <div className="js-firebasePrefix"></div>
         </div>
       }
       helpResources={null}

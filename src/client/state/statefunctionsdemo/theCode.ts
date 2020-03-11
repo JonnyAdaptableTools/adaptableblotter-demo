@@ -15,6 +15,8 @@ import {
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
+import { v4 as uuidv4 } from 'uuid';
+
 import * as firebase from 'firebase/app';
 import 'firebase/database';
 
@@ -33,11 +35,7 @@ firebase.initializeApp(firebaseConfig);
 
 var adaptableApi: AdaptableApi;
 
-const demoConfig: PredefinedConfig = {
-  Dashboard: {
-    VisibleToolbars: ['Export', 'Alert'],
-  },
-} as PredefinedConfig;
+const demoConfig: PredefinedConfig = {} as PredefinedConfig;
 
 export default (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
@@ -57,6 +55,8 @@ export default (columnDefs: any[], rowData: any[]) => {
     },
   };
 
+  const id = localStorage.getItem('firebaseprefix') || uuidv4();
+
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
@@ -65,17 +65,17 @@ export default (columnDefs: any[], rowData: any[]) => {
       loadState: () => {
         return firebase
           .database()
-          .ref('predefinedconfig/7flKvupqnsc3el7r4bwQ')
+          .ref(`predefinedconfig/${id}`)
           .once('value')
           .then(function(snapshot) {
             const str = snapshot.val();
-            return JSON.parse(str);
+            return str ? JSON.parse(str) : {};
           });
       },
       persistState: (state: Partial<AdaptableState>) => {
         return firebase
           .database()
-          .ref('predefinedconfig/7flKvupqnsc3el7r4bwQ')
+          .ref(`predefinedconfig/${id}`)
           .set(JSON.stringify(state))
           .then(() => Promise.resolve(true));
       },
