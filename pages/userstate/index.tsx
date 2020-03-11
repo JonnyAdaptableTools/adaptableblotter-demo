@@ -41,9 +41,9 @@ export default () => {
           </p>
           <b>Saving State</b>{' '}
           <p>
-            AdapTable manages State for you - meaning that all user activity is
-            automatically saved and then reloaded the next time the application
-            is launched.
+            AdapTable automatically saves User State as it changes - meaning
+            that the next time the Application is reloaded, the user sees the
+            same state as on the previous visit.
           </p>
           <p>
             By default User State gets saved to <b>Local Storage</b> which is
