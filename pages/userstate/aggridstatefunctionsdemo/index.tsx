@@ -4,7 +4,7 @@ import DynamicDemoPage from '../../../src/Helpers/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/state/statefunctionsdemo')}
+      demo={import('../../../src/client/userstate/aggridstatefunctionsdemo')}
       pageTitle={'State Functions Demo'}
       description={
         <div>
