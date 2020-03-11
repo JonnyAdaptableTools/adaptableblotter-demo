@@ -16,7 +16,9 @@ jobs:
       ALGOLIA_KEY: ${{ secrets.ALGOLIA_KEY }}
       IPUSHPULL_USERNAME: ${{ secrets.IPUSHPULL_USERNAME }}
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
+      FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
+      FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.FIREBASE_MESSAGING_SENDER_ID }}
+      FIREBASE_APP_ID: ${{ secrets.FIREBASE_APP_ID }}
       VALID_BLOTTER_LICENSE: ${{ secrets.VALID_BLOTTER_LICENSE }}
 
     steps:
