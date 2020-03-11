@@ -1110,6 +1110,7 @@ export class HelperAgGrid {
       field: 'IsValid',
       editable: false,
       filter: true,
+      cellClass: 'bool-cell',
       cellRenderer: (params: any) =>
         `<input disabled type='checkbox' ${params.value ? 'checked' : ''} />`,
       type: 'abColDefBoolean',
