@@ -9,19 +9,26 @@ export default () => {
       description={
         <div>
           <p>
-            The quick filter is the bar underneath the Column Header. If its set
-            to visible in the underlying grid (for ag-Grid:
-            gridOptions.floatingfilter) it will work in AdapTable.
+            The Quick Filter Bar lies beneath the Column Header. If its set to
+            visible in the underlying grid (e.g. in ag-Grid it is
+            'floatingFilter: true' in GridOptions) then it will work in
+            AdapTable.
           </p>
           <p>
-            The quick filter allows you quick access to Column Filters so you
-            can type in 15 in the quick filter and that will be come a column
-            filter of range x=15.
+            It essentially provides a shortcut to creating Column Filters (which
+            you do in the filter dropdown), e.g. typing 's' in the Quick Filter
+            Bar will create a Column Filter of [Column] contains 's'.
           </p>
           <p>
-            The same wildcards (and more) that are available in Quick Search can
-            be used here (e.g > 15, 's*', '1:10' [between 1 and 10]){' '}
+            There are a number of wildcards that you can use to speed up your
+            search as follows: (e.g > 15, 's*', '1:10' [between 1 and 10]){' '}
           </p>
+          <ul>
+            <li>
+              <b>Numeric Columns</b>
+            </li>
+            <li>blah</li>
+          </ul>
         </div>
       }
       helpResources={
