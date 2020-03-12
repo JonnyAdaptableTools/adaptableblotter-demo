@@ -6,16 +6,14 @@ import demo from './demo';
 
 declare let window: any;
 
-let firebasePrefix = '';
+let firebasePrefix = localStorage.getItem('firebaseprefix') || uuidv4();
 
 const update = (prefix: string) => {
   localStorage.setItem('firebaseprefix', prefix);
   firebasePrefix = prefix;
 };
 
-const defaultValue = localStorage.getItem('firebaseprefix') || uuidv4();
-
-update(defaultValue);
+update(firebasePrefix);
 
 export default (props: { onReady?: (config: any) => void }) => {
   useEffect(() => {
@@ -43,7 +41,7 @@ export default (props: { onReady?: (config: any) => void }) => {
           Firebase prefix:
           <input
             style={{ marginLeft: '1rem', width: '25rem', padding: '0.5rem' }}
-            defaultValue={defaultValue}
+            defaultValue={firebasePrefix}
             onChange={e => {
               firebasePrefix = e.target.value;
             }}
