@@ -62,6 +62,12 @@ export default (columnDefs: any[], rowData: any[]) => {
     userName: 'Demo User',
     adaptableId: 'State Functions Demo',
     stateOptions: {
+      /**
+       * The loadState function is used to load the predefined config
+       * from a remote source - namely firebase in this example
+       *
+       * It returns a promise which is resolved when the predefinedconfig is retrieved from firebase.
+       */
       loadState: () => {
         return firebase
           .database()
@@ -72,6 +78,12 @@ export default (columnDefs: any[], rowData: any[]) => {
             return str ? JSON.parse(str) : {};
           });
       },
+
+      /**
+       * The persistState function is called with the state that needs to be persisted.
+       * By default, state is persisted in localStorage, but this example
+       * illustrates how you can persist it to a remote datastore (Firebase, etc)
+       */
       persistState: (state: Partial<AdaptableState>) => {
         return firebase
           .database()

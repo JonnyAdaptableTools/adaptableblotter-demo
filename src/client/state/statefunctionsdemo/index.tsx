@@ -13,6 +13,10 @@ const update = (prefix: string) => {
   firebasePrefix = prefix;
 };
 
+const defaultValue = localStorage.getItem('firebaseprefix') || uuidv4();
+
+update(defaultValue);
+
 export default (props: { onReady?: (config: any) => void }) => {
   useEffect(() => {
     const result = demo();
@@ -22,10 +26,6 @@ export default (props: { onReady?: (config: any) => void }) => {
     }
 
     const node = document.querySelector('.js-firebasePrefix');
-
-    const defaultValue = localStorage.getItem('firebaseprefix') || uuidv4();
-
-    update(defaultValue);
 
     if (!node) {
       return;
