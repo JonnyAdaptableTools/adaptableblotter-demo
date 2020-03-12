@@ -10,10 +10,10 @@ import DemoBox from '../../src/components/DemoBox';
 export default () => {
   return (
     <MainPage
-      pageTitle={'State demos'}
+      pageTitle={'AdaptableState demos'}
       description={
         <div>
-          <h3>User State Demos</h3>
+          <h3>AdaptableState Demos</h3>
           <p>
             One of the key functionalities offered by AdapTable is{' '}
             <b>User State Management</b>. This takes 2 forms:
@@ -58,10 +58,10 @@ export default () => {
       }
     >
       <GridLayout>
-        <DemoBox href="/userstate/aggridpredefinedconfigdemo">
+        <DemoBox href="/adaptablestate/aggridpredefinedconfigdemo">
           Predefined Config demo
         </DemoBox>
-        <DemoBox href="/userstate/aggridstatefunctionsdemo">
+        <DemoBox href="/adaptablestate/aggridstatefunctionsdemo">
           State Functions demo
         </DemoBox>
       </GridLayout>

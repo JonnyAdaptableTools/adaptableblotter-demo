@@ -33,24 +33,7 @@ export function getDemoPageStructure(): DemoPageStructure {
           },
         ],
       },
-      {
-        CategoryName: 'User State',
-        Link: '/userstate',
-        Pages: [
-          {
-            Name: 'Predefined Config',
-            Link: '/userstate/aggridpredefinedconfigdemo',
-            Description:
-              'An AdapTable instance with lots of different Predefined Config elements supplied.',
-          },
-          {
-            Name: 'State Options',
-            Link: '/userstate/aggridstatefunctionsdemo',
-            Description:
-              'A group of functions which allow developers complete control over how and where User State is stored.',
-          },
-        ],
-      },
+
       {
         CategoryName: 'Searching',
         Link: '/search',
@@ -587,7 +570,24 @@ export function getDemoPageStructure(): DemoPageStructure {
           },
         ],
       },
-
+      {
+        CategoryName: 'AdaptableState',
+        Link: '/adaptablestate',
+        Pages: [
+          {
+            Name: 'Predefined Config',
+            Link: '/adaptablestate/aggridpredefinedconfigdemo',
+            Description:
+              'An AdapTable instance with lots of different Predefined Config elements supplied.',
+          },
+          {
+            Name: 'State Options',
+            Link: '/adaptablestate/aggridstatefunctionsdemo',
+            Description:
+              'A group of functions which allow developers complete control over how and where User State is stored.',
+          },
+        ],
+      },
       {
         CategoryName: 'Adaptable Options',
         Link: '/adaptableoptions',

@@ -66,7 +66,7 @@ export default (columnDefs: any[], rowData: any[]) => {
        * The loadState function is used to load the predefined config
        * from a remote source - namely firebase in this example
        *
-       * It returns a promise which is resolved when the predefinedconfig is retrieved from firebase.
+       * It returns a promise which is resolved when the Predefined Config is retrieved from firebase.
        */
       loadState: () => {
         return firebase
@@ -93,10 +93,8 @@ export default (columnDefs: any[], rowData: any[]) => {
       },
     },
     predefinedConfig: demoConfig,
-
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
   adaptableApi = Adaptable.init(adaptableOptions);
-
   return { adaptableOptions, adaptableApi };
 };
