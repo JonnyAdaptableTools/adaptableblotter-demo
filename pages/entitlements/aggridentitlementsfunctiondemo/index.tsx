@@ -15,6 +15,23 @@ export default () => {
             Function (the <b>EntitlementLookUpFunction</b> property).
           </p>
           <p>
+            Note: you provide the <b>name</b> of function in{' '}
+            <a
+              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_actioncolumnstate_.actioncolumnstate.html"
+              target="_blank"
+            >
+              Entitlements Predefined Config
+            </a>
+            , but provide the <b>actual function implementation</b> in{' '}
+            <a
+              href="https://api.adaptabletools.com/modules/_src_adaptableoptions_userfunctions_.html"
+              target="_blank"
+            >
+              UserFunctions
+            </a>
+            .
+          </p>
+          <p>
             This allows you to use an external permissioning or entitlment
             server or to do external lookups rather than provide a hard-coded
             list.
@@ -59,22 +76,29 @@ export default () => {
             target="_blank"
           >
             Predefined Config
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_entitlementsapi_.entitlementsapi.html"
             target="_blank"
           >
             Adaptable API
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://api.adaptabletools.com/modules/_src_adaptableoptions_userfunctions_.html"
+            target="_blank"
+          >
+            User Functions
+          </a>{' '}
+          |{' '}
           <a
             href="https://adaptabletools.zendesk.com/hc/en-us/articles/360008819312-Configuration-FAQ"
             target="_blank"
           >
             FAQ
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
             href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754857-Permissions"
             target="_blank"

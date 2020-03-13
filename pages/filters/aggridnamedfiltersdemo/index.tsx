@@ -25,15 +25,31 @@ export default () => {
           </p>
           <p>
             Named Filters operate either on a Single Column or all Columns of a
-            DataType (e.g. Date). You provide this (together with the predicate
-            function) in{' '}
+            DataType (e.g. Date) which you define in the{' '}
             <a
               href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_namedfilterstate_.namedfilterstate.html"
               target="_blank"
             >
               Named Filters
             </a>{' '}
-            section of Config.
+            section of Config.{' '}
+          </p>
+          <p>
+            You also provide the <b>name</b> of the Predicate Function in{' '}
+            <a
+              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_namedfilterstate_.namedfilterstate.html"
+              target="_blank"
+            >
+              Predefined Config
+            </a>
+            , but supply the <b>actual function implementation</b> in{' '}
+            <a
+              href="https://api.adaptabletools.com/modules/_src_adaptableoptions_userfunctions_.html"
+              target="_blank"
+            >
+              UserFunctions
+            </a>
+            )
           </p>
           <p>
             In this example we created 4 Named Filters and associated Predicate
@@ -66,29 +82,36 @@ export default () => {
             target="_blank"
           >
             Predefined Config
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_namedfilterapi_.namedfilterapi.html"
             target="_blank"
           >
             Adaptable API
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://api.adaptabletools.com/modules/_src_adaptableoptions_userfunctions_.html"
+            target="_blank"
+          >
+            User Functions
+          </a>{' '}
+          |{' '}
           <a
             href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029896011-Filter-FAQ"
             target="_blank"
           >
             FAQ
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
             href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002179298-Named-Filters-Videos"
             target="_blank"
           >
             Videos
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
             href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755137-Search-Functions"
             target="_blank"

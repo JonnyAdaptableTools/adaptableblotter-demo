@@ -14,7 +14,8 @@ export default () => {
           </p>
           <p>
             AdapTable ships with a number of 'Summary Operations' that you can
-            use (some of which work only on numeric columns).
+            use (some of which work only on numeric columns) and you can provide
+            your bespoke summaries.
           </p>
           <p>
             Try it: highlight a group of cells and see the value change in the
@@ -33,8 +34,22 @@ export default () => {
             (one of the Plugins that AdapTable provides).
           </p>
           <p>
-            You can also create your own Summary Operations by providing a
-            function which will be evaluated each time the summary is run.{' '}
+            To create a Summary Operation: provide the name of the function,
+            which will be evaluated each time the summary is run, in{' '}
+            <a
+              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_cellsummarystate_.cellsummarystate.html"
+              target="_blank"
+            >
+              Cell Summary State
+            </a>{' '}
+            and the actual implementation in{' '}
+            <a
+              href="https://api.adaptabletools.com/modules/_src_adaptableoptions_userfunctions_.html"
+              target="_blank"
+            >
+              UserFunctions
+            </a>
+            .
           </p>
           <p>
             In this example we have provided an 'Oldest' function which runs
@@ -49,15 +64,22 @@ export default () => {
             target="_blank"
           >
             Predefined Config
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_cellsummaryapi_.cellsummaryapi.html"
             target="_blank"
           >
             Adaptable API
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://api.adaptabletools.com/modules/_src_adaptableoptions_userfunctions_.html"
+            target="_blank"
+          >
+            User Functions
+          </a>{' '}
+          |{' '}
           <a
             href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755197-Grid-Functions"
             target="_blank"

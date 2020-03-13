@@ -1,6 +1,6 @@
 {
   "name": "adaptable-demo",
-  "version": "6.0.24",
+  "version": "6.0.25",
   "description": "AdapTable Demo",
   "main": "index.js",
   "dependencies": {

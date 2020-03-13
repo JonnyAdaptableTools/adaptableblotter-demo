@@ -26,42 +26,27 @@ const demoConfig: PredefinedConfig = {
     ColumnMenuItems: [
       {
         Label: 'Mimise Dashboard',
-        UserMenuItemClickedFunction: () => {
-          adaptableApi.dashboardApi.minimise();
-        },
+        UserMenuItemClickedFunction: 'minimizeDashboard',
+        UserMenuItemShowPredicate: 'isColumnSortable',
       },
       {
         Label: 'Set System Status',
         SubMenuItems: [
           {
             Label: 'Set Error',
-            UserMenuItemClickedFunction: () => {
-              adaptableApi.systemStatusApi.setErrorSystemStatus('System Down');
-            },
+            UserMenuItemClickedFunction: 'setError',
           },
           {
             Label: 'Set Warning',
-            UserMenuItemClickedFunction: () => {
-              adaptableApi.systemStatusApi.setWarningSystemStatus(
-                'System Slow'
-              );
-            },
+            UserMenuItemClickedFunction: 'setWarning',
           },
           {
             Label: 'Set Success',
-            UserMenuItemClickedFunction: () => {
-              adaptableApi.systemStatusApi.setSuccessSystemStatus(
-                'System Fine'
-              );
-            },
+            UserMenuItemClickedFunction: 'setSuccess',
           },
           {
             Label: 'Set Info',
-            UserMenuItemClickedFunction: () => {
-              adaptableApi.systemStatusApi.setInfoSystemStatus(
-                'Demos working fine'
-              );
-            },
+            UserMenuItemClickedFunction: 'setInfo',
           },
         ],
       },
@@ -109,6 +94,52 @@ export default (columnDefs: any[], rowData: any[]) => {
         return true;
       },
     },
+    userFunctions: [
+      {
+        type: 'UserMenuItemClickedFunction',
+        name: 'minimizeDashboard',
+        handler() {
+          adaptableApi.dashboardApi.minimise();
+        },
+      },
+      {
+        type: 'UserMenuItemClickedFunction',
+        name: 'setError',
+        handler() {
+          adaptableApi.systemStatusApi.setErrorSystemStatus('System Down');
+        },
+      },
+      {
+        type: 'UserMenuItemClickedFunction',
+        name: 'setWarning',
+        handler() {
+          adaptableApi.systemStatusApi.setWarningSystemStatus('System Slow');
+        },
+      },
+      {
+        type: 'UserMenuItemClickedFunction',
+        name: 'setSuccess',
+        handler() {
+          adaptableApi.systemStatusApi.setSuccessSystemStatus('System Fine');
+        },
+      },
+      {
+        type: 'UserMenuItemClickedFunction',
+        name: 'setInfo',
+        handler() {
+          adaptableApi.systemStatusApi.setInfoSystemStatus(
+            'Demos working fine'
+          );
+        },
+      },
+      {
+        type: 'UserMenuItemShowPredicate',
+        name: 'isColumnSortable',
+        handler(menuInfo) {
+          return menuInfo.Column.Sortable;
+        },
+      },
+    ],
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
     plugins: [charts()],

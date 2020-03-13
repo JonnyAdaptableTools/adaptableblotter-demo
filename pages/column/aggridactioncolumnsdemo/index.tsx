@@ -28,8 +28,22 @@ export default () => {
             functionality that is required.
           </p>
           <p>
-            You can, also, provide 2 optional functions when creating an Action
-            Column:
+            There are 2 optional functions you can provide for an Action Column
+            (both of which you reference in{' '}
+            <a
+              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_entitlementstate_.entitlementstate.html"
+              target="_blank"
+            >
+              Predefined Config
+            </a>{' '}
+            , but provide the actual implementation in{' '}
+            <a
+              href="https://api.adaptabletools.com/modules/_src_adaptableoptions_userfunctions_.html"
+              target="_blank"
+            >
+              UserFunctions
+            </a>
+            ) :
             <ul>
               <li>
                 {' '}
@@ -100,29 +114,36 @@ export default () => {
             target="_blank"
           >
             Predefined Config
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_actioncolumnapi_.actioncolumnapi.html"
             target="_blank"
           >
             Adaptable API
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://api.adaptabletools.com/modules/_src_adaptableoptions_userfunctions_.html"
+            target="_blank"
+          >
+            User Functions
+          </a>{' '}
+          |{' '}
           <a
             href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002209498-Action-Column-FAQ"
             target="_blank"
           >
             FAQ
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
             href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002204277-Action-Column-Videos"
             target="_blank"
           >
             Videos
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
             href="https://adaptabletools.zendesk.com/hc/en-us/articles/360003213038-Special-Column-Functions"
             target="_blank"

@@ -22,43 +22,28 @@ const demoConfig: PredefinedConfig = {
         Scope: {
           ColumnIds: ['OrderId'],
         },
-        FilterPredicate: (_record, _columnId) => {
-          let invoiced: number = _record.data.InvoicedCost;
-          let itemCount: number = _record.data.ItemCount;
-          return invoiced > 1000 && itemCount > 10 ? true : false;
-        },
+        FilterPredicate: 'High',
       },
       {
         Name: 'New Starter',
         Scope: {
           ColumnIds: ['Employee'],
         },
-        FilterPredicate: (_record, _columnId, cellValue) => {
-          return (
-            cellValue == 'Robert King' ||
-            cellValue == 'Laura Callahan' ||
-            cellValue == 'Andrew Fuller'
-          );
-        },
+        FilterPredicate: 'NewStarter',
       },
       {
         Name: 'Post Takeover',
         Scope: {
           DataType: 'Date',
         },
-        FilterPredicate: (_record, _columnId, cellValue) => {
-          let takeOverDate = new Date('2019-09-21');
-          return (cellValue as Date) > takeOverDate;
-        },
+        FilterPredicate: 'PostTakeover',
       },
       {
         Name: 'After Work',
         Scope: {
           ColumnIds: ['LastUpdatedTime'],
         },
-        FilterPredicate: (_record, _columnId, cellValue) => {
-          return (cellValue as Date).getHours() > 17;
-        },
+        FilterPredicate: 'AfterWork',
       },
     ],
   },
@@ -116,6 +101,43 @@ export default (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Named Filters Demo',
+    userFunctions: [
+      {
+        type: 'NamedFilterPredicate',
+        name: 'High',
+        handler(_record, _columnId, cellValue) {
+          let invoiced: number = _record.data.InvoicedCost;
+          let itemCount: number = _record.data.ItemCount;
+          return invoiced > 1000 && itemCount > 10 ? true : false;
+        },
+      },
+      {
+        type: 'NamedFilterPredicate',
+        name: 'NewStarter',
+        handler(_record, _columnId, cellValue) {
+          return (
+            cellValue == 'Robert King' ||
+            cellValue == 'Laura Callahan' ||
+            cellValue == 'Andrew Fuller'
+          );
+        },
+      },
+      {
+        type: 'NamedFilterPredicate',
+        name: 'PostTakeover',
+        handler(_record, _columnId, cellValue) {
+          let takeOverDate = new Date('2019-09-21');
+          return (cellValue as Date) > takeOverDate;
+        },
+      },
+      {
+        type: 'NamedFilterPredicate',
+        name: 'AfterWork',
+        handler(_record, _columnId, cellValue) {
+          return (cellValue as Date).getHours() > 17;
+        },
+      },
+    ],
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

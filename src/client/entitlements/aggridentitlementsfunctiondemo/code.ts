@@ -21,29 +21,7 @@ const demoConfig: PredefinedConfig = {
     VisibleToolbars: ['Export', 'Layout'],
   },
   Entitlements: {
-    EntitlementLookUpFunction: (
-      functionName: AdaptableFunctionName,
-      userName: string,
-      adaptableId: string
-    ) => {
-      switch (functionName) {
-        // We want a readonly grid so lets hide all editing functions
-        case 'BulkUpdate':
-        case 'CellValidation':
-        case 'PlusMinus':
-        case 'SmartEdit':
-        case 'Shortcut':
-          return 'Hidden';
-        case 'AdvancedSearch':
-        case 'Export':
-        case 'Layout':
-          return getMockPermissionServerResult(
-            functionName,
-            userName,
-            adaptableId
-          );
-      }
-    },
+    EntitlementLookUpFunction: 'entitlementServerLookUpFunction',
   },
   Layout: {
     CurrentLayout: 'Orders View',
@@ -138,6 +116,35 @@ export default (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Entitlements Function Demo',
+    userFunctions: [
+      {
+        type: 'EntitlementLookUpFunction',
+        name: 'entitlementServerLookUpFunction',
+        handler(
+          functionName: AdaptableFunctionName,
+          userName: string,
+          adaptableId: string
+        ) {
+          switch (functionName) {
+            // We want a readonly grid so lets hide all editing functions
+            case 'BulkUpdate':
+            case 'CellValidation':
+            case 'PlusMinus':
+            case 'SmartEdit':
+            case 'Shortcut':
+              return 'Hidden';
+            case 'AdvancedSearch':
+            case 'Export':
+            case 'Layout':
+              return getMockPermissionServerResult(
+                functionName,
+                userName,
+                adaptableId
+              );
+          }
+        },
+      },
+    ],
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

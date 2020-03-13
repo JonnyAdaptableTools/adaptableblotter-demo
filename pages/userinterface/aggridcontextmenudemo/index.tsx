@@ -32,6 +32,27 @@ export default () => {
             Status' menu items (with the latter having sub menu items).
           </p>
           <p>
+            When you define a UserMenuItem you can reference 2 functions (for
+            which you provide the implementation for both in{' '}
+            <a
+              href="https://api.adaptabletools.com/modules/_src_adaptableoptions_userfunctions_.html"
+              target="_blank"
+            >
+              UserFunctions
+            </a>{' '}
+            section of AdaptableOptions).
+          </p>
+          <ul>
+            <li>
+              <b>UserMenuItemClickedFunction</b>: the function called when a
+              Menu Item is clicked.
+            </li>
+            <li>
+              <b>UserMenuItemShowPredicate</b>: the predicate function that runs
+              when the menu is opened to return if the menu item should appear.
+            </li>
+          </ul>
+          <p>
             You can also choose which - if any - of the shipped Menu Items are
             available via the <b>showAdaptableContextMenu</b> property of{' '}
             <a
@@ -70,29 +91,36 @@ export default () => {
             target="_blank"
           >
             Predefined Config
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_userinterfaceapi_.userinterfaceapi.html"
             target="_blank"
           >
             Adaptable API
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://api.adaptabletools.com/modules/_src_adaptableoptions_userfunctions_.html"
+            target="_blank"
+          >
+            User Functions
+          </a>{' '}
+          |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_userinterfaceoptions_.userinterfaceoptions.html"
             target="_blank"
           >
             User Interface Options
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
             href="https://adaptabletools.zendesk.com/hc/en-us/articles/360009004751-Look-and-Feel-FAQ"
             target="_blank"
           >
             FAQ
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
             href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754438-UI-Elements"
             target="_blank"

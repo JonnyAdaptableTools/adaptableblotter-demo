@@ -20,10 +20,7 @@ const demoConfig: PredefinedConfig = {
         Scope: {
           ColumnIds: ['dateAppointed'],
         },
-        FilterPredicate: (_record, _columnId, cellValue) => {
-          let reshuffleDate = new Date('2020-02-13');
-          return cellValue === '13 February 2020';
-        },
+        FilterPredicate: 'appointed13Feb2020',
       },
     ],
   },
@@ -106,6 +103,15 @@ export default (rowData: any[]) => {
       autoSizeColumnsInLayout: true,
       autoSizeColumnsInPivotLayout: true,
     },
+    userFunctions: [
+      {
+        type: 'NamedFilterPredicate',
+        name: 'appointed13Feb2020',
+        handler(_record, _columnId, cellValue) {
+          return cellValue === '13 February 2020';
+        },
+      },
+    ],
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

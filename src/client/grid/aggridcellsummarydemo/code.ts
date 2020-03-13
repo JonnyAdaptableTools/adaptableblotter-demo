@@ -24,29 +24,7 @@ const demoConfig: PredefinedConfig = {
     CellSummaryOperationDefinitions: [
       {
         OperationName: 'Oldest',
-        OperationFunction: (operationParam: {
-          selectedCellInfo: SelectedCellInfo;
-          allValues: any[];
-          numericColumns: string[];
-          numericValues: number[];
-          distinctCount: number;
-        }) => {
-          let dateValues: Date[] = [];
-          operationParam.selectedCellInfo.Columns.filter(
-            c => c.DataType === 'Date'
-          ).forEach(dc => {
-            let gridCells = operationParam.selectedCellInfo.GridCells.filter(
-              gc => gc.columnId == dc.ColumnId
-            ).map(gc => gc.rawValue);
-            dateValues.push(...gridCells);
-          });
-          if (dateValues.length > 0) {
-            const sortedDates = dateValues.sort((a, b) => {
-              return new Date(a).getTime() - new Date(b).getTime();
-            });
-            return new Date(sortedDates[0]).toLocaleDateString();
-          }
-        },
+        OperationFunction: 'OldestOperatioFunction',
       },
     ],
 
@@ -76,6 +54,29 @@ export default (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Cell Summary Demo',
+    userFunctions: [
+      {
+        type: 'CellSummaryOperationFunction',
+        name: 'OldestOperatioFunction',
+        handler(operationParam) {
+          let dateValues: Date[] = [];
+          operationParam.selectedCellInfo.Columns.filter(
+            c => c.DataType === 'Date'
+          ).forEach(dc => {
+            let gridCells = operationParam.selectedCellInfo.GridCells.filter(
+              gc => gc.columnId == dc.ColumnId
+            ).map(gc => gc.rawValue);
+            dateValues.push(...gridCells);
+          });
+          if (dateValues.length > 0) {
+            const sortedDates = dateValues.sort((a, b) => {
+              return new Date(a).getTime() - new Date(b).getTime();
+            });
+            return new Date(sortedDates[0]).toLocaleDateString();
+          }
+        },
+      },
+    ],
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
     plugins: [finance()],

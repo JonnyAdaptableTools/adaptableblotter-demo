@@ -24,15 +24,8 @@ const demoConfig: PredefinedConfig = {
       {
         ColumnId: 'Multiply',
         ButtonText: 'Click',
-        ShouldRenderPredicate: params => {
-          return params.rowData.Employee != 'Margaret Peacock';
-        },
-        RenderFunction: params => {
-          return params.rowData.Employee == 'Robert King' ||
-            params.rowData.Employee == 'Janet Leverling'
-            ? '<button style="color:blue; font-weight:bold">Double</button>'
-            : '<button style="color:red; font-weight:bold; font-style:italic">Treble</button>';
-        },
+        ShouldRenderPredicate: 'shouldRenderMultiplyPredicate',
+        RenderFunction: 'renderMultiplyFunction',
       },
       {
         ColumnId: 'Plus',
@@ -92,6 +85,25 @@ export default (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Action Column Demo',
+    userFunctions: [
+      {
+        type: 'ActionColumnRenderFunction',
+        name: 'renderMultiplyFunction',
+        handler(params) {
+          return params.rowData.Employee == 'Robert King' ||
+            params.rowData.Employee == 'Janet Leverling'
+            ? '<button style="color:blue; font-weight:bold">Double</button>'
+            : '<button style="color:red; font-weight:bold; font-style:italic">Treble</button>';
+        },
+      },
+      {
+        type: 'ActionColumnShouldRenderPredicate',
+        name: 'shouldRenderMultiplyPredicate',
+        handler(params) {
+          return params.rowData.Employee != 'Margaret Peacock';
+        },
+      },
+    ],
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

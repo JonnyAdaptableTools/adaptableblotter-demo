@@ -38,22 +38,7 @@ const demoConfig: PredefinedConfig = {
       },
       {
         ColumnId: 'Employee',
-        CustomSortComparerFunction: (
-          valueA: any,
-          valueB: any,
-          nodeA: any,
-          nodeB: any
-        ) => {
-          if (!valueA || !valueB) {
-            return 0;
-          }
-
-          const fullName = valueA.split(' ');
-          const fullNameB = valueB.split(' ');
-          return fullName[fullName.length - 1] > fullNameB[fullNameB.length - 1]
-            ? 1
-            : -1;
-        },
+        CustomSortComparerFunction: 'employee',
       },
     ],
   },
@@ -122,6 +107,23 @@ export default (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Custom Sort Demo',
+    userFunctions: [
+      {
+        name: 'employee',
+        type: 'CustomSortComparerFunction',
+        handler(valueA: any, valueB: any, nodeA?: any, nodeB?: any) {
+          if (!valueA || !valueB) {
+            return 0;
+          }
+
+          const fullName = valueA.split(' ');
+          const fullNameB = valueB.split(' ');
+          return fullName[fullName.length - 1] > fullNameB[fullNameB.length - 1]
+            ? 1
+            : -1;
+        },
+      },
+    ],
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
