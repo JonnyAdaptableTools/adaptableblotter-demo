@@ -27,7 +27,6 @@ export default () => {
             <li>
               <b>Numeric Columns</b>
             </li>
-            <li>blah</li>
           </ul>
         </div>
       }
