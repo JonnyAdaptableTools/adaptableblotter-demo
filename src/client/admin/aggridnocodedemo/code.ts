@@ -16,8 +16,6 @@ import {
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
-//import { IAdaptableNoCodeWizard } from '@adaptabletools/adaptable/src/AdaptableInterfaces/IAdaptableNoCodeWizard';
-// import { IAdaptableBlotterWizard } from '@adaptabletools/adaptable/src/BlotterInterfaces/IAdaptableBlotterWizard';
 import { ColDef } from '@ag-grid-community/all-modules';
 import Adaptable from '@adaptabletools/adaptable/agGrid';
 

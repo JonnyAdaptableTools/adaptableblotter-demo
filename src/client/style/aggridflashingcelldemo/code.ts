@@ -16,7 +16,7 @@ const predefinedConfig = {
   Dashboard: {
     VisibleToolbars: ['AdvancedSearch', 'QuickSearch', 'Theme'],
     VisibleButtons: ['FlashingCells'],
-    DashboardVisibility: 'Minimised',
+    IsFloating: true,
   },
   FlashingCell: {
     FlashingCells: [

@@ -56,8 +56,8 @@ export default () => {
             </li>
           </ul>
           <p>
-            In this example we added 'Minimise Dashboard' and 'Set System
-            Status' menu items (with the latter having sub menu items).
+            In this example we added 'Float Dashboard' and 'Set System Status'
+            menu items (with the latter having sub menu items).
           </p>
           <p>
             You can also choose which - if any - of AdapTable's shipped Column

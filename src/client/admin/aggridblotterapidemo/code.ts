@@ -89,11 +89,11 @@ export default (columnDefs: any[], rowData: any[]) => {
     clearQuickSearchButton.style.marginRight = '50px';
     testDiv.appendChild(clearQuickSearchButton);
 
-    var minimiseDasahboardButton = document.createElement('BUTTON');
-    minimiseDasahboardButton.innerHTML = 'Minimise Dasbhoard';
-    minimiseDasahboardButton.onclick = () => minimiseDashboard();
-    minimiseDasahboardButton.style.marginRight = '10px';
-    testDiv.appendChild(minimiseDasahboardButton);
+    var floatDashboardButton = document.createElement('BUTTON');
+    floatDashboardButton.innerHTML = 'Float Dashboard';
+    floatDashboardButton.onclick = () => floatDashboard();
+    floatDashboardButton.style.marginRight = '10px';
+    testDiv.appendChild(floatDashboardButton);
 
     var deleteFirstRowButton = document.createElement('BUTTON');
     deleteFirstRowButton.innerHTML = 'Delete First Row';
@@ -141,8 +141,8 @@ export default (columnDefs: any[], rowData: any[]) => {
     }
   }
 
-  function minimiseDashboard() {
-    // adaptableApi.dashboardApi.minimise();
+  function floatDashboard() {
+    adaptableApi.dashboardApi.floatDashboard();
   }
 
   function deleteFirstRow() {

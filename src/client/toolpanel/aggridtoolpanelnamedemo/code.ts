@@ -16,7 +16,7 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    DashboardVisibility: 'Hidden',
+    IsFloating: true,
     HomeToolbarTitle: 'TooPanel Name Demo',
   },
 } as PredefinedConfig;

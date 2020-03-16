@@ -25,8 +25,8 @@ const demoConfig: PredefinedConfig = {
   UserInterface: {
     ColumnMenuItems: [
       {
-        Label: 'Mimise Dashboard',
-        UserMenuItemClickedFunction: 'minimizeDashboard',
+        Label: 'Floate Dashboard',
+        UserMenuItemClickedFunction: 'floatDashboard',
         UserMenuItemShowPredicate: 'isColumnSortable',
       },
       {
@@ -97,9 +97,9 @@ export default (columnDefs: any[], rowData: any[]) => {
     userFunctions: [
       {
         type: 'UserMenuItemClickedFunction',
-        name: 'minimizeDashboard',
+        name: 'floatDashboard',
         handler() {
-          //   adaptableApi.dashboardApi.minimise();
+          adaptableApi.dashboardApi.floatDashboard();
         },
       },
       {
