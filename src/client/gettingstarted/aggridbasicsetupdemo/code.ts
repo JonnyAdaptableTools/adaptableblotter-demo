@@ -44,13 +44,31 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import ChartsPlugin from '@adaptabletools/adaptable-plugin-charts';
 
 // Step 1: Create any Predefined Config to ship AdapTable to meet your requirements. In this example we do 3 things:
-// a: Set the Toolbars to be QuickSearch, SystemStatus and Theme
-// b: Set a default System Status message which will display when not overriden by a newer one
-// c: Set the Adaptable theme to be 'Dark'
-// Here we select a couple of Dashboard toolbars and set a System Status message
+// a: Create 3 Tabs -  with 'Grid', 'Edit' and 'Search' related Toolbars respectively
+// b: Set 4 Visible buttons for the Dashboard Header - 'ConditionalStyle', 'CellValidation', 'CalculatedColumn', 'PieChart'
+// c: Set a default System Status message of type 'Success' which will display when not overriden by a newer one
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleToolbars: ['QuickSearch', 'SystemStatus', 'Theme'],
+    Tabs: [
+      {
+        Name: 'Grid',
+        Toolbars: ['Layout', 'Export', 'CellSummary', 'Alert', 'Chart'],
+      },
+      {
+        Name: 'Edit',
+        Toolbars: ['SmartEdit', 'BulkUpdate'],
+      },
+      {
+        Name: 'Search',
+        Toolbars: ['AdvancedSearch', 'ColumnFilter', 'QuickSearch'],
+      },
+    ],
+    VisibleButtons: [
+      'ConditionalStyle',
+      'CellValidation',
+      'CalculatedColumn',
+      'PieChart',
+    ],
   },
   SystemStatus: {
     DefaultStatusMessage: 'All working fine',
@@ -130,7 +148,7 @@ export default () => {
   // Another important property is predefinedConfig where we attach the 'demoConfig' we created above
   // Finally add any plugins required by adding them to the 'plugins' property - in this example the 'ChartsPlugin'
   const adaptableOptions: AdaptableOptions = {
-    primaryKey: 'OrderId',
+    primaryKey: 'model',
     userName: 'Demo User',
     adaptableId: 'Basic Setup Demo',
     userInterfaceOptions: {

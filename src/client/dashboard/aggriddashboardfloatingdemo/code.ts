@@ -11,20 +11,13 @@ import {
   AdaptableApi,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
+import charts from '@adaptabletools/adaptable-plugin-charts';
 
 var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    Tabs: [],
-  },
-  QuickSearch: {
-    QuickSearchText: 'g*',
-    DisplayAction: 'ShowRowAndHighlightCell',
-    Style: {
-      BackColor: '#ffff00',
-      ForeColor: '#8b0000',
-    },
+    IsFloating: true,
   },
 } as PredefinedConfig;
 
@@ -36,12 +29,6 @@ export default (columnDefs: any[], rowData: any[]) => {
     sideBar: true,
     suppressMenuHide: true,
     floatingFilter: true,
-    statusBar: {
-      statusPanels: [
-        { statusPanel: 'agTotalRowCountComponent', align: 'left' },
-        { statusPanel: 'agFilteredRowCountComponent' },
-      ],
-    },
     columnTypes: {
       abColDefNumber: {},
       abColDefString: {},
@@ -55,9 +42,10 @@ export default (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Quick Search Demo',
+    adaptableId: 'Dashboard Floating Demo',
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
+    plugins: [charts()],
   };
   adaptableApi = Adaptable.init(adaptableOptions);
 

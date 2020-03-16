@@ -17,7 +17,20 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleToolbars: ['SmartEdit', 'Alert', 'BulkUpdate', 'Chart'],
+    Tabs: [
+      {
+        Name: 'Grid',
+        Toolbars: ['Layout', 'Export', 'CellSummary', 'SystemStatus', 'Chart'],
+      },
+      {
+        Name: 'Edit',
+        Toolbars: ['SmartEdit', 'BulkUpdate'],
+      },
+      {
+        Name: 'Search',
+        Toolbars: ['AdvancedSearch', 'ColumnFilter', 'QuickSearch'],
+      },
+    ],
   },
 } as PredefinedConfig;
 
@@ -42,7 +55,7 @@ export default (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Dashboard Toolbars Demo',
+    adaptableId: 'Dashboard Tabs Demo',
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
     plugins: [charts()],

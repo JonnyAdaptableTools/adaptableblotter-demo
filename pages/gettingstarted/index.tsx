@@ -36,7 +36,7 @@ export default () => {
             are allowed to access.
           </p>
           <p>
-            However we have added a <b>No Config Demo</b> with NO Predfined
+            However we have added a <b>No Config Demo</b> with NO Predefined
             Configuration to show how AdapTable looks straight out of the box
             with all the defaults chosen.
           </p>

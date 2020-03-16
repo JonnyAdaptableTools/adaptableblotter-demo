@@ -38,8 +38,8 @@ export default () => {
       adaptableOptions.vendorGrid,
       adaptableApi,
       200,
-      11084,
-      11142
+      10248,
+      10284
     );
   });
 

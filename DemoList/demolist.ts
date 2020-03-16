@@ -383,10 +383,16 @@ export function getDemoPageStructure(): DemoPageStructure {
         Link: '/dashboard',
         Pages: [
           {
-            Name: 'Dashboard Toolbars',
-            Link: '/dashboard/aggriddashboardtoolbarsdemo',
+            Name: 'Dashboard Tabs',
+            Link: '/dashboard/aggriddashboardtabsdemo',
             Description:
-              'AdapTable provides a number of Toolbars to provide easy access to functions. You can choose which ones you want in the Dashbboard',
+              'AdapTable provides a number of Toolbars to provide easy access to functions. You can put these into Tabs that you create.',
+          },
+          {
+            Name: 'Floating Dashboard',
+            Link: '/dashboard/aggriddashboardfloatingdemo',
+            Description:
+              'Save screen estate by making the Dashboard "float" when not in use',
           },
           {
             Name: 'Dashboard Buttons',

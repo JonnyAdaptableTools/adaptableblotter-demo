@@ -50,7 +50,12 @@ const demoConfig: PredefinedConfig = {
     CurrentAdvancedSearch: 'Team Best Orders',
   },
   Dashboard: {
-    VisibleToolbars: ['AdvancedSearch'],
+    Tabs: [
+      {
+        Name: 'Search',
+        Toolbars: ['AdvancedSearch'],
+      },
+    ],
   },
 } as PredefinedConfig;
 

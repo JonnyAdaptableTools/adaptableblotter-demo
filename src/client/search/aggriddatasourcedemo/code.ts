@@ -40,7 +40,12 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   Dashboard: {
-    VisibleToolbars: ['DataSource'],
+    Tabs: [
+      {
+        Name: 'Search',
+        Toolbars: ['DataSource'],
+      },
+    ],
   },
 } as PredefinedConfig;
 

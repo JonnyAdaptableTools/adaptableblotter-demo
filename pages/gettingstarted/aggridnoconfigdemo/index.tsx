@@ -20,7 +20,7 @@ export default () => {
             to configure your grid to precise requirements.
           </p>
           <p>
-            You will also likely include Entitlements as part of Predfined
+            You will also likely include Entitlements as part of Predefined
             Config so that users only have access to the functions and the
             functionality that they require.
           </p>
@@ -32,6 +32,10 @@ export default () => {
             So all the functionality (e.g. the 40+ AdapTable functions, the
             Column Header and Context Menus, the Dashbaord, the Quick Filter bar
             etc.) is available in a default way.
+          </p>
+          <p>
+            Note: because we have not provided any Dashboard Config with any
+            Tabs, AdapTable has provided the default Tab for us.
           </p>
         </div>
       }

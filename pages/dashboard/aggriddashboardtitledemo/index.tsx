@@ -17,9 +17,9 @@ export default () => {
             in Dashboard Predefined Config
           </p>
           <p>
-            In this example we have set the name of the Toolbar to 'New
-            Dashboard Header Name' (though we have <b>not</b> changed the
-            adaptableId property itself).
+            In this example we set the name of the Toolbar to 'New Dashboard
+            Header Name' (though we have <b>not</b> changed the adaptableId
+            property itself) and made the Dashboard 'floating'.
           </p>
         </div>
       }
