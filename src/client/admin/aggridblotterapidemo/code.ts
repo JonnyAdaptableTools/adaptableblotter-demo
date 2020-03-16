@@ -142,6 +142,7 @@ export default (columnDefs: any[], rowData: any[]) => {
   }
 
   function floatDashboard() {
+    // use api method
     adaptableApi.dashboardApi.floatDashboard();
   }
 
