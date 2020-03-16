@@ -20,45 +20,46 @@ export default () => {
             In this example we have set the 'CellValidation', 'BulkUpdate',
             'SmartEdit', 'Alert' and 'Reminder' buttons to be visible.
           </p>
+          <p>
+            The Quick Search texbox enables you to quickly search grid; set
+            <i>ShowQuickSearchInHeader</i> to false in{' '}
+            <a
+              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_dashboardstate_.dashboardstate.html#showquicksearchinheader"
+              target="_blank"
+            >
+              Dashboard Predefined Config
+            </a>{' '}
+            if you don't want this to be visible.
+          </p>{' '}
+          <p>
+            The 'Settings' button to the right of the Quick Search box allows
+            you configure the Dashboard and create / edit{' '}
+            <a href="./aggriddashboardtabsdemo">Tabs</a>.
+          </p>
         </div>
       }
       helpResources={
         <div>
           <a
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/Functions/dashboard_function.md"
+            target="_blank"
+          >
+            Read Me
+          </a>{' '}
+          |{' '}
+          <a
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_dashboardstate_.dashboardstate.html"
             target="_blank"
           >
             Predefined Config
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_dashboardapi_.dashboardapi.html"
             target="_blank"
           >
             Adaptable API
           </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029743092-Dashboard-FAQ"
-            target="_blank"
-          >
-            FAQ
-          </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360030944511-Dashboard-Videos"
-            target="_blank"
-          >
-            Videos
-          </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755177-Styling-Functions"
-            target="_blank"
-          >
-            User Guide
-          </a>
-          .
         </div>
       }
     />

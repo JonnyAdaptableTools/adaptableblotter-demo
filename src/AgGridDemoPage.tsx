@@ -145,47 +145,44 @@ AgGridDemoPageProps) => {
 
   return (
     <MainPage className={className} pageTitle={pageTitle}>
-      <Snippet
-        title={<b>{pageTitle}</b>}
-        shouldCopy={false}
-        className={'description'}
-      >
-        {description}
-      </Snippet>
-      <HelpResources>{helpResources}</HelpResources>
-      <div id="adaptable" />
-      <p />
-      <div
-        id="grid"
-        className="ag-theme-balham"
-        style={{ height: 700, width: '95%' }}
-      />
-
-      {children}
-
-      {exampleCode ? (
-        <Snippet title={<b>Code</b>} shouldCopy={true} className={'config'}>
-          {exampleCode}
+      <div style={{ width: '97%' }}>
+        {' '}
+        <Snippet
+          title={<b>{pageTitle}</b>}
+          shouldCopy={false}
+          className={'description'}
+        >
+          {description}
         </Snippet>
-      ) : (
-        <>
-          <Snippet
-            title={<b>Predefined Config</b>}
-            shouldCopy={true}
-            className={'config'}
-          >
-            {config}
+        <HelpResources>{helpResources}</HelpResources>
+        <div id="adaptable" />
+        <p />
+        <div id="grid" className="ag-theme-balham" style={{ height: 700 }} />
+        {children}
+        {exampleCode ? (
+          <Snippet title={<b>Code</b>} shouldCopy={true} className={'config'}>
+            {exampleCode}
           </Snippet>
+        ) : (
+          <>
+            <Snippet
+              title={<b>Predefined Config</b>}
+              shouldCopy={true}
+              className={'config'}
+            >
+              {config}
+            </Snippet>
 
-          <Snippet
-            title={<b>Adaptable Options</b>}
-            shouldCopy={true}
-            className={'config'}
-          >
-            {adaptableOptions}
-          </Snippet>
-        </>
-      )}
+            <Snippet
+              title={<b>Adaptable Options</b>}
+              shouldCopy={true}
+              className={'config'}
+            >
+              {adaptableOptions}
+            </Snippet>
+          </>
+        )}
+      </div>
     </MainPage>
   );
 };

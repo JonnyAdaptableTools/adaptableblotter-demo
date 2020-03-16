@@ -23,6 +23,30 @@ export default () => {
           </p>
         </div>
       }
+      helpResources={
+        <div>
+          <a
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/Functions/dashboard_function.md"
+            target="_blank"
+          >
+            Read Me
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_dashboardstate_.dashboardstate.html"
+            target="_blank"
+          >
+            Predefined Config
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://api.adaptabletools.com/interfaces/_src_api_dashboardapi_.dashboardapi.html"
+            target="_blank"
+          >
+            Adaptable API
+          </a>
+        </div>
+      }
     />
   );
 };
