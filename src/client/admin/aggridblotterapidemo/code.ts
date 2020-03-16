@@ -142,7 +142,7 @@ export default (columnDefs: any[], rowData: any[]) => {
   }
 
   function minimiseDashboard() {
-    adaptableApi.dashboardApi.minimise();
+    // adaptableApi.dashboardApi.minimise();
   }
 
   function deleteFirstRow() {

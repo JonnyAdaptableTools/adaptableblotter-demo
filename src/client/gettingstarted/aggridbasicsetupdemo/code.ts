@@ -50,7 +50,7 @@ import ChartsPlugin from '@adaptabletools/adaptable-plugin-charts';
 // Here we select a couple of Dashboard toolbars and set a System Status message
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleToolbars: ['QuickSearch', 'SystemStatus', 'Theme'],
+    // VisibleToolbars: ['QuickSearch', 'SystemStatus', 'Theme'],
   },
   SystemStatus: {
     DefaultStatusMessage: 'All working fine',

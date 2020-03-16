@@ -99,7 +99,7 @@ export default (columnDefs: any[], rowData: any[]) => {
         type: 'UserMenuItemClickedFunction',
         name: 'minimizeDashboard',
         handler() {
-          adaptableApi.dashboardApi.minimise();
+          //   adaptableApi.dashboardApi.minimise();
         },
       },
       {
