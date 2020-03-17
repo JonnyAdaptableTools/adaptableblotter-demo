@@ -324,7 +324,7 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Grid Info',
             Link: '/gridmanagement/aggridgridinfodemo',
             Description:
-              'Click the "info" button in the Home Toolbar to see summary information about the grid, your licence and the Options you have set.',
+              'Click the "info" button in the Dashboard Header to see summary information about the grid and the Adaptable Options you have set.',
           },
           {
             Name: 'Column Chooser',
@@ -395,10 +395,10 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Save screen estate by making the Dashboard "float" when not in use',
           },
           {
-            Name: 'Dashboard Buttons',
+            Name: 'Function Buttons',
             Link: '/dashboard/aggriddashboardbuttonsdemo',
             Description:
-              'You can select which buttons - and dropdowns -you wish to see in the Home Toolbar',
+              'You can select which Function Buttons you wish to see in the Dashboard Header',
           },
           {
             Name: 'Dashboard Visbility',

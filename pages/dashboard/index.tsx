@@ -36,22 +36,29 @@ export default () => {
         <div>
           <h4>Dashboard</h4>
           <p>
-            You are able to set up the Dashboard (the area above the actual
-            grid) so that it has exactly the look and feel that best matches
-            your requirements.
+            The Dashboard is the area above the grid which contains Tabs (with
+            Toolbars), Function Buttons and the Quick Search textbox.
           </p>
           <p>
-            You are able to specify which buttons are toolbars are visible, how
-            the dashboard displays, what colours are shown and much more.
+            It has 3 visibility modes - 'Full', 'Collapsed' and 'Floating' to
+            suit different screen estate requirements.
+          </p>
+          <p>
+            You are able to use{' '}
+            <a
+              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_dashboardstate_.dashboardstate.html"
+              target="_blank"
+            >
+              Dashboard Predefined Config
+            </a>{' '}
+            to customise the Dashboard to fit your requirements, ie. create your
+            own toolbars, select the buttons to show etc.
           </p>
           <p>
             You can also create Custom Toolbars for you to render with your own
-            content.
+            content and to put them in any Tabs that you want.
           </p>
-          <p>
-            This is all done through Dashboard Predefined Config. See the
-            examples in this section to find out more.
-          </p>
+          <p>See the examples below to find out more about the Dashboard:</p>
           <ul>{demoLinks}</ul>
         </div>
       }

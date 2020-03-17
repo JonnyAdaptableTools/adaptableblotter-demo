@@ -32,7 +32,8 @@ export default () => {
               Dashboard State
             </a>{' '}
             and see the System Status in 3 ways: via the System Status button in
-            the Home Toolbar or via the System Status toolbar and tool panel.
+            the Dashboard Header or via the System Status toolbar and tool
+            panel.
           </p>
           <p>
             You set System Status messages through code using the{' '}
