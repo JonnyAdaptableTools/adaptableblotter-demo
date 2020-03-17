@@ -30,7 +30,7 @@ export default (props: { demo: any } & AgGridDemoPageProps) => {
   const DynamicComponent = useMemo(
     () =>
       dynamic<DynamicComponentType>(() => props.demo, {
-        loading: () => <div>Loading, please wait ...</div>,
+        loading: () => <div>Generating dummy data, please wait ...</div>,
         ssr: false,
       }),
     []
