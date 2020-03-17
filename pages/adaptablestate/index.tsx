@@ -53,7 +53,7 @@ export default () => {
             However we provide <b>State Options Functions</b> which allow
             developers to store User State in any location of their choosing.
           </p>
-          <p>See the demo below</p>
+          <p>See the demos below for more information</p>
         </div>
       }
     >

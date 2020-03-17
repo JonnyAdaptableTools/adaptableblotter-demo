@@ -31,6 +31,22 @@ const demoConfig: PredefinedConfig = {
         Toolbars: ['AdvancedSearch', 'ColumnFilter', 'QuickSearch'],
       },
     ],
+    CustomToolbars: [
+      {
+        Name: 'customToolbar',
+        Title: 'Custom Toolbar',
+        ToolbarButtons: [
+          {
+            Name: 'buttonOne',
+            Caption: 'Demo Button',
+            ButtonStyle: {
+              Variant: 'text',
+              Tone: 'success',
+            },
+          },
+        ],
+      },
+    ],
   },
 } as PredefinedConfig;
 
@@ -56,6 +72,9 @@ export default (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Dashboard Tabs Demo',
+    userInterfaceOptions: {
+      showAdaptableToolPanel: true,
+    },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
     plugins: [charts()],

@@ -55,7 +55,7 @@ export default () => {
             </li>
             <li>
               <b>Boolean Columns</b>: 1, 'y', 't' all equal to <b>True</b>, 0,
-              'f', 'n' all equal to <b>False</b> - test it in the{' '}
+              'f', 'n' all equal to <b>False</b> - test it below in the{' '}
               <i>Is Valid</i> Column
             </li>
           </ul>
