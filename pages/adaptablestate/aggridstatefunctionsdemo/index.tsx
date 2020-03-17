@@ -81,6 +81,27 @@ export default () => {
           <div className="js-firebasePrefix"></div>
         </div>
       }
+      helpResources={
+        <div>
+          <a
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/adaptable-state-guide.md"
+            target="_blank"
+          >
+            Adaptable State Read Me
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_predefinedconfig_.predefinedconfig.html"
+            target="_blank"
+          >
+            Predefined Config
+          </a>{' '}
+          |{' '}
+          <a href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_stateoptions_.stateoptions.html">
+            State Options
+          </a>{' '}
+        </div>
+      }
     />
   );
 };
