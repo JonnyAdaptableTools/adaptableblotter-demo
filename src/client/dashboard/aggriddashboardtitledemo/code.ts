@@ -17,16 +17,8 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    DashboardVisibility: 'Minimised',
-    HomeToolbarTitle: 'AdapTable Toolbar',
-  },
-  Entitlements: {
-    FunctionEntitlements: [
-      {
-        FunctionName: 'Dashboard',
-        AccessLevel: 'Hidden',
-      },
-    ],
+    IsFloating: true,
+    HomeToolbarTitle: 'New Dashboard Header Name',
   },
 } as PredefinedConfig;
 
@@ -51,11 +43,8 @@ export default (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Dashboard Visibility Demo',
+    adaptableId: 'Dashboard Title Demo',
     predefinedConfig: demoConfig,
-    userInterfaceOptions: {
-      showAdaptableToolPanel: true,
-    },
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
     plugins: [charts()],
   };

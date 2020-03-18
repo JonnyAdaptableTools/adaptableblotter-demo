@@ -20,7 +20,7 @@ export default () => {
             >
               ag-Grid Custom Tool Panel Component
             </a>{' '}
-            with one control to map each Dashboard Toolbar.
+            with one control to map to each Dashboard Toolbar.
           </p>{' '}
           <p>
             You can set with Tool Panel elememt are availalbe and which are
@@ -28,9 +28,10 @@ export default () => {
             works).
           </p>
           <p>
-            In this example we have set the Dashboard to hidden and set the
-            Toolpanel to show on open. You can 'restore' the Dashboard via the
-            dropdown in the 'Dashboard' Toolbar control.
+            In this example we have set the Dashboard to floating and set the
+            Toolpanel to show on open. You can 'restore' the Dashboard by
+            double-clicking the Name or by unchecking the 'Floating' option in
+            the 'Dashboard' Toolbar control.
           </p>
         </div>
       }

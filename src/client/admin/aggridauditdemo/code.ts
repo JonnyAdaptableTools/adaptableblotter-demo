@@ -8,12 +8,10 @@ import { GridOptions } from '@ag-grid-community/all-modules';
 import {
   AdaptableOptions,
   AdaptableApi,
-} from '@adaptabletools/adaptable/types';
-import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
-import {
   AuditLogEventArgs,
   DataChangedDetails,
-} from '@adaptabletools/adaptable/src/Api/Events/AuditEvents';
+} from '@adaptabletools/adaptable/types';
+import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
 var adaptableApi: AdaptableApi;
 

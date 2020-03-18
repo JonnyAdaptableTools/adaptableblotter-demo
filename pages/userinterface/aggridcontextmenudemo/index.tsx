@@ -28,8 +28,8 @@ export default () => {
             >
               User Interface State
             </a>
-            ; in this example we added 'Minimise Dashboard' and 'Set System
-            Status' menu items (with the latter having sub menu items).
+            ; in this example we added 'Float Dashboard' and 'Set System Status'
+            menu items (with the latter having sub menu items).
           </p>
           <p>
             When you define a UserMenuItem you can reference 2 functions (for

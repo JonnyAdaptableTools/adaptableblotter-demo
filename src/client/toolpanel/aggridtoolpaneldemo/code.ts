@@ -19,7 +19,7 @@ const demoConfig: PredefinedConfig = {
     CurrentTheme: 'dark',
   },
   Dashboard: {
-    DashboardVisibility: 'Hidden',
+    IsFloating: true,
     HomeToolbarTitle: 'ToolPanel Demo',
   },
 } as PredefinedConfig;

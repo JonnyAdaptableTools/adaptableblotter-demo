@@ -406,6 +406,11 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'Use Custom Toolbars to render your own content in the Dashboard or to provide buttons (which when clicked trigger an Event that you can listen to).',
           },
+          {
+            Name: 'Dashboard Title',
+            Link: '/dashboard/aggriddashboardtitledemo',
+            Description: 'Set the title of the Dashboard header.',
+          },
         ],
       },
       {

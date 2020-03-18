@@ -9,18 +9,16 @@ export default () => {
       description={
         <div>
           <p>
-            As part of Dashboard Predefined Config you can specify which buttons
-            and dropdowns are visible in the 'Home' toolbar (the one on the
-            extreme left).
+            The 'VisibleButtons' property of Dashboard Predefined Config allows
+            you to specify which buttons are visible in the Dashboard Header.
           </p>
           <p>
-            In this example we have set the 'Dashboard', 'ColumnChooser',
-            'Chart', 'SmartEdit', 'Alert' and 'Reminder' buttons to be visible.
+            By default, AdapTable will show the 'SystemStatus', 'GridInfo',
+            'ColumnChooser' and 'ConditionalStyle' icons.
           </p>
           <p>
-            We have chosen to hide the <i>About</i> and <i>System Status</i>{' '}
-            buttons, and we have also opted to hide the <i>Columns</i> and{' '}
-            <i>Toolbars</i> dropdowns.
+            In this example we have set the 'CellValidation', 'BulkUpdate',
+            'SmartEdit', 'Alert' and 'Reminder' buttons to be visible.
           </p>
         </div>
       }

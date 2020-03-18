@@ -10,25 +10,27 @@ export default () => {
       pageTitle={'Dashboard Visibility Demo'}
       description={
         <div>
+          <p>The Dashboard allows you to cycle between 3 states:</p>
+          <ul>
+            <li>
+              {' '}
+              <b>Full</b>: the Dashboard Header is above the grid and one of the
+              tabs is open
+            </li>
+            <li>
+              <b>Collapsed</b>: the Dashboard Header is above the grid but none
+              of the tabs are open{' '}
+            </li>
+            <li>
+              {' '}
+              <b>Floating</b>: the Dashboard appears as a small control which
+              you can drag where you want.{' '}
+            </li>
+          </ul>
           <p>
-            You can specify - through Predefined Config - the visibility and of
-            the Dashboard; options are: Visible (default), Minimised (just the
-            instance name is shown) and Hidden.
-          </p>
-          <p>
-            Minimise / maximise the Dashboard by clicking the cheveron in the
-            Home Toolbar. Or you can show / hide the Dashboard through the
-            Column Menu.
-          </p>
-          <p>
-            In this example we have set the Dashboard to be Minimised at
-            startup.{' '}
-          </p>
-          <p>
-            Note: we have also set the name of the Toolbar to 'AdapTable
-            Toolbar' (via the <i>HomeToolbarTitle</i> property in Dashboard
-            Config. (If not set, it defaults to the 'adptableId' property in{' '}
-            <i>Adaptable Options</i>).
+            But you can, additionally, hide the Dashboard altogether by setting
+            the 'Dashboard' to be 'Hidden'in Entitlements; this is what we have
+            done in this example
           </p>
         </div>
       }
