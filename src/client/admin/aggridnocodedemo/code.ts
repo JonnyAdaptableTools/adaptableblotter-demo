@@ -1,7 +1,9 @@
 import '@adaptabletools/adaptable/index.css';
+import '@adaptabletools/adaptable/themes/dark.css';
 
 import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham-dark.css';
 
 import '../../../../DemoPage/aggriddemo.css';
 
@@ -20,17 +22,11 @@ export default () => {
     userName: 'Demo User',
     adaptableId: 'Nocode Plugin Basic Demo',
 
-    predefinedConfig: demoConfig,
+    predefinedConfig: {} as PredefinedConfig,
 
     plugins: [
       nocode({
-        // headerMessage: 'Welcome to Adaptable!',
-        // // actionMessage: 'D&D an excel or json file',
-        // dropActionMessage: 'Drop it while its hot!',
-        // theme: 'light',
-        // loadingMessage: 'Please wait ...',
         onInit: adaptableOptions => {
-          console.log(adaptableOptions);
           adaptableOptions.vendorGrid.suppressFieldDotNotation = true;
           adaptableOptions.vendorGrid.modules = AllEnterpriseModules;
         },
@@ -43,10 +39,4 @@ export default () => {
   });
 
   return { adaptableOptions };
-};
-
-const demoConfig: PredefinedConfig = {
-  Theme: {
-    // CurrentTheme: 'dark',
-  },
 };
