@@ -1,24 +1,17 @@
-import AdaptableBlotter, {
-  AdaptableNoCodeWizard,
-} from '@adaptabletools/adaptable/agGrid';
 import '@adaptabletools/adaptable/index.css';
 
 import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
-import { startCase } from 'lodash';
+
 import '../../../../DemoPage/aggriddemo.css';
 
 import nocode from '@adaptabletools/adaptable-plugin-nocode-aggrid';
 import {
   AdaptableOptions,
   PredefinedConfig,
-  AdaptableApi,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
-//import { IAdaptableNoCodeWizard } from '@adaptabletools/adaptable/src/AdaptableInterfaces/IAdaptableNoCodeWizard';
-// import { IAdaptableBlotterWizard } from '@adaptabletools/adaptable/src/BlotterInterfaces/IAdaptableBlotterWizard';
-import { ColDef } from '@ag-grid-community/all-modules';
 import Adaptable from '@adaptabletools/adaptable/agGrid';
 
 export default () => {
@@ -46,7 +39,7 @@ export default () => {
   };
 
   Adaptable.initLazy(adaptableOptions).then(api => {
-    console.log(api, '!!!');
+    console.log(api, '!');
   });
 
   return { adaptableOptions };
