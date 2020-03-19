@@ -39,6 +39,20 @@ export default () => {
           </p>
         </div>
       }
+      helpResources={
+        <div>
+          <a
+            href="https://github.com/AdaptableTools/example-adaptable-nocode-aggrid"
+            target="_blank"
+          >
+            No Code Example Project
+          </a>{' '}
+          |{' '}
+          <a href="https://youtu.be/2vpPKlh898k" target="_blank">
+            Video
+          </a>{' '}
+        </div>
+      }
     />
   );
 };

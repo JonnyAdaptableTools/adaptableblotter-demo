@@ -37,7 +37,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/adaptable-state-guide.md"
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-state-guide.md"
             target="_blank"
           >
             Adaptable State Read Me

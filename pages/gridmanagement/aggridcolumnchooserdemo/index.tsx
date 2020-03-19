@@ -32,7 +32,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/Functions/column_chooser_function.md"
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/column-chooser-function.md"
             target="_blank"
           >
             Read Me

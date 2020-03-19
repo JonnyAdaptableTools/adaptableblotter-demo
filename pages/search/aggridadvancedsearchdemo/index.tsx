@@ -53,7 +53,7 @@ export default () => {
           </a>
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/Functions/adavanced_search_function.md"
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/adavanced-search-function.md"
             target="_blank"
           >
             Read Me

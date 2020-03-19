@@ -31,7 +31,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/Functions/dashboard_function.md"
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/dashboard-function.md"
             target="_blank"
           >
             Read Me
