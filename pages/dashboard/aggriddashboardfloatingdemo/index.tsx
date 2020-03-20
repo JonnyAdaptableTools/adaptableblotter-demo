@@ -13,13 +13,20 @@ export default () => {
             see all the Tabs and Toolbars.
           </p>
           <p>
-            However you can change this via the <i>floating</i> property in
-            Dashboard Predefined Config. This will reduce the Dashboard to a
-            reduced header that you can move where you want.
+            However you can change this via the <i>IsFloating</i> property in{' '}
+            <a
+              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_dashboardstate_.dashboardstate.html#isfloating"
+              target="_blank"
+            >
+              Dashboard Predefined Config
+            </a>{' '}
+            . This will reduce the Dashboard to a reduced header that you can
+            move where you want.
           </p>
           <p>
             You can move in and out of Floating mode by either clicking the Name
-            in the Header or the 'carat' button on the right hand side.
+            in the Header or the 'Dock' / 'Float' menu items in the Home
+            dropdown.
           </p>
           <p>
             In this example we have set the Dashboard to floating; note that if

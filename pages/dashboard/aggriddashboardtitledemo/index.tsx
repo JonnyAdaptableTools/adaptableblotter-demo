@@ -14,7 +14,13 @@ export default () => {
           </p>
           <p>
             However you can change this via the <i>HomeToolbarTitle</i> property
-            in Dashboard Predefined Config
+            in{' '}
+            <a
+              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_dashboardstate_.dashboardstate.html#hometoolbartitle"
+              target="_blank"
+            >
+              Dashboard Predefined Config
+            </a>{' '}
           </p>
           <p>
             In this example we set the name of the Toolbar to 'New Dashboard

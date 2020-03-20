@@ -9,17 +9,22 @@ export default () => {
       description={
         <div>
           <p>
-            By default, AdapTable sets the title in the Dashboard Header to the
-            value of the 'adaptableId' property in <i>Adaptable Options</i>.
+            By default, AdapTable will show the Dashboard Header when the
+            Dasbhoard is expanded.
           </p>
           <p>
-            However you can change this via the <i>HomeToolbarTitle</i> property
-            in Dashboard Predefined Config
+            However you can change this via the <i>IsInline</i> property in{' '}
+            <a
+              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_dashboardstate_.dashboardstate.html#isinline"
+              target="_blank"
+            >
+              Dashboard Predefined Config
+            </a>{' '}
           </p>
           <p>
-            In this example we set the name of the Toolbar to 'New Dashboard
-            Header Name' (though we have <b>not</b> changed the adaptableId
-            property itself) and made the Dashboard 'floating'.
+            This is what we have done in this example and you can now see that
+            the Dashboard shows the Header Information in the first toolbar
+            instead.
           </p>
         </div>
       }

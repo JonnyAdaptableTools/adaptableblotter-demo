@@ -32,8 +32,8 @@ export default () => {
             if you don't want this to be visible.
           </p>{' '}
           <p>
-            The 'Settings' button to the right of the Quick Search box allows
-            you configure the Dashboard and create / edit{' '}
+            The 'Settings' button in the Home dropdown allows you configure the
+            Dashboard and create / edit{' '}
             <a href="./aggriddashboardtabsdemo">Tabs</a>.
           </p>
         </div>
