@@ -18,7 +18,6 @@ var adaptableApi: AdaptableApi;
 const demoConfig: PredefinedConfig = {
   Dashboard: {
     IsInline: true,
-    HomeToolbarTitle: 'New Dashboard Header Name',
   },
 } as PredefinedConfig;
 
