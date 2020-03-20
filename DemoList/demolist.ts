@@ -417,6 +417,11 @@ export function getDemoPageStructure(): DemoPageStructure {
             Link: '/dashboard/aggriddashboardtitledemo',
             Description: 'Set the title of the Dashboard header.',
           },
+          {
+            Name: 'Dashboard Inline',
+            Link: '/dashboard/aggriddashboardinlinedemo',
+            Description: 'Set the Dashboard in "Expanded" view to be inline.',
+          },
         ],
       },
       {
