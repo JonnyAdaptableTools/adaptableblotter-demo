@@ -17,7 +17,9 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    IsFloating: true,
+    // IsFloating: true,
+    IsInline: true,
+    Revision: 15,
     HomeToolbarTitle: 'New Dashboard Header Name',
   },
 } as PredefinedConfig;
