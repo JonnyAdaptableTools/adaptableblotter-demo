@@ -9,7 +9,7 @@ export default () => {
       description={
         <div>
           <p>
-            Plus Minus function allows you to creage 'Nudge Rules' which react
+            Plus Minus function allows you to create 'Nudge Rules' which react
             to the '+' or '-' keys being pressed in numeric cells.
           </p>
           <p>

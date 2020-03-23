@@ -9,7 +9,7 @@ export default () => {
       description={
         <div>
           <p>
-            The Schedule function 'wraps' all the fucnctions that include
+            The Schedule function 'wraps' all the functions that include
             scheduling functionality (i.e. Reminders, Export and ipushpull)
           </p>
           <p>

@@ -33,7 +33,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/modules/_predefinedconfig_columnfilterstate_.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_columnfilterstate_.columnfilterstate.html"
             target="_blank"
           >
             Predefined Config

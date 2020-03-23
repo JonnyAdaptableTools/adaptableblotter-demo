@@ -9,7 +9,7 @@ export default () => {
       description={
         <div>
           <p>
-            Use Shortcuts to avoid fat finger issues and speed data entry for
+            Use Shortcuts to avoid fat finger issues and speed up data entry for
             numeric and date columns.
           </p>
           <p>
