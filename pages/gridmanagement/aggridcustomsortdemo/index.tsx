@@ -51,8 +51,9 @@ export default () => {
             </li>
           </ul>
           <p>
-            Any Custom Sorts that you provide will also be run when the Grid is
-            in pivot mode.
+            Custom Sorts will also run when the Grid is in pivot mode (see Pivot
+            Layout) or if you sort on the column when its grouped (see Group
+            Layout).
           </p>
         </div>
       }

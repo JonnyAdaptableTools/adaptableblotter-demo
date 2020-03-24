@@ -66,7 +66,19 @@ const demoConfig: PredefinedConfig = {
           'CustomerReference',
         ],
       },
-
+      {
+        Columns: [
+          'CustomerReference',
+          'ContactName',
+          'InvoicedCost',
+          'ChangeLastOrder',
+          'OrderCost',
+          'PackageCost',
+          'ShipCountry',
+        ],
+        GroupedColumns: ['Employee'],
+        Name: 'Grouping Layout',
+      },
       {
         Columns: [
           'CustomerReference',
@@ -93,6 +105,9 @@ export default (columnDefs: any[], rowData: any[]) => {
     sideBar: true,
     suppressMenuHide: true,
     floatingFilter: true,
+    autoGroupColumnDef: {
+      sortable: true,
+    },
     columnTypes: {
       abColDefNumber: {},
       abColDefString: {},
