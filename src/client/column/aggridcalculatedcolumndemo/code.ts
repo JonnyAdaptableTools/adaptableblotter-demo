@@ -34,6 +34,11 @@ const demoConfig: PredefinedConfig = {
           'Col("ItemCost") > 100 ? "High" : Col("ItemCost") > 50 ? "Medium": "Low"',
         ColumnId: 'Comment',
       },
+      {
+        ColumnExpression:
+          'max(Col("ItemCost"), Col("OrderCost"), Col("InvoicedCost"), (Col("PackageCost")*10))',
+        ColumnId: 'Highest Cost',
+      },
     ],
   },
   ConditionalStyle: {
@@ -75,20 +80,33 @@ const demoConfig: PredefinedConfig = {
     Layouts: [
       {
         Columns: [
-          'OrderId',
           'Comment',
+          'Avg Item Cost',
           'ItemCost',
           'ItemCount',
+          'Highest Cost',
+          'OrderCost',
+          'PackageCost',
+          'InvoicedCost',
+          'Profit',
+          'OrderDate',
+          'ShipCountry',
+        ],
+        Name: 'with calc cols',
+      },
+      {
+        Columns: [
           'Avg Item Cost',
+          'ItemCost',
+          'ItemCount',
           'OrderCost',
           'PackageCost',
           'Profit',
           'OrderDate',
           'ShipCountry',
         ],
-        ColumnSorts: [],
-        GroupedColumns: ['ShipCountry'],
-        Name: 'with calc cols',
+        GroupedColumns: ['Comment'],
+        Name: 'grouped calc cols',
       },
     ],
   },

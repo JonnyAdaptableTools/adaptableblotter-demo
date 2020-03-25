@@ -14,22 +14,46 @@ export default () => {
             but is <b>dynamically derived</b> from other cells in the row.
           </p>
           <p>
-            Create them with an Expression which can range from straightforward
-            to very complex (we use{' '}
+            You create Calculated Columns via an Expression which can range from
+            straightforward to very complex (we use the{' '}
             <a href="https://mathjs.org/" target="_blank">
               Math.JS
-            </a>
-            ); they become a 'normal' column in your grid and update
-            automatically as other values change.
+            </a>{' '}
+            library)
           </p>
           <p>
-            This example we created 3 Calculated Columns: <i>Avg Item Cost</i>{' '}
-            and <i>Profit</i> (which are numeric) and <i>Comment</i> (a string).
-            Click the 5th button in toolbar to see details of the Expression -
-            or 'Edit Expression' in the Column Header menu. Because they are
-            treated as 'normal' columns we were able to include them in the
-            layout we created (and we grouped on 'Comment') and also to style
-            them (e.g. 'Profit') using Conditional Styles.
+            Once created, a Calculated Column becomes a 'normal' column in your
+            grid and will update automatically as other values change.
+          </p>
+          <p>In this example we have created 4 Calculated Columns: </p>
+          <ul>
+            <li>
+              <b>Avg Item Cost</b> - (numeric) which divides <i>ItemCost</i> by{' '}
+              <i>ItemCount</i>
+            </li>
+            <li>
+              <b>Profit</b> - (numeric) which calculates <i>Invoiced Cost</i>{' '}
+              minus sum of <i>Order Cost</i> and <i>Package Cost</i>
+            </li>
+            <li>
+              <b>Comment</b> - (a string) which returns 'Low' if <i>ItemCost</i>{' '}
+              is less than 50, 'Medium' if greater than 50 and 'High' if greater
+              than 100.
+            </li>
+            <li>
+              <b>Highest Cost</b> - (a number) which returns the largest of{' '}
+              <i>ItemCost</i>, <i>OrderCost</i>, <i>InvoicedCost</i> and{' '}
+              <i>PackageCost</i> (the latter being first multiplied by 10){' '}
+            </li>
+          </ul>{' '}
+          <p>
+            Click the 2nd button in Dasbhoard to see details of the Expression -
+            or 'Edit Expression' in the Column Header menu.{' '}
+          </p>
+          <p>
+            They are treated as 'normal' columns so we included them in the
+            layouts we created (and we grouped on 'Comment') and we also styled
+            them (e.g. 'Profit') using Conditional Styles.{' '}
           </p>
         </div>
       }
