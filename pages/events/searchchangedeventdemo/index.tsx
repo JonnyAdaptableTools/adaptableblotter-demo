@@ -4,7 +4,7 @@ import DynamicDemoPage from '../../../src/Helpers/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/events/aggridsearchchangedeventdemo')}
+      demo={import('../../../src/client/events/searchchangedeventdemo')}
       pageTitle={'Search Changed Demo'}
       description={
         <div>
