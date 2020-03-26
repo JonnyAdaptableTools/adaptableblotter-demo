@@ -19,21 +19,24 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
+    Revision: 15,
     Tabs: [
       {
-        Name: 'Search',
-        Toolbars: [
-          'AdvancedSearch',
-          'ColumnFilter',
-          'QuickSearch',
-          'DataSource',
-        ],
+        Name: 'Grid',
+        Toolbars: ['Layout', 'Export', 'CellSummary', 'SystemStatus', 'Chart'],
       },
       {
-        Name: 'Grid',
-        Toolbars: ['Layout', 'Export', 'CellSummary'],
+        Name: 'Edit',
+        Toolbars: ['SmartEdit', 'BulkUpdate'],
+      },
+      {
+        Name: 'Search',
+        Toolbars: ['AdvancedSearch', 'ColumnFilter', 'QuickSearch'],
       },
     ],
+  },
+  QuickSearch: {
+    QuickSearchText: 'l',
   },
 } as PredefinedConfig;
 
@@ -58,8 +61,8 @@ export default (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Search Changed Demo',
-    // predefinedConfig: demoConfig,
+    adaptableId: 'SearchChangedDemo',
+    predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
   adaptableApi = Adaptable.init(adaptableOptions);
