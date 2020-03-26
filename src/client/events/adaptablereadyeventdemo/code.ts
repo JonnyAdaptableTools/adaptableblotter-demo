@@ -9,7 +9,6 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
-  SearchChangedEventArgs,
   AdaptableReadyInfo,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
@@ -17,76 +16,7 @@ import { ColumnFilter } from '@adaptabletools/adaptable/src/PredefinedConfig/Col
 
 var adaptableApi: AdaptableApi;
 
-const demoConfig: PredefinedConfig = {
-  Dashboard: {
-    Revision: 15,
-    Tabs: [
-      {
-        Name: 'Search',
-        Toolbars: ['AdvancedSearch', 'ColumnFilter', 'QuickSearch'],
-      },
-      {
-        Name: 'Grid',
-        Toolbars: ['Layout', 'Export', 'CellSummary', 'SystemStatus', 'Chart'],
-      },
-    ],
-  },
-  QuickSearch: {
-    QuickSearchText: 'l',
-  },
-  AdvancedSearch: {
-    AdvancedSearches: [
-      {
-        Expression: {
-          RangeExpressions: [
-            {
-              ColumnId: 'InvoicedCost',
-              Ranges: [
-                {
-                  Operand1: '1200',
-                  Operand1Type: 'Value',
-                  Operator: 'GreaterThan',
-                },
-              ],
-            },
-          ],
-        },
-        Name: 'High Invoices',
-      },
-    ],
-    CurrentAdvancedSearch: 'High Invoices',
-  },
-  ColumnFilter: {
-    ColumnFilters: [
-      {
-        Filter: {
-          ColumnValueExpressions: [
-            {
-              ColumnDisplayValues: [
-                'Janet Leverling',
-                'Margaret Peacock',
-                'Nancy Davolio',
-              ],
-              ColumnId: 'Employee',
-            },
-          ],
-        },
-        ColumnId: 'Employee',
-      },
-      {
-        Filter: {
-          FilterExpressions: [
-            {
-              ColumnId: 'ChangeLastOrder',
-              Filters: ['Positive'],
-            },
-          ],
-        },
-        ColumnId: 'ChangeLastOrder',
-      },
-    ],
-  },
-} as PredefinedConfig;
+const demoConfig: PredefinedConfig = {} as PredefinedConfig;
 
 export default (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
