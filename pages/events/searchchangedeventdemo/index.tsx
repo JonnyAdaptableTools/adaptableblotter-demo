@@ -9,7 +9,7 @@ export default () => {
       description={
         <div>
           <p>
-            The Search Changed event is run whenever any of the Search or Sort
+            The Search Changed event is fired whenever any of the Search or Sort
             criteria in AdapTable are updated.
           </p>
           <p>

@@ -663,6 +663,12 @@ export function getDemoPageStructure(): DemoPageStructure {
         Link: '/events',
         Pages: [
           {
+            Name: 'Adaptable Ready',
+            Link: '/events/adaptablereadyeventdemo',
+            Description:
+              'Event that fires as soon as Adaptable has completed its initialisation',
+          },
+          {
             Name: 'Search Changed',
             Link: '/events/searchchangedeventdemo',
             Description:
