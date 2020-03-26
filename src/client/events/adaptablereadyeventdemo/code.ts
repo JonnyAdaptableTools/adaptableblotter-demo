@@ -4,7 +4,10 @@ import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham-dark.css';
 import Adaptable from '@adaptabletools/adaptable/agGrid';
-import { GridOptions } from '@ag-grid-community/all-modules';
+import {
+  GridOptions,
+  SelectionChangedEvent,
+} from '@ag-grid-community/all-modules';
 import {
   AdaptableOptions,
   PredefinedConfig,
@@ -12,7 +15,6 @@ import {
   AdaptableReadyInfo,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
-import { ColumnFilter } from '@adaptabletools/adaptable/src/PredefinedConfig/ColumnFilterState';
 
 var adaptableApi: AdaptableApi;
 
@@ -23,6 +25,7 @@ export default (columnDefs: any[], rowData: any[]) => {
     columnDefs,
     rowData,
     enableRangeSelection: true,
+    rowSelection: 'multiple',
     sideBar: true,
     suppressMenuHide: true,
     floatingFilter: true,
@@ -48,23 +51,12 @@ export default (columnDefs: any[], rowData: any[]) => {
   adaptableApi.eventApi.on(
     'AdaptableReady',
     (adaptableReadyInfo: AdaptableReadyInfo) => {
-      let columnFilter: ColumnFilter = {
-        ColumnId: 'Order Date',
-        Filter: {
-          RangeExpressions: [
-            {
-              ColumnId: 'Order Date',
-              Ranges: [
-                {
-                  Operator: 'LessThan',
-                  Operand1: new Date().toString(),
-                },
-              ],
-            },
-          ],
-        },
+      adaptableApi.quickSearchApi.applyQuickSearch('o*');
+      const gridOptions: GridOptions = adaptableReadyInfo.vendorGrid;
+      gridOptions.onSelectionChanged = (event: SelectionChangedEvent) => {
+        var rowCount = event.api.getSelectedNodes().length;
+        console.log('selection changed, ' + rowCount + ' rows selected');
       };
-      adaptableApi.columnFilterApi.setColumnFilter([columnFilter]);
     }
   );
 

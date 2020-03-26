@@ -29,8 +29,13 @@ export default () => {
             use this object if you want access to the underlying grid.
           </p>
           <p>
-            Note: the React and Angular ag-Grid wrappers explicitly returns
-            'adaptableApi and 'gridOptions' in the event arguments.
+            <b>Note</b>: the React and Angular ag-Grid wrappers explicitly
+            return 'adaptableApi and 'gridOptions' as the event arguments.
+          </p>
+          <p>
+            In this example we have used Adaptable Ready to set the Quick Search
+            (through AdaptableAPI) and also to hook up to the ag-grid Selection
+            Changed event (logging to console).
           </p>
         </div>
       }
