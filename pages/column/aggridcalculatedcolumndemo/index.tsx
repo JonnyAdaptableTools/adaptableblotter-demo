@@ -25,7 +25,7 @@ export default () => {
             Once created, a Calculated Column becomes a 'normal' column in your
             grid and will update automatically as other values change.
           </p>
-          <p>In this example we have created 4 Calculated Columns: </p>
+          <p>In this example we have created 5 Calculated Columns: </p>
           <ul>
             <li>
               <b>Avg Item Cost</b> - (numeric) which divides <i>ItemCost</i> by{' '}
@@ -44,6 +44,11 @@ export default () => {
               <b>Highest Cost</b> - (a number) which returns the largest of{' '}
               <i>ItemCost</i>, <i>OrderCost</i>, <i>InvoicedCost</i> and{' '}
               <i>PackageCost</i> (the latter being first multiplied by 10){' '}
+            </li>
+            <li>
+              <b>Tax</b> - (a string) which returns the VAT (calculated at 20%)
+              on <i>OrderCost</i> and formats it so that it returns 2 decimal
+              places.
             </li>
           </ul>{' '}
           <p>

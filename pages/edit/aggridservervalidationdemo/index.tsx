@@ -37,38 +37,17 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_cellvalidationstate_.cellvalidationstate.htmll"
+            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_editoptions_.editoptions.html"
             target="_blank"
           >
-            Predefined Config
-          </a>
-          ,{' '}
+            Edit Options
+          </a>{' '}
+          |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_cellvalidationapi_.cellvalidationapi.html"
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-server-functionality-guide.md"
             target="_blank"
           >
-            Adaptable API
-          </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360030078191-Cell-Validation-FAQ"
-            target="_blank"
-          >
-            FAQ
-          </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028638052-Cell-Validation-Videos"
-            target="_blank"
-          >
-            Videos
-          </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754698-Edit-Functions"
-            target="_blank"
-          >
-            User Guide
+            Server Functionality Read Me
           </a>
           .
         </div>

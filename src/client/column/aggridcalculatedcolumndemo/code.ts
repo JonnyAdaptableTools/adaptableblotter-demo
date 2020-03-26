@@ -39,6 +39,11 @@ const demoConfig: PredefinedConfig = {
           'max(Col("ItemCost"), Col("OrderCost"), Col("InvoicedCost"), (Col("PackageCost")*10))',
         ColumnId: 'Highest Cost',
       },
+      {
+        ColumnExpression:
+          'print("(20% VAT): $tax", {tax: (Col("OrderCost")*0.2).toFixed(2)} )',
+        ColumnId: 'Tax',
+      },
     ],
   },
   ConditionalStyle: {
@@ -86,6 +91,7 @@ const demoConfig: PredefinedConfig = {
           'ItemCount',
           'Highest Cost',
           'OrderCost',
+          'Tax',
           'PackageCost',
           'InvoicedCost',
           'Profit',
@@ -101,6 +107,7 @@ const demoConfig: PredefinedConfig = {
           'ItemCount',
           'OrderCost',
           'PackageCost',
+          'Tax',
           'Profit',
           'OrderDate',
           'ShipCountry',
