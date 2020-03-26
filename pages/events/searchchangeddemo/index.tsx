@@ -1,46 +1,66 @@
 import React from 'react';
-
-import MainPage from '../../../src/MainPage';
+import DynamicDemoPage from '../../../src/Helpers/DynamicDemoPage';
 
 export default () => {
   return (
-    <MainPage pageTitle="">
-      <p>
-        <h4>Finsemble</h4>
-      </p>
-      <p>
-        AdapTable is designed to run in single or multiple grid mode. Its easy
-        to create many AdapTable instances and have them share data, events and
-        state.
-      </p>
-      <p>
-        However if you want to enjoy cutting-edge multiple grid functionality
-        then we partner with{' '}
-        <a href="https://www.chartiq.com/finsemble/" target="_blank">
-          Finsemble
-        </a>{' '}
-        (by ChartIQ) which offers a fantastic multi-windowed, multi-application
-        experience.
-      </p>
-      <p>
-        We have a demo coming soon but in the meantime here are a couple of
-        videos that show how Finsemble enables multiple AdapTable instances to
-        share state, data and events. .
-      </p>
-      <p>
-        <iframe
-          width="840"
-          height="630"
-          src="https://www.youtube.com/embed/Xz4IUPeYW8c"
-        />
-      </p>
-      <p>
-        <iframe
-          width="840"
-          height="630"
-          src="https://www.youtube.com/embed/amhRqx1FFsc"
-        />
-      </p>
-    </MainPage>
+    <DynamicDemoPage
+      demo={import('../../../src/client/events/aggridsearchangeddemo')}
+      pageTitle={'Search Changed Demo'}
+      description={
+        <div>
+          <p>
+            When setting Entitlemens you can provide a value for the{' '}
+            <b>DefaultAccessLevel</b> property.
+          </p>
+          <p>
+            If not provided this property will default to 'Full' which means
+            that every Function will be available and you need to set those that
+            are not.
+          </p>
+          <p>
+            You can change this default behaviour by, for example, setting the
+            DefaultAccessLevel to 'Hidden', so that only those Functions
+            explicitly entitled will be available.
+          </p>
+          <p>
+            In this example we have set the DefaultAccessLevel to 'Hidden' and
+            then explicity entitled just those Functions we want our users to
+            access.
+          </p>
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_entitlementstate_.entitlementstate.html"
+            target="_blank"
+          >
+            Predefined Config
+          </a>
+          ,{' '}
+          <a
+            href="https://api.adaptabletools.com/interfaces/_src_api_entitlementsapi_.entitlementsapi.html"
+            target="_blank"
+          >
+            Adaptable API
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360008819312-Configuration-FAQ"
+            target="_blank"
+          >
+            FAQ
+          </a>
+          ,{' '}
+          <a
+            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754857-Permissions"
+            target="_blank"
+          >
+            User Guide
+          </a>
+          .
+        </div>
+      }
+    />
   );
 };

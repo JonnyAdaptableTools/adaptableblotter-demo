@@ -10,7 +10,7 @@ import DemoBox from '../../src/components/DemoBox';
 
 export default () => {
   let categoryPages = getDemoPageStructure().Categories.find(
-    c => c.CategoryName == 'Partners'
+    c => c.CategoryName == 'events'
   )!.Pages;
 
   let demoLinks: any = categoryPages.map((page: DemoPage) => {
@@ -32,16 +32,12 @@ export default () => {
 
   return (
     <MainPage
-      pageTitle={'Partners'}
+      pageTitle={'Events'}
       description={
         <div>
-          <h4>Partners</h4>
-          <p>
-            Adaptable partners with many of the other leading FinTechs who are
-            revolutionising the desktop. This section (under development) will
-            show some of the work we do in this regard.{' '}
-          </p>
-          <p>Our partnerships include:</p>
+          <h4>Events</h4>
+          <p>Adaptable has many events. </p>
+          <p>These include:</p>
           <ul>{demoLinks}</ul>
         </div>
       }
