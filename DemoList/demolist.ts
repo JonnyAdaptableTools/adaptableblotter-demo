@@ -659,6 +659,18 @@ export function getDemoPageStructure(): DemoPageStructure {
         ],
       },
       {
+        CategoryName: 'Events',
+        Link: '/events',
+        Pages: [
+          {
+            Name: 'Search Changed',
+            Link: '/events/searchchangedeventdemo',
+            Description:
+              'Event that fires whenever any of state elements in the Search or Filter related functions change',
+          },
+        ],
+      },
+      {
         CategoryName: 'Partners',
         Link: '/partners',
         Pages: [
