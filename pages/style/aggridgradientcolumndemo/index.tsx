@@ -46,13 +46,17 @@ export default () => {
             target="_blank"
           >
             Predefined Config
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_gradientcolumnapi_.gradientcolumnapi.html"
             target="_blank"
           >
             Adaptable API
+          </a>{' '}
+          |{' '}
+          <a href="https://youtu.be/33lID_zBsAw" target="_blank">
+            Gradient Column Video
           </a>
           .
         </div>

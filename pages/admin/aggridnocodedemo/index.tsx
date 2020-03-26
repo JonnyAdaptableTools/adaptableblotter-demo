@@ -49,7 +49,7 @@ export default () => {
           </a>{' '}
           |{' '}
           <a href="https://youtu.be/2vpPKlh898k" target="_blank">
-            Video
+            No Code Video
           </a>{' '}
         </div>
       }

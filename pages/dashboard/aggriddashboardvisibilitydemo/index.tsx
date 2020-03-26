@@ -55,6 +55,10 @@ export default () => {
             target="_blank"
           >
             Adaptable API
+          </a>{' '}
+          |{' '}
+          <a href="https://youtu.be/KrahnLFYHjs" target="_blank">
+            Dashboard Video
           </a>
         </div>
       }
