@@ -10,7 +10,7 @@ import DemoBox from '../../src/components/DemoBox';
 
 export default () => {
   let categoryPages = getDemoPageStructure().Categories.find(
-    c => c.CategoryName == 'events'
+    c => c.CategoryName == 'Events'
   )!.Pages;
 
   let demoLinks: any = categoryPages.map((page: DemoPage) => {
