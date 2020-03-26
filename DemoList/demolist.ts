@@ -664,7 +664,7 @@ export function getDemoPageStructure(): DemoPageStructure {
         Pages: [
           {
             Name: 'Search Changed',
-            Link: '/events/searchchangedeventdemo',
+            Link: '/events/aggridsearchchangedeventdemo',
             Description:
               'Event that fires whenever any of state elements in the Search or Filter related functions change',
           },
