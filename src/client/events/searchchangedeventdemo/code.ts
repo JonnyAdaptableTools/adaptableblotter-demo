@@ -9,8 +9,6 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
-  AdaptableFunctionName,
-  AccessLevel,
   SearchChangedEventArgs,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
@@ -22,21 +20,69 @@ const demoConfig: PredefinedConfig = {
     Revision: 15,
     Tabs: [
       {
-        Name: 'Grid',
-        Toolbars: ['Layout', 'Export', 'CellSummary', 'SystemStatus', 'Chart'],
-      },
-      {
-        Name: 'Edit',
-        Toolbars: ['SmartEdit', 'BulkUpdate'],
-      },
-      {
         Name: 'Search',
         Toolbars: ['AdvancedSearch', 'ColumnFilter', 'QuickSearch'],
+      },
+      {
+        Name: 'Grid',
+        Toolbars: ['Layout', 'Export', 'CellSummary', 'SystemStatus', 'Chart'],
       },
     ],
   },
   QuickSearch: {
     QuickSearchText: 'l',
+  },
+  AdvancedSearch: {
+    AdvancedSearches: [
+      {
+        Expression: {
+          RangeExpressions: [
+            {
+              ColumnId: 'InvoicedCost',
+              Ranges: [
+                {
+                  Operand1: '1200',
+                  Operand1Type: 'Value',
+                  Operator: 'GreaterThan',
+                },
+              ],
+            },
+          ],
+        },
+        Name: 'High Invoices',
+      },
+    ],
+    CurrentAdvancedSearch: 'High Invoices',
+  },
+  ColumnFilter: {
+    ColumnFilters: [
+      {
+        Filter: {
+          ColumnValueExpressions: [
+            {
+              ColumnDisplayValues: [
+                'Janet Leverling',
+                'Margaret Peacock',
+                'Nancy Davolio',
+              ],
+              ColumnId: 'Employee',
+            },
+          ],
+        },
+        ColumnId: 'Employee',
+      },
+      {
+        Filter: {
+          FilterExpressions: [
+            {
+              ColumnId: 'ChangeLastOrder',
+              Filters: ['Positive'],
+            },
+          ],
+        },
+        ColumnId: 'ChangeLastOrder',
+      },
+    ],
   },
 } as PredefinedConfig;
 
@@ -61,7 +107,7 @@ export default (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'SearchChangedDemo',
+    adaptableId: 'Search Changed Demo',
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
@@ -70,7 +116,7 @@ export default (columnDefs: any[], rowData: any[]) => {
   adaptableApi.eventApi.on(
     'SearchChanged',
     (searchChangedArgs: SearchChangedEventArgs) => {
-      console.log('search changed');
+      console.log('search changed event ran');
       console.log(searchChangedArgs.data[0].id);
     }
   );

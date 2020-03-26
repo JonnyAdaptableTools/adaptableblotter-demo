@@ -8,39 +8,38 @@ export default () => {
       pageTitle={'Search Changed Demo'}
       description={
         <div>
-          <p>To Do</p>
+          <p>
+            The Search Changed event is run whenever any of the Search or Sort
+            criteria in AdapTable are updated.
+          </p>
+          <p>
+            Its particularly useful if you want to run searching or filtering on
+            the server.
+          </p>
         </div>
       }
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_entitlementstate_.entitlementstate.html"
+            href="https://api.adaptabletools.com/interfaces/_src_api_eventapi_.eventapi.html"
             target="_blank"
           >
-            Predefined Config
-          </a>
-          ,{' '}
+            Event API
+          </a>{' '}
+          |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_entitlementsapi_.entitlementsapi.html"
+            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_searchoptions_.searchoptions.html#serversearchoption"
             target="_blank"
           >
-            Adaptable API
-          </a>
-          ,{' '}
+            Search Options
+          </a>{' '}
+          |{' '}
           <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360008819312-Configuration-FAQ"
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-server-functionality-guide.md"
             target="_blank"
           >
-            FAQ
+            AdapTable Server Functionality Guide
           </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754857-Permissions"
-            target="_blank"
-          >
-            User Guide
-          </a>
-          .
         </div>
       }
     />
