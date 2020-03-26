@@ -11,6 +11,7 @@ import {
   AdaptableApi,
   AdaptableFunctionName,
   AccessLevel,
+  SearchChangedEventArgs,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -18,34 +19,19 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleToolbars: ['QuickSearch', 'Export', 'Layout'],
-  },
-  Entitlements: {
-    DefaultAccessLevel: 'Hidden',
-    FunctionEntitlements: [
+    Tabs: [
       {
-        FunctionName: 'QuickSearch',
-        AccessLevel: 'Full',
+        Name: 'Search',
+        Toolbars: [
+          'AdvancedSearch',
+          'ColumnFilter',
+          'QuickSearch',
+          'DataSource',
+        ],
       },
       {
-        FunctionName: 'GridInfo',
-        AccessLevel: 'Full',
-      },
-      {
-        FunctionName: 'ColumnChooser',
-        AccessLevel: 'Full',
-      },
-      {
-        FunctionName: 'Dashboard',
-        AccessLevel: 'Hidden',
-      },
-      {
-        FunctionName: 'Export',
-        AccessLevel: 'ReadOnly',
-      },
-      {
-        FunctionName: 'Layout',
-        AccessLevel: 'ReadOnly',
+        Name: 'Grid',
+        Toolbars: ['Layout', 'Export', 'CellSummary'],
       },
     ],
   },
@@ -73,10 +59,18 @@ export default (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Search Changed Demo',
-    predefinedConfig: demoConfig,
+    // predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
   adaptableApi = Adaptable.init(adaptableOptions);
+
+  adaptableApi.eventApi.on(
+    'SearchChanged',
+    (searchChangedArgs: SearchChangedEventArgs) => {
+      console.log('search changed');
+      console.log(searchChangedArgs.data[0].id);
+    }
+  );
 
   return { adaptableOptions, adaptableApi };
 };

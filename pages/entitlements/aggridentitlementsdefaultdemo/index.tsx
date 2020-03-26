@@ -11,7 +11,7 @@ export default () => {
       description={
         <div>
           <p>
-            When setting Entitlemens you can provide a value for the{' '}
+            When setting Entitlements you can provide a value for the{' '}
             <b>DefaultAccessLevel</b> property.
           </p>
           <p>
