@@ -17,7 +17,12 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleToolbars: ['QuickSearch', 'ColumnFilter'],
+    Tabs: [
+      {
+        Name: 'Filter',
+        Toolbars: ['ColumnFilter'],
+      },
+    ],
   },
   QuickSearch: {
     QuickSearchText: 'Mar',
