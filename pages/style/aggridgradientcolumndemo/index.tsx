@@ -55,10 +55,16 @@ export default () => {
             Adaptable API
           </a>{' '}
           |{' '}
+          <a
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/gradient-column-function.md"
+            target="_blank"
+          >
+            Gradient Column Function ReadMe
+          </a>
+          |{' '}
           <a href="https://youtu.be/33lID_zBsAw" target="_blank">
             Gradient Column Video
           </a>
-          .
         </div>
       }
     />

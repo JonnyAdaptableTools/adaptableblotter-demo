@@ -48,6 +48,7 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   Layout: {
+    Revision: 1,
     CurrentLayout: 'Simple Layout',
     Layouts: [
       {
@@ -112,7 +113,8 @@ const demoConfig: PredefinedConfig = {
         GroupedColumns: ['Employee'],
         PivotDetails: {
           PivotColumns: ['ShipVia'],
-          AggregationColumns: ['InvoicedCost', 'ItemCost'],
+          //  AggregationColumns: ['InvoicedCost', 'ItemCost'],
+          AggregationColumns: ['ItemCost'],
         },
         Name: 'Pivot Layout',
       },

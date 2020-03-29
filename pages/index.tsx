@@ -220,17 +220,23 @@ export default () => {
         <p>
           <b>Help</b>
           <br />
-          If you require further information please read our{' '}
+          Learn more about how AdapTable works via our large collection of{' '}
+          <a href="https://adaptabletools.zendesk.com/hc/en-us" target="_blank">
+            Read Me Guides
+          </a>
+          . For more in depth information please visit the{' '}
           <a href="http://api.adaptabletools.com" target="_blank">
-            developer documentation
-          </a>{' '}
-          , visit our{' '}
+            developer documentation site
+          </a>
+          .
+        </p>
+        <p>
+          <b>Adaptable Tools</b>
+          <br />
+          To learn more about Adaptable Tools and the other 'Adaptable' products
+          we aim to bring to the market soon, please visit our{' '}
           <a href="http://adaptabletools.com" target="_blank">
             website
-          </a>{' '}
-          or use the{' '}
-          <a href="https://adaptabletools.zendesk.com/hc/en-us" target="_blank">
-            online help
           </a>
           .
         </p>

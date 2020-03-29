@@ -88,10 +88,10 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755197-Grid-Functions"
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/custom-sort-function.md"
             target="_blank"
           >
-            User Guide
+            Custom Sort Read Me
           </a>
           .
         </div>

@@ -29,10 +29,10 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755157-Column-Management-Functions"
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/column-info_function.md"
             target="_blank"
           >
-            User Guide
+            Column Info Function Read Me
           </a>
           .
         </div>

@@ -36,36 +36,21 @@ export default () => {
             target="_blank"
           >
             Predefined Config
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_userfilterapi_.userfilterapi.html"
             target="_blank"
           >
             Adaptable API
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029896011-Filter-FAQ"
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-filtering-guide.md"
             target="_blank"
           >
-            FAQ
+            Adaptable Filtering Guide
           </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028637912-Filtering-Videos"
-            target="_blank"
-          >
-            Videos
-          </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755137-Search-Functions"
-            target="_blank"
-          >
-            User Guide
-          </a>
-          .
         </div>
       }
     />

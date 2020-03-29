@@ -39,12 +39,11 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_dashboardstate_.dashboardstate.html"
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/grid-info-function.md"
             target="_blank"
           >
-            Predefined Config
+            Grid Info Function Read Me
           </a>
-          .
         </div>
       }
     />

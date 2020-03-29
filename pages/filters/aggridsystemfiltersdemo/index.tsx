@@ -44,29 +44,21 @@ export default () => {
             target="_blank"
           >
             Predefined Config
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_systemfilterapi_.systemfilterapi.html"
             target="_blank"
           >
             Adaptable API
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029896011-Filter-FAQ"
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-filtering-guide.md"
             target="_blank"
           >
-            FAQ
+            Adaptable Filtering Guide
           </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754677-Filters"
-            target="_blank"
-          >
-            User Guide
-          </a>
-          .
         </div>
       }
     />

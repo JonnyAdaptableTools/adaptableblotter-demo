@@ -1,21 +1,6 @@
 import React from 'react';
 import DynamicDemoPage from '../../../src/Helpers/DynamicDemoPage';
-/*}
-export function GetNumberOperatorPairs(): KeyValuePair[] {
 
-
-export function GetStringOperatorPairs(): KeyValuePair[] {
-  return [
-    { Key: '*', Value: LeafExpressionOperator.StartsWith },
-    { Key: '%', Value: LeafExpressionOperator.Contains },
-    { Key: '!', Value: LeafExpressionOperator.NotContains },
-    { Key: '=', Value: LeafExpressionOperator.Equals },
-  ];
-}
-
-
-
-*/
 export default () => {
   return (
     <DynamicDemoPage
@@ -64,26 +49,11 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029896011-Filter-FAQ"
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-filtering-guide.md"
             target="_blank"
           >
-            FAQ
+            Adaptable Filtering Guide
           </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028637912-Filtering-Videos"
-            target="_blank"
-          >
-            Videos
-          </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755137-Search-Functions"
-            target="_blank"
-          >
-            User Guide
-          </a>
-          .
         </div>
       }
     />
