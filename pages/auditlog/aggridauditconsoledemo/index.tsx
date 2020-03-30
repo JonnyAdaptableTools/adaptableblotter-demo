@@ -40,6 +40,13 @@ export default () => {
             target="_blank"
           >
             Audit Options
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-audit-log-guide.md"
+            target="_blank"
+          >
+            Audit Log Read Me
           </a>
         </div>
       }
