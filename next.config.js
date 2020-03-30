@@ -29,6 +29,17 @@ const withApp = Object.assign({
     config.resolve = {
       ...config.resolve,
     };
+
+    config.module.rules = [
+      ...config.module.rules,
+      {
+        test: /\.svg/,
+        use: {
+          loader: 'svg-url-loader',
+          options: {},
+        },
+      },
+    ];
     config.resolve.alias = config.resolve.alias || {};
     config.resolve.alias.react = path.resolve('./node_modules/react');
     config.resolve.alias['react-dom'] = path.resolve(
@@ -41,7 +52,12 @@ const withApp = Object.assign({
 
 module.exports = withPlugins(
   [
-    [withImages],
+    [
+      withImages,
+      {
+        inlineImageLimit: 16384,
+      },
+    ],
     [
       withCSS,
       {
