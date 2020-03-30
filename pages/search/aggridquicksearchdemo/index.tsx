@@ -60,28 +60,6 @@ export default () => {
           >
             Adaptable API
           </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029568432-Quick-Search-FAQ"
-            target="_blank"
-          >
-            FAQ
-          </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028952711-Quick-Search-Videos"
-            target="_blank"
-          >
-            Videos
-          </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755137-Search-Functions"
-            target="_blank"
-          >
-            User Guide
-          </a>
-          .
         </div>
       }
     />

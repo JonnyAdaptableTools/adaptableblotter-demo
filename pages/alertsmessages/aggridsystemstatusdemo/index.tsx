@@ -70,21 +70,6 @@ export default () => {
           >
             Adaptable API
           </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029895931-Alert-Functions-FAQ"
-            target="_blank"
-          >
-            FAQ
-          </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754957-Run-Time-Access"
-            target="_blank"
-          >
-            User Guide
-          </a>
-          .
         </div>
       }
     />

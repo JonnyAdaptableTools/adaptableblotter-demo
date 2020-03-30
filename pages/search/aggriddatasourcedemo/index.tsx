@@ -76,25 +76,6 @@ export default () => {
           >
             Server Searching
           </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029895991-Data-Source-Selector-FAQ"
-            target="_blank"
-          >
-            FAQ
-          </a>
-          ,{' '}
-          <a href="" target="_blank">
-            Videos
-          </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755137-Search-Functions"
-            target="_blank"
-          >
-            User Guide
-          </a>
-          .
         </div>
       }
     />

@@ -44,28 +44,6 @@ export default () => {
           >
             Adaptable API
           </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360030078191-Cell-Validation-FAQ"
-            target="_blank"
-          >
-            FAQ
-          </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028638052-Cell-Validation-Videos"
-            target="_blank"
-          >
-            Videos
-          </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754698-Edit-Functions"
-            target="_blank"
-          >
-            User Guide
-          </a>
-          .
         </div>
       }
     />

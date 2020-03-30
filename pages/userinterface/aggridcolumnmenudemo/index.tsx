@@ -106,21 +106,6 @@ export default () => {
           >
             User Interface Options
           </a>{' '}
-          |{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360009004751-Look-and-Feel-FAQ"
-            target="_blank"
-          >
-            FAQ
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754438-UI-Elements"
-            target="_blank"
-          >
-            User Guide
-          </a>
-          .
         </div>
       }
     />

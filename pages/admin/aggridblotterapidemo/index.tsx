@@ -46,14 +46,6 @@ export default () => {
           >
             Adaptable API
           </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002754777-Adaptable-API"
-            target="_blank"
-          >
-            User Guide
-          </a>{' '}
-          .
         </div>
       }
     />

@@ -39,16 +39,7 @@ export default () => {
           </p>
         </div>
       }
-      helpResources={
-        <div>
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028584632-Query-Options"
-            target="_blank"
-          >
-            User Guide
-          </a>
-        </div>
-      }
+      helpResources={<div></div>}
     />
   );
 };

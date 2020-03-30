@@ -18,7 +18,7 @@ export default () => {
           <p>
             However, if you would prefer to return a larger result set, you can
             set the the <b>maxColumnValueItemsDisplayed</b> property of{' '}
-            <a href="https://adaptabletools.zendesk.com/hc/en-us/articles/360028584632-Query-Options">
+            <a href="https://api.adaptabletools.com/modules/_src_adaptableoptions_queryoptions_.html">
               Query Options
             </a>
             to a different value.

@@ -44,28 +44,6 @@ export default () => {
           >
             Adaptable API
           </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360029742972-Format-Column-FAQ"
-            target="_blank"
-          >
-            FAQ
-          </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360030944471-Styling-Videos"
-            target="_blank"
-          >
-            Videos
-          </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755177-Styling-Functions"
-            target="_blank"
-          >
-            User Guide
-          </a>
-          .
         </div>
       }
     />

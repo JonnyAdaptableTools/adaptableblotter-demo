@@ -81,28 +81,6 @@ export default () => {
           >
             Adaptable API
           </a>{' '}
-          |{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360004099278-iPushPull-FAQ"
-            target="_blank"
-          >
-            FAQ
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360004003298-iPushPull"
-            target="_blank"
-          >
-            Videos
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360004256778#UUID-bea0c942-9326-7490-30b2-9a75709ac7d6"
-            target="_blank"
-          >
-            User Guide
-          </a>
-          .
         </div>
       }
     />

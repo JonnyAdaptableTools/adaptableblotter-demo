@@ -221,7 +221,10 @@ export default () => {
           <b>Help</b>
           <br />
           Learn more about how AdapTable works via our large collection of{' '}
-          <a href="https://adaptabletools.zendesk.com/hc/en-us" target="_blank">
+          <a
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/readme-list.md"
+            target="_blank"
+          >
             Read Me Guides
           </a>
           . For more in depth information please visit the{' '}

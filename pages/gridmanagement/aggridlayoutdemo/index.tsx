@@ -79,28 +79,6 @@ export default () => {
           >
             Adaptable API
           </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002170317-Layouts-FAQ"
-            target="_blank"
-          >
-            FAQ
-          </a>
-          ,{' '}
-          <a
-            href=" https://adaptabletools.zendesk.com/hc/en-us/articles/360029743312-Layout-Videos"
-            target="_blank"
-          >
-            Videos
-          </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755197-Grid-Functions"
-            target="_blank"
-          >
-            User Guide
-          </a>
-          .
         </div>
       }
     />

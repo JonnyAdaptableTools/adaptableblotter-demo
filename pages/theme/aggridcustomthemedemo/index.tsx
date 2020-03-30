@@ -64,13 +64,6 @@ export default () => {
           </a>
           ,{' '}
           <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360009005211-Theme-Picker-FAQ"
-            target="_blank"
-          >
-            FAQ
-          </a>
-          ,{' '}
-          <a
             href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/adaptable-theming-guide.md"
             target="_blank"
           >

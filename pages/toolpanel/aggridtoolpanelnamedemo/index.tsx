@@ -44,21 +44,6 @@ export default () => {
           >
             Adaptable API
           </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360004952777-ToolPanel-FAQ"
-            target="_blank"
-          >
-            FAQ
-          </a>
-          ,{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002774498-Dashboard"
-            target="_blank"
-          >
-            User Guide
-          </a>
-          .
         </div>
       }
     />

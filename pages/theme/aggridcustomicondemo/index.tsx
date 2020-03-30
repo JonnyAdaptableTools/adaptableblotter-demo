@@ -30,17 +30,7 @@ export default () => {
           </p>
         </div>
       }
-      helpResources={
-        <div>
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002755177-Styling-Functions"
-            target="_blank"
-          >
-            User Guide
-          </a>
-          .
-        </div>
-      }
+      helpResources={<div></div>}
     />
   );
 };

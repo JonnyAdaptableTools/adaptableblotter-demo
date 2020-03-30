@@ -84,14 +84,6 @@ export default () => {
           >
             Adaptable API
           </a>{' '}
-          |{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360030078491-Calculated-Column-Videos"
-            target="_blank"
-          >
-            Videos
-          </a>
-          .
         </div>
       }
     />

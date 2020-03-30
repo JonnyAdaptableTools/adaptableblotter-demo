@@ -81,13 +81,6 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360008819032-Custom-Sort-FAQ"
-            target="_blank"
-          >
-            FAQ
-          </a>{' '}
-          |{' '}
-          <a
             href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/custom-sort-function.md"
             target="_blank"
           >

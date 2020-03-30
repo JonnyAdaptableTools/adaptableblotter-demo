@@ -129,28 +129,6 @@ export default () => {
           >
             User Functions
           </a>{' '}
-          |{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002209498-Action-Column-FAQ"
-            target="_blank"
-          >
-            FAQ
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360002204277-Action-Column-Videos"
-            target="_blank"
-          >
-            Videos
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://adaptabletools.zendesk.com/hc/en-us/articles/360003213038-Special-Column-Functions"
-            target="_blank"
-          >
-            User Guide
-          </a>
-          .
         </div>
       }
     />
