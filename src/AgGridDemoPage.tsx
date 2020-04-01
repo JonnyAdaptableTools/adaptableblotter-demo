@@ -11,6 +11,7 @@ const arrowRight = (
 
 export type AgGridDemoPageProps = {
   config?: any;
+  loaded?: boolean;
   adaptableOptions?: any;
   className?: string;
   exampleCode?: string;
@@ -122,11 +123,12 @@ const HelpResources = ({ children }: { children: string }) => {
   );
 };
 
-export default ({
+const AgGridDemoPage = ({
   pageTitle,
   children,
   description,
   config,
+  loaded,
   exampleCode,
   className,
   adaptableOptions,
@@ -145,7 +147,11 @@ AgGridDemoPageProps) => {
 
   return (
     <MainPage className={className} pageTitle={pageTitle}>
-      <div style={{ width: '97%' }}>
+      <div
+        style={{
+          paddingRight: 40 /*makes it easier to scroll to bottom, since you have some extra space*/,
+        }}
+      >
         {' '}
         <Snippet
           title={<b>{pageTitle}</b>}
@@ -157,7 +163,7 @@ AgGridDemoPageProps) => {
         <HelpResources>{helpResources}</HelpResources>
         <div id="adaptable" />
         <p />
-        <div id="grid" className="" style={{ height: 700 }} />
+        <div id="grid" className="" style={{ height: loaded ? 700 : 0 }} />
         {children}
         {exampleCode ? (
           <Snippet title={<b>Code</b>} shouldCopy={true} className={'config'}>
@@ -186,3 +192,5 @@ AgGridDemoPageProps) => {
     </MainPage>
   );
 };
+
+export default AgGridDemoPage;
