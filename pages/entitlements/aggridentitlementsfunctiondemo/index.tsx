@@ -86,11 +86,11 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/modules/_src_adaptableoptions_userfunctions_.html"
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-entitlements-guide.md"
             target="_blank"
           >
-            User Functions
-          </a>{' '}
+            Entitlements Guide
+          </a>
         </div>
       }
     />
