@@ -51,7 +51,11 @@ const Link = withRouter(
 );
 
 export default () => {
-  const [expanded, setExpanded] = useState(true);
+  const [expanded, setExpanded] = useState(
+    globalThis.localStorage
+      ? JSON.parse(localStorage.getItem('expanded') || 'true')
+      : true
+  );
 
   const toggleSidebar = () => {
     const newExpanded = !expanded;
