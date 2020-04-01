@@ -50,25 +50,33 @@ const Link = withRouter(
   }
 );
 
-export default () => {
+const Sidebar = () => {
   const [expanded, setExpanded] = useState(
-    globalThis.localStorage
+    process.browser
       ? JSON.parse(localStorage.getItem('expanded') || 'true')
       : true
   );
+  /**
+   * this is crazy - count is needed because
+   * React does not reflect updates correctly - probably some SSR issue
+   */
+  const [count, setCount] = useState(Date.now());
 
   const toggleSidebar = () => {
     const newExpanded = !expanded;
+
     setExpanded(newExpanded);
+    setCount(c => c + 1);
     localStorage.setItem('expanded', `${newExpanded}`);
   };
 
   useLayoutEffect(() => {
-    setExpanded(
-      globalThis.localStorage
-        ? JSON.parse(localStorage.getItem('expanded') || 'true')
-        : true
-    );
+    const expanded = globalThis.localStorage
+      ? JSON.parse(localStorage.getItem('expanded') || 'true')
+      : true;
+
+    setCount(c => c + 1);
+    setExpanded(expanded);
   }, []);
 
   let demoPages: any = getDemoPageStructure().Categories.map(
@@ -94,10 +102,17 @@ export default () => {
       );
     }
   );
+  /**
+   * this is crazy - count is needed because
+   * React does not reflect updates correctly - probably some SSR issue
+   */
+  const className = `sidebar---${count} sidebar sidebar--${
+    expanded ? 'expanded' : 'collapsed'
+  }`;
 
   return (
     <div
-      className={`sidebar sidebar--${expanded ? 'expanded' : 'collapsed'}`}
+      className={className}
       style={{
         display: 'flex',
         flexFlow: 'column',
@@ -136,3 +151,5 @@ export default () => {
     </div>
   );
 };
+
+export default Sidebar;
