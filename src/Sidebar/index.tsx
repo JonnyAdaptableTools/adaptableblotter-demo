@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import NextLink from 'next/link';
 
 import { withRouter } from 'next/router';
@@ -54,8 +54,18 @@ export default () => {
   const [expanded, setExpanded] = useState(true);
 
   const toggleSidebar = () => {
-    setExpanded(!expanded);
+    const newExpanded = !expanded;
+    setExpanded(newExpanded);
+    localStorage.setItem('expanded', `${newExpanded}`);
   };
+
+  useLayoutEffect(() => {
+    setExpanded(
+      globalThis.localStorage
+        ? JSON.parse(localStorage.getItem('expanded') || 'true')
+        : true
+    );
+  }, []);
 
   let demoPages: any = getDemoPageStructure().Categories.map(
     (category: DemoCategory) => {
