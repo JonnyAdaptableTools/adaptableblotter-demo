@@ -216,7 +216,6 @@ export class HelperAgGrid {
     schema.push(this.getShipNameDef());
     schema.push(this.getShipCountryDef());
     schema.push(this.getShippedDateDef());
-    schema.push(this.getLastUpdatedTimeDef());
 
     return schema;
   }
