@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import NextLink from 'next/link';
 
 import { withRouter } from 'next/router';
@@ -12,6 +12,11 @@ import {
   DemoCategory,
   DemoPage,
 } from '../../DemoList/demolist';
+import ArrowRight from './Category/arrow-right';
+import ArrowLeft from './Category/arrow-left';
+
+const arrowLeft = <ArrowLeft />;
+const arrowRight = <ArrowRight />;
 
 if (global.console) {
   const log = global.console.log;
@@ -45,7 +50,35 @@ const Link = withRouter(
   }
 );
 
-export default () => {
+const Sidebar = () => {
+  const [expanded, setExpanded] = useState(
+    process.browser
+      ? JSON.parse(localStorage.getItem('expanded') || 'true')
+      : true
+  );
+  /**
+   * this is crazy - count is needed because
+   * React does not reflect updates correctly - probably some SSR issue
+   */
+  const [count, setCount] = useState(Date.now());
+
+  const toggleSidebar = () => {
+    const newExpanded = !expanded;
+
+    setExpanded(newExpanded);
+    setCount(c => c + 1);
+    localStorage.setItem('expanded', `${newExpanded}`);
+  };
+
+  useLayoutEffect(() => {
+    const expanded = globalThis.localStorage
+      ? JSON.parse(localStorage.getItem('expanded') || 'true')
+      : true;
+
+    setCount(c => c + 1);
+    setExpanded(expanded);
+  }, []);
+
   let demoPages: any = getDemoPageStructure().Categories.map(
     (category: DemoCategory) => {
       let demoPages = category.Pages.map((page: DemoPage) => {
@@ -69,15 +102,29 @@ export default () => {
       );
     }
   );
+  /**
+   * this is crazy - count is needed because
+   * React does not reflect updates correctly - probably some SSR issue
+   */
+  const className = `sidebar---${count} sidebar sidebar--${
+    expanded ? 'expanded' : 'collapsed'
+  }`;
 
   return (
     <div
-      className="sidebar"
+      className={className}
       style={{
         display: 'flex',
         flexFlow: 'column',
       }}
     >
+      <div
+        className="sidebar-collapse-tool"
+        onClick={toggleSidebar}
+        title={expanded ? 'Click to collapse' : 'Click to expand'}
+      >
+        {expanded ? arrowLeft : arrowRight}
+      </div>
       <div className="sidebar-container" style={{ flex: 1, overflow: 'auto' }}>
         <h3
           style={{
@@ -104,3 +151,5 @@ export default () => {
     </div>
   );
 };
+
+export default Sidebar;
