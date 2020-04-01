@@ -89,7 +89,11 @@ export default () => {
         flexFlow: 'column',
       }}
     >
-      <div className="sidebar-collapse-tool" onClick={toggleSidebar}>
+      <div
+        className="sidebar-collapse-tool"
+        onClick={toggleSidebar}
+        title={expanded ? 'Click to collapse' : 'Click to expand'}
+      >
         {expanded ? arrowLeft : arrowRight}
       </div>
       <div className="sidebar-container" style={{ flex: 1, overflow: 'auto' }}>

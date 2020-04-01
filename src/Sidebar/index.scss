@@ -23,8 +23,9 @@
     top: -2px;
     left: -4px;
     transition: left 0.2s;
-
-    &:hover {
+  }
+  &:hover {
+    svg {
       left: -6px;
     }
   }
@@ -43,6 +44,12 @@
   &--collapsed {
     position: absolute;
     transform: translate3d(-100%, 0px, 0px);
+
+    .sidebar-collapse-tool:hover {
+      svg {
+        left: -2px;
+      }
+    }
   }
 
   a {
