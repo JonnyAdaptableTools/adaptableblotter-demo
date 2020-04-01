@@ -16,10 +16,6 @@ import charts from '@adaptabletools/adaptable-plugin-charts';
 var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
-  Dashboard: {
-    DashboardVisibility: 'Minimised',
-    HomeToolbarTitle: 'AdapTable Toolbar',
-  },
   Entitlements: {
     FunctionEntitlements: [
       {
