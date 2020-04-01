@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NextLink from 'next/link';
 
 import { withRouter } from 'next/router';
@@ -12,6 +12,11 @@ import {
   DemoCategory,
   DemoPage,
 } from '../../DemoList/demolist';
+import ArrowRight from './Category/arrow-right';
+import ArrowLeft from './Category/arrow-left';
+
+const arrowLeft = <ArrowLeft />;
+const arrowRight = <ArrowRight />;
 
 if (global.console) {
   const log = global.console.log;
@@ -46,6 +51,12 @@ const Link = withRouter(
 );
 
 export default () => {
+  const [expanded, setExpanded] = useState(true);
+
+  const toggleSidebar = () => {
+    setExpanded(!expanded);
+  };
+
   let demoPages: any = getDemoPageStructure().Categories.map(
     (category: DemoCategory) => {
       let demoPages = category.Pages.map((page: DemoPage) => {
@@ -72,12 +83,15 @@ export default () => {
 
   return (
     <div
-      className="sidebar"
+      className={`sidebar sidebar--${expanded ? 'expanded' : 'collapsed'}`}
       style={{
         display: 'flex',
         flexFlow: 'column',
       }}
     >
+      <div className="sidebar-collapse-tool" onClick={toggleSidebar}>
+        {expanded ? arrowLeft : arrowRight}
+      </div>
       <div className="sidebar-container" style={{ flex: 1, overflow: 'auto' }}>
         <h3
           style={{
