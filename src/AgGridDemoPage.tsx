@@ -157,7 +157,7 @@ AgGridDemoPageProps) => {
         <HelpResources>{helpResources}</HelpResources>
         <div id="adaptable" />
         <p />
-        <div id="grid" className="ag-theme-balham" style={{ height: 700 }} />
+        <div id="grid" className="" style={{ height: 700 }} />
         {children}
         {exampleCode ? (
           <Snippet title={<b>Code</b>} shouldCopy={true} className={'config'}>
