@@ -25,6 +25,7 @@ export default (columnDefs: any[], rowData: any[]) => {
     groupIncludeTotalFooter: true,
     groupIncludeFooter: true,
     suppressAggFuncInHeader: true,
+    rowGroupPanelShow: 'always',
     columnTypes: {
       abColDefNumber: {},
       abColDefString: {},

@@ -151,6 +151,10 @@ export default (columnDefs: any[], rowData: any[]) => {
     enableRangeSelection: true,
     suppressMenuHide: true,
     floatingFilter: true,
+    rowGroupPanelShow: 'always',
+    autoGroupColumnDef: {
+      sortable: true,
+    },
     columnTypes: {
       abColDefNumber: {},
       abColDefString: {},

@@ -102,6 +102,9 @@ export default (columnDefs: any[], rowData: any[]) => {
     sideBar: true,
     suppressMenuHide: true,
     floatingFilter: true,
+    autoGroupColumnDef: {
+      sortable: true,
+    },
     columnTypes: {
       abColDefNumber: {},
       abColDefString: {},

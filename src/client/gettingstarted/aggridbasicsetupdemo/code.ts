@@ -127,6 +127,9 @@ export default () => {
     suppressAggFuncInHeader: true,
     suppressMenuHide: true,
     floatingFilter: true,
+    autoGroupColumnDef: {
+      sortable: true,
+    },
     columnTypes: {
       // not strictly required but very useful for column data type identification
       abColDefNumber: {},

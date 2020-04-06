@@ -18,7 +18,7 @@ export default () => {
             to attach to the same source daily or multiple different sources.
           </p>
           <p>
-            Simply link to a file (or drag and drop) and AdapTable No Code
+            Simply link to a file (or drag and drop) and the AdapTable No Code
             Wizard will appear.
           </p>
           <p>
@@ -36,6 +36,17 @@ export default () => {
             </a>{' '}
             that you would normally provide at design-time to ensure that your
             AdapTable instance suits your requirements.
+          </p>
+          <p>
+            <b>Note: </b> The source data must have one column that contains{' '}
+            <b>unique values</b> which you will set as the{' '}
+            <a
+              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_adaptableoptions_.adaptableoptions.html#primarykey"
+              target="_blank"
+            >
+              Primary Key column
+            </a>{' '}
+            (by convention the first column).
           </p>
         </div>
       }

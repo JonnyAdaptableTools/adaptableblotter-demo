@@ -8,6 +8,7 @@ import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham-dark.css';
 import '../../../../DemoPage/aggriddemo.css';
 
 import nocode from '@adaptabletools/adaptable-plugin-nocode-aggrid';
+//import finance from '@adaptabletools/adaptable-plugin-finance';
 import {
   AdaptableOptions,
   PredefinedConfig,
@@ -25,6 +26,7 @@ export default () => {
     predefinedConfig: {} as PredefinedConfig,
 
     plugins: [
+      //  finance(),
       nocode({
         onInit: adaptableOptions => {
           adaptableOptions.vendorGrid.suppressFieldDotNotation = true;

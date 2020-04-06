@@ -28,6 +28,9 @@ export default (columnDefs: any[], rowData: any[]) => {
     enableRangeSelection: true,
     suppressMenuHide: true,
     floatingFilter: true,
+    autoGroupColumnDef: {
+      sortable: true,
+    },
     columnTypes: {
       abColDefNumber: {},
       abColDefString: {},
