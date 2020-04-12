@@ -9,23 +9,82 @@ export default () => {
       description={
         <div>
           <p>
-            You can export your data from the Grid via Reports. There are 4
-            which ship with AdapTable (All Rows, All Visible Rows, Selected
-            Cells and Selected Rows) and you can create your own.
+            You can export your grid data from AdapTable via <b>Reports</b> -
+            either pre-shipped or custom created - to a number of different
+            destinations.
           </p>
           <p>
-            If using AdapTable with our partners OpenFin, Glue42 or ipushpull
-            you can see exported data update in real time as your Grid ticks.
-            You can also schedule reports to export at particular times.
+            AdapTable ships with 4 reports or you can create your own via the
+            Report Wizard. The shipped Reports are:{' '}
           </p>
+          <ul>
+            <li>
+              <b>All Data</b>: All the data in the grid's data source
+              (irrespective of whether it is currently visible)
+            </li>
+            <li>
+              <b>Visible Data</b>: All the data currently displayed in the grid
+              (if exported to Excel it will include grouped row information)
+            </li>
+            <li>
+              <b>Selected Cells</b>: All cells currently selected in the grid
+              (they do not need to be contiguous)
+            </li>
+            <li>
+              <b>Selected Rows</b>: Any rows currently selected in the grid.
+            </li>
+          </ul>{' '}
           <p>
-            This example has 2 reports: 'My Team Big Invoice' which exports all
-            columns but only those rows that match the query, and 'Current
-            Orders' which exports a subset of columns and all rows visible when
-            the report is run. Note this report is also scheduled to run
-            (exporting to CSV) automatically every day at 17:30 (you can edit
-            the schedule to see it run at a time you provide).
+            Each report can be exported to a number of different destinations,
+            namely:{' '}
           </p>
+          <ul>
+            <li>
+              <b>Excel</b>: Opens an Excel file with the report data (if the
+              report is 'Visible Data' grouping information will be included)
+            </li>
+            <li>
+              <b>CSV</b>: Standard CSV format (comma separated)
+            </li>
+            <li>
+              <b>Clipboard</b>: Including Column headers
+            </li>
+            <li>
+              <b>JSON</b>: As an array of arrays
+            </li>
+            <li>
+              <b>ipushpull</b>: Sends data to ipushpull and from there to
+              Symphony and elsewhere - see{' '}
+              <a href="../partners/ipushpulldemo">ipushpull demo</a> (only
+              available to ipushpull users)
+            </li>
+            <li>
+              <b>Glue42</b>: Sends data to excel via Glue42 ensuring 2 way data
+              updates and full validation while editing in Excel (only available
+              to Glue42 users)
+            </li>
+            <li>
+              <b>Excel (via OpenFin)</b>: Sends data to excel via OpenFin
+              ensuring Excel updates automatically as the grid ticks (only
+              available to OpenFin users)
+            </li>
+          </ul>{' '}
+          <p>
+            You can schedule reports so that they export at particular times
+            (e.g. on a certain date, or daily at a particular time).
+          </p>
+          <p>This example has 2 reports:</p>{' '}
+          <ol>
+            <li>
+              <i>My Team Big Invoice</i> exports all columns but only those rows
+              that match the query
+            </li>
+            <li>
+              <i>Current Orders</i> exports a subset of columns and all rows
+              visible when the report is run - this report is also scheduled to
+              run (exporting to CSV) every day at 17:30
+            </li>
+          </ol>
         </div>
       }
       helpResources={

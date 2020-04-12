@@ -31,9 +31,8 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
-
   Layout: {
-    CurrentLayout: 'Grouped Layout',
+    CurrentLayout: 'Grouped',
     Layouts: [
       {
         Columns: [
@@ -47,8 +46,23 @@ const demoConfig: PredefinedConfig = {
           'Employee',
           'ShipCountry',
         ],
-        GroupedColumns: ['Employee', 'ShipCountry'],
-        Name: 'Grouped Layout',
+        GroupedColumns: ['Employee'],
+        Name: 'Grouped',
+      },
+      {
+        Columns: [
+          'ShipVia',
+          'CustomerReference',
+          'ContactName',
+          'InvoicedCost',
+          'ChangeLastOrder',
+          'OrderCost',
+          'PackageCost',
+          'Employee',
+          'ShipCountry',
+        ],
+        GroupedColumns: ['ShipVia'],
+        Name: 'Sorted Grouped',
       },
     ],
   },
@@ -81,9 +95,7 @@ export default (columnDefs: any[], rowData: any[]) => {
     adaptableId: 'Grouped Layout Demo',
     predefinedConfig: demoConfig,
     layoutOptions: {
-      autoSizeColumnsInDefaultLayout: true,
-      autoSizeColumnsInLayout: true,
-      autoSizeColumnsInPivotLayout: true,
+      includeOpenedRowGroups: true,
     },
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
