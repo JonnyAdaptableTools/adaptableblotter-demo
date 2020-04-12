@@ -353,6 +353,12 @@ export function getDemoPageStructure(): DemoPageStructure {
               'A basic Layout(i.e. set of column grouping, visibility, order, sorts) so you can see the subset of columns you need at the click of a button.',
           },
           {
+            Name: 'Grouped Layout',
+            Link: '/layout/aggridgroupedlayoutdemo',
+            Description:
+              'Grouped Layouts can be created which include row grouping details',
+          },
+          {
             Name: 'Auto Save Layout',
             Link: '/layout/aggridautosavelayoutdemo',
             Description:

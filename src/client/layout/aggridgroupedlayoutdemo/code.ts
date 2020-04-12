@@ -1,0 +1,93 @@
+import '@adaptabletools/adaptable/index.css';
+import '@adaptabletools/adaptable/themes/dark.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham-dark.css';
+import Adaptable from '@adaptabletools/adaptable/agGrid';
+import { GridOptions } from '@ag-grid-community/all-modules';
+import {
+  AdaptableOptions,
+  PredefinedConfig,
+  AdaptableApi,
+} from '@adaptabletools/adaptable/types';
+import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
+
+var adaptableApi: AdaptableApi;
+
+const demoConfig: PredefinedConfig = {
+  Dashboard: {
+    Tabs: [
+      {
+        Name: 'Demo Toolbar',
+        Toolbars: ['Layout', 'Export', 'CellSummary'],
+      },
+    ],
+  },
+  CustomSort: {
+    CustomSorts: [
+      {
+        ColumnId: 'ShipVia',
+        SortedValues: ['Speedy Express', 'United Package', 'Federal Shipping'],
+      },
+    ],
+  },
+
+  Layout: {
+    CurrentLayout: 'Grouped Layout',
+    Layouts: [
+      {
+        Columns: [
+          'ShipVia',
+          'CustomerReference',
+          'ContactName',
+          'InvoicedCost',
+          'ChangeLastOrder',
+          'OrderCost',
+          'PackageCost',
+          'Employee',
+          'ShipCountry',
+        ],
+        GroupedColumns: ['Employee', 'ShipCountry'],
+        Name: 'Grouped Layout',
+      },
+    ],
+  },
+} as PredefinedConfig;
+
+export default (columnDefs: any[], rowData: any[]) => {
+  const gridOptions: GridOptions = {
+    columnDefs,
+    rowData,
+    enableRangeSelection: true,
+    suppressMenuHide: true,
+    floatingFilter: true,
+    rowGroupPanelShow: 'always',
+    autoGroupColumnDef: {
+      sortable: true,
+    },
+    columnTypes: {
+      abColDefNumber: {},
+      abColDefString: {},
+      abColDefBoolean: {},
+      abColDefDate: {},
+      abColDefObject: {},
+      abColDefNumberArray: {},
+    },
+  };
+
+  const adaptableOptions: AdaptableOptions = {
+    primaryKey: 'OrderId',
+    userName: 'Demo User',
+    adaptableId: 'Grouped Layout Demo',
+    predefinedConfig: demoConfig,
+    layoutOptions: {
+      autoSizeColumnsInDefaultLayout: true,
+      autoSizeColumnsInLayout: true,
+      autoSizeColumnsInPivotLayout: true,
+    },
+    vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
+  };
+  adaptableApi = Adaptable.init(adaptableOptions);
+
+  return { adaptableOptions, adaptableApi };
+};
