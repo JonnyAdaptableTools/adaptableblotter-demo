@@ -73,7 +73,7 @@ export default () => {
             You can schedule reports so that they export at particular times
             (e.g. on a certain date, or daily at a particular time).
           </p>
-          <p>This example has 2 reports:</p>{' '}
+          <p>This example has 2 bespoke Reports:</p>{' '}
           <ol>
             <li>
               <i>My Team Big Invoice</i> exports all columns but only those rows

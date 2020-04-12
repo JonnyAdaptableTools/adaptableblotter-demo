@@ -10,15 +10,12 @@ export default () => {
         <div>
           <p>
             AdapTable makes it easy to include grouped row information in
-            Layouts.
+            Layouts; this is done via the <i>GroupedColumns</i> property that
+            specifies which Column(s) should be grouped.
           </p>
           <p>
-            When creating a Layout you can set the <i>GroupedColumns</i>{' '}
-            property to specify which Column(s) should be grouped.
-          </p>
-          <p>
-            This can be either at Design-Time through Predefined Config or at
-            Run-Time via the Layout Wizard).
+            Grouped columns can be included in Layouts either at Design-Time
+            through Predefined Config or at Run-Time via the Layout Wizard.
           </p>
           <p>
             The Layout will also store the correct <b>sorting</b> for the

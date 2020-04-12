@@ -267,6 +267,11 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Create standard, saveable, bar or line charts, with many different visualation options.',
           },
           {
+            Name: 'Financial Charts',
+            Link: '/charts/aggridfinancialchartsdemo',
+            Description: 'Create financial charts',
+          },
+          {
             Name: 'Pie Charts',
             Link: '/charts/aggridpiechartsdemo',
             Description:
