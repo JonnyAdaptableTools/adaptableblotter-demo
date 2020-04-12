@@ -62,14 +62,21 @@ export default () => {
             target="_blank"
           >
             Predefined Config
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_layoutapi_.layoutapi.html"
             target="_blank"
           >
             Adaptable API
-          </a>
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/layout-function.md"
+            target="_blank"
+          >
+            Read Me
+          </a>{' '}
         </div>
       }
     />
