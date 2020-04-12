@@ -15,6 +15,9 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
+  Dashboard: {
+    VisibleButtons: ['UpdatedRow'],
+  },
   UpdatedRow: {
     EnableUpdatedRow: true,
     JumpToRow: true,
@@ -46,7 +49,7 @@ export default (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'tradeId',
     userName: 'Demo User',
-    adaptableId: 'Updated Rows Demo',
+    adaptableId: 'Updated Row Demo',
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

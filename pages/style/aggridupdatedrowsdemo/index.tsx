@@ -5,7 +5,7 @@ export default () => {
   return (
     <DynamicDemoPage
       demo={import('../../../src/client/style/aggridupdatedrowsdemo')}
-      pageTitle={'Updated Rows Demo'}
+      pageTitle={'Updated Row Demo'}
       description={
         <div>
           <p>
@@ -30,7 +30,7 @@ export default () => {
               href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_updatedrowstate_.updatedrowstate.html"
               target="_blank"
             >
-              Updated Rows Predefined Config
+              Updated Row Predefined Config
             </a>{' '}
             ; here we set 'neutral' to 'lightblue'.
           </p>

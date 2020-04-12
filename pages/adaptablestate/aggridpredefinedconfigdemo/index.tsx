@@ -17,7 +17,7 @@ export default () => {
           </p>
           <p>
             This demo shows some example Predefined Config. It includes: 2{' '}
-            <a href="../../gridmanagement/aggridlayoutdemo/">Layouts</a>, 2{' '}
+            <a href="../../layout/aggridbasiclayoutdemo/">Layouts</a>, 2{' '}
             <a href="../../style/aggridconditionalstyledemo/">
               Conditional Styles
             </a>

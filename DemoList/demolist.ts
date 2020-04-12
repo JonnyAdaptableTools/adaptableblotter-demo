@@ -171,7 +171,7 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Have cells flash briefly when their contents change (using colours and duration you specify).',
           },
           {
-            Name: 'Updated Rows',
+            Name: 'Updated Row',
             Link: '/style/aggridupdatedrowsdemo',
             Description:
               'Colour (and jump to) rows as they update so you can see which rows have changed.',
@@ -309,12 +309,6 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Send grid data to a number of destinations using System or Custom reports and schedule them if you would like.',
           },
           {
-            Name: 'Layout',
-            Link: '/gridmanagement/aggridlayoutdemo',
-            Description:
-              'Create views (column grouping, visibility, order, sorts) so you can see the subset of columns you need at the click of a button.',
-          },
-          {
             Name: 'Cell Summary',
             Link: '/gridmanagement/aggridcellsummarydemo',
             Description:
@@ -345,6 +339,18 @@ export function getDemoPageStructure(): DemoPageStructure {
             Link: '/gridmanagement/aggridcalendardemo',
             Description:
               'Select which Holiday Calendar you wish AdapTable to use when calculating Working Days (in Filters, Queries etc).',
+          },
+        ],
+      },
+      {
+        CategoryName: 'Layout',
+        Link: '/layout',
+        Pages: [
+          {
+            Name: 'Basic Layout',
+            Link: '/layout/aggridbasiclayoutdemo',
+            Description:
+              'Create views (column grouping, visibility, order, sorts) so you can see the subset of columns you need at the click of a button.',
           },
         ],
       },

@@ -16,7 +16,12 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleToolbars: ['Layout'],
+    Tabs: [
+      {
+        Name: 'Demo Toolbar',
+        Toolbars: ['Layout', 'Export', 'CellSummary'],
+      },
+    ],
   },
   CustomSort: {
     CustomSorts: [

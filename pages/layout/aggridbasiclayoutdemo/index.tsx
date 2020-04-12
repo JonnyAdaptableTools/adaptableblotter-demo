@@ -4,19 +4,10 @@ import DynamicDemoPage from '../../../src/Helpers/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/grid/aggridlayoutdemo')}
+      demo={import('../../../src/client/layout/aggridbasiclayoutdemo')}
       pageTitle={'Layout (Views) Demo'}
       description={
         <div>
-          <p>
-            Use Layouts to manage sets of column visibility and order. Layouts
-            can also include column sorting, grouping and pivoting information
-            and can save automatially when changed
-          </p>
-          <p>
-            The search and filter functions determine <b>row</b> visibility and
-            order, while layouts manage <b>column</b> visibility and order. .
-          </p>
           <p>This example contains 5 layouts: </p>
           <ol>
             <li>
