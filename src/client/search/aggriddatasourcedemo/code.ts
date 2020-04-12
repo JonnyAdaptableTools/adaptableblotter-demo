@@ -89,7 +89,7 @@ export default (columnDefs: any[]) => {
       let searchChangedInfo: SearchChangedInfo = searchChangedArgs.data[0].id;
       if (searchChangedInfo.searchChangedTrigger == 'DataSource') {
         let searchState: AdaptableSearchState =
-          searchChangedInfo.AdaptableSearchState;
+          searchChangedInfo.adaptableSearchState;
         if (searchState.dataSource != null) {
           switch (searchState.dataSource.Name) {
             case 'Euro Trades':
