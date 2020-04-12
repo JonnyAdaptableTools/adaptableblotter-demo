@@ -350,7 +350,19 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Basic Layout',
             Link: '/layout/aggridbasiclayoutdemo',
             Description:
-              'Create views (column grouping, visibility, order, sorts) so you can see the subset of columns you need at the click of a button.',
+              'A basic Layout(i.e. set of column grouping, visibility, order, sorts) so you can see the subset of columns you need at the click of a button.',
+          },
+          {
+            Name: 'Auto Save Layout',
+            Link: '/layout/aggridautosavelayoutdemo',
+            Description:
+              'Layouts can be saved automatically whenever anything changes',
+          },
+          {
+            Name: 'Advanced Layouts',
+            Link: '/layout/aggridadvancedlayoutdemo',
+            Description:
+              'A more advanced set of different types of Layouts (e.g. Sorted, Pivoted, Grouped etc)',
           },
         ],
       },

@@ -1,8 +1,8 @@
-import '@adaptabletools/adaptable/index.css';
-import '@adaptabletools/adaptable/themes/dark.css';
-import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
-import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
-import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham-dark.css';
+import './node_modules/@adaptabletools/adaptable/index.css';
+import './node_modules/@adaptabletools/adaptable/themes/dark.css';
+import './node_modules/@ag-grid-community/all-modules/dist/styles/ag-grid.css';
+import './node_modules/@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
+import './node_modules/@ag-grid-community/all-modules/dist/styles/ag-theme-balham-dark.css';
 import Adaptable from '@adaptabletools/adaptable/agGrid';
 import { GridOptions } from '@ag-grid-community/all-modules';
 import {
@@ -58,13 +58,6 @@ const demoConfig: PredefinedConfig = {
     Layouts: [
       {
         Name: 'Simple Layout',
-        ColumnSorts: [
-          {
-            Column: 'ShipName',
-            SortOrder: 'Ascending',
-          },
-          { Column: 'ShipVia', SortOrder: 'Descending' },
-        ],
         Columns: [
           'OrderId',
           'OrderDate',
@@ -80,6 +73,77 @@ const demoConfig: PredefinedConfig = {
           'OrderCost',
           'PackageCost',
         ],
+      },
+      {
+        Name: 'Sorting Layout',
+        ColumnSorts: [
+          {
+            Column: 'ShipName',
+            SortOrder: 'Ascending',
+          },
+          { Column: 'ShipVia', SortOrder: 'Descending' },
+        ],
+        Columns: [
+          'OrderId',
+          'ShipVia',
+          'Freight',
+          'ShipName',
+          'ShipCountry',
+          'ShippedDate',
+          'CustomerReference',
+        ],
+      },
+      {
+        Columns: [
+          'ShipVia',
+          'CustomerReference',
+          'ContactName',
+          'InvoicedCost',
+          'ChangeLastOrder',
+          'OrderCost',
+          'PackageCost',
+          'Employee',
+          'ShipCountry',
+        ],
+        GroupedColumns: ['Employee', 'ShipCountry'],
+        Name: 'Grouping Layout',
+      },
+      {
+        Columns: [
+          'CustomerReference',
+          'ContactName',
+          'Employee',
+          'ShipCountry',
+        ],
+        GroupedColumns: ['Employee'],
+        PivotDetails: {
+          PivotColumns: ['ShipVia'],
+          //  AggregationColumns: ['InvoicedCost', 'ItemCost'],
+          AggregationColumns: ['ItemCost'],
+        },
+        Name: 'Pivot Layout',
+      },
+      {
+        Columns: [
+          'ShipVia',
+          'Comments',
+          'CustomerReference',
+          'Avg Item Cost',
+          'ContactName',
+          'InvoicedCost',
+          'OrderCost',
+          'Employee',
+          'ShipCountry',
+        ],
+        ColumnSorts: [
+          {
+            Column: 'ShipName',
+            SortOrder: 'Ascending',
+          },
+          { Column: 'ShipVia', SortOrder: 'Descending' },
+        ],
+        GroupedColumns: ['Employee'],
+        Name: 'Advanced Layout',
       },
     ],
   },

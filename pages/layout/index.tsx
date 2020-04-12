@@ -34,7 +34,7 @@ export default () => {
       pageTitle={'Layout demos'}
       description={
         <div>
-          <h4>Layout</h4>
+          <h4>Layouts (Views)</h4>
           <p>
             Layouts allow you to specify <b>Column visiblity and Order</b>.
           </p>{' '}

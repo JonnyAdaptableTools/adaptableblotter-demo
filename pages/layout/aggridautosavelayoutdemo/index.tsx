@@ -4,19 +4,31 @@ import DynamicDemoPage from '../../../src/Helpers/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/layout/aggridbasiclayoutdemo')}
-      pageTitle={'Layout (Views) Demo'}
+      demo={import('../../../src/client/layout/aggridautosavelayoutdemo')}
+      pageTitle={'AutoSave Layout Demo'}
       description={
         <div>
           <p>
-            This example contains a Basic Layout which includes a few
-            interesting features:{' '}
+            Layouts can be updated automatically through the{' '}
+            <b>autoSaveLayouts</b> property in{' '}
+            <a
+              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_layoutoptions_.layoutoptions.html#autosavelayouts"
+              target="_blank"
+            >
+              Layout Options
+            </a>
+            .{' '}
           </p>
-          <ul>
-            <li>Sorting</li>
-            <li>Calc Columns</li>
-            <li>Free text columns</li>
-          </ul>{' '}
+          <p>
+            This property is set to <b>true</b> by default and so layouts will
+            generally save automatically meaning any changes will be persisted
+            and available when the Layout next loads.
+          </p>
+          <p>
+            If the <i>autoSaveLayouts</i> property is set to <b>false</b> (as in
+            this example) the Layout will <b>not automatically save</b>; instead
+            a <b>Save Button</b> will display allowing manual saving.
+          </p>
         </div>
       }
       helpResources={
