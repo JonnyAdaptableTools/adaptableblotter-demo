@@ -10,9 +10,9 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
+  FinancialChartDefinition,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
-import { FinancialChartDefinition } from '@adaptabletools/adaptable/src/PredefinedConfig/ChartState';
 
 var adaptableApi: AdaptableApi;
 
