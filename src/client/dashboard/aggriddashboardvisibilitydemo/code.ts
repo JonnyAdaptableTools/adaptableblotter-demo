@@ -16,10 +16,6 @@ import charts from '@adaptabletools/adaptable-plugin-charts';
 var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
-  Dashboard: {
-    DashboardVisibility: 'Minimised',
-    HomeToolbarTitle: 'AdapTable Toolbar',
-  },
   Entitlements: {
     FunctionEntitlements: [
       {
@@ -38,6 +34,9 @@ export default (columnDefs: any[], rowData: any[]) => {
     sideBar: true,
     suppressMenuHide: true,
     floatingFilter: true,
+    autoGroupColumnDef: {
+      sortable: true,
+    },
     columnTypes: {
       abColDefNumber: {},
       abColDefString: {},

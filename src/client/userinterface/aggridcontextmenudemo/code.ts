@@ -22,12 +22,22 @@ const demoConfig: PredefinedConfig = {
     ShowAlert: false,
   },
   UserInterface: {
+    // Add the context menu items here
+    // Note: we only provide the names of the 'ShowPredicate' and 'Clicked' functions here;
+    // The actual implemetnation is in 'userFunctions' section of Adaptable Options
     ContextMenuItems: [
+      // A 'UserMenuItem' referencing the name of the Function to be called when it is clicked
+      {
+        Label: 'New Conditional Style',
+        UserMenuItemClickedFunction: 'newConditionalStyle',
+      },
+      // This 'UserMenuItem' includes a Predicate Function to decide if the item should be shown
       {
         Label: 'Float Dashboard',
         UserMenuItemClickedFunction: 'floatDashboard',
         UserMenuItemShowPredicate: 'isColumnSortable',
       },
+      // This 'UserMenuItem' includes a set of menu items which will show as a sub menu
       {
         Label: 'Set System Status',
         SubMenuItems: [
@@ -61,6 +71,9 @@ export default (columnDefs: any[], rowData: any[]) => {
     sideBar: true,
     suppressMenuHide: true,
     floatingFilter: true,
+    autoGroupColumnDef: {
+      sortable: true,
+    },
     columnTypes: {
       abColDefNumber: {},
       abColDefString: {},
@@ -75,6 +88,8 @@ export default (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Context Menu Demo',
+    // This 'showAdaptableContextMenu' function is run to decide IF the context menu should be shown
+    // The 'MenuInfo' object it receives provides the full cell / column context to assist this decision
     userInterfaceOptions: {
       showAdaptableContextMenu: (
         menuItem: AdaptableMenuItem,
@@ -91,7 +106,16 @@ export default (columnDefs: any[], rowData: any[]) => {
         return true;
       },
     },
+    // These are the actual implementations for the the the 'ShowPredicate' and 'Clicked' functions
+    // The names of the functions are provided in the ContextMenuItems property of User Interface section of Predefined config
     userFunctions: [
+      {
+        type: 'UserMenuItemClickedFunction',
+        name: 'newConditionalStyle',
+        handler() {
+          adaptableApi.conditionalStyleApi.showConditionalStylePopup();
+        },
+      },
       {
         type: 'UserMenuItemClickedFunction',
         name: 'floatDashboard',

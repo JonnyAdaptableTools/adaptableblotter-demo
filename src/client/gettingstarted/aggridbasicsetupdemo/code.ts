@@ -92,13 +92,6 @@ const columnSchema: ColDef[] = [
     editable: false,
     type: 'abColDefString',
   },
-  {
-    headerName: 'Price',
-    field: 'price',
-    filter: true,
-    editable: true,
-    type: 'abColDefNumber',
-  },
 ];
 
 // Step 3: Get your data (in the real world this will be dynamically sourced)

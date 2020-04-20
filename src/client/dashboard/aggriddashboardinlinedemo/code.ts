@@ -17,6 +17,20 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
+    Tabs: [
+      {
+        Name: 'Grid',
+        Toolbars: ['Layout', 'CellSummary', 'Alert'],
+      },
+      {
+        Name: 'Edit',
+        Toolbars: ['SmartEdit', 'BulkUpdate'],
+      },
+      {
+        Name: 'Extras',
+        Toolbars: ['Export', 'Chart'],
+      },
+    ],
     IsInline: true,
   },
 } as PredefinedConfig;
@@ -29,6 +43,9 @@ export default (columnDefs: any[], rowData: any[]) => {
     sideBar: true,
     suppressMenuHide: true,
     floatingFilter: true,
+    autoGroupColumnDef: {
+      sortable: true,
+    },
     columnTypes: {
       abColDefNumber: {},
       abColDefString: {},

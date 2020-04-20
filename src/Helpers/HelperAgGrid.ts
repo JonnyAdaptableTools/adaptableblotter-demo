@@ -882,6 +882,107 @@ export class HelperAgGrid {
     return schema;
   }
 
+  public getFTSECloseSchema(): any[] {
+    var schema = [];
+    schema.push({
+      headerName: 'Close Date',
+      field: 'CloseDate',
+      editable: true,
+      filter: true,
+      sortable: true,
+      type: 'abColDefDate',
+      valueParser: this.dateParseragGrid,
+      valueFormatter: this.shortDateFormatteragGrid,
+    });
+    schema.push({
+      headerName: 'Open',
+      field: 'Open',
+      editable: true,
+      filter: true,
+      sortable: true,
+      enableRowGroup: true,
+      type: 'abColDefNumber',
+    });
+    schema.push({
+      headerName: 'High',
+      field: 'High',
+      editable: true,
+      filter: true,
+      sortable: true,
+      enableRowGroup: true,
+      type: 'abColDefNumber',
+    });
+    schema.push({
+      headerName: 'Low',
+      field: 'Low',
+      editable: true,
+      filter: true,
+      sortable: true,
+      enableRowGroup: true,
+      type: 'abColDefNumber',
+    });
+    schema.push({
+      headerName: 'Close',
+      field: 'Close',
+      editable: true,
+      filter: true,
+      sortable: true,
+      enableRowGroup: true,
+      type: 'abColDefNumber',
+    });
+    schema.push({
+      headerName: 'High/Low Diff',
+      field: 'HighLowDifference',
+      editable: true,
+      filter: true,
+      sortable: true,
+      enableRowGroup: true,
+      type: 'abColDefNumber',
+      valueFormatter: this.fourDecimalPlaceFormatter,
+    });
+    schema.push({
+      headerName: 'Day Spread',
+      field: 'DaySpread',
+      editable: true,
+      filter: true,
+      sortable: true,
+      enableRowGroup: true,
+      type: 'abColDefNumber',
+      valueFormatter: this.fourDecimalPlaceFormatter,
+    });
+    schema.push({
+      headerName: 'Volume',
+      field: 'Volume',
+      editable: true,
+      filter: true,
+      sortable: true,
+      enableRowGroup: true,
+      type: 'abColDefNumber',
+    });
+    schema.push({
+      headerName: 'Adjusted Close',
+      field: 'AdjustedClose',
+      editable: true,
+      filter: true,
+      sortable: true,
+      enableRowGroup: true,
+      type: 'abColDefNumber',
+      valueFormatter: this.fourDecimalPlaceFormatter,
+    });
+    schema.push({
+      headerName: 'Percent Change',
+      field: 'PercentChange',
+      editable: true,
+      filter: true,
+      sortable: true,
+      enableRowGroup: true,
+      type: 'abColDefNumber',
+      valueFormatter: this.fourDecimalPlaceFormatter,
+    });
+
+    return schema;
+  }
+
   private getOrderColumnDef(): ColDef {
     return {
       headerName: 'Order Id',
@@ -1744,6 +1845,21 @@ export class HelperAgGrid {
         }
         if (row.IsValid) {
           row.IsValid = row.IsValid === 'TRUE' ? true : false;
+        }
+      }
+    }
+    return rowData;
+  }
+
+  public convertFTSEData(rowData: any) {
+    for (let i = 0; i < rowData.length; i++) {
+      let row = rowData[i];
+      if (row) {
+        if (row.CloseDate) {
+          let myDate: Date = new Date(row.CloseDate);
+          // row.CloseDate = new Date(row.CloseDate);
+          myDate.setHours(0, 0, 0, 0);
+          row.CloseDate = myDate;
         }
       }
     }

@@ -4,20 +4,11 @@ import DynamicDemoPage from '../../../src/Helpers/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/grid/aggridlayoutdemo')}
-      pageTitle={'Layout (Views) Demo'}
+      demo={import('../../../src/client/layout/aggridadvancedlayoutdemo')}
+      pageTitle={'Advanced Layout Demo'}
       description={
         <div>
-          <p>
-            Use Layouts to manage sets of column visibility and order. Layouts
-            can also include column sorting, grouping and pivoting information
-            and can save automatially when changed
-          </p>
-          <p>
-            The search and filter functions determine <b>row</b> visibility and
-            order, while layouts manage <b>column</b> visibility and order. .
-          </p>
-          <p>This example contains 5 layouts: </p>
+          <p>This example contains 5 layouts of different kinds: </p>
           <ol>
             <li>
               {' '}
@@ -71,14 +62,28 @@ export default () => {
             target="_blank"
           >
             Predefined Config
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_layoutapi_.layoutapi.html"
             target="_blank"
           >
             Adaptable API
-          </a>
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_layoutoptions_.layoutoptions.html"
+            target="_blank"
+          >
+            Layout Options
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/layout-function.md"
+            target="_blank"
+          >
+            Read Me
+          </a>{' '}
         </div>
       }
     />

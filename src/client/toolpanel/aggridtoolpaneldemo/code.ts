@@ -19,7 +19,7 @@ const demoConfig: PredefinedConfig = {
     CurrentTheme: 'dark',
   },
   Dashboard: {
-    IsFloating: true,
+    IsCollapsed: true,
     HomeToolbarTitle: 'ToolPanel Demo',
   },
 } as PredefinedConfig;
@@ -32,6 +32,9 @@ export default (columnDefs: any[], rowData: any[]) => {
     sideBar: true,
     suppressMenuHide: true,
     floatingFilter: true,
+    autoGroupColumnDef: {
+      sortable: true,
+    },
     columnTypes: {
       abColDefNumber: {},
       abColDefString: {},
