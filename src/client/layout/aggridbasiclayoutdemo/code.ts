@@ -16,7 +16,12 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleToolbars: ['Layout'],
+    Tabs: [
+      {
+        Name: 'Demo Toolbar',
+        Toolbars: ['Layout', 'Export', 'CellSummary'],
+      },
+    ],
   },
   CustomSort: {
     CustomSorts: [
@@ -53,6 +58,13 @@ const demoConfig: PredefinedConfig = {
     Layouts: [
       {
         Name: 'Simple Layout',
+        ColumnSorts: [
+          {
+            Column: 'ShipName',
+            SortOrder: 'Ascending',
+          },
+          { Column: 'ShipVia', SortOrder: 'Descending' },
+        ],
         Columns: [
           'OrderId',
           'OrderDate',
@@ -68,77 +80,6 @@ const demoConfig: PredefinedConfig = {
           'OrderCost',
           'PackageCost',
         ],
-      },
-      {
-        Name: 'Sorting Layout',
-        ColumnSorts: [
-          {
-            Column: 'ShipName',
-            SortOrder: 'Ascending',
-          },
-          { Column: 'ShipVia', SortOrder: 'Descending' },
-        ],
-        Columns: [
-          'OrderId',
-          'ShipVia',
-          'Freight',
-          'ShipName',
-          'ShipCountry',
-          'ShippedDate',
-          'CustomerReference',
-        ],
-      },
-      {
-        Columns: [
-          'ShipVia',
-          'CustomerReference',
-          'ContactName',
-          'InvoicedCost',
-          'ChangeLastOrder',
-          'OrderCost',
-          'PackageCost',
-          'Employee',
-          'ShipCountry',
-        ],
-        GroupedColumns: ['Employee', 'ShipCountry'],
-        Name: 'Grouping Layout',
-      },
-      {
-        Columns: [
-          'CustomerReference',
-          'ContactName',
-          'Employee',
-          'ShipCountry',
-        ],
-        GroupedColumns: ['Employee'],
-        PivotDetails: {
-          PivotColumns: ['ShipVia'],
-          //  AggregationColumns: ['InvoicedCost', 'ItemCost'],
-          AggregationColumns: ['ItemCost'],
-        },
-        Name: 'Pivot Layout',
-      },
-      {
-        Columns: [
-          'ShipVia',
-          'Comments',
-          'CustomerReference',
-          'Avg Item Cost',
-          'ContactName',
-          'InvoicedCost',
-          'OrderCost',
-          'Employee',
-          'ShipCountry',
-        ],
-        ColumnSorts: [
-          {
-            Column: 'ShipName',
-            SortOrder: 'Ascending',
-          },
-          { Column: 'ShipVia', SortOrder: 'Descending' },
-        ],
-        GroupedColumns: ['Employee'],
-        Name: 'Advanced Layout',
       },
     ],
   },
@@ -168,7 +109,7 @@ export default (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Layout Demo',
+    adaptableId: 'Basic Layout Demo',
     predefinedConfig: demoConfig,
     layoutOptions: {
       autoSizeColumnsInDefaultLayout: true,

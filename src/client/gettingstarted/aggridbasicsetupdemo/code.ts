@@ -92,13 +92,6 @@ const columnSchema: ColDef[] = [
     editable: false,
     type: 'abColDefString',
   },
-  {
-    headerName: 'Price',
-    field: 'price',
-    filter: true,
-    editable: true,
-    type: 'abColDefNumber',
-  },
 ];
 
 // Step 3: Get your data (in the real world this will be dynamically sourced)
@@ -127,9 +120,6 @@ export default () => {
     suppressAggFuncInHeader: true,
     suppressMenuHide: true,
     floatingFilter: true,
-    autoGroupColumnDef: {
-      sortable: true,
-    },
     columnTypes: {
       // not strictly required but very useful for column data type identification
       abColDefNumber: {},

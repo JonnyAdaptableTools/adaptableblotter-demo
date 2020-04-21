@@ -309,6 +309,12 @@ export default () => {
           including: <b>End User</b>, <b>Team</b>, <b>Universal</b>,{' '}
           <b>Developer</b> and <b>Trial</b>.
           <br />
+          <b>
+            AdapTable licence does not include the underlying grid's licence, so
+            if you plan to use AdapTable with a Grid that requires a commercial
+            licence, you must pay for that separately.
+          </b>
+          <br />
           To find out more about various options on offer and how to join the
           AdapTable community, please{' '}
           <a href="mailto:sales@adaptabletools.com">

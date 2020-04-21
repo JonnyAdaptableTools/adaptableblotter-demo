@@ -16,12 +16,55 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleButtons: ['UpdatedRow'],
+    Tabs: [
+      {
+        Name: 'Demo Toolbar',
+        Toolbars: ['Layout', 'Export', 'CellSummary'],
+      },
+    ],
   },
-  UpdatedRow: {
-    EnableUpdatedRow: true,
-    JumpToRow: true,
-    NeutralColor: 'lightblue',
+  CustomSort: {
+    CustomSorts: [
+      {
+        ColumnId: 'ShipVia',
+        SortedValues: ['Speedy Express', 'United Package', 'Federal Shipping'],
+      },
+    ],
+  },
+  Layout: {
+    CurrentLayout: 'Grouped',
+    Layouts: [
+      {
+        Columns: [
+          'ShipVia',
+          'CustomerReference',
+          'ContactName',
+          'InvoicedCost',
+          'ChangeLastOrder',
+          'OrderCost',
+          'PackageCost',
+          'Employee',
+          'ShipCountry',
+        ],
+        GroupedColumns: ['Employee'],
+        Name: 'Grouped',
+      },
+      {
+        Columns: [
+          'ShipVia',
+          'CustomerReference',
+          'ContactName',
+          'InvoicedCost',
+          'ChangeLastOrder',
+          'OrderCost',
+          'PackageCost',
+          'Employee',
+          'ShipCountry',
+        ],
+        GroupedColumns: ['ShipVia'],
+        Name: 'Sorted Grouped',
+      },
+    ],
   },
 } as PredefinedConfig;
 
@@ -30,9 +73,9 @@ export default (columnDefs: any[], rowData: any[]) => {
     columnDefs,
     rowData,
     enableRangeSelection: true,
-    sideBar: true,
     suppressMenuHide: true,
     floatingFilter: true,
+    rowGroupPanelShow: 'always',
     autoGroupColumnDef: {
       sortable: true,
     },
@@ -47,10 +90,13 @@ export default (columnDefs: any[], rowData: any[]) => {
   };
 
   const adaptableOptions: AdaptableOptions = {
-    primaryKey: 'tradeId',
+    primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Updated Row Demo',
+    adaptableId: 'Grouped Layout Demo',
     predefinedConfig: demoConfig,
+    layoutOptions: {
+      includeOpenedRowGroups: true,
+    },
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
   adaptableApi = Adaptable.init(adaptableOptions);

@@ -16,12 +16,32 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleButtons: ['UpdatedRow'],
+    Tabs: [
+      {
+        Name: 'Demo Toolbar',
+        Toolbars: ['Layout', 'Export', 'CellSummary'],
+      },
+    ],
   },
-  UpdatedRow: {
-    EnableUpdatedRow: true,
-    JumpToRow: true,
-    NeutralColor: 'lightblue',
+  Layout: {
+    CurrentLayout: 'Simple Layout',
+    Layouts: [
+      {
+        Name: 'Simple Layout',
+        Columns: [
+          'OrderId',
+          'OrderDate',
+          'ItemCost',
+          'ItemCount',
+          'CustomerReference',
+          'CompanyName',
+          'ContactName',
+          'InvoicedCost',
+          'OrderCost',
+          'PackageCost',
+        ],
+      },
+    ],
   },
 } as PredefinedConfig;
 
@@ -30,9 +50,10 @@ export default (columnDefs: any[], rowData: any[]) => {
     columnDefs,
     rowData,
     enableRangeSelection: true,
-    sideBar: true,
     suppressMenuHide: true,
     floatingFilter: true,
+    sideBar: true,
+    rowGroupPanelShow: 'always',
     autoGroupColumnDef: {
       sortable: true,
     },
@@ -47,9 +68,15 @@ export default (columnDefs: any[], rowData: any[]) => {
   };
 
   const adaptableOptions: AdaptableOptions = {
-    primaryKey: 'tradeId',
+    primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Updated Row Demo',
+    adaptableId: 'Auto Save Layout Demo',
+    layoutOptions: {
+      autoSaveLayouts: false,
+    },
+    userInterfaceOptions: {
+      showAdaptableToolPanel: true,
+    },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
