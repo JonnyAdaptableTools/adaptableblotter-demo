@@ -613,6 +613,11 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'AdapTable fires an event each time the cell or row selection changes. This includes full detials of the cells and rows selected.',
           },
+          {
+            Name: 'Fixed Column',
+            Link: '/aggridfeatures/aggridfixedcolumndemo',
+            Description: 'Create some columns to be fixed in place',
+          },
         ],
       },
       {

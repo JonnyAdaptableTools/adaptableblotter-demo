@@ -17,10 +17,9 @@ export default () => {
             enter a new value. All selected cells will update to the new value.
           </p>
           <p>
-            Turn on Bulk Update in the Bulk Update toolbar and select cells in
-            any editable column (e.g. 'Employee'). Then use the Bulk Update
-            dropdown to change all the cells to the new value by clicking the
-            tick.
+            Try it out: select cells in any editable column (e.g. 'Employee'),
+            and then use the dropdown in the Bulk Update Toolbar to change all
+            the cells to a new value that you can select.
           </p>
         </div>
       }
