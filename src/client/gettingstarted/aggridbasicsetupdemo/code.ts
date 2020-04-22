@@ -76,7 +76,8 @@ const demoConfig: PredefinedConfig = {
   },
 } as PredefinedConfig;
 
-// Step 2: Create the ag-Grid Column Schema
+// Step 2: Create any formmaters the ag-Grid Column Schema
+
 const columnSchema: ColDef[] = [
   {
     headerName: 'Make',
@@ -96,7 +97,11 @@ const columnSchema: ColDef[] = [
 
 // Step 3: Get your data (in the real world this will be dynamically sourced)
 const rowdada: any[] = [
-  { make: 'Toyota', model: 'Celica', price: 35000 },
+  {
+    make: 'Toyota',
+    model: 'Celica',
+    price: 35000,
+  },
   { make: 'Toyota', model: 'Yaris', price: 40000 },
   { make: 'Toyota', model: 'Corolla', price: 28000 },
   { make: 'Ford', model: 'Mondeo', price: 32000 },

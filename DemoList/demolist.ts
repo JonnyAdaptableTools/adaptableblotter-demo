@@ -26,6 +26,12 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Showing how to create a basic instance of AdapTable using ag-Grid.',
           },
           {
+            Name: 'Set Up Columns',
+            Link: '/gettingstarted/aggridsetupcolumnsdemo',
+            Description:
+              'Showing how to set up columns in AdapTable and ag-Grid.',
+          },
+          {
             Name: 'No Config',
             Link: '/gettingstarted/aggridnoconfigdemo',
             Description:
