@@ -53,6 +53,16 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
+  GradientColumn: {
+    GradientColumns: [
+      {
+        ColumnId: 'bidOfferSpread',
+        PositiveValue: 0.5,
+        PositiveColor: '#006400',
+        BaseValue: 0.1,
+      },
+    ],
+  },
 } as PredefinedConfig;
 
 export default (columnDefs: any[], rowData: any[]) => {
