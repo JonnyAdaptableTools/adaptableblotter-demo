@@ -36,7 +36,13 @@ export default () => {
       description={
         <div>
           <h4>Events</h4>
-          <p>Adaptable has many events. </p>
+          <p>AdapTable has many events. </p>
+          <p>
+            They use{' '}
+            <a href="https://www.finos.org/fdc3" target="_blank">
+              FDC3 syntax
+            </a>{' '}
+          </p>
           <p>These include:</p>
           <ul>{demoLinks}</ul>
         </div>

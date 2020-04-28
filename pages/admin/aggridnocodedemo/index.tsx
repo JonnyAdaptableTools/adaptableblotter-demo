@@ -10,7 +10,7 @@ export default () => {
         <div>
           <p>
             The No Code Plugin allows you to create an AdapTable instance at
-            runtime from any JSON (and soon any Excel) file that you give it.
+            runtime from any JSON or Excel file that you give it.
           </p>
           <p>
             It will dynamically provide a fully functional AdapTable including
@@ -57,6 +57,13 @@ export default () => {
             target="_blank"
           >
             No Code Example Project
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://github.com/AdaptableTools/adaptable/tree/master/packages/plugins/nocode-aggrid"
+            target="_blank"
+          >
+            No Code Plugin
           </a>{' '}
           |{' '}
           <a href="https://youtu.be/2vpPKlh898k" target="_blank">
