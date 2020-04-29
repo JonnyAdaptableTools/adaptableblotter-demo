@@ -89,6 +89,14 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
+  UserInterface: {
+    PermittedValuesColumns: [
+      {
+        ColumnId: 'LastUpdatedTime',
+        PermittedValues: [''],
+      },
+    ],
+  },
 } as PredefinedConfig;
 
 export default (columnDefs: any[], rowData: any[]) => {

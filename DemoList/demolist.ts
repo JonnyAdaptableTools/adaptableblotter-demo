@@ -553,6 +553,12 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'Create an AdapTable instance dynamically from a JSON or Excel file that you provide; your AdapTable instance will include the full range of functions and all the advanced functionality like state management and audit.',
           },
+          {
+            Name: 'Team Sharing',
+            Link: '/admin/aggridteamsharingdemo',
+            Description:
+              'Dynamically share Adaptable Objects you create at run-time with other team members and colleagues.',
+          },
         ],
       },
       {

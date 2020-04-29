@@ -50,7 +50,7 @@ export default () => {
             target="_blank"
           >
             Adaptable API
-          </a>
+          </a>{' '}
           |{' '}
           <a
             href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/adavanced-search-function.md"

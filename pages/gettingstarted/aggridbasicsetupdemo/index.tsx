@@ -28,10 +28,10 @@ export default () => {
             </a>
             , or{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_configserveroptions_.configserveroptions.html"
+              href="https://api.adaptabletools.com/modules/_src_adaptableoptions_stateoptions_.html"
               target="_blank"
             >
-              Config Server
+              State Options
             </a>
             ; nor have we provided Adaptable with{' '}
             <a href="../admin/aggridentitlementsdemo" target="_blank">

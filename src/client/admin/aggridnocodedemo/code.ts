@@ -12,6 +12,7 @@ import nocode from '@adaptabletools/adaptable-plugin-nocode-aggrid';
 import {
   AdaptableOptions,
   PredefinedConfig,
+  AdaptableApi,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -22,11 +23,8 @@ export default () => {
     primaryKey: 'tradeId',
     userName: 'Demo User',
     adaptableId: 'Nocode Plugin Basic Demo',
-
     predefinedConfig: {} as PredefinedConfig,
-
     plugins: [
-      //  finance(),
       nocode({
         onInit: adaptableOptions => {
           adaptableOptions.vendorGrid.suppressFieldDotNotation = true;
@@ -36,7 +34,7 @@ export default () => {
     ],
   };
 
-  Adaptable.initLazy(adaptableOptions).then(api => {
+  Adaptable.initLazy(adaptableOptions).then((api: AdaptableApi) => {
     console.log(api, '!');
   });
 
