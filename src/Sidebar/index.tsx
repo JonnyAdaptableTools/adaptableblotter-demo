@@ -71,7 +71,7 @@ const Sidebar = () => {
   };
 
   useLayoutEffect(() => {
-    const expanded = globalThis.localStorage
+    const expanded = window.localStorage
       ? JSON.parse(localStorage.getItem('expanded') || 'true')
       : true;
 
