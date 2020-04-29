@@ -197,7 +197,7 @@ export class HelperAgGrid {
     return adaptableOptions;
   }
 
-  public getBasicNorthwindColumnSchema(): any[] {
+  public getBasicNorthwindColumnSchema(): ColDef[] {
     var schema = [];
     schema.push(this.getOrderColumnDef());
     schema.push(this.getCustRefDef());

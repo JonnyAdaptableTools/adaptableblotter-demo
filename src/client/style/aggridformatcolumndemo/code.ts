@@ -20,6 +20,25 @@ const demoConfig: PredefinedConfig = {
   },
   FormatColumn: {
     FormatColumns: [
+      // Set a Style for OrderId
+      {
+        ColumnId: 'OrderId',
+        Style: {
+          BackColor: '#d4fb79',
+          ForeColor: '#8b0000',
+        },
+      },
+      // Set a Time-based Display Format for LastUpdatedTime
+      {
+        ColumnId: 'LastUpdatedTime',
+        DisplayFormat: {
+          Formatter: 'DateFormatter',
+          Options: {
+            Pattern: 'HH:mm:ss',
+          },
+        },
+      },
+      // Set both a Style and a (Date-based) Display Format for OrderDate
       {
         ColumnId: 'OrderDate',
         Style: {
@@ -27,12 +46,45 @@ const demoConfig: PredefinedConfig = {
           FontSize: 'XSmall',
           FontStyle: 'Italic',
         },
+        DisplayFormat: {
+          Formatter: 'DateFormatter',
+          Options: {
+            Pattern: 'yyyyMMdd',
+          },
+        },
       },
+      // Set a Display Format of negative parentheses for ChangeLastOrder
       {
-        ColumnId: 'OrderId',
-        Style: {
-          BackColor: '#d4fb79',
-          ForeColor: '#8b0000',
+        ColumnId: 'ChangeLastOrder',
+        DisplayFormat: {
+          Formatter: 'NumberFormatter',
+          Options: {
+            Parentheses: true,
+          },
+        },
+      },
+      // Set a Display Format of £ and 2 dp for InvoicedCost
+      {
+        ColumnId: 'InvoicedCost',
+        DisplayFormat: {
+          Formatter: 'NumberFormatter',
+          Options: {
+            FractionDigits: 2,
+            Prefix: '£',
+          },
+        },
+      },
+      // Set a Display Format of $ with 'AUD' suffix and space for integer separator for OrderCost
+      {
+        ColumnId: 'OrderCost',
+        DisplayFormat: {
+          Formatter: 'NumberFormatter',
+          Options: {
+            FractionDigits: 2,
+            IntegerSeparator: ' ',
+            Prefix: '$',
+            Suffix: '(AUD)',
+          },
         },
       },
     ],
