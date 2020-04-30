@@ -41,7 +41,10 @@ const demoConfig: PredefinedConfig = {
       },
       {
         ColumnExpression:
-          'print("(20% VAT): $tax", {tax: (Col("OrderCost")*0.2).toFixed(2)} )',
+          //  'print("(20% VAT): $tax", {tax: (Col("OrderCost")*0.2).toFixed(2)} )',
+          'Col("OrderCost")*0.2',
+
+        //(20% VAT): 94.93
         ColumnId: 'Tax',
       },
     ],
@@ -76,6 +79,21 @@ const demoConfig: PredefinedConfig = {
               Filters: ['Negative'],
             },
           ],
+        },
+      },
+    ],
+  },
+  FormatColumn: {
+    FormatColumns: [
+      {
+        ColumnId: 'Tax',
+        DisplayFormat: {
+          Formatter: 'NumberFormatter',
+          Options: {
+            Prefix: '$',
+            Suffix: '(20% VAT)',
+            FractionDigits: 2,
+          },
         },
       },
     ],

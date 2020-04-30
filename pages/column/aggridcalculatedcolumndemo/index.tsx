@@ -47,8 +47,8 @@ export default () => {
             </li>
             <li>
               <b>Tax</b> - (a string) which returns the VAT (calculated at 20%)
-              on <i>OrderCost</i> and formats it so that it returns 2 decimal
-              places.
+              on <i>OrderCost</i> and to which we've added a{' '}
+              <a href="../style/aggridformatcolumndemo">Display Format</a>{' '}
             </li>
           </ul>{' '}
           <p>
