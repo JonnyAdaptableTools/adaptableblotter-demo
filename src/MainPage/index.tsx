@@ -98,40 +98,74 @@ export default ({
         >
           <Logo dark={darkTheme} />
           <div style={{ flex: 1 }}></div>
-          <input
+          <div
             style={{
-              padding: 'var(--demo-space-2)',
-              minWidth: '15rem',
-              border: '1px solid var(--ab-color-inputborder)',
-              color: 'var(--ab-color-inputcolor)',
-              borderRadius: 'var(--ab__border-radius)',
-
-              background: 'var(--ab-color-defaultbackground)',
-            }}
-            type="text"
-            id="searchInput"
-            placeholder="Search AdapTable Demos"
-          />{' '}
-          <button
-            title="Clear all state from all demos to return to original predefined config"
-            style={{
-              padding: 'var(--demo-space-2) var(--demo-space-2)',
-              cursor: 'pointer',
-              fontSize: 'var(--sidebar_font-size)',
-              // marginBottom: 'var(--demo-space-1)',
-              marginLeft: 'var(--demo-space-2)',
-              background: 'var(--ab-cmp-button-background)',
-              borderRadius: 'var(--ab-cmp-button-border-radius)',
-              color: 'var(--ab-color-text-on-defaultbackground)',
-              border: '1px solid var(--ab-color-inputborder)',
-            }}
-            onClick={() => {
-              localStorage.clear();
-              window.location.href = window.location.href;
+              alignItems: 'flex-end',
+              display: 'flex',
+              flexFlow: 'column',
             }}
           >
-            Clear Demos State
-          </button>
+            <div style={{ marginBottom: 'var(--demo-space-2)' }}>
+              <a
+                style={{
+                  padding: 'var(--demo-space-2)',
+                  color: 'white',
+                  display: 'inline-block',
+                  borderRadius: 'var(--ab__border-radius)',
+                  background: 'var(--demo-color-blue)',
+                  textAlign: 'center',
+                  minWidth: '9rem',
+                  fontWeight: 'bold',
+                }}
+                href="https://adaptabletools.com/book-demo"
+              >
+                Book a Demo
+              </a>
+            </div>
+            <div
+              style={{
+                display: 'flex',
+                flexFlow: 'row',
+              }}
+            >
+              <input
+                style={{
+                  padding: 'var(--demo-space-2)',
+                  minWidth: '15rem',
+                  border: '1px solid var(--demo-color-washedblue)',
+                  color: 'var(--ab-color-inputcolor)',
+                  borderRadius: 'var(--ab__border-radius)',
+
+                  background: 'var(--demo-color-washedblue)',
+                }}
+                type="text"
+                id="searchInput"
+                placeholder="Search AdapTable Demos"
+              />{' '}
+              <button
+                title="Clear all state from all demos to return to original predefined config"
+                style={{
+                  padding: 'var(--demo-space-2) var(--demo-space-2)',
+                  cursor: 'pointer',
+                  textAlign: 'center',
+                  minWidth: '9rem',
+                  fontSize: 'var(--sidebar_font-size)',
+                  // marginBottom: 'var(--demo-space-1)',
+                  marginLeft: 'var(--demo-space-2)',
+                  background: 'var(--demo-color-washedblue)',
+                  borderRadius: 'var(--ab__border-radius)',
+                  color: 'var(--ab-color-text-on-defaultbackground)',
+                  border: '1px solid var(--ab-color-inputborder)',
+                }}
+                onClick={() => {
+                  localStorage.clear();
+                  window.location.href = window.location.href;
+                }}
+              >
+                Clear State
+              </button>
+            </div>
+          </div>
         </div>
 
         {description ? (
