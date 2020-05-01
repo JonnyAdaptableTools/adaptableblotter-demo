@@ -94,7 +94,11 @@ export default () => {
             target="_blank"
           >
             Team Sharing Options
-          </a>
+          </a>{' '}
+          |{' '}
+          <a href="https://youtu.be/bPb1PQtyjlQ" target="_blank">
+            Team Sharing Video
+          </a>{' '}
         </div>
       }
     />

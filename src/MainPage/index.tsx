@@ -118,6 +118,7 @@ export default ({
                   fontWeight: 'bold',
                 }}
                 href="https://adaptabletools.com/book-demo"
+                target="_blank"
               >
                 Book a Demo
               </a>
