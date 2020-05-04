@@ -436,7 +436,7 @@ export function getDemoPageStructure(): DemoPageStructure {
               'You can select which Function Buttons you wish to see in the Dashboard Header',
           },
           {
-            Name: 'Dashboard Visbility',
+            Name: 'Dashboard Visibility',
             Link: '/dashboard/aggriddashboardvisibilitydemo',
             Description:
               'Select whether the Dasbhoard is visible, minimised (so only a button is shown) or hidden altogether.',
