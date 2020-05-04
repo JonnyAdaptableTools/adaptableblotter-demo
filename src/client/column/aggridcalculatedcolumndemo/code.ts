@@ -86,6 +86,33 @@ const demoConfig: PredefinedConfig = {
   FormatColumn: {
     FormatColumns: [
       {
+        ColumnId: 'Avg Item Cost',
+        DisplayFormat: {
+          Formatter: 'NumberFormatter',
+          Options: {
+            FractionDigits: 2,
+          },
+        },
+      },
+      {
+        ColumnId: 'Highest Cost',
+        DisplayFormat: {
+          Formatter: 'NumberFormatter',
+          Options: {
+            FractionDigits: 2,
+          },
+        },
+      },
+      {
+        ColumnId: 'Profit',
+        DisplayFormat: {
+          Formatter: 'NumberFormatter',
+          Options: {
+            FractionDigits: 4,
+          },
+        },
+      },
+      {
         ColumnId: 'Tax',
         DisplayFormat: {
           Formatter: 'NumberFormatter',

@@ -9,8 +9,8 @@ export default () => {
       description={
         <div>
           <p>
-            Format Column allow you to style an entire column. Unlike
-            Conditional Styles, the Format Column style is <b>always</b>{' '}
+            The Format Column Function allows you to style an entire column.
+            Unlike Conditional Styles, the Format Column style is <b>always</b>{' '}
             applied, irrespective of the data in the cell.
           </p>
           <p>
@@ -88,21 +88,25 @@ export default () => {
             href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/format-column-function.md"
             target="_blank"
           >
-            Format Function Read Me
+            Format Column Read Me
           </a>{' '}
           |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_formatcolumnstate_.formatcolumnstate.html"
             target="_blank"
           >
-            Predefined Config
+            Format Column Predefined Config
           </a>{' '}
           |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_formatcolumnapi_.formatcolumnapi.html"
             target="_blank"
           >
-            Adaptable API
+            Format Column API
+          </a>
+          |{' '}
+          <a href="https://youtu.be/tYTGQ1ufhbc" target="_blank">
+            Format Column Video
           </a>
         </div>
       }

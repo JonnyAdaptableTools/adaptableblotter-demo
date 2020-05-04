@@ -110,18 +110,29 @@ export default () => {
       helpResources={
         <div>
           <a
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/action-column-function.md"
+            target="_blank"
+          >
+            Action Column Read Me
+          </a>{' '}
+          |{' '}
+          <a
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_actioncolumnstate_.actioncolumnstate.html"
             target="_blank"
           >
-            Predefined Config
+            Action Column Predefined Config
           </a>{' '}
           |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_actioncolumnapi_.actioncolumnapi.html"
             target="_blank"
           >
-            Adaptable API
-          </a>{' '}
+            Action Column API
+          </a>
+          |{' '}
+          <a href="https://youtu.be/y0cDvtdmSKM" target="_blank">
+            Action Column Video
+          </a>
           |{' '}
           <a
             href="https://api.adaptabletools.com/modules/_src_adaptableoptions_userfunctions_.html"
