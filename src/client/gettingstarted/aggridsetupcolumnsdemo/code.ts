@@ -24,22 +24,6 @@ const demoConfig: PredefinedConfig = {
   },
 } as PredefinedConfig;
 
-// Create any formmaters required
-const shortDateFormatter = (params: any) => {
-  return params.value
-    ? new Intl.DateTimeFormat('en-GB').format(params.value)
-    : '';
-};
-
-const twoDecimalPlaceFormatter = (params: any) => {
-  return params.value
-    ? params.value.toLocaleString('en-US', {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2,
-      })
-    : null;
-};
-
 // Create columns referencing the formatters
 const columnSchema: ColDef[] = [
   {
@@ -57,12 +41,19 @@ const columnSchema: ColDef[] = [
     type: 'abColDefString',
   },
   {
-    headerName: 'Efficiency',
-    field: 'efficiency',
+    headerName: 'Miles To Gallon',
+    field: 'milesToGallon',
     filter: true,
     editable: false,
     type: 'abColDefNumber',
-    valueFormatter: twoDecimalPlaceFormatter,
+    valueFormatter: (params: any) => {
+      return params.value
+        ? params.value.toLocaleString('en-US', {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+          })
+        : null;
+    },
   },
   {
     headerName: 'First Used',
@@ -70,16 +61,38 @@ const columnSchema: ColDef[] = [
     filter: true,
     editable: false,
     type: 'abColDefDate',
-    valueFormatter: shortDateFormatter,
+    valueFormatter: (params: any) => {
+      return params.value
+        ? new Intl.DateTimeFormat('en-GB').format(params.value)
+        : '';
+    },
   },
   {
-    headerName: 'Rating',
-    field: 'Rating',
+    headerName: 'Energy Rating',
+    field: 'EnergyRating',
     enableValue: true,
     editable: true,
     sortable: true,
     //@ts-ignore
     cellRenderer: RatingRenderer,
+    type: 'abColDefNumber',
+    filter: true,
+    enablePivot: true,
+    resizable: true,
+  },
+  {
+    headerName: 'Efficency Rating',
+    field: 'EfficencyRating',
+    enableValue: true,
+    editable: true,
+    sortable: true,
+    valueFormatter: (params: any) => {
+      let text = '';
+      for (var i = 0; i < params.value; i++) {
+        text += '*';
+      }
+      return text;
+    },
     type: 'abColDefNumber',
     filter: true,
     enablePivot: true,
@@ -93,80 +106,90 @@ const rowdada: any[] = [
     model: 'Celica',
     price: 35000,
     firstUsed: new Date(2017, 11, 4),
-    efficiency: 21.345676,
-    Rating: 1,
+    milesToGallon: 21.345676,
+    EnergyRating: 1,
+    EfficencyRating: 1,
   },
   {
     make: 'Toyota',
     model: 'Yaris',
     price: 40000,
     firstUsed: new Date(2013, 1, 15),
-    efficiency: 98.32432423,
-    Rating: 3,
+    milesToGallon: 29.32432423,
+    EnergyRating: 3,
+    EfficencyRating: 3,
   },
   {
     make: 'Toyota',
     model: 'Corolla',
     price: 28000,
     firstUsed: new Date(2017, 6, 9),
-    efficiency: 72.9032523473287,
-    Rating: 4,
+    milesToGallon: 32.9032523473287,
+    EnergyRating: 4,
+    EfficencyRating: 4,
   },
   {
     make: 'Ford',
     model: 'Mondeo',
     price: 32000,
     firstUsed: new Date(2009, 10, 2),
-    efficiency: 78.247893473289,
-    Rating: 2,
+    milesToGallon: 28.247893473289,
+    EnergyRating: 2,
+    EfficencyRating: 2,
   },
   {
     make: 'Ford',
     model: 'Fiesta',
     price: 35000,
     firstUsed: new Date(2018, 8, 12),
-    efficiency: 46.0001,
-    Rating: 5,
+    milesToGallon: 34.0001,
+    EnergyRating: 5,
+    EfficencyRating: 5,
   },
   {
     make: 'Ford',
     model: 'Focus',
     price: 26750,
     firstUsed: new Date(2017, 3, 3),
-    efficiency: 31.2432432423,
-    Rating: 1,
+    milesToGallon: 31.2432432423,
+    EnergyRating: 1,
+    EfficencyRating: 1,
   },
   {
     make: 'Ford',
     model: 'Galaxy',
     price: 41000,
     firstUsed: new Date(2015, 4, 14),
-    efficiency: 15.29432404,
-    Rating: 3,
+    milesToGallon: 29.29432404,
+    EnergyRating: 3,
+    EfficencyRating: 3,
   },
   {
     make: 'Porsche',
     model: 'Boxter',
     price: 72500,
     firstUsed: new Date(2016, 1, 28),
-    efficiency: 72.29580292,
-    Rating: 4,
+    milesToGallon: 32.29580292,
+    EnergyRating: 4,
+    EfficencyRating: 4,
   },
   {
     make: 'Porsche',
     model: 'Mission',
     price: 81000,
     firstUsed: new Date(2008, 10, 7),
-    efficiency: 145.7822957,
-    Rating: 5,
+    milesToGallon: 35.7822957,
+    EnergyRating: 5,
+    EfficencyRating: 5,
   },
   {
     make: 'Mitsubbishi',
     model: 'Outlander',
     price: 97800,
     firstUsed: new Date(2017, 11, 14),
-    efficiency: 19.224309,
-    Rating: 5,
+    milesToGallon: 19.224309,
+    EnergyRating: 5,
+    EfficencyRating: 5,
   },
 ];
 
@@ -204,7 +227,7 @@ export default () => {
 
 /*
 The Cell Render for Rating.
-We provide implementations for the init and getGuid methods.
+We provide implementations for the init and getGui methods.
 */
 function RatingRenderer() {}
 RatingRenderer.prototype.init = function(params: any): any {

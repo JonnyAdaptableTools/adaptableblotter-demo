@@ -38,7 +38,12 @@ export default () => {
           <p>
             AdapTable will recognise when either of these are being used to
             format the data and will allow you still to filter the column on the
-            raw (i.e. underlying) values.
+            raw (i.e. underlying) values (e.g. in the quick filter bar).
+          </p>
+          <p>
+            The only difference is that when a Value Formatter is used the{' '}
+            <i>Display Value</i> is shown in the Filter dropdown, but for a Cell
+            Renderer the <i>raw value</i> is displayed.
           </p>
           <p>
             Note: AdapTable Functions like{' '}
@@ -54,8 +59,8 @@ export default () => {
           </p>
           <p>
             In this demo we have created value formatters for the{' '}
-            <b>Efficiency</b> and <b>First Used</b> columns and a Cell Renderer
-            for the <b>Rating</b> column.
+            <b>Efficiency</b>, <b>First Used</b> and <b>Efficiency Rating</b>{' '}
+            columns and a Cell Renderer for the <b>Energy Rating</b> column.
           </p>
           <p>
             Note also how we pass in the <b>columnTypes</b> array to GridOptions
