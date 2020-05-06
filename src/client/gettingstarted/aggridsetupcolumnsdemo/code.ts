@@ -22,6 +22,30 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
+  FormatColumn: {
+    FormatColumns: [
+      {
+        ColumnId: 'price',
+        CellAlignment: 'Right',
+        DisplayFormat: {
+          Formatter: 'NumberFormatter',
+          Options: {
+            IntegerSeparator: ',',
+          },
+        },
+      },
+      {
+        ColumnId: 'firstBought',
+        CellAlignment: 'Center',
+        DisplayFormat: {
+          Formatter: 'DateFormatter',
+          Options: {
+            Pattern: 'yyyyMMdd',
+          },
+        },
+      },
+    ],
+  },
 } as PredefinedConfig;
 
 // Create columns referencing the formatters
@@ -39,6 +63,13 @@ const columnSchema: ColDef[] = [
     filter: true,
     editable: false,
     type: 'abColDefString',
+  },
+  {
+    headerName: 'Price',
+    field: 'price',
+    filter: true,
+    editable: false,
+    type: 'abColDefNumber',
   },
   {
     headerName: 'Miles To Gallon',
@@ -66,6 +97,13 @@ const columnSchema: ColDef[] = [
         ? new Intl.DateTimeFormat('en-GB').format(params.value)
         : '';
     },
+  },
+  {
+    headerName: 'First Bought',
+    field: 'firstBought',
+    filter: true,
+    editable: false,
+    type: 'abColDefDate',
   },
   {
     headerName: 'Energy Rating',
@@ -100,12 +138,13 @@ const columnSchema: ColDef[] = [
   },
 ];
 
-const rowdada: any[] = [
+const rowdata: any[] = [
   {
     make: 'Toyota',
     model: 'Celica',
     price: 35000,
     firstUsed: new Date(2017, 11, 4),
+    firstBought: new Date(2017, 11, 4),
     milesToGallon: 21.345676,
     EnergyRating: 1,
     EfficencyRating: 1,
@@ -115,6 +154,7 @@ const rowdada: any[] = [
     model: 'Yaris',
     price: 40000,
     firstUsed: new Date(2013, 1, 15),
+    firstBought: new Date(2013, 1, 15),
     milesToGallon: 29.32432423,
     EnergyRating: 3,
     EfficencyRating: 3,
@@ -124,6 +164,7 @@ const rowdada: any[] = [
     model: 'Corolla',
     price: 28000,
     firstUsed: new Date(2017, 6, 9),
+    firstBought: new Date(2017, 6, 9),
     milesToGallon: 32.9032523473287,
     EnergyRating: 4,
     EfficencyRating: 4,
@@ -133,6 +174,7 @@ const rowdada: any[] = [
     model: 'Mondeo',
     price: 32000,
     firstUsed: new Date(2009, 10, 2),
+    firstBought: new Date(2009, 10, 2),
     milesToGallon: 28.247893473289,
     EnergyRating: 2,
     EfficencyRating: 2,
@@ -142,6 +184,7 @@ const rowdada: any[] = [
     model: 'Fiesta',
     price: 35000,
     firstUsed: new Date(2018, 8, 12),
+    firstBought: new Date(2018, 8, 12),
     milesToGallon: 34.0001,
     EnergyRating: 5,
     EfficencyRating: 5,
@@ -151,6 +194,7 @@ const rowdada: any[] = [
     model: 'Focus',
     price: 26750,
     firstUsed: new Date(2017, 3, 3),
+    firstBought: new Date(2017, 3, 3),
     milesToGallon: 31.2432432423,
     EnergyRating: 1,
     EfficencyRating: 1,
@@ -160,6 +204,7 @@ const rowdada: any[] = [
     model: 'Galaxy',
     price: 41000,
     firstUsed: new Date(2015, 4, 14),
+    firstBought: new Date(2015, 4, 14),
     milesToGallon: 29.29432404,
     EnergyRating: 3,
     EfficencyRating: 3,
@@ -169,6 +214,7 @@ const rowdada: any[] = [
     model: 'Boxter',
     price: 72500,
     firstUsed: new Date(2016, 1, 28),
+    firstBought: new Date(2016, 1, 28),
     milesToGallon: 32.29580292,
     EnergyRating: 4,
     EfficencyRating: 4,
@@ -178,6 +224,7 @@ const rowdada: any[] = [
     model: 'Mission',
     price: 81000,
     firstUsed: new Date(2008, 10, 7),
+    firstBought: new Date(2008, 10, 7),
     milesToGallon: 35.7822957,
     EnergyRating: 5,
     EfficencyRating: 5,
@@ -187,6 +234,7 @@ const rowdada: any[] = [
     model: 'Outlander',
     price: 97800,
     firstUsed: new Date(2017, 11, 14),
+    firstBought: new Date(2017, 11, 14),
     milesToGallon: 19.224309,
     EnergyRating: 5,
     EfficencyRating: 5,
@@ -196,7 +244,7 @@ const rowdada: any[] = [
 export default () => {
   const gridOptions: GridOptions = {
     columnDefs: columnSchema,
-    rowData: rowdada,
+    //  rowData: rowdata,
     enableRangeSelection: true,
     sideBar: true,
     suppressAggFuncInHeader: true,
@@ -222,7 +270,14 @@ export default () => {
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
 
-  Adaptable.init(adaptableOptions);
+  let adaptableApi = Adaptable.init(adaptableOptions);
+
+  adaptableApi.eventApi.on('AdaptableReady', () => {
+    setTimeout(() => {
+      // use the load data method in GridApi of AdaptableApi
+      adaptableApi.gridApi.loadGridData(rowdata);
+    }, 100);
+  });
 };
 
 /*

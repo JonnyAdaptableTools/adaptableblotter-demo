@@ -52,10 +52,10 @@ export default () => {
             effectively create advanced cell renderers on the fly for you.
           </p>
           <p>
-            If you want to format columns on the fly, or require more
-            complicated date and numeric formats, then use the AdaptTable{' '}
-            <a href="../style/aggridformatcolumndemo">Format Column</a>{' '}
-            Function.
+            To format columns on the fly, or for more complicated date and
+            numeric formats, use the AdaptTable{' '}
+            <a href="../style/aggridformatcolumndemo">Format Column</a> Function
+            (as done below for <b>First Bought</b> and <b>Price</b> Columns)
           </p>
           <p>
             In this demo we have created value formatters for the{' '}
