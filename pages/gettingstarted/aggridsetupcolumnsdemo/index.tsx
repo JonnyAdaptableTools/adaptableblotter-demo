@@ -47,6 +47,12 @@ export default () => {
             effectively create advanced cell renderers on the fly for you.
           </p>
           <p>
+            If you want to format columns on the fly, or require more
+            complicated date and numeric formats, then use the AdaptTable{' '}
+            <a href="../style/aggridformatcolumndemo">Format Column</a>{' '}
+            Function.
+          </p>
+          <p>
             In this demo we have created value formatters for the{' '}
             <b>Efficiency</b> and <b>First Used</b> columns and a Cell Renderer
             for the <b>Rating</b> column.

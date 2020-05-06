@@ -37,6 +37,12 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'An AdapTable instance with no Predefined Config supplied.  This is unlikely to be the case in a production scenario as you will pre-ship AdapTable with your objects.',
           },
+          {
+            Name: 'Delayed Data',
+            Link: '/gettingstarted/aggriddelayeddatademo',
+            Description:
+              'Shows how (one of many ways) to set up AdapTable when your data comes into the grid after it has loaded.',
+          },
         ],
       },
 
