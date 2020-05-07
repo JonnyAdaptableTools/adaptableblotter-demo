@@ -32,10 +32,17 @@ export default () => {
       helpResources={
         <div>
           <a
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/adavanced-search-function.md"
+            target="_blank"
+          >
+            Advanced Search Read Me
+          </a>{' '}
+          |{' '}
+          <a
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_advancedsearchstate_.advancedsearchstate.html"
             target="_blank"
           >
-            Predefined Config
+            Advanced Search Predefined Config
           </a>{' '}
           |{' '}
           <a
@@ -49,14 +56,7 @@ export default () => {
             href="https://api.adaptabletools.com/interfaces/_src_api_advancedsearchapi_.advancedsearchapi.html"
             target="_blank"
           >
-            Adaptable API
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/adavanced-search-function.md"
-            target="_blank"
-          >
-            Read Me
+            Advanced Search API
           </a>{' '}
         </div>
       }
