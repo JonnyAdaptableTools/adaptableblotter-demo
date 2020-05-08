@@ -654,6 +654,12 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'A group of functions which allow developers complete control over how and where User State is stored.',
           },
+          {
+            Name: 'Application Data',
+            Link: '/adaptablestate/aggridapplicationdataentriesdemo',
+            Description:
+              'Store bespoke information in Adaptable State as Key / Value pairs.',
+          },
         ],
       },
       {

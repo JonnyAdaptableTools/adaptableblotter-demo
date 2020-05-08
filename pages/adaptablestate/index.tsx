@@ -39,6 +39,11 @@ export default () => {
             Additionally Predefined Configuration will include 'Entitlements' -
             stipulating which AdapTable functions they are allowed to access.
           </p>
+          <p>
+            It can also include <b>Application Data Entries</b> which are
+            bespoke key / value pairs allowing devs to persist their own items
+            in the State.
+          </p>
           <b>Saving State</b>{' '}
           <p>
             AdapTable automatically saves User State as it changes - meaning
@@ -63,6 +68,9 @@ export default () => {
         </DemoBox>
         <DemoBox href="/adaptablestate/aggridstatefunctionsdemo">
           State Functions demo
+        </DemoBox>
+        <DemoBox href="/adaptablestate/aggridapplicationdataentriesdemo">
+          Application Data Entries demo
         </DemoBox>
       </GridLayout>
     </MainPage>
