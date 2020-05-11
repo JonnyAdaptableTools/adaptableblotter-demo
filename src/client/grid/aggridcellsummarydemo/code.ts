@@ -18,7 +18,12 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleToolbars: ['CellSummary'],
+    Tabs: [
+      {
+        Name: 'Toolbars',
+        Toolbars: ['CellSummary'],
+      },
+    ],
   },
   CellSummary: {
     CellSummaryOperationDefinitions: [

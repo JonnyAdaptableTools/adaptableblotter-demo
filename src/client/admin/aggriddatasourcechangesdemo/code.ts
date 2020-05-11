@@ -16,7 +16,12 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleToolbars: ['ColumnFilter', 'Layout', 'QuickSearch'],
+    Tabs: [
+      {
+        Name: 'Toolbars',
+        Toolbars: ['ColumnFilter', 'Layout', 'QuickSearch'],
+      },
+    ],
   },
   ConditionalStyle: {
     ConditionalStyles: [

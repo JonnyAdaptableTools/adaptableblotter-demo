@@ -53,14 +53,14 @@ export default () => {
             target="_blank"
           >
             Application Read Me
-          </a>
+          </a>{' '}
           |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_applicationstate_.applicationstate.html"
             target="_blank"
           >
             Application Predefined Config
-          </a>
+          </a>{' '}
           |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_applicationapi_.applicationapi.html"

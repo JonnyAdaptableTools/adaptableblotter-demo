@@ -36,7 +36,12 @@ const demoConfig: PredefinedConfig = {
     //   AutoLogin: true,
   },
   Dashboard: {
-    VisibleToolbars: ['IPushPull', 'CellSummary'],
+    Tabs: [
+      {
+        Name: 'Toolbars',
+        Toolbars: ['IPushPull', 'CellSummary'],
+      },
+    ],
   },
   Theme: {
     CurrentTheme: 'dark',

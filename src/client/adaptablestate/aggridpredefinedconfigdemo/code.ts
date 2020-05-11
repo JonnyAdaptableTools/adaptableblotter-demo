@@ -16,8 +16,13 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleToolbars: ['SmartEdit', 'Export', 'Layout', 'QuickSearch'],
     VisibleButtons: ['Dashboard', 'ColumnChooser', 'AdvancedSearch'],
+    Tabs: [
+      {
+        Name: 'Toolbars',
+        Toolbars: ['SmartEdit', 'Export', 'Layout', 'QuickSearch'],
+      },
+    ],
   },
   SmartEdit: {
     SmartEditValue: 10,

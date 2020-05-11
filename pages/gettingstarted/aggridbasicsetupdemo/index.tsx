@@ -122,16 +122,23 @@ export default () => {
             href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/README.md"
             target="_blank"
           >
-            ReadMe Guide
-          </a>
-          ,{' '}
+            Adaptable 'ReadMe
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-getting-started-guide.md"
+            target="_blank"
+          >
+            Getting Started Guide
+          </a>{' '}
+          |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_predefinedconfig_.predefinedconfig.html"
             target="_blank"
           >
             Predefined Config
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_adaptableapi_.adaptableapi"
             target="_blank"

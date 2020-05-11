@@ -31,7 +31,12 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   Dashboard: {
-    VisibleToolbars: ['SmartEdit'],
+    Tabs: [
+      {
+        Name: 'Toolbars',
+        Toolbars: ['SmartEdit'],
+      },
+    ],
   },
 } as PredefinedConfig;
 

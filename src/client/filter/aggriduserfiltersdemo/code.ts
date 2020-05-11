@@ -114,7 +114,12 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   Dashboard: {
-    VisibleToolbars: ['ColumnFilter', 'Export'],
+    Tabs: [
+      {
+        Name: 'Toolbars',
+        Toolbars: ['ColumnFilter', 'Export'],
+      },
+    ],
   },
 } as PredefinedConfig;
 

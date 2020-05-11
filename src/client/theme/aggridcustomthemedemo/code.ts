@@ -19,7 +19,12 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleToolbars: ['Theme', 'Export', 'Layout'],
+    Tabs: [
+      {
+        Name: 'Toolbars',
+        Toolbars: ['Theme', 'Export', 'Layout'],
+      },
+    ],
   },
   Theme: {
     UserThemes: [

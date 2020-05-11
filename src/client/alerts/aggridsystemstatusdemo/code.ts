@@ -16,12 +16,16 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleToolbars: ['SystemStatus', 'DemoButtons'],
+    Tabs: [
+      {
+        Name: 'Toolbars',
+        Toolbars: ['SystemStatus', 'DemoButtons'],
+      },
+    ],
     CustomToolbars: [
       {
         Name: 'DemoButtons',
         Title: 'Demo Buttons',
-        Glyph: 'advanced-search',
         ToolbarButtons: [
           {
             Name: 'info',

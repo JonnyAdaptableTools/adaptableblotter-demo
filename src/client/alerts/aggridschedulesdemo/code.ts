@@ -17,7 +17,12 @@ var adaptableApi: AdaptableApi;
 const demoConfig: PredefinedConfig = {
   Dashboard: {
     VisibleButtons: ['Reminder', 'Schedule'],
-    VisibleToolbars: ['QuickSearch', 'Export'],
+    Tabs: [
+      {
+        Name: 'Toolbars',
+        Toolbars: ['QuickSearch', 'Export'],
+      },
+    ],
   },
   Reminder: {
     Reminders: [

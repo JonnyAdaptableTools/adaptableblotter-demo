@@ -19,7 +19,12 @@ const demoConfig: PredefinedConfig = {
     CurrentTheme: 'dark',
   },
   Dashboard: {
-    VisibleToolbars: ['AdvancedSearch', 'QuickSearch', 'Theme'],
+    Tabs: [
+      {
+        Name: 'Toolbars',
+        Toolbars: ['AdvancedSearch', 'QuickSearch', 'Theme'],
+      },
+    ],
   },
 } as PredefinedConfig;
 

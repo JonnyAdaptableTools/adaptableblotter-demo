@@ -18,7 +18,12 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleToolbars: ['Layout'],
+    Tabs: [
+      {
+        Name: 'Toolbars',
+        Toolbars: ['Layout'],
+      },
+    ],
   },
   Application: {
     ApplicationDataEntries: [

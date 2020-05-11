@@ -17,7 +17,12 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = ({
   Dashboard: {
-    VisibleToolbars: ['SmartEdit', 'Export', 'Chart'],
+    Tabs: [
+      {
+        Name: 'Toolbars',
+        Toolbars: ['SmartEdit', 'Export', 'Chart'],
+      },
+    ],
   },
   Chart: {
     CurrentChartName: 'Dollar Change',

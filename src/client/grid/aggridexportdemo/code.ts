@@ -16,7 +16,12 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleToolbars: ['Export'],
+    Tabs: [
+      {
+        Name: 'Toolbars',
+        Toolbars: ['Export'],
+      },
+    ],
   },
   Export: {
     CurrentReport: 'My Team Big Invoice',

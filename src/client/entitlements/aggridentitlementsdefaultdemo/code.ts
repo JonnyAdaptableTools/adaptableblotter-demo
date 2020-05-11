@@ -18,7 +18,12 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleToolbars: ['QuickSearch', 'Export', 'Layout'],
+    Tabs: [
+      {
+        Name: 'Toolbars',
+        Toolbars: ['QuickSearch', 'Export', 'Layout'],
+      },
+    ],
   },
   Entitlements: {
     DefaultAccessLevel: 'Hidden',

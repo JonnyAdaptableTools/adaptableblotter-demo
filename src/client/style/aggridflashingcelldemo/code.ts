@@ -14,7 +14,12 @@ const predefinedConfig = {
     CurrentTheme: 'dark',
   },
   Dashboard: {
-    VisibleToolbars: ['AdvancedSearch', 'QuickSearch', 'Theme'],
+    Tabs: [
+      {
+        Name: 'Toolbars',
+        Toolbars: ['AdvancedSearch', 'QuickSearch', 'Theme'],
+      },
+    ],
     VisibleButtons: ['FlashingCells'],
     IsFloating: true,
   },

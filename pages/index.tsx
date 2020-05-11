@@ -160,7 +160,14 @@ export default () => {
             <b>Adaptable Api</b>
           </a>{' '}
           giving you full run-time, code access to all AdapTable functionality
-          and state.
+          and state. <br />
+          Reads more at our{' '}
+          <a
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-getting-started-guide.md"
+            target="_blank"
+          >
+            <b>Getting Started Guide</b>
+          </a>{' '}
         </p>
 
         <p>
@@ -227,7 +234,8 @@ export default () => {
           >
             Read Me Guides
           </a>
-          . For more in depth information please visit the{' '}
+          . <br />
+          For more in depth information please visit the{' '}
           <a href="http://api.adaptabletools.com" target="_blank">
             developer documentation site
           </a>

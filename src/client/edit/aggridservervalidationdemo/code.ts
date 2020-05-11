@@ -19,7 +19,12 @@ var adaptableApi: AdaptableApi;
 const demoConfig: PredefinedConfig = {
   Dashboard: {
     VisibleButtons: ['CellValidation'],
-    VisibleToolbars: ['QuickSearch', 'BulkUpdate', 'SmartEdit', 'Layout'],
+    Tabs: [
+      {
+        Name: 'Toolbars',
+        Toolbars: ['QuickSearch', 'BulkUpdate', 'SmartEdit', 'Layout'],
+      },
+    ],
   },
   CellValidation: {
     CellValidations: [

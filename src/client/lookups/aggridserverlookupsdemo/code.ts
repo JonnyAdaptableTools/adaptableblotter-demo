@@ -17,7 +17,12 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleToolbars: ['QuickSearch', 'AdvancedSearch'],
+    Tabs: [
+      {
+        Name: 'Toolbars',
+        Toolbars: ['QuickSearch', 'AdvancedSearch'],
+      },
+    ],
   },
 } as PredefinedConfig;
 

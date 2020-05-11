@@ -17,7 +17,12 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = ({
   Dashboard: {
-    VisibleToolbars: ['Chart'],
+    Tabs: [
+      {
+        Name: 'Toolbars',
+        Toolbars: ['Chart'],
+      },
+    ],
   },
   Theme: {
     CurrentTheme: 'dark',

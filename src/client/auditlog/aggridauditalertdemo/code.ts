@@ -16,7 +16,12 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleToolbars: ['Alert'],
+    Tabs: [
+      {
+        Name: 'Toolbars',
+        Toolbars: ['Alert'],
+      },
+    ],
   },
 } as PredefinedConfig;
 
