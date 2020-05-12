@@ -16,39 +16,61 @@ export default () => {
             visibility as part of User State.
           </p>
           <p>
-            Each Custom Toolbar contains 2 'Divs', each to cater for a different
-            use case:
+            Each Custom Toolbar contains 2 'Divs', in order to cater for a
+            different use case:
           </p>
-          <p>
-            (1) Pre-populate the Toolbar with Button definitions (as part of{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_dashboardstate_.dashboardstate.html"
-              target="_blank"
-            >
-              Dashboard State
-            </a>
-            ); when a button is clicked the{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_src_api_eventapi_.eventapi.html"
-              target="_blank"
-            >
-              ToolbarButtonClicked
-            </a>{' '}
-            event is fired. Note that we have also styled the buttons
-            individually.
-          </p>
-          <p>
-            (2) Render the Toolbar with any content that is required; listen to
-            the{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_src_api_eventapi_.eventapi.html#on"
-              target="_blank"
-            >
-              ToolbarVisibilityChanged
-            </a>{' '}
-            event and if the Toolbar has become visible, then render the
-            content.
-          </p>
+          <ol>
+            <li>
+              Pre-populate the Toolbar with Button definitions (as part of{' '}
+              <a
+                href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_dashboardstate_.dashboardstate.html"
+                target="_blank"
+              >
+                Dashboard State
+              </a>
+              ); when a button is clicked the{' '}
+              <a
+                href="https://api.adaptabletools.com/interfaces/_src_api_eventapi_.eventapi.html"
+                target="_blank"
+              >
+                ToolbarButtonClicked
+              </a>{' '}
+              event is fired.
+              <br />
+              Note that you can styled the buttons individually (as we have done
+              in all 3 custom toolbars), and you can add a custom icon.
+            </li>
+            <li>
+              Render the Toolbar with any bespoke, custom, content that is
+              required; simply listen to the{' '}
+              <a
+                href="https://api.adaptabletools.com/interfaces/_src_api_eventapi_.eventapi.html#on"
+                target="_blank"
+              >
+                ToolbarVisibilityChanged
+              </a>{' '}
+              event and when the Toolbar becomes visible, render any content.
+            </li>
+          </ol>{' '}
+          <p>Each Custom Toolbar has 2 optional display properties:</p>
+          <ul>
+            <li>
+              <b>Title</b>: if set, this will display at the bottom of the
+              Toolbar
+            </li>
+            <li>
+              <b>ShowConfigureButton</b>: if set to <i>true</i>, this will
+              display a button with a 'wrench' icon' - when the button is
+              clicked the{' '}
+              <a
+                href="https://api.adaptabletools.com/interfaces/_src_api_eventapi_.eventapi.html#on"
+                target="_blank"
+              >
+                CustomToolbarConfigured
+              </a>{' '}
+              event is fired.
+            </li>
+          </ul>
         </div>
       }
       helpResources={
