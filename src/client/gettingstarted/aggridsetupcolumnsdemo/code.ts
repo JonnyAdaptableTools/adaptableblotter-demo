@@ -136,6 +136,21 @@ const columnSchema: ColDef[] = [
     enablePivot: true,
     resizable: true,
   },
+  {
+    // this column does not have a field as its not typed to a single cell in the datasource
+    // its not mandatory but if the colid can be provided then that would be helpful for Adaptable to do complex filtering
+    headerName: 'Composite',
+    editable: false,
+    colId: 'composite',
+    filter: true,
+    enableRowGroup: true,
+    valueGetter: (params: any) => {
+      return params.data && params.data.make && params.data.model
+        ? params.data.make + ' - ' + params.data.model
+        : undefined;
+    },
+    type: 'abColDefString',
+  },
 ];
 
 const rowdata: any[] = [
