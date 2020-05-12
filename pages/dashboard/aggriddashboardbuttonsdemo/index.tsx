@@ -32,9 +32,13 @@ export default () => {
             if you don't want this to be visible.
           </p>{' '}
           <p>
-            The 'Settings' button in the Home dropdown allows you configure the
-            Dashboard and create / edit{' '}
-            <a href="./aggriddashboardtabsdemo">Tabs</a>.
+            The 'Configure Dashboard' option in the main Menu allows you
+            configure the Dashboard including which Function Buttons to display.
+          </p>
+          <p>
+            Note: You can also include custom buttons in the Dashboard by
+            populating the <b>CustomButtons</b> property - see the{' '}
+            <a href="./aggriddashboardcustombuttonsdemo">Custom Buttons demo</a>{' '}
           </p>
         </div>
       }

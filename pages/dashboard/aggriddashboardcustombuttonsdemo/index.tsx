@@ -10,7 +10,30 @@ export default () => {
       pageTitle={'Custom Buttons Demo'}
       description={
         <div>
-          <p>To do</p>
+          <p>
+            The Dashboard includes an optional <b>CustomButtons</b> collection.{' '}
+          </p>
+          <p>
+            This enables you to place your own buttons next to any{' '}
+            <a href="./aggriddashboardbuttonsdemo">Function Buttons</a> you have
+            selected to display.
+          </p>
+          <p>
+            Each button can show an icon, a caption or both; when a button is
+            clicked the{' '}
+            <a
+              href="https://api.adaptabletools.com/interfaces/_src_api_eventapi_.eventapi.html"
+              target="_blank"
+            >
+              DashboardButtonClicked
+            </a>{' '}
+            event is fired.
+          </p>
+          <p>
+            In this demo we have created a 'Delete Row' button with a caption
+            and a 'New Row' button with an Icon. We handle the{' '}
+            <i>DashboardButtonClicked</i> event for both buttons.
+          </p>
         </div>
       }
       helpResources={

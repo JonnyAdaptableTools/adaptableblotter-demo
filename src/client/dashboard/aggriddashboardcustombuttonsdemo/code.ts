@@ -11,6 +11,7 @@ import {
   AdaptableApi,
   ToolbarVisibilityChangedEventArgs,
   ToolbarButtonClickedEventArgs,
+  DashboardButtonClickedEventArgs,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import charts from '@adaptabletools/adaptable-plugin-charts';
@@ -23,67 +24,32 @@ const demoConfig: PredefinedConfig = {
   Dashboard: {
     Tabs: [
       {
-        Name: 'Custom',
-        Toolbars: ['Layout', 'Trades', 'Deals', 'Orders'],
-      },
-      {
         Name: 'Regular',
         Toolbars: ['Layout', 'Export', 'SmartEdit'],
       },
     ],
-    CustomToolbars: [
-      // Show a Title and Configure Button
+    VisibleButtons: ['GridInfo'],
+    CustomButtons: [
       {
-        Name: 'Trades',
-        Title: 'Trades',
-        ShowConfigureButton: true,
-        ToolbarButtons: [
-          {
-            Name: 'tradesButton1',
-            Caption: 'Make Trade',
-            ButtonStyle: {
-              Variant: 'raised',
-              Tone: 'accent',
-            },
-          },
-        ],
+        Name: 'deleteRow',
+        Caption: 'Delete Row',
+        ButtonStyle: {
+          Variant: 'raised',
+          Tone: 'accent',
+        },
       },
-      // Show no Title and no Configure Button
       {
-        Name: 'Deals',
-        ToolbarButtons: [
-          {
-            Name: 'dealsButton1',
-            Caption: 'New Deal',
-            ButtonStyle: {
-              Variant: 'text',
-              Tone: 'success',
-            },
-          },
-        ],
-      },
-      // Show Configure Button but no Title
-      // Note that we have also added an Icon to the button
-      {
-        Name: 'Orders',
-        Caption: 'Orders',
-        ShowConfigureButton: true,
-        ToolbarButtons: [
-          {
-            Name: 'ordersButton1',
-            Caption: 'Create Order',
-            ButtonStyle: {
-              Variant: 'outlined',
-              Tone: 'info',
-            },
-            Icon: {
-              height: 20,
-              width: 25,
-              src:
-                'https://www.pngfind.com/pngs/m/278-2781613_blue-plus-icon-add-new-button-png-transparent.png',
-            },
-          },
-        ],
+        Name: 'newRow',
+        ButtonStyle: {
+          Variant: 'outlined',
+          Tone: 'info',
+        },
+        Icon: {
+          height: 15,
+          width: 15,
+          src:
+            'https://www.pngfind.com/pngs/m/170-1706847_8-skin-pack-pour-windows-xp-icc5l-description.png',
+        },
       },
     ],
   },
@@ -138,14 +104,26 @@ export default (columnDefs: any[], rowData: any[]) => {
   );
 
   adaptableApi.eventApi.on(
-    'ToolbarButtonClicked',
-    (toolbarButtonClickedEventArgs: ToolbarButtonClickedEventArgs) => {
-      alert(
-        'you clicked: name: ' +
-          toolbarButtonClickedEventArgs.data[0].id.toolbarButton.Name +
-          ';caption: ' +
-          toolbarButtonClickedEventArgs.data[0].id.toolbarButton.Caption
-      );
+    'DashboardButtonClicked',
+    (dashboardButtonClickedEventArgs: DashboardButtonClickedEventArgs) => {
+      if (
+        dashboardButtonClickedEventArgs.data[0].id.dashboardButton.Name ==
+        'deleteRow'
+      ) {
+        let firstRow: any = adaptableOptions.vendorGrid.api.getDisplayedRowAtIndex(
+          0
+        );
+        if (firstRow && firstRow.data) {
+          adaptableApi.gridApi.deleteGridData([firstRow.data]);
+        }
+      }
+
+      if (
+        dashboardButtonClickedEventArgs.data[0].id.dashboardButton.Name ==
+        'newRow'
+      ) {
+        alert('you clicked the "newRow" (plus icon) button');
+      }
     }
   );
 
