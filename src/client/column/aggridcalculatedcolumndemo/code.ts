@@ -40,11 +40,8 @@ const demoConfig: PredefinedConfig = {
         ColumnId: 'Highest Cost',
       },
       {
-        ColumnExpression:
-          //  'print("(20% VAT): $tax", {tax: (Col("OrderCost")*0.2).toFixed(2)} )',
-          'Col("OrderCost")*0.2',
-
-        //(20% VAT): 94.93
+        // we will add the Display Format separately
+        ColumnExpression: 'Col("OrderCost")*0.2',
         ColumnId: 'Tax',
       },
     ],
