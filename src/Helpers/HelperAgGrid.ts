@@ -527,14 +527,13 @@ export class HelperAgGrid {
       type: 'abColDefNumber',
     });
     schema.push({
-      headerName: 'Arrived On Time',
-      field: 'ArrivedOnTime',
-      editable: true,
-      cellEditorParams: { useFormatter: true },
-      valueParser: this.dateParseragGrid,
-      valueFormatter: this.shortDateFormatteragGrid,
+      headerName: 'Is Valid',
+      field: 'IsValid',
+      editable: false,
       filter: true,
-      sortable: true,
+      cellClass: 'bool-cell',
+      cellRenderer: (params: any) =>
+        `<input disabled type='checkbox' ${params.value ? 'checked' : ''} />`,
       type: 'abColDefBoolean',
     });
 

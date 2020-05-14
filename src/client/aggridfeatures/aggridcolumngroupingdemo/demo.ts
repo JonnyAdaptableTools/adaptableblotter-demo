@@ -7,12 +7,13 @@ import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 
 import init from './code';
 import { GridReadyEvent } from '@ag-grid-community/all-modules';
+import { TickingDataHelper } from '../../../Helpers/TickingDataHelper';
 const code = raw('./code.ts');
 
 export default () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
-
+  let tickingDataHelper = new TickingDataHelper();
   let rowData = JSON.parse(JSON.stringify(json));
   helperAgGrid.convertExcelData(rowData);
 
@@ -33,7 +34,20 @@ export default () => {
     gridReady.api!.closeToolPanel();
   };
 
+  adaptableApi.eventApi.on('AdaptableReady', () => {
+    tickingDataHelper.startTickingDataagGridOrders(
+      adaptableOptions.vendorGrid,
+      adaptableApi,
+      250,
+      10248,
+      10293
+    );
+  });
+
   return {
+    unload: () => {
+      tickingDataHelper.turnOffTicking();
+    },
     code,
   };
 };

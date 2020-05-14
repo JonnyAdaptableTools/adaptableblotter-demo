@@ -24,6 +24,16 @@ export default () => {
             move where you want.
           </p>
           <p>
+            If you don't want the Dashboard ever to float then set the '
+            <a
+              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_dashboardstate_.dashboardstate.html#canfloat"
+              target="_blank"
+            >
+              CanFloat
+            </a>
+            ' property to false.
+          </p>
+          <p>
             You can move in and out of Floating mode by either clicking the Name
             in the Header or the 'Dock' / 'Float' menu items in the Home
             dropdown.
