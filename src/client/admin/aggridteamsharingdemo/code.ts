@@ -23,6 +23,14 @@ const demoConfig: PredefinedConfig = {
       'GradientColumn',
     ],
   },
+  Entitlements: {
+    FunctionEntitlements: [
+      {
+        FunctionName: 'ConditionalStyle',
+        AccessLevel: 'ReadOnly',
+      },
+    ],
+  },
 } as PredefinedConfig;
 
 export default (columnDefs: any[], rowData: any[]) => {
