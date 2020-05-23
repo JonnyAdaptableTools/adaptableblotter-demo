@@ -9,6 +9,7 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
+  ColumnFilter,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -72,6 +73,27 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
+  Layout: {
+    CurrentLayout: 'Orders',
+    Layouts: [
+      {
+        Columns: [
+          'OrderId',
+          'ContactName',
+          'CustomerReference',
+          'Employee',
+          'OrderData',
+          'ChangeLastOrder',
+          'ShipCountry',
+          'InvoicedCost',
+          'Freight',
+          'ShippedDate',
+        ],
+        ColumnSorts: [],
+        Name: 'Orders',
+      },
+    ],
+  },
 } as PredefinedConfig;
 
 export default (columnDefs: any[], rowData: any[]) => {
@@ -106,6 +128,21 @@ export default (columnDefs: any[], rowData: any[]) => {
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
   adaptableApi = Adaptable.init(adaptableOptions);
+
+  adaptableApi.eventApi.on('AdaptableReady', () => {
+    let columnFilter: ColumnFilter = {
+      ColumnId: 'ShipCountry',
+      Filter: {
+        ColumnValueExpressions: [
+          {
+            ColumnId: 'ShipCountry',
+            ColumnDisplayValues: ['France', 'USA', 'UK'],
+          },
+        ],
+      },
+    };
+    adaptableApi.columnFilterApi.setColumnFilter([columnFilter]);
+  });
 
   return { adaptableOptions, adaptableApi };
 };
