@@ -19,8 +19,7 @@ export default () => {
           </p>
           <p>
             In order to refine your search, you can use wildcards like '*'
-            (starts with) or '>' (greater than) - see the Developer
-            Documentation for a full list.
+            (starts with) - see the Developer Documentation for a full list.
           </p>
           <p>
             Quick Search Predefined Config allows you to set the style of

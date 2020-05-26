@@ -25,8 +25,8 @@ export default () => {
                 positive and red when negative;
               </li>
               <li>
-                Any row where the 'Item Cost' column is > 80 is italicised with
-                a yellow background (note that
+                Any row where the 'Item Cost' column is more than 80 is
+                italicised with a yellow background (note that
                 <i>ExcludeGroupedRows</i> is <b>true</b> so the style is not
                 applied on grouped rows.)
               </li>

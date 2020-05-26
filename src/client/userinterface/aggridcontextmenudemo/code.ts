@@ -100,12 +100,19 @@ export default (columnDefs: any[], rowData: any[]) => {
         menuItem: AdaptableMenuItem,
         menuInfo: MenuInfo
       ) => {
+        // Never display the 'ShowGridInfo' context menu option
+        if (menuItem.FunctionName === 'GridInfo') {
+          return false;
+        }
+        // Don't display the 'Columnn Chooser' context menu option for in the Employee column
         if (
           menuInfo.Column.ColumnId === 'Employee' &&
           menuItem.FunctionName === 'ColumnChooser'
         ) {
           return false;
-        } else if (menuInfo.Column.ColumnId === 'ContactName') {
+        }
+        // Dont show any of the shipped Context Menu items for the Contact column
+        if (menuInfo.Column.ColumnId === 'ContactName') {
           return false;
         }
         return true;

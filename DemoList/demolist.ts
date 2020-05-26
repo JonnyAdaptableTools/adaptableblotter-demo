@@ -571,6 +571,12 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'Dynamically share Adaptable Objects you create at run-time with other team members and colleagues.',
           },
+          {
+            Name: 'Hot Keys',
+            Link: '/admin/aggridhotkeysdemo',
+            Description:
+              'Set up "Hot Keys" to open Adaptable Functions and windows with bespoke key combinations',
+          },
         ],
       },
       {

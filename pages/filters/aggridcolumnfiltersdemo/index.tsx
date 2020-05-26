@@ -15,8 +15,8 @@ export default () => {
           </p>
           <p>
             You can create a Column Filter by selecting column values and
-            filters (items in the long list) and / or create a range (e.g. > 15)
-            by using the operator dropdown at the top.
+            filters (items in the long list) and / or create a range (e.g.
+            'GreaterThan 15') by using the operator dropdown at the top.
           </p>
           <p>
             In this example we create filters on 3 columns: Employee (3

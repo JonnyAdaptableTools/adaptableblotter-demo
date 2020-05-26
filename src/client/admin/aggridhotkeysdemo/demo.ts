@@ -7,17 +7,16 @@ import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 
 import init from './code';
 import { GridReadyEvent } from '@ag-grid-community/all-modules';
-import { TickingDataHelper } from '../../../Helpers/TickingDataHelper';
 const code = raw('./code.ts');
-
+console.log(20);
 export default () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
-  let tickingDataHelper = new TickingDataHelper();
+
   let rowData = JSON.parse(JSON.stringify(json));
   helperAgGrid.convertExcelData(rowData);
 
-  const columndefs = helperAgGrid.getColumnGroupingNorthwindColumnSchema();
+  const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
 
   const { adaptableOptions, adaptableApi } = init(columndefs, rowData);
 
@@ -34,19 +33,9 @@ export default () => {
     gridReady.api!.closeToolPanel();
   };
 
-  adaptableApi.eventApi.on('AdaptableReady', () => {
-    tickingDataHelper.startTickingDataagGridOrders(
-      adaptableOptions.vendorGrid,
-      adaptableApi,
-      250,
-      10248,
-      10293
-    );
-  });
-
   return {
     unload: () => {
-      tickingDataHelper.turnOffTicking();
+      adaptableOptions.auditOptions = undefined;
     },
     code,
   };
