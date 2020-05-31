@@ -33,7 +33,7 @@ const demoConfig: PredefinedConfig = {
     Username: process.env.IPUSHPULL_USERNAME,
     Password: process.env.IPUSHPULL_PASSWORD,
     ThrottleTime: 5000,
-    //   AutoLogin: true,
+    IncludeSystemReports: true,
   },
   Dashboard: {
     Tabs: [
