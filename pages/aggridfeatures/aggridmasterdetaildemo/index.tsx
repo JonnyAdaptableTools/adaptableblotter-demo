@@ -9,11 +9,24 @@ export default () => {
       description={
         <div>
           <p>
-            This demo show how Master / Details can work in AdapTable if it is
-            something that is offered by the underlying vendor grid (which is in
-            this example that uses ag-Grid) using some football teams.
+            AdapTable supports Master / Details grid functionality - via the
+            master-detail plugin.
           </p>
-          <p>Click on the team to expand to see the players.</p>
+          <p>
+            Essentially 2 grids are defined each with their own Predefined
+            Config: <b>Master</b> - the 'main' Grid with collapsed rows; and{' '}
+            <b>Detail</b> which is shared by each child grid instance.{' '}
+          </p>
+          <p>
+            Note: this Function is only available if master/detail functionality
+            is offered by the underlying vendor grid (which is the case with
+            ag-Grid that this demo uses)
+          </p>
+          <p>
+            Click on a team in the Master to see the child grid showing players
+            for that team: note that each instance shares the Conditional Style
+            showing players over 30.
+          </p>
         </div>
       }
     />

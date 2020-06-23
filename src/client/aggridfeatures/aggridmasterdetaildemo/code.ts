@@ -9,6 +9,7 @@ import {
   AdaptableApi,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
+import masterDetailAgGridPlugin from '@adaptabletools/adaptable-plugin-master-detail-aggrid';
 
 var adaptableApi: AdaptableApi;
 
@@ -18,19 +19,11 @@ export default (columnDefs: any[], detailColumnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
-
     masterDetail: true,
     detailCellRendererParams: {
       // provide detail column defs
       detailGridOptions: {
         columnDefs: detailColumnDefs,
-        columnTypes: {
-          abColDefNumber: {},
-          abColDefString: {},
-          abColDefBoolean: {},
-          abColDefDate: {},
-          abColDefObject: {},
-        },
       },
       // extract and supply row data for detail
       getDetailRowData: function(params: any) {
@@ -44,7 +37,6 @@ export default (columnDefs: any[], detailColumnDefs: any[], rowData: any[]) => {
     floatingFilter: true,
     suppressColumnVirtualisation: false,
     suppressMenuHide: true,
-    sideBar: undefined,
     columnTypes: {
       abColDefNumber: {},
       abColDefString: {},
@@ -57,13 +49,41 @@ export default (columnDefs: any[], detailColumnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'name',
     userName: 'Demo User',
-    adaptableId: 'Master Detail Demo',
-    layoutOptions: {
-      autoSizeColumnsInLayout: true,
-      autoSizeColumnsInPivotLayout: true,
-    },
+    adaptableId: 'Master Detail Demo - Master Grid',
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
+    plugins: [
+      masterDetailAgGridPlugin({
+        primaryKey: 'name',
+        adaptableId: 'Master Detail Demo - Detail Grid',
+        predefinedConfig: {
+          ConditionalStyle: {
+            ConditionalStyles: [
+              {
+                Style: {
+                  BackColor: '#ffffe0',
+                },
+                ConditionalStyleScope: 'Row',
+                Expression: {
+                  RangeExpressions: [
+                    {
+                      ColumnId: 'age',
+                      Ranges: [
+                        {
+                          Operand1: '30',
+                          Operand1Type: 'Value',
+                          Operator: 'GreaterThan',
+                        },
+                      ],
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      }),
+    ],
   };
   adaptableApi = Adaptable.init(adaptableOptions);
 
