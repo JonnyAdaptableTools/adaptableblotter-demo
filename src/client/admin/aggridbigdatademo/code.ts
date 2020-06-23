@@ -44,12 +44,10 @@ const demoConfig: PredefinedConfig = {
     PercentBars: [
       {
         ColumnId: 'changeOnYear',
-        PositiveValue: 150,
-        NegativeValue: -150,
-        PositiveColor: '#006400',
-        NegativeColor: '#a52a2a',
-        ShowValue: false,
-        ShowToolTip: false,
+        Ranges: [
+          { Min: -150, Max: 0, Color: '#a52a2a' },
+          { Min: 0, Max: 150, Color: '#006400' },
+        ],
       },
     ],
   },
