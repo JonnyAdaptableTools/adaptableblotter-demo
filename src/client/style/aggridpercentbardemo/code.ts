@@ -21,26 +21,50 @@ const demoConfig: PredefinedConfig = {
   PercentBar: {
     PercentBars: [
       {
-        ColumnId: 'ChangeLastOrder',
-        PositiveValue: 56,
-        NegativeValue: -41,
-        NegativeColor: '#FF0000',
-        PositiveColor: '#008000',
-        ShowValue: false,
-      },
-      {
         ColumnId: 'InvoicedCost',
-        PositiveValue: 2810.5056,
-        NegativeColor: '#FF0000',
-        PositiveColor: '#008000',
+        Ranges: [
+          { Min: 0, Max: 500, Color: '#ff0000' },
+          { Min: 500, Max: 1000, Color: '#ffa500' },
+          { Min: 1000, Max: 3000, Color: '#008000' },
+        ],
         ShowValue: false,
       },
       {
+        BackColor: '#d3d3d3',
         ColumnId: 'ItemCost',
-        PositiveValue: 199.46,
-        NegativeColor: '#FF0000',
-        PositiveColor: '#ffff00',
+        DisplayPercentageValue: true,
+        DisplayRawValue: true,
+        Ranges: [{ Min: 0, Max: 199.46, Color: '#87cefa' }],
         ShowValue: true,
+      },
+      {
+        BackColor: '#808080',
+        ColumnId: 'ItemCount',
+        DisplayRawValue: true,
+        Ranges: [{ Min: 0, Max: 21, Color: '#006400' }],
+        ShowToolTip: true,
+        ShowValue: false,
+      },
+    ],
+  },
+  Layout: {
+    CurrentLayout: 'Percent Bar Layout',
+    Layouts: [
+      {
+        Name: 'Percent Bar Layout',
+        Columns: [
+          'OrderId',
+          'OrderDate',
+          'ItemCount',
+          'CustomerReference',
+          'InvoicedCost',
+          'ContactName',
+          'ItemCost',
+          'CompanyName',
+          'ChangeLastOrder',
+          'OrderCost',
+          'PackageCost',
+        ],
       },
     ],
   },
@@ -70,7 +94,7 @@ export default (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Percentbar Demo',
+    adaptableId: 'Percent Bar Demo',
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

@@ -9,19 +9,34 @@ export default () => {
       description={
         <div>
           <p>
-            Create Percent Bars to see numeric data as bar, where the cell is
-            filled as a % of its value against the maximum value for the column.
+            Percent Bars enable you to see numeric data as bar, where the cell
+            is filled as a % of its value against the maximum value for the
+            column.
           </p>
           <p>
-            Percent Bars work for both positive and negative values and you can
-            choose whether to display the actual value. If the column is
-            editable, then you can still edit it as normal.
+            You can create <b>Ranges</b> in the Percent Bar so the colour in the
+            cell will vary depending on which range its value falls.{' '}
           </p>
           <p>
-            In this example we created 3 Percent Bars. The 'Change Last Order'
-            Percent Bar automatically shows the negative values, while the 'Item
-            Cost' one displays cell values as well as uses a non default colour.
+            Other options include a back colour for the Bar, whether to see the
+            cell value, and whether to display that value as a percentage of the
+            total.
           </p>
+          <p>In this example we created 3 Percent Bars:</p>
+          <ul>
+            <li>
+              <b>Item Count</b> - using the default colours and a tooltip
+              showing the cell value{' '}
+            </li>
+            <li>
+              <b>Invoiced</b> - with 3 ranges: 0-500 (red), 500-1000 (orange)
+              and 1000-2000 (green)
+            </li>
+            <li>
+              <b>Item Cost</b> - with non-default range and background colours
+              and displaying both the cell and percentage value
+            </li>
+          </ul>
         </div>
       }
       helpResources={
