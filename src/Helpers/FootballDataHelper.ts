@@ -88,6 +88,7 @@ export class FootballDataHelper {
       field: 'name',
       filter: true,
       editable: true,
+      sortable: true,
       cellClass: 'number-cell',
       type: 'abColDefNumber',
     });
@@ -96,6 +97,7 @@ export class FootballDataHelper {
       field: 'age',
       filter: true,
       editable: true,
+      sortable: true,
       cellClass: 'number-cell',
       type: 'abColDefNumber',
     });
@@ -103,6 +105,7 @@ export class FootballDataHelper {
       headerName: 'Position',
       field: 'position',
       filter: true,
+      sortable: true,
       editable: true,
       type: 'abColDefString',
     });
