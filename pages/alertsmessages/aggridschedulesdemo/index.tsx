@@ -17,12 +17,6 @@ export default () => {
             type and see all your schedules in one place.
           </p>
           <p>
-            <b>
-              Note: The actual objects are stored in the relevant property in
-              AdapTable State (e.g. Reminders in Reminder State).
-            </b>
-          </p>
-          <p>
             In this example we have scheduled a{' '}
             <a href="./aggridreminderdemo/">Reminder</a>, to display every
             Friday at 17:00 and we have scheduled a{' '}
@@ -34,17 +28,10 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_reminderstate_.reminderstate.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_schedulestate_.schedulestate.html"
             target="_blank"
           >
-            Predefined Config (Reminder)
-          </a>
-          ,{' '}
-          <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_exportstate_.exportstate.html"
-            target="_blank"
-          >
-            Predefined Config (Export)
+            Predefined Config
           </a>
           ,{' '}
           <a

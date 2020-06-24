@@ -18,7 +18,7 @@ const demoConfig: PredefinedConfig = {
   Dashboard: {
     VisibleButtons: ['Reminder'],
   },
-  Reminder: {
+  Schedule: {
     Reminders: [
       {
         Alert: {
