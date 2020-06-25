@@ -14,7 +14,7 @@ export default async () => {
   let cabinetMinisterHelper = new CabinetMinisterDataHelper();
   const rowData = cabinetMinisterHelper.getCabinetData();
   convertExcelData(rowData);
-  const { adaptableOptions, adaptableApi } = init(rowData);
+  const { adaptableOptions, adaptableApi } = await init(rowData);
 
   adaptableApi.eventApi.on('AdaptableReady', () => {
     tickingDataHelper.useTickingDataTreeGrid(adaptableOptions.vendorGrid, 20);
