@@ -128,17 +128,17 @@ export default (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'tradeId',
     userName: 'Demo User',
     adaptableId: 'ipushpull Demo',
-    /*
+
     plugins: [
       ipp({
-         username: process.env.IPUSHPULL_USERNAME,
+        username: process.env.IPUSHPULL_USERNAME,
         password: process.env.IPUSHPULL_PASSWORD,
         throttleTime: 5000,
         includeSystemReports: true,
         ippConfig: pushpullConfig,
       }),
     ],
-    */
+
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
