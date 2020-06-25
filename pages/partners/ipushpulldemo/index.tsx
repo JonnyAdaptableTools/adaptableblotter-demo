@@ -48,10 +48,14 @@ export default () => {
             (together with an auto login option).{' '}
           </p>
           <p>
-            Then select a report, and choose the ipushpull folder / page which
-            should display this data. You can either export a 'Snapshot'
-            (one-off) report, or start streaming live AdapTable data to
-            ipushpull.
+            Then select a report - using either System Reports or those you have
+            created via the Export function - and choose the ipushpull folder /
+            page which should display this data.{' '}
+          </p>
+          <p>
+            You can either export a 'Snapshot' (one-off) report, or start
+            streaming live AdapTable data to ipushpull so that as your grid
+            ticks, ipushpull will be automatically updated.
           </p>
           <p>
             There is also an option to add new ipushpull pages (and more
@@ -65,7 +69,7 @@ export default () => {
             href="https://github.com/AdaptableTools/example-adaptableblotter-ipushpull-integration/blob/master/index.ts"
             target="_blank"
           >
-            Github Example
+            Example Application
           </a>{' '}
           |{' '}
           <a

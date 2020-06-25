@@ -12,10 +12,12 @@ import {
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import ipushpull from 'ipushpull-js';
+import ipp from '@adaptabletools/adaptable-plugin-ipushpull';
+import { IIPPConfig } from 'ipushpull-js/dist/Config';
 
 var adaptableApi: AdaptableApi;
 
-ipushpull.config.set({
+const pushpullConfig: IIPPConfig = {
   api_url: 'https://www.ipushpull.com/api/1.0',
   ws_url: 'https://www.ipushpull.com',
   web_url: 'https://www.ipushpull.com',
@@ -25,16 +27,16 @@ ipushpull.config.set({
   api_secret: '',
   transport: 'polling',
   hsts: false, // strict cors policy
-});
+};
 
 const demoConfig: PredefinedConfig = {
-  IPushPull: {
-    iPushPullInstance: ipushpull,
-    Username: process.env.IPUSHPULL_USERNAME,
-    Password: process.env.IPUSHPULL_PASSWORD,
-    ThrottleTime: 5000,
-    //   AutoLogin: true,
-  },
+  // IPushPull: {
+  //    iPushPullInstance: ipushpull,
+  //   Username: process.env.IPUSHPULL_USERNAME,
+  //   Password: process.env.IPUSHPULL_PASSWORD,
+  //   ThrottleTime: 5000,
+  //    IncludeSystemReports: true,
+  //  },
   Dashboard: {
     Tabs: [
       {
@@ -126,6 +128,17 @@ export default (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'tradeId',
     userName: 'Demo User',
     adaptableId: 'ipushpull Demo',
+    /*
+    plugins: [
+      ipp({
+         username: process.env.IPUSHPULL_USERNAME,
+        password: process.env.IPUSHPULL_PASSWORD,
+        throttleTime: 5000,
+        includeSystemReports: true,
+        ippConfig: pushpullConfig,
+      }),
+    ],
+    */
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

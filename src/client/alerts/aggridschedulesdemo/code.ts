@@ -24,7 +24,19 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
-  Reminder: {
+  Schedule: {
+    ReportSchedules: [
+      {
+        ScheduleType: 'Report',
+        ReportName: 'Current Orders',
+        ExportDestination: 'CSV',
+        Schedule: {
+          DaysOfWeek: [1, 2, 3, 4, 5],
+          Hour: 12,
+          Minute: 30,
+        },
+      },
+    ],
     Reminders: [
       {
         Alert: {
@@ -63,18 +75,6 @@ const demoConfig: PredefinedConfig = {
         Name: 'Current Orders',
         ReportColumnScope: 'BespokeColumns',
         ReportRowScope: 'VisibleRows',
-      },
-    ],
-    ReportSchedules: [
-      {
-        ScheduleType: 'Report',
-        ReportName: 'Current Orders',
-        ExportDestination: 'CSV',
-        Schedule: {
-          DaysOfWeek: [1, 2, 3, 4, 5],
-          Hour: 12,
-          Minute: 30,
-        },
       },
     ],
   },

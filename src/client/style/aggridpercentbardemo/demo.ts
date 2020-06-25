@@ -6,7 +6,7 @@ import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 
 import init from './code';
-import { GridReadyEvent } from '@ag-grid-community/all-modules';
+import { GridReadyEvent, ColDef } from '@ag-grid-community/all-modules';
 const code = raw('./code.ts');
 
 export default () => {
@@ -17,6 +17,11 @@ export default () => {
   helperAgGrid.convertExcelData(rowData);
 
   const columndefs = helperAgGrid.getPercentBarNorthwindColumnSchema();
+  columndefs.forEach((colDef: ColDef) => {
+    if (colDef.cellClass == 'number-cell') {
+      colDef.cellClass = 'number-cell-changed';
+    }
+  });
 
   const { adaptableOptions, adaptableApi } = init(columndefs, rowData);
 

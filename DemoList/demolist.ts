@@ -553,7 +553,7 @@ export function getDemoPageStructure(): DemoPageStructure {
               'See AdapTable (and ag-Grid) with 100,000 rows of client side data.',
           },
           {
-            Name: 'Data Source Changes',
+            Name: 'Changing Data',
             Link: '/admin/aggriddatasourcechangesdemo',
             Description:
               'Any changes made to the data source to the underlying DataGrid (in this example ag-Grid) is automatically reflected in AdapTable and it will be picked up by all relevant functions.',

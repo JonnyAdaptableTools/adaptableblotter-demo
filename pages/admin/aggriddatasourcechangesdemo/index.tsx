@@ -5,7 +5,7 @@ export default () => {
   return (
     <DynamicDemoPage
       demo={import('../../../src/client/admin/aggriddatasourcechangesdemo')}
-      pageTitle={'DataSource Changes Demo'}
+      pageTitle={'Changing Data Demo'}
       description={
         <div>
           <p>

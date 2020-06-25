@@ -14,12 +14,9 @@ export default () => {
             but is <b>dynamically derived</b> from other cells in the row.
           </p>
           <p>
-            You create Calculated Columns via an Expression which can range from
-            straightforward to very complex (we use the{' '}
-            <a href="https://mathjs.org/" target="_blank">
-              Math.JS
-            </a>{' '}
-            library)
+            You create Calculated Columns via the Expression Editor where you
+            can drag and drop the Columns and functions you need, or write the
+            expression by hand.{' '}
           </p>
           <p>
             Once created, a Calculated Column becomes a 'normal' column in your

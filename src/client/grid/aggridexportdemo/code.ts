@@ -71,6 +71,8 @@ const demoConfig: PredefinedConfig = {
         ReportRowScope: 'VisibleRows',
       },
     ],
+  },
+  Schedule: {
     ReportSchedules: [
       {
         ScheduleType: 'Report',
