@@ -7,7 +7,7 @@ import { ITrade } from '../../../Helpers/Trade';
 import { TickingDataHelper } from '../../../Helpers/TickingDataHelper';
 const code = raw('./code.ts');
 
-export default () => {
+export default async () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
   let tickingDataHelper = new TickingDataHelper();
@@ -16,7 +16,7 @@ export default () => {
   let rowCount: number = 50;
   const rowData: ITrade[] = helperAgGrid.getTrades(rowCount);
 
-  const { adaptableOptions, adaptableApi } = init(columndefs, rowData);
+  const { adaptableOptions, adaptableApi } = await init(columndefs, rowData);
 
   adaptableOptions.vendorGrid.onGridReady = function(
     gridReady: GridReadyEvent
