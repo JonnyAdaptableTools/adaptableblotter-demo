@@ -19,22 +19,16 @@ export default () => {
             .
           </p>
           <p>
-            If you are an existing ipushpull user then all you need to do is
-            provide an{' '}
+            If you are an existing ipushpull user, then simply include the
+            ipushpull plugin and provide an{' '}
             <a
-              href="https://bitbucket.org/ipushpull/ipushpull-js/src/master/"
+              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_ipushpullpluginoptions_.ipushpullpluginoptions.html"
               target="_blank"
             >
-              ipushpull object
+              IPushPullPluginOptions
             </a>{' '}
-            (which will include your credentials) in the{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_ipushpullstate_.ipushpullstate.html"
-              target="_blank"
-            >
-              ipushpull State
-            </a>{' '}
-            section of Predefined Config.
+            object (which will include your credentials and other relevant
+            information).
           </p>
           <p>
             To export data you first need to login using your ipushpull username
