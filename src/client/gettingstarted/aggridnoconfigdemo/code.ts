@@ -13,7 +13,7 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
 var adaptableApi: AdaptableApi;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
@@ -40,7 +40,7 @@ export default (columnDefs: any[], rowData: any[]) => {
     adaptableId: 'No Config Demo',
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   return { adaptableOptions, adaptableApi };
 };
