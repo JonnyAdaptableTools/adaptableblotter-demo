@@ -17,6 +17,12 @@ export default () => {
         </i>
         <br />
         <p>
+          <h4>
+            This demo site is using a canary version of Adaptable Version 7
+            which is due to be released on Sunday 28 June
+          </h4>
+        </p>
+        <p>
           <h3>
             AdapTable is the most advanced and powerful HTML5 Data Management
             Solution available today
@@ -294,6 +300,14 @@ export default () => {
               target="_blank"
             >
               Integration with ipushpull
+            </a>{' '}
+          </li>
+          <li>
+            <a
+              href="https://github.com/AdaptableTools/example-adaptable-nocode-aggrid"
+              target="_blank"
+            >
+              No Code Version Example
             </a>{' '}
           </li>
           <li>
