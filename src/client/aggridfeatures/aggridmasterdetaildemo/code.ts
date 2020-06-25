@@ -15,7 +15,11 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {} as PredefinedConfig;
 
-export default (columnDefs: any[], detailColumnDefs: any[], rowData: any[]) => {
+export default async (
+  columnDefs: any[],
+  detailColumnDefs: any[],
+  rowData: any[]
+) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
@@ -85,7 +89,7 @@ export default (columnDefs: any[], detailColumnDefs: any[], rowData: any[]) => {
       }),
     ],
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   return { adaptableOptions, adaptableApi };
 };

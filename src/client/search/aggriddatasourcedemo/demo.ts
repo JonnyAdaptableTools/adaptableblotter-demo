@@ -9,13 +9,13 @@ import init from './code';
 import { GridReadyEvent } from '@ag-grid-community/all-modules';
 const code = raw('./code.ts');
 
-export default () => {
+export default async () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
 
   const columndefs = helperAgGrid.getTradeSchema();
 
-  const { adaptableOptions, adaptableApi } = init(columndefs);
+  const { adaptableOptions, adaptableApi } = await init(columndefs);
 
   adaptableOptions.vendorGrid.onGridReady = function(
     gridReady: GridReadyEvent

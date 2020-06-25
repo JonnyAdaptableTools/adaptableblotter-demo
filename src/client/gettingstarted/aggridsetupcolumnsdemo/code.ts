@@ -256,7 +256,7 @@ const rowdata: any[] = [
   },
 ];
 
-export default () => {
+export default async () => {
   const gridOptions: GridOptions = {
     columnDefs: columnSchema,
     //  rowData: rowdata,
@@ -285,7 +285,7 @@ export default () => {
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
 
-  let adaptableApi = Adaptable.init(adaptableOptions);
+  let adaptableApi = await Adaptable.init(adaptableOptions);
 
   adaptableApi.eventApi.on('AdaptableReady', () => {
     setTimeout(() => {

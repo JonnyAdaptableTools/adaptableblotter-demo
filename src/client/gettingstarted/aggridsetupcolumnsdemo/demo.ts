@@ -7,7 +7,7 @@ import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import init from './code';
 const code = raw('./code.ts');
 
-export default () => {
+export default async () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
   init();

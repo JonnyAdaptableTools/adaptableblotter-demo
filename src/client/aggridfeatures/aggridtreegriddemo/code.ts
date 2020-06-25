@@ -26,7 +26,7 @@ const demoConfig: PredefinedConfig = {
   },
 } as PredefinedConfig;
 
-export default (rowData: any[]) => {
+export default async (rowData: any[]) => {
   // lets create the ColumnDefs inline as they are unique to this demo
   const columnDefs: ColDef[] = [
     // here we are using the auto group column by default
@@ -115,7 +115,7 @@ export default (rowData: any[]) => {
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   return { adaptableOptions, adaptableApi };
 };

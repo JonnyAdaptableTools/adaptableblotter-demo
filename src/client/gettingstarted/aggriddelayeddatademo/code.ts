@@ -55,7 +55,7 @@ const demoConfig: PredefinedConfig = {
   },
 } as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     // rowData, - note we are NOT setting rowData at startup
@@ -87,7 +87,7 @@ export default (columnDefs: any[], rowData: any[]) => {
     },
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   // mimic getting data from the server by waiting for a few seconds
   adaptableApi.eventApi.on('AdaptableReady', () => {

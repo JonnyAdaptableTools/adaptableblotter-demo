@@ -77,7 +77,7 @@ const demoConfig: PredefinedConfig = {
   },
 } as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
@@ -105,7 +105,7 @@ export default (columnDefs: any[], rowData: any[]) => {
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   adaptableApi.eventApi.on(
     'ToolbarButtonClicked',

@@ -57,7 +57,7 @@ const predefinedConfig = {
   },
 } as PredefinedConfig;
 
-export default (columndefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     enableRangeSelection: true,
     floatingFilter: false,
@@ -72,7 +72,7 @@ export default (columndefs: any[], rowData: any[]) => {
       abColDefObject: {},
       abColDefNumberArray: {},
     },
-    columnDefs: columndefs,
+    columnDefs: columnDefs,
     rowData,
   };
 
@@ -85,7 +85,7 @@ export default (columndefs: any[], rowData: any[]) => {
     predefinedConfig,
   };
 
-  const adaptableApi = Adaptable.init(adaptableOptions);
+  const adaptableApi = await Adaptable.init(adaptableOptions);
 
   return { adaptableOptions, adaptableApi };
 };

@@ -7,7 +7,7 @@ import { CabinetMinisterDataHelper } from '../../../Helpers/CabinetMinisterHelpe
 import { TickingDataHelper } from '../../../Helpers/TickingDataHelper';
 const code = raw('./code.ts');
 
-export default () => {
+export default async () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
   const tickingDataHelper = new TickingDataHelper();

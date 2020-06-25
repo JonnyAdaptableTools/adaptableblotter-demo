@@ -15,7 +15,7 @@ import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import predefinedConfig from './config';
 import { BondHelperAgGrid } from './BondHelperAgGrid';
 
-export default () => {
+export default async () => {
   let helperAgGrid = new HelperAgGrid();
   let bondHelperAgGrid = new BondHelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
