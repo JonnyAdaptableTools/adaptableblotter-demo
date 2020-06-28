@@ -57,32 +57,34 @@ export default async (
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
     plugins: [
       masterDetailAgGridPlugin({
-        primaryKey: 'name',
-        adaptableId: 'Master Detail Demo - Detail Grid',
-        predefinedConfig: {
-          ConditionalStyle: {
-            ConditionalStyles: [
-              {
-                Style: {
-                  BackColor: '#ffffe0',
+        adaptableOptions: {
+          primaryKey: 'name',
+          adaptableId: 'Master Detail Demo - Detail Grid',
+          predefinedConfig: {
+            ConditionalStyle: {
+              ConditionalStyles: [
+                {
+                  Style: {
+                    BackColor: '#ffffe0',
+                  },
+                  ConditionalStyleScope: 'Row',
+                  Expression: {
+                    RangeExpressions: [
+                      {
+                        ColumnId: 'age',
+                        Ranges: [
+                          {
+                            Operand1: '30',
+                            Operand1Type: 'Value',
+                            Operator: 'GreaterThan',
+                          },
+                        ],
+                      },
+                    ],
+                  },
                 },
-                ConditionalStyleScope: 'Row',
-                Expression: {
-                  RangeExpressions: [
-                    {
-                      ColumnId: 'age',
-                      Ranges: [
-                        {
-                          Operand1: '30',
-                          Operand1Type: 'Value',
-                          Operator: 'GreaterThan',
-                        },
-                      ],
-                    },
-                  ],
-                },
-              },
-            ],
+              ],
+            },
           },
         },
       }),
