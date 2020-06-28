@@ -40,7 +40,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     columnTypes: {
       abColDefNumber: {},
       abColDefString: {},

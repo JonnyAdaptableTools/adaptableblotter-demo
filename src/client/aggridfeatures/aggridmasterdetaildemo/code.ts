@@ -38,7 +38,6 @@ export default async (
       return dataItem ? dataItem.squad.length > 0 : false;
     },
     enableRangeSelection: true,
-    floatingFilter: true,
     suppressColumnVirtualisation: false,
     suppressMenuHide: true,
     columnTypes: {

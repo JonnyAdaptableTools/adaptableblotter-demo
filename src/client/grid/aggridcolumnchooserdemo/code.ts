@@ -27,7 +27,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
     rowData,
     enableRangeSelection: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     autoGroupColumnDef: {
       sortable: true,
     },

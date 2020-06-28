@@ -12,21 +12,9 @@ import {
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import ipp from '@adaptabletools/adaptable-plugin-ipushpull';
-import { IIPPConfig } from 'ipushpull-js/dist/Config';
+import { IPushPullApi } from '@adaptabletools/adaptable/src/Api/IPushPullApi';
 
 var adaptableApi: AdaptableApi;
-
-const pushpullConfig: IIPPConfig = {
-  api_url: 'https://www.ipushpull.com/api/1.0',
-  ws_url: 'https://www.ipushpull.com',
-  web_url: 'https://www.ipushpull.com',
-  docs_url: 'https://docs.ipushpull.com',
-  storage_prefix: 'ipp_local',
-  api_key: '',
-  api_secret: '',
-  transport: 'polling',
-  hsts: false, // strict cors policy
-};
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
@@ -102,7 +90,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     autoGroupColumnDef: {
       sortable: true,
     },
@@ -120,21 +107,33 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'tradeId',
     userName: 'Demo User',
     adaptableId: 'ipushpull Demo',
-
+    // this is the ipushpull plugin - it requires an ipushpulloptions object, details of which can be found at:
+    // https://api.adaptabletools.com/interfaces/_src_adaptableoptions_ipushpullpluginoptions_.ipushpullpluginoptions.html
     plugins: [
       ipp({
         username: process.env.IPUSHPULL_USERNAME,
         password: process.env.IPUSHPULL_PASSWORD,
         throttleTime: 5000,
         includeSystemReports: true,
-        ippConfig: pushpullConfig,
+        ippConfig: {
+          api_url: 'https://www.ipushpull.com/api/1.0',
+          ws_url: 'https://www.ipushpull.com',
+          web_url: 'https://www.ipushpull.com',
+          docs_url: 'https://docs.ipushpull.com',
+          storage_prefix: 'ipp_local',
+          transport: 'polling',
+          hsts: false, // strict cors policy
+        },
       }),
     ],
-
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
   adaptableApi = await Adaptable.init(adaptableOptions);
+
+  const ipushpullApi: IPushPullApi = adaptableApi.pluginsApi.getPluginApi(
+    'ipushpull'
+  );
 
   return { adaptableOptions, adaptableApi };
 };

@@ -9,15 +9,13 @@ export default () => {
       description={
         <div>
           <p>
-            The Quick Filter Bar lies beneath the Column Header; if set set to
-            <i>visible</i> in the underlying grid (e.g. in ag-Grid it is
-            `floatingFilter: true` in GridOptions) then it will work in
-            AdapTable.
+            The Quick Filter Bar lies beneath the Column Header, providing a
+            shortcut to creating Column Filters manually in the filter dropdown
           </p>
+
           <p>
-            It essentially provides a shortcut to creating Column Filters
-            manually in the filter dropdown, e.g. typing 's' in the Quick Filter
-            Bar will create a Column Filter of [Column] contains 's'.
+            For example, typing 's' in the Quick Filter Bar will create a Column
+            Filter of [Column] contains 's'.
           </p>
 
           <p>

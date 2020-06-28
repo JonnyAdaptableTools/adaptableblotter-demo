@@ -11,8 +11,8 @@ export default () => {
         <div>
           <p>
             If you want to share your AdapTable reports more widely, (e.g. with
-            Symphony chat correspondents or you want to see Live Excel) then you
-            can do so via our partner{' '}
+            Symphony chat correspondents or you want to collobarate via Excel)
+            then you can do so via our partner{' '}
             <a href="https://www.ipushpull.com/" target="_blank">
               ipushpull
             </a>
@@ -20,36 +20,37 @@ export default () => {
           </p>
           <p>
             If you are an existing ipushpull user, then simply include the
-            ipushpull plugin and provide an{' '}
+            ipushpull plugin in the 'plugins' section of Adaptable Options.
+          </p>
+          <p>
+            This requires an{' '}
             <a
               href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_ipushpullpluginoptions_.ipushpullpluginoptions.html"
               target="_blank"
             >
               IPushPullPluginOptions
             </a>{' '}
-            object (which will include your credentials and other relevant
-            information).
+            object which will include your credentials and other relevant
+            information.
           </p>
           <p>
             To export data you first need to login using your ipushpull username
-            and password, which you can supply in{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_ipushpullstate_.ipushpullstate.html"
-              target="_blank"
-            >
-              ipushpull State
-            </a>{' '}
-            (together with an auto login option).{' '}
+            and password (which you can supply in IPushPullPluginOptions
+            together with an auto login option).{' '}
           </p>
           <p>
             Then select a report - using either System Reports or those you have
-            created via the Export function - and choose the ipushpull folder /
-            page which should display this data.{' '}
+            created via the{' '}
+            <a href="../../gridmanagement/aggridexportdemo" target="_blank">
+              Export
+            </a>{' '}
+            function - and choose the ipushpull folder / page which should
+            display this data.{' '}
           </p>
           <p>
-            You can either export a 'Snapshot' (one-off) report, or start
-            streaming live AdapTable data to ipushpull so that as your grid
-            ticks, ipushpull will be automatically updated.
+            You can either export a 'Snapshot' (one-off) report, or stream a
+            'Live Report' to ipushpull so that as your grid ticks, data
+            displayed in ipushpull will be automatically updated.
           </p>
           <p>
             There is also an option to add new ipushpull pages (and more

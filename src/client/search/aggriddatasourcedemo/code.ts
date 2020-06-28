@@ -56,7 +56,6 @@ export default async (columnDefs: any[]) => {
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     statusBar: {
       statusPanels: [
         { statusPanel: 'agTotalRowCountComponent', align: 'left' },

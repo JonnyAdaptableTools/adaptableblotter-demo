@@ -88,7 +88,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
 
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     autoGroupColumnDef: {
       sortable: true,
     },

@@ -155,7 +155,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
     rowData,
     enableRangeSelection: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     rowGroupPanelShow: 'always',
     autoGroupColumnDef: {
       sortable: true,

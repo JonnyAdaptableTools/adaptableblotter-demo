@@ -124,7 +124,6 @@ export default async () => {
     sideBar: true,
     suppressAggFuncInHeader: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     columnTypes: {
       // not strictly required but very useful for column data type identification
       abColDefNumber: {},

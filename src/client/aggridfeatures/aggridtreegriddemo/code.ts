@@ -83,7 +83,6 @@ export default async (rowData: any[]) => {
       },
     },
     enableRangeSelection: true,
-    floatingFilter: true,
     suppressColumnVirtualisation: false,
     suppressMenuHide: true,
     columnTypes: {

@@ -50,7 +50,6 @@ export default async (columnDefs: ColDef[], rowData: any[]) => {
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     groupIncludeTotalFooter: true,
     columnTypes: {
       abColDefNumber: {},

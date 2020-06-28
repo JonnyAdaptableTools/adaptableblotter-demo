@@ -70,7 +70,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     groupIncludeTotalFooter: true,
     groupIncludeFooter: true,
     suppressAggFuncInHeader: true,

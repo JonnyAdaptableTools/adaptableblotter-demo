@@ -110,7 +110,6 @@ export class HelperAgGrid {
   ): GridOptions & { modules?: Module[] } {
     const gridOptions: GridOptions = {
       enableRangeSelection: true,
-      floatingFilter: false,
       sideBar: true,
       suppressMenuHide: true,
 
@@ -354,6 +353,7 @@ export class HelperAgGrid {
       headerName: 'Ship Country',
       field: 'ShipCountry',
       filter: 'text',
+      floatingFilter: true,
       editable: true,
       rowGroup: true,
       enableRowGroup: true,
@@ -394,6 +394,7 @@ export class HelperAgGrid {
           columnGroupShow: 'open',
           editable: true,
           filter: true,
+          floatingFilter: true,
           sortable: true,
           type: 'abColDefString',
         },
@@ -403,6 +404,7 @@ export class HelperAgGrid {
           columnGroupShow: 'closed',
           editable: true,
           filter: true,
+          floatingFilter: true,
           sortable: true,
           type: 'abColDefString',
         },
@@ -411,6 +413,7 @@ export class HelperAgGrid {
           field: 'ContactName',
           columnGroupShow: 'closed',
           filter: true,
+          floatingFilter: true,
           sortable: true,
           type: 'abColDefString',
         },
@@ -429,6 +432,7 @@ export class HelperAgGrid {
           columnGroupShow: 'open',
           cellClass: 'number-cell',
           filter: true,
+          floatingFilter: true,
           sortable: true,
           type: 'abColDefNumber',
         },
@@ -441,6 +445,7 @@ export class HelperAgGrid {
           valueParser: this.dateParseragGrid,
           valueFormatter: this.shortDateFormatteragGrid,
           filter: true,
+          floatingFilter: true,
           sortable: true,
           type: 'abColDefDate',
         },
@@ -454,6 +459,7 @@ export class HelperAgGrid {
           valueFormatter: this.shortDateFormatteragGrid,
           enableValue: false,
           filter: true,
+          floatingFilter: true,
           sortable: true,
           type: 'abColDefDate',
         },
@@ -466,6 +472,7 @@ export class HelperAgGrid {
           editable: true,
           enableValue: true,
           filter: true,
+          floatingFilter: true,
           sortable: true,
           //  aggFunc: 'sum',
           type: 'abColDefNumber',
@@ -477,6 +484,7 @@ export class HelperAgGrid {
           cellRenderer: this.currencyRendereragGrid,
           editable: true,
           filter: true,
+          floatingFilter: true,
           sortable: true,
           type: 'abColDefNumber',
           //   aggFunc: 'sum',
@@ -491,6 +499,7 @@ export class HelperAgGrid {
       editable: true,
       enableValue: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -502,6 +511,7 @@ export class HelperAgGrid {
       editable: true,
       enableValue: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       aggFunc: 'sum',
       type: 'abColDefNumber',
@@ -510,6 +520,7 @@ export class HelperAgGrid {
       headerName: 'Employee',
       field: 'Employee',
       filter: 'text',
+      floatingFilter: true,
       editable: true,
       enableRowGroup: true,
       hide: true,
@@ -531,6 +542,7 @@ export class HelperAgGrid {
       field: 'IsValid',
       editable: false,
       filter: true,
+      floatingFilter: true,
       cellClass: 'bool-cell',
       cellRenderer: (params: any) =>
         `<input disabled type='checkbox' ${params.value ? 'checked' : ''} />`,
@@ -569,6 +581,7 @@ export class HelperAgGrid {
       field: 'Country',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefString',
     });
@@ -577,6 +590,7 @@ export class HelperAgGrid {
       field: 'Code',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       enableRowGroup: true,
       type: 'abColDefString',
@@ -585,6 +599,7 @@ export class HelperAgGrid {
       headerName: 'Region',
       field: 'Region',
       filter: true,
+      floatingFilter: true,
       sortable: true,
       enableRowGroup: true,
       type: 'abColDefString',
@@ -595,6 +610,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -604,6 +620,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -613,6 +630,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -622,6 +640,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -631,6 +650,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -640,6 +660,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -649,6 +670,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -658,6 +680,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -667,6 +690,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -676,6 +700,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -685,6 +710,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -694,6 +720,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -703,6 +730,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -712,6 +740,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -721,6 +750,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -730,6 +760,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -739,6 +770,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -748,6 +780,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -757,6 +790,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -766,6 +800,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -775,6 +810,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -784,6 +820,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -793,6 +830,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -802,6 +840,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -811,6 +850,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -820,6 +860,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -829,6 +870,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -838,6 +880,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -847,6 +890,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -856,6 +900,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -865,6 +910,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -874,6 +920,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     });
@@ -888,6 +935,7 @@ export class HelperAgGrid {
       field: 'CloseDate',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefDate',
       valueParser: this.dateParseragGrid,
@@ -898,6 +946,7 @@ export class HelperAgGrid {
       field: 'Open',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       enableRowGroup: true,
       type: 'abColDefNumber',
@@ -907,6 +956,7 @@ export class HelperAgGrid {
       field: 'High',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       enableRowGroup: true,
       type: 'abColDefNumber',
@@ -916,6 +966,7 @@ export class HelperAgGrid {
       field: 'Low',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       enableRowGroup: true,
       type: 'abColDefNumber',
@@ -925,6 +976,7 @@ export class HelperAgGrid {
       field: 'Close',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       enableRowGroup: true,
       type: 'abColDefNumber',
@@ -934,6 +986,7 @@ export class HelperAgGrid {
       field: 'HighLowDifference',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       enableRowGroup: true,
       type: 'abColDefNumber',
@@ -944,6 +997,7 @@ export class HelperAgGrid {
       field: 'DaySpread',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       enableRowGroup: true,
       type: 'abColDefNumber',
@@ -954,6 +1008,7 @@ export class HelperAgGrid {
       field: 'Volume',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       enableRowGroup: true,
       type: 'abColDefNumber',
@@ -963,6 +1018,7 @@ export class HelperAgGrid {
       field: 'AdjustedClose',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       enableRowGroup: true,
       type: 'abColDefNumber',
@@ -973,6 +1029,7 @@ export class HelperAgGrid {
       field: 'PercentChange',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       enableRowGroup: true,
       type: 'abColDefNumber',
@@ -989,6 +1046,7 @@ export class HelperAgGrid {
       editable: true,
       cellClass: 'number-cell',
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     };
@@ -999,6 +1057,7 @@ export class HelperAgGrid {
       field: 'CustomerReference',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       resizable: true,
       type: 'abColDefString',
@@ -1009,6 +1068,7 @@ export class HelperAgGrid {
       headerName: 'Contact',
       field: 'ContactName',
       filter: true,
+      floatingFilter: true,
       editable: true,
       sortable: true,
       enableRowGroup: true,
@@ -1021,6 +1081,7 @@ export class HelperAgGrid {
       headerName: 'Employee',
       field: 'Employee',
       filter: 'agSetColumnFilter',
+      floatingFilter: true,
       editable: true,
       sortable: true,
       enableRowGroup: true,
@@ -1038,6 +1099,7 @@ export class HelperAgGrid {
       valueParser: this.dateParseragGrid,
       valueFormatter: this.shortDateFormatteragGrid,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefDate',
     } as any) as ColDef;
@@ -1051,6 +1113,7 @@ export class HelperAgGrid {
       cellRenderer: this.currencyRendereragGrid,
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       enableValue: true,
       type: 'abColDefNumber',
@@ -1064,6 +1127,7 @@ export class HelperAgGrid {
       cellRenderer: this.currencyRendereragGrid,
       editable: true,
       filter: true,
+      floatingFilter: true,
       enableValue: true,
       sortable: true,
       type: 'abColDefNumber',
@@ -1077,6 +1141,7 @@ export class HelperAgGrid {
       cellRenderer: this.currencyRendereragGrid,
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     };
@@ -1088,6 +1153,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       enableValue: true,
       aggFunc: 'avg',
@@ -1102,6 +1168,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       enableValue: true,
       aggFunc: 'sum',
@@ -1114,6 +1181,7 @@ export class HelperAgGrid {
       field: 'CompanyName',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       enableRowGroup: true,
       type: 'abColDefString',
@@ -1124,6 +1192,7 @@ export class HelperAgGrid {
       headerName: 'Ship Via',
       field: 'ShipVia',
       filter: 'text',
+      floatingFilter: true,
       editable: true,
       sortable: true,
       enableRowGroup: true,
@@ -1140,6 +1209,7 @@ export class HelperAgGrid {
       editable: true,
       sortable: true,
       filter: 'text',
+      floatingFilter: true,
       type: 'abColDefNumber',
     };
   }
@@ -1152,6 +1222,7 @@ export class HelperAgGrid {
       sortable: true,
       type: 'abColDefString',
       filter: 'text',
+      floatingFilter: true,
     };
   }
   private getChangeLastOrderDef(): any {
@@ -1161,6 +1232,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefNumber',
     };
@@ -1170,6 +1242,7 @@ export class HelperAgGrid {
       headerName: 'Ship Country',
       field: 'ShipCountry',
       filter: 'agSetColumnFilter',
+      floatingFilter: true,
       editable: true,
       sortable: true,
       enablePivot: true,
@@ -1186,6 +1259,7 @@ export class HelperAgGrid {
       valueParser: this.dateParseragGrid,
       valueFormatter: this.shortDateFormatteragGrid,
       filter: true,
+      floatingFilter: true,
       hide: true,
       sortable: true,
       type: 'abColDefDate',
@@ -1197,7 +1271,7 @@ export class HelperAgGrid {
       field: 'LastUpdatedTime',
       editable: false,
       valueFormatter: this.timeFormatter,
-      filter: true,
+      filter: false,
       sortable: true,
       cellStyle: { ' text-align': 'right' },
       type: 'abColDefDate',
@@ -1209,6 +1283,7 @@ export class HelperAgGrid {
       field: 'IsValid',
       editable: false,
       filter: true,
+      floatingFilter: true,
       cellClass: 'bool-cell',
       cellRenderer: (params: any) =>
         `<input disabled type='checkbox' ${params.value ? 'checked' : ''} />`,
@@ -1225,6 +1300,7 @@ export class HelperAgGrid {
       type: 'abColDefNumber',
       sortable: true,
       filter: true,
+      floatingFilter: true,
     });
     schema.push({
       headerName: 'Notional',
@@ -1235,6 +1311,7 @@ export class HelperAgGrid {
       cellClass: 'number-cell',
       type: 'abColDefNumber',
       filter: true,
+      floatingFilter: true,
       cellRenderer: this.currencyRendereragGrid,
       sortable: true,
       aggFunc: 'sum',
@@ -1245,6 +1322,7 @@ export class HelperAgGrid {
       editable: true,
       enableRowGroup: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       type: 'abColDefString',
     });
@@ -1253,6 +1331,7 @@ export class HelperAgGrid {
       headerName: 'Change',
       field: 'changeOnYear',
       filter: true,
+      floatingFilter: true,
       editable: true,
       type: 'abColDefNumber',
     });
@@ -1272,6 +1351,7 @@ export class HelperAgGrid {
       enableValue: true,
       editable: true,
       filter: true,
+      floatingFilter: true,
       cellClass: 'number-cell',
       type: 'abColDefNumber',
     });
@@ -1291,6 +1371,7 @@ export class HelperAgGrid {
       field: 'country',
       editable: true,
       filter: true,
+      floatingFilter: true,
       sortable: true,
       enableRowGroup: true,
       type: 'abColDefString',
@@ -1300,6 +1381,7 @@ export class HelperAgGrid {
       field: 'ask',
       columnGroupShow: 'closed',
       filter: true,
+      floatingFilter: true,
       cellClass: 'number-cell',
       type: 'abColDefNumber',
     });
@@ -1308,6 +1390,7 @@ export class HelperAgGrid {
       field: 'bid',
       columnGroupShow: 'closed',
       filter: true,
+      floatingFilter: true,
       cellClass: 'number-cell',
       type: 'abColDefNumber',
     });
@@ -1331,6 +1414,7 @@ export class HelperAgGrid {
       field: 'moodysRating',
       editable: true,
       filter: 'text',
+      floatingFilter: true,
       type: 'abColDefString',
     });
 
@@ -1356,6 +1440,7 @@ export class HelperAgGrid {
       editable: true,
       sortable: true,
       filter: 'text',
+      floatingFilter: true,
       type: 'abColDefString',
     });
     schema.push({
@@ -1391,6 +1476,7 @@ export class HelperAgGrid {
       field: 'percentChange',
       editable: true,
       filter: 'text',
+      floatingFilter: true,
       type: 'abColDefNumber',
     });
     schema.push({

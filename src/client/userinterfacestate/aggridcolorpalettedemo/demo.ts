@@ -23,7 +23,6 @@ export default async () => {
   const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
 
   const gridOptions = helperAgGrid.getGridOptions(columndefs, rowData);
-  gridOptions.floatingFilter = true;
 
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',

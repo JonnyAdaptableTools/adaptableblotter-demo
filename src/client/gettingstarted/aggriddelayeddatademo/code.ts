@@ -61,7 +61,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
     // rowData, - note we are NOT setting rowData at startup
     enableRangeSelection: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     autoGroupColumnDef: {
       sortable: true,
       minWidth: 200,

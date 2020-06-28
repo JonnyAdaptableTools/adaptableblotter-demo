@@ -264,7 +264,6 @@ export default async () => {
     sideBar: true,
     suppressAggFuncInHeader: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     // this is not strictly required but very useful for column data type identification
     // if not used then the grid will try to work out the datatype of the column based on the initial value
     columnTypes: {

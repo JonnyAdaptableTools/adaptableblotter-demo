@@ -12,7 +12,7 @@ export default async () => {
   helperAgGrid.setUpAgGridLicence();
   let tickingDataHelper = new TickingDataHelper();
   const columndefs = helperAgGrid.getTradeSchema();
-
+  console.log(2);
   let rowCount: number = 50;
   const rowData: ITrade[] = helperAgGrid.getTrades(rowCount);
 
