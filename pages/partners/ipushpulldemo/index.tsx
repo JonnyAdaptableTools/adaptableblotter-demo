@@ -19,8 +19,14 @@ export default () => {
             .
           </p>
           <p>
-            If you are an existing ipushpull user, then simply include the
-            ipushpull plugin in the 'plugins' section of Adaptable Options.
+            If you are an existing ipushpull user, then simply install the{' '}
+            <a
+              href="https://github.com/AdaptableTools/adaptable/blob/master/packages/plugins/ipushpull/README.md"
+              target="_blank"
+            >
+              ipushpull plugin
+            </a>{' '}
+            in the 'plugins' section of Adaptable Options.
           </p>
           <p>
             This requires an{' '}
@@ -53,8 +59,9 @@ export default () => {
             displayed in ipushpull will be automatically updated.
           </p>
           <p>
-            There is also an option to add new ipushpull pages (and more
-            functionality coming soon...).
+            There are also option to add new ipushpull pages and create
+            schedules (reports that run at specific times) and more
+            functionality will be added in the near future.
           </p>
         </div>
       }
@@ -68,10 +75,17 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_ipushpullstate_.ipushpullstate.html"
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/plugins/ipushpull/README.md"
             target="_blank"
           >
-            Predefined Config
+            ipushpull Plugin ReadMe
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_ipushpullpluginoptions_.ipushpullpluginoptions.html"
+            target="_blank"
+          >
+            ipushpull Plugin Options
           </a>{' '}
           |{' '}
           <a
