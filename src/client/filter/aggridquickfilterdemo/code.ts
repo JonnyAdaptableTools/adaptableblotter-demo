@@ -14,6 +14,17 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
 var adaptableApi: AdaptableApi;
 
+const demoConfig: PredefinedConfig = {
+  Dashboard: {
+    Tabs: [
+      {
+        Name: 'Filter',
+        Toolbars: ['ColumnFilter'],
+      },
+    ],
+  },
+} as PredefinedConfig;
+
 export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
@@ -41,6 +52,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Quick Filter Demo',
+    predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
   adaptableApi = await Adaptable.init(adaptableOptions);

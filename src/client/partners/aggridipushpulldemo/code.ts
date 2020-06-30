@@ -9,6 +9,8 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
+  LiveDataChangedEventArgs,
+  LiveDataChangedInfo,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import ipp from '@adaptabletools/adaptable-plugin-ipushpull';
@@ -130,9 +132,25 @@ export default async (columnDefs: any[], rowData: any[]) => {
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
   adaptableApi = await Adaptable.init(adaptableOptions);
-
   const ipushpullApi: IPushPullApi = adaptableApi.pluginsApi.getPluginApi(
     'ipushpull'
+  );
+  adaptableApi.eventApi.on(
+    'LiveDataChanged',
+
+    (liveDataChangedEventArgs: LiveDataChangedEventArgs) => {
+      let liveDataChangedInfo: LiveDataChangedInfo =
+        liveDataChangedEventArgs.data[0].id;
+      console.log('The Live Data Changed Event was triggered');
+      console.log(liveDataChangedInfo);
+      // get the username for the logged in user
+      if (
+        liveDataChangedInfo.LiveDataTrigger == 'Connected' &&
+        liveDataChangedInfo.ReportDestination == 'iPushPull'
+      ) {
+        console.log('logged in user: ' + ipushpullApi.getIPushPullUsername());
+      }
+    }
   );
 
   return { adaptableOptions, adaptableApi };

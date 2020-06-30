@@ -1,14 +1,11 @@
 import '@adaptabletools/adaptable/index.css';
 import '@adaptabletools/adaptable/themes/dark.css';
-
 import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham-dark.css';
-
 import '../../../../DemoPage/aggriddemo.css';
-
 import nocode from '@adaptabletools/adaptable-plugin-nocode-aggrid';
-//import finance from '@adaptabletools/adaptable-plugin-finance';
+
 import {
   AdaptableOptions,
   PredefinedConfig,
