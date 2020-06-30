@@ -146,7 +146,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
       // get the username for the logged in user
       if (
         liveDataChangedInfo.LiveDataTrigger == 'Connected' &&
-        liveDataChangedInfo.ReportDestination == 'iPushPull'
+        liveDataChangedInfo.ReportDestination == 'ipushpull'
       ) {
         console.log('logged in user: ' + ipushpullApi.getIPushPullUsername());
       }

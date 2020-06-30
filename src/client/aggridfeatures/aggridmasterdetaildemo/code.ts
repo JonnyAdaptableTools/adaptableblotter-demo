@@ -57,7 +57,7 @@ export default async (
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
     plugins: [
       masterDetailAgGridPlugin({
-        adaptableOptions: {
+        detailAdaptableOptions: {
           primaryKey: 'name',
           adaptableId: 'Master Detail Demo - Detail Grid',
           predefinedConfig: {
