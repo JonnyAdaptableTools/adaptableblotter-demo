@@ -4,6 +4,7 @@ import DynamicDemoPage from '../../../src/Helpers/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
+      agGridTheme="ag-theme-alpine"
       demo={import('../../../src/client/gettingstarted/aggridbasicsetupdemo')}
       pageTitle={'Basic Set Up Demo'}
       description={

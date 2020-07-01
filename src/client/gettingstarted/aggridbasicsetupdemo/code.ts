@@ -21,7 +21,9 @@ import '@adaptabletools/adaptable/themes/dark.css';
 // Import ag-Grid Styles you require - in this case the Balham light and dark themes (our defaults)
 import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-theme-alpine.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham-dark.css';
+import '@ag-grid-community/all-modules/dist/styles/ag-theme-alpine-dark.css';
 
 // Import the Adaptable object from the appropriate vendorGrid sub folder - in this case ag-Grid
 import Adaptable from '@adaptabletools/adaptable/agGrid';
