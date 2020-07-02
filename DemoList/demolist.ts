@@ -224,6 +224,12 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'You can provide your own icons to AdapTable to use in place of the defaults - this demo shows how.',
           },
+          {
+            Name: 'Alpine Theme',
+            Link: '/theme/aggridalpinethemedemo',
+            Description:
+              'Showing ag-Grid (in AdapTable)  with the new Alpine theme introduced in Version 23.',
+          },
         ],
       },
       {
@@ -647,6 +653,12 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Fixed Column',
             Link: '/aggridfeatures/aggridfixedcolumndemo',
             Description: 'Create some columns to be fixed in place',
+          },
+          {
+            Name: 'Community Version',
+            Link: '/aggridfeatures/aggridcommunityversiondemo',
+            Description:
+              'Running AdapTable only using the ag-Grid Community version',
           },
         ],
       },
