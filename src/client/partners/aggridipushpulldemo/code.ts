@@ -117,6 +117,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
         password: process.env.IPUSHPULL_PASSWORD,
         throttleTime: 5000,
         includeSystemReports: true,
+        autoLogin: true,
         ippConfig: {
           api_url: 'https://www.ipushpull.com/api/1.0',
           ws_url: 'https://www.ipushpull.com',
