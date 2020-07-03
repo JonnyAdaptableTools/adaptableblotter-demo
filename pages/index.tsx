@@ -19,7 +19,7 @@ export default () => {
         <p>
           <h4>
             This demo site is using a pre-release (canary) version of Adaptable
-            Version 7 which is due to be released on Sunday 28 June
+            Version 7 which is due to be released on Sunday 12 July.
           </h4>
         </p>
         <p>
