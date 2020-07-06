@@ -14,12 +14,15 @@ export default () => {
           </p>
           <p>
             It will dynamically provide a fully functional AdapTable including
-            advanced features like state management and audit log, enabling you
-            to attach to the same source daily or multiple different sources.
+            advanced features like state management, team sharing and Audit Log.
           </p>
           <p>
-            Simply link to a file (or drag and drop) and the AdapTable No Code
-            Wizard will appear.
+            This enables you to attach to the same data source daily or to
+            multiple different sources.
+          </p>
+          <p>
+            To run No-Code: simply link to an existing Excel or JSON file (or
+            drag and drop) and the AdapTable No Code Wizard will appear.
           </p>
           <p>
             In the first step it will read the file and work out which columns

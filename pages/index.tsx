@@ -94,14 +94,9 @@ export default () => {
               show column values as Gradients
             </li>
             <li>
-              <a href="http://localhost:3000/edit/aggridservervalidationdemo">
-                Server Validation
-              </a>{' '}
+              <a href="./edit/aggridservervalidationdemo">Server Validation</a>{' '}
               - perform essential validation externally (as well as using{' '}
-              <a href="http://localhost:3000/edit/aggridcellvalidationdemo">
-                Cell Validation
-              </a>{' '}
-              )
+              <a href="./edit/aggridcellvalidationdemo">Cell Validation</a> )
             </li>
             <li>
               <a href="./userinterface/aggridcolumnmenudemo">Column Menu</a> and{' '}
@@ -122,7 +117,7 @@ export default () => {
           toolbars or tool panels for easy access.
           <br />
           All functions are available to all users (depending on the{' '}
-          <a href="./admin/aggridentitlementsdemo" target="_blank">
+          <a href="./entitlements" target="_blank">
             <b>entitlements</b>
           </a>{' '}
           you set). The combination of a selection from these functions is what
@@ -260,11 +255,11 @@ export default () => {
         <p>
           <b>AdapTable Version</b>
           <br />
-          The demos on this site use Version 6 of AdapTable. This contains some
+          The demos on this site use Version 7 of AdapTable. This contains some
           big changes (and improvements) from previous versions. If you are new
-          to Version 6 please read the{' '}
+          to Version 7 please read the{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/upgrade-guide.md"
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/upgrade-guides/upgrade-guide-v7.md"
             target="_blank"
           >
             Upgrade Guide

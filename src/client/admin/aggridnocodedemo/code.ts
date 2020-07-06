@@ -31,8 +31,8 @@ export default () => {
     ],
   };
 
-  Adaptable.initLazy(adaptableOptions).then((api: AdaptableApi) => {
-    console.log(api, '!');
+  Adaptable.init(adaptableOptions).then(api => {
+    console.log(api, '!!!');
   });
 
   return { adaptableOptions };

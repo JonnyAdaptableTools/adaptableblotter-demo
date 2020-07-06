@@ -34,6 +34,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
     userName: 'Demo User',
     adaptableId: 'Community Version Demo',
     predefinedConfig: demoConfig,
+    // No modules to pass in as we are using the Community version ONLY
     vendorGrid: { ...gridOptions },
   };
   adaptableApi = await Adaptable.init(adaptableOptions);
