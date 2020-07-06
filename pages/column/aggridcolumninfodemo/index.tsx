@@ -29,7 +29,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/column-info_function.md"
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/column-info-function.md"
             target="_blank"
           >
             Column Info Function Read Me

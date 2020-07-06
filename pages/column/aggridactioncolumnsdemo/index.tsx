@@ -49,10 +49,10 @@ export default () => {
                 {' '}
                 <b>
                   <a
-                    href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_actioncolumnstate_.actioncolumn.html#shouldrenderpredicate"
+                    href="https://api.adaptableblotter.com/interfaces/_src_predefinedconfig_actioncolumnstate_.actioncolumnshouldrenderpredicate.html"
                     target="_blank"
                   >
-                    ShouldRenderPredicate
+                    ActionColumnShouldRenderPredicate
                   </a>{' '}
                 </b>{' '}
                 - this will return true or false to determine whether the button
@@ -61,10 +61,10 @@ export default () => {
               <li>
                 <b>
                   <a
-                    href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_actioncolumnstate_.actioncolumn.html#renderfunction"
+                    href="https://api.adaptableblotter.com/interfaces/_src_predefinedconfig_actioncolumnstate_.actioncolumnrenderfunction.html"
                     target="_blank"
                   >
-                    RenderFunction
+                    ActionColumnRenderFunction
                   </a>{' '}
                 </b>{' '}
                 - this allows you to create a button that matches your style and
