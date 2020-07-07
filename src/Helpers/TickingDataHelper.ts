@@ -226,6 +226,7 @@ export class TickingDataHelper {
   ) {
     if (gridOptions != null && gridOptions.api != null) {
       this.isTicking = true;
+      const helperAgGrid = new HelperAgGrid();
       setInterval(() => {
         if (this.isTicking) {
           let index: number = this.generateRandomInt(1, 100);
@@ -249,7 +250,7 @@ export class TickingDataHelper {
               trade.bloombergBid = this.roundTo4Dp(bid - directionToAdd);
 
               //    trade.notional = this.generateRandomInt(1, 50);
-              trade.changeOnYear = this.generateRandomInt(-150, 150);
+              trade.changeOnYear = helperAgGrid.getMeaningfulDouble();
 
               let config = {
                 batchUpdate: true,

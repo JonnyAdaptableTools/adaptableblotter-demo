@@ -45,8 +45,9 @@ const demoConfig: PredefinedConfig = {
       {
         ColumnId: 'changeOnYear',
         Ranges: [
-          { Min: -150, Max: 0, Color: '#a52a2a' },
-          { Min: 0, Max: 150, Color: '#006400' },
+          { Min: -0, Max: 50, Color: '#a52a2a' },
+          { Min: 51, Max: 100, Color: '#ffa500' },
+          { Min: 101, Max: 150, Color: '#006400' },
         ],
       },
     ],

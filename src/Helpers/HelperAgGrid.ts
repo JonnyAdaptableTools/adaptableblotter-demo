@@ -1562,7 +1562,7 @@ export class HelperAgGrid {
       counterparty: this.getRandomItem(this.getCounterparties()),
       currency: tradeCurrency,
       country: this.getRandomItem(this.getCountries()),
-      changeOnYear: this.getMeaningfulPositiveNegativeDouble(),
+      changeOnYear: this.getMeaningfulDouble(),
       price: price,
       bid: bid,
       ask: ask,

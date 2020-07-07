@@ -35,13 +35,13 @@ export default async () => {
   };
 
   adaptableApi.eventApi.on('AdaptableReady', () => {
-    //  tickingDataHelper.startTickingDataagGridOrders(
-    //     adaptableOptions.vendorGrid,
-    //    adaptableApi,
-    //     250,
-    //     10248,
-    //     10293
-    //   );
+    tickingDataHelper.startTickingDataagGridOrders(
+      adaptableOptions.vendorGrid,
+      adaptableApi,
+      250,
+      10248,
+      10293
+    );
   });
 
   return {
