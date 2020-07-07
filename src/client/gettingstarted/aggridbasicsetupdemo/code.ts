@@ -6,8 +6,8 @@ It assumes an HTML page with 2 <div> elements as follows:
     <!-- div for adaptable - always name this 'adaptable'-->    
     <div id="adaptable"></div>    
 
-    <!-- div for underlying vendor grid - always name this 'grid' -->    
-    <div id="grid" class="ag-balham"></div>        
+    <!-- div for underlying vendor grid - always name this 'grid' and add the default ag-Grid Theme (here 'alpine') -->    
+    <div id="grid" class="ag-alpine"></div>        
     ....
 </body>
 */
