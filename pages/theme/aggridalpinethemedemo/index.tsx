@@ -26,21 +26,21 @@ export default () => {
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_themestate_.themestate.html"
             target="_blank"
           >
-            Predefined Config
-          </a>
-          ,{' '}
+            Theme Predefined Config
+          </a>{' '}
+          |{' '}
           <a
             href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/upgrade-guides/upgrade-guide-v7.md"
             target="_blank"
           >
             Adaptable Version 7 'ReadMe'
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_themeapi_.themeapi.html"
             target="_blank"
           >
-            Adaptable API
+            Theme Api
           </a>{' '}
         </div>
       }

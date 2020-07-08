@@ -63,14 +63,14 @@ export default () => {
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_customsortstate_.customsortstate.html"
             target="_blank"
           >
-            Predefined Config
+            Custom Sort Predefined Config
           </a>{' '}
           |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_customsortapi_.customsortapi.html"
             target="_blank"
           >
-            Adaptable API
+            Custom Sort Api
           </a>{' '}
           |{' '}
           <a

@@ -31,14 +31,14 @@ export default () => {
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_calendarstate_.calendarstate.html"
             target="_blank"
           >
-            Predefined Config
-          </a>
-          ,{' '}
+            Calendar Predefined Config
+          </a>{' '}
+          |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_calendarapi_.calendarapi.html"
             target="_blank"
           >
-            Adaptable API
+            Calendar Api
           </a>{' '}
         </div>
       }

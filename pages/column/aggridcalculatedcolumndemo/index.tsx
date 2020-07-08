@@ -65,21 +65,21 @@ export default () => {
             href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/calculated-column-function.md"
             target="_blank"
           >
-            Read Me
+            Calculated Column Read Me
           </a>{' '}
           |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_calculatedcolumnstate_.calculatedcolumnstate.html"
             target="_blank"
           >
-            Predefined Config
+            Calculated Column Predefined Config
           </a>{' '}
           |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_calculatedcolumnapi_.calculatedcolumnapi.html"
             target="_blank"
           >
-            Adaptable API
+            Calculated Column Api
           </a>{' '}
         </div>
       }

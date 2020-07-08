@@ -50,14 +50,21 @@ export default () => {
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_quicksearchstate_.quicksearchstate.html"
             target="_blank"
           >
-            Predefined Config
-          </a>
-          ,{' '}
+            Quick Search Predefined Config
+          </a>{' '}
+          |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_quicksearchapi_.quicksearchapi.html"
             target="_blank"
           >
-            Adaptable API
+            Quick Search Api
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/quick-search-function.md"
+            target="_blank"
+          >
+            Quick Search Read Me
           </a>
         </div>
       }

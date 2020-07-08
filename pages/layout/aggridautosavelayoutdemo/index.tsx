@@ -37,14 +37,14 @@ export default () => {
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_layoutstate_.layoutstate.html"
             target="_blank"
           >
-            Predefined Config
+            Layout Predefined Config
           </a>{' '}
           |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_layoutapi_.layoutapi.html"
             target="_blank"
           >
-            Adaptable API
+            Layout Api
           </a>{' '}
           |{' '}
           <a
@@ -58,7 +58,7 @@ export default () => {
             href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/layout-function.md"
             target="_blank"
           >
-            Read Me
+            Layout Read Me
           </a>{' '}
         </div>
       }

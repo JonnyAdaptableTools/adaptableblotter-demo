@@ -54,15 +54,15 @@ export default () => {
             target="_blank"
           >
             Predefined Config
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_themeapi_.themeapi.html"
             target="_blank"
           >
             Adaptable API
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
             href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/adaptable-theming-guide.md"
             target="_blank"

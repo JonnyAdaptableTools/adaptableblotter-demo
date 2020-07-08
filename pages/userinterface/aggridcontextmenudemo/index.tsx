@@ -90,14 +90,14 @@ export default () => {
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_userinterfacestate_.userinterfacestate.html"
             target="_blank"
           >
-            Predefined Config
+            User Interface Predefined Config
           </a>{' '}
           |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_userinterfaceapi_.userinterfaceapi.html"
             target="_blank"
           >
-            Adaptable API
+            User Interface Api
           </a>{' '}
           |{' '}
           <a

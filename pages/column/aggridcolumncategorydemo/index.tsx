@@ -30,14 +30,14 @@ export default () => {
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_columncategorystate_.columncategorystate.html"
             target="_blank"
           >
-            Predefined Config
-          </a>
-          ,{' '}
+            Column Category Predefined Config
+          </a>{' '}
+          |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_columncategoryapi_.columncategoryapi.html"
             target="_blank"
           >
-            Adaptable API
+            Column Category Api
           </a>{' '}
         </div>
       }

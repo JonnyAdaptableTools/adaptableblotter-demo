@@ -60,16 +60,16 @@ export default () => {
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_datasourcestate_.datasourcestate.html"
             target="_blank"
           >
-            Predefined Config
-          </a>
-          ,{' '}
+            Data Source Predefined Config
+          </a>{' '}
+          |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_datasourceapi_.datasourceapi.html"
             target="_blank"
           >
-            Adaptable API
-          </a>
-          ,{' '}
+            Data Source Api
+          </a>{' '}
+          |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_searchoptions_.searchoptions.html#serversearchoption"
             target="_blank"
