@@ -30,6 +30,23 @@ const demoConfig: PredefinedConfig = {
   Theme: {
     CurrentTheme: 'dark',
   },
+  Export: {
+    Reports: [
+      {
+        Name: 'Euro Trades',
+        ReportColumnScope: 'AllColumns',
+        ReportRowScope: 'ExpressionRows',
+        Expression: {
+          ColumnValueExpressions: [
+            {
+              ColumnId: 'Currency',
+              ColumnDisplayValues: ['EUR'],
+            },
+          ],
+        },
+      },
+    ],
+  },
   FlashingCell: {
     FlashingCells: [
       {
@@ -119,6 +136,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
         includeSystemReports: true,
         autoLogin: true,
         ippConfig: {
+          // include here your companies values for 'api_secret' and 'api_key'
           api_url: 'https://www.ipushpull.com/api/1.0',
           ws_url: 'https://www.ipushpull.com',
           web_url: 'https://www.ipushpull.com',
