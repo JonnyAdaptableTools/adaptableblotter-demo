@@ -26,17 +26,24 @@ export default () => {
       helpResources={
         <div>
           <a
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/bulk-update-function.md"
+            target="_blank"
+          >
+            Bulk Update Read Me
+          </a>{' '}
+          |{' '}
+          <a
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_bulkupdatestate_.bulkupdatestate.html"
             target="_blank"
           >
-            Predefined Config
+            Bulk Update Predefined Config
           </a>{' '}
           |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_bulkupdateapi_.bulkupdateapi.html"
             target="_blank"
           >
-            Adaptable API
+            Bulk Update Api
           </a>{' '}
         </div>
       }
