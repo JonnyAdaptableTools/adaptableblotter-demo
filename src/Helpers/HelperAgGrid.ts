@@ -467,7 +467,7 @@ export class HelperAgGrid {
           headerName: 'Order Cost',
           field: 'OrderCost',
           cellClass: 'number-cell',
-          cellRenderer: this.currencyRendereragGrid,
+          //   cellRenderer: this.currencyRendereragGrid,
           columnGroupShow: 'closed',
           editable: true,
           enableValue: true,
@@ -481,7 +481,7 @@ export class HelperAgGrid {
           headerName: 'Package Cost',
           field: 'PackageCost',
           cellClass: 'number-cell',
-          cellRenderer: this.currencyRendereragGrid,
+          //   cellRenderer: this.currencyRendereragGrid,
           editable: true,
           filter: true,
           floatingFilter: true,
@@ -531,7 +531,7 @@ export class HelperAgGrid {
       headerName: 'Freight',
       field: 'Freight',
       cellClass: 'number-cell',
-      cellRenderer: this.currencyRendereragGrid,
+      //   cellRenderer: this.currencyRendereragGrid,
       editable: true,
       enableValue: true,
       sortable: true,
@@ -1110,7 +1110,7 @@ export class HelperAgGrid {
       field: 'InvoicedCost',
       cellClass: 'number-cell',
       aggFunc: 'sum',
-      cellRenderer: this.currencyRendereragGrid,
+      //  cellRenderer: this.currencyRendereragGrid,
       editable: true,
       filter: true,
       floatingFilter: true,
@@ -1124,7 +1124,7 @@ export class HelperAgGrid {
       headerName: 'Order Cost',
       field: 'OrderCost',
       cellClass: 'number-cell',
-      cellRenderer: this.currencyRendereragGrid,
+      //cellRenderer: this.currencyRendereragGrid,
       editable: true,
       filter: true,
       floatingFilter: true,
@@ -1138,7 +1138,7 @@ export class HelperAgGrid {
       headerName: 'Package Cost',
       field: 'PackageCost',
       cellClass: 'number-cell',
-      cellRenderer: this.currencyRendereragGrid,
+      //  cellRenderer: this.currencyRendereragGrid,
       editable: true,
       filter: true,
       floatingFilter: true,
@@ -1157,7 +1157,7 @@ export class HelperAgGrid {
       sortable: true,
       enableValue: true,
       aggFunc: 'avg',
-      cellRenderer: this.currencyRendereragGrid,
+      //  cellRenderer: this.currencyRendereragGrid,
       type: 'abColDefNumber',
     };
   }
@@ -1205,7 +1205,7 @@ export class HelperAgGrid {
       headerName: 'Freight',
       field: 'Freight',
       cellClass: 'number-cell',
-      cellRenderer: this.currencyRendereragGrid,
+      // cellRenderer: this.currencyRendereragGrid,
       editable: true,
       sortable: true,
       filter: 'text',
@@ -1312,7 +1312,7 @@ export class HelperAgGrid {
       type: 'abColDefNumber',
       filter: true,
       floatingFilter: true,
-      cellRenderer: this.currencyRendereragGrid,
+      //  cellRenderer: this.currencyRendereragGrid,
       sortable: true,
       aggFunc: 'sum',
     });
@@ -1924,6 +1924,19 @@ export class HelperAgGrid {
         }
         if (row.ShippedDate) {
           row.ShippedDate = new Date(row.ShippedDate);
+        }
+        if (row.OrderCost) {
+          row.OrderCost = (Math.round(row.OrderCost * 100) / 100).toFixed(2);
+        }
+        if (row.InvoicedCost) {
+          row.InvoicedCost = (
+            Math.round(row.InvoicedCost * 10000) / 10000
+          ).toFixed(4);
+        }
+        if (row.PackageCost) {
+          row.PackageCost = (Math.round(row.PackageCost * 1000) / 1000).toFixed(
+            3
+          );
         }
         if (row.LastUpdatedTime) {
           row.LastUpdatedTime = new Date(row.LastUpdatedTime);
