@@ -23,8 +23,9 @@ export default () => {
             operations or change the selected one by using the dropdown.
           </p>{' '}
           <p>
-            Note that the dropdown includes 2 financial summaries ('VWAP' and
-            'Only'); this is becuase we installed and included the{' '}
+            Note that the dropdown includes 3 financial summaries
+            ('WeightedAverage', 'VWAP' and 'Only'); this is beause we installed
+            the{' '}
             <a
               href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_adaptableoptions_.adaptableoptions.html#plugins"
               target="_blank"
