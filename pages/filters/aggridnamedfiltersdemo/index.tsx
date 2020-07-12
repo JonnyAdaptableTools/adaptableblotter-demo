@@ -81,14 +81,14 @@ export default () => {
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_namedfilterstate_.namedfilterstate.html"
             target="_blank"
           >
-            Predefined Config
+            Named Filter Config
           </a>{' '}
           |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_namedfilterapi_.namedfilterapi.html"
             target="_blank"
           >
-            Adaptable API
+            Named Filter Api
           </a>{' '}
           |{' '}
           <a

@@ -40,21 +40,21 @@ export default () => {
             href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/dashboard-function.md"
             target="_blank"
           >
-            Read Me
+            Dashboard Read Me
           </a>{' '}
           |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_dashboardstate_.dashboardstate.html"
             target="_blank"
           >
-            Predefined Config
+            Dashboard Config
           </a>{' '}
           |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_dashboardapi_.dashboardapi.html"
             target="_blank"
           >
-            Adaptable API
+            Dashboard Api
           </a>{' '}
           |{' '}
           <a href="https://youtu.be/KrahnLFYHjs" target="_blank">

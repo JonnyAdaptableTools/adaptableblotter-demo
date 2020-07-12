@@ -92,7 +92,7 @@ export default () => {
             href="https://api.adaptabletools.com/interfaces/_src_api_ipushpullapi_.ipushpullapi.html"
             target="_blank"
           >
-            Adaptable API
+            ipushpull Api
           </a>{' '}
         </div>
       }

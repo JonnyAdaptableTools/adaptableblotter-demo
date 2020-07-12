@@ -37,14 +37,14 @@ export default () => {
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_entitlementstate_.entitlementstate.html"
             target="_blank"
           >
-            Predefined Config
+            Entitlements Config
           </a>{' '}
           |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_entitlementsapi_.entitlementsapi.html"
             target="_blank"
           >
-            Adaptable API
+            Entitlements Api
           </a>{' '}
           |{' '}
           <a

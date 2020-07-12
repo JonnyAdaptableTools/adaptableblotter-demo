@@ -45,21 +45,21 @@ export default () => {
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_gradientcolumnstate_.gradientcolumnstate.html"
             target="_blank"
           >
-            Predefined Config
+            Gradient Column Config
           </a>{' '}
           |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_gradientcolumnapi_.gradientcolumnapi.html"
             target="_blank"
           >
-            Adaptable API
+            Gradient Column Api
           </a>{' '}
           |{' '}
           <a
             href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/gradient-column-function.md"
             target="_blank"
           >
-            Gradient Column Function ReadMe
+            Gradient Column ReadMe
           </a>
           |{' '}
           <a href="https://youtu.be/33lID_zBsAw" target="_blank">

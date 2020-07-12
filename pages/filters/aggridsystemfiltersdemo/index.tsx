@@ -43,14 +43,14 @@ export default () => {
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_systemfilterstate_.systemfilterstate.html"
             target="_blank"
           >
-            Predefined Config
+            System Filter Config
           </a>{' '}
           |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_systemfilterapi_.systemfilterapi.html"
             target="_blank"
           >
-            Adaptable API
+            System Filter Api
           </a>{' '}
           |{' '}
           <a

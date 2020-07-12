@@ -63,14 +63,14 @@ export default () => {
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_cellsummarystate_.cellsummarystate.html"
             target="_blank"
           >
-            Predefined Config
+            Cell Summary Config
           </a>{' '}
           |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_cellsummaryapi_.cellsummaryapi.html"
             target="_blank"
           >
-            Adaptable API
+            Cell Summary Api
           </a>{' '}
           |{' '}
           <a

@@ -36,14 +36,14 @@ export default () => {
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_columnfilterstate_.columnfilterstate.html"
             target="_blank"
           >
-            Predefined Config
+            Column Filter Config
           </a>{' '}
           |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_columnfilterapi_.columnfilterapi.html"
             target="_blank"
           >
-            Adaptable API
+            Column Filter Api
           </a>{' '}
           |{' '}
           <a

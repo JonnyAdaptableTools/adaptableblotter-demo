@@ -61,14 +61,14 @@ export default () => {
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_layoutstate_.layoutstate.html"
             target="_blank"
           >
-            Predefined Config
+            Layout Config
           </a>{' '}
           |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_layoutapi_.layoutapi.html"
             target="_blank"
           >
-            Adaptable API
+            Layout Api
           </a>{' '}
           |{' '}
           <a

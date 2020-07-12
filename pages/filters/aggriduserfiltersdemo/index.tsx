@@ -35,14 +35,14 @@ export default () => {
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_userfilterstate_.userfilterstate.html"
             target="_blank"
           >
-            Predefined Config
+            User Filter Config
           </a>{' '}
           |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_userfilterapi_.userfilterapi.html"
             target="_blank"
           >
-            Adaptable API
+            User Filter Api
           </a>{' '}
           |{' '}
           <a
