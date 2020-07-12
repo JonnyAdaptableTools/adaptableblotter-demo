@@ -36,7 +36,7 @@ export default () => {
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_bulkupdatestate_.bulkupdatestate.html"
             target="_blank"
           >
-            Bulk Update Predefined Config
+            Bulk Update Config
           </a>{' '}
           |{' '}
           <a
@@ -45,6 +45,13 @@ export default () => {
           >
             Bulk Update Api
           </a>{' '}
+          |{' '}
+          <a
+            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_editoptions_.editoptions.html"
+            target="_blank"
+          >
+            Edit Options
+          </a>
         </div>
       }
     />

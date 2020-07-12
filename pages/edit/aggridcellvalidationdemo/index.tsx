@@ -35,14 +35,21 @@ export default () => {
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_cellvalidationstate_.cellvalidationstate.html"
             target="_blank"
           >
-            Predefined Config
+            Cell Validation Config
           </a>{' '}
           |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_cellvalidationapi_.cellvalidationapi.html"
             target="_blank"
           >
-            Adaptable API
+            Cell Validation Api
+          </a>
+          |{' '}
+          <a
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/cell-validation-function.md"
+            target="_blank"
+          >
+            Cell Validation Read Me
           </a>
         </div>
       }

@@ -31,14 +31,28 @@ export default () => {
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_smarteditstate_.smarteditstate.html"
             target="_blank"
           >
-            Predefined Config
+            Smart Edit Config
           </a>{' '}
           |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_smarteditapi_.smarteditapi.html"
             target="_blank"
           >
-            Adaptable API
+            Smart Edit Api
+          </a>
+          |{' '}
+          <a
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/smart-edit-function.md"
+            target="_blank"
+          >
+            Smart Edit Read Me
+          </a>
+          |{' '}
+          <a
+            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_editoptions_.editoptions.html"
+            target="_blank"
+          >
+            Edit Options
           </a>
         </div>
       }

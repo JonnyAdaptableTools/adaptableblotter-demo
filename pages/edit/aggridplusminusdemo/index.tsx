@@ -31,14 +31,21 @@ export default () => {
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_plusminusstate_.plusminusstate.html"
             target="_blank"
           >
-            Predefined Config
+            Plus / Minus Config
           </a>{' '}
           |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_plusminusapi_.plusminusapi.html"
             target="_blank"
           >
-            Adaptable API
+            Plus / Minus Api
+          </a>
+          |{' '}
+          <a
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/plus-minus-function.md"
+            target="_blank"
+          >
+            Plus / Minus Read Me
           </a>
         </div>
       }

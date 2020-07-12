@@ -35,14 +35,21 @@ export default () => {
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_shortcutstate_.shortcutstate.html"
             target="_blank"
           >
-            Predefined Config
+            Shortcut Config
           </a>{' '}
           |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_shortcutapi_.shortcutapi.html"
             target="_blank"
           >
-            Adaptable API
+            Shortcut Api
+          </a>
+          |{' '}
+          <a
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/shortcut-function.md"
+            target="_blank"
+          >
+            Shortcut Read Me
           </a>
         </div>
       }
