@@ -55,18 +55,18 @@ export default () => {
             <li>
               <b>ipushpull</b>: Sends data to ipushpull and from there to
               Symphony and elsewhere - see{' '}
-              <a href="../partners/ipushpulldemo">ipushpull demo</a> (only
-              available to ipushpull users)
+              <a href="../partners/ipushpulldemo">ipushpull demo</a> (requires
+              ipushpull Plugin)
             </li>
             <li>
               <b>Glue42</b>: Sends data to excel via Glue42 ensuring 2 way data
-              updates and full validation while editing in Excel (only available
-              to Glue42 users)
+              updates and full validation while editing in Excel (requires
+              Glue42 Plugin)
             </li>
             <li>
               <b>Excel (via OpenFin)</b>: Sends data to excel via OpenFin
-              ensuring Excel updates automatically as the grid ticks (only
-              available to OpenFin users)
+              ensuring Excel updates automatically as the grid ticks (requires
+              OpenFin Plugin)
             </li>
           </ul>{' '}
           <p>
@@ -93,14 +93,28 @@ export default () => {
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_exportstate_.exportstate.html"
             target="_blank"
           >
-            Predefined Config
+            Export Config
           </a>{' '}
           |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_exportapi_.exportapi.html"
             target="_blank"
           >
-            Adaptable API
+            Export Api
+          </a>
+          |{' '}
+          <a
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/export-function.md"
+            target="_blank"
+          >
+            Export Read Me
+          </a>
+          |{' '}
+          <a
+            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_exportoptions_.exportoptions.html"
+            target="_blank"
+          >
+            Export Options
           </a>
         </div>
       }

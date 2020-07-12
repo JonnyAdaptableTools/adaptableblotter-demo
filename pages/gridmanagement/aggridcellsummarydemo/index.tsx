@@ -75,6 +75,13 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/cell-summary-function.md"
+            target="_blank"
+          >
+            Cell Summary Read Me
+          </a>{' '}
+          |{' '}
+          <a
             href="https://api.adaptabletools.com/modules/_src_adaptableoptions_userfunctions_.html"
             target="_blank"
           >
