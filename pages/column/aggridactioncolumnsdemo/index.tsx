@@ -49,7 +49,7 @@ export default () => {
                 {' '}
                 <b>
                   <a
-                    href="https://api.adaptableblotter.com/interfaces/_src_predefinedconfig_actioncolumnstate_.actioncolumnshouldrenderpredicate.html"
+                    href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_actioncolumnstate_.actioncolumnshouldrenderpredicate.html"
                     target="_blank"
                   >
                     ActionColumnShouldRenderPredicate
@@ -61,7 +61,7 @@ export default () => {
               <li>
                 <b>
                   <a
-                    href="https://api.adaptableblotter.com/interfaces/_src_predefinedconfig_actioncolumnstate_.actioncolumnrenderfunction.html"
+                    href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_actioncolumnstate_.actioncolumnrenderfunction.html"
                     target="_blank"
                   >
                     ActionColumnRenderFunction

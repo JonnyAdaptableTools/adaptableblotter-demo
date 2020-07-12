@@ -42,7 +42,7 @@ export default () => {
           <p>
             Each of the 3 types of properties will use an{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_src_predefinedconfig_common_adaptablestyle_.adaptablestyle.html"
+              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_common_adaptablestyle_.adaptablestyle.html"
               target="_blank"
             >
               AdaptableStyle
