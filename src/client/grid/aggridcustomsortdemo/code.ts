@@ -38,7 +38,7 @@ const demoConfig: PredefinedConfig = {
       },
       {
         ColumnId: 'Employee',
-        CustomSortComparerFunction: 'employee',
+        CustomSortComparerFunction: 'EmployeeLastName',
       },
     ],
   },
@@ -123,7 +123,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
     adaptableId: 'Custom Sort Demo',
     userFunctions: [
       {
-        name: 'employee',
+        name: 'EmployeeLastName',
         type: 'CustomSortComparerFunction',
         handler(valueA: any, valueB: any, nodeA?: any, nodeB?: any) {
           if (!valueA || !valueB) {
