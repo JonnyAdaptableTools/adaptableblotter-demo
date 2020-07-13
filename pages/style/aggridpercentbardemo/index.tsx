@@ -45,14 +45,21 @@ export default () => {
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_percentbarstate_.percentbarstate.html"
             target="_blank"
           >
-            Predefined Config
+            Percent Bar Config
           </a>{' '}
           |{' '}
           <a
             href="https://api.adaptabletools.com/interfaces/_src_api_percentbarapi_.percentbarapi.html"
             target="_blank"
           >
-            Adaptable API
+            Percent Bar Api
+          </a>
+          |{' '}
+          <a
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/percent-bar-function.md"
+            target="_blank"
+          >
+            Percent Bar Read Me
           </a>
         </div>
       }
