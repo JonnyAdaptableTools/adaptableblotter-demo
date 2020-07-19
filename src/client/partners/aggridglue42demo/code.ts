@@ -9,12 +9,12 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
-  LiveDataChangedEventArgs,
-  LiveDataChangedInfo,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
-import ipp from '@adaptabletools/adaptable-plugin-ipushpull';
-import { IPushPullApi } from '@adaptabletools/adaptable/src/Api/IPushPullApi';
+import glue42 from '@adaptabletools/adaptable-plugin-glue42';
+import { Glue42Api } from '@adaptabletools/adaptable/src/Api/Glue42Api';
+//import glue42Desktop from '@glue42/desktop';
+//import glue42office from '@glue42/office';
 
 var adaptableApi: AdaptableApi;
 
@@ -23,7 +23,7 @@ const demoConfig: PredefinedConfig = {
     Tabs: [
       {
         Name: 'Toolbars',
-        Toolbars: ['IPushPull', 'CellSummary', 'Export'],
+        Toolbars: ['CellSummary', 'Export'],
       },
     ],
   },
@@ -70,34 +70,18 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'tradeId',
     userName: 'Demo User',
     adaptableId: 'Glue42 Demo',
-    // this is the ipushpull plugin - it requires an ipushpulloptions object, details of which can be found at:
-    // https://api.adaptabletools.com/interfaces/_src_adaptableoptions_ipushpullpluginoptions_.ipushpullpluginoptions.html
+    /*
     plugins: [
-      ipp({
-        username: process.env.IPUSHPULL_USERNAME,
-        password: process.env.IPUSHPULL_PASSWORD,
-        throttleTime: 5000,
-        includeSystemReports: true,
-        autoLogin: true,
-        ippConfig: {
-          // include here your companies values for 'api_secret' and 'api_key'
-          api_url: 'https://www.ipushpull.com/api/1.0',
-          ws_url: 'https://www.ipushpull.com',
-          web_url: 'https://www.ipushpull.com',
-          docs_url: 'https://docs.ipushpull.com',
-          storage_prefix: 'ipp_local',
-          transport: 'polling',
-          hsts: false, // strict cors policy
-        },
+      glue42({
+        glue: glue42Desktop, // this is the glue object
+        glue4Office: glue42office, // this is the Glue4Office object
       }),
     ],
+    */
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
   adaptableApi = await Adaptable.init(adaptableOptions);
-  const ipushpullApi: IPushPullApi = adaptableApi.pluginsApi.getPluginApi(
-    'ipushpull'
-  );
 
   return { adaptableOptions, adaptableApi };
 };
