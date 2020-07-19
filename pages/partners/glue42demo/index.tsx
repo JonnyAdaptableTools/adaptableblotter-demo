@@ -16,11 +16,12 @@ export default () => {
           </p>
 
           <p>
-            <a href="https://youtu.be/tYTGQ1ufhbc" target="_blank">
-              <b>See this video</b>
+            <a href="https://youtu.be/0x8lOIVtDsM" target="_blank">
+              <b>This video shows</b>
             </a>{' '}
-            which shows how AdapTable and the Glue42 desktop combine to allow
-            selections in xxx to be shown in zzzz{' '}
+            AdapTable and the Glue42 desktop combine to allow grid row
+            selections to automatically update both internal Glue42 and external
+            widgets (e.g. Fidessa Market Data).
           </p>
 
           <p>
@@ -32,15 +33,17 @@ export default () => {
           <p>
             <ul>
               <li>
-                exporting your adaptable grid, or selection of it, to an MS
-                Excel sheet and saving it as an MS Excel file.{' '}
+                Exporting data from AdapTable (or running existing reports) to
+                an MS Excel sheet and saving it as an MS Excel file
               </li>
               <li>
-                capturing value changes in the exported MS Excel sheet and
-                updating your Adaptable grid in real time, while at the same
-                time respecting predefined cell validation rules.{' '}
+                Capturing value changes in the exported MS Excel sheet and
+                updating AdapTable in real time, while at the same time
+                respecting business and cell validation rules
               </li>
-              <li>schedule grid exports at a specific date and time </li>
+              <li>
+                Scheduling grid exports to run at specific dates and / or times
+              </li>
             </ul>
           </p>
           <p>
@@ -65,8 +68,7 @@ export default () => {
           </p>
           <p>
             Once authenticated, you can select to export either all the data
-            from the grid or a selection of it – a row, collection of rows or
-            just a collection of cells.
+            from the grid or a selection of it, or a predefined Report.
           </p>
         </div>
       }
@@ -93,7 +95,7 @@ export default () => {
             Glue42 Api
           </a>{' '}
           |{' '}
-          <a href="https://youtu.be/tYTGQ1ufhbc" target="_blank">
+          <a href="https://youtu.be/0x8lOIVtDsM" target="_blank">
             Glue42 Video
           </a>{' '}
         </div>
