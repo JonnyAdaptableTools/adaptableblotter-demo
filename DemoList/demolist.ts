@@ -763,22 +763,28 @@ export function getDemoPageStructure(): DemoPageStructure {
         Link: '/partners',
         Pages: [
           {
-            Name: 'Finsemble',
-            Link: '/partners/finsembledemo',
-            Description:
-              'We leverage the powerful offering to enable multiple AdapTable instances to share state, data and events',
-          },
-          {
             Name: 'ipushpull',
             Link: '/partners/ipushpulldemo',
             Description:
               'Export AdapTable data to Excel (with Live Updates) or Symphony and elsewhere by using the services of our partner ipushpull',
           },
           {
+            Name: 'Glue42',
+            Link: '/partners/glue42demo',
+            Description:
+              'AdapTable integrates very closely with Glue42 so that your Grids and Blotters communicate with other widgets including Excel (with 2-way validated updates).',
+          },
+          {
             Name: 'OpenFin',
             Link: '/partners/openfindemo',
             Description:
               'If you are using this popular container we offer "Live Updates" so that data exported to Excel updates in real time as AdapTable data ticks or is edited',
+          },
+          {
+            Name: 'Finsemble',
+            Link: '/partners/finsembledemo',
+            Description:
+              'We leverage the powerful offering to enable multiple AdapTable instances to share state, data and events',
           },
         ],
       },

@@ -12,7 +12,37 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
 var adaptableApi: AdaptableApi;
 
-const demoConfig: PredefinedConfig = {} as PredefinedConfig;
+const demoConfig: PredefinedConfig = {
+  FormatColumn: {
+    FormatColumns: [
+      {
+        ColumnId: 'InvoicedCost',
+        DisplayFormat: {
+          Formatter: 'NumberFormatter',
+          Options: {
+            FractionDigits: 2,
+          },
+        },
+      },
+      {
+        ColumnId: 'ItemCost',
+        DisplayFormat: {
+          Formatter: 'NumberFormatter',
+          Options: {
+            FractionDigits: 4,
+            FractionSeparator: '.',
+            IntegerDigits: 0,
+            IntegerSeparator: ',',
+            Multiplier: 1,
+            Parentheses: false,
+            Prefix: '',
+            Suffix: '',
+          },
+        },
+      },
+    ],
+  },
+} as PredefinedConfig;
 
 export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {

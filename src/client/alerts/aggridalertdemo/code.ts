@@ -25,6 +25,7 @@ const demoConfig: PredefinedConfig = {
   },
   Alert: {
     MaxAlertsInStore: 10,
+    AlertDisplayDiv: 'alertDiv',
     AlertDefinitions: [
       {
         ColumnId: 'InvoicedCost',

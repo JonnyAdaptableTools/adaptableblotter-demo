@@ -67,9 +67,9 @@ export default () => {
                     ActionColumnRenderFunction
                   </a>{' '}
                 </b>{' '}
-                - this allows you to create a button that matches your style and
-                requirements - and allows you to provide differently styled
-                buttons depending on the data in each row.
+                - allows you to create a button that matches your style and
+                requirements (and provide differently styled buttons depending
+                on the data in each row).
               </li>
             </ul>
           </p>
@@ -120,7 +120,7 @@ export default () => {
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_actioncolumnstate_.actioncolumnstate.html"
             target="_blank"
           >
-            Action Column Predefined Config
+            Action Column Config
           </a>{' '}
           |{' '}
           <a

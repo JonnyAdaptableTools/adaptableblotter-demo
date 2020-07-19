@@ -164,6 +164,14 @@ AgGridDemoPageProps) => {
           {description}
         </Snippet>
         <HelpResources>{helpResources}</HelpResources>
+        <div
+          id="alertDiv"
+          style={{
+            color: 'blue',
+            fontWeight: 'bold',
+            margin: '2px',
+          }}
+        />
         <div id="adaptable" />
         <p />
         <div

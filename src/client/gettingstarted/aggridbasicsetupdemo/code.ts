@@ -85,14 +85,14 @@ const columnSchema: ColDef[] = [
     headerName: 'Make',
     field: 'make',
     filter: true,
-    editable: false,
+    editable: true,
     type: 'abColDefString',
   },
   {
     headerName: 'Model',
     field: 'model',
     filter: true,
-    editable: false,
+    editable: true,
     type: 'abColDefString',
   },
 ];

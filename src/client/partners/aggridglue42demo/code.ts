@@ -27,9 +27,6 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
-  Theme: {
-    CurrentTheme: 'dark',
-  },
   Export: {
     Reports: [
       {
@@ -44,59 +41,6 @@ const demoConfig: PredefinedConfig = {
             },
           ],
         },
-      },
-    ],
-  },
-  FlashingCell: {
-    FlashingCells: [
-      {
-        ColumnId: 'price',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 500,
-        IsLive: true,
-        UpColor: '#008000',
-      },
-      {
-        ColumnId: 'bid',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 500,
-        IsLive: true,
-        UpColor: '#008000',
-      },
-      {
-        ColumnId: 'ask',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 500,
-        IsLive: true,
-        UpColor: '#008000',
-      },
-      {
-        ColumnId: 'bloombergAsk',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 500,
-        IsLive: true,
-        UpColor: '#008000',
-      },
-      {
-        ColumnId: 'bloombergBid',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 500,
-        IsLive: true,
-        UpColor: '#008000',
-      },
-      {
-        ColumnId: 'notional',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 500,
-        IsLive: true,
-        UpColor: '#008000',
-      },
-      {
-        ColumnId: 'changeOnYear',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 500,
-        IsLive: true,
-        UpColor: '#008000',
       },
     ],
   },
@@ -125,7 +69,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'tradeId',
     userName: 'Demo User',
-    adaptableId: 'ipushpull Demo',
+    adaptableId: 'Glue42 Demo',
     // this is the ipushpull plugin - it requires an ipushpulloptions object, details of which can be found at:
     // https://api.adaptabletools.com/interfaces/_src_adaptableoptions_ipushpullpluginoptions_.ipushpullpluginoptions.html
     plugins: [
@@ -153,23 +97,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
   adaptableApi = await Adaptable.init(adaptableOptions);
   const ipushpullApi: IPushPullApi = adaptableApi.pluginsApi.getPluginApi(
     'ipushpull'
-  );
-  adaptableApi.eventApi.on(
-    'LiveDataChanged',
-
-    (liveDataChangedEventArgs: LiveDataChangedEventArgs) => {
-      let liveDataChangedInfo: LiveDataChangedInfo =
-        liveDataChangedEventArgs.data[0].id;
-      console.log('The Live Data Changed Event was triggered');
-      console.log(liveDataChangedInfo);
-      // get the username for the logged in user
-      if (
-        liveDataChangedInfo.LiveDataTrigger == 'Connected' &&
-        liveDataChangedInfo.ReportDestination == 'ipushpull'
-      ) {
-        console.log('logged in user: ' + ipushpullApi.getIPushPullUsername());
-      }
-    }
   );
 
   return { adaptableOptions, adaptableApi };
