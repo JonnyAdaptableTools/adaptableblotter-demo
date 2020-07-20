@@ -10,7 +10,7 @@ const code = raw('./code.ts');
 export default async () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
-  let tickingDataHelper = new TickingDataHelper();
+  // let tickingDataHelper = new TickingDataHelper();
   const columndefs = helperAgGrid.getTradeSchema();
 
   let rowCount: number = 50;
@@ -29,6 +29,7 @@ export default async () => {
     gridReady.api!.closeToolPanel();
   };
 
+  /*
   adaptableApi.eventApi.on('AdaptableReady', () => {
     tickingDataHelper.startTickingDataagGridTradesUpdateData(
       adaptableOptions.vendorGrid,
@@ -38,10 +39,11 @@ export default async () => {
       true
     );
   });
+*/
 
   return {
     unload: () => {
-      tickingDataHelper.turnOffTicking();
+      //  tickingDataHelper.turnOffTicking();
     },
     code,
   };

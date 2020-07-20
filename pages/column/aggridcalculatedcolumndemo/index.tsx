@@ -20,7 +20,11 @@ export default () => {
           </p>
           <p>
             Once created, a Calculated Column becomes a 'normal' column in your
-            grid and will update automatically as other values change.
+            grid and will update automatically as other values change. (
+            <a href="https://youtu.be/mk_KpFLzV-c" target="_blank">
+              See this video for more details
+            </a>
+            . )
           </p>
           <p>In this example we have created 5 Calculated Columns: </p>
           <ul>
@@ -80,6 +84,10 @@ export default () => {
             target="_blank"
           >
             Calculated Column Api
+          </a>{' '}
+          |{' '}
+          <a href="https://youtu.be/mk_KpFLzV-c" target="_blank">
+            Calculated Column Video
           </a>{' '}
         </div>
       }
