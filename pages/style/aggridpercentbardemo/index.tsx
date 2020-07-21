@@ -60,7 +60,11 @@ export default () => {
             target="_blank"
           >
             Percent Bar Read Me
-          </a>
+          </a>{' '}
+          |{' '}
+          <a href="https://youtu.be/UfjkNgN3bH4" target="_blank">
+            Percent Bar Video
+          </a>{' '}
         </div>
       }
     />
