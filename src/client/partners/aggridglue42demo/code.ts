@@ -13,8 +13,8 @@ import {
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import glue42 from '@adaptabletools/adaptable-plugin-glue42';
 import { Glue42Api } from '@adaptabletools/adaptable/src/Api/Glue42Api';
-//import glue42Desktop from '@glue42/desktop';
-//import glue42office from '@glue42/office';
+import glue42Desktop from '@glue42/desktop';
+import glue42office from '@glue42/office';
 
 var adaptableApi: AdaptableApi;
 
@@ -70,14 +70,14 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'tradeId',
     userName: 'Demo User',
     adaptableId: 'Glue42 Demo',
-    /*
+
     plugins: [
       glue42({
         glue: glue42Desktop, // this is the glue object
         glue4Office: glue42office, // this is the Glue4Office object
       }),
     ],
-    */
+
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
