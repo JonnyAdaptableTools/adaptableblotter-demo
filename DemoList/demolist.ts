@@ -379,7 +379,7 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Custom Reports',
             Link: '/export/aggridcustomreportsdemo',
             Description:
-              'Custom Reports are created at design-time and can include columns and data not in the grid, and are run using a custom function.',
+              'Custom Reports are created only at design-time and can include columns and data not in the grid, and are run using a custom function.',
           },
         ],
       },
