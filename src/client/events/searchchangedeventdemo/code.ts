@@ -17,7 +17,6 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    Revision: 15,
     Tabs: [
       {
         Name: 'Search',

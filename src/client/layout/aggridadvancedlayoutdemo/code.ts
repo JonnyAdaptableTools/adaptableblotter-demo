@@ -53,7 +53,6 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   Layout: {
-    Revision: 1,
     CurrentLayout: 'Simple Layout',
     Layouts: [
       {

@@ -26,7 +26,6 @@ const demoConfig: PredefinedConfig = ({
     ],
   },
   Chart: {
-    Revision: 4,
     CurrentChartName: 'FTSE Close',
     ChartDefinitions: [
       {

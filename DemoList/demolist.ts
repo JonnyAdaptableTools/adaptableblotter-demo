@@ -326,12 +326,6 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Create your own sort orders for columns (e.g. Ratings, Tenors, Sectors) where the default alphabetical sort doesnt make sense.',
           },
           {
-            Name: 'Export',
-            Link: '/gridmanagement/aggridexportdemo',
-            Description:
-              'Send grid data to a number of destinations using System or Custom reports and schedule them if you would like.',
-          },
-          {
             Name: 'Cell Summary',
             Link: '/gridmanagement/aggridcellsummarydemo',
             Description:
@@ -362,6 +356,30 @@ export function getDemoPageStructure(): DemoPageStructure {
             Link: '/gridmanagement/aggridcalendardemo',
             Description:
               'Select which Holiday Calendar you wish AdapTable to use when calculating Working Days (in Filters, Queries etc).',
+          },
+        ],
+      },
+      {
+        CategoryName: 'Export',
+        Link: '/export',
+        Pages: [
+          {
+            Name: 'System Reports',
+            Link: '/export/aggridsystemreportsdemo',
+            Description:
+              'Send grid data to a number of destinations using System Reports e.g. All Data, Visible Data or Selected Rows.',
+          },
+          {
+            Name: 'User Reports',
+            Link: '/export/aggriduserreportsdemo',
+            Description:
+              'Create bespoke reports either at design time or run time that will include a query to retrieve the data to export each time the report run.',
+          },
+          {
+            Name: 'Custom Reports',
+            Link: '/export/aggridcustomreportsdemo',
+            Description:
+              'Custom Reports are created at design-time and can include columns and data not in the grid, and are run using a custom function.',
           },
         ],
       },
