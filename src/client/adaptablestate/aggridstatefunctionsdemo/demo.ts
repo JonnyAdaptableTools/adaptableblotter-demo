@@ -5,9 +5,9 @@ import '../../../../DemoPage/aggriddemo.css';
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 
-import init from './theCode';
+import init from './code';
 import { GridReadyEvent } from '@ag-grid-community/all-modules';
-const code = raw('./theCode.ts');
+const code = raw('./code.ts');
 
 export default async () => {
   let helperAgGrid = new HelperAgGrid();

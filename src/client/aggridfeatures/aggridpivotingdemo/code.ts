@@ -61,6 +61,28 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
+  FormatColumn: {
+    FormatColumns: [
+      {
+        ColumnId: 'InvoicedCost',
+        DisplayFormat: {
+          Formatter: 'NumberFormatter',
+          Options: {
+            FractionDigits: 4,
+          },
+        },
+      },
+      {
+        ColumnId: 'ItemCost',
+        DisplayFormat: {
+          Formatter: 'NumberFormatter',
+          Options: {
+            FractionDigits: 2,
+          },
+        },
+      },
+    ],
+  },
 } as PredefinedConfig;
 
 export default async (columnDefs: any[], rowData: any[]) => {

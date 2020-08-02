@@ -1082,6 +1082,7 @@ export class HelperAgGrid {
       field: 'Employee',
       filter: 'agSetColumnFilter',
       floatingFilter: true,
+      suppressMenu: true,
       editable: true,
       sortable: true,
       enableRowGroup: true,
@@ -1109,8 +1110,6 @@ export class HelperAgGrid {
       headerName: 'Invoiced',
       field: 'InvoicedCost',
       cellClass: 'number-cell',
-      aggFunc: 'sum',
-      //  cellRenderer: this.currencyRendereragGrid,
       editable: true,
       filter: true,
       floatingFilter: true,
@@ -1119,17 +1118,33 @@ export class HelperAgGrid {
       type: 'abColDefNumber',
     } as any) as ColDef;
   }
+  private getItemCostDef(): any {
+    return {
+      headerName: 'Item Cost',
+      field: 'ItemCost',
+      cellClass: 'number-cell',
+      rowDrag: true,
+      editable: true,
+      filter: true,
+      floatingFilter: true,
+      sortable: true,
+      unSortIcon: true,
+      enableValue: true,
+      aggFunc: 'sum', // 'avg',
+      type: 'abColDefNumber',
+    };
+  }
   private getOrderCostDef(): ColDef {
     return ({
       headerName: 'Order Cost',
       field: 'OrderCost',
       cellClass: 'number-cell',
-      //cellRenderer: this.currencyRendereragGrid,
       editable: true,
       filter: true,
       floatingFilter: true,
-      enableValue: true,
+      //   enableValue: true,
       sortable: true,
+      enablePivot: true,
       type: 'abColDefNumber',
     } as any) as ColDef;
   }
@@ -1138,7 +1153,6 @@ export class HelperAgGrid {
       headerName: 'Package Cost',
       field: 'PackageCost',
       cellClass: 'number-cell',
-      //  cellRenderer: this.currencyRendereragGrid,
       editable: true,
       filter: true,
       floatingFilter: true,
@@ -1146,21 +1160,7 @@ export class HelperAgGrid {
       type: 'abColDefNumber',
     };
   }
-  private getItemCostDef(): any {
-    return {
-      headerName: 'Item Cost',
-      field: 'ItemCost',
-      cellClass: 'number-cell',
-      editable: true,
-      filter: true,
-      floatingFilter: true,
-      sortable: true,
-      enableValue: true,
-      aggFunc: 'avg',
-      //  cellRenderer: this.currencyRendereragGrid,
-      type: 'abColDefNumber',
-    };
-  }
+
   private getItemCountDef(): any {
     return {
       headerName: 'Item Count',
@@ -1926,17 +1926,24 @@ export class HelperAgGrid {
           row.ShippedDate = new Date(row.ShippedDate);
         }
         if (row.OrderCost) {
-          row.OrderCost = (Math.round(row.OrderCost * 100) / 100).toFixed(2);
+          row.OrderCost = Number(Math.round(row.OrderCost * 100) / 100).toFixed(
+            2
+          );
+        }
+        if (row.ItemCost) {
+          row.ItemCost = Number(
+            (Math.round(row.ItemCost * 10000) / 10000).toFixed(2)
+          );
         }
         if (row.InvoicedCost) {
-          row.InvoicedCost = (
-            Math.round(row.InvoicedCost * 10000) / 10000
-          ).toFixed(4);
+          row.InvoicedCost = Number(
+            (Math.round(row.InvoicedCost * 10000) / 10000).toFixed(4)
+          );
         }
         if (row.PackageCost) {
-          row.PackageCost = (Math.round(row.PackageCost * 1000) / 1000).toFixed(
-            3
-          );
+          row.PackageCost = Number(
+            Math.round(row.PackageCost * 1000) / 1000
+          ).toFixed(3);
         }
         if (row.LastUpdatedTime) {
           row.LastUpdatedTime = new Date(row.LastUpdatedTime);

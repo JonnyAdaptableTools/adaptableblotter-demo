@@ -691,7 +691,7 @@ export function getDemoPageStructure(): DemoPageStructure {
               'An AdapTable instance with lots of different Predefined Config elements supplied.',
           },
           {
-            Name: 'State Options',
+            Name: 'State Functions',
             Link: '/adaptablestate/aggridstatefunctionsdemo',
             Description:
               'A group of functions which allow developers complete control over how and where User State is stored.',

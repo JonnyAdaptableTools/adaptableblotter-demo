@@ -16,7 +16,7 @@ export default () => {
           </p>
 
           <p>
-            <a href="https://youtu.be/0x8lOIVtDsM" target="_blank">
+            <a href="https://youtu.be/tq4hrv_N5Ms" target="_blank">
               <b>This video shows</b>
             </a>{' '}
             AdapTable and the Glue42 desktop combine to allow grid row
@@ -95,8 +95,8 @@ export default () => {
             Glue42 Api
           </a>{' '}
           |{' '}
-          <a href="https://youtu.be/0x8lOIVtDsM" target="_blank">
-            Glue42 Video
+          <a href="https://youtu.be/tq4hrv_N5Ms" target="_blank">
+            AdapTable and Glue42 Video
           </a>{' '}
         </div>
       }
