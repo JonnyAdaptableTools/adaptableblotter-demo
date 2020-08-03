@@ -10,9 +10,12 @@ export default () => {
       description={
         <div>
           <p>
-            AdapTable's partnership with Glue42 provides deep integration
-            between your Grid / Blotter and other Glue42-enabled apps like
-            charts, news, trade capture etc.
+            AdapTable's partnership with{' '}
+            <a href=" https://glue42.com/" target="_blank">
+              Glue42
+            </a>{' '}
+            provides deep integration between your Grid / Blotter and other
+            Glue42-enabled apps like charts, news, trade capture etc.
           </p>
 
           <p>
