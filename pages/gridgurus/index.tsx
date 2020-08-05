@@ -48,7 +48,7 @@ export default () => {
             or pivot, how best to update data and much more.
           </p>
           <p>
-            Through our{' '}
+            Through the AdapTable Tools{' '}
             <b>
               <i>Grid Gurus' Service</i>
             </b>{' '}
