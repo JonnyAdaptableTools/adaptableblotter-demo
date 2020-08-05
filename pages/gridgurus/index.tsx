@@ -36,8 +36,34 @@ export default () => {
       description={
         <div>
           <h4>Grid Gurus</h4>
-          <p>To Do</p>
-          <p>Some questions we receive:</p>
+          <p>
+            In developing AdapTable, the Adaptable Tools Development Team
+            learned everything there is to know (and more!) about all the
+            DataGrids that we support, including the hugely popular ag-Grid.
+          </p>
+          <p>
+            We researched multiple set up and configuration options, the
+            different ways to get data into the grid, the various display modes,
+            when and whether to use server or client, when to group, aggregate
+            or pivot, how best to update data and much more.
+          </p>
+          <p>
+            Through our{' '}
+            <b>
+              <i>Grid Gurus' Service</i>
+            </b>{' '}
+            you can deploy that unrivalled knowledge alongside your own team to
+            help shape DataGrid projects and ensure that they meet your
+            requirements as cost and time-effectively as possible. Adaptable
+            Tools’ Grid Gurus can work on-site or off-site to set up your Grid
+            in a bespoke fashion so that it has optimal alignment to your use
+            cases.
+          </p>
+          <p>
+            This is particularly important at the start of the project when
+            making the right architectural and design decisions can save money,
+            time and support heartache down the line...
+          </p>
           <ul>{demoLinks}</ul>
         </div>
       }
