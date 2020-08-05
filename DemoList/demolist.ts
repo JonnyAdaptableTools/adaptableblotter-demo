@@ -776,6 +776,7 @@ export function getDemoPageStructure(): DemoPageStructure {
           },
         ],
       },
+
       {
         CategoryName: 'Partners',
         Link: '/partners',
@@ -803,6 +804,18 @@ export function getDemoPageStructure(): DemoPageStructure {
             Link: '/partners/finsembledemo',
             Description:
               'We leverage the powerful offering to enable multiple AdapTable instances to share state, data and events',
+          },
+        ],
+      },
+      {
+        CategoryName: 'GridGurus',
+        Link: '/gridgurus',
+        Pages: [
+          {
+            Name: 'Latest Questions',
+            Link: '/gridgurus/latestquestionsdemo',
+            Description:
+              'At Grid Gurus we receive lots of DataGrid related questions - here we list some which we think others will find of interest',
           },
         ],
       },

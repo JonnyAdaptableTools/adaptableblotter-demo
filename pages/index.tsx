@@ -365,6 +365,8 @@ export default () => {
           the right architectural and design decisions can save money, time and
           support heartache down the line...
           <br />
+          See some of the general DataGrid-related questions we have received{' '}
+          <a href="./gridgurus/latestquestionsdemo">here</a>.
         </p>
         <p>
           <b>Contibuting to our Source Code</b>

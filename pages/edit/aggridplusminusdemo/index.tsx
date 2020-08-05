@@ -17,12 +17,14 @@ export default () => {
             'custom' Nudge Value which will increment / decrement based on other
             cells in the row.
           </p>
-          <p>
-            In this example we created 2 Plus Minus Rules: a default one for the
-            'Item Cost' column of 10, and a custom rule for the same column
-            which will increment / decrement by 20 if Employee is 'Janet
-            Leverling'.
-          </p>
+          <p>In this example we created 2 Plus Minus Rules: </p>
+          <ul>
+            <li>a default one for the 'Item Cost' column of 10</li>
+            <li>
+              a custom rule for the same column which will increment / decrement
+              by 20 if Employee is 'Janet Leverling
+            </li>
+          </ul>
         </div>
       }
       helpResources={
