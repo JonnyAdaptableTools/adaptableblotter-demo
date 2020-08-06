@@ -812,8 +812,8 @@ export function getDemoPageStructure(): DemoPageStructure {
         Link: '/gridgurus',
         Pages: [
           {
-            Name: 'Latest Questions',
-            Link: '/gridgurus/latestquestionsdemo',
+            Name: 'Ask the Experts',
+            Link: '/gridgurus/asktheexperts',
             Description:
               'At Grid Gurus we receive lots of DataGrid related questions - here we list some which we think others will find of interest',
           },

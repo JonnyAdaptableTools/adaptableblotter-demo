@@ -366,7 +366,7 @@ export default () => {
           support heartache down the line...
           <br />
           See some of the general DataGrid-related questions we have received{' '}
-          <a href="./gridgurus/latestquestionsdemo">here</a>.
+          <a href="./gridgurus/asktheexperts">here</a>.
         </p>
         <p>
           <b>Contibuting to our Source Code</b>

@@ -9,8 +9,9 @@ export default () => {
         <h4>Grid Gurus Latest Questions</h4>
       </p>
       <p>
-        In August 2020, we are offering a free{' '}
-        <b>DataGrid-related Q & A service</b> to the wider developer community.
+        In August 2020, we are offering a free <b>Ask the Experts</b>service to
+        the wider developer community, where our Grid Gurus team will answer
+        DataGrid-related questions.
       </p>
       <p>
         So please email{' '}
