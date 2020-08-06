@@ -9,12 +9,12 @@ export default () => {
         <h4>Ask The Experts</h4>
       </p>
       <p>
-        In August 2020, we are offering a free service to the wider developer
+        In August 2020, we are providing a free service to the wider developer
         community, in which our Grid Gurus team will answer DataGrid-related
         questions.
       </p>
       <p>
-        So please email{' '}
+        Please email{' '}
         <a href="mailto:support@adaptabletools.com">Adaptable Tools Support</a>{' '}
         with your question and we guarantee to send a full and personalised
         response within 48 hours.
@@ -28,16 +28,17 @@ export default () => {
       <p className="gridGuruQuestion">
         <b>What is the best DataGrid on the market</b>
         <br />
-        This is perhaps our most common question and the only one we wont
-        answer! <br />
+        This is perhaps the most common question we receive and the only one we
+        wont answer! <br />
         There are plenty of excellent DataGrids to choose from and each offer
         different benefits.
         <br />
-        Having said that, its true to say that the overwhelming majority of
-        AdapTable users combine it with ag-Grid and from what we hear they are
-        really happy with that DataGrid, and we can see why it has such
-        overwhelming market share. All the demos in this site use ag-Grid for
-        that reason.
+        Having said that, its only fair to add that the overwhelming majority of
+        AdapTable users combine it with ag-Grid, and the feedback we receive is
+        that they are really happy with that DataGrid.
+        <br />
+        From our perspective, when using ag-Grid (which all the demos on this
+        site do), we can readily see why it has such overwhelming market share.
       </p>
       <p className="gridGuruQuestion">
         <b>Should we filter on the Server or the Client?</b>
@@ -46,14 +47,16 @@ export default () => {
         not something we can answer without knowing more about your particular
         use case. <br />
         But, as general advice: <b>only</b> do server searching and filtering if
-        you really have to. We see plently of clients who only have 100,000 (or
-        fewer) rows in their dataset and yet made the decision to do server
-        searching, with all the additional complexity that brings. <br />
+        you really have to. <br />
+        We are consulted by plently of clients who only have 100,000 (or fewer)
+        rows in their dataset and yet made the decision to do server searching,
+        with all the additional complexity that brings. <br />
         In our view that is mistaken; modern browsers are capable of easily
         managing datasets of that size and performing instantaneous filtering
-        and sorting. So, by all means, do use the server if you have to, but we
-        would advise you first to check if you can do everything you need on the
-        server, and only if you cannot then to enable server filtering.
+        and sorting. <br />
+        By all means, do use the server if you have to, but we would advise you
+        first to check if you can do everything you need on the server, and only
+        if you cannot then to enable server filtering.
       </p>
       <h3>ag-Grid Questions</h3>
       <p className="gridGuruQuestion">
@@ -85,11 +88,11 @@ export default () => {
         each time the model's data updates, you should set that pinned row with
         the <i>aggData</i> from the model's <b>root node</b>
         <br />
-        As it happens AdapTable will wrap this functionality for you via the{' '}
+        As it happens AdapTable can wrap this functionality for you via the{' '}
         <a href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_generaloptions_.generaloptions.html#showgroupingtotalsasheader">
           showGroupingTotalsAsHeader
         </a>{' '}
-        property (as you can see in{' '}
+        option property (as you can see in{' '}
         <a href="../aggridfeatures/aggridrowgroupingdemo">this demo</a>
         ).
       </p>
