@@ -61,8 +61,9 @@ export default () => {
       <h3>ag-Grid Questions</h3>
       <p className="gridGuruQuestion">
         <b>
-          We set <i>enableValue</i> to 'false' for a column but it still shows
-          an aggregated value when grouping - we assumed this would remove it?
+          We set <i>enableValue</i> to 'false' for a column but it still
+          displays an aggregated value when grouping - we assumed setting this
+          property would remove it?
         </b>
         <br />
         That is expected ag-Grid behaviour: <i>enableValue</i> (and{' '}
