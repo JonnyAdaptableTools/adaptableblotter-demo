@@ -6,21 +6,23 @@ export default () => {
   return (
     <MainPage pageTitle="">
       <p>
-        <h4>Grid Gurus Latest Questions</h4>
+        <h4>Ask The Experts</h4>
       </p>
       <p>
-        In August 2020, we are offering a free <b>Ask the Experts</b>service to
-        the wider developer community, where our Grid Gurus team will answer
-        DataGrid-related questions.
+        In August 2020, we are offering a free service to the wider developer
+        community, in which our Grid Gurus team will answer DataGrid-related
+        questions.
       </p>
       <p>
         So please email{' '}
         <a href="mailto:support@adaptabletools.com">Adaptable Tools Support</a>{' '}
-        with your question and we guarantee to send an answer within 72 hours.
+        with your question and we guarantee to send a full and personalised
+        response within 48 hours.
       </p>
       <p>
-        We have already received a huge number of questions, and we show here
-        some of those which we think may of general interest or benefit.
+        We have received a huge number of questions, and so we decided to
+        display here some of those which we thought might be of general interest
+        or benefit.
       </p>
       <h3>General Data Grid Questions</h3>
       <p className="gridGuruQuestion">
@@ -68,8 +70,8 @@ export default () => {
         drop it into the 'Values' section in the Column sidebar).
         <br />
         However if the column's <i>ColDef</i> definition has the 'aggFunc'
-        property already set (which we assume yours does) then it will display
-        that aggregated value in grouped rows.
+        property already set (which we assume yours does) then it will still
+        display that aggregated value in grouped rows.
       </p>{' '}
       <p className="gridGuruQuestion">
         <b>How do we always make the column menu icon appear?</b>
