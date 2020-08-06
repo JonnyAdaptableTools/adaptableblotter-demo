@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../index.scss';
 import MainPage from '../../../src/MainPage';
 
 export default () => {
@@ -22,7 +22,7 @@ export default () => {
         some of those which we think may of general interest or benefit.
       </p>
       <h3>General Data Grid Questions</h3>
-      <p>
+      <p className="gridGuruQuestion">
         <b>What is the best DataGrid on the market</b>
         <br />
         This is perhaps our most common question and the only one we wont
@@ -36,7 +36,7 @@ export default () => {
         overwhelming market share. All the demos in this site use ag-Grid for
         that reason.
       </p>
-      <p>
+      <p className="gridGuruQuestion">
         <b>Should we filter on the Server or the Client?</b>
         <br />
         The short answer is that depends entirely on your requirements. <br />
@@ -51,7 +51,7 @@ export default () => {
         server, and only if you cannot then do enable server filtering.
       </p>
       <h3>ag-Grid Questions</h3>
-      <p>
+      <p className="gridGuruQuestion">
         <b>Is it possible to show aggregated totals at the top of a group?</b>
         <br />
         Yes, you need to create a pinned row at the top of the grid and then
@@ -66,12 +66,29 @@ export default () => {
         <a href="../aggridfeatures/aggridrowgroupingdemo">this demo</a>
         ).
       </p>
-      <p>
+      <p className="gridGuruQuestion">
         <b>How do we always make the column menu icon appear?</b>
         <br />
         Set the <b>suppressMenuHide</b> property in GridOptions to <i>true.</i>
       </p>
-      <p>
+      <p className="gridGuruQuestion">
+        <b>
+          We set <i>enableValue</i> to 'false' for a column but it still shows
+          an aggregated value when grouping - we assumed this would remove it?
+        </b>
+        <br />
+        That is expected ag-Grid behaviour: <i>enableValue</i> (and{' '}
+        <i>enablePivot</i> for pivoting and <i>enableRowGroup</i> for grouping)
+        are <b>UI instructions</b>.<br />
+        This means that if these are set to 'false' the User cannot change the
+        behaviour at run-time (e.g. create a new aggregation or drop it into the
+        'Values' section in the Column sidebar).
+        <br />
+        However if the column's <i>ColDef</i> definition has the 'aggFunc'
+        property already set (which we assume yours does) then it will display
+        that aggregated value in grouped rows.
+      </p>
+      <p className="gridGuruQuestion">
         <b>Should we use Master / Detail or Tree View?</b>
         <br />
         In our view it depends on your data structure. If the 'sub' rows are
