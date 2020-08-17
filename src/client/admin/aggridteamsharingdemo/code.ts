@@ -51,7 +51,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
   };
 
   const adaptableOptions: AdaptableOptions = {
-    primaryKey: 'tradeId',
+    primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Team Sharing Demo',
     predefinedConfig: demoConfig,
