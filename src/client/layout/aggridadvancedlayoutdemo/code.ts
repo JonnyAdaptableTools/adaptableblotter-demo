@@ -104,7 +104,7 @@ const demoConfig: PredefinedConfig = {
           'Employee',
           'ShipCountry',
         ],
-        GroupedColumns: ['Employee', 'ShipCountry'],
+        RowGroupedColumns: ['Employee', 'ShipCountry'],
         Name: 'Grouping Layout',
       },
       {
@@ -114,12 +114,9 @@ const demoConfig: PredefinedConfig = {
           'Employee',
           'ShipCountry',
         ],
-        GroupedColumns: ['Employee'],
-        PivotDetails: {
-          PivotColumns: ['ShipVia'],
-          //  AggregationColumns: ['InvoicedCost', 'ItemCost'],
-          AggregationColumns: ['ItemCost'],
-        },
+        RowGroupedColumns: ['Employee'],
+        // TODO!  check how this works!  AggregationColumns: ['ItemCost'],
+        PivotColumns: ['ShipVia'],
         Name: 'Pivot Layout',
       },
       {
@@ -141,7 +138,7 @@ const demoConfig: PredefinedConfig = {
           },
           { Column: 'ShipVia', SortOrder: 'Descending' },
         ],
-        GroupedColumns: ['Employee'],
+        RowGroupedColumns: ['Employee'],
         Name: 'Advanced Layout',
       },
     ],

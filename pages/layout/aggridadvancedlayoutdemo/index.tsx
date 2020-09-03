@@ -37,8 +37,8 @@ export default () => {
                   defined for that this column.
                 </li>
                 <li>
-                  Group on the <i>Employee</i> column (the <b>GroupedColumns</b>{' '}
-                  property)
+                  Group on the <i>Employee</i> column (the{' '}
+                  <b>RowGroupedColumns</b> property)
                 </li>
                 <li>
                   Show aggregation totals for the <i>InvoicedCost</i> (sum) and{' '}

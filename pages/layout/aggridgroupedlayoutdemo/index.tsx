@@ -10,7 +10,7 @@ export default () => {
         <div>
           <p>
             AdapTable makes it easy to include grouped row information in
-            Layouts; this is done via the <i>GroupedColumns</i> property that
+            Layouts; this is done via the <i>RowGroupedColumns</i> property that
             specifies which Column(s) should be grouped.
           </p>
           <p>

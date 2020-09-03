@@ -50,7 +50,7 @@ const demoConfig: PredefinedConfig = {
           'PackageCost',
           'Employee',
         ],
-        GroupedColumns: ['ShipCountry'],
+        RowGroupedColumns: ['ShipCountry'],
         Name: 'Grouped',
       },
     ],

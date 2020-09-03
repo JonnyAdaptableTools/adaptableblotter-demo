@@ -46,7 +46,7 @@ const demoConfig: PredefinedConfig = {
           'Employee',
           'ShipCountry',
         ],
-        GroupedColumns: ['Employee'],
+        RowGroupedColumns: ['Employee'],
         Name: 'Grouped',
       },
       {
@@ -61,7 +61,7 @@ const demoConfig: PredefinedConfig = {
           'Employee',
           'ShipCountry',
         ],
-        GroupedColumns: ['ShipVia'],
+        RowGroupedColumns: ['ShipVia'],
         Name: 'Sorted Grouped',
       },
     ],

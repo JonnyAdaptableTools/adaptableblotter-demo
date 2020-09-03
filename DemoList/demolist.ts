@@ -86,17 +86,19 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'A filter panel available as a dropdown from the Column Header which allows you to perform complex filtering for a particular column.  Can be saved as User Filters.',
           },
+          /*
           {
             Name: 'User Filters',
             Link: '/filters/aggriduserfiltersdemo',
             Description:
               'Column Filters which have been named and saved and so are usable across multiple functions that use queries (like Conditional Styles, Reports or Advanced Search).',
           },
+          */
           {
-            Name: 'Named Filters',
-            Link: '/filters/aggridnamedfiltersdemo',
+            Name: 'Custom Filters',
+            Link: '/filters/aggridcustomfiltersdemo',
             Description:
-              'Named Filters are provided by users at design-time and include a custom Predicate function that is run each time the filter is applied.',
+              'Customs Filters are "Predicate Functions" provided by users at design-time with a scope that determines where and when the Predicate is applied.',
           },
           {
             Name: 'System Filters',

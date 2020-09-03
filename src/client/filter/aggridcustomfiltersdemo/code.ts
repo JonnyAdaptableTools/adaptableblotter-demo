@@ -15,6 +15,7 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
+  /*
   NamedFilter: {
     NamedFilters: [
       {
@@ -47,6 +48,7 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
+  */
   ColumnFilter: {
     ColumnFilters: [
       {
@@ -99,7 +101,8 @@ export default async (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Named Filters Demo',
+    adaptableId: 'Custom Filters Demo',
+    /*
     userFunctions: [
       {
         type: 'NamedFilterPredicate',
@@ -137,6 +140,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
         },
       },
     ],
+    */
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

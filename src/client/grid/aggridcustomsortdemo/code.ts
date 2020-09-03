@@ -76,7 +76,7 @@ const demoConfig: PredefinedConfig = {
           'PackageCost',
           'ShipCountry',
         ],
-        GroupedColumns: ['Employee'],
+        RowGroupedColumns: ['Employee'],
         Name: 'Grouping Layout',
       },
       {
@@ -86,7 +86,7 @@ const demoConfig: PredefinedConfig = {
           'ShipName',
           'ShipCountry',
         ],
-        GroupedColumns: ['ShipCountry'],
+        RowGroupedColumns: ['ShipCountry'],
         PivotDetails: {
           PivotColumns: ['ShipVia'],
           AggregationColumns: ['InvoicedCost', 'ItemCost'],

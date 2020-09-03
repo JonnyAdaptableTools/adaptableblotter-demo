@@ -162,7 +162,7 @@ const demoConfig: PredefinedConfig = {
           'OrderDate',
           'ShipCountry',
         ],
-        GroupedColumns: ['Comment'],
+        RowGroupedColumns: ['Comment'],
         Name: 'grouped calc cols',
       },
     ],

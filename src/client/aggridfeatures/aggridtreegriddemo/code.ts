@@ -13,6 +13,7 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
+  /*
   NamedFilter: {
     NamedFilters: [
       {
@@ -24,6 +25,7 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
+  */
 } as PredefinedConfig;
 
 export default async (rowData: any[]) => {
@@ -102,6 +104,7 @@ export default async (rowData: any[]) => {
       autoSizeColumnsInLayout: true,
       autoSizeColumnsInPivotLayout: true,
     },
+    /*
     userFunctions: [
       {
         type: 'NamedFilterPredicate',
@@ -110,7 +113,7 @@ export default async (rowData: any[]) => {
           return cellValue === '13 February 2020';
         },
       },
-    ],
+    ],*/
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

@@ -20,11 +20,8 @@ const demoConfig: PredefinedConfig = {
       {
         Columns: [],
         ColumnSorts: [],
-        GroupedColumns: ['ShipCountry'],
-        PivotDetails: {
-          PivotColumns: ['ShipVia'],
-          AggregationColumns: ['InvoicedCost', 'ItemCost'],
-        },
+        RowGroupedColumns: ['ShipCountry'],
+        PivotColumns: ['ShipVia'],
         Name: 'Pivot View',
       },
       {
