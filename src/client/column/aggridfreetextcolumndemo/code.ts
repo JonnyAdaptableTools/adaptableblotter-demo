@@ -16,7 +16,7 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleButtons: ['ColumnChooser', 'FreeTextColumn'],
+    VisibleButtons: ['FreeTextColumn'],
   },
   FreeTextColumn: {
     FreeTextColumns: [

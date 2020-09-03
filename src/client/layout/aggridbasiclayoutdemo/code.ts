@@ -110,7 +110,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
     adaptableId: 'Basic Layout Demo',
     predefinedConfig: demoConfig,
     layoutOptions: {
-      autoSizeColumnsInDefaultLayout: true,
       autoSizeColumnsInLayout: true,
       autoSizeColumnsInPivotLayout: true,
     },

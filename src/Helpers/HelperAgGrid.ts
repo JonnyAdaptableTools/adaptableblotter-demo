@@ -157,7 +157,6 @@ export class HelperAgGrid {
       adaptableId: adaptableId,
       predefinedConfig: config,
       layoutOptions: {
-        includeVendorStateInLayouts: true,
         autoSaveLayouts: true,
       },
     };
@@ -180,7 +179,6 @@ export class HelperAgGrid {
 
       predefinedConfig: config,
       layoutOptions: {
-        includeVendorStateInLayouts: true,
         autoSaveLayouts: true,
       },
       containerOptions: {

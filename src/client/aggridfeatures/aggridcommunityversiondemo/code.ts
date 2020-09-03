@@ -102,7 +102,9 @@ const demoConfig: PredefinedConfig = {
   FormatColumn: {
     FormatColumns: [
       {
-        ColumnId: 'Avg Item Cost',
+        Scope: {
+          ColumnIds: ['Avg Item Cost'],
+        },
         DisplayFormat: {
           Formatter: 'NumberFormatter',
           Options: {

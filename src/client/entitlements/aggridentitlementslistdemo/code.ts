@@ -26,7 +26,7 @@ const demoConfig: PredefinedConfig = {
   Entitlements: {
     FunctionEntitlements: [
       {
-        FunctionName: 'ColumnCategory',
+        FunctionName: 'CustomSort',
         AccessLevel: 'Hidden',
       },
       {

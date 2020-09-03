@@ -16,20 +16,9 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleButtons: ['ColumnChooser', 'ColumnCategory'],
+    VisibleButtons: ['ConditionalStyle'],
   },
-  ColumnCategory: {
-    ColumnCategories: [
-      {
-        ColumnCategoryId: 'Customer',
-        ColumnIds: ['ContactName', 'CustomerReference', 'CompanyName'],
-      },
-      {
-        ColumnCategoryId: 'Address',
-        ColumnIds: ['ShipCountry', 'ShipName', 'ShipVia'],
-      },
-    ],
-  },
+
   Layout: {
     CurrentLayout: 'Orders',
     Layouts: [

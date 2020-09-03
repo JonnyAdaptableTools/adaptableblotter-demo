@@ -90,7 +90,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
       ) => {
         if (
           menuInfo.Column.ColumnId === 'ContactName' &&
-          (menuItem.FunctionName === 'ColumnChooser' ||
+          (menuItem.FunctionName === 'CustomSort' ||
             menuItem.FunctionName === 'PieChart')
         ) {
           return false;

@@ -18,7 +18,9 @@ const demoConfig: PredefinedConfig = {
   FormatColumn: {
     FormatColumns: [
       {
-        ColumnId: 'OrderDate',
+        Scope: {
+          ColumnIds: ['OrderDate'],
+        },
         Style: {
           FontWeight: 'Bold',
           FontSize: 'XSmall',

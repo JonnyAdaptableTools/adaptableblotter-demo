@@ -71,7 +71,6 @@ const demoConfig: PredefinedConfig = {
   ConditionalStyle: {
     ConditionalStyles: [
       {
-        ColumnCategoryId: '',
         ColumnId: '',
         ConditionalStyleScope: 'Row',
         Expression: {

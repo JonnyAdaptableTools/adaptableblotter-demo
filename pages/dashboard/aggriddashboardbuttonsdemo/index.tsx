@@ -14,7 +14,7 @@ export default () => {
           </p>
           <p>
             By default, AdapTable will show the 'SystemStatus', 'GridInfo',
-            'ColumnChooser' and 'ConditionalStyle' icons.
+            'Layout' and 'ConditionalStyle' icons.
           </p>
           <p>
             In this example we have set the 'CellValidation', 'BulkUpdate',

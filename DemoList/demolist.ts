@@ -249,12 +249,6 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Create your own column where you can insert your own values (e.g. comments) that are stored separately from the Data Source.',
           },
           {
-            Name: 'Column Category',
-            Link: '/column/aggridcolumncategorydemo',
-            Description:
-              'Group columns together logically to help you to manipulate grids with very large numbers of columns.',
-          },
-          {
             Name: 'Column Info',
             Link: '/column/aggridcolumninfodemo',
             Description:
@@ -336,12 +330,6 @@ export function getDemoPageStructure(): DemoPageStructure {
             Link: '/gridmanagement/aggridgridinfodemo',
             Description:
               'Click the "info" button in the Dashboard Header to see summary information about the grid and the Adaptable Options you have set.',
-          },
-          {
-            Name: 'Column Chooser',
-            Link: '/gridmanagement/aggridcolumnchooserdemo',
-            Description:
-              'Set column visiblity and order through an intuitive column management screen.',
           },
           /*
           {

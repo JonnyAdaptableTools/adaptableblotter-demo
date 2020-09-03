@@ -25,7 +25,9 @@ const demoConfig: PredefinedConfig = {
   FormatColumn: {
     FormatColumns: [
       {
-        ColumnId: 'price',
+        Scope: {
+          ColumnIds: ['price'],
+        },
         CellAlignment: 'Right',
         DisplayFormat: {
           Formatter: 'NumberFormatter',
@@ -35,7 +37,9 @@ const demoConfig: PredefinedConfig = {
         },
       },
       {
-        ColumnId: 'firstBought',
+        Scope: {
+          ColumnIds: ['firstBought'],
+        },
         CellAlignment: 'Center',
         DisplayFormat: {
           Formatter: 'DateFormatter',

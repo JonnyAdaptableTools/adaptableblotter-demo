@@ -114,11 +114,11 @@ export default async (columnDefs: any[], rowData: any[]) => {
     showOrdersLayoutButton.style.marginRight = '10px';
     testDiv.appendChild(showOrdersLayoutButton);
 
-    var showColumnChooserPopupButton = document.createElement('BUTTON');
-    showColumnChooserPopupButton.innerHTML = 'Show Column Chooser';
-    showColumnChooserPopupButton.onclick = () => showColumnChooserPopup();
-    showColumnChooserPopupButton.style.marginRight = '10px';
-    testDiv.appendChild(showColumnChooserPopupButton);
+    var showCustomSortPopupButton = document.createElement('BUTTON');
+    showCustomSortPopupButton.innerHTML = 'Open Custom Sort Popup';
+    showCustomSortPopupButton.onclick = () => showCustomSortPopup();
+    showCustomSortPopupButton.style.marginRight = '10px';
+    testDiv.appendChild(showCustomSortPopupButton);
   }
 
   const adaptableOptions: AdaptableOptions = {
@@ -166,8 +166,8 @@ export default async (columnDefs: any[], rowData: any[]) => {
     adaptableApi.layoutApi.setLayout('Orders');
   }
 
-  function showColumnChooserPopup() {
-    adaptableApi.columnChooserApi.showColumnChooserPopup();
+  function showCustomSortPopup() {
+    adaptableApi.customSortApi.showCustomSortPopup();
   }
 
   return { adaptableOptions, adaptableApi };

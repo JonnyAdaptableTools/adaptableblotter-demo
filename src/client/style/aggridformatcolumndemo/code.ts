@@ -22,7 +22,9 @@ const demoConfig: PredefinedConfig = {
     FormatColumns: [
       // Set a Style for OrderId
       {
-        ColumnId: 'OrderId',
+        Scope: {
+          ColumnIds: ['OrderId'],
+        },
         Style: {
           BackColor: '#d4fb79',
           ForeColor: '#8b0000',
@@ -30,7 +32,9 @@ const demoConfig: PredefinedConfig = {
       },
       // Set a Time-based Display Format for LastUpdatedTime
       {
-        ColumnId: 'LastUpdatedTime',
+        Scope: {
+          ColumnIds: ['LastUpdatedTime'],
+        },
         DisplayFormat: {
           Formatter: 'DateFormatter',
           Options: {
@@ -40,7 +44,9 @@ const demoConfig: PredefinedConfig = {
       },
       // Set both a Style and a (Date-based) Display Format for OrderDate
       {
-        ColumnId: 'OrderDate',
+        Scope: {
+          ColumnIds: ['OrderDate'],
+        },
         Style: {
           FontWeight: 'Bold',
           FontSize: 'XSmall',
@@ -55,7 +61,9 @@ const demoConfig: PredefinedConfig = {
       },
       // Set a Display Format of negative parentheses for ChangeLastOrder
       {
-        ColumnId: 'ChangeLastOrder',
+        Scope: {
+          ColumnIds: ['ChangeLastOrder'],
+        },
         DisplayFormat: {
           Formatter: 'NumberFormatter',
           Options: {
@@ -65,7 +73,9 @@ const demoConfig: PredefinedConfig = {
       },
       // Set a Display Format of £ and 2 dp for InvoicedCost
       {
-        ColumnId: 'InvoicedCost',
+        Scope: {
+          ColumnIds: ['InvoicedCost'],
+        },
         DisplayFormat: {
           Formatter: 'NumberFormatter',
           Options: {
@@ -76,7 +86,9 @@ const demoConfig: PredefinedConfig = {
       },
       // Set a Display Format of $ with 'AUD' suffix and space for integer separator for OrderCost
       {
-        ColumnId: 'OrderCost',
+        Scope: {
+          ColumnIds: ['OrderCost'],
+        },
         DisplayFormat: {
           Formatter: 'NumberFormatter',
           Options: {

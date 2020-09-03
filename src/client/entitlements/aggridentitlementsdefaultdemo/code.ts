@@ -37,7 +37,7 @@ const demoConfig: PredefinedConfig = {
         AccessLevel: 'Full',
       },
       {
-        FunctionName: 'ColumnChooser',
+        FunctionName: 'CustomSort',
         AccessLevel: 'Full',
       },
       {

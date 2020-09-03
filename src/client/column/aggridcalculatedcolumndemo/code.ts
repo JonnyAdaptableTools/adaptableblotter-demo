@@ -83,7 +83,9 @@ const demoConfig: PredefinedConfig = {
   FormatColumn: {
     FormatColumns: [
       {
-        ColumnId: 'Avg Item Cost',
+        Scope: {
+          ColumnIds: ['Avg Item Cost'],
+        },
         DisplayFormat: {
           Formatter: 'NumberFormatter',
           Options: {
@@ -92,7 +94,9 @@ const demoConfig: PredefinedConfig = {
         },
       },
       {
-        ColumnId: 'Highest Cost',
+        Scope: {
+          ColumnIds: ['Highest Cost'],
+        },
         DisplayFormat: {
           Formatter: 'NumberFormatter',
           Options: {
@@ -101,7 +105,9 @@ const demoConfig: PredefinedConfig = {
         },
       },
       {
-        ColumnId: 'Profit',
+        Scope: {
+          ColumnIds: ['Profit'],
+        },
         DisplayFormat: {
           Formatter: 'NumberFormatter',
           Options: {
@@ -110,7 +116,9 @@ const demoConfig: PredefinedConfig = {
         },
       },
       {
-        ColumnId: 'Tax',
+        Scope: {
+          ColumnIds: ['Tax'],
+        },
         DisplayFormat: {
           Formatter: 'NumberFormatter',
           Options: {

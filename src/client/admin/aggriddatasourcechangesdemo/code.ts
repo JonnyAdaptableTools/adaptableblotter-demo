@@ -27,7 +27,6 @@ const demoConfig: PredefinedConfig = {
     ConditionalStyles: [
       {
         ColumnId: '',
-        ColumnCategoryId: '',
         Style: {
           BackColor: '#87cefa',
         },

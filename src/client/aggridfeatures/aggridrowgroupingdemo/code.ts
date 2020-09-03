@@ -16,7 +16,9 @@ const demoConfig: PredefinedConfig = {
   FormatColumn: {
     FormatColumns: [
       {
-        ColumnId: 'InvoicedCost',
+        Scope: {
+          ColumnIds: ['InvoicedCost'],
+        },
         DisplayFormat: {
           Formatter: 'NumberFormatter',
           Options: {
@@ -25,7 +27,9 @@ const demoConfig: PredefinedConfig = {
         },
       },
       {
-        ColumnId: 'ItemCost',
+        Scope: {
+          ColumnIds: ['ItemCost'],
+        },
         DisplayFormat: {
           Formatter: 'NumberFormatter',
           Options: {

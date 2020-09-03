@@ -16,7 +16,7 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleButtons: ['Dashboard', 'ColumnChooser', 'AdvancedSearch'],
+    VisibleButtons: ['Dashboard', 'AdvancedSearch'],
     Tabs: [
       {
         Name: 'Toolbars',
@@ -170,7 +170,9 @@ const demoConfig: PredefinedConfig = {
   FormatColumn: {
     FormatColumns: [
       {
-        ColumnId: 'OrderId',
+        Scope: {
+          ColumnIds: ['OrderId'],
+        },
         Style: {
           BackColor: '#d4fb79',
           ForeColor: '#8b0000',

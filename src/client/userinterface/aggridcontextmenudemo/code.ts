@@ -103,10 +103,10 @@ export default async (columnDefs: any[], rowData: any[]) => {
         if (menuItem.FunctionName === 'GridInfo') {
           return false;
         }
-        // Don't display the 'Columnn Chooser' context menu option for in the Employee column
+        // Don't display the 'Filter' context menu option for in the Employee column
         if (
           menuInfo.Column.ColumnId === 'Employee' &&
-          menuItem.FunctionName === 'ColumnChooser'
+          menuItem.FunctionName === 'Filter'
         ) {
           return false;
         }
