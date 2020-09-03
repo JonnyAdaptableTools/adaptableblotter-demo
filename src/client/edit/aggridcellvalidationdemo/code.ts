@@ -53,7 +53,7 @@ const demoConfig: PredefinedConfig = {
         },
         Predicate: {
           Id: 'GreaterThan',
-          Inputs: 300,
+          Inputs: [300],
         },
       },
       {
@@ -63,7 +63,7 @@ const demoConfig: PredefinedConfig = {
         },
         Predicate: {
           Id: 'PercentChange',
-          Inputs: 100,
+          Inputs: [100],
         },
       },
     ],

@@ -71,7 +71,7 @@ export default () => {
             </a>
           </p>
           <p>
-            In this example we removed the <i>'Show Column Chooser'</i> and{' '}
+            In this example we removed the <i>'Create Custom Sort'</i> and{' '}
             <i>'View as PieChart'</i> menu items for the 'Contact' column and we
             removed all AdapTable menu items for the 'Cust. Ref' column.
           </p>

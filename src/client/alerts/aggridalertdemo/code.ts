@@ -28,24 +28,28 @@ const demoConfig: PredefinedConfig = {
     AlertDisplayDiv: 'alertDiv',
     AlertDefinitions: [
       {
-        ColumnId: 'InvoicedCost',
-        MessageType: 'Warning',
-        Range: {
-          Operand1: '2000',
-          Operand1Type: 'Value',
-          Operator: 'GreaterThan',
+        Scope: {
+          ColumnIds: ['InvoicedCost'],
         },
+        MessageType: 'Warning',
+        Predicate: {
+          Id: 'GreaterThan',
+          Inputs: [2000],
+        },
+
         AlertProperties: {
           ShowPopup: true,
         },
       },
+
       {
-        ColumnId: 'ItemCount',
+        Scope: {
+          ColumnIds: ['ItemCount'],
+        },
         MessageType: 'Info',
-        Range: {
-          Operand1: '100',
-          Operand1Type: 'Value',
-          Operator: 'PercentChange',
+        Predicate: {
+          Id: 'PercentChange',
+          Inputs: [100],
         },
         AlertProperties: {
           ShowPopup: false,

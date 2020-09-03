@@ -26,19 +26,13 @@ const demoConfig: PredefinedConfig = {
   ConditionalStyle: {
     ConditionalStyles: [
       {
-        ColumnId: '',
+        Scope: {
+          All: true,
+        },
         Style: {
           BackColor: '#87cefa',
         },
-        ConditionalStyleScope: 'Row',
-        Expression: {
-          ColumnValueExpressions: [
-            {
-              ColumnId: 'currency',
-              ColumnDisplayValues: ['EUR', 'GBP', 'USD'],
-            },
-          ],
-        },
+        Expression: "[currency] IN ('EUR', 'USD') ",
       },
     ],
   },

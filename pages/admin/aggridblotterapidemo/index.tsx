@@ -32,9 +32,9 @@ export default () => {
             In this example we create our own form controls (external to the
             AdapTable instance) but we call the QuickSearch API to run and clear
             Quick Search, Dashboard API to manage Dashboard visibility, Layout
-            API to load a layout and Column Chooser API to show the column
-            chooser. Note that the functions run as if you were using AdapTable
-            and that all State is stored (refresh the page to see).
+            API to load a layout and Custom Sort API to open that window. Note
+            that the functions run as if you were using AdapTable and that all
+            State is stored (refresh the page to see).
           </p>
         </div>
       }

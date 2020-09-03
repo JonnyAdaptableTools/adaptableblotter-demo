@@ -61,9 +61,8 @@ export default () => {
             >
               User Interface Options
             </a>
-            ; in this example we removed the <i>Column Chooser</i> menu item for
-            the 'Employee' column and all the menu items for the 'Contact'
-            column.
+            ; in this example we removed the <i>Filter</i> menu item for the
+            'Employee' column and all the menu items for the 'Contact' column.
           </p>
           <p>
             The 2 arguments to the function are{' '}
