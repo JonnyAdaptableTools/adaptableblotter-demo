@@ -26,7 +26,6 @@ const demoConfig: PredefinedConfig = {
   },
   QuickSearch: {
     QuickSearchText: 'Mar',
-    DisplayAction: 'ShowRowAndHighlightCell',
   },
 } as PredefinedConfig;
 

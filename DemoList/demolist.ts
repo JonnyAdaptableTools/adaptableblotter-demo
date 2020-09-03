@@ -57,10 +57,9 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Search across all columns using a simple text search (includes wildcards like ">").',
           },
           {
-            Name: 'Advanced Search',
-            Link: '/search/aggridadvancedsearchdemo',
-            Description:
-              'Saveable multiple-column search facility including a huge array of ranges and search criteria.',
+            Name: 'Current Query',
+            Link: '/search/aggridcurrentquerydemo',
+            Description: 'Set the current query to use at start up.',
           },
           {
             Name: 'Data Source Selector',

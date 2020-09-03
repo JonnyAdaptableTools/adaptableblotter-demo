@@ -1,8 +1,8 @@
-import '@adaptabletools/adaptable/index.css';
-import '@adaptabletools/adaptable/themes/dark.css';
-import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
-import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
-import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham-dark.css';
+import '../aggridcurrentquerydemo/node_modules/@adaptabletools/adaptable/index.css';
+import '../aggridcurrentquerydemo/node_modules/@adaptabletools/adaptable/themes/dark.css';
+import '../aggridcurrentquerydemo/node_modules/@ag-grid-community/all-modules/dist/styles/ag-grid.css';
+import '../aggridcurrentquerydemo/node_modules/@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
+import '../aggridcurrentquerydemo/node_modules/@ag-grid-community/all-modules/dist/styles/ag-theme-balham-dark.css';
 import Adaptable from '@adaptabletools/adaptable/agGrid';
 import { GridOptions } from '@ag-grid-community/all-modules';
 import {
@@ -20,7 +20,6 @@ const demoConfig: PredefinedConfig = {
   },
   QuickSearch: {
     QuickSearchText: 'g*',
-    DisplayAction: 'ShowRowAndHighlightCell',
     Style: {
       BackColor: '#ffff00',
       ForeColor: '#8b0000',

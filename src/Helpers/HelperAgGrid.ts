@@ -1121,7 +1121,7 @@ export class HelperAgGrid {
       headerName: 'Item Cost',
       field: 'ItemCost',
       cellClass: 'number-cell',
-      rowDrag: true,
+      // rowDrag: true,
       editable: true,
       filter: true,
       floatingFilter: true,

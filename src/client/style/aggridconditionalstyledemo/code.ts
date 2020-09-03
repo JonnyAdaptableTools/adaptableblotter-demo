@@ -19,68 +19,56 @@ const demoConfig: PredefinedConfig = {
     VisibleButtons: ['ConditionalStyle'],
   },
   ConditionalStyle: {
+    Revision: Date.now(),
     ConditionalStyles: [
       {
         Scope: {
-          ColumnIds: ['ChangeLastOrder'],
+          DataTypes: ['Number'],
         },
         Style: {
           ForeColor: '#008000',
         },
-        Expression: {
-          FilterExpressions: [
-            {
-              ColumnId: 'ChangeLastOrder',
-              Filters: ['Positive'],
-            },
-          ],
+        Predicate: {
+          Id: 'Positive',
         },
       },
       {
-        ColumnId: 'ChangeLastOrder',
+        Scope: {
+          DataTypes: ['Number'],
+        },
         Style: {
           ForeColor: '#ff0000',
         },
-        Expression: {
-          FilterExpressions: [
-            {
-              ColumnId: 'ChangeLastOrder',
-              Filters: ['Negative'],
-            },
-          ],
+        Predicate: {
+          Id: 'Negative',
         },
       },
       {
+        Scope: {
+          ColumnIds: ['ItemCost'],
+        },
         Style: {
           BackColor: '#ffffcc',
           FontStyle: 'Italic',
           ForeColor: '#000000',
         },
-        ExcludeGroupedRows: true,
-        Expression: {
-          RangeExpressions: [
-            {
-              ColumnId: 'ItemCost',
-              Ranges: [
-                {
-                  Operand1: '60',
-                  Operand1Type: 'Value',
-                  Operator: 'GreaterThan',
-                },
-              ],
-            },
-          ],
+        Predicate: {
+          Id: 'GreaterThan',
+          Inputs: [60],
         },
+        ExcludeGroupedRows: true,
       },
       {
         Scope: {
-          All: true,
+          ColumnIds: ['Employee'],
         },
         Style: {
           FontWeight: 'Bold',
         },
-
-        Expression: '[PackageCost] < 10',
+        Predicate: {
+          Id: 'Is',
+          Inputs: ['Margaret Peacock'],
+        },
       },
     ],
   },

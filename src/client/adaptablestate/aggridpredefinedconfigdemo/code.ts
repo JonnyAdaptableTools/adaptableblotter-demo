@@ -64,7 +64,7 @@ const demoConfig: PredefinedConfig = {
     ConditionalStyles: [
       {
         Scope: {
-          ColumnIds: ['ChangeLastOrder'],
+          DataTypes: ['Number'],
         },
         Style: {
           ForeColor: '#008000',
@@ -74,17 +74,14 @@ const demoConfig: PredefinedConfig = {
         },
       },
       {
-        ColumnId: 'ChangeLastOrder',
+        Scope: {
+          DataTypes: ['Number'],
+        },
         Style: {
           ForeColor: '#ff0000',
         },
-        Expression: {
-          FilterExpressions: [
-            {
-              ColumnId: 'ChangeLastOrder',
-              Filters: ['Negative'],
-            },
-          ],
+        Predicate: {
+          Id: 'Negative',
         },
       },
       {
@@ -159,7 +156,6 @@ const demoConfig: PredefinedConfig = {
   },
   QuickSearch: {
     QuickSearchText: 'g*',
-    DisplayAction: 'ShowRowAndHighlightCell',
     Style: {
       BackColor: '#ffff00',
       ForeColor: '#8b0000',
