@@ -20,7 +20,7 @@ const demoConfig: PredefinedConfig = {
     Tabs: [
       {
         Name: 'Search',
-        Toolbars: ['AdvancedSearch', 'ColumnFilter', 'QuickSearch'],
+        Toolbars: ['Query', 'Filter', 'QuickSearch'],
       },
       {
         Name: 'Grid',
@@ -31,6 +31,7 @@ const demoConfig: PredefinedConfig = {
   QuickSearch: {
     QuickSearchText: 'l',
   },
+  /*
   AdvancedSearch: {
     AdvancedSearches: [
       {
@@ -52,6 +53,10 @@ const demoConfig: PredefinedConfig = {
       },
     ],
     CurrentAdvancedSearch: 'High Invoices',
+  },
+  */
+  Query: {
+    CurrentQuery: '[InvoicedCost] > 1200',
   },
   ColumnFilter: {
     ColumnFilters: [

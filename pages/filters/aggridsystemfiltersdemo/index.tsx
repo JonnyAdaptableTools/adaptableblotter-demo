@@ -10,8 +10,8 @@ export default () => {
         <div>
           <p>
             AdapTable provides a range of useful System Filters (e.g. 'Blanks',
-            'Zero', 'Yesterday') to complement any User Filters or Named Filters
-            provided by you.
+            'Zero', 'Yesterday') to complement any Custom Filters provided by
+            you.
           </p>
           <p>
             They appear in italics at the top of the Column Filter form (above

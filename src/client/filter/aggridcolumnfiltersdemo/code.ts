@@ -9,7 +9,6 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
-  ColumnFilter,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -129,7 +128,9 @@ export default async (columnDefs: any[], rowData: any[]) => {
   adaptableApi = await Adaptable.init(adaptableOptions);
 
   adaptableApi.eventApi.on('AdaptableReady', () => {
-    let columnFilter: ColumnFilter = {
+    // TODO Release7
+    /*
+    let columnFilter: Filter = {
       ColumnId: 'ShipCountry',
       Filter: {
         ColumnValueExpressions: [
@@ -140,7 +141,8 @@ export default async (columnDefs: any[], rowData: any[]) => {
         ],
       },
     };
-    adaptableApi.columnFilterApi.setColumnFilter([columnFilter]);
+    adaptableApi.filterApi.setColumnFilter([columnFilter]);
+    */
   });
 
   return { adaptableOptions, adaptableApi };

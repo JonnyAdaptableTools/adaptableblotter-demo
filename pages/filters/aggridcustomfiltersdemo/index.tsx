@@ -5,7 +5,7 @@ export default () => {
   return (
     <DynamicDemoPage
       demo={import('../../../src/client/filter/aggridcustomfiltersdemo')}
-      pageTitle={'Named Filters Demo'}
+      pageTitle={'Custom Filters Demo'}
       description={
         <div>
           <p>

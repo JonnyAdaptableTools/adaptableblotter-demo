@@ -30,7 +30,7 @@ const demoConfig: PredefinedConfig = {
         AccessLevel: 'Hidden',
       },
       {
-        FunctionName: 'AdvancedSearch',
+        FunctionName: 'Query',
         AccessLevel: 'Hidden',
       },
       {

@@ -40,10 +40,10 @@ export default () => {
           <p>
             For instance, if{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_layoutoptions_.layoutoptions.html#includeopenedrowgroups"
+              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_layoutoptions_.layoutoptions.html#includeexpandedrowgroups"
               target="_blank"
             >
-              includeOpenedRowGroups
+              includeExpandedRowGroups
             </a>{' '}
             is set to true, then any opened groups saved in the Layout will
             re-open at the start-up; try it by opening a row group and

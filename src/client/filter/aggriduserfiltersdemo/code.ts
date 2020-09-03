@@ -15,6 +15,7 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
+  /*
   UserFilter: {
     UserFilters: [
       {
@@ -120,6 +121,7 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
+  */
 } as PredefinedConfig;
 
 export default async (columnDefs: any[], rowData: any[]) => {

@@ -30,11 +30,11 @@ const demoConfig: PredefinedConfig = {
     CellValidations: [
       {
         ActionMode: 'Stop Edit',
-        ColumnId: 'ItemCount',
-        Range: {
-          Operand1: '15',
-          Operand1Type: 'Value',
-          Operator: 'ValueChange',
+        Scope: {
+          ColumnIds: ['ItemCount'],
+        },
+        Predicate: {
+          Id: 'Any',
         },
       },
     ],

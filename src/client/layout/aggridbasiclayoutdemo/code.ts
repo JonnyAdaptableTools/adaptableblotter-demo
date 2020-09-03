@@ -59,10 +59,10 @@ const demoConfig: PredefinedConfig = {
         Name: 'Simple Layout',
         ColumnSorts: [
           {
-            Column: 'ShipName',
-            SortOrder: 'Ascending',
+            ColumnId: 'ShipName',
+            SortOrder: 'Asc',
           },
-          { Column: 'ShipVia', SortOrder: 'Descending' },
+          { ColumnId: 'ShipVia', SortOrder: 'Desc' },
         ],
         Columns: [
           'OrderId',

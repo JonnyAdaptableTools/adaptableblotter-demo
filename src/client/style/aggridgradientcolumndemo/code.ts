@@ -48,8 +48,8 @@ const demoConfig: PredefinedConfig = {
       {
         ColumnSorts: [
           {
-            Column: 'Employee',
-            SortOrder: 'Ascending',
+            ColumnId: 'Employee',
+            SortOrder: 'Asc',
           },
         ],
         Columns: [

@@ -94,7 +94,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
     adaptableId: 'Grouped Layout Demo',
     predefinedConfig: demoConfig,
     layoutOptions: {
-      includeOpenedRowGroups: true,
+      includeExpandedRowGroups: true,
     },
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

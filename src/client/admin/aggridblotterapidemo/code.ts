@@ -35,8 +35,8 @@ const demoConfig: PredefinedConfig = {
         Columns: ['OrderId', 'ShipVia', 'Freight', 'ShipName', 'ShipCountry'],
         ColumnSorts: [
           {
-            Column: 'ShipName',
-            SortOrder: 'Ascending',
+            ColumnId: 'ShipName',
+            SortOrder: 'Asc',
           },
         ],
         Name: 'Shipping',

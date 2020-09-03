@@ -140,7 +140,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
             case 'SmartEdit':
             case 'Shortcut':
               return 'Hidden';
-            case 'AdvancedSearch':
+            case 'Query':
             case 'Export':
             case 'Layout':
               return getMockPermissionServerResult(

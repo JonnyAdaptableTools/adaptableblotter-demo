@@ -21,7 +21,9 @@ const demoConfig: PredefinedConfig = {
   ConditionalStyle: {
     ConditionalStyles: [
       {
-        ColumnId: 'ChangeLastOrder',
+        Scope: {
+          ColumnIds: ['ChangeLastOrder'],
+        },
         Style: {
           ForeColor: '#008000',
         },
@@ -74,25 +76,14 @@ const demoConfig: PredefinedConfig = {
         },
       },
       {
-        ColumnId: 'PackageCost',
+        Scope: {
+          All: true,
+        },
         Style: {
           FontWeight: 'Bold',
         },
-        ConditionalStyleScope: 'Row',
-        Expression: {
-          RangeExpressions: [
-            {
-              ColumnId: 'PackageCost',
-              Ranges: [
-                {
-                  Operand1: '10',
-                  Operand1Type: 'Value',
-                  Operator: 'LessThan',
-                },
-              ],
-            },
-          ],
-        },
+
+        Expression: '[PackageCost] < 10',
       },
     ],
   },

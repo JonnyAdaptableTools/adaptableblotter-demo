@@ -22,7 +22,7 @@ const demoConfig: PredefinedConfig = {
     Tabs: [
       {
         Name: 'Toolbars',
-        Toolbars: ['AdvancedSearch', 'QuickSearch', 'Theme'],
+        Toolbars: ['Query', 'QuickSearch', 'Theme'],
       },
     ],
   },

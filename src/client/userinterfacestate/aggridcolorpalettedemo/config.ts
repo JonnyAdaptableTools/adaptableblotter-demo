@@ -5,7 +5,7 @@ export default {
     Tabs: [
       {
         Name: 'Toolbars',
-        Toolbars: ['QuickSearch', 'AdvancedSearch'],
+        Toolbars: ['QuickSearch', 'Query'],
       },
     ],
   },

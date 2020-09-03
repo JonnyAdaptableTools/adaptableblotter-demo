@@ -42,8 +42,8 @@ const demoConfig: PredefinedConfig = {
         ],
         ColumnSorts: [
           {
-            Column: 'ShipVia',
-            SortOrder: 'Ascending',
+            ColumnId: 'ShipVia',
+            SortOrder: 'Asc',
           },
         ],
         Name: 'Non Pivot View',

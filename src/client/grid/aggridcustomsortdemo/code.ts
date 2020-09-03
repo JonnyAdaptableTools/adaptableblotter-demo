@@ -49,10 +49,10 @@ const demoConfig: PredefinedConfig = {
         Name: 'Sorting Layout',
         ColumnSorts: [
           {
-            Column: 'Employee',
-            SortOrder: 'Ascending',
+            ColumnId: 'Employee',
+            SortOrder: 'Asc',
           },
-          { Column: 'ContactName', SortOrder: 'Descending' },
+          { ColumnId: 'ContactName', SortOrder: 'Desc' },
         ],
         Columns: [
           'ContactName',

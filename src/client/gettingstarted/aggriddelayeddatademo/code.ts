@@ -83,7 +83,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
     adaptableId: 'Delayed Data Demo',
     predefinedConfig: demoConfig,
     layoutOptions: {
-      includeOpenedRowGroups: true,
+      includeExpandedRowGroups: true,
       autoSizeColumnsInLayout: true,
     },
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },

@@ -63,8 +63,8 @@ const demoConfig: PredefinedConfig = {
         ],
         ColumnSorts: [
           {
-            Column: 'ShipName',
-            SortOrder: 'Ascending',
+            ColumnId: 'ShipName',
+            SortOrder: 'Asc',
           },
         ],
         Name: 'Shipping View',

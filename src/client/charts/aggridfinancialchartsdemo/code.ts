@@ -55,8 +55,8 @@ const demoConfig: PredefinedConfig = ({
         Name: 'FTSE Layout',
         ColumnSorts: [
           {
-            Column: 'CloseDate',
-            SortOrder: 'Descending',
+            ColumnId: 'CloseDate',
+            SortOrder: 'Desc',
           },
         ],
         Columns: [
@@ -76,13 +76,7 @@ const demoConfig: PredefinedConfig = ({
   },
 
   ToolPanel: {
-    VisibleToolPanels: [
-      'Export',
-      'AdvancedSearch',
-      'Layout',
-      'Chart',
-      'ColumnFilter',
-    ],
+    VisibleToolPanels: ['Export', 'Filter', 'Layout', 'Chart', 'ColumnFilter'],
   },
 } as any) as PredefinedConfig;
 

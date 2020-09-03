@@ -16,7 +16,7 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleButtons: ['Dashboard', 'AdvancedSearch'],
+    VisibleButtons: ['Dashboard', 'Query'],
     Tabs: [
       {
         Name: 'Toolbars',
@@ -32,29 +32,19 @@ const demoConfig: PredefinedConfig = {
     Reports: [
       {
         Name: 'High Freight',
-        ReportColumnScope: 'BespokeColumns',
+        ReportColumnScope: 'ScopeColumns',
         ReportRowScope: 'ExpressionRows',
-        ColumnIds: [
-          'OrderId',
-          'Freight',
-          'Employee',
-          'PackageCost',
-          'InvoicedCost',
-        ],
-        Expression: {
-          RangeExpressions: [
-            {
-              ColumnId: 'Freight',
-              Ranges: [
-                {
-                  Operand1: '500',
-                  Operand1Type: 'Value',
-                  Operator: 'GreaterThan',
-                },
-              ],
-            },
+        Scope: {
+          ColumnIds: [
+            'OrderId',
+            'Freight',
+            'Employee',
+            'PackageCost',
+            'InvoicedCost',
           ],
         },
+
+        Expression: '[Freight] > 500',
       },
     ],
   },
@@ -73,18 +63,14 @@ const demoConfig: PredefinedConfig = {
   ConditionalStyle: {
     ConditionalStyles: [
       {
-        ColumnId: 'ChangeLastOrder',
+        Scope: {
+          ColumnIds: ['ChangeLastOrder'],
+        },
         Style: {
           ForeColor: '#008000',
         },
-        ConditionalStyleScope: 'Column',
-        Expression: {
-          FilterExpressions: [
-            {
-              ColumnId: 'ChangeLastOrder',
-              Filters: ['Positive'],
-            },
-          ],
+        Predicate: {
+          Id: 'Positive',
         },
       },
       {
@@ -108,21 +94,10 @@ const demoConfig: PredefinedConfig = {
           FontStyle: 'Italic',
           ForeColor: '#000000',
         },
-        ConditionalStyleScope: 'Row',
-        Expression: {
-          RangeExpressions: [
-            {
-              ColumnId: 'InvoicedCost',
-              Ranges: [
-                {
-                  Operand1: '2000',
-                  Operand1Type: 'Value',
-                  Operator: 'GreaterThan',
-                },
-              ],
-            },
-          ],
+        Scope: {
+          All: true,
         },
+        Expression: '[InvoicedCost] > 2000',
       },
     ],
   },
@@ -159,8 +134,8 @@ const demoConfig: PredefinedConfig = {
         ],
         ColumnSorts: [
           {
-            Column: 'ShipName',
-            SortOrder: 'Ascending',
+            ColumnId: 'ShipName',
+            SortOrder: 'Asc',
           },
         ],
         Name: 'Shipping View',

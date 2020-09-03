@@ -15,6 +15,11 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
+  // TODO: Version 7 - build a Query here!
+  Query: {
+    CurrentQuery: '[Employee]="Margaret Peacock" ',
+  },
+  /*
   AdvancedSearch: {
     AdvancedSearches: [
       {
@@ -48,12 +53,13 @@ const demoConfig: PredefinedConfig = {
       },
     ],
     CurrentAdvancedSearch: 'Team Best Orders',
-  },
+    */
+
   Dashboard: {
     Tabs: [
       {
         Name: 'Search',
-        Toolbars: ['AdvancedSearch'],
+        Toolbars: ['Query'],
       },
     ],
   },

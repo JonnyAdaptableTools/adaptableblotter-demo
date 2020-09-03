@@ -58,7 +58,9 @@ const demoConfig: PredefinedConfig = {
   FormatColumn: {
     FormatColumns: [
       {
-        ColumnId: 'Employee',
+        Scope: {
+          ColumnIds: ['Employee'],
+        },
         Style: {
           BackColor: '#ffffcc',
           FontWeight: 'Normal',
@@ -71,22 +73,17 @@ const demoConfig: PredefinedConfig = {
   ConditionalStyle: {
     ConditionalStyles: [
       {
-        ColumnId: 'Employee',
+        Scope: {
+          ColumnIds: ['Employee'],
+        },
+
         Style: {
           ClassName: '',
           FontStyle: 'Normal',
           FontWeight: 'Bold',
           ForeColor: '#8b0000',
         },
-        ConditionalStyleScope: 'Column',
-        Expression: {
-          FilterExpressions: [
-            {
-              ColumnId: 'Employee',
-              Filters: ['UK Team'],
-            },
-          ],
-        },
+        Expression: '[Employee] = "UK Team"', // TODO Release7 this wont workg but....{
       },
     ],
   },
@@ -94,11 +91,11 @@ const demoConfig: PredefinedConfig = {
     CellValidations: [
       {
         ActionMode: 'Stop Edit',
-        ColumnId: 'Employee',
-        Range: {
-          Operator: 'None',
-          Operand1: '',
-          Operand1Type: 'Value',
+        Scope: {
+          ColumnIds: ['Employee'],
+        },
+        Predicate: {
+          Id: 'Any', // ?? is that right?
         },
       },
     ],

@@ -63,7 +63,7 @@ const demoConfig: PredefinedConfig = {
           'lastUpdated',
           'lastUpdatedBy',
         ],
-        ColumnSorts: [{ Column: 'tradeId', SortOrder: 'Descending' }],
+        ColumnSorts: [{ ColumnId: 'tradeId', SortOrder: 'Desc' }],
         Name: 'Data Source',
       },
     ],

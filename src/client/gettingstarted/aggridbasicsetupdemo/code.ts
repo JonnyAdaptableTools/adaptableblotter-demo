@@ -62,7 +62,7 @@ const demoConfig: PredefinedConfig = {
       },
       {
         Name: 'Search',
-        Toolbars: ['AdvancedSearch', 'ColumnFilter', 'QuickSearch'],
+        Toolbars: ['Query', 'Filter', 'QuickSearch'],
       },
     ],
     VisibleButtons: [

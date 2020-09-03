@@ -25,10 +25,10 @@ export default () => {
           </p>
           <p>
             Note: if you want the Layout to include details of which grouped
-            rows are open, set the <b>includeOpenedRowGroups</b> property to
+            rows are open, set the <b>includeExpandedRowGroups</b> property to
             true in{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_layoutoptions_.layoutoptions.html#includeopenedrowgroups"
+              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_layoutoptions_.layoutoptions.html#includeexpandedrowgroups"
               target="_blank"
             >
               Layout Options

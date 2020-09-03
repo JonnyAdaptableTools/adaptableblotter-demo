@@ -77,8 +77,8 @@ const demoConfig: PredefinedConfig = {
         Name: 'Sorting Layout',
         ColumnSorts: [
           {
-            Column: 'ShipName',
-            SortOrder: 'Ascending',
+            ColumnId: 'ShipName',
+            SortOrder: 'Asc',
           },
           { Column: 'ShipVia', SortOrder: 'Descending' },
         ],
@@ -133,10 +133,10 @@ const demoConfig: PredefinedConfig = {
         ],
         ColumnSorts: [
           {
-            Column: 'ShipName',
-            SortOrder: 'Ascending',
+            ColumnId: 'ShipName',
+            SortOrder: 'Asc',
           },
-          { Column: 'ShipVia', SortOrder: 'Descending' },
+          { ColumnId: 'ShipVia', SortOrder: 'Desc' },
         ],
         RowGroupedColumns: ['Employee'],
         Name: 'Advanced Layout',
