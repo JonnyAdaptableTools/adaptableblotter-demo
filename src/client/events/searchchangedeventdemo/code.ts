@@ -56,35 +56,20 @@ const demoConfig: PredefinedConfig = {
   },
   */
   Query: {
-    CurrentQuery: '[InvoicedCost] > 1200',
+    CurrentQuery: '[InvoicedCost] > 1200 AND [Employee]= "Margaret Peacock" ',
   },
   ColumnFilter: {
     ColumnFilters: [
       {
-        Filter: {
-          ColumnValueExpressions: [
-            {
-              ColumnDisplayValues: [
-                'Janet Leverling',
-                'Margaret Peacock',
-                'Nancy Davolio',
-              ],
-              ColumnId: 'Employee',
-            },
-          ],
-        },
-        ColumnId: 'Employee',
+        ColumnId: 'changeOnYear',
+        Predicate: { PredicateId: 'Positive' },
       },
       {
-        Filter: {
-          FilterExpressions: [
-            {
-              ColumnId: 'ChangeLastOrder',
-              Filters: ['Positive'],
-            },
-          ],
+        ColumnId: 'Employee',
+        Predicate: {
+          PredicateId: 'Values',
+          Inputs: ['Janet Leverling', 'Margaret Peacock', 'Nancy Davolio'],
         },
-        ColumnId: 'ChangeLastOrder',
       },
     ],
   },

@@ -18,49 +18,22 @@ const demoConfig: PredefinedConfig = {
   ColumnFilter: {
     ColumnFilters: [
       {
-        Filter: {
-          ColumnValueExpressions: [
-            {
-              ColumnDisplayValues: [
-                'Janet Leverling',
-                'Margaret Peacock',
-                'Nancy Davolio',
-              ],
-              ColumnId: 'Employee',
-            },
-          ],
-        },
+        ColumnId: 'changeOnYear',
+        Predicate: { PredicateId: 'Positive' },
+      },
+      {
         ColumnId: 'Employee',
+        Predicate: {
+          PredicateId: 'Values',
+          Inputs: ['Janet Leverling', 'Margaret Peacock', 'Nancy Davolio'],
+        },
       },
       {
-        Filter: {
-          FilterExpressions: [
-            {
-              ColumnId: 'ChangeLastOrder',
-              Filters: ['Positive'],
-            },
-          ],
-        },
-        ColumnId: 'ChangeLastOrder',
-      },
-      {
-        Filter: {
-          RangeExpressions: [
-            {
-              ColumnId: 'InvoicedCost',
-              Ranges: [
-                {
-                  Operand1: '10',
-                  Operand1Type: 'Value',
-                  Operand2: '300',
-                  Operand2Type: 'Value',
-                  Operator: 'Between',
-                },
-              ],
-            },
-          ],
-        },
         ColumnId: 'InvoicedCost',
+        Predicate: {
+          PredicateId: 'Between',
+          Inputs: [10, 300],
+        },
       },
     ],
   },

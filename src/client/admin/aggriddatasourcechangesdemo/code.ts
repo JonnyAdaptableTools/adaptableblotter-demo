@@ -65,21 +65,8 @@ const demoConfig: PredefinedConfig = {
   ColumnFilter: {
     ColumnFilters: [
       {
-        Filter: {
-          RangeExpressions: [
-            {
-              ColumnId: 'counterparty',
-              Ranges: [
-                {
-                  Operand1: 'm',
-                  Operand1Type: 'Value',
-                  Operator: 'Contains',
-                },
-              ],
-            },
-          ],
-        },
         ColumnId: 'counterparty',
+        Predicate: { PredicateId: 'Contains', Inputs: ['m'] },
       },
     ],
   },

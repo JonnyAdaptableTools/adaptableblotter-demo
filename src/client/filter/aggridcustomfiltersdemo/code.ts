@@ -53,14 +53,7 @@ const demoConfig: PredefinedConfig = {
     ColumnFilters: [
       {
         ColumnId: 'Employee',
-        Filter: {
-          FilterExpressions: [
-            {
-              ColumnId: 'Employee',
-              Filters: ['New Starter'],
-            },
-          ],
-        },
+        Predicate: { PredicateId: 'New Starter' }, // TODO: this is a custom predicate and we need to create it!!!!
       },
     ],
   },

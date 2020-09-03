@@ -21,15 +21,8 @@ const demoConfig: PredefinedConfig = {
   ColumnFilter: {
     ColumnFilters: [
       {
-        Filter: {
-          FilterExpressions: [
-            {
-              ColumnId: 'ChangeLastOrder',
-              Filters: ['Positive'],
-            },
-          ],
-        },
-        ColumnId: 'ChangeLastOrder',
+        ColumnId: 'changeOnYear',
+        Predicate: { PredicateId: 'Positive' },
       },
     ],
   },

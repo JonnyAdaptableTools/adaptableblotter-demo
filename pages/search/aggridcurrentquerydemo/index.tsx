@@ -5,9 +5,10 @@ export default () => {
   return (
     <DynamicDemoPage
       demo={import('../../../src/client/search/aggridcurrentquerydemo')}
-      pageTitle={'Advanced Search Demo'}
+      pageTitle={'Current Query Demo'}
       description={
         <div>
+          <p>TODO!</p>
           <p>
             Advanced Search is a very powerful function that can run searches
             across mutliple columns which can then be named, saved and re-used.
