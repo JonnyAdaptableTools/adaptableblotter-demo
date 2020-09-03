@@ -95,7 +95,22 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Custom Filters Demo',
+
     /*
+
+    customPredicateDefs: [
+      {
+        id: 'USBanks',
+        label: 'US Banks',
+        columnScope: { ColumnIds: ['counterparty'] },
+        functionScope: ['filter', 'alert', 'validation', 'conditionalstyle'],
+        handler: ({ value }) => ['Citi', 'BAML'].includes(value),
+      },
+    ],
+
+
+
+    
     userFunctions: [
       {
         type: 'NamedFilterPredicate',
