@@ -78,7 +78,6 @@ const demoConfig: PredefinedConfig = {
         Style: {
           ForeColor: '#ff0000',
         },
-        ConditionalStyleScope: 'Column',
         Expression: {
           FilterExpressions: [
             {

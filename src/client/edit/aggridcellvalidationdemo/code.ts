@@ -24,42 +24,46 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
+
   CellValidation: {
     CellValidations: [
       {
         ActionMode: 'Stop Edit',
-        ColumnId: 'CustomerReference',
-        Range: {
-          Operator: 'AnyChange',
-          Operand1: '',
-          Operand2: '',
-          Operand1Type: 'Value',
-          Operand2Type: 'Value',
+        Scope: {
+          ColumnIds: ['CustomerReference'],
+        },
+        Predicate: {
+          Id: 'Any',
         },
       },
+
       {
         ActionMode: 'Show Warning',
-        ColumnId: 'Employee',
-        Range: {
-          Operator: 'AnyChange',
+        Scope: {
+          ColumnIds: ['Employee'],
+        },
+        Predicate: {
+          Id: 'Any',
         },
       },
       {
         ActionMode: 'Stop Edit',
-        ColumnId: 'InvoicedCost',
-        Range: {
-          Operator: 'GreaterThan',
-          Operand1: 3000,
-          Operand1Type: 'Value',
+        Scope: {
+          ColumnIds: ['InvoicedCost'],
+        },
+        Predicate: {
+          Id: 'GreaterThan',
+          Inputs: 300,
         },
       },
       {
         ActionMode: 'Show Warning',
-        ColumnId: 'OrderCost',
-        Range: {
-          Operator: 'PercentChange',
-          Operand1: 100,
-          Operand1Type: 'Value',
+        Scope: {
+          ColumnIds: ['OrderCost'],
+        },
+        Predicate: {
+          Id: 'PercentChange',
+          Inputs: 100,
         },
       },
     ],

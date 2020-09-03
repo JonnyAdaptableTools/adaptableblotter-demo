@@ -49,34 +49,22 @@ const demoConfig: PredefinedConfig = {
   ConditionalStyle: {
     ConditionalStyles: [
       {
-        ColumnId: 'Profit',
+        Scope: {
+          ColumnIds: ['Profit'],
+        },
         Style: {
           ForeColor: '#008000',
         },
-        ConditionalStyleScope: 'Column',
-        Expression: {
-          FilterExpressions: [
-            {
-              ColumnId: 'Profit',
-              Filters: ['Positive'],
-            },
-          ],
-        },
+        Expression: '[Profit] > 0',
       },
       {
-        ColumnId: 'Profit',
+        Scope: {
+          ColumnIds: ['Profit'],
+        },
         Style: {
           ForeColor: '#ff0000',
         },
-        ConditionalStyleScope: 'Column',
-        Expression: {
-          FilterExpressions: [
-            {
-              ColumnId: 'Profit',
-              Filters: ['Negative'],
-            },
-          ],
-        },
+        Expression: '[Profit] < 0',
       },
     ],
   },

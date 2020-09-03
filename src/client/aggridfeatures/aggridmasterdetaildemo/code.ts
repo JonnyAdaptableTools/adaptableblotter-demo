@@ -67,7 +67,6 @@ export default async (
                   Style: {
                     BackColor: '#ffffe0',
                   },
-                  ConditionalStyleScope: 'Row',
                   Expression: {
                     RangeExpressions: [
                       {

@@ -62,18 +62,20 @@ const demoConfig: PredefinedConfig = {
     CurrentReport: 'Current Orders',
     Reports: [
       {
-        ColumnIds: [
-          'OrderId',
-          'ChangeLastOrder',
-          'ContactName',
-          'InvoicedCost',
-          'ItemCost',
-          'ItemCount',
-          'OrderCost',
-          'OrderDate',
-        ],
+        Scope: {
+          ColumnIds: [
+            'OrderId',
+            'ChangeLastOrder',
+            'ContactName',
+            'InvoicedCost',
+            'ItemCost',
+            'ItemCount',
+            'OrderCost',
+            'OrderDate',
+          ],
+        },
         Name: 'Current Orders',
-        ReportColumnScope: 'BespokeColumns',
+        ReportColumnScope: 'ScopeColumns',
         ReportRowScope: 'VisibleRows',
       },
     ],

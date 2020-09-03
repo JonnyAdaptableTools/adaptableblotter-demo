@@ -27,7 +27,6 @@ const demoConfig: PredefinedConfig = {
         Style: {
           ForeColor: '#008000',
         },
-        ConditionalStyleScope: 'Column',
         Expression: {
           FilterExpressions: [
             {
@@ -42,7 +41,6 @@ const demoConfig: PredefinedConfig = {
         Style: {
           ForeColor: '#ff0000',
         },
-        ConditionalStyleScope: 'Column',
         Expression: {
           FilterExpressions: [
             {
@@ -58,7 +56,6 @@ const demoConfig: PredefinedConfig = {
           FontStyle: 'Italic',
           ForeColor: '#000000',
         },
-        ConditionalStyleScope: 'Row',
         ExcludeGroupedRows: true,
         Expression: {
           RangeExpressions: [
