@@ -80,7 +80,7 @@ const demoConfig: PredefinedConfig = {
             ColumnId: 'ShipName',
             SortOrder: 'Asc',
           },
-          { Column: 'ShipVia', SortOrder: 'Descending' },
+          { ColumnId: 'ShipVia', SortOrder: 'Desc' },
         ],
         Columns: [
           'OrderId',
@@ -115,8 +115,9 @@ const demoConfig: PredefinedConfig = {
           'ShipCountry',
         ],
         RowGroupedColumns: ['Employee'],
-        // TODO!  check how this works!  AggregationColumns: ['ItemCost'],
         PivotColumns: ['ShipVia'],
+        AggregationColumns: { InvoicedCost: 'sum', ItemCost: 'sum' },
+        EnablePivot: true,
         Name: 'Pivot Layout',
       },
       {
@@ -136,10 +137,36 @@ const demoConfig: PredefinedConfig = {
             ColumnId: 'ShipName',
             SortOrder: 'Asc',
           },
-          { ColumnId: 'ShipVia', SortOrder: 'Desc' },
+          { Column: 'ShipVia', SortOrder: 'Descending' },
         ],
         RowGroupedColumns: ['Employee'],
         Name: 'Advanced Layout',
+      },
+    ],
+  },
+  FormatColumn: {
+    FormatColumns: [
+      {
+        Scope: {
+          ColumnIds: ['InvoicedCost'],
+        },
+        DisplayFormat: {
+          Formatter: 'NumberFormatter',
+          Options: {
+            FractionDigits: 4,
+          },
+        },
+      },
+      {
+        Scope: {
+          ColumnIds: ['ItemCost'],
+        },
+        DisplayFormat: {
+          Formatter: 'NumberFormatter',
+          Options: {
+            FractionDigits: 4,
+          },
+        },
       },
     ],
   },

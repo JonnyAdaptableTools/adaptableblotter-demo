@@ -23,35 +23,6 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
-  CustomSort: {
-    CustomSorts: [
-      {
-        ColumnId: 'ShipVia',
-        SortedValues: ['Speedy Express', 'United Package', 'Federal Shipping'],
-      },
-    ],
-  },
-  CalculatedColumn: {
-    CalculatedColumns: [
-      {
-        ColumnExpression: 'Col("ItemCost") / Col("ItemCount")',
-        ColumnId: 'Avg Item Cost',
-      },
-    ],
-  },
-  FreeTextColumn: {
-    FreeTextColumns: [
-      {
-        ColumnId: 'Comments',
-        DefaultValue: '',
-        FreeTextStoredValues: [
-          { PrimaryKey: 11137, FreeText: 'Dispatch asap' },
-          { PrimaryKey: 11133, FreeText: 'Angry customer' },
-          { PrimaryKey: 11128, FreeText: 'Important order' },
-        ],
-      },
-    ],
-  },
   Layout: {
     CurrentLayout: 'Simple Layout',
     Layouts: [
@@ -62,11 +33,10 @@ const demoConfig: PredefinedConfig = {
             ColumnId: 'ShipName',
             SortOrder: 'Asc',
           },
-          { ColumnId: 'ShipVia', SortOrder: 'Desc' },
         ],
         Columns: [
           'OrderId',
-          'OrderDate',
+          'ShipName',
           'ItemCost',
           'ItemCount',
           'Comments',
@@ -79,6 +49,51 @@ const demoConfig: PredefinedConfig = {
           'OrderCost',
           'PackageCost',
         ],
+      },
+    ],
+  },
+  CustomSort: {
+    CustomSorts: [
+      {
+        ColumnId: 'ShipVia',
+        SortedValues: ['Speedy Express', 'United Package', 'Federal Shipping'],
+      },
+    ],
+  },
+  CalculatedColumn: {
+    CalculatedColumns: [
+      {
+        ColumnExpression: '[ItemCost] / [ItemCount]',
+        ColumnId: 'Avg Item Cost',
+      },
+    ],
+  },
+  FreeTextColumn: {
+    FreeTextColumns: [
+      {
+        ColumnId: 'Comments',
+        DefaultValue: '',
+        FreeTextStoredValues: [
+          { PrimaryKey: 10643, FreeText: 'Dispatch asap' },
+          { PrimaryKey: 10835, FreeText: 'Angry customer' },
+          { PrimaryKey: 10759, FreeText: 'Important order' },
+        ],
+      },
+    ],
+  },
+  FormatColumn: {
+    FormatColumns: [
+      {
+        Scope: {
+          ColumnIds: ['Avg Item Cost'],
+        },
+        DisplayFormat: {
+          Formatter: 'NumberFormatter',
+          Options: {
+            FractionDigits: 2,
+          },
+        },
+        CellAlignment: 'Right',
       },
     ],
   },

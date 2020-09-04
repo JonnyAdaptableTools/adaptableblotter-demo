@@ -16,12 +16,15 @@ var adaptableApi: AdaptableApi;
 const demoConfig: PredefinedConfig = {
   Layout: {
     CurrentLayout: 'Pivot View',
+    Revision: Date.now(),
     Layouts: [
       {
         Columns: [],
         ColumnSorts: [],
         RowGroupedColumns: ['ShipCountry'],
         PivotColumns: ['ShipVia'],
+        AggregationColumns: { InvoicedCost: 'sum', ItemCount: 'avg' },
+        EnablePivot: true,
         Name: 'Pivot View',
       },
       {

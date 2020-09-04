@@ -19,7 +19,6 @@ const demoConfig: PredefinedConfig = {
     VisibleButtons: ['ConditionalStyle'],
   },
   ConditionalStyle: {
-    Revision: Date.now(),
     ConditionalStyles: [
       {
         Scope: {
