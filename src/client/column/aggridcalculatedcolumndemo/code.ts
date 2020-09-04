@@ -19,29 +19,29 @@ const demoConfig: PredefinedConfig = {
     VisibleButtons: ['ColumnChooser', 'CalculatedColumn'],
   },
   CalculatedColumn: {
+    Revision: Date.now(),
     CalculatedColumns: [
       {
-        ColumnExpression: 'Col("ItemCost") / Col("ItemCount")',
+        ColumnExpression: '[ItemCost] / [ItemCount]',
         ColumnId: 'Avg Item Cost',
       },
       {
-        ColumnExpression:
-          'Col("InvoicedCost") - ( Col("OrderCost") + Col("PackageCost"))',
+        ColumnExpression: '([ItemCost] * [ItemCount])- [PackageCost]',
         ColumnId: 'Profit',
       },
       {
         ColumnExpression:
-          'Col("ItemCost") > 100 ? "High" : Col("ItemCost") > 50 ? "Medium": "Low"',
+          '[ItemCost] > 100 ? "High" : [ItemCost] > 50 ? "Medium": "Low"',
         ColumnId: 'Comment',
       },
       {
         ColumnExpression:
-          'max(Col("ItemCost"), Col("OrderCost"), Col("InvoicedCost"), (Col("PackageCost")*10))',
+          'max([ItemCost], [OrderCost], [InvoicedCost], ([PackageCost]*10))',
         ColumnId: 'Highest Cost',
       },
       {
         // we will add the Display Format separately
-        ColumnExpression: 'Col("OrderCost")*0.2',
+        ColumnExpression: '[OrderCost]*0.2',
         ColumnId: 'Tax',
       },
     ],

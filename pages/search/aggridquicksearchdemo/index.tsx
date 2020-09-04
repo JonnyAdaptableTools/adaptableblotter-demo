@@ -9,8 +9,8 @@ export default () => {
       description={
         <div>
           <p>
-            Quick Search enables you to quickly find matching text across all{' '}
-            <b>visible</b> columns.{' '}
+            Quick Search enables you to quickly find <b>any matching text</b>{' '}
+            across all cells in <b>visible</b> columns.
           </p>
           <p>
             Because it is such a popular function we have embedded it in the

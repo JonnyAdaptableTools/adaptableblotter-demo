@@ -23,7 +23,7 @@ const demoConfig: PredefinedConfig = {
   CalculatedColumn: {
     CalculatedColumns: [
       {
-        ColumnExpression: 'Col("ItemCost") / Col("ItemCount")',
+        ColumnExpression: '[ItemCost] / [ItemCount]',
         ColumnId: 'Avg Item Cost',
       },
     ],
