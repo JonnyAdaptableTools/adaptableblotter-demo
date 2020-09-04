@@ -10,7 +10,6 @@ const code = raw('./code.ts');
 export default async () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
-
   let footballDataHelper = new FootballDataHelper();
   const columndefs = footballDataHelper.getMasterFootballSchema();
   const detailColumndefs = footballDataHelper.getDetailsFootballSchema();

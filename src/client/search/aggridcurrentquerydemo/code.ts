@@ -15,46 +15,18 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
-  // TODO: Version 7 - build a Query here!
   Query: {
     CurrentQuery: '[Employee]="Margaret Peacock" ',
-  },
-  /*
-  AdvancedSearch: {
-    AdvancedSearches: [
+    SharedQueries: [
       {
-        Expression: {
-          ColumnValueExpressions: [
-            {
-              ColumnDisplayValues: ['Margaret Peacock', 'Robert King'],
-              ColumnId: 'Employee',
-            },
-          ],
-          FilterExpressions: [
-            {
-              ColumnId: 'ChangeLastOrder',
-              Filters: ['Positive'],
-            },
-          ],
-          RangeExpressions: [
-            {
-              ColumnId: 'InvoicedCost',
-              Ranges: [
-                {
-                  Operand1: '1200',
-                  Operand1Type: 'Value',
-                  Operator: 'GreaterThan',
-                },
-              ],
-            },
-          ],
-        },
+        // Note the Uuid is provided by the developer - the only place in AdapTable config that you need do
+        Uuid: 'SharedQuery1-TeamBestOrders',
         Name: 'Team Best Orders',
+        Expression:
+          '[Employee] IN ("Robert King", "Margaret Peacock", "Anne Dodsworth") AND [InvoicedCost] > 1000 ',
       },
     ],
-    CurrentAdvancedSearch: 'Team Best Orders',
-    */
-
+  },
   Dashboard: {
     Tabs: [
       {

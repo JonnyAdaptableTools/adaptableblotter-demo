@@ -32,7 +32,7 @@ export default () => {
   };
 
   Adaptable.init(adaptableOptions).then(api => {
-    console.log(api, '!!!');
+    console.log('no code initialised with api', api);
   });
 
   return { adaptableOptions };

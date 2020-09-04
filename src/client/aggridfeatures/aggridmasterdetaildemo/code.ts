@@ -65,7 +65,7 @@ export default async (
               ConditionalStyles: [
                 {
                   Style: {
-                    BackColor: '#ffffe0',
+                    BackColor: 'yellow',
                   },
                   Expression: '[age] > 30',
                   Scope: {

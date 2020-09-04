@@ -16,7 +16,6 @@ export default async () => {
   let rowCount: number = 50;
   const rowData: ITrade[] = helperAgGrid.getTrades(rowCount);
   const { adaptableOptions, adaptableApi } = await init(columndefs, rowData);
-
   adaptableOptions.vendorGrid.onGridReady = function(
     gridReady: GridReadyEvent
   ) {
