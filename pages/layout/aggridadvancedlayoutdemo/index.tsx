@@ -8,7 +8,7 @@ export default () => {
       pageTitle={'Advanced Layout Demo'}
       description={
         <div>
-          <p>This example contains 5 layouts of different kinds: </p>
+          <p>This example contains 6 layouts of different kinds: </p>
           <ol>
             <li>
               {' '}
@@ -18,8 +18,14 @@ export default () => {
             </li>
             <li>
               {' '}
-              <b>Sorting Layout</b>: a layout which contains 2 sorted columns,
-              one of which has a Custom Sort (<i>ShipVia</i>)
+              <b>Col Widths Layout</b>: a layout where 2 columns (<i>OrderId</i>{' '}
+              and <i>Comments</i>) are given wider initial widths.
+            </li>
+            <li>
+              {' '}
+              <b>Sorting Layout</b>: a layout which contains 2 sorted columns (
+              <i>ShipName</i> and <i>ShipVia</i>), the latter of which also has
+              a Custom Sort.
             </li>
             <li>
               {' '}

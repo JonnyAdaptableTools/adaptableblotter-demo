@@ -11,6 +11,7 @@ import {
   AdaptableApi,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
+import { DataGenerator } from '../../../Helpers/DataGenerator';
 
 var adaptableApi: AdaptableApi;
 
@@ -40,20 +41,26 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   FreeTextColumn: {
+    Revision: Date.now(),
     FreeTextColumns: [
       {
         ColumnId: 'Comments',
         DefaultValue: '',
         FreeTextStoredValues: [
-          { PrimaryKey: 11137, FreeText: 'Dispatch asap' },
-          { PrimaryKey: 11133, FreeText: 'Angry customer' },
-          { PrimaryKey: 11128, FreeText: 'Important order' },
+          { PrimaryKey: 10250, FreeText: 'Dispatch asap' },
+          { PrimaryKey: 10254, FreeText: 'Angry customer' },
+          {
+            PrimaryKey: 10259,
+            FreeText: 'This is an Important order - ensure its done properly',
+          },
         ],
       },
     ],
   },
   Layout: {
-    CurrentLayout: 'Simple Layout',
+    Revision: Date.now(),
+    //  CurrentLayout: 'Simple Layout',
+    CurrentLayout: 'Col Widths Layout',
     Layouts: [
       {
         Name: 'Simple Layout',
@@ -63,7 +70,6 @@ const demoConfig: PredefinedConfig = {
           'ItemCost',
           'ItemCount',
           'Comments',
-          'Avg Item Cost',
           'CustomerReference',
           'CompanyName',
           'ContactName',
@@ -72,6 +78,27 @@ const demoConfig: PredefinedConfig = {
           'OrderCost',
           'PackageCost',
         ],
+      },
+      {
+        Name: 'Col Widths Layout',
+        Columns: [
+          'OrderId',
+          'OrderDate',
+          'ItemCost',
+          'ItemCount',
+          'Comments',
+          'CustomerReference',
+          'CompanyName',
+          'ContactName',
+          'InvoicedCost',
+          'ChangeLastOrder',
+          'OrderCost',
+          'PackageCost',
+        ],
+        ColumnWidthMap: {
+          OrderId: 200,
+          Comments: 300,
+        },
       },
       {
         Name: 'Sorting Layout',
@@ -116,7 +143,7 @@ const demoConfig: PredefinedConfig = {
         ],
         RowGroupedColumns: ['Employee'],
         PivotColumns: ['ShipVia'],
-        AggregationColumns: { InvoicedCost: 'sum', ItemCost: 'sum' },
+        AggregationColumns: { InvoicedCost: 'sum', ItemCost: 'avg' },
         EnablePivot: true,
         Name: 'Pivot Layout',
       },
