@@ -19,7 +19,7 @@ const demoConfig: PredefinedConfig = {
     Tabs: [
       {
         Name: 'Toolbars',
-        Toolbars: ['ColumnFilter', 'Layout', 'QuickSearch'],
+        Toolbars: ['Filter', 'Layout', 'QuickSearch'],
       },
     ],
   },
@@ -62,7 +62,7 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
-  ColumnFilter: {
+  Filter: {
     ColumnFilters: [
       {
         ColumnId: 'counterparty',

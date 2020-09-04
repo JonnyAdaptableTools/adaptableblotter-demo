@@ -76,7 +76,7 @@ const demoConfig: PredefinedConfig = ({
   },
 
   ToolPanel: {
-    VisibleToolPanels: ['Export', 'Filter', 'Layout', 'Chart', 'ColumnFilter'],
+    VisibleToolPanels: ['Export', 'Filter', 'Layout', 'Chart', 'Filter'],
   },
 } as any) as PredefinedConfig;
 

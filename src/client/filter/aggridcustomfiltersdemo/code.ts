@@ -49,7 +49,7 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   */
-  ColumnFilter: {
+  Filter: {
     ColumnFilters: [
       {
         ColumnId: 'Employee',

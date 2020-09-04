@@ -18,7 +18,7 @@ const demoConfig: PredefinedConfig = {
     Tabs: [
       {
         Name: 'Grid',
-        Toolbars: ['Layout', 'ColumnFilter'],
+        Toolbars: ['Layout', 'Filter'],
       },
     ],
   },

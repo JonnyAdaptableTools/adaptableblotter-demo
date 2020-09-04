@@ -19,7 +19,7 @@ const demoConfig: PredefinedConfig = {
     Tabs: [
       {
         Name: 'Filter',
-        Toolbars: ['ColumnFilter'],
+        Toolbars: ['Filter'],
       },
     ],
   },

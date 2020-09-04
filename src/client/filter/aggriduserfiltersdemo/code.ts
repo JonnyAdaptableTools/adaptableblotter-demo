@@ -54,7 +54,7 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
-  ColumnFilter: {
+Filter: {
     ColumnFilters: [
       {
         ColumnId: 'Employee',
@@ -117,7 +117,7 @@ const demoConfig: PredefinedConfig = {
     Tabs: [
       {
         Name: 'Toolbars',
-        Toolbars: ['ColumnFilter', 'Export'],
+        Toolbars: ['Filter', 'Export'],
       },
     ],
   },

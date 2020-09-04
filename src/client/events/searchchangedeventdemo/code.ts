@@ -58,10 +58,10 @@ const demoConfig: PredefinedConfig = {
   Query: {
     CurrentQuery: '[InvoicedCost] > 1200 AND [Employee]= "Margaret Peacock" ',
   },
-  ColumnFilter: {
+  Filter: {
     ColumnFilters: [
       {
-        ColumnId: 'changeOnYear',
+        ColumnId: 'ChangeLastOrder',
         Predicate: { PredicateId: 'Positive' },
       },
       {

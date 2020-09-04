@@ -18,7 +18,7 @@ const demoConfig: PredefinedConfig = {
   SystemFilter: {
     SystemFilters: ['Positive', 'Zero'],
   },
-  ColumnFilter: {
+  Filter: {
     ColumnFilters: [
       {
         ColumnId: 'changeOnYear',

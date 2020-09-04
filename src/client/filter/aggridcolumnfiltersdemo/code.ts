@@ -15,10 +15,11 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
-  ColumnFilter: {
+  Filter: {
+    Revision: Date.now(),
     ColumnFilters: [
       {
-        ColumnId: 'changeOnYear',
+        ColumnId: 'ChangeLastOrder',
         Predicate: { PredicateId: 'Positive' },
       },
       {
@@ -35,30 +36,45 @@ const demoConfig: PredefinedConfig = {
           Inputs: [10, 300],
         },
       },
+      {
+        ColumnId: 'OrderDate',
+        Predicate: {
+          PredicateId: 'InPast',
+        },
+      },
+      {
+        ColumnId: 'ItemCost',
+        Predicate: {
+          PredicateId: 'GreaterThan',
+          Inputs: [20],
+        },
+      },
     ],
   },
   Dashboard: {
     Tabs: [
       {
         Name: 'Toolbars',
-        Toolbars: ['ColumnFilter'],
+        Toolbars: ['Filter'],
       },
     ],
   },
   Layout: {
+    Revision: Date.now(),
     CurrentLayout: 'Orders',
     Layouts: [
       {
         Columns: [
           'OrderId',
-          'ContactName',
-          'CustomerReference',
+          'ItemCost',
+          'ShipVia',
           'Employee',
-          'OrderData',
+          'Freight',
           'ChangeLastOrder',
           'ShipCountry',
           'InvoicedCost',
-          'Freight',
+          'CustomerReference',
+          'OrderDate',
           'ShippedDate',
         ],
         ColumnSorts: [],

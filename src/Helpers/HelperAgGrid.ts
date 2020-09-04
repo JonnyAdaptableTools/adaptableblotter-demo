@@ -1080,7 +1080,7 @@ export class HelperAgGrid {
       field: 'Employee',
       filter: 'agSetColumnFilter',
       floatingFilter: true,
-      suppressMenu: true,
+      //  suppressMenu: true,
       editable: true,
       sortable: true,
       enableRowGroup: true,
