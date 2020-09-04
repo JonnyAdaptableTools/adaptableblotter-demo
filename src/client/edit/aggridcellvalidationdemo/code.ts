@@ -33,7 +33,7 @@ const demoConfig: PredefinedConfig = {
           ColumnIds: ['CustomerReference'],
         },
         Predicate: {
-          Id: 'Any',
+          PredicateId: 'Any',
         },
       },
 
@@ -43,7 +43,7 @@ const demoConfig: PredefinedConfig = {
           ColumnIds: ['Employee'],
         },
         Predicate: {
-          Id: 'Any',
+          PredicateId: 'Any',
         },
       },
       {
@@ -52,7 +52,7 @@ const demoConfig: PredefinedConfig = {
           ColumnIds: ['InvoicedCost'],
         },
         Predicate: {
-          Id: 'GreaterThan',
+          PredicateId: 'GreaterThan',
           Inputs: [300],
         },
       },
@@ -62,7 +62,7 @@ const demoConfig: PredefinedConfig = {
           ColumnIds: ['OrderCost'],
         },
         Predicate: {
-          Id: 'PercentChange',
+          PredicateId: 'PercentChange',
           Inputs: [100],
         },
       },

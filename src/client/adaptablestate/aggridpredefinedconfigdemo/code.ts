@@ -81,7 +81,7 @@ const demoConfig: PredefinedConfig = {
           ForeColor: '#ff0000',
         },
         Predicate: {
-          Id: 'Negative',
+          PredicateId: 'Negative',
         },
       },
       {

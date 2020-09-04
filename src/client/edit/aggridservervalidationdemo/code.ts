@@ -34,7 +34,7 @@ const demoConfig: PredefinedConfig = {
           ColumnIds: ['ItemCount'],
         },
         Predicate: {
-          Id: 'Any',
+          PredicateId: 'Any',
         },
       },
     ],

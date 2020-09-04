@@ -33,7 +33,7 @@ const demoConfig: PredefinedConfig = {
         },
         MessageType: 'Warning',
         Predicate: {
-          Id: 'GreaterThan',
+          PredicateId: 'GreaterThan',
           Inputs: [2000],
         },
 
@@ -48,7 +48,7 @@ const demoConfig: PredefinedConfig = {
         },
         MessageType: 'Info',
         Predicate: {
-          Id: 'PercentChange',
+          PredicateId: 'PercentChange',
           Inputs: [100],
         },
         AlertProperties: {

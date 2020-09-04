@@ -28,7 +28,7 @@ const demoConfig: PredefinedConfig = {
           ForeColor: '#008000',
         },
         Predicate: {
-          Id: 'Positive',
+          PredicateId: 'Positive',
         },
       },
       {
@@ -39,7 +39,7 @@ const demoConfig: PredefinedConfig = {
           ForeColor: '#ff0000',
         },
         Predicate: {
-          Id: 'Negative',
+          PredicateId: 'Negative',
         },
       },
       {
@@ -52,7 +52,7 @@ const demoConfig: PredefinedConfig = {
           ForeColor: '#000000',
         },
         Predicate: {
-          Id: 'GreaterThan',
+          PredicateId: 'GreaterThan',
           Inputs: [60],
         },
         ExcludeGroupedRows: true,
@@ -65,7 +65,7 @@ const demoConfig: PredefinedConfig = {
           FontWeight: 'Bold',
         },
         Predicate: {
-          Id: 'Is',
+          PredicateId: 'Is',
           Inputs: ['Margaret Peacock'],
         },
       },

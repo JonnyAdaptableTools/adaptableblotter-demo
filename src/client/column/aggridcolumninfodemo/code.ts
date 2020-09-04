@@ -95,7 +95,7 @@ const demoConfig: PredefinedConfig = {
           ColumnIds: ['Employee'],
         },
         Predicate: {
-          Id: 'Any', // ?? is that right?
+          PredicateId: 'Any', // ?? is that right?
         },
       },
     ],
