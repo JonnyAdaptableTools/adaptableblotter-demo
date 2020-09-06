@@ -16,7 +16,6 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Filter: {
-    Revision: Date.now(),
     SystemFilters: ['Positive', 'Zero', 'Contains', 'Equals', 'Is', 'On'],
     ColumnFilters: [
       {

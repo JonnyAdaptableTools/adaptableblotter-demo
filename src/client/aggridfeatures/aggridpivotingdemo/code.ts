@@ -16,7 +16,6 @@ var adaptableApi: AdaptableApi;
 const demoConfig: PredefinedConfig = {
   Layout: {
     CurrentLayout: 'Pivot View',
-    Revision: Date.now(),
     Layouts: [
       {
         Columns: [],

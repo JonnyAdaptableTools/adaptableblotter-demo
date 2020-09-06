@@ -16,7 +16,6 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Filter: {
-    Revision: Date.now(),
     ColumnFilters: [
       {
         ColumnId: 'ChangeLastOrder',
@@ -60,7 +59,6 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   Layout: {
-    Revision: Date.now(),
     CurrentLayout: 'Orders',
     Layouts: [
       {

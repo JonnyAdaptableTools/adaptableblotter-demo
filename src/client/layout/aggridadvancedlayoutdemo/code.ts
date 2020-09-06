@@ -42,7 +42,6 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   FreeTextColumn: {
-    Revision: Date.now(),
     FreeTextColumns: [
       {
         ColumnId: 'Comments',
@@ -60,9 +59,7 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   Layout: {
-    Revision: Date.now(),
-    //  CurrentLayout: 'Simple Layout',
-    CurrentLayout: 'Col Widths Layout',
+    CurrentLayout: 'Simple Layout',
     Layouts: [
       {
         Name: 'Simple Layout',
