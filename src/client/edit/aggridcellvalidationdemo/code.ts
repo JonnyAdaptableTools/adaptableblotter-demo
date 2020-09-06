@@ -36,7 +36,6 @@ const demoConfig: PredefinedConfig = {
           PredicateId: 'Any',
         },
       },
-
       {
         ActionMode: 'Show Warning',
         Scope: {

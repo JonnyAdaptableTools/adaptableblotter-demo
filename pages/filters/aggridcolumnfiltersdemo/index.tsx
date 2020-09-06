@@ -49,18 +49,25 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_columnfilterstate_.columnfilterstate.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_filterstate_.filterstate.html"
             target="_blank"
           >
-            Column Filter Config
+            Filter Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_columnfilterapi_.columnfilterapi.html"
+            href="https://api.adaptabletools.com/interfaces/_src_api_filterapi_.filterapi.html"
             target="_blank"
           >
-            Column Filter Api
+            Filter Api
           </a>{' '}
+          |{' '}
+          <a
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/filter-function.md"
+            target="_blank"
+          >
+            Filter ReadMe
+          </a>
           .
         </div>
       }

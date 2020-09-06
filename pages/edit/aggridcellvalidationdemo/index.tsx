@@ -20,12 +20,18 @@ export default () => {
             regarding the change.
           </p>
           <p>
-            This example has 4 Validation Rules: (1) All Edits are prevented in
-            the 'Cust Ref' column; (2) warnings are displayed for all edits in
-            'Employee' column; (3) The 'Invoiced' Column cannot accept values
-            over 3000; and (4) a warning is shown if the 'Order Cost' column
-            more than doubles in value. <b>Note:</b> these cell validation rules
-            apply also when you perfrom a Smart Edit or Bulk Update.
+            This example has 4 Validation Rules:{' '}
+            <ul>
+              <li>All Edits are prevented in the 'Cust Ref' column</li>
+              <li>warnings are displayed for all edits in 'Employee' column</li>
+              <li>Invoiced' Column cannot accept values over 3000</li>
+              <li>
+                a warning is shown if the 'Order Cost' column more than doubles
+                in value
+              </li>
+            </ul>
+            Note: these cell validation rules apply also when you perfrom a
+            Smart Edit or Bulk Update.
           </p>
         </div>
       }

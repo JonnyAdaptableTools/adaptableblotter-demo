@@ -56,6 +56,14 @@ export default () => {
           >
             Filter Api
           </a>{' '}
+          |{' '}
+          <a
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/filter-function.md"
+            target="_blank"
+          >
+            Filter ReadMe
+          </a>
+          .
         </div>
       }
     />

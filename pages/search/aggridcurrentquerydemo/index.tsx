@@ -35,17 +35,17 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/advanced-search-function.md"
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/query-function.md"
             target="_blank"
           >
-            Advanced Search Read Me
+            Query Read Me
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_advancedsearchstate_.advancedsearchstate.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_querystate_.querystate.html"
             target="_blank"
           >
-            Advanced Search Predefined Config
+            Query Predefined Config
           </a>{' '}
           |{' '}
           <a
@@ -56,10 +56,10 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_advancedsearchapi_.advancedsearchapi.html"
+            href="https://api.adaptabletools.com/interfaces/_src_api_queryapi_.queryapi.html"
             target="_blank"
           >
-            Advanced Search API
+            Query API
           </a>{' '}
         </div>
       }
