@@ -16,7 +16,7 @@ export default () => {
           <h4>User Interface State Demos</h4>
           <p>
             Queries are a key element of AdapTable - and they are used by many
-            functions, e.g. Advanced Search, Conditional Styles, Reports, Alerts
+            functions, e.g. Current Query, Conditional Styles, Reports, Alerts
             etc.
           </p>
           <p>
@@ -24,8 +24,8 @@ export default () => {
             property in Adaptable Options to allow you manage how Queries work.
           </p>
           <p>
-            Some of these options also apply when using the column filter
-            dropdown and Quick Search as appropriate.
+            Some of these options also apply when using the Quick Filter bar and
+            Filter Form.
           </p>
           <p>
             We have included demos that illustrate some of these options,

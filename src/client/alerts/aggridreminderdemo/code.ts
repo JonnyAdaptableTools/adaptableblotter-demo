@@ -24,6 +24,7 @@ const demoConfig: PredefinedConfig = {
         Alert: {
           Header: "Run 'All Data' Report",
           Msg: "Run the 'All Data' report so MO have full view of activity",
+
           AlertDefinition: {
             MessageType: 'Warning',
             AlertProperties: {

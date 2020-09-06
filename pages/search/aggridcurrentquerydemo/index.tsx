@@ -8,25 +8,27 @@ export default () => {
       pageTitle={'Current Query Demo'}
       description={
         <div>
-          <p>TODO!</p>
           <p>
-            Advanced Search is a very powerful function that can run searches
-            across mutliple columns which can then be named, saved and re-used.
+            Query is a very powerful function that uses an 'Expression' to
+            search across mutliple columns using many functions and operators.{' '}
           </p>
           <p>
-            It contains an Expression / Query - something used in many
-            AdaptableFunctions) that allows selections to be performed on a mix
-            of Column Values, Filters and Ranges.
+            The Query can be named, saved and re-used - not only for searching
+            but in other functions use Expressions (e.g. Conditional Style,
+            Export).
           </p>
           <p>
-            When an Advanced Search is applied, AdapTable will only display
-            those rows that match <b>all</b> of the Conditions in the Query.
+            When the Query runs, AdapTable will only display those rows that
+            match <b>all</b> of the Conditions in the Query.
           </p>
           <p>
-            In this example we are searching for any rows where the Invoiced
-            Cost is over $350 (<i>Range</i>), for Orders this year (
-            <i>Filter</i>) where the Employee is Janet, Margaret or Robert (
-            <i>Column Values</i>).
+            In this example we are searching for any rows where the Employee is
+            Robert King or Andrew Fuller and where the Order Cost is over $1000.
+          </p>
+
+          <p>
+            We have created 2 other queries which we have shared - and one is
+            used for a Conditional Style
           </p>
         </div>
       }

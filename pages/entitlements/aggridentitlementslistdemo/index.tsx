@@ -31,8 +31,8 @@ export default () => {
             AccessLevel):
             <ul>
               <li>
-                AdvancedSearch - set to <i>Hidden</i> with the result that the
-                Advanced Search Toolbar, ToolPanel and Menu Option are not
+                Cell Summary - set to <i>Hidden</i> with the result that the
+                Cell Summary Toolbar, ToolPanel and Menu Option are not
                 available anywhere in AdapTable and cannot be accessed by users.
               </li>
               <li>

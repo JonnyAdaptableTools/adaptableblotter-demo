@@ -14,8 +14,8 @@ export default () => {
           </p>
           <p>
             It is designed for use cases where the same, newly-created Adaptable
-            Object (e.g. a Layout, Conditional Style, Advanced Search, Report
-            etc.) will be required by multiple users.
+            Object (e.g. a Layout, Conditional Style, Shared Query, Report etc.)
+            will be required by multiple users.
           </p>
           <p>
             Team Sharing is based on a based pull-based workflow as the

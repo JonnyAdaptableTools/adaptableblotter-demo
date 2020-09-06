@@ -43,7 +43,6 @@ const demoConfig: PredefinedConfig = {
             'InvoicedCost',
           ],
         },
-
         Expression: '[Freight] > 500',
       },
     ],

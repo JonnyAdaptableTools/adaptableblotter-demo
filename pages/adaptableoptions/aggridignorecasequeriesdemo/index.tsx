@@ -13,7 +13,7 @@ export default () => {
           <p>
             By default case is ignored when running Queries against string
             columns. This is for Quick Search, Filters, and wherever we run a
-            Query (e.g. Advanced Search, Conditional Style).
+            Query.
           </p>
           <p>
             However, if this is not your preferred behaviour, you can set the

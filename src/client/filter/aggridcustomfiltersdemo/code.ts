@@ -9,6 +9,7 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
+  PredicateDefHandlerParams,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -53,18 +54,7 @@ const demoConfig: PredefinedConfig = {
     ColumnFilters: [
       {
         ColumnId: 'Employee',
-        Predicate: { PredicateId: 'New Starter' }, // TODO: this is a custom predicate and we need to create it!!!!
-      },
-    ],
-  },
-  UserInterface: {
-    PermittedValuesItems: [
-      {
-        // For LastUpdatedTime column we return an array with a single empty value as it makes no sense to see each time value
-        Scope: {
-          ColumnIds: ['LastUpdatedTime'],
-        },
-        PermittedValues: [''],
+        Predicate: { PredicateId: 'new_starter' }, // TODO: this is a custom predicate and we need to create it!!!!
       },
     ],
   },
@@ -105,7 +95,26 @@ export default async (columnDefs: any[], rowData: any[]) => {
           ColumnIds: ['OrderId'],
         },
         functionScope: ['filter', 'alert', 'validation', 'conditionalstyle'],
-        handler: ({ value }) => ['Citi', 'BAML'].includes(value),
+        handler(params: PredicateDefHandlerParams) {
+          let invoiced: number = params.node.data.InvoicedCost;
+          let itemCount: number = params.node.data.ItemCount;
+          return invoiced > 100 && itemCount > 10 ? true : false;
+        },
+      },
+      {
+        id: 'new_starter',
+        label: 'New Starter',
+        columnScope: {
+          ColumnIds: ['Employee'],
+        },
+        functionScope: ['filter'],
+        handler(params: PredicateDefHandlerParams) {
+          return (
+            params.value == 'Robert King' ||
+            params.value == 'Laura Callahan' ||
+            params.value == 'Andrew Fuller'
+          );
+        },
       },
     ],
     /*

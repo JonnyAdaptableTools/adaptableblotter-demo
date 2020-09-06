@@ -21,7 +21,7 @@ export default async () => {
   ) {
     gridReady.columnApi!.autoSizeAllColumns();
     setTimeout(() => gridReady.columnApi!.autoSizeAllColumns(), 1);
-
+    console.log(2);
     gridReady.api!.addEventListener('newColumnsLoaded', function() {
       gridReady.columnApi!.autoSizeAllColumns();
     });

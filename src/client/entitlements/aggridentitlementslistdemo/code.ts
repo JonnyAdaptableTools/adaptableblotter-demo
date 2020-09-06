@@ -26,7 +26,7 @@ const demoConfig: PredefinedConfig = {
   Entitlements: {
     FunctionEntitlements: [
       {
-        FunctionName: 'CustomSort',
+        FunctionName: 'CellSummary',
         AccessLevel: 'Hidden',
       },
       {
