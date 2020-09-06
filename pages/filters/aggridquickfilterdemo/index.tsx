@@ -47,10 +47,10 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-filtering-guide.md"
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/filter-function.md"
             target="_blank"
           >
-            Adaptable Filtering Guide
+            Filter ReadMe
           </a>
         </div>
       }

@@ -97,13 +97,6 @@ export default () => {
           >
             User Functions
           </a>{' '}
-          |{' '}
-          <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-filtering-guide.md"
-            target="_blank"
-          >
-            Adaptable Filtering Guide
-          </a>
         </div>
       }
     />
