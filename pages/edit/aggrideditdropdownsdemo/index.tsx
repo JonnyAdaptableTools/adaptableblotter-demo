@@ -25,7 +25,7 @@ export default () => {
           </p>
           <p>
             Simply list the columns that should display a Dropdown in the{' '}
-            <b>EditLookUpColumns</b> property and Adaptable will do the rest. If
+            <b>EditLookUpItems</b> property and Adaptable will do the rest. If
             you wish, you may also provide a list of values to display in the
             dropdown.
           </p>

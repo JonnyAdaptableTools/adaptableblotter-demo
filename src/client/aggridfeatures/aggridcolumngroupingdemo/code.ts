@@ -17,7 +17,8 @@ const demoConfig: PredefinedConfig = {
     CalculatedColumns: [
       {
         ColumnExpression: '[ItemCost] / [ItemCount]',
-        ColumnId: 'Avg Item Cost',
+        ColumnId: 'AvgCost',
+        FriendlyName: 'Avg Item Cost',
       },
     ],
   },
@@ -25,6 +26,7 @@ const demoConfig: PredefinedConfig = {
     FreeTextColumns: [
       {
         ColumnId: 'Comments',
+        FriendlyName: 'Comments',
         DefaultValue: '',
         FreeTextStoredValues: [
           { PrimaryKey: 11137, FreeText: 'Dispatch asap' },
@@ -70,7 +72,7 @@ const demoConfig: PredefinedConfig = {
     Layouts: [
       {
         Columns: [
-          'Avg Item Cost',
+          'AvgCost',
           'CustomerReference',
           'CompanyName',
           'ContactName',

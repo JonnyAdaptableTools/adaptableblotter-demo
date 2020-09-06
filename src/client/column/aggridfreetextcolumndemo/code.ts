@@ -22,6 +22,7 @@ const demoConfig: PredefinedConfig = {
     FreeTextColumns: [
       {
         ColumnId: 'Comments',
+        FriendlyName: 'Comments',
         DefaultValue: '',
         FreeTextStoredValues: [
           { PrimaryKey: 11137, FreeText: 'Dispatch asap' },

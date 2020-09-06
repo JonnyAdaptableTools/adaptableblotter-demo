@@ -23,26 +23,31 @@ const demoConfig: PredefinedConfig = {
     CalculatedColumns: [
       {
         ColumnExpression: '[ItemCost] / [ItemCount]',
-        ColumnId: 'Avg Item Cost',
+        ColumnId: 'AvgCost',
+        FriendlyName: 'Avg Item Cost',
       },
       {
         ColumnExpression: '([ItemCost] * [ItemCount])- [PackageCost]',
         ColumnId: 'Profit',
+        FriendlyName: 'profit',
       },
       {
         ColumnExpression:
           '[ItemCost] > 100 ? "High" : [ItemCost] > 50 ? "Medium": "Low"',
         ColumnId: 'Comment',
+        FriendlyName: 'Comment',
       },
       {
         ColumnExpression:
           'max([ItemCost], [OrderCost], [InvoicedCost], ([PackageCost]*10))',
-        ColumnId: 'Highest Cost',
+        ColumnId: 'HighCost',
+        FriendlyName: 'Highest Cost',
       },
       {
         // we will add the Display Format separately
         ColumnExpression: '[OrderCost]*0.2',
         ColumnId: 'Tax',
+        FriendlyName: 'Tax',
       },
     ],
   },
@@ -72,7 +77,7 @@ const demoConfig: PredefinedConfig = {
     FormatColumns: [
       {
         Scope: {
-          ColumnIds: ['Avg Item Cost'],
+          ColumnIds: ['AvgCost'],
         },
         DisplayFormat: {
           Formatter: 'NumberFormatter',
@@ -83,7 +88,7 @@ const demoConfig: PredefinedConfig = {
       },
       {
         Scope: {
-          ColumnIds: ['Highest Cost'],
+          ColumnIds: ['HighCost'],
         },
         DisplayFormat: {
           Formatter: 'NumberFormatter',
@@ -124,10 +129,10 @@ const demoConfig: PredefinedConfig = {
       {
         Columns: [
           'Comment',
-          'Avg Item Cost',
+          'AvgCost',
           'ItemCost',
           'ItemCount',
-          'Highest Cost',
+          'HighCost',
           'OrderCost',
           'Tax',
           'PackageCost',
@@ -140,7 +145,7 @@ const demoConfig: PredefinedConfig = {
       },
       {
         Columns: [
-          'Avg Item Cost',
+          'AvgCost',
           'ItemCost',
           'ItemCount',
           'OrderCost',

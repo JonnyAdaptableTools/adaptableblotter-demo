@@ -58,8 +58,8 @@ export default () => {
         <DemoBox href="/userinterfacestate/aggridpermittedvaluesdemo">
           Permitted Values demo
         </DemoBox>
-        <DemoBox href="/userinterfacestate/aggrideditlookupcolumnsdemo">
-          Edit Lookup Columns demo
+        <DemoBox href="/userinterfacestate/aggrideditlookupitemsdemo">
+          Edit Lookup Items demo
         </DemoBox>
       </GridLayout>
     </MainPage>

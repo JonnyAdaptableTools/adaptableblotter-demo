@@ -102,9 +102,11 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   UserInterface: {
-    PermittedValuesColumns: [
+    PermittedValuesItems: [
       {
-        ColumnId: 'LastUpdatedTime',
+        Scope: {
+          ColumnIds: ['LastUpdatedTime'],
+        },
         PermittedValues: [''],
       },
     ],

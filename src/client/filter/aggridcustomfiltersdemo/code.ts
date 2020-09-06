@@ -58,10 +58,12 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   UserInterface: {
-    PermittedValuesColumns: [
+    PermittedValuesItems: [
       {
         // For LastUpdatedTime column we return an array with a single empty value as it makes no sense to see each time value
-        ColumnId: 'LastUpdatedTime',
+        Scope: {
+          ColumnIds: ['LastUpdatedTime'],
+        },
         PermittedValues: [''],
       },
     ],
@@ -95,22 +97,18 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Custom Filters Demo',
-
-    /*
-
     customPredicateDefs: [
       {
-        id: 'USBanks',
-        label: 'US Banks',
-        columnScope: { ColumnIds: ['counterparty'] },
+        id: 'high',
+        label: 'High',
+        columnScope: {
+          ColumnIds: ['OrderId'],
+        },
         functionScope: ['filter', 'alert', 'validation', 'conditionalstyle'],
         handler: ({ value }) => ['Citi', 'BAML'].includes(value),
       },
     ],
-
-
-
-    
+    /*
     userFunctions: [
       {
         type: 'NamedFilterPredicate',

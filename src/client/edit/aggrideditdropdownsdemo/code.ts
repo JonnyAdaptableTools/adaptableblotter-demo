@@ -16,9 +16,11 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   UserInterface: {
-    PermittedValuesColumns: [
+    PermittedValuesItems: [
       {
-        ColumnId: 'ContactName',
+        Scope: {
+          ColumnIds: ['ContactName'],
+        },
         PermittedValues: [
           'Elizabeth Lincoln',
           'Mario Pontes',
@@ -28,9 +30,11 @@ const demoConfig: PredefinedConfig = {
         ],
       },
     ],
-    EditLookUpColumns: [
+    EditLookUpItems: [
       {
-        ColumnId: 'CustomerReference',
+        Scope: {
+          ColumnIds: ['CustomerReference'],
+        },
         LookUpValues: [
           'SANTG',
           'LINOD',
@@ -42,10 +46,14 @@ const demoConfig: PredefinedConfig = {
         ],
       },
       {
-        ColumnId: 'ContactName',
+        Scope: {
+          ColumnIds: ['ContactName'],
+        },
       },
       {
-        ColumnId: 'Employee',
+        Scope: {
+          ColumnIds: ['Employee'],
+        },
       },
     ],
   },

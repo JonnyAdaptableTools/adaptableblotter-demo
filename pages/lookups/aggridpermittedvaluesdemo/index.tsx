@@ -20,7 +20,7 @@ export default () => {
               href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_userinterfacestate_.userinterfacestate.html"
               target="_blank"
             >
-              PermittedValuesColumns
+              PermittedValuesItems
             </a>{' '}
             property in the User Interface section of Predefined Config.
           </p>
