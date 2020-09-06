@@ -15,13 +15,12 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
-  SystemFilter: {
-    SystemFilters: ['Positive', 'Zero'],
-  },
   Filter: {
+    Revision: Date.now(),
+    SystemFilters: ['Positive', 'Zero', 'Contains', 'Equals', 'Is', 'On'],
     ColumnFilters: [
       {
-        ColumnId: 'changeOnYear',
+        ColumnId: 'ChangeLastOrder',
         Predicate: { PredicateId: 'Positive' },
       },
     ],

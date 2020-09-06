@@ -11,46 +11,50 @@ export default () => {
           <p>
             AdapTable provides a range of useful System Filters (e.g. 'Blanks',
             'Zero', 'Yesterday') to complement any Custom Filters provided by
-            you.
+            users at design-time.
           </p>
           <p>
-            They appear in italics at the top of the Column Filter form (above
-            individual column values) and can also be used when creating
-            Queries.
+            System Filters appear in both the Quick Filter Bar and the Filter
+            Form
           </p>
           <p>
-            By default <b>all</b> System Filters will be shown. However in{' '}
+            By default <b>all</b> System Filters will be shown. However the
+            `SystemFilters` property of{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_systemfilterstate_.systemfilterstate.html"
+              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_filterstate_.filterstate.html"
               target="_blank"
             >
-              Sytem Filter State
-            </a>
-            , you can stipulate to show none (by passing in an empty array) or
-            to select just those that you want.
+              Filter State
+            </a>{' '}
+            allows you to choose which (if any) you want available.
           </p>
 
           <p>
-            In this example we have stipulated that just 2 System Filters are
-            used: Positive and Zero (both for Number columns) and then used it
-            on 'Order Chg.' column.
+            In this example we have stipulated that just a small selection of
+            System Filters are available: 'Positive', 'Zero', 'Contains',
+            'Equals', 'Is', 'On'.{' '}
+          </p>
+
+          <p>
+            And we then use the 'Positive' System Filter as the Column Filter
+            for the 'Order Chg.' column.
           </p>
         </div>
       }
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_systemfilterstate_.systemfilterstate.html"
+            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_filterstate_.filterstate.html"
             target="_blank"
           >
-            System Filter Config
+            Filter Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_systemfilterapi_.systemfilterapi.html"
+            href="https://api.adaptabletools.com/interfaces/_src_api_filterapi_.filterapi.html"
             target="_blank"
           >
-            System Filter Api
+            Filter Api
           </a>{' '}
         </div>
       }
