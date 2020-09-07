@@ -48,7 +48,8 @@ export default () => {
               </li>
               <li>
                 Whole row is lightblue where 'InvoicedCost' column value is over
-                1000 (this uses an Expression rather than a Predicate)
+                1000 (this uses an Expression rather than a Predicate and a
+                Scope of 'All: true')
               </li>
               <li>
                 Employee Column is bold where the value is Stephen or Laura
@@ -74,6 +75,7 @@ export default () => {
           >
             Adaptable API
           </a>{' '}
+          |{' '}
           <a
             href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/conditional-style-function.md"
             target="_blank"

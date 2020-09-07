@@ -17,12 +17,6 @@ export default () => {
         </i>
         <br />
         <p>
-          <h4>
-            This demo site is using a pre-release (canary) version of Adaptable
-            Version 7 which is due to be released on Sunday 7 September.
-          </h4>
-        </p>
-        <p>
           <h3>
             AdapTable is the most advanced and powerful HTML5 Data Management
             Solution available today
