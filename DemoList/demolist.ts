@@ -90,7 +90,7 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'User Filters',
             Link: '/filters/aggriduserfiltersdemo',
             Description:
-              'Column Filters which have been named and saved and so are usable across multiple functions that use queries (like Conditional Styles, Reports or Advanced Search).',
+              'Column Filters which have been named and saved and so are usable across multiple functions that use queries (like Conditional Styles or Reports).',
           },
           */
           {

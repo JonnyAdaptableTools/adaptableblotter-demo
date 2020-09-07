@@ -23,9 +23,7 @@ export default () => {
           </p>
           <p>
             Note: if there are no Tabs, AdapTable will create a default one
-            called 'Toolbars' which will contain either the collection of
-            VisibleToolbars previously set, or - failing that - the default
-            list.
+            called 'Toolbars' which will contain the default list of toolbars.
           </p>
           <p>
             In this example we created 3 Tabs: 'Grid', 'Edit' and 'Search', each

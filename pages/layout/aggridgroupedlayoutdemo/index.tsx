@@ -36,8 +36,8 @@ export default () => {
             .
           </p>
           <p>
-            This is what we have done in this demo - open some grouped rows and
-            then refresh the page and see that the same rows re-open.
+            This is what we have done in this demo - we set the Layout to open
+            at 'Janet Leverling / United Package'
           </p>
         </div>
       }

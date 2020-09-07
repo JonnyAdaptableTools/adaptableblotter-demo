@@ -36,17 +36,22 @@ const demoConfig: PredefinedConfig = {
     Layouts: [
       {
         Columns: [
-          'ShipVia',
           'CustomerReference',
           'ContactName',
           'InvoicedCost',
           'ChangeLastOrder',
+          'ItemCount',
           'OrderCost',
           'PackageCost',
           'Employee',
           'ShipCountry',
         ],
-        RowGroupedColumns: ['Employee'],
+        RowGroupedColumns: ['Employee', 'ShipVia'],
+        AggregationColumns: { InvoicedCost: 'sum', ItemCount: 'max' },
+        ExpandedRowGroupValues: [
+          'Janet Leverling',
+          'Janet Leverling/United Package',
+        ],
         Name: 'Grouped',
       },
       {
@@ -69,6 +74,21 @@ const demoConfig: PredefinedConfig = {
           },
         ],
         Name: 'Sorted Grouped',
+      },
+    ],
+  },
+  FormatColumn: {
+    FormatColumns: [
+      {
+        Scope: {
+          ColumnIds: ['InvoicedCost'],
+        },
+        DisplayFormat: {
+          Formatter: 'NumberFormatter',
+          Options: {
+            FractionDigits: 4,
+          },
+        },
       },
     ],
   },

@@ -31,30 +31,6 @@ const demoConfig: PredefinedConfig = {
   QuickSearch: {
     QuickSearchText: 'l',
   },
-  /*
-  AdvancedSearch: {
-    AdvancedSearches: [
-      {
-        Expression: {
-          RangeExpressions: [
-            {
-              ColumnId: 'InvoicedCost',
-              Ranges: [
-                {
-                  Operand1: '1200',
-                  Operand1Type: 'Value',
-                  Operator: 'GreaterThan',
-                },
-              ],
-            },
-          ],
-        },
-        Name: 'High Invoices',
-      },
-    ],
-    CurrentAdvancedSearch: 'High Invoices',
-  },
-  */
   Query: {
     CurrentQuery: '[InvoicedCost] > 1200 AND [Employee]= "Margaret Peacock" ',
   },

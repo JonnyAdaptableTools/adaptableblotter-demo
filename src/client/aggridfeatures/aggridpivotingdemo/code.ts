@@ -22,7 +22,7 @@ const demoConfig: PredefinedConfig = {
         ColumnSorts: [],
         RowGroupedColumns: ['ShipCountry'],
         PivotColumns: ['ShipVia'],
-        AggregationColumns: { InvoicedCost: 'sum', ItemCount: 'avg' },
+        AggregationColumns: { InvoicedCost: 'sum', ItemCount: 'max' },
         EnablePivot: true,
         Name: 'Pivot View',
       },
@@ -73,17 +73,6 @@ const demoConfig: PredefinedConfig = {
           },
         },
       },
-      {
-        Scope: {
-          ColumnIds: ['ItemCost'],
-        },
-        DisplayFormat: {
-          Formatter: 'NumberFormatter',
-          Options: {
-            FractionDigits: 2,
-          },
-        },
-      },
     ],
   },
 } as PredefinedConfig;
@@ -107,11 +96,8 @@ export default async (columnDefs: any[], rowData: any[]) => {
       abColDefNumberArray: {},
     },
     processSecondaryColDef: function(colDef) {
-      let col = colDef.pivotKeys?.find(pk => pk === 'Speedy Express');
-      if (col) {
-        colDef.headerName = colDef.headerName!.toUpperCase();
-        colDef.headerClass = 'secondary-column-color-background';
-        // to do
+      if (colDef.headerName == 'Item Count') {
+        colDef.headerName += ' (max)';
       }
     },
     processSecondaryColGroupDef: function(colGroupDef) {

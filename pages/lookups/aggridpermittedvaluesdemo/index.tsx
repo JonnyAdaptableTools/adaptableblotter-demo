@@ -9,25 +9,26 @@ export default () => {
       description={
         <div>
           <p>
-            When AdapTable wants to provide a list of values for a column (e.g.
-            in a column filter, or when building a query or in Bulk Update) it
-            will first get the list from Server Lookups if that has been set.
+            AdapTable follows a series of steps when it wants to provide a list
+            of values for a column (e.g. in a column filter, or when building a
+            query or in Bulk Update).
           </p>
           <p>
-            If not then it will look for any Permitted Columns values for that
-            column. These are set through the{' '}
+            It will first look for any Permitted Values for that column, set via
+            the{' '}
             <a
               href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_userinterfacestate_.userinterfacestate.html"
               target="_blank"
             >
               PermittedValuesItems
             </a>{' '}
-            property in the User Interface section of Predefined Config.
+            property in UserInterface State - where you can provide either a
+            list or a function.
           </p>
           <p>
-            Here we set 'hard-coded' Permitted Column Values for <i>Contact</i>{' '}
-            and <i>Employee</i> columns so only this list of values is displayed
-            in their Column Filters (and Query Builder).
+            Here we set 'hard-coded' Permitted Values for <i>Contact</i> and{' '}
+            <i>Employee</i> columns so only this list of values is displayed in
+            their Column Filters (and Expression Editor).
           </p>
           <p>
             For the <i>Cust Ref.</i> column we provide a function that will be

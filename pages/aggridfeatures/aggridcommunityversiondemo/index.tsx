@@ -22,8 +22,8 @@ export default () => {
           </p>
           <p>
             Likewise all the advanced features AdapTable offers such as the
-            No-Code version, Team Sharing, Audit Log, Advanced Search, Server
-            Validation, Alerts, Schedules etc. are present.
+            No-Code version, Team Sharing, Audit Log, Query, Server Validation,
+            Alerts, Schedules etc. are present.
           </p>{' '}
           <p>
             However, functions which support advanced ag-Grid features only
