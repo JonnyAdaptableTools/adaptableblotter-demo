@@ -39,12 +39,16 @@ export default () => {
             Layouts allow you to specify <b>Column visiblity and Order</b>.
           </p>{' '}
           <p>
-            Layouts can also include column sorting, grouping and pivoting
-            information and can save automatially when changed
+            Layouts can also include column widths, pinning, sorting, grouping,
+            aggregating and pivoting information.{' '}
+          </p>
+          <p>
+            Layouts will, by default, save automatially when changed and there
+            must always be one 'active' layout.
           </p>
           <p>
             The search and filter functions determine <b>row</b> visibility and
-            order, while layouts manage <b>column</b> visibility and order. .
+            order, while layouts manage <b>column</b> visibility and order.
           </p>
           <ul>{demoLinks}</ul>
           Click on the buttons below to see a demo for some of the different

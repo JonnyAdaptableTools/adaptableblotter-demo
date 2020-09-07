@@ -395,6 +395,18 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Layouts can be saved automatically whenever anything changes',
           },
           {
+            Name: 'Column Widths',
+            Link: '/layout/aggridcolumnwidthslayoutdemo',
+            Description:
+              'Provide column width information to Layout definition; and they will also be automatically saved by AdapTable',
+          },
+          {
+            Name: 'Pinned Columns',
+            Link: '/layout/aggridpinnedcolumslayoutdemo',
+            Description:
+              'You can define pinned columns as part of your Layout config',
+          },
+          {
             Name: 'Advanced Layouts',
             Link: '/layout/aggridadvancedlayoutdemo',
             Description:
