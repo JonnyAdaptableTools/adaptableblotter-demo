@@ -11,7 +11,12 @@ export default () => {
           <p>
             The Format Column Function allows you to style an entire column.
             Unlike Conditional Styles, the Format Column style is <b>always</b>{' '}
-            applied, irrespective of the data in the cell.
+            applied, irrespective of the data in the cell.{' '}
+          </p>
+          <p>
+            Format Columns use <b>Scope</b> meaning you can choose to apply a
+            Format to one, some or all columns, or to columns of a particular
+            DataType.
           </p>
           <p>
             You can provide either a visual Style, a Display Format (or both).
