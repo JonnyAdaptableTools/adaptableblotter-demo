@@ -9,6 +9,7 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
+  PredicateDefHandlerParams,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -19,6 +20,7 @@ const demoConfig: PredefinedConfig = {
     VisibleButtons: ['ConditionalStyle'],
   },
   ConditionalStyle: {
+    Revision: Date.now(),
     ConditionalStyles: [
       {
         Scope: {
@@ -65,9 +67,17 @@ const demoConfig: PredefinedConfig = {
           FontWeight: 'Bold',
         },
         Predicate: {
-          PredicateId: 'Is',
-          Inputs: ['Margaret Peacock'],
+          PredicateId: 'new_starter',
         },
+      },
+      {
+        Scope: {
+          All: true,
+        },
+        Style: {
+          BackColor: 'lightblue',
+        },
+        Expression: '[InvoicedCost] > 1000',
       },
     ],
   },
@@ -97,6 +107,22 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Cond Style Demo',
+    customPredicateDefs: [
+      {
+        id: 'new_starter',
+        label: 'New Starter',
+        columnScope: {
+          ColumnIds: ['Employee'],
+        },
+        functionScope: ['filter', 'conditionalstyle'],
+        handler(params: PredicateDefHandlerParams) {
+          return (
+            params.value == 'Steven Buchanan' ||
+            params.value == 'Laura Callahan'
+          );
+        },
+      },
+    ],
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
