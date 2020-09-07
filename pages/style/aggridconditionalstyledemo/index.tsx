@@ -73,6 +73,12 @@ export default () => {
             target="_blank"
           >
             Adaptable API
+          </a>{' '}
+          <a
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/conditional-style-function.md"
+            target="_blank"
+          >
+            Read Me
           </a>
         </div>
       }
