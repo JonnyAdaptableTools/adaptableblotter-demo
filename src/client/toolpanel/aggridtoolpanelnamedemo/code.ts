@@ -46,7 +46,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
     userName: 'Demo User',
     adaptableId: 'Tool Panel Name Demo',
     userInterfaceOptions: {
-      showAdaptableToolPanel: true,
       adaptableToolPanelTitle: 'Grid Management',
     },
     predefinedConfig: demoConfig,

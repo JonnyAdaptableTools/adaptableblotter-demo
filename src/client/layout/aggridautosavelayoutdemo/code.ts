@@ -73,9 +73,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
     layoutOptions: {
       autoSaveLayouts: false,
     },
-    userInterfaceOptions: {
-      showAdaptableToolPanel: true,
-    },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

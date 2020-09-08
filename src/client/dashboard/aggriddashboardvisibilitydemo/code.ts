@@ -51,9 +51,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
     userName: 'Demo User',
     adaptableId: 'Dashboard Visibility Demo',
     predefinedConfig: demoConfig,
-    userInterfaceOptions: {
-      showAdaptableToolPanel: true,
-    },
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
     plugins: [charts()],
   };

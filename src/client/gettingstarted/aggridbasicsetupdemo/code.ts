@@ -141,7 +141,7 @@ export default async () => {
   // We only need to add values for non-mandatory properties where you are unhappy with the default options
   // Full list of options and defaults can be found at:
   // https://api.adaptabletools.com/interfaces/_src_adaptableoptions_adaptableoptions_.adaptableoptions
-  // In this case we have just set the showAdaptableToolPanel to true in UserInterfaceOptions
+  // In this case we have just set the adaptableToolPanelTitle to 'Grid Settings' in UserInterfaceOptions
   // 2 mandatory properties are 'primaryKey' (to allow us to identify each cell) and 'adaptableId' (a unique name for this instance)
   // Another is 'vendorGrid' (a reference to the underlying grid  - in this case the gridOptions we created above which we pass in)
   // Note that we attach any Enterprise modules to the 'modules' property of vendorGrid
@@ -152,7 +152,7 @@ export default async () => {
     userName: 'Demo User',
     adaptableId: 'Basic Setup Demo',
     userInterfaceOptions: {
-      showAdaptableToolPanel: true,
+      adaptableToolPanelTitle: 'Grid Settings',
     },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },

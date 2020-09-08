@@ -38,6 +38,9 @@ export default async (columnDefs: any[], rowData: any[]) => {
     userName: 'Demo User',
     adaptableId: 'No Config Demo',
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
+    userInterfaceOptions: {
+      showAdaptableToolPanel: false,
+    },
   };
   adaptableApi = await Adaptable.init(adaptableOptions);
 
