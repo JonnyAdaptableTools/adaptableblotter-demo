@@ -94,8 +94,8 @@ export function getDemoPageStructure(): DemoPageStructure {
           },
           */
           {
-            Name: 'Custom Filters',
-            Link: '/filters/aggridcustomfiltersdemo',
+            Name: 'Custom Predicates',
+            Link: '/filters/aggridcustompredicatesdemo',
             Description:
               'Customs Filters are "Predicate Functions" provided by users at design-time with a scope that determines where and when the Predicate is applied.',
           },

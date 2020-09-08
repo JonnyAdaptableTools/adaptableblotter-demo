@@ -86,7 +86,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Custom Filters Demo',
+    adaptableId: 'Custom Predicates Demo',
     customPredicateDefs: [
       {
         id: 'high',
