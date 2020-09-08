@@ -16,7 +16,7 @@ export default async () => {
   let rowData = JSON.parse(JSON.stringify(json));
   helperAgGrid.convertExcelData(rowData);
 
-  const columndefs = helperAgGrid.getFullNorthwindColumnSchema();
+  const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
   const { adaptableOptions, adaptableApi } = await init(columndefs, rowData);
 
   adaptableOptions.vendorGrid.onGridReady = function(

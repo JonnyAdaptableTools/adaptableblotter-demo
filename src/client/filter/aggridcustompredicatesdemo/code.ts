@@ -16,45 +16,30 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
-  /*
-  NamedFilter: {
-    NamedFilters: [
-      {
-        Name: 'High',
-        Scope: {
-          ColumnIds: ['OrderId'],
-        },
-        FilterPredicate: 'High',
-      },
-      {
-        Name: 'New Starter',
-        Scope: {
-          ColumnIds: ['Employee'],
-        },
-        FilterPredicate: 'NewStarter',
-      },
-      {
-        Name: 'Post Takeover',
-        Scope: {
-          DataType: 'Date',
-        },
-        FilterPredicate: 'PostTakeover',
-      },
-      {
-        Name: 'After Work',
-        Scope: {
-          ColumnIds: ['LastUpdatedTime'],
-        },
-        FilterPredicate: 'AfterWork',
-      },
-    ],
-  },
-  */
   Filter: {
     ColumnFilters: [
       {
         ColumnId: 'Employee',
-        Predicate: { PredicateId: 'new_starter' }, // TODO: this is a custom predicate and we need to create it!!!!
+        Predicate: { PredicateId: 'new_starter' },
+      },
+      {
+        ColumnId: 'LastUpdatedTime',
+        Predicate: { PredicateId: 'after_work' },
+      },
+    ],
+  },
+  FormatColumn: {
+    FormatColumns: [
+      {
+        Scope: {
+          ColumnIds: ['LastUpdatedTime'],
+        },
+        DisplayFormat: {
+          Formatter: 'DateFormatter',
+          Options: {
+            Pattern: 'HH:mm:ss',
+          },
+        },
       },
     ],
   },
@@ -116,46 +101,31 @@ export default async (columnDefs: any[], rowData: any[]) => {
           );
         },
       },
-    ],
-    /*
-    userFunctions: [
       {
-        type: 'NamedFilterPredicate',
-        name: 'High',
-        handler(_record, _columnId, cellValue) {
-          let invoiced: number = _record.data.InvoicedCost;
-          let itemCount: number = _record.data.ItemCount;
-          return invoiced > 1000 && itemCount > 10 ? true : false;
+        id: 'after_work',
+        label: 'After Work',
+        columnScope: {
+          ColumnIds: ['LastUpdatedTime'],
+        },
+        functionScope: ['filter'],
+        handler(params: PredicateDefHandlerParams) {
+          return (params.value as Date).getHours() > 17;
         },
       },
       {
-        type: 'NamedFilterPredicate',
-        name: 'NewStarter',
-        handler(_record, _columnId, cellValue) {
-          return (
-            cellValue == 'Robert King' ||
-            cellValue == 'Laura Callahan' ||
-            cellValue == 'Andrew Fuller'
-          );
+        id: 'post_takeover',
+        label: 'Post Takeover',
+        columnScope: {
+          DataTypes: ['Date'],
         },
-      },
-      {
-        type: 'NamedFilterPredicate',
-        name: 'PostTakeover',
-        handler(_record, _columnId, cellValue) {
+        functionScope: ['filter'],
+        handler(params: PredicateDefHandlerParams) {
           let takeOverDate = new Date('2019-09-21');
-          return (cellValue as Date) > takeOverDate;
-        },
-      },
-      {
-        type: 'NamedFilterPredicate',
-        name: 'AfterWork',
-        handler(_record, _columnId, cellValue) {
-          return (cellValue as Date).getHours() > 17;
+          return (params.value as Date) > takeOverDate;
         },
       },
     ],
-    */
+
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

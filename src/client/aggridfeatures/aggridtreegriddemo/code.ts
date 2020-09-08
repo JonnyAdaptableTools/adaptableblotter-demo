@@ -7,26 +7,13 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
+  PredicateDefHandlerParams,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
 var adaptableApi: AdaptableApi;
 
-const demoConfig: PredefinedConfig = {
-  /*
-  NamedFilter: {
-    NamedFilters: [
-      {
-        Name: 'Appointed In Reshuffle',
-        Scope: {
-          ColumnIds: ['dateAppointed'],
-        },
-        FilterPredicate: 'appointed13Feb2020',
-      },
-    ],
-  },
-  */
-} as PredefinedConfig;
+const demoConfig: PredefinedConfig = {} as PredefinedConfig;
 
 export default async (rowData: any[]) => {
   // lets create the ColumnDefs inline as they are unique to this demo
@@ -104,16 +91,19 @@ export default async (rowData: any[]) => {
       autoSizeColumnsInLayout: true,
       autoSizeColumnsInPivotLayout: true,
     },
-    /*
-    userFunctions: [
+    customPredicateDefs: [
       {
-        type: 'NamedFilterPredicate',
-        name: 'appointed13Feb2020',
-        handler(_record, _columnId, cellValue) {
-          return cellValue === '13 February 2020';
+        id: 'appointed13Feb2020',
+        label: 'Appointed Reshuffle',
+        columnScope: {
+          ColumnIds: ['dateAppointed'],
+        },
+        functionScope: ['filter', 'alert', 'validation', 'conditionalstyle'],
+        handler(params: PredicateDefHandlerParams) {
+          return params.value === '13 February 2020';
         },
       },
-    ],*/
+    ],
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

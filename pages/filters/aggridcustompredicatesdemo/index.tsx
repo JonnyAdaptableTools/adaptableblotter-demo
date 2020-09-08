@@ -9,9 +9,9 @@ export default () => {
       description={
         <div>
           <p>
-            AdapTable has a range of powerful filter functions. These include
-            Column Filters, System Filters and User Filters (that users create
-            at run-time) and in most cases are sufficient for all needs.
+            AdapTable ships with a number of powerful{' '}
+            <a href="aggridsystemfiltersdemo">System Filters</a> which in most
+            cases are sufficient for all needs.
           </p>
           <p>
             But occasionally you might want to filter a column based on other
@@ -19,58 +19,53 @@ export default () => {
             even using an external lookup.
           </p>
           <p>
-            This is where <b>Named Filters</b> come in. You can create at{' '}
-            <b>design time</b> a Named Filter and provide AdapTable with the
-            Predicate function required to evaluate it.
+            This is the role of <b>Custom Predicates</b>. You create them at at{' '}
+            <b>design time</b> and provide 3 imporant pieces of information:
+            <ul>
+              <li>
+                <b>Column Scope</b>: Which Columns or DataTypes will the
+                Predicate be relevant
+              </li>
+              <li>
+                <b>Function Scope</b>: In which Adaptable Functions can the
+                Predicate be called (e.g. Conditional Style, Alerts, Filters
+                etc.)
+              </li>
+              <li>
+                <b>Handler</b>: The actual function that will be evaluated each
+                time the predicate is called - it receives node, column and cell
+                details and returns a <b>Boolean</b>
+              </li>
+            </ul>
           </p>
-          <p>
-            Named Filters operate either on a Single Column or all Columns of a
-            DataType (e.g. Date) which you define in the{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_namedfilterstate_.namedfilterstate.html"
-              target="_blank"
-            >
-              Named Filters
-            </a>{' '}
-            section of Config.{' '}
-          </p>
-          <p>
-            You also provide the <b>name</b> of the Predicate Function in{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_namedfilterstate_.namedfilterstate.html"
-              target="_blank"
-            >
-              Predefined Config
-            </a>
-            , but supply the <b>actual function implementation</b> in{' '}
-            <a
-              href="https://api.adaptabletools.com/modules/_src_adaptableoptions_userfunctions_.html"
-              target="_blank"
-            >
-              UserFunctions
-            </a>
-            )
-          </p>
-          <p>
-            In this example we created 4 Named Filters and associated Predicate
-            Functions:{' '}
-          </p>
+          <p>In this example we created 4 Custom Predicates: </p>
           <ol>
             <li>
-              <b>High</b> on <i>OrderId</i> Column that evaluates based on data
-              in <i>Invoiced</i> and <i>ItemCount</i> columns
+              <b>High</b> with Scope of <i>OrderId</i> Column that evaluates
+              based on the data in the <i>Invoiced</i> and <i>ItemCount</i>{' '}
+              columns
             </li>
             <li>
-              <b>New Starter</b> on <i>Employee</i> column which mimics a lookup
-              to an internal CRM system (and which is also a column filter)
+              <b>New Starter</b> which has Scope of <i>Employee</i> column, and
+              mimics a lookup to an internal CRM system - (
+              <b>
+                this is also set in Config as a{' '}
+                <a href="aggridcolumnfiltersdemo">column filter</a>
+              </b>
+              ){' '}
             </li>
             <li>
-              <b>Post Takeover</b> which operates on all Date columns and
+              <b>Post Takeover</b> which has a Scope of Date columns and
               evaluates true if date in cell was after a putative takeover date.
             </li>
             <li>
-              <b>After Work</b> which operates on the <i>LastUpdatedTime</i>{' '}
-              Column and returns any time after 5pm.
+              <b>After Work</b> which has Scope of <i>LastUpdatedTime</i> Column
+              and returns any time after 5pm - (
+              <b>
+                this is also set in Config as a{' '}
+                <a href="aggridcolumnfiltersdemo">column filter</a>{' '}
+              </b>
+              ){' '}
             </li>
           </ol>
         </div>
