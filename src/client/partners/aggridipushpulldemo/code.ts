@@ -11,10 +11,10 @@ import {
   AdaptableApi,
   LiveDataChangedEventArgs,
   LiveDataChangedInfo,
+  IPushPullApi,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import ipp from '@adaptabletools/adaptable-plugin-ipushpull';
-import { IPushPullApi } from '@adaptabletools/adaptable/src/Api/IPushPullApi';
 
 var adaptableApi: AdaptableApi;
 

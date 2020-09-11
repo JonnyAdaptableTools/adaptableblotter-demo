@@ -12,7 +12,6 @@ import {
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import glue42 from '@adaptabletools/adaptable-plugin-glue42';
-import { Glue42Api } from '@adaptabletools/adaptable/src/Api/Glue42Api';
 import glue42Desktop from '@glue42/desktop';
 import glue42office from '@glue42/office';
 
