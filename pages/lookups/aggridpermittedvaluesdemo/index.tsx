@@ -41,8 +41,8 @@ export default () => {
             System Filters for Date columns are shown.
           </p>
           <p>
-            Note: if there are no Permitted Values, then AdapTable will
-            dynamically build a list of distinct values for the column.
+            Note: if there are no Permitted Values provided, then AdapTable will
+            dynamically build a list of current distinct values for the column.
           </p>
         </div>
       }

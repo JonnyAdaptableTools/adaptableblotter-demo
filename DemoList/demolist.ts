@@ -389,6 +389,12 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Grouped Layouts can be created which include row grouping details',
           },
           {
+            Name: 'Pivot Layout',
+            Link: '/layout/aggridpivotlayoutdemo',
+            Description:
+              'A pivot layout defines how the grid should look in "Pivot Mode", i.e. which columns are pivoted, grouped and aggregated.',
+          },
+          {
             Name: 'Auto Save Layout',
             Link: '/layout/aggridautosavelayoutdemo',
             Description:
@@ -745,12 +751,14 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'Set the maximum number of distinct column values to show in column lookups and the Query Builder',
           },
+          /*
           {
             Name: 'Server Lookups',
             Link: '/lookups/aggridserverlookupsdemo',
             Description:
               'Provide AdapTable dynamically with the list of values to be displayed each time distinct cell values are required',
           },
+          */
           {
             Name: 'Permitted Values',
             Link: '/lookups/aggridpermittedvaluesdemo',
