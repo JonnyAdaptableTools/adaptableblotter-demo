@@ -114,7 +114,6 @@ const demoConfig: PredefinedConfig = {
           'ItemCost',
           'ItemCount',
         ],
-        ColumnSorts: [],
         Name: 'Orders View',
       },
       {
@@ -148,7 +147,6 @@ const demoConfig: PredefinedConfig = {
           ForeColor: '#8b0000',
           FontWeight: 'Normal',
           FontStyle: 'Normal',
-          ClassName: '',
         },
       },
     ],

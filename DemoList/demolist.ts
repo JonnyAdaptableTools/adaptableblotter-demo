@@ -83,7 +83,7 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Column Filters',
             Link: '/filters/aggridcolumnfiltersdemo',
             Description:
-              'A filter panel available as a dropdown from the Column Header which allows you to perform complex filtering for a particular column.  Can be saved as User Filters.',
+              'A filter panel available as a dropdown from the Column Header which allows you to filter the column using a "Predicate".',
           },
           /*
           {

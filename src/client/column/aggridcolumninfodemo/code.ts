@@ -35,26 +35,6 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
-  UserFilter: {
-    UserFilters: [
-      {
-        ColumnId: 'Employee',
-        Expression: {
-          ColumnValueExpressions: [
-            {
-              ColumnId: 'Employee',
-              ColumnDisplayValues: [
-                'Robert King',
-                'Janet Leverling',
-                'Anne Dodsworth',
-              ],
-            },
-          ],
-        },
-        Name: 'UK Team',
-      },
-    ],
-  },
   FormatColumn: {
     FormatColumns: [
       {

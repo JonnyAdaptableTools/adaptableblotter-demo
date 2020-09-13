@@ -19,10 +19,9 @@ export default () => {
             availalbe for numeric columns).
           </p>
           <p>
-            In this example we created a user filter, format column, conditinal
-            style and custom sort for the 'Employee' column. Click on Column
-            Info in the header menu to see all these objects and add / edit as
-            required.
+            In this example we created a format column, conditinal style and
+            custom sort for the 'Employee' column. Click on Column Info in the
+            header menu to see all these objects and add / edit as required.
           </p>
         </div>
       }
