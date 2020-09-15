@@ -74,7 +74,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
   adaptableApi.eventApi.on(
     'ThemeChanged',
     (themeChangedEventArgs: ThemeChangedEventArgs) => {
-      if (themeChangedEventArgs.data[0].id.themeName === 'wimbledon-theme') {
+      if (themeChangedEventArgs.data[0].id.theme === 'wimbledon-theme') {
         let rowStyles: RowStyle[] = [];
         let evenStyle: RowStyle = {
           Style: {
