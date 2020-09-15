@@ -24,13 +24,14 @@ export default () => {
             the <b>Console</b> or fired as an <b>Event</b>.
           </p>
           <p>
-            This example fires an event when a 'Cell Edit' Audit Log message is
-            triggered; we handle the event and send the output to the console
-            for display purposes.{' '}
+            This example fires an event when either a 'Cell Edit' or 'Function
+            Applied' Audit Log message is triggered; we handle the event and
+            send the output to the console for display purposes.{' '}
           </p>
           <p>
-            Open up the Console and edit a cell in the Grid and see that the
-            event is captured and the payload sent to the console.
+            Open up the Console and edit a cell in the Grid, or run a function)
+            and see that the event is captured and the payload sent to the
+            console.
           </p>
         </div>
       }

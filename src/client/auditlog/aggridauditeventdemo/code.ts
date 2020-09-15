@@ -43,6 +43,9 @@ export default async (columnDefs: any[], rowData: any[]) => {
       auditCellEdits: {
         auditAsEvent: true,
       },
+      auditFunctionEvents: {
+        auditAsEvent: true,
+      },
     },
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
@@ -51,17 +54,13 @@ export default async (columnDefs: any[], rowData: any[]) => {
   adaptableApi.auditEventApi.on(
     'AuditCellEdited',
     (auditLogEventArgs: AuditLogEventArgs) => {
-      const dataChangeDetails: DataChangedDetails | undefined =
-        auditLogEventArgs.data[0].id.data_change_details;
-      console.log(
-        'The "AuditCellEdited" event was fired because in the Column: "' +
-          dataChangeDetails?.column_id +
-          '" we changed "' +
-          dataChangeDetails?.previous_value +
-          '" to: "' +
-          dataChangeDetails?.new_value +
-          '"'
-      );
+      console.log(auditLogEventArgs.data[0].id);
+    }
+  );
+  adaptableApi.auditEventApi.on(
+    'AuditFunctionApplied',
+    (auditLogEventArgs: AuditLogEventArgs) => {
+      console.log(auditLogEventArgs.data[0].id);
     }
   );
 

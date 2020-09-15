@@ -24,7 +24,6 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   Layout: {
-    Revision: Date.now(),
     CurrentLayout: 'Pivot View',
     Layouts: [
       {
