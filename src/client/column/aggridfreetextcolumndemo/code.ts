@@ -9,8 +9,10 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
+  AuditLogEventArgs,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
+import { AuditLogEntry } from '@adaptabletools/adaptable/src/Utilities/Interface/AuditLogEntry';
 
 var adaptableApi: AdaptableApi;
 
@@ -81,10 +83,27 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Free Text Column Demo',
+    auditOptions: {
+      auditFunctionEvents: {
+        auditAsEvent: true,
+      },
+    },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
   adaptableApi = await Adaptable.init(adaptableOptions);
+
+  adaptableApi.auditEventApi.on(
+    'AuditFunctionApplied',
+    (auditLogEventArgs: AuditLogEventArgs) => {
+      let auditLogEntry: AuditLogEntry = auditLogEventArgs.data[0].id;
+      if (
+        auditLogEntry.function_applied_details?.action ==
+        'FREE_TEXT_COLUMN_ADD_EDIT_STORED_VALUE'
+      )
+        console.log(auditLogEntry);
+    }
+  );
 
   return { adaptableOptions, adaptableApi };
 };
