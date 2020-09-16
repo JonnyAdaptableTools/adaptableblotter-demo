@@ -709,6 +709,13 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'Store bespoke information in Adaptable State as Key / Value pairs.',
           },
+
+          {
+            Name: 'Custom localStorage key',
+            Link: '/adaptablestate/adaptablestatekeyusage',
+            Description:
+              'Changing the localStorage persistence key to have multiple views.',
+          },
         ],
       },
       {

@@ -68,7 +68,8 @@ export default async (columnDefs: any[], rowData: any[]) => {
        * The loadState function is used to load the predefined config
        * from a remote source - namely firebase in this example
        *
-       * It returns a promise which is resolved when the Predefined Config is retrieved from firebase.
+       * It returns a promise which is resolved when the Predefined Config is
+       * retrieved from firebase.
        */
       loadState: () => {
         return firebase
