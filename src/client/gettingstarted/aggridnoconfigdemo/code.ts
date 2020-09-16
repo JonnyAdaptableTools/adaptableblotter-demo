@@ -39,7 +39,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
     adaptableId: 'No Config Demo',
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
     userInterfaceOptions: {
-      showAdaptableToolPanel: false,
+      showAdaptableToolPanel: true,
     },
   };
   adaptableApi = await Adaptable.init(adaptableOptions);
