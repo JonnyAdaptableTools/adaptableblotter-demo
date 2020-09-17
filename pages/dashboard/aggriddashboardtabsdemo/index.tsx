@@ -22,8 +22,9 @@ export default () => {
             named groups of associated Toolbars.
           </p>
           <p>
-            Note: if there are no Tabs, AdapTable will create a default one
-            called 'Toolbars' which will contain the default list of toolbars.
+            Note: if there are no Tabs in the Config, AdapTable will create a
+            Tab called 'Toolbars' which will contain the default list of
+            'Query', 'Layout', 'Export', 'Filter'.
           </p>
           <p>
             In this example we created 3 Tabs: 'Grid', 'Edit' and 'Search', each

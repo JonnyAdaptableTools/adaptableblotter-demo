@@ -1,10 +1,8 @@
 import '@adaptabletools/adaptable/index.css';
 import '@adaptabletools/adaptable/themes/dark.css';
-
 import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham-dark.css';
-
 import Adaptable from '@adaptabletools/adaptable/agGrid';
 import { GridOptions } from '@ag-grid-community/all-modules';
 import {
@@ -14,9 +12,7 @@ import {
   AdaptableState,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
-
 import { v4 as uuidv4 } from 'uuid';
-
 import * as firebase from 'firebase/app';
 import 'firebase/database';
 
@@ -32,9 +28,7 @@ var firebaseConfig = {
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-
 var adaptableApi: AdaptableApi;
-
 const demoConfig: PredefinedConfig = {} as PredefinedConfig;
 
 export default async (columnDefs: any[], rowData: any[]) => {
