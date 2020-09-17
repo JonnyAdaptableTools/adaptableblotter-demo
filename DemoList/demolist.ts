@@ -370,6 +370,12 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'Custom Reports are created only at design-time and can include columns and data not in the grid, and are run using a custom function.',
           },
+          {
+            Name: 'Custom Destination',
+            Link: '/export/aggridcustomdestinationdemo',
+            Description:
+              'Send a report to the destination of your choice - by providing a function which AdapTable will call when the report is ready to send.',
+          },
         ],
       },
       {
