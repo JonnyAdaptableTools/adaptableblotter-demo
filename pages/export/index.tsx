@@ -93,6 +93,11 @@ export default () => {
               ensuring Excel updates automatically as the grid ticks (requires
               OpenFin Plugin)
             </li>
+            <li>
+              <b>Custom</b>: The developer provides the name of the destination
+              in Predefined Config and a functin to be implemented to be called
+              by AdapTable.
+            </li>
           </ul>{' '}
           <p>
             You can schedule reports so that they export at particular times

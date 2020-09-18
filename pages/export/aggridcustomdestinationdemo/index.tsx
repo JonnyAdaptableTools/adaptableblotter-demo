@@ -22,13 +22,24 @@ export default () => {
           </p>
           <ol>
             <li>
-              Add the destination to the <b>CustomDestinations</b> section of
-              Export State
+              Add the destination to the <b>CustomDestinations</b> section of{' '}
+              <a
+                href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_exportstate_.exportstate.html#customdestinations"
+                target="_blank"
+              >
+                Export State
+              </a>
             </li>
             <li>
               Provide an implementation of the{' '}
-              <b>CustomExportDestinationFunction</b> function to be called
-              whenever that destination has been specified
+              <b>CustomExportDestinationFunction</b> function in{' '}
+              <a
+                href="https://api.adaptabletools.com/modules/_src_adaptableoptions_userfunctions_.html"
+                target="_blank"
+              >
+                User Functions
+              </a>{' '}
+              to be called whenever that destination has been specified
             </li>
             <li>
               In that function to provide whatever custom code is required to

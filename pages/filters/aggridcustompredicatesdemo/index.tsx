@@ -92,6 +92,13 @@ export default () => {
           >
             Filter ReadMe
           </a>
+          |{' '}
+          <a
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-predicate-guide.md"
+            target="_blank"
+          >
+            Prredicates Guide
+          </a>
           .
         </div>
       }
