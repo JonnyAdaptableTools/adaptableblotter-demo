@@ -19,7 +19,7 @@ export default () => {
             even using an external lookup.
           </p>
           <p>
-            This is the role of <b>Custom Predicates</b>. You create them at at{' '}
+            This is the role of <b>Custom Predicates</b>; they are created at{' '}
             <b>design time</b> and provide 3 imporant pieces of information:
             <ul>
               <li>
@@ -91,7 +91,7 @@ export default () => {
             target="_blank"
           >
             Filter ReadMe
-          </a>
+          </a>{' '}
           |{' '}
           <a
             href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-predicate-guide.md"

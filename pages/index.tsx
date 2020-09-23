@@ -249,14 +249,18 @@ export default () => {
         <p>
           <b>AdapTable Version</b>
           <br />
-          The demos on this site use Version 7 of AdapTable. This contains some
-          big changes (and improvements) from previous versions. If you are new
-          to Version 7 please read the{' '}
+          The demos on this site use <b>Version 7 of AdapTable</b>. <br />
+          This contains some big changes (and improvements) from previous
+          versions. If you are new to Version 7 please read the{' '}
           <a
             href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/upgrade-guides/upgrade-guide-v7.md"
             target="_blank"
           >
             Upgrade Guide
+          </a>{' '}
+          or watch{' '}
+          <a href="https://youtu.be/tyzP6wa_SuU" target="_blank">
+            this video
           </a>
           .
         </p>
@@ -285,10 +289,18 @@ export default () => {
           </li>
           <li>
             <a
-              href="https://github.com/AdaptableTools/example-adaptableblotter-ipushpull-integration"
+              href="https://github.com/AdaptableTools/example-adaptable-ipushpull-integration"
               target="_blank"
             >
               Integration with ipushpull
+            </a>{' '}
+          </li>
+          <li>
+            <a
+              href="https://github.com/AdaptableTools/example-adaptable-openfin-integration"
+              target="_blank"
+            >
+              Integration with OpenFin
             </a>{' '}
           </li>
           <li>

@@ -64,10 +64,10 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/adaptable-theming-guide.md"
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-theming-guide.md"
             target="_blank"
           >
-            ReadMe Guide
+            Theming and Styling Guide
           </a>
           .
         </div>

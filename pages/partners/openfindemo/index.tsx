@@ -24,13 +24,28 @@ export default () => {
           advantage of the many benefits that OpenFin brings.
         </p>
         <p>
-          One of these is <b>Live Updates</b>. When running in OpenFin if you
-          export data to Excel, then any changes made to your data in AdapTable
-          (either user edits or ticking data changes) are immediately reflected
-          in Excel also.
+          One of these is <b>Live Updates</b>; when AdapTable is running in
+          OpenFin if you export data to Excel, then any subsequent changes made
+          to your data in AdapTable (either user edits or ticking data changes)
+          are immediately reflected in Excel also.
         </p>
         <p>
-          Try it for yourself:{' '}
+          And a number of other OpenFin-only features regarding Alerts,
+          Notifications and Window-management are coming very soon, so watch
+          this space...
+        </p>
+        <p>
+          Run our{' '}
+          <a
+            href="https://github.com/AdaptableTools/example-adaptable-openfin-integration"
+            target="_blank"
+          >
+            Integration with OpenFin
+          </a>{' '}
+          project and see for yourself.
+        </p>
+        <p>
+          Or you can{' '}
           <b>
             <a
               href="https://install.openfin.co/download/?fileName=adaptable_blotter_openfin&config=http://demo.adaptableblotter.com/app-demo.json"
@@ -39,7 +54,7 @@ export default () => {
               Run OpenFin
             </a>
           </b>{' '}
-          to see AdapTable running inside OpenFin and then export data to Excel.{' '}
+          manually to see AdapTable running inside the OpenFin container.{' '}
         </p>
         <p>
           (The link will download the OpenFin installer - click the exe to run
@@ -47,8 +62,8 @@ export default () => {
           windows menu under 'Adaptable Tools').
         </p>
         <p>
-          Alternatively watch the video below to see how OpenFin and AdapTable
-          work together.
+          Alternatively watch the (slightly dated) video below to see how
+          OpenFin and AdapTable work together.
         </p>
         <p>
           <iframe

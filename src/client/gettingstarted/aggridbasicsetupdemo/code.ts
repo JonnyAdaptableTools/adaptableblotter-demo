@@ -7,7 +7,7 @@ It assumes an HTML page with 2 <div> elements as follows:
     <div id="adaptable"></div>    
 
     <!-- div for underlying vendor grid - always name this 'grid' and add the default ag-Grid Theme (here 'alpine') -->    
-    <div id="grid" class="ag-alpine"></div>        
+    <div id="grid" class="ag-theme-alpine"></div>        
     ....
 </body>
 */
