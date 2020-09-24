@@ -16,7 +16,7 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleButtons: ['ColumnChooser', 'CalculatedColumn'],
+    VisibleButtons: ['CalculatedColumn'],
   },
   CalculatedColumn: {
     CalculatedColumns: [
@@ -35,12 +35,24 @@ const demoConfig: PredefinedConfig = {
           '[ItemCost] > 100 ? "High" : [ItemCost] > 50 ? "Medium": "Low"',
         ColumnId: 'Comment',
         FriendlyName: 'Comment',
+        CalculatedColumnSettings: {
+          DataType: 'String',
+          Filterable: true,
+          Groupable: true,
+          Sortable: true,
+        },
       },
       {
         ColumnExpression:
           'max([ItemCost], [OrderCost], [InvoicedCost], ([PackageCost]*10))',
         ColumnId: 'HighCost',
         FriendlyName: 'Highest Cost',
+      },
+      {
+        ColumnExpression:
+          "[ShippedDate] > ADD_DAYS([OrderDate] , 21) ? 'Delayed' : 'On time'",
+        ColumnId: 'ShipDelay',
+        FriendlyName: 'Ship Delay',
       },
       {
         // we will add the Display Format separately
@@ -134,9 +146,10 @@ const demoConfig: PredefinedConfig = {
           'HighCost',
           'OrderCost',
           'Tax',
+          'Profit',
           'PackageCost',
           'InvoicedCost',
-          'Profit',
+          'ShipDelay',
           'OrderDate',
           'ShipCountry',
         ],
@@ -187,6 +200,9 @@ export default async (columnDefs: any[], rowData: any[]) => {
     adaptableId: 'Calculated Column Demo',
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
+    queryOptions: {
+      ignoreCaseInQueries: false,
+    },
   };
   adaptableApi = await Adaptable.init(adaptableOptions);
 

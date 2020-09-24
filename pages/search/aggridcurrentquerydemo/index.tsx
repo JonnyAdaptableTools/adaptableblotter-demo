@@ -21,9 +21,17 @@ export default () => {
             When the Query runs, AdapTable will only display those rows that
             match <b>all</b> of the Conditions in the Query.
           </p>
+          <p>In this example we are searching for the following query:</p>
           <p>
-            In this example we are searching for any rows where the Employee is
-            Robert King or Andrew Fuller and where the Order Cost is over $1000.
+            <b>
+              ( [ShipCountry] IN ("UK", "USA") AND ENDS_WITH ([ShipVia], 's') ){' '}
+              OR [ItemCount] {'<'} 5)
+            </b>
+          </p>
+          <p>
+            This will find any rows where the either both the ShipCountry is UK
+            or USA or ShipVia ends with the letter 's'; or where the ItemCount
+            is less than 5.
           </p>
 
           <p>

@@ -53,7 +53,7 @@ export default () => {
             </li>
           </ul>{' '}
           <p>
-            Click the 2nd button in Dasbhoard to see details of the Expression -
+            Click the 1st button in Dasbhoard to see details of the Expression -
             or 'Edit Expression' in the Column Header menu.{' '}
           </p>
           <p>

@@ -17,7 +17,7 @@ var adaptableApi: AdaptableApi;
 const demoConfig: PredefinedConfig = {
   Query: {
     CurrentQuery:
-      '[Employee] IN ("Robert King", "Andrew Fuller") AND [OrderCost] > 1000 ',
+      '([ShipCountry] IN ("UK", "USA") AND ENDS_WITH([ShipVia],"s"))  OR [ItemCount] < 5',
     SharedQueries: [
       {
         // Note the Uuid is provided by the developer - the only place in AdapTable config that you need do
@@ -43,6 +43,33 @@ const demoConfig: PredefinedConfig = {
         Style: {
           BackColor: 'orange',
         },
+      },
+    ],
+  },
+  Layout: {
+    CurrentLayout: 'QueryLayout',
+    Layouts: [
+      {
+        Columns: [
+          'OrderId',
+          'CustomerReference',
+          'ContactName',
+          'ShipCountry',
+          'ChangeLastOrder',
+          'ShipVia',
+          'ItemCount',
+          'OrderCost',
+          'PackageCost',
+          'Employee',
+          'CompanyName',
+        ],
+        ColumnSorts: [
+          {
+            ColumnId: 'CustomerReference',
+            SortOrder: 'Asc',
+          },
+        ],
+        Name: 'QueryLayout',
       },
     ],
   },
