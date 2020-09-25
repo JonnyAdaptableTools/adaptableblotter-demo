@@ -595,6 +595,12 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'Any changes made to the data source to the underlying DataGrid (in this example ag-Grid) is automatically reflected in AdapTable and it will be picked up by all relevant functions.',
           },
+          {
+            Name: 'Batch Data',
+            Link: '/admin/aggridbatchdatademo',
+            Description:
+              'This demo shows how you can update data in transactional batches to improve update performance',
+          },
 
           {
             Name: 'No Code',

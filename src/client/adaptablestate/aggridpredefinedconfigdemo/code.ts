@@ -152,7 +152,7 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   QuickSearch: {
-    QuickSearchText: 'g*',
+    QuickSearchText: 'g',
     Style: {
       BackColor: '#ffff00',
       ForeColor: '#8b0000',

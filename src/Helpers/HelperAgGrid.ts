@@ -1721,7 +1721,7 @@ export class HelperAgGrid {
     var counterparties = [0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.5];
     return counterparties;
   }
-  protected getCounterparties(): (string | null | undefined)[] {
+  public getCounterparties(): (string | null | undefined)[] {
     var counterparties = [
       'Goldman Sachs',
       'Societe Generale',
@@ -1743,12 +1743,12 @@ export class HelperAgGrid {
     return counterparties;
   }
 
-  protected getCurrencies(): string[] {
+  public getCurrencies(): string[] {
     var currencies = ['EUR', 'USD', 'GBP', 'CHF', 'CAD', 'AUD', 'ZAR'];
     return currencies;
   }
 
-  protected getCountries(): string[] {
+  public getCountries(): string[] {
     var countries = [
       'Argentina',
       'Australia',

@@ -19,7 +19,25 @@ const demoConfig: PredefinedConfig = {
     Tabs: [
       {
         Name: 'Toolbars',
-        Toolbars: ['Filter', 'Layout', 'QuickSearch'],
+        Toolbars: ['Alert', 'Layout', 'Filter'],
+      },
+    ],
+  },
+  Alert: {
+    MaxAlertsInStore: 500,
+    AlertDefinitions: [
+      {
+        MessageType: 'Warning',
+        Scope: {
+          ColumnIds: ['country'],
+        },
+        Predicate: {
+          PredicateId: 'Is',
+          Inputs: ['Spain'],
+        },
+        AlertProperties: {
+          ShowPopup: false,
+        },
       },
     ],
   },
@@ -71,7 +89,7 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   QuickSearch: {
-    QuickSearchText: 'i',
+    QuickSearchText: 'b',
   },
 } as PredefinedConfig;
 
@@ -101,7 +119,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'tradeId',
     userName: 'Demo User',
-    adaptableId: 'Changing Data Demo',
+    adaptableId: 'Batch Data Demo',
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
