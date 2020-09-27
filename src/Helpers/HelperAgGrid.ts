@@ -1292,7 +1292,7 @@ export class HelperAgGrid {
     };
   }
 
-  private getBasicTradeSchema(): ColDef[] {
+  public getBasicTradeSchema(): ColDef[] {
     var schema: any[] = [];
     schema.push({
       headerName: 'Trade Id',
@@ -1308,12 +1308,10 @@ export class HelperAgGrid {
       field: 'notional',
       enableValue: true,
       editable: true,
-      // valueFormatter: notionalFormatter,
       cellClass: 'number-cell',
       type: 'abColDefNumber',
       filter: true,
       floatingFilter: true,
-      //  cellRenderer: this.currencyRendereragGrid,
       sortable: true,
       aggFunc: 'sum',
     });
@@ -1342,7 +1340,8 @@ export class HelperAgGrid {
       editable: true,
       enableRowGroup: true,
       sortable: true,
-      filter: 'agTextColumnFilter',
+      filter: true,
+      floatingFilter: true,
       type: 'abColDefString',
     });
     schema.push({
@@ -1364,7 +1363,8 @@ export class HelperAgGrid {
       enableValue: true,
       cellClass: 'number-cell',
       enableRowGroup: true,
-      filter: 'agNumberColumnFilter',
+      filter: true,
+      floatingFilter: true,
       type: 'abColDefNumber',
     });
     schema.push({
@@ -1376,6 +1376,19 @@ export class HelperAgGrid {
       sortable: true,
       enableRowGroup: true,
       type: 'abColDefString',
+    });
+    schema.push({
+      headerName: 'Trade Date',
+      field: 'tradeDate',
+      editable: true,
+      filter: true,
+      floatingFilter: true,
+      cellEditorParams: {
+        useFormatter: true,
+      },
+      valueParser: this.dateParseragGrid,
+      valueFormatter: this.shortDateFormatteragGrid,
+      type: 'abColDefDate',
     });
     schema.push({
       headerName: 'Ask',
@@ -1401,12 +1414,16 @@ export class HelperAgGrid {
       field: 'bloombergAsk',
       columnGroupShow: 'closed',
       cellClass: 'number-cell',
+      filter: true,
+      floatingFilter: true,
       type: 'abColDefNumber',
     });
     schema.push({
       headerName: 'Bbg Bid',
       field: 'bloombergBid',
       columnGroupShow: 'closed',
+      filter: true,
+      floatingFilter: true,
       cellClass: 'number-cell',
       type: 'abColDefNumber',
     });
@@ -1424,17 +1441,7 @@ export class HelperAgGrid {
 
   public getTradeSchema(): ColDef[] {
     var schema: any[] = this.getBasicTradeSchema();
-    schema.push({
-      headerName: 'Trade Date',
-      field: 'tradeDate',
-      editable: true,
-      cellEditorParams: {
-        useFormatter: true,
-      },
-      valueParser: this.dateParseragGrid,
-      valueFormatter: this.shortDateFormatteragGrid,
-      type: 'abColDefDate',
-    });
+
     schema.push({
       headerName: 'SandP',
       field: 'sandpRating',

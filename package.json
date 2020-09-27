@@ -38,12 +38,15 @@
     "raw.macro": "^0.3.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "uuid": "^7.0.2"
+    "uuid": "^7.0.2",
+    "date-fns": "^2.14.0",
+    "lodash-es": "^4.17.15"
   },
   "devDependencies": {
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.5",
     "@types/mousetrap": "^1.6.3",
+    "@types/lodash": "^4.14.149",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "dotenv-webpack": "^1.7.0",
