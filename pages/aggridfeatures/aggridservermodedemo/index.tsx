@@ -62,7 +62,14 @@ export default () => {
           </p>
           <ul>
             <li>
-              We create 200,000 rows to mimic multiple rows on the server.
+              We create 200,000 rows to mimic multiple rows on our 'Mock Server'
+              - which implements <b>getRows</b>.
+            </li>
+            <li>
+              We pass that Mock Server to ag-Grid via its api method{' '}
+              <b>setServerSideDatasource</b> - this calls <i>getRows</i> (see
+              above) whenever the filters change or user scrolls to bottom of
+              grid.
             </li>
             <li>
               We set the <i>Batch Count</i> to 100 so that 100 rows are loaded
@@ -70,8 +77,9 @@ export default () => {
               lag.
             </li>
             <li>
-              We call the <b>getTradesRange</b> function each time we need to
-              get more data, passing in the current row count information.
+              On our mock server, we call a <b>getTradesRange</b> function each
+              time that <b>getRows</b> is invoked by ag-Grid, passing in the
+              current row count information.
             </li>
             <li>
               We pass the current{' '}
