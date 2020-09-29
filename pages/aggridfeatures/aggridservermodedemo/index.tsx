@@ -42,9 +42,13 @@ export default () => {
             done by the developer on the server.
           </p>
           <p>
-            Likewise AdapTable cannot perform its out of the box searching,
-            filtering or sorting in this mode (though Quick Search does work as
-            it highlights and doesn't filter).
+            Likewise{' '}
+            <b>
+              AdapTable cannot perform its out of the box searching, filtering
+              or sorting in this mode
+            </b>{' '}
+            (though Quick Search does work as it highlights cells and doesn't
+            filter).
           </p>
           <p>
             However, due to the way that Column Filters are created in AdapTable
@@ -70,14 +74,30 @@ export default () => {
               get more data, passing in the current row count information.
             </li>
             <li>
-              We pass the current <b>AdaptableSearchState</b> which includes the
-              Column Filters, allowing us to perform on the server the same
-              filtering as AdapTable does for us on the client.
+              We pass the current{' '}
+              <b>
+                <a
+                  href="https://api.adaptabletools.com/interfaces/_src_api_events_searchchanged_.adaptablesearchstate.html"
+                  target="_blank"
+                >
+                  AdaptableSearchState
+                </a>{' '}
+              </b>{' '}
+              which includes the Column Filters, allowing us to perform on the
+              server the same filtering as AdapTable does for us on the client.
             </li>
             <li>
-              We also pass the current <b>AdaptableSortState</b> which includes
-              which columns are sorted and the sort direction, and we perform
-              the same sorting on our result set.
+              We also pass the current{' '}
+              <b>
+                <a
+                  href="https://api.adaptabletools.com/interfaces/_src_api_events_searchchanged_.adaptablesortstate.html"
+                  target="_blank"
+                >
+                  AdaptableSortState
+                </a>
+              </b>{' '}
+              which includes which columns are sorted and the sort direction,
+              and we perform the same sorting on our result set.
             </li>
             <li>
               We use the <b>GetColumnValuesFunction</b> in UserFunctions to
@@ -90,6 +110,30 @@ export default () => {
               Predefined Config.
             </li>
           </ul>
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-server-functionality-guide.md"
+            target="_blank"
+          >
+            Server Functionality Guide
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://api.adaptabletools.com/interfaces/_src_api_events_searchchanged_.adaptablesearchstate.html"
+            target="_blank"
+          >
+            Search State
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://api.adaptabletools.com/interfaces/_src_api_events_searchchanged_.adaptablesortstate.html"
+            target="_blank"
+          >
+            Sort State
+          </a>
         </div>
       }
     />
