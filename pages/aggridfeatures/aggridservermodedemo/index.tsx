@@ -9,15 +9,15 @@ export default () => {
       description={
         <div>
           <p>
-            ag-Grid has a{' '}
+            ag-Grid has an incredibly powerful and useful{' '}
             <a
               href="https://www.ag-grid.com/javascript-grid-server-side-model/"
               target="_blank"
             >
               Server Row Model
             </a>{' '}
-            which allows you to populate your grid from your server as the user
-            scrolls.
+            which allows you to populate your grid via your server as the user
+            scrolls - ideal for enormous datasets.
           </p>
           <p>
             (There is also an{' '}

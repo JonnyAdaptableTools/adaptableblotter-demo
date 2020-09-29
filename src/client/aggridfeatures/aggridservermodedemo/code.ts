@@ -33,6 +33,10 @@ import {
 } from 'date-fns';
 var adaptableApi: AdaptableApi;
 
+// this slightly contrived Mock Server mimics what will happen on a real server
+// the key method is 'getRows' which will be called by ag-Grid whenever filters or sorts change
+// or when the user scolls to the bottom of the grid
+// this Mock Server is passed to ag-Grid via its api method: setServerSideDatasource
 class MockServer {
   _dummyTrades: ITrade[];
 
@@ -63,13 +67,14 @@ class MockServer {
   // But here we do it in JavaScript to show how you can access the Column Filters in AdaptableSearchState
   // Each Column Filter has a Predicate that we interrogate seperately
   // We use a 3rd party date library 'date-fns' to manage dates but this can be done in any way that suits your requirements
+  // This is the not the most performant way to accomplish this but we have dont it this way to show each step in turn
   getTradesRange(
     start: number = 1,
     count: number = 100,
     searchState: AdaptableSearchState,
     sortState: AdaptableSortState
   ): ITrade[] {
-    let matchingTrades: ITrade[] = this._dummyTrades;
+    let matchingRows: ITrade[] = this._dummyTrades;
     if (
       searchState.columnFilters != null &&
       searchState.columnFilters?.length > 0
@@ -84,31 +89,32 @@ class MockServer {
 
         // Blanks, Non-Blanks and Values (a.k.a. IN) work across all DataTypes
         if (predicate.PredicateId == 'Blanks') {
-          matchingTrades = matchingTrades.filter(
+          matchingRows = matchingRows.filter(
             (t: any) =>
               t[columnId] == null ||
               t[columnId] == undefined ||
               t[columnId] == ''
           );
         } else if (predicate.PredicateId == 'NonBlanks') {
-          matchingTrades = matchingTrades.filter(
+          matchingRows = matchingRows.filter(
             (t: any) =>
               t[columnId] != null &&
               t[columnId] != undefined &&
               t[columnId] != ''
           );
         } else if (predicate.PredicateId == 'Values') {
-          matchingTrades = matchingTrades.filter(
+          matchingRows = matchingRows.filter(
             (t: any) =>
               t[columnId] != null &&
               t[columnId] != undefined &&
               predicate.Inputs?.includes(t[columnId])
           );
         } else {
-          // work out the predicate based on the column's datatype using an an AdaptableApi.ColumnApi method
-          matchingTrades = matchingTrades.filter(
+          // Remove any empty values
+          matchingRows = matchingRows.filter(
             (t: any) => t[columnId] != undefined
           );
+          // work out the predicate based on the column's datatype using an an AdaptableApi.ColumnApi method
           switch (
             adaptableApi.columnApi.getColumnDataTypeFromColumnId(
               columnFilter.ColumnId
@@ -116,11 +122,11 @@ class MockServer {
           ) {
             case 'Boolean':
               if (predicate.PredicateId == 'True') {
-                matchingTrades = matchingTrades.filter(
+                matchingRows = matchingRows.filter(
                   (t: any) => t[columnId] == true
                 );
               } else if (predicate.PredicateId == 'False') {
-                matchingTrades = matchingTrades.filter(
+                matchingRows = matchingRows.filter(
                   (t: any) => t[columnId] == false
                 );
               }
@@ -128,27 +134,27 @@ class MockServer {
 
             case 'String':
               if (predicate.PredicateId == 'Is' && firstInput) {
-                matchingTrades = matchingTrades.filter(
+                matchingRows = matchingRows.filter(
                   (t: any) => t[columnId] == firstInput
                 );
               } else if (predicate.PredicateId == 'IsNot' && firstInput) {
-                matchingTrades = matchingTrades.filter(
+                matchingRows = matchingRows.filter(
                   (t: any) => t[columnId] !== firstInput
                 );
               } else if (predicate.PredicateId == 'Contains' && firstInput) {
-                matchingTrades = matchingTrades.filter((t: any) =>
+                matchingRows = matchingRows.filter((t: any) =>
                   t[columnId].includes(firstInput)
                 );
               } else if (predicate.PredicateId == 'StartsWith' && firstInput) {
-                matchingTrades = matchingTrades.filter((t: any) =>
+                matchingRows = matchingRows.filter((t: any) =>
                   t[columnId].startsWith(firstInput)
                 );
               } else if (predicate.PredicateId == 'EndsWith' && firstInput) {
-                matchingTrades = matchingTrades.filter((t: any) =>
+                matchingRows = matchingRows.filter((t: any) =>
                   t[columnId].endsWith(firstInput)
                 );
               } else if (predicate.PredicateId == 'Regex' && firstInput) {
-                matchingTrades = matchingTrades.filter((t: any) =>
+                matchingRows = matchingRows.filter((t: any) =>
                   new RegExp(firstInput).test(t[columnId])
                 );
               }
@@ -156,33 +162,33 @@ class MockServer {
 
             case 'Number':
               if (predicate.PredicateId == 'Equals' && firstInput) {
-                matchingTrades = matchingTrades.filter(
+                matchingRows = matchingRows.filter(
                   (t: any) => t[columnId] == firstInput
                 );
               } else if (predicate.PredicateId == 'NotEquals' && firstInput) {
-                matchingTrades = matchingTrades.filter(
+                matchingRows = matchingRows.filter(
                   (t: any) => t[columnId] !== firstInput
                 );
               } else if (predicate.PredicateId == 'GreaterThan' && firstInput) {
-                matchingTrades = matchingTrades.filter(
+                matchingRows = matchingRows.filter(
                   (t: any) => Number(t[columnId]) > Number(firstInput)
                 );
               } else if (predicate.PredicateId == 'LessThan' && firstInput) {
-                matchingTrades = matchingTrades.filter(
+                matchingRows = matchingRows.filter(
                   (t: any) => Number(t[columnId]) < Number(firstInput)
                 );
               } else if (predicate.PredicateId == 'Positive') {
-                matchingTrades = matchingTrades.filter(
+                matchingRows = matchingRows.filter(
                   (t: any) => Number(t[columnId]) > 0
                 );
               } else if (predicate.PredicateId == 'Negative') {
-                matchingTrades = matchingTrades.filter(
+                matchingRows = matchingRows.filter(
                   (t: any) => Number(t[columnId]) < 0
                 );
               } else if (predicate.PredicateId == 'Between' && firstInput) {
                 let secondInput: any = predicate!.Inputs![1];
                 if (secondInput) {
-                  matchingTrades = matchingTrades.filter(
+                  matchingRows = matchingRows.filter(
                     (t: any) =>
                       Number(t[columnId]) > firstInput &&
                       Number(t[columnId]) < secondInput
@@ -191,7 +197,7 @@ class MockServer {
               } else if (predicate.PredicateId == 'NotBetween' && firstInput) {
                 let secondInput: any = predicate!.Inputs![1];
                 if (secondInput) {
-                  matchingTrades = matchingTrades.filter(
+                  matchingRows = matchingRows.filter(
                     (t: any) =>
                       Number(t[columnId]) < firstInput ||
                       Number(t[columnId]) > secondInput
@@ -202,66 +208,66 @@ class MockServer {
 
             case 'Date':
               if (predicate.PredicateId == 'On' && firstInput) {
-                matchingTrades = matchingTrades.filter(
+                matchingRows = matchingRows.filter(
                   (t: any) => t[columnId] == firstInput
                 );
               } else if (predicate.PredicateId == 'NotOn' && firstInput) {
-                matchingTrades = matchingTrades.filter(
+                matchingRows = matchingRows.filter(
                   (t: any) => t[columnId] !== firstInput
                 );
               } else if (predicate.PredicateId == 'After' && firstInput) {
-                matchingTrades = matchingTrades.filter((t: any) =>
+                matchingRows = matchingRows.filter((t: any) =>
                   isAfter(t[columnId], firstInput)
                 );
               } else if (predicate.PredicateId == 'Before' && firstInput) {
-                matchingTrades = matchingTrades.filter((t: any) =>
+                matchingRows = matchingRows.filter((t: any) =>
                   isBefore(t[columnId], firstInput)
                 );
               } else if (predicate.PredicateId == 'Today') {
-                matchingTrades = matchingTrades.filter((t: any) =>
+                matchingRows = matchingRows.filter((t: any) =>
                   isToday(t[columnId])
                 );
               } else if (predicate.PredicateId == 'Yesterday') {
-                matchingTrades = matchingTrades.filter((t: any) =>
+                matchingRows = matchingRows.filter((t: any) =>
                   isYesterday(t[columnId])
                 );
               } else if (predicate.PredicateId == 'Tomorrow') {
-                matchingTrades = matchingTrades.filter((t: any) =>
+                matchingRows = matchingRows.filter((t: any) =>
                   isTomorrow(t[columnId])
                 );
               } else if (predicate.PredicateId == 'ThisWeek') {
-                matchingTrades = matchingTrades.filter((t: any) =>
+                matchingRows = matchingRows.filter((t: any) =>
                   isThisWeek(t[columnId])
                 );
               } else if (predicate.PredicateId == 'ThisMonth') {
-                matchingTrades = matchingTrades.filter((t: any) =>
+                matchingRows = matchingRows.filter((t: any) =>
                   isThisMonth(t[columnId])
                 );
               } else if (predicate.PredicateId == 'ThisQuarter') {
-                matchingTrades = matchingTrades.filter((t: any) =>
+                matchingRows = matchingRows.filter((t: any) =>
                   isThisQuarter(t[columnId])
                 );
               } else if (predicate.PredicateId == 'ThisYear') {
-                matchingTrades = matchingTrades.filter((t: any) =>
+                matchingRows = matchingRows.filter((t: any) =>
                   isThisYear(t[columnId])
                 );
               } else if (predicate.PredicateId == 'InPast') {
-                matchingTrades = matchingTrades.filter((t: any) =>
+                matchingRows = matchingRows.filter((t: any) =>
                   isPast(t[columnId])
                 );
               } else if (predicate.PredicateId == 'InFuture') {
-                matchingTrades = matchingTrades.filter((t: any) =>
+                matchingRows = matchingRows.filter((t: any) =>
                   isFuture(t[columnId])
                 );
               } else if (predicate.PredicateId == 'NextWorkDay') {
-                matchingTrades = matchingTrades.filter((t: any) =>
+                matchingRows = matchingRows.filter((t: any) =>
                   isSameDay(
                     t[columnId],
                     adaptableApi.calendarApi.getNextWorkingDay()
                   )
                 );
               } else if (predicate.PredicateId == 'NextWorkDay') {
-                matchingTrades = matchingTrades.filter((t: any) =>
+                matchingRows = matchingRows.filter((t: any) =>
                   isSameDay(
                     t[columnId],
                     adaptableApi.calendarApi.getPreviousWorkingDay()
@@ -283,14 +289,14 @@ class MockServer {
         sortedColumns.push(cs.ColumnId);
         sortDirections.push(cs.SortOrder.toLowerCase());
       });
-      matchingTrades = orderBy(
-        matchingTrades,
+      matchingRows = orderBy(
+        matchingRows,
         sortedColumns,
         sortDirections as any
       );
     }
 
-    return matchingTrades.slice(start, start + count);
+    return matchingRows.slice(start, start + count);
   }
 
   // Retrieves all the distinct values - using 'uniqBy' from lodash
@@ -313,6 +319,7 @@ class MockServer {
     }
   }
 }
+
 export default async (columnDefs: ColDef[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
@@ -373,6 +380,8 @@ export default async (columnDefs: ColDef[]) => {
   adaptableApi = await Adaptable.init(adaptableOptions);
 
   adaptableApi.eventApi.on('AdaptableReady', (info: AdaptableReadyInfo) => {
+    // Pass ag-Grid our Mock Server - with its implementation of getRows
+    // This will then be invoked by ag-Grid as required
     info.vendorGrid.api.setServerSideDatasource(mockServer);
   });
   return { adaptableOptions, adaptableApi };

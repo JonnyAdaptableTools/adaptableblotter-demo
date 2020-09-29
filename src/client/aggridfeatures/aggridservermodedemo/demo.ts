@@ -12,7 +12,6 @@ const code = raw('./code.ts');
 export default async () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
-  console.log(508420);
   const columndefs = helperAgGrid.getBasicTradeSchema();
 
   const { adaptableOptions, adaptableApi } = await init(columndefs);
