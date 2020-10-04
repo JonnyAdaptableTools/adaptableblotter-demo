@@ -43,9 +43,6 @@ const demoConfig: PredefinedConfig = {
         },
         Style: {
           BackColor: '#ffffcc',
-          FontWeight: 'Normal',
-          FontStyle: 'Normal',
-          ClassName: '',
         },
       },
     ],
@@ -58,8 +55,6 @@ const demoConfig: PredefinedConfig = {
         },
 
         Style: {
-          ClassName: '',
-          FontStyle: 'Normal',
           FontWeight: 'Bold',
           ForeColor: '#8b0000',
         },
