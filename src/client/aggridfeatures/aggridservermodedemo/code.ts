@@ -309,13 +309,14 @@ class MockServer {
         return t[column.ColumnId];
       })
       .filter((v: any) => v != undefined);
+
     if (column.DataType == 'Date') {
       let formatDateValues = returnVals.map((v: Date) => {
         return v.toDateString();
       });
       return formatDateValues;
     } else {
-      return returnVals;
+      return returnVals; //.slice(1, 2000);
     }
   }
 }

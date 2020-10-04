@@ -73,6 +73,13 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/calculated-column-function.md"
+            target="_blank"
+          >
+            Calculated Column Read Me
+          </a>{' '}
+          |{' '}
+          <a
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_calculatedcolumnstate_.calculatedcolumnstate.html"
             target="_blank"
           >
