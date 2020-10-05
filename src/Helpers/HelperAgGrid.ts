@@ -212,6 +212,7 @@ export class HelperAgGrid {
     schema.push(this.getFreightDef());
     schema.push(this.getShipNameDef());
     schema.push(this.getShipCountryDef());
+    schema.push(this.getRequiredDateDef());
     schema.push(this.getShippedDateDef());
 
     return schema;
@@ -255,6 +256,7 @@ export class HelperAgGrid {
     schema.push(this.getFreightDef());
     schema.push(this.getShipNameDef());
     schema.push(this.getShipCountryDef());
+    schema.push(this.getRequiredDateDef());
     schema.push(this.getShippedDateDef());
     return schema;
   }
@@ -1265,6 +1267,21 @@ export class HelperAgGrid {
       type: 'abColDefDate',
     };
   }
+  private getRequiredDateDef(): any {
+    return {
+      headerName: 'Required Date',
+      field: 'RequiredDate',
+      editable: true,
+      cellEditorParams: { useFormatter: true },
+      valueParser: this.dateParseragGrid,
+      valueFormatter: this.shortDateFormatteragGrid,
+      filter: true,
+      floatingFilter: true,
+      hide: true,
+      sortable: true,
+      type: 'abColDefDate',
+    };
+  }
   private getLastUpdatedTimeDef(): any {
     return {
       headerName: 'Last Updated',
@@ -1929,6 +1946,9 @@ export class HelperAgGrid {
       if (row) {
         if (row.OrderDate) {
           row.OrderDate = new Date(row.OrderDate);
+        }
+        if (row.RequiredDate) {
+          row.RequiredDate = new Date(row.RequiredDate);
         }
         if (row.ShippedDate) {
           row.ShippedDate = new Date(row.ShippedDate);

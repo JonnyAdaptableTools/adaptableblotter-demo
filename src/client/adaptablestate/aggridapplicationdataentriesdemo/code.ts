@@ -21,7 +21,7 @@ const demoConfig: PredefinedConfig = {
     Tabs: [
       {
         Name: 'Toolbars',
-        Toolbars: ['Layout'],
+        Toolbars: ['Layout', 'Filter'],
       },
     ],
   },
@@ -99,13 +99,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
         type: 'EntitlementLookUpFunction',
         name: 'getEntitlementsByRole',
         handler(functionName: AdaptableFunctionName) {
-          switch (functionName) {
-            case 'Layout':
-              const role = adaptableApi.applicationApi.getApplicationDataEntryByKey(
-                'Role'
-              )?.Value;
-              return getMockPermissionServerResult(role);
-          }
+          return getMockPermissionServerResult(functionName);
         },
       },
     ],
@@ -117,10 +111,20 @@ export default async (columnDefs: any[], rowData: any[]) => {
   return { adaptableOptions, adaptableApi };
 };
 
-function getMockPermissionServerResult(role: string): AccessLevel {
-  if (role == 'Admin' || role == 'Support') {
-    return 'Full';
-  } else {
-    return 'ReadOnly';
+function getMockPermissionServerResult(
+  functionName: AdaptableFunctionName
+): AccessLevel {
+  let role: AccessLevel = 'ReadOnly';
+  switch (functionName) {
+    case 'Layout':
+      let dataEntry = adaptableApi?.applicationApi.getApplicationDataEntryByKey(
+        'Role'
+      )?.Value;
+
+      if (dataEntry == 'Admin' || dataEntry == 'Support') {
+        role = 'Full';
+      }
   }
+
+  return role;
 }
