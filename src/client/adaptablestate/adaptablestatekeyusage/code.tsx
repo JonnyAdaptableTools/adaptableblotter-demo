@@ -281,9 +281,13 @@ export default async (columnDefs: any[], rowData: any[]) => {
       ) {
         currentView = currentView === views[0] ? views[1] : views[0];
 
-        // setTimeout(() => {
+        let currentConfig =
+          currentView === views[0] ? view1Config : view2Config;
+
         adaptableApi.configApi
-          .setAdaptableStateKey(currentView, { predefinedConfig: view2Config })
+          .setAdaptableStateKey(currentView, {
+            predefinedConfig: currentConfig,
+          })
           .then(() => {
             adaptableApi.dashboardApi.setHomeToolbarTitle(getToolbarTitle());
           });

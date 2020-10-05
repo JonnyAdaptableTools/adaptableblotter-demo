@@ -84,6 +84,12 @@ export default () => {
           weeks include:
           <ul>
             <li>
+              <a href="./adaptablestate/adaptablestatekeyusage">
+                Multiple Views
+              </a>{' '}
+              - create different sets of Adaptable State and toggle between them
+            </li>{' '}
+            <li>
               <a href="./style/aggridgradientcolumndemo">Gradient Column</a> -
               show column values as Gradients
             </li>
