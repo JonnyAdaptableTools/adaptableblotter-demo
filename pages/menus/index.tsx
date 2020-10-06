@@ -10,7 +10,7 @@ import DemoBox from '../../src/components/DemoBox';
 
 export default () => {
   let categoryPages = getDemoPageStructure().Categories.find(
-    c => c.CategoryName == 'User Interface'
+    c => c.CategoryName == 'Menus'
   )!.Pages;
 
   let demoLinks: any = categoryPages.map((page: DemoPage) => {
@@ -31,10 +31,10 @@ export default () => {
   });
   return (
     <MainPage
-      pageTitle={'User Interface demos'}
+      pageTitle={'Menu demos'}
       description={
         <div>
-          <h4>User Interface</h4>
+          <h4>Menus</h4>
           <p>To Do</p>
           <p>See the examples in this section to find out more.</p>
           <ul>{demoLinks}</ul>

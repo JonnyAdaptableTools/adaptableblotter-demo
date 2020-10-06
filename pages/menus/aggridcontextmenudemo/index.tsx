@@ -4,36 +4,33 @@ import DynamicDemoPage from '../../../src/Helpers/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/userinterface/aggridcolumnmenudemo')}
-      pageTitle={'Column Menu Demo'}
+      demo={import('../../../src/client/menus/aggridcontextmenudemo')}
+      pageTitle={'Context Menu Demo'}
       description={
         <div>
           <p>
-            AdapTable provides a Column Menu - accessible via the Column Header
-            - which includes shortcuts to all the popup screens relevant to that
-            column and its data type.
+            AdapTable provides a Context Menu - accessible when you right-click
+            in a cell - which includes shortcuts to functionality relevant to
+            that cell (and what is selected).
           </p>
           <p>
-            The Column Menu is context sensitive so the menu items shown are
-            dependent on the current column and the make up of the Grid.
-          </p>
-          <p>
-            You can add your own bespoke{' '}
+            You can add your own{' '}
             <a
               href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_userinterfacestate_.usermenuitem.html"
               target="_blank"
             >
               User Menu Item(s)
             </a>{' '}
-            to the Column Menu, defining them in{' '}
+            to the Context Menu - through{' '}
             <a
               href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_userinterfacestate_.userinterfacestate.html"
               target="_blank"
             >
               User Interface State
-            </a>{' '}
-            .{' '}
-          </p>{' '}
+            </a>
+            ; in this example we added 'Float Dashboard' and 'Set System Status'
+            menu items (with the latter having sub menu items).
+          </p>
           <p>
             When you define a UserMenuItem you can reference 2 functions (for
             which you provide the implementation for both in{' '}
@@ -56,24 +53,33 @@ export default () => {
             </li>
           </ul>
           <p>
-            In this example we added 'Float Dashboard' and 'Set System Status'
-            menu items (with the latter having sub menu items).
-          </p>
-          <p>
-            You can also choose which - if any - of AdapTable's shipped Column
-            Menu items are available by using the <b>showAdaptableColumnMenu</b>{' '}
-            function property in{' '}
+            You can also choose which - if any - of the shipped Menu Items are
+            available via the <b>showAdaptableContextMenu</b> property of{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_userinterfaceoptions_.userinterfaceoptions.html#showadaptablecolumnmenu"
+              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_userinterfaceoptions_.userinterfaceoptions.html#showadaptablecontextmenu"
               target="_blank"
             >
               User Interface Options
             </a>
+            ; in this example we removed the <i>Filter</i> menu item for the
+            'Employee' column and all the menu items for the 'Contact' column.
           </p>
           <p>
-            In this example we removed the <i>'Create Custom Sort'</i> and{' '}
-            <i>'View as PieChart'</i> menu items for the 'Contact' column and we
-            removed all AdapTable menu items for the 'Cust. Ref' column.
+            The 2 arguments to the function are{' '}
+            <a
+              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_common_menu_.adaptablemenuitem.html"
+              target="_blank"
+            >
+              Adaptable Menu Item
+            </a>{' '}
+            (the menu item to show) and{' '}
+            <a
+              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_common_menu_.menuinfo.html"
+              target="_blank"
+            >
+              Menu Info
+            </a>{' '}
+            (which provides details of the current cell and cell selection).
           </p>
         </div>
       }
@@ -83,7 +89,7 @@ export default () => {
             href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_userinterfacestate_.userinterfacestate.html"
             target="_blank"
           >
-            User Interface Config
+            User Interface Predefined Config
           </a>{' '}
           |{' '}
           <a
@@ -105,6 +111,13 @@ export default () => {
             target="_blank"
           >
             User Interface Options
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-menus-guide.md"
+            target="_blank"
+          >
+            Adaptable Menus Guide
           </a>{' '}
         </div>
       }

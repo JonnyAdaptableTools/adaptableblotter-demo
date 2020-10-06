@@ -526,18 +526,18 @@ export function getDemoPageStructure(): DemoPageStructure {
         ],
       },
       {
-        CategoryName: 'User Interface',
-        Link: '/userinterface',
+        CategoryName: 'Menus',
+        Link: '/menus',
         Pages: [
           {
             Name: 'Column Menu',
-            Link: '/userinterface/aggridcolumnmenudemo',
+            Link: '/menus/aggridcolumnmenudemo',
             Description:
               'Add your custom menu items to the Column Header Menu (and also choose with shipped items are available)',
           },
           {
             Name: 'Context Menu',
-            Link: '/userinterface/aggridcontextmenudemo',
+            Link: '/menus/aggridcontextmenudemo',
             Description:
               'Add your custom menu items to the (right-click) Context Menu (and choose with shipped items are available)',
           },
