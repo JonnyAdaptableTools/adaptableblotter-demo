@@ -168,7 +168,7 @@ export class TickingDataHelper {
   }
 
   public startTickingDataagGridTradesUpdateData(
-    gridOptions: any,
+    gridOptions: GridOptions,
     adaptableApi: AdaptableApi,
     tickingFrequency: number,
     tradeCount: number,
@@ -216,8 +216,9 @@ export class TickingDataHelper {
               trade.currency = 'JPY';
             }
           }
-          node.setData(trade);
-          //  adaptableApi.gridApi.updateGridData([trade]);
+          //  node.setData(trade);
+          adaptableApi.gridApi.updateGridData([trade]);
+          //  gridOptions.api?.setRowData([trade]);
         }
       }, tickingFrequency);
     }
