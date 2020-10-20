@@ -24,15 +24,7 @@ const demoConfig: PredefinedConfig = {
       },
       {
         ColumnId: 'ItemCost',
-        Expression: {
-          ColumnValueExpressions: [
-            {
-              ColumnDisplayValues: ['Janet Leverling'],
-              ColumnId: 'Employee',
-              ColumnRawValues: [],
-            },
-          ],
-        },
+        Expression: '[Employee] = "Janet Leverling"',
         IsDefaultNudge: false,
         NudgeValue: 20,
       },

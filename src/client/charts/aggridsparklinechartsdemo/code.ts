@@ -33,18 +33,7 @@ const demoConfig: PredefinedConfig = ({
         Name: 'Dollar Change',
         VisibleRowsOnly: true,
         ColumnId: 'changeOnYear',
-        Expression: {
-          ColumnValueExpressions: [
-            {
-              ColumnDisplayValues: ['USD'],
-              ColumnId: 'currency',
-              ColumnRawValues: ['USD'],
-            },
-          ],
-        },
-        ChartProperties: {
-          DisplayType: 'Column',
-        },
+        Expression: '[currency] = "USD"',
       },
     ],
   },
