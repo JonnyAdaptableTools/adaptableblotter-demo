@@ -16,14 +16,14 @@ export default () => {
           <p>
             You can add your own{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_userinterfacestate_.usermenuitem.html"
+              href="https://docs.adaptabletools.com/docs/api/usermenuitem"
               target="_blank"
             >
               User Menu Item(s)
             </a>{' '}
             to the Context Menu - through{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_userinterfacestate_.userinterfacestate.html"
+              href="https://docs.adaptabletools.com/docs/predefined-config/user-interface-config"
               target="_blank"
             >
               User Interface State
@@ -35,7 +35,7 @@ export default () => {
             When you define a UserMenuItem you can reference 2 functions (for
             which you provide the implementation for both in{' '}
             <a
-              href="https://api.adaptabletools.com/modules/_src_adaptableoptions_userfunctions_.html"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/user-functions"
               target="_blank"
             >
               UserFunctions
@@ -56,7 +56,7 @@ export default () => {
             You can also choose which - if any - of the shipped Menu Items are
             available via the <b>showAdaptableContextMenu</b> property of{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_userinterfaceoptions_.userinterfaceoptions.html#showadaptablecontextmenu"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/user-interface-option"
               target="_blank"
             >
               User Interface Options
@@ -65,59 +65,47 @@ export default () => {
             'Employee' column and all the menu items for the 'Contact' column.
           </p>
           <p>
-            The 2 arguments to the function are{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_common_menu_.adaptablemenuitem.html"
-              target="_blank"
-            >
-              Adaptable Menu Item
-            </a>{' '}
-            (the menu item to show) and{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_common_menu_.menuinfo.html"
-              target="_blank"
-            >
-              Menu Info
-            </a>{' '}
-            (which provides details of the current cell and cell selection).
+            The 2 arguments to the function are Adaptable Menu Item (the menu
+            item to show) and Menu Info (which provides details of the current
+            cell and cell selection).
           </p>
         </div>
       }
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_userinterfacestate_.userinterfacestate.html"
+            href="https://docs.adaptabletools.com/docs/user-interface/context-menu"
+            target="_blank"
+          >
+            Context Menu Function
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/predefined-config/user-interface-config"
             target="_blank"
           >
             User Interface Predefined Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_userinterfaceapi_.userinterfaceapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/user-interface-api"
             target="_blank"
           >
             User Interface Api
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/modules/_src_adaptableoptions_userfunctions_.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/user-functions"
             target="_blank"
           >
             User Functions
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_userinterfaceoptions_.userinterfaceoptions.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/user-interface-option"
             target="_blank"
           >
             User Interface Options
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-menus-guide.md"
-            target="_blank"
-          >
-            Adaptable Menus Guide
           </a>{' '}
         </div>
       }

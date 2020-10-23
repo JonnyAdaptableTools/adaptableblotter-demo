@@ -32,7 +32,7 @@ export default () => {
           <p>
             In the second (optional) step you can set up many of the{' '}
             <a
-              href="https://api.adaptabletools.com/modules/_src_adaptableoptions_adaptableoptions_.html"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/adaptable-options-overview"
               target="_blank"
             >
               Adaptable Options
@@ -44,7 +44,7 @@ export default () => {
             <b>Note: </b> The source data must have one column that contains{' '}
             <b>unique values</b> which you will set as the{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_adaptableoptions_.adaptableoptions.html#primarykey"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/base-options#primarykey"
               target="_blank"
             >
               Primary Key column
@@ -63,7 +63,7 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/tree/master/packages/plugins/nocode-aggrid"
+            href="https://docs.adaptabletools.com/docs/plugins/nocode/nocode-plugin"
             target="_blank"
           >
             No Code Plugin

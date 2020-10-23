@@ -35,28 +35,28 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_exportstate_.exportstate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/export-config"
             target="_blank"
           >
             Export Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_exportapi_.exportapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/export-api"
             target="_blank"
           >
             Export Api
           </a>
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/export-function.md"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/export-function"
             target="_blank"
           >
             Export Read Me
           </a>
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_exportoptions_.exportoptions.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/export-options"
             target="_blank"
           >
             Export Options

@@ -78,21 +78,21 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/plugins/glue42/README.md"
+            href="https://docs.adaptabletools.com/docs/plugins/glue42/glue42-plugin"
             target="_blank"
           >
             Glue42 Plugin ReadMe
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_glue42pluginoptions_.glue42pluginoptions.html"
+            href="https://docs.adaptabletools.com/docs/plugins/glue42/glue42-plugin-options"
             target="_blank"
           >
             Glue42 Plugin Options
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_glue42api_.glue42api.html"
+            href="https://docs.adaptabletools.com/docs/plugins/glue42/glue42-api"
             target="_blank"
           >
             Glue42 Api

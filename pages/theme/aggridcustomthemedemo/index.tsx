@@ -37,7 +37,7 @@ export default () => {
             We have also created a 'Blue Theme'. When this loads we leverage the{' '}
             <b>VendorGridClassName</b> of{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_themestate_.themestate.html"
+              href="https://docs.adaptabletools.com/docs/predefined-config/theme-config"
               target="_blank"
             >
               Theme Predefined Config
@@ -50,21 +50,21 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_themestate_.themestate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/theme-config"
             target="_blank"
           >
             Theme Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_themeapi_.themeapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/theme-api"
             target="_blank"
           >
             Theme Api
           </a>{' '}
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-theming-guide.md"
+            href="https://docs.adaptabletools.com/docs/key-topics/theming-and-styling"
             target="_blank"
           >
             Theming and Styling Guide

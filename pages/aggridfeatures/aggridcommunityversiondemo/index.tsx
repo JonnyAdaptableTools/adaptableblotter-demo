@@ -46,7 +46,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-aggrid-guide.md"
+            href="https://docs.adaptabletools.com/docs/key-topics/using-aggrid"
             target="_blank"
           >
             Adaptable and ag-Grid Guide

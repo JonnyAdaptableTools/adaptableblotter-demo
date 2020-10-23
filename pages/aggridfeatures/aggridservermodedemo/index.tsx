@@ -82,30 +82,14 @@ export default () => {
               current row count information.
             </li>
             <li>
-              We pass the current{' '}
-              <b>
-                <a
-                  href="https://api.adaptabletools.com/interfaces/_src_api_events_searchchanged_.adaptablesearchstate.html"
-                  target="_blank"
-                >
-                  AdaptableSearchState
-                </a>{' '}
-              </b>{' '}
-              which includes the Column Filters, allowing us to perform on the
-              server the same filtering as AdapTable does for us on the client.
+              We pass the current <b>AdaptableSearchState</b> which includes the
+              Column Filters, allowing us to perform on the server the same
+              filtering as AdapTable does for us on the client.
             </li>
             <li>
-              We also pass the current{' '}
-              <b>
-                <a
-                  href="https://api.adaptabletools.com/interfaces/_src_api_events_searchchanged_.adaptablesortstate.html"
-                  target="_blank"
-                >
-                  AdaptableSortState
-                </a>
-              </b>{' '}
-              which includes which columns are sorted and the sort direction,
-              and we perform the same sorting on our result set.
+              We also pass the current <b>AdaptableSortState</b> which includes
+              which columns are sorted and the sort direction, and we perform
+              the same sorting on our result set.
             </li>
             <li>
               We use the <b>GetColumnValuesFunction</b> in UserFunctions to
@@ -123,25 +107,18 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-server-functionality-guide.md"
+            href="https://docs.adaptabletools.com/docs/key-topics/server-functionality"
             target="_blank"
           >
             Server Functionality Guide
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_events_searchchanged_.adaptablesearchstate.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-events/search-changed-event"
             target="_blank"
           >
-            Search State
+            Search Changed
           </a>{' '}
-          |{' '}
-          <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_events_searchchanged_.adaptablesortstate.html"
-            target="_blank"
-          >
-            Sort State
-          </a>
         </div>
       }
     />

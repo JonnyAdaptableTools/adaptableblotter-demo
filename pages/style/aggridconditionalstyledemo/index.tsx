@@ -63,24 +63,24 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_conditionalstylestate_.conditionalstylestate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/conditional-style-config"
             target="_blank"
           >
             Predefined Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_conditionalstyleapi_.conditionalstyleapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/conditional-style-api"
             target="_blank"
           >
             Adaptable API
           </a>{' '}
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/conditional-style-function.md"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/conditional-style-function"
             target="_blank"
           >
-            Read Me
+            Conditional Style Function
           </a>
         </div>
       }

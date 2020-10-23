@@ -27,7 +27,7 @@ export default () => {
             ('WeightedAverage', 'VWAP' and 'Only'); this is beause we installed
             the{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_adaptableoptions_.adaptableoptions.html#plugins"
+              href="https://docs.adaptabletools.com/docs/plugins/finance/finance-plugin"
               target="_blank"
             >
               Financial plugin
@@ -38,14 +38,14 @@ export default () => {
             To create a Summary Operation: provide the name of the function,
             which will be evaluated each time the summary is run, in{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_cellsummarystate_.cellsummarystate.html"
+              href="https://docs.adaptabletools.com/docs/predefined-config/cell-summary-config"
               target="_blank"
             >
               Cell Summary State
             </a>{' '}
             and the actual implementation in{' '}
             <a
-              href="https://api.adaptabletools.com/modules/_src_adaptableoptions_userfunctions_.html"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/user-functions"
               target="_blank"
             >
               UserFunctions
@@ -61,28 +61,28 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_cellsummarystate_.cellsummarystate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/cell-summary-config"
             target="_blank"
           >
             Cell Summary Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_cellsummaryapi_.cellsummaryapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/cell-summary-api"
             target="_blank"
           >
             Cell Summary Api
           </a>{' '}
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/cell-summary-function.md"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/cell-summary-function"
             target="_blank"
           >
             Cell Summary Read Me
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/modules/_src_adaptableoptions_userfunctions_.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/user-functions"
             target="_blank"
           >
             User Functions

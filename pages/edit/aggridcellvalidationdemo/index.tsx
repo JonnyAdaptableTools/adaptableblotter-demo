@@ -38,21 +38,21 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_cellvalidationstate_.cellvalidationstate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/cell-validation-config"
             target="_blank"
           >
             Cell Validation Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_cellvalidationapi_.cellvalidationapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/cell-validation-api"
             target="_blank"
           >
             Cell Validation Api
           </a>
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/cell-validation-function.md"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/cell-validation-function"
             target="_blank"
           >
             Cell Validation Read Me

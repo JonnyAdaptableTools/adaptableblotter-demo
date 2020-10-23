@@ -23,21 +23,21 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_themestate_.themestate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/theme-config"
             target="_blank"
           >
             Theme Predefined Config
           </a>{' '}
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/upgrade-guides/upgrade-guide-v7.md"
+            href="https://docs.adaptabletools.com/docs/upgrade-guides/upgrade-guide-v7"
             target="_blank"
           >
             Adaptable Version 7 'ReadMe'
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_themeapi_.themeapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/theme-api"
             target="_blank"
           >
             Theme Api

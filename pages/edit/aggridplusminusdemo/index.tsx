@@ -30,21 +30,21 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_plusminusstate_.plusminusstate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/plus-minus-config"
             target="_blank"
           >
             Plus / Minus Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_plusminusapi_.plusminusapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/plus-minus-api"
             target="_blank"
           >
             Plus / Minus Api
           </a>
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/plus-minus-function.md"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/plus-minus-function"
             target="_blank"
           >
             Plus / Minus Read Me

@@ -20,7 +20,7 @@ export default () => {
             <b>useAdaptableQuickFilter</b> and <b>useAdaptableFilterForm</b>{' '}
             properties in{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_filteroptions_.filteroptions.html"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/filter-options"
               target="_blank"
             >
               Filter Options
@@ -41,7 +41,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_filteroptions_.filteroptions.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/filter-options"
             target="_blank"
           >
             Adaptable Options

@@ -90,7 +90,7 @@ export default () => {
         the <i>aggData</i> from the model's <b>root node</b>
         <br />
         As it happens AdapTable can wrap this functionality for you via the{' '}
-        <a href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_generaloptions_.generaloptions.html#showgroupingtotalsasheader">
+        <a href="https://docs.adaptabletools.com/docs/adaptable-options/general-options">
           showGroupingTotalsAsHeader
         </a>{' '}
         option property (as you can see in{' '}

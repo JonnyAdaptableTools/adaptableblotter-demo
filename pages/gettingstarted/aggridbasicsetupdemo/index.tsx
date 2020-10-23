@@ -18,7 +18,7 @@ export default () => {
             This is, of course, a very basic implementation, e.g. we have not
             set up advanced features like{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_searchoptions_.searchoptions.html#serversearchoption"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/search-options#serversearchoption"
               target="_blank"
             >
               Server Searching
@@ -29,7 +29,7 @@ export default () => {
             </a>
             , or{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_stateoptions_.stateoptions.html"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/state-options"
               target="_blank"
             >
               State Options
@@ -61,7 +61,7 @@ export default () => {
                 Write any{' '}
                 <b>
                   <a
-                    href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_predefinedconfig_.predefinedconfig.html"
+                    href="https://docs.adaptabletools.com/docs/predefined-config/predefined-config-overview"
                     target="_blank"
                   >
                     Predefined Config
@@ -73,7 +73,7 @@ export default () => {
                 Create an{' '}
                 <b>
                   <a
-                    href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_adaptableoptions_.adaptableoptions"
+                    href="https://docs.adaptabletools.com/docs/adaptable-options/adaptable-options-overview"
                     target="_blank"
                   >
                     AdaptableOptions
@@ -86,7 +86,7 @@ export default () => {
                 and retrieving an{' '}
                 <b>
                   <a
-                    href="https://api.adaptabletools.com/interfaces/_src_api_adaptableapi_.adaptableapi"
+                    href="https://docs.adaptabletools.com/docs/adaptable-api/adaptable-api-overviewi"
                     target="_blank"
                   >
                     AdaptableApi
@@ -100,14 +100,14 @@ export default () => {
             Note: this example uses our core 'vanilla' JavaScript version; we
             also provide{' '}
             <a
-              href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable-react-aggrid/README.md"
+              href="https://docs.adaptabletools.com/docs/react-wrapper/react-wrapper-overview"
               target="_blank"
             >
               React
             </a>{' '}
             and{' '}
             <a
-              href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable-ng-aggrid/README.md"
+              href="https://docs.adaptabletools.com/docs/angular-wrapper/angular-wrapper-overview"
               target="_blank"
             >
               Angular
@@ -119,29 +119,19 @@ export default () => {
       }
       helpResources={
         <div>
-          <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/README.md"
-            target="_blank"
-          >
-            Adaptable 'ReadMe
+          <a href="https://docs.adaptabletools.com/docs/" target="_blank">
+            Getting Started
           </a>{' '}
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-getting-started-guide.md"
-            target="_blank"
-          >
-            Getting Started Guide
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_predefinedconfig_.predefinedconfig.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/predefined-config-overview"
             target="_blank"
           >
             Predefined Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_adaptableapi_.adaptableapi"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/adaptable-api-overviewi"
             target="_blank"
           >
             Adaptable API

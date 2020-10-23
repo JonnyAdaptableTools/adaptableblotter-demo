@@ -26,9 +26,7 @@ Please contact [`sales@adaptabletools.com`](mailto:sales@adaptabletools.com) for
 
 ## Help
 
-Further information about AdapTable is available at our [Website](www.adaptabletools.com) and our our collection of 'Read Me' Docs ([full list here](https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/readme-list.md)).
-
-Developers can learn how to access AdapTable programmatically at [AdapTable Developer Documentation](https://api.adaptabletools.com)
+Further information about AdapTable is available at our [Website](www.adaptabletools.com) and our [documentation](https://docs.adaptabletools.com)
 
 > Previously the main source of AdapTable Help was our [Zendesk Pages](https://adaptabletools.zendesk.com/hc/en-us/articles/360007083017-Help-) but these have been replaced by these 'Read Me' docs and the Developer Documentation that is automatically produced and therefore always up to date.
 

@@ -42,21 +42,21 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_gradientcolumnstate_.gradientcolumnstate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/gradient-column-config"
             target="_blank"
           >
             Gradient Column Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_gradientcolumnapi_.gradientcolumnapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/gradient-column-api"
             target="_blank"
           >
             Gradient Column Api
           </a>{' '}
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/gradient-column-function.md"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/gradient-column-function"
             target="_blank"
           >
             Gradient Column ReadMe

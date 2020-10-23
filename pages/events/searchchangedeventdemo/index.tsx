@@ -21,21 +21,28 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_eventapi_.eventapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-events/adaptable-events-overview"
+            target="_blank"
+          >
+            Adaptable Events
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-api/event-api"
             target="_blank"
           >
             Event API
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_searchoptions_.searchoptions.html#serversearchoption"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/search-options#serversearchoption"
             target="_blank"
           >
             Search Options
           </a>{' '}
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-server-functionality-guide.md"
+            href="https://docs.adaptabletools.com/docs/key-topics/server-functionality"
             target="_blank"
           >
             AdapTable Server Functionality Guide

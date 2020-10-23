@@ -19,7 +19,7 @@ export default () => {
             However, if this is not your preferred behaviour, you can set the
             the <b>ignoreCaseInQueries</b> property of{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_queryoptions_.queryoptions.html"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/query-options"
               target="_blank"
             >
               Query Options
@@ -36,7 +36,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_queryoptions_.queryoptions.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/query-options"
             target="_blank"
           >
             Adaptable Options

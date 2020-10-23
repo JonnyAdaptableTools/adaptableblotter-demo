@@ -38,14 +38,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_auditoptions_.auditoptions.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/audit-options"
             target="_blank"
           >
             Audit Options
           </a>{' '}
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-audit-log-guide.md"
+            href="https://docs.adaptabletools.com/docs/key-topics/audit-log"
             target="_blank"
           >
             Audit Log Read Me

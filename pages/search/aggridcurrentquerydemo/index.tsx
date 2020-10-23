@@ -43,28 +43,28 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/query-function.md"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/query-function"
             target="_blank"
           >
             Query Read Me
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_querystate_.querystate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/query-config"
             target="_blank"
           >
             Query Predefined Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_searchoptions_.searchoptions.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/search-options"
             target="_blank"
           >
             Search Options
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_queryapi_.queryapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/query-api"
             target="_blank"
           >
             Query API

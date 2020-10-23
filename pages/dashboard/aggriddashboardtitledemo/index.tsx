@@ -16,7 +16,7 @@ export default () => {
             However you can change this via the <i>HomeToolbarTitle</i> property
             in{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_dashboardstate_.dashboardstate.html#hometoolbartitle"
+              href="https://docs.adaptabletools.com/docs/predefined-config/dashboard-config#hometoolbartitle"
               target="_blank"
             >
               Dashboard Predefined Config
@@ -32,21 +32,21 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/dashboard-function.md"
+            href="https://docs.adaptabletools.com/docs/user-interface/dashboard"
             target="_blank"
           >
             Dashboard Read Me
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_dashboardstate_.dashboardstate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/dashboard-config"
             target="_blank"
           >
             Dashboard Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_dashboardapi_.dashboardapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/dashboard-api"
             target="_blank"
           >
             Dashboard Api

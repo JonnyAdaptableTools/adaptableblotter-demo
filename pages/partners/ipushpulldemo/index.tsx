@@ -21,7 +21,7 @@ export default () => {
           <p>
             If you are an existing ipushpull user, then simply install the{' '}
             <a
-              href="https://github.com/AdaptableTools/adaptable/blob/master/packages/plugins/ipushpull/README.md"
+              href="https://docs.adaptabletools.com/docs/plugins/ipushpull/ipushpull-plugin"
               target="_blank"
             >
               ipushpull plugin
@@ -31,7 +31,7 @@ export default () => {
           <p>
             This requires an{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_ipushpullpluginoptions_.ipushpullpluginoptions.html"
+              href="https://docs.adaptabletools.com/docs/plugins/ipushpull/ipushpull-plugin-optionsl"
               target="_blank"
             >
               IPushPullPluginOptions
@@ -75,21 +75,21 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/plugins/ipushpull/README.md"
+            href="https://docs.adaptabletools.com/docs/plugins/ipushpull/ipushpull-plugin"
             target="_blank"
           >
-            ipushpull Plugin ReadMe
+            ipushpull Plugin
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_ipushpullpluginoptions_.ipushpullpluginoptions.html"
+            href="https://docs.adaptabletools.com/docs/plugins/ipushpull/ipushpull-plugin-options"
             target="_blank"
           >
             ipushpull Plugin Options
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_ipushpullapi_.ipushpullapi.html"
+            href="https://docs.adaptabletools.com/docs/plugins/ipushpull/ipushpull-api"
             target="_blank"
           >
             ipushpull Api

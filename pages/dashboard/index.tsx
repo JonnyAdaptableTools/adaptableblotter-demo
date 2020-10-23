@@ -46,7 +46,7 @@ export default () => {
           <p>
             You are able to use{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_dashboardstate_.dashboardstate.html"
+              href="https://docs.adaptabletools.com/docs/predefined-config/dashboard-config"
               target="_blank"
             >
               Dashboard Predefined Config

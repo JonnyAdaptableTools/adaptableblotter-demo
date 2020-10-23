@@ -33,14 +33,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_toolpanelstate_.toolpanelstate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/tool-panel-config"
             target="_blank"
           >
             Predefined Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_toolpanelapi_.toolpanelapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/tool-panel-api"
             target="_blank"
           >
             Adaptable API

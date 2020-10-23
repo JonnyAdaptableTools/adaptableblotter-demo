@@ -25,7 +25,7 @@ export default () => {
           <p>
             You can define (in your{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_customsortstate_.customsortstate.html"
+              href="https://docs.adaptabletools.com/docs/predefined-config/custom-sort-config"
               target="_blank"
             >
               Custom Sort Predefined Config
@@ -42,7 +42,7 @@ export default () => {
               <b>A standard comparer function</b> - that you reference in
               Config, but provide the actual implementation in{' '}
               <a
-                href="https://api.adaptabletools.com/modules/_src_adaptableoptions_userfunctions_.html"
+                href="https://docs.adaptabletools.com/docs/adaptable-options/user-functions"
                 target="_blank"
               >
                 UserFunctions
@@ -61,28 +61,28 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_customsortstate_.customsortstate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/custom-sort-config"
             target="_blank"
           >
             Custom Sort Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_customsortapi_.customsortapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/custom-sort-api"
             target="_blank"
           >
             Custom Sort Api
           </a>{' '}
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/custom-sort-function.md"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/custom-sort-function"
             target="_blank"
           >
             Custom Sort Read Me
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/modules/_src_adaptableoptions_userfunctions_.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/user-functions"
             target="_blank"
           >
             User Functions

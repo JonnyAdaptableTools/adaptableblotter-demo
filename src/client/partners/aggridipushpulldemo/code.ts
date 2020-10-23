@@ -120,7 +120,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
     userName: 'Demo User',
     adaptableId: 'ipushpull Demo',
     // this is the ipushpull plugin - it requires an ipushpulloptions object, details of which can be found at:
-    // https://api.adaptabletools.com/interfaces/_src_adaptableoptions_ipushpullpluginoptions_.ipushpullpluginoptions.html
+    // https://docs.adaptabletools.com/docs/plugins/ipushpull/ipushpull-plugin-options
     plugins: [
       ipp({
         username: process.env.IPUSHPULL_USERNAME,

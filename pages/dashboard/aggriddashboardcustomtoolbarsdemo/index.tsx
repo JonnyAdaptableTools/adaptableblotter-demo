@@ -23,14 +23,14 @@ export default () => {
             <li>
               Pre-populate the Toolbar with Button definitions (as part of{' '}
               <a
-                href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_dashboardstate_.dashboardstate.html"
+                href="https://docs.adaptabletools.com/docs/predefined-config/dashboard-config"
                 target="_blank"
               >
                 Dashboard State
               </a>
               ); when a button is clicked the{' '}
               <a
-                href="https://api.adaptabletools.com/interfaces/_src_api_eventapi_.eventapi.html"
+                href="https://docs.adaptabletools.com/docs/adaptable-events/toolbar-button-clicked-event"
                 target="_blank"
               >
                 ToolbarButtonClicked
@@ -44,7 +44,7 @@ export default () => {
               Render the Toolbar with any bespoke, custom, content that is
               required; simply listen to the{' '}
               <a
-                href="https://api.adaptabletools.com/interfaces/_src_api_eventapi_.eventapi.html#on"
+                href="https://docs.adaptabletools.com/docs/adaptable-events/toolbar-visibility-changed-event"
                 target="_blank"
               >
                 ToolbarVisibilityChanged
@@ -63,7 +63,7 @@ export default () => {
               display a button with a 'wrench' icon' - when the button is
               clicked the{' '}
               <a
-                href="https://api.adaptabletools.com/interfaces/_src_api_eventapi_.eventapi.html#on"
+                href="https://docs.adaptabletools.com/docs/adaptable-events/custom-toolbar-configured-event"
                 target="_blank"
               >
                 CustomToolbarConfigured
@@ -76,21 +76,21 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/dashboard-function.md"
+            href="https://docs.adaptabletools.com/docs/user-interface/dashboard"
             target="_blank"
           >
             Dashboard Read Me
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_dashboardstate_.dashboardstate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/dashboard-config"
             target="_blank"
           >
             Dashboard Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_dashboardapi_.dashboardapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/dashboard-api"
             target="_blank"
           >
             Dashboard Api

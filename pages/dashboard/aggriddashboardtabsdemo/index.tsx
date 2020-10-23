@@ -31,7 +31,7 @@ export default () => {
             with a selection of Toolbars. (Note: Grid includes the 'Chart'
             toolbar for which we needed to install the{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_adaptableoptions_.adaptableoptions.html#plugins"
+              href="https://docs.adaptabletools.com/docs/plugins/chart/chart-plugin"
               target="_blank"
             >
               Charts plugin
@@ -43,21 +43,21 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/dashboard-function.md"
+            href="https://docs.adaptabletools.com/docs/user-interface/dashboard"
             target="_blank"
           >
             Dashboard Read Me
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_dashboardstate_.dashboardstate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/dashboard-config"
             target="_blank"
           >
             Dashboard Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_dashboardapi_.dashboardapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/dashboard-api"
             target="_blank"
           >
             Dashboard Api

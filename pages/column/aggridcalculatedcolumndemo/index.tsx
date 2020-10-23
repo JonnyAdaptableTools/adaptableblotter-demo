@@ -66,28 +66,28 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/calculated-column-function.md"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/calculated-column-function"
             target="_blank"
           >
-            Calculated Column Read Me
+            Calculated Column Function
           </a>{' '}
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/calculated-column-function.md"
+            href="https://docs.adaptabletools.com/docs/common-objects/common-objects-expression"
             target="_blank"
           >
-            Calculated Column Read Me
+            Adaptable Expression
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_calculatedcolumnstate_.calculatedcolumnstate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/calculated-column-config"
             target="_blank"
           >
             Calculated Column Predefined Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_calculatedcolumnapi_.calculatedcolumnapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/calculated-column-api"
             target="_blank"
           >
             Calculated Column Api

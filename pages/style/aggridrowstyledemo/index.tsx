@@ -22,7 +22,7 @@ export default () => {
             However you are able to style the rows in the ag-Grid using the
             RowStyles property of{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_userinterfacestate_.userinterfacestate.html"
+              href="https://docs.adaptabletools.com/docs/predefined-config/user-interface-config"
               target="_blank"
             >
               User Interface State
@@ -42,10 +42,10 @@ export default () => {
           <p>
             Each of the 3 types of properties will use an{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_common_adaptablestyle_.adaptablestyle.html"
+              href="https://docs.adaptabletools.com/docs/common-objects/common-objects-style"
               target="_blank"
             >
-              AdaptableStyle
+              Adaptable Style
             </a>{' '}
             object - this can either include a list of style values (e.g.
             'ForeColor') or a cssClass name (which you must then provide in your

@@ -25,7 +25,7 @@ export default () => {
             This demo provides an example for one way to accomplish this; it
             leverages the <b>adaptableStateKey</b> property of{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_adaptableoptions_.adaptableoptions.html#adaptablestatekey"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/base-options#adaptablestatekey"
               target="_blank"
             >
               AdaptableOptions
@@ -51,21 +51,21 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-state-guide.md"
+            href="https://docs.adaptabletools.com/docs/key-topics/state-guide"
             target="_blank"
           >
             Adaptable State Read Me
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_predefinedconfig_.predefinedconfig.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/predefined-config-overview"
             target="_blank"
           >
             Predefined Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_adaptableoptions_.adaptableoptions.html#stateoptions"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/state-options"
             target="_blank"
           >
             Adaptable State Options

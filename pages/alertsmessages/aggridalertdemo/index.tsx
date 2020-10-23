@@ -42,28 +42,28 @@ export default () => {
         <div>
           {' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/alert-function.md"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/alert-function"
             target="_blank"
           >
-            Alert Read Me
+            Alert Function
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_alertstate_.alertstate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/alert-config"
             target="_blank"
           >
             Alert Predefined Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_alertapi_.alertapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/alert-api"
             target="_blank"
           >
             Alert API
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_events_alertfired_.alertfiredeventargs.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-events/alert-fired-event"
             target="_blank"
           >
             AlertFired Event

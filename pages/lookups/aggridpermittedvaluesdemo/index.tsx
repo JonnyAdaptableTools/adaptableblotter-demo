@@ -17,7 +17,7 @@ export default () => {
             It will first look for any Permitted Values for that column, set via
             the{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_userinterfacestate_.userinterfacestate.html"
+              href="https://docs.adaptabletools.com/docs/predefined-config/user-interface-config"
               target="_blank"
             >
               PermittedValuesItems
@@ -49,14 +49,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_userinterfacestate_.permittedvaluescolumn.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/user-interface-config#permittedvaluesitems"
             target="_blank"
           >
             Predefined Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_userinterfaceapi_.userinterfaceapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/user-interface-api"
             target="_blank"
           >
             Adaptable API

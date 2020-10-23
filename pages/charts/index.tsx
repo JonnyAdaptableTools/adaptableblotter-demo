@@ -51,7 +51,7 @@ export default () => {
             {' '}
             To run charts you need to install the{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_adaptableoptions_.adaptableoptions.html#plugins"
+              href="https://docs.adaptabletools.com/docs/plugins/chart/chart-plugin"
               target="_blank"
             >
               Charts plugin

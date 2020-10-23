@@ -37,14 +37,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_editoptions_.editoptions.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/edit-options"
             target="_blank"
           >
             Edit Options
           </a>{' '}
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-server-functionality-guide.md"
+            href="https://docs.adaptabletools.com/docs/key-topics/server-functionality"
             target="_blank"
           >
             Server Functionality Read Me

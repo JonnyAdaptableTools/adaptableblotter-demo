@@ -34,21 +34,21 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_entitlementstate_.entitlementstate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/entitlements-config"
             target="_blank"
           >
             Entitlements Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_entitlementsapi_.entitlementsapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/entitlements-apif"
             target="_blank"
           >
             Entitlements Api
           </a>{' '}
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-entitlements-guide.md"
+            href="https://docs.adaptabletools.com/docs/key-topics/entitlements"
             target="_blank"
           >
             Entitlements Guide

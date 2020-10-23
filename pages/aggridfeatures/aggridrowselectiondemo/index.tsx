@@ -11,7 +11,7 @@ export default () => {
           <p>
             One of the many{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_api_eventapi_.eventapi.html"
+              href="https://docs.adaptabletools.com/docs/adaptable-events/selection-changed-event"
               target="_blank"
             >
               Adaptable Events

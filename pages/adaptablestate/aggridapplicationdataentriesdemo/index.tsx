@@ -18,7 +18,7 @@ export default () => {
             This is done through{' '}
             <b>
               <a
-                href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_applicationstate_.applicationstate.html#applicationdataentries"
+                href="https://docs.adaptabletools.com/docs/predefined-config/application-config"
                 target="_blank"
               >
                 Application Data Entries
@@ -42,28 +42,28 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-state-guide.md"
+            href="https://docs.adaptabletools.com/docs/key-topics/state-guide"
             target="_blank"
           >
             Adaptable State Guide
           </a>{' '}
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/application-function.md"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/application-function"
             target="_blank"
           >
             Application Read Me
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_applicationstate_.applicationstate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/application-config"
             target="_blank"
           >
             Application Predefined Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_applicationapi_.applicationapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/application-api"
             target="_blank"
           >
             Application API

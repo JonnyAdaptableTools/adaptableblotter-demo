@@ -27,21 +27,21 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_quicksearchstate_.quicksearchstate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/quick-search-config"
             target="_blank"
           >
             Quick Search Predefined Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_quicksearchapi_.quicksearchapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/quick-search-api"
             target="_blank"
           >
             Quick Search Api
           </a>{' '}
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/quick-search-function.md"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/quick-search-function"
             target="_blank"
           >
             Quick Search Read Me

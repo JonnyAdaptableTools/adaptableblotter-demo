@@ -49,21 +49,21 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_filterstate_.filterstate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/filter-config"
             target="_blank"
           >
             Filter Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_filterapi_.filterapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/filter-api"
             target="_blank"
           >
             Filter Api
           </a>{' '}
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/filter-function.md"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/filter-function"
             target="_blank"
           >
             Filter ReadMe

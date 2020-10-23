@@ -135,7 +135,7 @@ export default () => {
           When you release an application using AdapTable you will typically
           ship it with{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_predefinedconfig_.predefinedconfig.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/predefined-config-overview"
             target="_blank"
           >
             <b>Predefined Config</b>
@@ -145,7 +145,7 @@ export default () => {
           first loads. <br />
           You set this Predefined Config as a property of{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_adaptableoptions_.adaptableoptions"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/adaptable-options-overview"
             target="_blank"
           >
             <b>Adaptable Options</b>
@@ -155,18 +155,15 @@ export default () => {
           AdaptableOptions is the only property required by AdapTable's
           constructor which returns the{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_adaptableapi_.adaptableapi"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/adaptable-api-overview"
             target="_blank"
           >
             <b>Adaptable Api</b>
           </a>{' '}
           giving you full run-time, code access to all AdapTable functionality
           and state. <br />
-          Reads more at our{' '}
-          <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-getting-started-guide.md"
-            target="_blank"
-          >
+          Reads more at the{' '}
+          <a href="https://docs.adaptabletools.com/docs/" target="_blank">
             <b>Getting Started Guide</b>
           </a>{' '}
         </p>
@@ -184,14 +181,11 @@ export default () => {
           little code.
           <br />
           See the{' '}
-          <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/README.md"
-            target="_blank"
-          >
-            ReadMe guide
+          <a href="https://docs.adaptabletools.com/docs/" target="_blank">
+            Gettting Start
           </a>{' '}
-          for more information on installation and integration, or take a look
-          at{' '}
+          section of the documentation for more information on installation and
+          integration, or take a look at{' '}
           <a href="./gettingstarted/aggridbasicsetupdemo" target="_blank">
             the Basic Set Up demo
           </a>
@@ -209,7 +203,7 @@ export default () => {
           <ul>
             <li>
               <a
-                href="https://github.com/AdaptableTools/adaptable/tree/master/packages/adaptable-react-aggrid"
+                href="https://docs.adaptabletools.com/docs/react-wrapper/react-wrapper-overview"
                 target="_blank"
               >
                 React Wrapper
@@ -217,7 +211,7 @@ export default () => {
             </li>
             <li>
               <a
-                href="https://github.com/AdaptableTools/adaptable/tree/master/packages/adaptable-ng-aggrid"
+                href="https://docs.adaptabletools.com/docs/angular-wrapper/angular-wrapper-overview"
                 target="_blank"
               >
                 Angular Wrapper
@@ -228,16 +222,8 @@ export default () => {
         <p>
           <b>Help</b>
           <br />
-          Learn more about how AdapTable works via our large collection of{' '}
-          <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/readme-list.md"
-            target="_blank"
-          >
-            Read Me Guides
-          </a>
-          . <br />
           For more in depth information please visit the{' '}
-          <a href="http://api.adaptabletools.com" target="_blank">
+          <a href="http://docs.adaptabletools.com" target="_blank">
             developer documentation site
           </a>
           .
@@ -259,7 +245,7 @@ export default () => {
           This contains some big changes (and improvements) from previous
           versions. If you are new to Version 7 please read the{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/upgrade-guides/upgrade-guide-v7.md"
+            href="https://docs.adaptabletools.com/docs/upgrade-guides/upgrade-guide-v7"
             target="_blank"
           >
             Upgrade Guide

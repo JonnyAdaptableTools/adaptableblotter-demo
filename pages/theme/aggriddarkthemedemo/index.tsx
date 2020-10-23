@@ -27,14 +27,7 @@ export default () => {
               CSS variables
             </a>
             ; we created the Dark Theme just by setting a few properties (mainly
-            colours). You can see the css code{' '}
-            <a
-              href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/src/themes/dark.scss "
-              target="_blank"
-            >
-              here
-            </a>
-            .
+            colours).
           </p>
           <p>
             You can create your own themes based on this or others (see the
@@ -45,28 +38,28 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_themestate_.themestate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/theme-config"
             target="_blank"
           >
             Theme Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_themeapi_.themeapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/theme-api"
             target="_blank"
           >
             Theme Api
           </a>{' '}
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/theme-function.md"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/theme-function"
             target="_blank"
           >
             Theme Read Me
           </a>{' '}
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-theming-guide.md"
+            href="https://docs.adaptabletools.com/docs/key-topics/theming-and-styling"
             target="_blank"
           >
             Adaptable Theming Guide

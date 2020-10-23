@@ -16,22 +16,15 @@ export default () => {
             GridOptions directly and then everything will flow through.
           </p>
           <p>
-            However AdapTable provides an the{' '}
+            However AdapTable provides the *loadGridData* function in{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_api_gridapi_.gridapi.html#loadgriddata"
+              href="https://docs.adaptabletools.com/docs/adaptable-api/grid-api"
               target="_blank"
             >
-              loadGridData Function
+              Grid API
             </a>{' '}
             which is designed for this precise use case (for subsequent
-            refreshes you can use{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_src_api_gridapi_.gridapi.html#setgriddata"
-              target="_blank"
-            >
-              setGridData
-            </a>
-            ).
+            refreshes you can use *setGridData* ).
           </p>
           <p>
             The function will load the data in the grid and then make sure that
@@ -40,7 +33,7 @@ export default () => {
           <p>
             For instance, if{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_layoutoptions_.layoutoptions.html#includeexpandedrowgroups"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/layout-options"
               target="_blank"
             >
               includeExpandedRowGroups

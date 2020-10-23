@@ -27,7 +27,7 @@ export default () => {
             Most users access this function through the Dashboard as 'GridInfo'
             is one of the default items in the <b>VisibleButtons</b> property in{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_dashboardstate_.dashboardstate.html#visiblebuttons"
+              href="https://docs.adaptabletools.com/docs/predefined-config/dashboard-config#visiblebuttons"
               target="_blank"
             >
               Dashboard Config
@@ -39,7 +39,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/grid-info-function.md"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/grid-info-function"
             target="_blank"
           >
             Grid Info Function Read Me

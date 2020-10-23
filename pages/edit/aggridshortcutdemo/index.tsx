@@ -32,21 +32,21 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_shortcutstate_.shortcutstate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/shortcut-config"
             target="_blank"
           >
             Shortcut Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_shortcutapi_.shortcutapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/shortcut-api"
             target="_blank"
           >
             Shortcut Api
           </a>
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/shortcut-function.md"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/shortcut-function"
             target="_blank"
           >
             Shortcut Read Me

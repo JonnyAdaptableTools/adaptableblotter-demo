@@ -25,7 +25,7 @@ export default () => {
           <p>
             Note: In this example the{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_chartoptions_.chartoptions.html"
+              href="https://docs.adaptabletools.com/docs/plugins/chart/chart-options"
               target="_blank"
             >
               Chart Options

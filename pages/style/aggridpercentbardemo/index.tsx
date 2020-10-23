@@ -42,21 +42,21 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_percentbarstate_.percentbarstate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/percent-bar-config"
             target="_blank"
           >
             Percent Bar Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_percentbarapi_.percentbarapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/percent-bar-api"
             target="_blank"
           >
             Percent Bar Api
           </a>
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/percent-bar-function.md"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/percent-bar-function"
             target="_blank"
           >
             Percent Bar Read Me

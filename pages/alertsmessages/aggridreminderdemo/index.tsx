@@ -27,7 +27,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_reminderstate_.reminderstate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/schedule-config"
             target="_blank"
           >
             Predefined Config

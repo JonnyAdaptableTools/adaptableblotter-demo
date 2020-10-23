@@ -20,14 +20,14 @@ export default () => {
           <p>
             You can add your own bespoke{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_userinterfacestate_.usermenuitem.html"
+              href="https://docs.adaptabletools.com/docs/api/usermenuitem"
               target="_blank"
             >
               User Menu Item(s)
             </a>{' '}
             to the Column Menu, defining them in{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_userinterfacestate_.userinterfacestate.html"
+              href="https://docs.adaptabletools.com/docs/predefined-config/user-interface-config"
               target="_blank"
             >
               User Interface State
@@ -38,7 +38,7 @@ export default () => {
             When you define a UserMenuItem you can reference 2 functions (for
             which you provide the implementation for both in{' '}
             <a
-              href="https://api.adaptabletools.com/modules/_src_adaptableoptions_userfunctions_.html"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/user-functions"
               target="_blank"
             >
               UserFunctions
@@ -64,7 +64,7 @@ export default () => {
             Menu items are available by using the <b>showAdaptableColumnMenu</b>{' '}
             function property in{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_userinterfaceoptions_.userinterfaceoptions.html#showadaptablecolumnmenu"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/user-interface-options"
               target="_blank"
             >
               User Interface Options
@@ -80,38 +80,38 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_userinterfacestate_.userinterfacestate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/user-interface-config"
             target="_blank"
           >
             User Interface Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_userinterfaceapi_.userinterfaceapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/user-interface-api"
             target="_blank"
           >
             User Interface Api
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/modules/_src_adaptableoptions_userfunctions_.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/user-functions"
             target="_blank"
           >
             User Functions
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_userinterfaceoptions_.userinterfaceoptions.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/user-interface-options"
             target="_blank"
           >
             User Interface Options
           </a>{' '}
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-menus-guide.md"
+            href="https://docs.adaptabletools.com/docs/user-interface/column-menu"
             target="_blank"
           >
-            Adaptable Menus Guide
+            Column Menu Guide
           </a>{' '}
         </div>
       }

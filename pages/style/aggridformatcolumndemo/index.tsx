@@ -90,21 +90,21 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/format-column-function.md"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/format-column-function"
             target="_blank"
           >
-            Format Column Read Me
+            Format Column Function
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_formatcolumnstate_.formatcolumnstate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/format-column-config"
             target="_blank"
           >
             Format Column Predefined Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_formatcolumnapi_.formatcolumnapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/format-column-api"
             target="_blank"
           >
             Format Column API

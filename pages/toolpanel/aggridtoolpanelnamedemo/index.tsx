@@ -15,10 +15,7 @@ export default () => {
           <p>
             You can change this by setting the <b>adaptableToolPanelTitle</b>{' '}
             property in{' '}
-            <a
-              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_userinterfaceoptions_.userinterfaceoptions.html#adaptabletoolpaneltitle"
-              target="_blank"
-            >
+            <a href="https://docs.adaptabletools.com/docs/adaptable-options/user-interface-options">
               UserInterfaceOptions
             </a>
             .
@@ -32,14 +29,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_toolpanelstate_.toolpanelstate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/tool-panel-config"
             target="_blank"
           >
             Predefined Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_toolpanelapi_.toolpanelapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/tool-panel-api"
             target="_blank"
           >
             Adaptable API

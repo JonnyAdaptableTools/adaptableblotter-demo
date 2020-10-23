@@ -15,7 +15,7 @@ export default () => {
           <p>
             Note that we have set the 'showGroupingTotalsAsHeader' property in{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_generaloptions_.generaloptions.html"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/general-options"
               target="_blank"
             >
               GeneralOptions

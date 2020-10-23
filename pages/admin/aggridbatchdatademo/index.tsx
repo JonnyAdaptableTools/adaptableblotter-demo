@@ -15,7 +15,7 @@ export default () => {
           <p>
             This is done via the <b>updateGridData</b> method of{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_api_gridapi_.gridapi.html#updategriddata"
+              href="https://docs.adaptabletools.com/docs/adaptable-api/grid-api"
               target="_blank"
             >
               Grid Api
