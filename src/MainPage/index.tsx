@@ -114,6 +114,23 @@ export default ({
                   borderRadius: 'var(--ab__border-radius)',
                   background: 'var(--demo-color-blue)',
                   textAlign: 'center',
+                  minWidth: '15rem',
+                  fontWeight: 'bold',
+                  marginRight: 'var(--demo-space-2)',
+                }}
+                href="https://docs.adaptabletools.com/"
+                target="_blank"
+              >
+                AdapTable Documentation
+              </a>
+              <a
+                style={{
+                  padding: 'var(--demo-space-2)',
+                  color: 'white',
+                  display: 'inline-block',
+                  borderRadius: 'var(--ab__border-radius)',
+                  background: 'var(--demo-color-blue)',
+                  textAlign: 'center',
                   minWidth: '9rem',
                   fontWeight: 'bold',
                 }}
