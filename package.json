@@ -30,7 +30,7 @@
     "firebase": "^7.10.0",
     "ipushpull-js": "2.18.12",
     "@glue42/desktop": "^4.6.3",
-    "@glue42/office": "^1.5.1",
+    "@glue42/office": "1.6.6",
     "isomorphic-fetch": "^2.2.1",
     "latest": "^0.2.0",
     "normalize.css": "^8.0.1",

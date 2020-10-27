@@ -34,6 +34,7 @@ export default async () => {
     gridReady.api!.closeToolPanel();
   };
 
+  /*
   adaptableApi.eventApi.on('AdaptableReady', () => {
     tickingDataHelper.startTickingDataagGridOrders(
       adaptableOptions.vendorGrid,
@@ -42,11 +43,13 @@ export default async () => {
       10248,
       10293
     );
-  });
+  })
+  ;
+  */
 
   return {
     unload: () => {
-      tickingDataHelper.turnOffTicking();
+      //  tickingDataHelper.turnOffTicking();
     },
     code,
   };

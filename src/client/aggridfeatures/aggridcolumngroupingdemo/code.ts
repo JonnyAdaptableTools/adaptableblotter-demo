@@ -13,6 +13,7 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
+  /*
   CalculatedColumn: {
     CalculatedColumns: [
       {
@@ -36,47 +37,15 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
-  FlashingCell: {
-    FlashingCells: [
-      {
-        ColumnId: 'ChangeLastOrder',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 500,
-        IsLive: true,
-        UpColor: '#008000',
-      },
-      {
-        ColumnId: 'ItemCost',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 500,
-        IsLive: true,
-        UpColor: '#008000',
-      },
-      {
-        ColumnId: 'OrderCost',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 500,
-        IsLive: true,
-        UpColor: '#008000',
-      },
-      {
-        ColumnId: 'InvoicedCost',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 750,
-        IsLive: true,
-        UpColor: '#008000',
-      },
-    ],
-  },
+ */
   Layout: {
+    CurrentLayout: 'Grouping Layout',
     Layouts: [
       {
         Columns: [
-          'AvgCost',
           'CustomerReference',
           'CompanyName',
           'ContactName',
-          'Comments',
           'ShippedDate',
           'OrderCost',
           'PackageCost',
@@ -90,8 +59,31 @@ const demoConfig: PredefinedConfig = {
           'ItemCount',
         ],
         ColumnSorts: [],
+        Name: 'Grouping Layout',
+      },
+      /*
+      {
+        Columns: [
+          'AvgCost',
+          'CustomerReference',
+          'CompanyName',
+          'ContactName',
+          'Comments',
+          'ShippedDate',
+          'OrderCost',
+          'PackageCost',
+          'OrderId',
+          'Freight',
+          'ArrivedOnTime',
+          'ItemCount',
+          'ShipName',
+          'ShipVia',
+          'ItemCost',
+        ],
+        ColumnSorts: [],
         Name: 'With Special Cols',
       },
+      */
     ],
   },
 } as PredefinedConfig;
