@@ -91,7 +91,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
         if (
           menuInfo.Column.ColumnId === 'ContactName' &&
           (menuItem.FunctionName === 'CustomSort' ||
-            menuItem.FunctionName === 'PieChart')
+            menuItem.FunctionName === 'CellSummary')
         ) {
           return false;
         }

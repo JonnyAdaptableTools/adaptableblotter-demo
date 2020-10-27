@@ -12,7 +12,6 @@ import {
   AuditLogEventArgs,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
-import { AuditLogEntry } from '@adaptabletools/adaptable/src/Utilities/Interface/AuditLogEntry';
 
 var adaptableApi: AdaptableApi;
 
@@ -96,7 +95,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
   adaptableApi.auditEventApi.on(
     'AuditFunctionApplied',
     (auditLogEventArgs: AuditLogEventArgs) => {
-      let auditLogEntry: AuditLogEntry = auditLogEventArgs.data[0].id;
+      let auditLogEntry = auditLogEventArgs.data[0].id;
       if (
         auditLogEntry.function_applied_details?.action ==
         'FREE_TEXT_COLUMN_ADD_EDIT_STORED_VALUE'
