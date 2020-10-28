@@ -20,20 +20,14 @@ export default () => {
             Note that the other functions in AdapTable will 'honour' this column
             grouping and work appropriately.
           </p>
-        </div>
-      }
-    />
-  );
-};
-
-/* 
-OLD TEXT
-
-    <p>
+          <p>
             For instance if you load the <i>With Special Cols</i> Layout, you
             will see that it includes 2 special columns (Calculated Column and
             FreeText Column), that appear - and position - in the Grid as
             normal.
           </p>
-
-          */
+        </div>
+      }
+    />
+  );
+};

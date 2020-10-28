@@ -13,7 +13,6 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
-  /*
   CalculatedColumn: {
     CalculatedColumns: [
       {
@@ -37,9 +36,8 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
- */
   Layout: {
-    CurrentLayout: 'Grouping Layout',
+    CurrentLayout: 'Column Groups',
     Layouts: [
       {
         Columns: [
@@ -59,16 +57,15 @@ const demoConfig: PredefinedConfig = {
           'ItemCount',
         ],
         ColumnSorts: [],
-        Name: 'Grouping Layout',
+        Name: 'Column Groups',
       },
-      /*
       {
         Columns: [
           'AvgCost',
+          'Comments',
           'CustomerReference',
           'CompanyName',
           'ContactName',
-          'Comments',
           'ShippedDate',
           'OrderCost',
           'PackageCost',
@@ -77,13 +74,10 @@ const demoConfig: PredefinedConfig = {
           'ArrivedOnTime',
           'ItemCount',
           'ShipName',
-          'ShipVia',
-          'ItemCost',
         ],
         ColumnSorts: [],
         Name: 'With Special Cols',
       },
-      */
     ],
   },
 } as PredefinedConfig;
