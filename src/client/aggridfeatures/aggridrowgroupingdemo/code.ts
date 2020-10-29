@@ -13,11 +13,36 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
+  Layout: {
+    CurrentLayout: 'Grouped',
+    Layouts: [
+      {
+        Columns: [
+          'CustomerReference',
+          'ContactName',
+          'InvoicedCost',
+          'ChangeLastOrder',
+          'ItemCount',
+          'OrderCost',
+          'PackageCost',
+          'Employee',
+          'ShipCountry',
+        ],
+        RowGroupedColumns: ['Employee'],
+        AggregationColumns: {
+          InvoicedCost: 'sum',
+          OrderCost: 'sum',
+          ItemCount: 'max',
+        },
+        Name: 'Grouped',
+      },
+    ],
+  },
   FormatColumn: {
     FormatColumns: [
       {
         Scope: {
-          ColumnIds: ['InvoicedCost'],
+          ColumnIds: ['InvoicedCost', 'OrderCost'],
         },
         DisplayFormat: {
           Formatter: 'NumberFormatter',
