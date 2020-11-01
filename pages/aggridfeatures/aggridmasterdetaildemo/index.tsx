@@ -9,8 +9,14 @@ export default () => {
       description={
         <div>
           <p>
-            AdapTable supports Master / Details grid functionality - via the
-            master-detail plugin.
+            AdapTable supports Master / Details grid functionality - via the{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/plugins/master-detail/master-detail-plugin"
+              target="_blank"
+            >
+              Master / Detail Plugin
+            </a>
+            .
           </p>
           <p>
             Essentially 2 grids are defined each with their own Predefined
@@ -27,6 +33,23 @@ export default () => {
             for that team: note that each instance shares the Conditional Style
             showing players over 30.
           </p>
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://docs.adaptabletools.com/docs/key-topics/using-aggrid"
+            target="_blank"
+          >
+            ag-Grid Read Me
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/plugins/master-detail/master-detail-plugin"
+            target="_blank"
+          >
+            Master / Detail Plugin
+          </a>{' '}
         </div>
       }
     />

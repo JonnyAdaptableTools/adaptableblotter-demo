@@ -29,7 +29,7 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/adaptable-functions/layout-function"
             target="_blank"
           >
-            Layout Function
+            Layout Read Me
           </a>{' '}
           |{' '}
           <a
@@ -40,19 +40,18 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-api/layout-api"
-            target="_blank"
-          >
-            Layout Api
-          </a>{' '}
-          |{' '}
-          <a
             href="https://docs.adaptabletools.com/docs/adaptable-options/layout-options"
             target="_blank"
           >
             Layout Options
           </a>{' '}
           |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-api/layout-api"
+            target="_blank"
+          >
+            Layout Api
+          </a>{' '}
         </div>
       }
     />

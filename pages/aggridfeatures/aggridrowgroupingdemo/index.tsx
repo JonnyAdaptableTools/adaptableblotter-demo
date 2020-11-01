@@ -30,6 +30,23 @@ export default () => {
           </p>
         </div>
       }
+      helpResources={
+        <div>
+          <a
+            href="https://docs.adaptabletools.com/docs/key-topics/using-aggrid"
+            target="_blank"
+          >
+            ag-Grid Read Me
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-options/general-options"
+            target="_blank"
+          >
+            General Options
+          </a>{' '}
+        </div>
+      }
     />
   );
 };

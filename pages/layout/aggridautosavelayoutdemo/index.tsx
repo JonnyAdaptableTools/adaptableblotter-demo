@@ -34,17 +34,17 @@ export default () => {
       helpResources={
         <div>
           <a
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/layout-function"
+            target="_blank"
+          >
+            Layout Read Me
+          </a>{' '}
+          |{' '}
+          <a
             href="https://docs.adaptabletools.com/docs/predefined-config/layout-config"
             target="_blank"
           >
             Layout Predefined Config
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/adaptable-api/layout-api"
-            target="_blank"
-          >
-            Layout Api
           </a>{' '}
           |{' '}
           <a
@@ -55,10 +55,10 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/layout-function"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/layout-api"
             target="_blank"
           >
-            Layout Read Me
+            Layout Api
           </a>{' '}
         </div>
       }

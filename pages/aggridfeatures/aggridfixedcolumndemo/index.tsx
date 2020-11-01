@@ -32,6 +32,37 @@ export default () => {
           </p>
         </div>
       }
+      helpResources={
+        <div>
+          <a
+            href="https://docs.adaptabletools.com/docs/key-topics/using-aggrid"
+            target="_blank"
+          >
+            ag-Grid Read Me
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/predefined-config/layout-config"
+            target="_blank"
+          >
+            Layout Predefined Config
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-options/layout-options"
+            target="_blank"
+          >
+            Layout Options
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-api/layout-api"
+            target="_blank"
+          >
+            Layout Api
+          </a>{' '}
+        </div>
+      }
     />
   );
 };
