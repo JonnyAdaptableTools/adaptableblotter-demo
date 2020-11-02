@@ -54,6 +54,13 @@ const demoConfig: PredefinedConfig = {
         PermittedValues: [''],
       },
       {
+        // For Item Count column we return an array with a single empty value - this means that NO values will be used
+        Scope: {
+          ColumnIds: ['ItemCount'],
+        },
+        PermittedValues: [''],
+      },
+      {
         // For Customer Reference column we use a function - this allows us to get data from elsewhere if required and do external lookups
         Scope: {
           ColumnIds: ['CustomerReference'],
