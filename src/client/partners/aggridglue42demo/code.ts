@@ -66,7 +66,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
     plugins: [
       glue42({
         glue: glue42Desktop, // this is the main Glue42 desktop object
-        glue4Office: glue42office, // this is the Glue4Office object
+        glue42Office: glue42office, // this is the Glue4Office object
       }),
     ],
 

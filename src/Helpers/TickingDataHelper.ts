@@ -1,7 +1,10 @@
 import { GridOptions, RowNode } from '@ag-grid-community/all-modules';
 import { ITrade } from './Trade';
 import { HelperAgGrid } from './HelperAgGrid';
-import { AdaptableApi } from '@adaptabletools/adaptable/types';
+import {
+  AdaptableApi,
+  DataUpdateConfig,
+} from '@adaptabletools/adaptable/types';
 
 export class TickingDataHelper {
   private isTicking: boolean = false;
@@ -257,8 +260,8 @@ export class TickingDataHelper {
               //    trade.notional = this.generateRandomInt(1, 50);
               trade.changeOnYear = helperAgGrid.getMeaningfulDouble();
 
-              let config = {
-                batchUpdate: true,
+              let config: DataUpdateConfig = {
+                runAsync: true,
                 // callback: test,
               };
               api.gridApi.updateGridData([trade], config);
@@ -290,7 +293,7 @@ export class TickingDataHelper {
         console.log('batch update occurred');
       };
       let config = {
-        batchUpdate: true,
+        runAsync: true,
         callbackFn: callbackFn,
       };
 
