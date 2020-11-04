@@ -838,6 +838,12 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'We leverage the powerful offering to enable multiple AdapTable instances to share state, data and events',
           },
+          {
+            Name: 'Cyoda',
+            Link: '/partners/cyodademo',
+            Description:
+              'Use Cyoda as a server-side solution if you want to run AdapTable on large volumes of back end data',
+          },
         ],
       },
       {
