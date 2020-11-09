@@ -9,6 +9,7 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
+  ColumnFilter,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -65,17 +66,22 @@ const demoConfig: PredefinedConfig = {
         Columns: [
           'OrderId',
           'ItemCost',
-          'ShipVia',
+          'OrderDate',
+          'ShippedDate',
           'Employee',
           'Freight',
           'ChangeLastOrder',
           'ShipCountry',
+          'ShipVia',
           'InvoicedCost',
           'CustomerReference',
-          'OrderDate',
-          'ShippedDate',
         ],
-        ColumnSorts: [],
+        ColumnSorts: [
+          {
+            ColumnId: 'ShippedDate',
+            SortOrder: 'Desc',
+          },
+        ],
         Name: 'Orders',
       },
     ],
@@ -109,27 +115,24 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Column Filters Demo',
+    filterOptions: {
+      showColumnValuesUsingCurrentSortOrder: true,
+    },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
   adaptableApi = await Adaptable.init(adaptableOptions);
 
   adaptableApi.eventApi.on('AdaptableReady', () => {
-    // TODO Release7
-    /*
-    let columnFilter: Filter = {
+    let columnFilter: ColumnFilter = {
       ColumnId: 'ShipCountry',
-      Filter: {
-        ColumnValueExpressions: [
-          {
-            ColumnId: 'ShipCountry',
-            ColumnDisplayValues: ['France', 'USA', 'UK'],
-          },
-        ],
+      Predicate: {
+        PredicateId: 'Values',
+        Inputs: ['France', 'USA', 'UK'],
       },
     };
+
     adaptableApi.filterApi.setColumnFilter([columnFilter]);
-    */
   });
 
   return { adaptableOptions, adaptableApi };

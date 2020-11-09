@@ -47,9 +47,8 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/key-topics/server-functionality"
             target="_blank"
           >
-            Server Functionality Read Me
+            Server Functionality Guide
           </a>
-          .
         </div>
       }
     />

@@ -28,6 +28,13 @@ export default () => {
       helpResources={
         <div>
           <a
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/smart-edit-function"
+            target="_blank"
+          >
+            Smart Edit Function
+          </a>
+          |{' '}
+          <a
             href="https://docs.adaptabletools.com/docs/predefined-config/smart-edit-config"
             target="_blank"
           >
@@ -39,13 +46,6 @@ export default () => {
             target="_blank"
           >
             Smart Edit Api
-          </a>
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/smart-edit-function"
-            target="_blank"
-          >
-            Smart Edit Read Me
           </a>
           |{' '}
           <a

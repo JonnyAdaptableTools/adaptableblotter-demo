@@ -47,7 +47,7 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/adaptable-functions/layout-function"
             target="_blank"
           >
-            Layout Read Me
+            Layout Function
           </a>{' '}
           |{' '}
           <a

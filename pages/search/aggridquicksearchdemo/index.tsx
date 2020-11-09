@@ -27,6 +27,13 @@ export default () => {
       helpResources={
         <div>
           <a
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/quick-search-function"
+            target="_blank"
+          >
+            Quick Search Function
+          </a>{' '}
+          |{' '}
+          <a
             href="https://docs.adaptabletools.com/docs/predefined-config/quick-search-config"
             target="_blank"
           >
@@ -41,10 +48,10 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/quick-search-function"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/search-options"
             target="_blank"
           >
-            Quick Search Read Me
+            Search Options
           </a>
         </div>
       }

@@ -46,7 +46,7 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/adaptable-functions/query-function"
             target="_blank"
           >
-            Query Read Me
+            Query Function
           </a>{' '}
           |{' '}
           <a

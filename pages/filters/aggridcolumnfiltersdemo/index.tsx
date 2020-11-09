@@ -49,6 +49,13 @@ export default () => {
       helpResources={
         <div>
           <a
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/filter-function"
+            target="_blank"
+          >
+            Filter ReadMe
+          </a>{' '}
+          |{' '}
+          <a
             href="https://docs.adaptabletools.com/docs/predefined-config/filter-config"
             target="_blank"
           >
@@ -63,12 +70,11 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/filter-function"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/filter-options"
             target="_blank"
           >
-            Filter ReadMe
+            Filter Options
           </a>
-          .
         </div>
       }
     />

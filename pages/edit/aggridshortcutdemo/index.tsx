@@ -32,6 +32,13 @@ export default () => {
       helpResources={
         <div>
           <a
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/shortcut-function"
+            target="_blank"
+          >
+            Shortcut Function
+          </a>{' '}
+          |{' '}
+          <a
             href="https://docs.adaptabletools.com/docs/predefined-config/shortcut-config"
             target="_blank"
           >
@@ -45,12 +52,6 @@ export default () => {
             Shortcut Api
           </a>
           |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/shortcut-function"
-            target="_blank"
-          >
-            Shortcut Read Me
-          </a>
         </div>
       }
     />

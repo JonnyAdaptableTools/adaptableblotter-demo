@@ -57,6 +57,13 @@ export default () => {
       helpResources={
         <div>
           <a
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/data-source-function"
+            target="_blank"
+          >
+            Data Source Function
+          </a>{' '}
+          |{' '}
+          <a
             href="https://docs.adaptabletools.com/docs/predefined-config/data-source-config"
             target="_blank"
           >

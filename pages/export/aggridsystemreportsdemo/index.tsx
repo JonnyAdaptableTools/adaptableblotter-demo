@@ -29,11 +29,42 @@ export default () => {
               <b>Selected Rows</b>: Any rows currently selected in the grid.
             </li>
           </ul>{' '}
-          <p>See the other demos for examples of User and Custom Reports.</p>
+          <p>
+            See the other demos for examples of{' '}
+            <a href="aggriduserreportsdemo" target="_blank">
+              User
+            </a>{' '}
+            and{' '}
+            <a href="aggridcustomreportsdemo" target="_blank">
+              Custom
+            </a>{' '}
+            Reports.
+          </p>
+          <p>AdapTable lets users send reports to these destinations:</p>
+          <ul>
+            <li>Excel (if the right vendor grid modules have been loaded)</li>
+            <li>CSV</li>
+            <li>JSON</li>
+            <li>Clipboard</li>
+          </ul>{' '}
+          <p>
+            See the{' '}
+            <a href="aggridcustomdestinationdemo" target="_blank">
+              Custom Destination
+            </a>{' '}
+            demo for how to send Reports to other destinations.
+          </p>
         </div>
       }
       helpResources={
         <div>
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/export-function"
+            target="_blank"
+          >
+            Export Function
+          </a>
+          |{' '}
           <a
             href="https://docs.adaptabletools.com/docs/predefined-config/export-config"
             target="_blank"
@@ -46,13 +77,6 @@ export default () => {
             target="_blank"
           >
             Export Api
-          </a>
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/export-function"
-            target="_blank"
-          >
-            Export Read Me
           </a>
           |{' '}
           <a

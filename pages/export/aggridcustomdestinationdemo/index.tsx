@@ -8,13 +8,10 @@ export default () => {
       pageTitle={'Custom Destination Demo'}
       description={
         <div>
-          <p>AdapTable lets users send reports to these destinations:</p>
-          <ul>
-            <li>Excel (if the right vendor grid modules have been loaded)</li>
-            <li>CSV</li>
-            <li>JSON</li>
-            <li>Clipboard</li>
-          </ul>
+          <p>
+            AdapTable lets users send reports to these destinations: Excel, CSV,
+            JSON and Clipboard.
+          </p>
           <p>
             However sometimes developers might want to add additional
             destinations such as particular REST endpoints, or by email. This
@@ -48,14 +45,36 @@ export default () => {
             </li>
           </ol>
           <p>
-            In this example we have created a Custom Destination called 'Email'
-            and in our dummy function implemenation we simply output the report
-            data to the console.
+            If other information is needed you can provide{' '}
+            <b>custom field definitions</b> and AdapTable will dynamically
+            display a form accordingly and send the results in the
+            <i>CustomExportDestinationFunction</i>.
           </p>
+          <p>
+            In this example we have created 2 Custom Destinations - for both we
+            simply output the report data to the console in the{' '}
+            <i>CustomExportDestinationFunction</i> handler:{' '}
+          </p>
+          <ul>
+            <li>
+              <i>Email</i> - which also contains Form Data and default form
+              values
+            </li>
+            <li>
+              <i>REST Endpoint</i> - which has no form data
+            </li>
+          </ul>
         </div>
       }
       helpResources={
         <div>
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/export-function"
+            target="_blank"
+          >
+            Export Function
+          </a>
+          |{' '}
           <a
             href="https://docs.adaptabletools.com/docs/predefined-config/export-config"
             target="_blank"
@@ -68,13 +87,6 @@ export default () => {
             target="_blank"
           >
             Export Api
-          </a>
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/export-function"
-            target="_blank"
-          >
-            Export Read Me
           </a>
           |{' '}
           <a

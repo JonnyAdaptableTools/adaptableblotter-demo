@@ -25,7 +25,37 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   Export: {
-    CustomDestinations: ['Email'],
+    CustomDestinations: [
+      {
+        Name: 'Email',
+        Form: {
+          Title: 'Email Settings',
+          Description: 'Provide email details ',
+          Fields: [
+            {
+              Name: 'emailAddress',
+              Label: 'Email Address',
+              Type: 'text',
+              DefaultValue: 'support@adaptabletools.com',
+            },
+            {
+              Name: 'subject',
+              Label: 'Email Subject',
+              Type: 'text',
+              DefaultValue: 'AdapTable Report Data',
+            },
+            {
+              Name: 'body',
+              Label: 'Email Body',
+              Type: 'text',
+            },
+          ],
+        },
+      },
+      {
+        Name: 'REST Endpoint',
+      },
+    ],
   },
 } as PredefinedConfig;
 
@@ -54,11 +84,24 @@ export default async (columnDefs: any[], rowData: any[]) => {
       {
         name: 'Email',
         type: 'CustomExportDestinationFunction',
-        handler(report: Report, reportData: any[]) {
+        handler(report: Report, reportData: any[], customDestinationData) {
           // here you can send via your email client or to an endpoint or whatever you need
-          // in this example, we will just log the output to the console...
+          // in this example, we will just log the output to the console
+          // note that we include the customdestinationdata which was created in the UI
           console.log(report.Name);
-          console.log('will export to email:', reportData);
+          console.log(
+            'will export to email:',
+            reportData,
+            customDestinationData
+          );
+        },
+      },
+      {
+        name: 'REST Endpoint',
+        type: 'CustomExportDestinationFunction',
+        handler(report: Report, reportData: any[]) {
+          console.log(report.Name);
+          console.log('will send to a server endpoint:', reportData);
         },
       },
     ],

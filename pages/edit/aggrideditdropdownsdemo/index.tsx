@@ -43,6 +43,16 @@ export default () => {
           </p>
         </div>
       }
+      helpResources={
+        <div>
+          <a
+            href="https://docs.adaptabletools.com/docs/predefined-config/user-interface-config"
+            target="_blank"
+          >
+            User Interface Config
+          </a>
+        </div>
+      }
     />
   );
 };

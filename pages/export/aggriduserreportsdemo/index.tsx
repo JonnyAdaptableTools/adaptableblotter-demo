@@ -45,6 +45,13 @@ export default () => {
       helpResources={
         <div>
           <a
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/export-function"
+            target="_blank"
+          >
+            Export Function
+          </a>
+          |{' '}
+          <a
             href="https://docs.adaptabletools.com/docs/predefined-config/export-config"
             target="_blank"
           >
@@ -56,13 +63,6 @@ export default () => {
             target="_blank"
           >
             Export Api
-          </a>
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/export-function"
-            target="_blank"
-          >
-            Export Read Me
           </a>
           |{' '}
           <a

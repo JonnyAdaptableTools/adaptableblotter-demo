@@ -35,10 +35,13 @@ export default () => {
       </p>
       <p>
         <iframe
-          width="840"
-          height="630"
-          src="https://vimeo.com/458693178/d665b354e5"
-        />
+          src="https://player.vimeo.com/video/458693178"
+          width="640"
+          height="361"
+          frameBorder="0"
+          allow="autoplay; fullscreen"
+          allowFullScreen
+        ></iframe>
       </p>
     </MainPage>
   );
