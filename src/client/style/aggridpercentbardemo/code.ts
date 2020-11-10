@@ -50,7 +50,7 @@ const demoConfig: PredefinedConfig = {
         ColumnComparison: {
           MinValue: 0,
           MaxValue: 'OrderCost',
-          Color: 'brown',
+          Color: '#D2691E',
         },
       },
     ],
