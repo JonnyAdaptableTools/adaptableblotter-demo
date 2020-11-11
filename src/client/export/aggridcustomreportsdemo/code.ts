@@ -9,6 +9,7 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
+  ReportData,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -78,14 +79,33 @@ export default async (columnDefs: any[], rowData: any[]) => {
         name: 'getDummyData',
         handler(reportName: string) {
           // this will typically run a call on the server but here we just provide some dummy data
-          // note that it takes the form of an array of arrays - each array is a row and must match the column names
-          let data = [
-            ['Joe', 52, 'London'],
-            ['Dawn', 39, 'New York'],
-            ['Peter', , 'France'],
-            ['Eleanor', 55],
-          ];
-          return data;
+          // note that it takes the form of a ReportData object - with a 'columns' and a 'rows' section
+          let reportData: ReportData = {
+            columns: [
+              {
+                ColumnId: 'Name',
+                FriendlyName: 'Name',
+                DataType: 'String',
+              },
+              {
+                ColumnId: 'Age',
+                FriendlyName: 'Age',
+                DataType: 'Number',
+              },
+              {
+                ColumnId: 'Location',
+                FriendlyName: 'Location',
+                DataType: 'String',
+              },
+            ],
+            rows: [
+              { Name: 'Joe', Age: 52, Location: 'London' },
+              { Name: 'Dawn', Age: 39, Location: 'New York' },
+              { Name: 'Peter', Location: 'France' },
+              { Name: 'Eleanor', Age: 525 },
+            ],
+          };
+          return reportData;
         },
       },
     ],
