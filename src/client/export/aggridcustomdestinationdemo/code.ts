@@ -10,6 +10,7 @@ import {
   PredefinedConfig,
   AdaptableApi,
   Report,
+  ReportData,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -84,7 +85,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
       {
         name: 'Email',
         type: 'CustomExportDestinationFunction',
-        handler(report: Report, reportData: any[], customDestinationData) {
+        handler(report: Report, reportData: ReportData, customDestinationData) {
           // here you can send via your email client or to an endpoint or whatever you need
           // in this example, we will just log the output to the console
           // note that we include the customdestinationdata which was created in the UI
@@ -99,7 +100,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
       {
         name: 'REST Endpoint',
         type: 'CustomExportDestinationFunction',
-        handler(report: Report, reportData: any[]) {
+        handler(report: Report, reportData: ReportData) {
           console.log(report.Name);
           console.log('will send to a server endpoint:', reportData);
         },
