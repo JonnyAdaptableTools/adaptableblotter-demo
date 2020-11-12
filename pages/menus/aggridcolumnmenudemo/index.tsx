@@ -80,6 +80,13 @@ export default () => {
       helpResources={
         <div>
           <a
+            href="https://docs.adaptabletools.com/docs/user-interface/column-menu"
+            target="_blank"
+          >
+            Column Menu Guide
+          </a>{' '}
+          |{' '}
+          <a
             href="https://docs.adaptabletools.com/docs/predefined-config/user-interface-config"
             target="_blank"
           >
@@ -105,13 +112,6 @@ export default () => {
             target="_blank"
           >
             User Interface Options
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/user-interface/column-menu"
-            target="_blank"
-          >
-            Column Menu Guide
           </a>{' '}
         </div>
       }

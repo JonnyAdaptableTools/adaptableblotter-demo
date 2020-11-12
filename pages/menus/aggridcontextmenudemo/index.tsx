@@ -77,7 +77,7 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/user-interface/context-menu"
             target="_blank"
           >
-            Context Menu Function
+            Context Menu Guide
           </a>{' '}
           |{' '}
           <a

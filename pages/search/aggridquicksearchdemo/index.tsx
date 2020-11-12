@@ -22,6 +22,18 @@ export default () => {
             matched cells - which we have done in this example by setting a
             darker yellow background with a brown font.
           </p>
+          <p>
+            By default the Quick Search box displays 'Search' as the placeholder
+            text, but this can be changed through <i>quickSearchPlaceholder</i>
+            property in{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/adaptable-options/search-options"
+              target="_blank"
+            >
+              Search Options
+            </a>
+            ; here it is set to 'Search Grid'.
+          </p>
         </div>
       }
       helpResources={

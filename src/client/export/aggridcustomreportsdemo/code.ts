@@ -30,7 +30,6 @@ const demoConfig: PredefinedConfig = {
       {
         ReportColumnScope: 'CustomColumns',
         ReportRowScope: 'CustomRows',
-        Scope: { ColumnIds: ['Name', 'Age', 'Location'] },
         Name: 'People Report',
         CustomReportFunction: 'getDummyData',
       },

@@ -54,6 +54,9 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Quick Search Demo',
+    searchOptions: {
+      quickSearchPlaceholder: 'Search Grid',
+    },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
