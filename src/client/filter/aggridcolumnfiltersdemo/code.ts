@@ -116,7 +116,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
     userName: 'Demo User',
     adaptableId: 'Column Filters Demo',
     filterOptions: {
-      showColumnValuesUsingCurrentSortOrder: true,
+      sortColumnValuesInFilter: true,
     },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
