@@ -17,11 +17,10 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    Revision: 15,
     Tabs: [
       {
         Name: 'Search',
-        Toolbars: ['AdvancedSearch', 'ColumnFilter', 'QuickSearch'],
+        Toolbars: ['Query', 'Filter', 'QuickSearch'],
       },
       {
         Name: 'Grid',
@@ -32,68 +31,33 @@ const demoConfig: PredefinedConfig = {
   QuickSearch: {
     QuickSearchText: 'l',
   },
-  AdvancedSearch: {
-    AdvancedSearches: [
-      {
-        Expression: {
-          RangeExpressions: [
-            {
-              ColumnId: 'InvoicedCost',
-              Ranges: [
-                {
-                  Operand1: '1200',
-                  Operand1Type: 'Value',
-                  Operator: 'GreaterThan',
-                },
-              ],
-            },
-          ],
-        },
-        Name: 'High Invoices',
-      },
-    ],
-    CurrentAdvancedSearch: 'High Invoices',
+  Query: {
+    CurrentQuery: '[InvoicedCost] > 1200 AND [Employee]= "Margaret Peacock" ',
   },
-  ColumnFilter: {
+  Filter: {
     ColumnFilters: [
       {
-        Filter: {
-          ColumnValueExpressions: [
-            {
-              ColumnDisplayValues: [
-                'Janet Leverling',
-                'Margaret Peacock',
-                'Nancy Davolio',
-              ],
-              ColumnId: 'Employee',
-            },
-          ],
-        },
-        ColumnId: 'Employee',
+        ColumnId: 'ChangeLastOrder',
+        Predicate: { PredicateId: 'Positive' },
       },
       {
-        Filter: {
-          FilterExpressions: [
-            {
-              ColumnId: 'ChangeLastOrder',
-              Filters: ['Positive'],
-            },
-          ],
+        ColumnId: 'Employee',
+        Predicate: {
+          PredicateId: 'Values',
+          Inputs: ['Janet Leverling', 'Margaret Peacock', 'Nancy Davolio'],
         },
-        ColumnId: 'ChangeLastOrder',
       },
     ],
   },
 } as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     autoGroupColumnDef: {
       sortable: true,
     },
@@ -114,7 +78,7 @@ export default (columnDefs: any[], rowData: any[]) => {
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   adaptableApi.eventApi.on(
     'SearchChanged',

@@ -14,8 +14,8 @@ export default () => {
           </p>
           <p>
             It is designed for use cases where the same, newly-created Adaptable
-            Object (e.g. a Layout, Conditional Style, Advanced Search, Report
-            etc.) will be required by multiple users.
+            Object (e.g. a Layout, Conditional Style, Shared Query, Report etc.)
+            will be required by multiple users.
           </p>
           <p>
             Team Sharing is based on a based pull-based workflow as the
@@ -28,7 +28,7 @@ export default () => {
               the row for the Layout (if <i>enableTeamSharing</i> is set to true
               in{' '}
               <a
-                href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_teamsharingoptions_.teamsharingoptions.html#enableteamsharing"
+                href="https://docs.adaptabletools.com/docs/adaptable-options/team-sharing-options"
                 target="_blank"
               >
                 Team Sharing Options
@@ -54,7 +54,7 @@ export default () => {
                 <b>
                   {' '}
                   <a
-                    href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_teamsharingoptions_.teamsharingoptions.html#getsharedentities"
+                    href="https://docs.adaptabletools.com/docs/api/teamsharingoptions#getsharedentities"
                     target="_blank"
                   >
                     getSharedEntities
@@ -67,7 +67,7 @@ export default () => {
               <li>
                 <b>
                   <a
-                    href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_teamsharingoptions_.teamsharingoptions.html#setsharedentities"
+                    href="https://docs.adaptabletools.com/docs/api/teamsharingoptions#setsharedentities"
                     target="_blank"
                   >
                     setSharedEntities
@@ -83,14 +83,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-team-sharing-guide.md"
+            href="https://docs.adaptabletools.com/docs/key-topics/team-sharing"
             target="_blank"
           >
             Team Sharing Guide
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_teamsharingoptions_.teamsharingoptions.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/team-sharing-options"
             target="_blank"
           >
             Team Sharing Options

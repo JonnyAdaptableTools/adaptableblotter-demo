@@ -18,7 +18,9 @@ const demoConfig: PredefinedConfig = {
   FormatColumn: {
     FormatColumns: [
       {
-        ColumnId: 'OrderDate',
+        Scope: {
+          ColumnIds: ['OrderDate'],
+        },
         Style: {
           FontWeight: 'Bold',
           FontSize: 'XSmall',
@@ -48,20 +50,19 @@ const demoConfig: PredefinedConfig = {
           'PackageCost',
           'Employee',
         ],
-        GroupedColumns: ['ShipCountry'],
+        RowGroupedColumns: ['ShipCountry'],
         Name: 'Grouped',
       },
     ],
   },
 } as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     // rowData, - note we are NOT setting rowData at startup
     enableRangeSelection: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     autoGroupColumnDef: {
       sortable: true,
       minWidth: 200,
@@ -82,12 +83,12 @@ export default (columnDefs: any[], rowData: any[]) => {
     adaptableId: 'Delayed Data Demo',
     predefinedConfig: demoConfig,
     layoutOptions: {
-      includeOpenedRowGroups: true,
+      includeExpandedRowGroups: true,
       autoSizeColumnsInLayout: true,
     },
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   // mimic getting data from the server by waiting for a few seconds
   adaptableApi.eventApi.on('AdaptableReady', () => {

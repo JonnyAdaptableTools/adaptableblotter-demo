@@ -38,7 +38,7 @@ const demoConfig: PredefinedConfig = {
       },
       {
         ColumnId: 'Employee',
-        CustomSortComparerFunction: 'employee',
+        CustomSortComparerFunction: 'EmployeeLastName',
       },
     ],
   },
@@ -49,10 +49,10 @@ const demoConfig: PredefinedConfig = {
         Name: 'Sorting Layout',
         ColumnSorts: [
           {
-            Column: 'Employee',
-            SortOrder: 'Ascending',
+            ColumnId: 'Employee',
+            SortOrder: 'Asc',
           },
-          { Column: 'ContactName', SortOrder: 'Descending' },
+          { ColumnId: 'ContactName', SortOrder: 'Desc' },
         ],
         Columns: [
           'ContactName',
@@ -76,7 +76,7 @@ const demoConfig: PredefinedConfig = {
           'PackageCost',
           'ShipCountry',
         ],
-        GroupedColumns: ['Employee'],
+        RowGroupedColumns: ['Employee'],
         Name: 'Grouping Layout',
       },
       {
@@ -86,7 +86,7 @@ const demoConfig: PredefinedConfig = {
           'ShipName',
           'ShipCountry',
         ],
-        GroupedColumns: ['ShipCountry'],
+        RowGroupedColumns: ['ShipCountry'],
         PivotDetails: {
           PivotColumns: ['ShipVia'],
           AggregationColumns: ['InvoicedCost', 'ItemCost'],
@@ -97,14 +97,13 @@ const demoConfig: PredefinedConfig = {
   },
 } as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     autoGroupColumnDef: {
       sortable: true,
     },
@@ -124,7 +123,7 @@ export default (columnDefs: any[], rowData: any[]) => {
     adaptableId: 'Custom Sort Demo',
     userFunctions: [
       {
-        name: 'employee',
+        name: 'EmployeeLastName',
         type: 'CustomSortComparerFunction',
         handler(valueA: any, valueB: any, nodeA?: any, nodeB?: any) {
           if (!valueA || !valueB) {
@@ -142,7 +141,7 @@ export default (columnDefs: any[], rowData: any[]) => {
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   return { adaptableOptions, adaptableApi };
 };

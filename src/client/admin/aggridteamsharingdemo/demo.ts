@@ -8,8 +8,8 @@ import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import init from './code';
 import { GridReadyEvent } from '@ag-grid-community/all-modules';
 const code = raw('./code.ts');
-console.log(2);
-export default () => {
+
+export default async () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
 
@@ -18,7 +18,7 @@ export default () => {
 
   const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
 
-  const { adaptableOptions, adaptableApi } = init(columndefs, rowData);
+  const { adaptableOptions, adaptableApi } = await init(columndefs, rowData);
 
   adaptableOptions.vendorGrid.onGridReady = function(
     gridReady: GridReadyEvent

@@ -18,14 +18,16 @@ const demoConfig: PredefinedConfig = {
     Tabs: [
       {
         Name: 'Grid',
-        Toolbars: ['Layout', 'ColumnFilter'],
+        Toolbars: ['Layout', 'Filter'],
       },
     ],
   },
   FormatColumn: {
     FormatColumns: [
       {
-        ColumnId: 'price',
+        Scope: {
+          ColumnIds: ['price'],
+        },
         CellAlignment: 'Right',
         DisplayFormat: {
           Formatter: 'NumberFormatter',
@@ -35,7 +37,9 @@ const demoConfig: PredefinedConfig = {
         },
       },
       {
-        ColumnId: 'firstBought',
+        Scope: {
+          ColumnIds: ['firstBought'],
+        },
         CellAlignment: 'Center',
         DisplayFormat: {
           Formatter: 'DateFormatter',
@@ -162,7 +166,7 @@ const rowdata: any[] = [
     firstBought: new Date(2017, 11, 4),
     milesToGallon: 21.345676,
     EnergyRating: 1,
-    EfficencyRating: 1,
+    EfficencyRating: 2,
   },
   {
     make: 'Toyota',
@@ -171,8 +175,8 @@ const rowdata: any[] = [
     firstUsed: new Date(2013, 1, 15),
     firstBought: new Date(2013, 1, 15),
     milesToGallon: 29.32432423,
-    EnergyRating: 3,
-    EfficencyRating: 3,
+    EnergyRating: 4,
+    EfficencyRating: 1,
   },
   {
     make: 'Toyota',
@@ -181,8 +185,8 @@ const rowdata: any[] = [
     firstUsed: new Date(2017, 6, 9),
     firstBought: new Date(2017, 6, 9),
     milesToGallon: 32.9032523473287,
-    EnergyRating: 4,
-    EfficencyRating: 4,
+    EnergyRating: 5,
+    EfficencyRating: 2,
   },
   {
     make: 'Ford',
@@ -191,7 +195,7 @@ const rowdata: any[] = [
     firstUsed: new Date(2009, 10, 2),
     firstBought: new Date(2009, 10, 2),
     milesToGallon: 28.247893473289,
-    EnergyRating: 2,
+    EnergyRating: 4,
     EfficencyRating: 2,
   },
   {
@@ -202,7 +206,7 @@ const rowdata: any[] = [
     firstBought: new Date(2018, 8, 12),
     milesToGallon: 34.0001,
     EnergyRating: 5,
-    EfficencyRating: 5,
+    EfficencyRating: 3,
   },
   {
     make: 'Ford',
@@ -211,7 +215,7 @@ const rowdata: any[] = [
     firstUsed: new Date(2017, 3, 3),
     firstBought: new Date(2017, 3, 3),
     milesToGallon: 31.2432432423,
-    EnergyRating: 1,
+    EnergyRating: 3,
     EfficencyRating: 1,
   },
   {
@@ -221,8 +225,8 @@ const rowdata: any[] = [
     firstUsed: new Date(2015, 4, 14),
     firstBought: new Date(2015, 4, 14),
     milesToGallon: 29.29432404,
-    EnergyRating: 3,
-    EfficencyRating: 3,
+    EnergyRating: 2,
+    EfficencyRating: 5,
   },
   {
     make: 'Porsche',
@@ -242,7 +246,7 @@ const rowdata: any[] = [
     firstBought: new Date(2008, 10, 7),
     milesToGallon: 35.7822957,
     EnergyRating: 5,
-    EfficencyRating: 5,
+    EfficencyRating: 2,
   },
   {
     make: 'Mitsubbishi',
@@ -251,12 +255,12 @@ const rowdata: any[] = [
     firstUsed: new Date(2017, 11, 14),
     firstBought: new Date(2017, 11, 14),
     milesToGallon: 19.224309,
-    EnergyRating: 5,
+    EnergyRating: 4,
     EfficencyRating: 5,
   },
 ];
 
-export default () => {
+export default async () => {
   const gridOptions: GridOptions = {
     columnDefs: columnSchema,
     //  rowData: rowdata,
@@ -264,7 +268,6 @@ export default () => {
     sideBar: true,
     suppressAggFuncInHeader: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     // this is not strictly required but very useful for column data type identification
     // if not used then the grid will try to work out the datatype of the column based on the initial value
     columnTypes: {
@@ -285,7 +288,7 @@ export default () => {
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
 
-  let adaptableApi = Adaptable.init(adaptableOptions);
+  let adaptableApi = await Adaptable.init(adaptableOptions);
 
   adaptableApi.eventApi.on('AdaptableReady', () => {
     setTimeout(() => {

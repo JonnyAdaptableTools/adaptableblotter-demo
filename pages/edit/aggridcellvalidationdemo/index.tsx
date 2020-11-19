@@ -20,29 +20,42 @@ export default () => {
             regarding the change.
           </p>
           <p>
-            This example has 4 Validation Rules: (1) All Edits are prevented in
-            the 'Cust Ref' column; (2) warnings are displayed for all edits in
-            'Employee' column; (3) The 'Invoiced' Column cannot accept values
-            over 3000; and (4) a warning is shown if the 'Order Cost' column
-            more than doubles in value. <b>Note:</b> these cell validation rules
-            apply also when you perfrom a Smart Edit or Bulk Update.
+            This example has 4 Validation Rules:{' '}
+            <ul>
+              <li>All Edits are prevented in the 'Cust Ref' column</li>
+              <li>warnings are displayed for all edits in 'Employee' column</li>
+              <li>Invoiced' Column cannot accept values over 3000</li>
+              <li>
+                a warning is shown if the 'Order Cost' column more than doubles
+                in value
+              </li>
+            </ul>
+            Note: these cell validation rules apply also when you perfrom a
+            Smart Edit or Bulk Update.
           </p>
         </div>
       }
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_cellvalidationstate_.cellvalidationstate.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/cell-validation-function"
             target="_blank"
           >
-            Predefined Config
-          </a>
-          ,{' '}
+            Cell Validation Read Me
+          </a>{' '}
+          |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_cellvalidationapi_.cellvalidationapi.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/cell-validation-config"
             target="_blank"
           >
-            Adaptable API
+            Cell Validation Config
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-api/cell-validation-api"
+            target="_blank"
+          >
+            Cell Validation Api
           </a>
         </div>
       }

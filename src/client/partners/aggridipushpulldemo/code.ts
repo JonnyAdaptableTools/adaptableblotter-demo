@@ -9,44 +9,36 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
+  LiveDataChangedEventArgs,
+  LiveDataChangedInfo,
+  IPushPullApi,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
-
 import ipp from '@adaptabletools/adaptable-plugin-ipushpull';
-import { IIPPConfig } from 'ipushpull-js/dist/Config';
 
 var adaptableApi: AdaptableApi;
 
-const pushpullConfig: IIPPConfig = {
-  api_url: 'https://www.ipushpull.com/api/1.0',
-  ws_url: 'https://www.ipushpull.com',
-  web_url: 'https://www.ipushpull.com',
-  docs_url: 'https://docs.ipushpull.com',
-  storage_prefix: 'ipp_local',
-  api_key: '',
-  api_secret: '',
-  transport: 'polling',
-  hsts: false, // strict cors policy
-};
-
 const demoConfig: PredefinedConfig = {
-  // IPushPull: {
-  //    iPushPullInstance: ipushpull,
-  //   Username: process.env.IPUSHPULL_USERNAME,
-  //   Password: process.env.IPUSHPULL_PASSWORD,
-  //   ThrottleTime: 5000,
-  //    IncludeSystemReports: true,
-  //  },
   Dashboard: {
     Tabs: [
       {
         Name: 'Toolbars',
-        Toolbars: ['IPushPull', 'CellSummary'],
+        Toolbars: ['IPushPull', 'CellSummary', 'Export'],
       },
     ],
   },
   Theme: {
     CurrentTheme: 'dark',
+  },
+  Export: {
+    Reports: [
+      {
+        Name: 'Euro Trades',
+        ReportColumnScope: 'AllColumns',
+        ReportRowScope: 'ExpressionRows',
+        Expression: '[currency] = "EUR" ',
+      },
+    ],
   },
   FlashingCell: {
     FlashingCells: [
@@ -110,7 +102,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     autoGroupColumnDef: {
       sortable: true,
     },
@@ -128,21 +119,51 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'tradeId',
     userName: 'Demo User',
     adaptableId: 'ipushpull Demo',
-
+    // this is the ipushpull plugin - it requires an ipushpulloptions object, details of which can be found at:
+    // https://docs.adaptabletools.com/docs/plugins/ipushpull/ipushpull-plugin-options
     plugins: [
       ipp({
         username: process.env.IPUSHPULL_USERNAME,
         password: process.env.IPUSHPULL_PASSWORD,
         throttleTime: 5000,
         includeSystemReports: true,
-        ippConfig: pushpullConfig,
+        autoLogin: true,
+        ippConfig: {
+          // include here your companies values for 'api_secret' and 'api_key'
+          api_url: 'https://www.ipushpull.com/api/1.0',
+          ws_url: 'https://www.ipushpull.com',
+          web_url: 'https://www.ipushpull.com',
+          docs_url: 'https://docs.ipushpull.com',
+          storage_prefix: 'ipp_local',
+          transport: 'polling',
+          hsts: false, // strict cors policy
+        },
       }),
     ],
-
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
   adaptableApi = await Adaptable.init(adaptableOptions);
+  const ipushpullApi: IPushPullApi = adaptableApi.pluginsApi.getPluginApi(
+    'ipushpull'
+  );
+  adaptableApi.eventApi.on(
+    'LiveDataChanged',
+
+    (liveDataChangedEventArgs: LiveDataChangedEventArgs) => {
+      let liveDataChangedInfo: LiveDataChangedInfo =
+        liveDataChangedEventArgs.data[0].id;
+      console.log('The Live Data Changed Event was triggered');
+      console.log(liveDataChangedInfo);
+      // get the username for the logged in user
+      if (
+        liveDataChangedInfo.LiveDataTrigger == 'Connected' &&
+        liveDataChangedInfo.ReportDestination == 'ipushpull'
+      ) {
+        console.log('logged in user: ' + ipushpullApi.getIPushPullUsername());
+      }
+    }
+  );
 
   return { adaptableOptions, adaptableApi };
 };

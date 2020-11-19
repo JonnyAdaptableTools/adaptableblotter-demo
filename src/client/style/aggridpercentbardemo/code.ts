@@ -45,6 +45,14 @@ const demoConfig: PredefinedConfig = {
         ShowToolTip: true,
         ShowValue: false,
       },
+      {
+        ColumnId: 'PackageCost',
+        ColumnComparison: {
+          MinValue: 0,
+          MaxValue: 'OrderCost',
+          Color: '#D2691E',
+        },
+      },
     ],
   },
   Layout: {
@@ -54,30 +62,29 @@ const demoConfig: PredefinedConfig = {
         Name: 'Percent Bar Layout',
         Columns: [
           'OrderId',
-          'OrderDate',
           'ItemCount',
           'CustomerReference',
           'InvoicedCost',
           'ContactName',
           'ItemCost',
+          'PackageCost',
+          'OrderCost',
           'CompanyName',
           'ChangeLastOrder',
-          'OrderCost',
-          'PackageCost',
+          'OrderDate',
         ],
       },
     ],
   },
 } as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     autoGroupColumnDef: {
       sortable: true,
     },
@@ -98,7 +105,7 @@ export default (columnDefs: any[], rowData: any[]) => {
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   return { adaptableOptions, adaptableApi };
 };

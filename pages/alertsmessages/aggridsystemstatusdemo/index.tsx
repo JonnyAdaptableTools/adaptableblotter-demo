@@ -26,7 +26,7 @@ export default () => {
           <p>
             You can set the System Status through{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_dashboardstate_.dashboardstate.html"
+              href="https://docs.adaptabletools.com/docs/predefined-config/dashboard-config"
               target="_blank"
             >
               Dashboard State
@@ -38,7 +38,7 @@ export default () => {
           <p>
             You set System Status messages through code using the{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_api_systemstatusapi_.systemstatusapi.html"
+              href="https://docs.adaptabletools.com/docs/adaptable-api/system-status-api"
               target="_blank"
             >
               Adaptable API
@@ -58,14 +58,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_systemstatusstate_.systemstatusstate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/system-status-config"
             target="_blank"
           >
             Predefined Config
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_systemstatusapi_.systemstatusapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/system-status-api"
             target="_blank"
           >
             Adaptable API

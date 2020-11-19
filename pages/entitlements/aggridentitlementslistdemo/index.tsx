@@ -31,8 +31,8 @@ export default () => {
             AccessLevel):
             <ul>
               <li>
-                AdvancedSearch - set to <i>Hidden</i> with the result that the
-                Advanced Search Toolbar, ToolPanel and Menu Option are not
+                Cell Summary - set to <i>Hidden</i> with the result that the
+                Cell Summary Toolbar, ToolPanel and Menu Option are not
                 available anywhere in AdapTable and cannot be accessed by users.
               </li>
               <li>
@@ -52,21 +52,21 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_entitlementstate_.entitlementstate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/entitlements-config"
             target="_blank"
           >
-            Predefined Config
+            Entitlements Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_entitlementsapi_.entitlementsapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/entitlements-apif"
             target="_blank"
           >
-            Adaptable API
+            Entitlements Api
           </a>{' '}
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-entitlements-guide.md"
+            href="https://docs.adaptabletools.com/docs/key-topics/entitlements"
             target="_blank"
           >
             Entitlements Guide

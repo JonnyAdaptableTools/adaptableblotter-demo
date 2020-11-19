@@ -42,17 +42,17 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_eventapi_.eventapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-events/adaptable-events-overview"
             target="_blank"
           >
-            Event API
+            Adaptable Events
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_events_adaptableready_.adaptablereadyinfo.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-events/adaptable-ready-event"
             target="_blank"
           >
-            AdaptableReadyInfo object
+            Adaptable Ready Event
           </a>
         </div>
       }

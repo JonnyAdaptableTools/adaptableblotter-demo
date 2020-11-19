@@ -20,11 +20,10 @@ const demoConfig: PredefinedConfig = {
       {
         Columns: [],
         ColumnSorts: [],
-        GroupedColumns: ['ShipCountry'],
-        PivotDetails: {
-          PivotColumns: ['ShipVia'],
-          AggregationColumns: ['InvoicedCost', 'ItemCost'],
-        },
+        RowGroupedColumns: ['ShipCountry'],
+        PivotColumns: ['ShipVia'],
+        AggregationColumns: { InvoicedCost: 'sum', ItemCount: 'max' },
+        EnablePivot: true,
         Name: 'Pivot View',
       },
       {
@@ -45,8 +44,8 @@ const demoConfig: PredefinedConfig = {
         ],
         ColumnSorts: [
           {
-            Column: 'ShipVia',
-            SortOrder: 'Ascending',
+            ColumnId: 'ShipVia',
+            SortOrder: 'Asc',
           },
         ],
         Name: 'Non Pivot View',
@@ -61,16 +60,30 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
+  FormatColumn: {
+    FormatColumns: [
+      {
+        Scope: {
+          ColumnIds: ['InvoicedCost'],
+        },
+        DisplayFormat: {
+          Formatter: 'NumberFormatter',
+          Options: {
+            FractionDigits: 4,
+          },
+        },
+      },
+    ],
+  },
 } as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     groupIncludeTotalFooter: true,
     groupIncludeFooter: true,
     suppressAggFuncInHeader: true,
@@ -83,10 +96,8 @@ export default (columnDefs: any[], rowData: any[]) => {
       abColDefNumberArray: {},
     },
     processSecondaryColDef: function(colDef) {
-      let col = colDef.pivotKeys?.find(pk => pk === 'Speedy Express');
-      if (col) {
-        colDef.headerName = colDef.headerName!.toUpperCase();
-        colDef.headerClass = 'secondary-column-color-background';
+      if (colDef.headerName == 'Item Count') {
+        colDef.headerName += ' (max)';
       }
     },
     processSecondaryColGroupDef: function(colGroupDef) {
@@ -109,7 +120,7 @@ export default (columnDefs: any[], rowData: any[]) => {
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   return { adaptableOptions, adaptableApi };
 };

@@ -5,11 +5,11 @@ import React from 'react';
 
 export default (props: { onReady?: (config: any) => void }) => {
   useEffect(() => {
-    const result = demo();
-
-    if (props.onReady) {
-      props.onReady(result);
-    }
+    demo().then(result => {
+      if (props.onReady) {
+        props.onReady(result);
+      }
+    });
   }, []);
   return null;
 };

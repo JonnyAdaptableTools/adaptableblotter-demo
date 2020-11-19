@@ -18,7 +18,7 @@ export default () => {
             allowed values for lookups or filtering. You do this through the{' '}
             <b>getColumnValues</b> property of{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_queryoptions_.queryoptions.html"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/query-options"
               target="_blank"
             >
               Query Options

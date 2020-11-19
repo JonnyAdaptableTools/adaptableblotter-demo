@@ -45,13 +45,12 @@ const demoConfig: PredefinedConfig = {
   },
 } as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
     enableRangeSelection: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     sideBar: true,
     rowGroupPanelShow: 'always',
     autoGroupColumnDef: {
@@ -74,13 +73,10 @@ export default (columnDefs: any[], rowData: any[]) => {
     layoutOptions: {
       autoSaveLayouts: false,
     },
-    userInterfaceOptions: {
-      showAdaptableToolPanel: true,
-    },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   return { adaptableOptions, adaptableApi };
 };

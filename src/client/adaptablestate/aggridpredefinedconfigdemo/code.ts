@@ -16,7 +16,7 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleButtons: ['Dashboard', 'ColumnChooser', 'AdvancedSearch'],
+    VisibleButtons: ['Dashboard', 'Query'],
     Tabs: [
       {
         Name: 'Toolbars',
@@ -32,29 +32,18 @@ const demoConfig: PredefinedConfig = {
     Reports: [
       {
         Name: 'High Freight',
-        ReportColumnScope: 'BespokeColumns',
+        ReportColumnScope: 'ScopeColumns',
         ReportRowScope: 'ExpressionRows',
-        ColumnIds: [
-          'OrderId',
-          'Freight',
-          'Employee',
-          'PackageCost',
-          'InvoicedCost',
-        ],
-        Expression: {
-          RangeExpressions: [
-            {
-              ColumnId: 'Freight',
-              Ranges: [
-                {
-                  Operand1: '500',
-                  Operand1Type: 'Value',
-                  Operator: 'GreaterThan',
-                },
-              ],
-            },
+        Scope: {
+          ColumnIds: [
+            'OrderId',
+            'Freight',
+            'Employee',
+            'PackageCost',
+            'InvoicedCost',
           ],
         },
+        Expression: '[Freight] > 500',
       },
     ],
   },
@@ -73,33 +62,25 @@ const demoConfig: PredefinedConfig = {
   ConditionalStyle: {
     ConditionalStyles: [
       {
-        ColumnId: 'ChangeLastOrder',
+        Scope: {
+          DataTypes: ['Number'],
+        },
         Style: {
           ForeColor: '#008000',
         },
-        ConditionalStyleScope: 'Column',
-        Expression: {
-          FilterExpressions: [
-            {
-              ColumnId: 'ChangeLastOrder',
-              Filters: ['Positive'],
-            },
-          ],
+        Predicate: {
+          Id: 'Positive',
         },
       },
       {
-        ColumnId: 'ChangeLastOrder',
+        Scope: {
+          DataTypes: ['Number'],
+        },
         Style: {
           ForeColor: '#ff0000',
         },
-        ConditionalStyleScope: 'Column',
-        Expression: {
-          FilterExpressions: [
-            {
-              ColumnId: 'ChangeLastOrder',
-              Filters: ['Negative'],
-            },
-          ],
+        Predicate: {
+          PredicateId: 'Negative',
         },
       },
       {
@@ -108,21 +89,10 @@ const demoConfig: PredefinedConfig = {
           FontStyle: 'Italic',
           ForeColor: '#000000',
         },
-        ConditionalStyleScope: 'Row',
-        Expression: {
-          RangeExpressions: [
-            {
-              ColumnId: 'InvoicedCost',
-              Ranges: [
-                {
-                  Operand1: '2000',
-                  Operand1Type: 'Value',
-                  Operator: 'GreaterThan',
-                },
-              ],
-            },
-          ],
+        Scope: {
+          All: true,
         },
+        Expression: '[InvoicedCost] > 2000',
       },
     ],
   },
@@ -144,7 +114,6 @@ const demoConfig: PredefinedConfig = {
           'ItemCost',
           'ItemCount',
         ],
-        ColumnSorts: [],
         Name: 'Orders View',
       },
       {
@@ -159,8 +128,8 @@ const demoConfig: PredefinedConfig = {
         ],
         ColumnSorts: [
           {
-            Column: 'ShipName',
-            SortOrder: 'Ascending',
+            ColumnId: 'ShipName',
+            SortOrder: 'Asc',
           },
         ],
         Name: 'Shipping View',
@@ -170,20 +139,20 @@ const demoConfig: PredefinedConfig = {
   FormatColumn: {
     FormatColumns: [
       {
-        ColumnId: 'OrderId',
+        Scope: {
+          ColumnIds: ['OrderId'],
+        },
         Style: {
           BackColor: '#d4fb79',
           ForeColor: '#8b0000',
           FontWeight: 'Normal',
           FontStyle: 'Normal',
-          ClassName: '',
         },
       },
     ],
   },
   QuickSearch: {
-    QuickSearchText: 'g*',
-    DisplayAction: 'ShowRowAndHighlightCell',
+    QuickSearchText: 'g',
     Style: {
       BackColor: '#ffff00',
       ForeColor: '#8b0000',
@@ -191,14 +160,13 @@ const demoConfig: PredefinedConfig = {
   },
 } as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     autoGroupColumnDef: {
       sortable: true,
     },
@@ -219,7 +187,7 @@ export default (columnDefs: any[], rowData: any[]) => {
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   return { adaptableOptions, adaptableApi };
 };

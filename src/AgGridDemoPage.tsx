@@ -14,6 +14,8 @@ export type AgGridDemoPageProps = {
   loaded?: boolean;
   adaptableOptions?: any;
   className?: string;
+  agGridTheme?: string;
+
   exampleCode?: string;
   description?: any;
   helpResources?: any;
@@ -131,6 +133,7 @@ const AgGridDemoPage = ({
   loaded,
   exampleCode,
   className,
+  agGridTheme,
   adaptableOptions,
   helpResources,
 }: //testDescription,
@@ -161,9 +164,21 @@ AgGridDemoPageProps) => {
           {description}
         </Snippet>
         <HelpResources>{helpResources}</HelpResources>
+        <div
+          id="alertDiv"
+          style={{
+            color: 'blue',
+            fontWeight: 'bold',
+            margin: '2px',
+          }}
+        />
         <div id="adaptable" />
         <p />
-        <div id="grid" className="" style={{ height: loaded ? 700 : 0 }} />
+        <div
+          id="grid"
+          className={agGridTheme || 'ag-theme-balham'}
+          style={{ height: loaded ? 700 : 0 }}
+        />
         {children}
         {exampleCode ? (
           <Snippet title={<b>Code</b>} shouldCopy={true} className={'config'}>

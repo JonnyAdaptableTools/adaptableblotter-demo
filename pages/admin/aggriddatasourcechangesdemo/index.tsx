@@ -25,7 +25,7 @@ export default () => {
             Note: we sort <b>Trade Id</b> column in descending order, filter{' '}
             <b>Counterparty</b> by 'm', apply a Conditional Style on any rows
             where <b>Currency</b> is 'EUR', 'GBP' or 'USD' and run Quick Search
-            on any cells starting with 'I' ('i*').
+            on any cells containing 'I'.
           </p>
         </div>
       }

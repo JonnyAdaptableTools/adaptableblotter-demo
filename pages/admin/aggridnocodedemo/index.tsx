@@ -14,12 +14,15 @@ export default () => {
           </p>
           <p>
             It will dynamically provide a fully functional AdapTable including
-            advanced features like state management and audit log, enabling you
-            to attach to the same source daily or multiple different sources.
+            advanced features like state management, team sharing and Audit Log.
           </p>
           <p>
-            Simply link to a file (or drag and drop) and the AdapTable No Code
-            Wizard will appear.
+            This enables you to attach to the same data source daily or to
+            multiple different sources.
+          </p>
+          <p>
+            To run No-Code: simply link to an existing Excel or JSON file (or
+            drag and drop) and the AdapTable No Code Wizard will appear.
           </p>
           <p>
             In the first step it will read the file and work out which columns
@@ -29,7 +32,7 @@ export default () => {
           <p>
             In the second (optional) step you can set up many of the{' '}
             <a
-              href="https://api.adaptabletools.com/modules/_src_adaptableoptions_adaptableoptions_.html"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/adaptable-options-overview"
               target="_blank"
             >
               Adaptable Options
@@ -41,7 +44,7 @@ export default () => {
             <b>Note: </b> The source data must have one column that contains{' '}
             <b>unique values</b> which you will set as the{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_adaptableoptions_.adaptableoptions.html#primarykey"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/base-options#primarykey"
               target="_blank"
             >
               Primary Key column
@@ -60,7 +63,7 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/tree/master/packages/plugins/nocode-aggrid"
+            href="https://docs.adaptabletools.com/docs/plugins/nocode/nocode-plugin"
             target="_blank"
           >
             No Code Plugin

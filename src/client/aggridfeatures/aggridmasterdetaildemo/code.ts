@@ -15,7 +15,11 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {} as PredefinedConfig;
 
-export default (columnDefs: any[], detailColumnDefs: any[], rowData: any[]) => {
+export default async (
+  columnDefs: any[],
+  detailColumnDefs: any[],
+  rowData: any[]
+) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
@@ -34,7 +38,6 @@ export default (columnDefs: any[], detailColumnDefs: any[], rowData: any[]) => {
       return dataItem ? dataItem.squad.length > 0 : false;
     },
     enableRangeSelection: true,
-    floatingFilter: true,
     suppressColumnVirtualisation: false,
     suppressMenuHide: true,
     columnTypes: {
@@ -54,38 +57,29 @@ export default (columnDefs: any[], detailColumnDefs: any[], rowData: any[]) => {
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
     plugins: [
       masterDetailAgGridPlugin({
-        primaryKey: 'name',
-        adaptableId: 'Master Detail Demo - Detail Grid',
-        predefinedConfig: {
-          ConditionalStyle: {
-            ConditionalStyles: [
-              {
-                Style: {
-                  BackColor: '#ffffe0',
+        detailAdaptableOptions: {
+          primaryKey: 'name',
+          adaptableId: 'Master Detail Demo - Detail Grid',
+          predefinedConfig: {
+            ConditionalStyle: {
+              ConditionalStyles: [
+                {
+                  Style: {
+                    BackColor: 'yellow',
+                  },
+                  Expression: '[age] > 30',
+                  Scope: {
+                    All: true,
+                  },
                 },
-                ConditionalStyleScope: 'Row',
-                Expression: {
-                  RangeExpressions: [
-                    {
-                      ColumnId: 'age',
-                      Ranges: [
-                        {
-                          Operand1: '30',
-                          Operand1Type: 'Value',
-                          Operator: 'GreaterThan',
-                        },
-                      ],
-                    },
-                  ],
-                },
-              },
-            ],
+              ],
+            },
           },
         },
       }),
     ],
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   return { adaptableOptions, adaptableApi };
 };

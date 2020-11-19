@@ -49,14 +49,13 @@ const demoConfig: PredefinedConfig = {
   },
 } as PredefinedConfig;
 
-export default (columnDefs: any[]) => {
+export default async (columnDefs: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData: undefined,
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     statusBar: {
       statusPanels: [
         { statusPanel: 'agTotalRowCountComponent', align: 'left' },
@@ -80,7 +79,7 @@ export default (columnDefs: any[]) => {
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   const helperAgGrid = new HelperAgGrid();
   adaptableApi.eventApi.on(

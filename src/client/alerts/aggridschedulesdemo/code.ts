@@ -62,25 +62,27 @@ const demoConfig: PredefinedConfig = {
     CurrentReport: 'Current Orders',
     Reports: [
       {
-        ColumnIds: [
-          'OrderId',
-          'ChangeLastOrder',
-          'ContactName',
-          'InvoicedCost',
-          'ItemCost',
-          'ItemCount',
-          'OrderCost',
-          'OrderDate',
-        ],
+        Scope: {
+          ColumnIds: [
+            'OrderId',
+            'ChangeLastOrder',
+            'ContactName',
+            'InvoicedCost',
+            'ItemCost',
+            'ItemCount',
+            'OrderCost',
+            'OrderDate',
+          ],
+        },
         Name: 'Current Orders',
-        ReportColumnScope: 'BespokeColumns',
+        ReportColumnScope: 'ScopeColumns',
         ReportRowScope: 'VisibleRows',
       },
     ],
   },
 } as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
@@ -88,7 +90,6 @@ export default (columnDefs: any[], rowData: any[]) => {
 
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     autoGroupColumnDef: {
       sortable: true,
     },
@@ -109,7 +110,7 @@ export default (columnDefs: any[], rowData: any[]) => {
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   return { adaptableOptions, adaptableApi };
 };

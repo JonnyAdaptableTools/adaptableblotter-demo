@@ -15,34 +15,24 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
-  SystemFilter: {
-    SystemFilters: ['Positive', 'Zero'],
-  },
-  ColumnFilter: {
+  Filter: {
+    SystemFilters: ['Positive', 'Zero', 'Contains', 'Equals', 'Is', 'On'],
     ColumnFilters: [
       {
-        Filter: {
-          FilterExpressions: [
-            {
-              ColumnId: 'ChangeLastOrder',
-              Filters: ['Positive'],
-            },
-          ],
-        },
         ColumnId: 'ChangeLastOrder',
+        Predicate: { PredicateId: 'Positive' },
       },
     ],
   },
 } as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     statusBar: {
       statusPanels: [
         { statusPanel: 'agTotalRowCountComponent', align: 'left' },
@@ -66,7 +56,7 @@ export default (columnDefs: any[], rowData: any[]) => {
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   return { adaptableOptions, adaptableApi };
 };

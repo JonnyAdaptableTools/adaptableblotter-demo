@@ -22,17 +22,16 @@ export default () => {
             named groups of associated Toolbars.
           </p>
           <p>
-            Note: if there are no Tabs, AdapTable will create a default one
-            called 'Toolbars' which will contain either the collection of
-            VisibleToolbars previously set, or - failing that - the default
-            list.
+            Note: if there are no Tabs in the Config, AdapTable will create a
+            Tab called 'Toolbars' which will contain the default list of
+            'Query', 'Layout', 'Export', 'Filter'.
           </p>
           <p>
             In this example we created 3 Tabs: 'Grid', 'Edit' and 'Search', each
             with a selection of Toolbars. (Note: Grid includes the 'Chart'
             toolbar for which we needed to install the{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_adaptableoptions_.adaptableoptions.html#plugins"
+              href="https://docs.adaptabletools.com/docs/plugins/chart/chart-plugin"
               target="_blank"
             >
               Charts plugin
@@ -44,24 +43,24 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/dashboard-function.md"
+            href="https://docs.adaptabletools.com/docs/user-interface/dashboard"
             target="_blank"
           >
-            Read Me
+            Dashboard Read Me
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_dashboardstate_.dashboardstate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/dashboard-config"
             target="_blank"
           >
-            Predefined Config
+            Dashboard Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_dashboardapi_.dashboardapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/dashboard-api"
             target="_blank"
           >
-            Adaptable API
+            Dashboard Api
           </a>{' '}
           |{' '}
           <a href="https://youtu.be/KrahnLFYHjs" target="_blank">

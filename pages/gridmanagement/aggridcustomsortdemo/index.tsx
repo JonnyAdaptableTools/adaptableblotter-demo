@@ -25,7 +25,7 @@ export default () => {
           <p>
             You can define (in your{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_customsortstate_.customsortstate.html"
+              href="https://docs.adaptabletools.com/docs/predefined-config/custom-sort-config"
               target="_blank"
             >
               Custom Sort Predefined Config
@@ -36,18 +36,19 @@ export default () => {
           <ul>
             <li>
               <b>A 'hard-coded' list of sorted values</b> - e.g. what we provide
-              for the 'Contact' column in this demo
+              for the 'Contact' and 'Ship Via' columns in this demo
             </li>
             <li>
-              <b>A standard comparer function</b> that you reference in Config,
-              but provide the actual implementation in{' '}
+              <b>A standard comparer function</b> - that you reference in
+              Config, but provide the actual implementation in{' '}
               <a
-                href="https://api.adaptabletools.com/modules/_src_adaptableoptions_userfunctions_.html"
+                href="https://docs.adaptabletools.com/docs/adaptable-options/user-functions"
                 target="_blank"
               >
                 UserFunctions
               </a>{' '}
-              e.g. the 'Employee' column in this demo .
+              . The 'Employee' column in this demo has a custom sort using the
+              'EmployeeLastName' function (see the code below).
             </li>
           </ul>
           <p>
@@ -60,32 +61,32 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_customsortstate_.customsortstate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/custom-sort-config"
             target="_blank"
           >
-            Predefined Config
+            Custom Sort Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_customsortapi_.customsortapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/custom-sort-api"
             target="_blank"
           >
-            Adaptable API
+            Custom Sort Api
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/modules/_src_adaptableoptions_userfunctions_.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/custom-sort-function"
+            target="_blank"
+          >
+            Custom Sort Read Me
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-options/user-functions"
             target="_blank"
           >
             User Functions
           </a>{' '}
-          |{' '}
-          <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/custom-sort-function.md"
-            target="_blank"
-          >
-            Custom Sort Read Me
-          </a>
           .
         </div>
       }

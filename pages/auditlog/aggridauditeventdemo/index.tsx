@@ -24,27 +24,28 @@ export default () => {
             the <b>Console</b> or fired as an <b>Event</b>.
           </p>
           <p>
-            This example fires an event when a 'Cell Edit' Audit Log message is
-            triggered; we handle the event and send the output to the console
-            for display purposes.{' '}
+            This example fires an event when either a 'Cell Edit' or 'Function
+            Applied' Audit Log message is triggered; we handle the event and
+            send the output to the console for display purposes.{' '}
           </p>
           <p>
-            Open up the Console and edit a cell in the Grid and see that the
-            event is captured and the payload sent to the console.
+            Open up the Console and edit a cell in the Grid, or run a function)
+            and see that the event is captured and the payload sent to the
+            console.
           </p>
         </div>
       }
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_auditoptions_.auditoptions.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/audit-options"
             target="_blank"
           >
             Audit Options
           </a>{' '}
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-audit-log-guide.md"
+            href="https://docs.adaptabletools.com/docs/key-topics/audit-log"
             target="_blank"
           >
             Audit Log Read Me

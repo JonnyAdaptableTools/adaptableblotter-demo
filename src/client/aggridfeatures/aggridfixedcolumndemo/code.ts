@@ -41,7 +41,7 @@ const demoConfig: PredefinedConfig = {
   },
 } as PredefinedConfig;
 
-export default (columnDefs: ColDef[], rowData: any[]) => {
+export default async (columnDefs: ColDef[], rowData: any[]) => {
   columnDefs.find(c => c.field == 'OrderId')!.lockPosition = true;
 
   const gridOptions: GridOptions = {
@@ -50,7 +50,6 @@ export default (columnDefs: ColDef[], rowData: any[]) => {
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     groupIncludeTotalFooter: true,
     columnTypes: {
       abColDefNumber: {},
@@ -69,7 +68,7 @@ export default (columnDefs: ColDef[], rowData: any[]) => {
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   return { adaptableOptions, adaptableApi };
 };

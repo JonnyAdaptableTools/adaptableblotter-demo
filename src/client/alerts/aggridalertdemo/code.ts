@@ -25,26 +25,31 @@ const demoConfig: PredefinedConfig = {
   },
   Alert: {
     MaxAlertsInStore: 10,
+    AlertDisplayDiv: 'alertDiv',
     AlertDefinitions: [
       {
-        ColumnId: 'InvoicedCost',
-        MessageType: 'Warning',
-        Range: {
-          Operand1: '2000',
-          Operand1Type: 'Value',
-          Operator: 'GreaterThan',
+        Scope: {
+          ColumnIds: ['InvoicedCost'],
         },
+        MessageType: 'Warning',
+        Predicate: {
+          PredicateId: 'GreaterThan',
+          Inputs: [2000],
+        },
+
         AlertProperties: {
           ShowPopup: true,
         },
       },
+
       {
-        ColumnId: 'ItemCount',
+        Scope: {
+          ColumnIds: ['ItemCount'],
+        },
         MessageType: 'Info',
-        Range: {
-          Operand1: '100',
-          Operand1Type: 'Value',
-          Operator: 'PercentChange',
+        Predicate: {
+          PredicateId: 'PercentChange',
+          Inputs: [100],
         },
         AlertProperties: {
           ShowPopup: false,
@@ -54,7 +59,7 @@ const demoConfig: PredefinedConfig = {
   },
 } as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   let gridOptions: GridOptions = {
     columnDefs,
     rowData,
@@ -62,7 +67,6 @@ export default (columnDefs: any[], rowData: any[]) => {
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     autoGroupColumnDef: {
       sortable: true,
     },
@@ -83,7 +87,7 @@ export default (columnDefs: any[], rowData: any[]) => {
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   return { adaptableOptions, adaptableApi };
 };

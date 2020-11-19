@@ -11,6 +11,7 @@ import {
   AdaptableApi,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
+import { DataGenerator } from '../../../Helpers/DataGenerator';
 
 var adaptableApi: AdaptableApi;
 
@@ -34,8 +35,9 @@ const demoConfig: PredefinedConfig = {
   CalculatedColumn: {
     CalculatedColumns: [
       {
-        ColumnExpression: 'Col("ItemCost") / Col("ItemCount")',
-        ColumnId: 'Avg Item Cost',
+        ColumnExpression: '[ItemCost] / [ItemCount]',
+        ColumnId: 'AvgCost',
+        FriendlyName: 'Avg Item Cost',
       },
     ],
   },
@@ -43,17 +45,20 @@ const demoConfig: PredefinedConfig = {
     FreeTextColumns: [
       {
         ColumnId: 'Comments',
+        FriendlyName: 'Comments',
         DefaultValue: '',
         FreeTextStoredValues: [
-          { PrimaryKey: 11137, FreeText: 'Dispatch asap' },
-          { PrimaryKey: 11133, FreeText: 'Angry customer' },
-          { PrimaryKey: 11128, FreeText: 'Important order' },
+          { PrimaryKey: 10250, FreeText: 'Dispatch asap' },
+          { PrimaryKey: 10254, FreeText: 'Angry customer' },
+          {
+            PrimaryKey: 10259,
+            FreeText: 'This is an Important order - ensure its done properly',
+          },
         ],
       },
     ],
   },
   Layout: {
-    Revision: 1,
     CurrentLayout: 'Simple Layout',
     Layouts: [
       {
@@ -64,7 +69,6 @@ const demoConfig: PredefinedConfig = {
           'ItemCost',
           'ItemCount',
           'Comments',
-          'Avg Item Cost',
           'CustomerReference',
           'CompanyName',
           'ContactName',
@@ -75,13 +79,34 @@ const demoConfig: PredefinedConfig = {
         ],
       },
       {
+        Name: 'Col Widths Layout',
+        Columns: [
+          'OrderId',
+          'OrderDate',
+          'ItemCost',
+          'ItemCount',
+          'Comments',
+          'CustomerReference',
+          'CompanyName',
+          'ContactName',
+          'InvoicedCost',
+          'ChangeLastOrder',
+          'OrderCost',
+          'PackageCost',
+        ],
+        ColumnWidthMap: {
+          OrderId: 200,
+          Comments: 300,
+        },
+      },
+      {
         Name: 'Sorting Layout',
         ColumnSorts: [
           {
-            Column: 'ShipName',
-            SortOrder: 'Ascending',
+            ColumnId: 'ShipName',
+            SortOrder: 'Asc',
           },
-          { Column: 'ShipVia', SortOrder: 'Descending' },
+          { ColumnId: 'ShipVia', SortOrder: 'Desc' },
         ],
         Columns: [
           'OrderId',
@@ -105,7 +130,7 @@ const demoConfig: PredefinedConfig = {
           'Employee',
           'ShipCountry',
         ],
-        GroupedColumns: ['Employee', 'ShipCountry'],
+        RowGroupedColumns: ['Employee', 'ShipCountry'],
         Name: 'Grouping Layout',
       },
       {
@@ -115,12 +140,10 @@ const demoConfig: PredefinedConfig = {
           'Employee',
           'ShipCountry',
         ],
-        GroupedColumns: ['Employee'],
-        PivotDetails: {
-          PivotColumns: ['ShipVia'],
-          //  AggregationColumns: ['InvoicedCost', 'ItemCost'],
-          AggregationColumns: ['ItemCost'],
-        },
+        RowGroupedColumns: ['Employee'],
+        PivotColumns: ['ShipVia'],
+        AggregationColumns: { InvoicedCost: 'sum', ItemCost: 'avg' },
+        EnablePivot: true,
         Name: 'Pivot Layout',
       },
       {
@@ -128,7 +151,7 @@ const demoConfig: PredefinedConfig = {
           'ShipVia',
           'Comments',
           'CustomerReference',
-          'Avg Item Cost',
+          'AvgCost',
           'ContactName',
           'InvoicedCost',
           'OrderCost',
@@ -137,25 +160,50 @@ const demoConfig: PredefinedConfig = {
         ],
         ColumnSorts: [
           {
-            Column: 'ShipName',
-            SortOrder: 'Ascending',
+            ColumnId: 'ShipName',
+            SortOrder: 'Asc',
           },
           { Column: 'ShipVia', SortOrder: 'Descending' },
         ],
-        GroupedColumns: ['Employee'],
+        RowGroupedColumns: ['Employee'],
         Name: 'Advanced Layout',
+      },
+    ],
+  },
+  FormatColumn: {
+    FormatColumns: [
+      {
+        Scope: {
+          ColumnIds: ['InvoicedCost'],
+        },
+        DisplayFormat: {
+          Formatter: 'NumberFormatter',
+          Options: {
+            FractionDigits: 4,
+          },
+        },
+      },
+      {
+        Scope: {
+          ColumnIds: ['ItemCost'],
+        },
+        DisplayFormat: {
+          Formatter: 'NumberFormatter',
+          Options: {
+            FractionDigits: 4,
+          },
+        },
       },
     ],
   },
 } as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
     enableRangeSelection: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     rowGroupPanelShow: 'always',
     autoGroupColumnDef: {
       sortable: true,
@@ -176,13 +224,12 @@ export default (columnDefs: any[], rowData: any[]) => {
     adaptableId: 'Advanced Layout Demo',
     predefinedConfig: demoConfig,
     layoutOptions: {
-      autoSizeColumnsInDefaultLayout: true,
       autoSizeColumnsInLayout: true,
       autoSizeColumnsInPivotLayout: true,
     },
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   return { adaptableOptions, adaptableApi };
 };

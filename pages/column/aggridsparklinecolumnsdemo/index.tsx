@@ -35,14 +35,21 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_sparklinecolumnstate_.sparklinecolumnstate.html"
+            href="https://docs.adaptabletools.com/docs/plugins/chart/sparkline-column-function"
+            target="_blank"
+          >
+            Sparkline Column Function
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/plugins/chart/sparkline-column-config"
             target="_blank"
           >
             Predefined Config
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_sparklinecolumnapi_.sparklinecolumnapi.html"
+            href="https://docs.adaptabletools.com/docs/plugins/chart/sparkline-column-api"
             target="_blank"
           >
             Adaptable API

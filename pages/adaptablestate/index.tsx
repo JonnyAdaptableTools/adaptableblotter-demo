@@ -69,6 +69,9 @@ export default () => {
         <DemoBox href="/adaptablestate/aggridstatefunctionsdemo">
           State Functions demo
         </DemoBox>
+        <DemoBox href="/adaptablestate/adaptablestatekeyusage">
+          Multiple Views demo
+        </DemoBox>
         <DemoBox href="/adaptablestate/aggridapplicationdataentriesdemo">
           Application Data Entries demo
         </DemoBox>

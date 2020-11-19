@@ -24,7 +24,7 @@ const demoConfig: PredefinedConfig = {
   },
 } as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   let autoGroupColumnDef: ColDef = {
     headerName: 'Employee',
     field: 'employee',
@@ -41,7 +41,6 @@ export default (columnDefs: any[], rowData: any[]) => {
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     rowSelection: 'multiple',
     autoGroupColumnDef: autoGroupColumnDef,
     suppressRowClickSelection: true,
@@ -62,7 +61,7 @@ export default (columnDefs: any[], rowData: any[]) => {
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   adaptableApi.eventApi.on(
     'SelectionChanged',

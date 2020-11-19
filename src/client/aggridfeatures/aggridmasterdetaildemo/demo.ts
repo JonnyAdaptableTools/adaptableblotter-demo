@@ -7,16 +7,15 @@ import { GridReadyEvent } from '@ag-grid-community/all-modules';
 import { FootballDataHelper } from '../../../Helpers/FootballDataHelper';
 const code = raw('./code.ts');
 
-export default () => {
+export default async () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
-
   let footballDataHelper = new FootballDataHelper();
   const columndefs = footballDataHelper.getMasterFootballSchema();
   const detailColumndefs = footballDataHelper.getDetailsFootballSchema();
   const rowData = footballDataHelper.getFootballData();
 
-  const { adaptableOptions, adaptableApi } = init(
+  const { adaptableOptions, adaptableApi } = await init(
     columndefs,
     detailColumndefs,
     rowData

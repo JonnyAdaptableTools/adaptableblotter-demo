@@ -35,8 +35,8 @@ const demoConfig: PredefinedConfig = {
         Columns: ['OrderId', 'ShipVia', 'Freight', 'ShipName', 'ShipCountry'],
         ColumnSorts: [
           {
-            Column: 'ShipName',
-            SortOrder: 'Ascending',
+            ColumnId: 'ShipName',
+            SortOrder: 'Asc',
           },
         ],
         Name: 'Shipping',
@@ -45,14 +45,13 @@ const demoConfig: PredefinedConfig = {
   },
 } as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     autoGroupColumnDef: {
       sortable: true,
     },
@@ -115,11 +114,11 @@ export default (columnDefs: any[], rowData: any[]) => {
     showOrdersLayoutButton.style.marginRight = '10px';
     testDiv.appendChild(showOrdersLayoutButton);
 
-    var showColumnChooserPopupButton = document.createElement('BUTTON');
-    showColumnChooserPopupButton.innerHTML = 'Show Column Chooser';
-    showColumnChooserPopupButton.onclick = () => showColumnChooserPopup();
-    showColumnChooserPopupButton.style.marginRight = '10px';
-    testDiv.appendChild(showColumnChooserPopupButton);
+    var showCustomSortPopupButton = document.createElement('BUTTON');
+    showCustomSortPopupButton.innerHTML = 'Open Custom Sort Popup';
+    showCustomSortPopupButton.onclick = () => showCustomSortPopup();
+    showCustomSortPopupButton.style.marginRight = '10px';
+    testDiv.appendChild(showCustomSortPopupButton);
   }
 
   const adaptableOptions: AdaptableOptions = {
@@ -129,7 +128,7 @@ export default (columnDefs: any[], rowData: any[]) => {
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   function runQuickSearchViaAPI() {
     const element: any = document.getElementById('txtQuickSearchText');
@@ -167,8 +166,8 @@ export default (columnDefs: any[], rowData: any[]) => {
     adaptableApi.layoutApi.setLayout('Orders');
   }
 
-  function showColumnChooserPopup() {
-    adaptableApi.columnChooserApi.showColumnChooserPopup();
+  function showCustomSortPopup() {
+    adaptableApi.customSortApi.showCustomSortPopup();
   }
 
   return { adaptableOptions, adaptableApi };

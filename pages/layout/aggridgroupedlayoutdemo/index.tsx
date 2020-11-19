@@ -10,7 +10,7 @@ export default () => {
         <div>
           <p>
             AdapTable makes it easy to include grouped row information in
-            Layouts; this is done via the <i>GroupedColumns</i> property that
+            Layouts; this is done via the <i>RowGroupedColumns</i> property that
             specifies which Column(s) should be grouped.
           </p>
           <p>
@@ -25,10 +25,10 @@ export default () => {
           </p>
           <p>
             Note: if you want the Layout to include details of which grouped
-            rows are open, set the <b>includeOpenedRowGroups</b> property to
+            rows are open, set the <b>includeExpandedRowGroups</b> property to
             true in{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_layoutoptions_.layoutoptions.html#includeopenedrowgroups"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/layout-options"
               target="_blank"
             >
               Layout Options
@@ -36,39 +36,39 @@ export default () => {
             .
           </p>
           <p>
-            This is what we have done in this demo - open some grouped rows and
-            then refresh the page and see that the same rows re-open.
+            This is what we have done in this demo - we set the Layout to open
+            at 'Janet Leverling / United Package'
           </p>
         </div>
       }
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_layoutstate_.layoutstate.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/layout-function"
             target="_blank"
           >
-            Predefined Config
+            Layout Function
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_layoutapi_.layoutapi.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/layout-config"
             target="_blank"
           >
-            Adaptable API
+            Layout Predefined Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_layoutoptions_.layoutoptions.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/layout-options"
             target="_blank"
           >
             Layout Options
           </a>{' '}
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/layout-function.md"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/layout-api"
             target="_blank"
           >
-            Read Me
+            Layout Api
           </a>{' '}
         </div>
       }

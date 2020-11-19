@@ -20,7 +20,11 @@ export default () => {
           </p>
           <p>
             Once created, a Calculated Column becomes a 'normal' column in your
-            grid and will update automatically as other values change.
+            grid and will update automatically as other values change. (
+            <a href="https://youtu.be/mk_KpFLzV-c" target="_blank">
+              See this video for more details
+            </a>
+            . )
           </p>
           <p>In this example we have created 5 Calculated Columns: </p>
           <ul>
@@ -49,7 +53,7 @@ export default () => {
             </li>
           </ul>{' '}
           <p>
-            Click the 2nd button in Dasbhoard to see details of the Expression -
+            Click the 1st button in Dasbhoard to see details of the Expression -
             or 'Edit Expression' in the Column Header menu.{' '}
           </p>
           <p>
@@ -62,24 +66,35 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/calculated-column-function.md"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/calculated-column-function"
             target="_blank"
           >
-            Read Me
+            Calculated Column Function
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_calculatedcolumnstate_.calculatedcolumnstate.html"
+            href="https://docs.adaptabletools.com/docs/common-objects/common-objects-expression"
             target="_blank"
           >
-            Predefined Config
+            Adaptable Expression
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_calculatedcolumnapi_.calculatedcolumnapi.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/calculated-column-config"
             target="_blank"
           >
-            Adaptable API
+            Calculated Column Predefined Config
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-api/calculated-column-api"
+            target="_blank"
+          >
+            Calculated Column Api
+          </a>{' '}
+          |{' '}
+          <a href="https://youtu.be/mk_KpFLzV-c" target="_blank">
+            Calculated Column Video
           </a>{' '}
         </div>
       }

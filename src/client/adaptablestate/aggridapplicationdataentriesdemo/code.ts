@@ -21,7 +21,7 @@ const demoConfig: PredefinedConfig = {
     Tabs: [
       {
         Name: 'Toolbars',
-        Toolbars: ['Layout'],
+        Toolbars: ['Layout', 'Filter'],
       },
     ],
   },
@@ -63,8 +63,8 @@ const demoConfig: PredefinedConfig = {
         ],
         ColumnSorts: [
           {
-            Column: 'ShipName',
-            SortOrder: 'Ascending',
+            ColumnId: 'ShipName',
+            SortOrder: 'Asc',
           },
         ],
         Name: 'Shipping View',
@@ -73,14 +73,13 @@ const demoConfig: PredefinedConfig = {
   },
 } as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     columnTypes: {
       abColDefNumber: {},
       abColDefString: {},
@@ -100,28 +99,32 @@ export default (columnDefs: any[], rowData: any[]) => {
         type: 'EntitlementLookUpFunction',
         name: 'getEntitlementsByRole',
         handler(functionName: AdaptableFunctionName) {
-          switch (functionName) {
-            case 'Layout':
-              const role = adaptableApi.applicationApi.getApplicationDataEntryByKey(
-                'Role'
-              )?.Value;
-              return getMockPermissionServerResult(role);
-          }
+          return getMockPermissionServerResult(functionName);
         },
       },
     ],
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   return { adaptableOptions, adaptableApi };
 };
 
-function getMockPermissionServerResult(role: string): AccessLevel {
-  if (role == 'Admin' || role == 'Support') {
-    return 'Full';
-  } else {
-    return 'ReadOnly';
+function getMockPermissionServerResult(
+  functionName: AdaptableFunctionName
+): AccessLevel {
+  let role: AccessLevel = 'ReadOnly';
+  switch (functionName) {
+    case 'Layout':
+      let dataEntry = adaptableApi?.applicationApi.getApplicationDataEntryByKey(
+        'Role'
+      )?.Value;
+
+      if (dataEntry == 'Admin' || dataEntry == 'Support') {
+        role = 'Full';
+      }
   }
+
+  return role;
 }

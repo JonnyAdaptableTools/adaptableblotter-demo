@@ -35,12 +35,25 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_layoutstate_.layoutstate.html"
+            href="https://docs.adaptabletools.com/docs/key-topics/using-aggrid"
             target="_blank"
           >
-            Predefined Config
-          </a>
-          .
+            ag-Grid Read Me
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/predefined-config/layout-config"
+            target="_blank"
+          >
+            Layout Config
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/layout-function"
+            target="_blank"
+          >
+            Layout Read Me
+          </a>{' '}
         </div>
       }
     />

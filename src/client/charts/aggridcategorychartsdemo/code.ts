@@ -33,11 +33,7 @@ const demoConfig: PredefinedConfig = ({
         Name: 'Population Total',
         VisibleRowsOnly: true,
         XAxisColumnId: 'Code',
-        XAxisExpression: {
-          ColumnValueExpressions: [],
-          FilterExpressions: [],
-          RangeExpressions: [],
-        },
+        XAxisExpression: undefined,
         YAxisColumnIds: ['Population'],
         YAxisTotal: 'Sum',
         ChartProperties: {
@@ -50,11 +46,7 @@ const demoConfig: PredefinedConfig = ({
         Name: 'Population Stats',
         VisibleRowsOnly: true,
         XAxisColumnId: 'Code',
-        XAxisExpression: {
-          ColumnValueExpressions: [],
-          FilterExpressions: [],
-          RangeExpressions: [],
-        },
+        XAxisExpression: undefined,
         YAxisColumnIds: [
           'Urbanization (%)',
           'Birth Rate',
@@ -70,11 +62,7 @@ const demoConfig: PredefinedConfig = ({
         Name: 'Global Finances',
         VisibleRowsOnly: true,
         XAxisColumnId: 'Code',
-        XAxisExpression: {
-          ColumnValueExpressions: [],
-          FilterExpressions: [],
-          RangeExpressions: [],
-        },
+        XAxisExpression: undefined,
         YAxisColumnIds: ['GDP per Capita (K)', 'Debt per Capita (K)'],
         YAxisTotal: 'Sum',
         ChartProperties: {
@@ -88,49 +76,8 @@ const demoConfig: PredefinedConfig = ({
         Name: 'Electricity Production',
         VisibleRowsOnly: true,
         XAxisColumnId: 'Code',
-        XAxisExpression: {
-          ColumnValueExpressions: [
-            {
-              ColumnId: 'Country',
-              ColumnDisplayValues: [
-                'United States',
-                'China',
-                'Russian',
-                'India',
-                'Japan',
-                'Canada',
-                'Germany',
-                'France',
-                'Brazil',
-                'United Kingdom',
-                'Italy',
-                'Mexico',
-                'Spain',
-                'Australia',
-                'Poland',
-              ],
-              ColumnRawValues: [
-                'United States',
-                'China',
-                'Russian',
-                'India',
-                'Japan',
-                'Canada',
-                'Germany',
-                'France',
-                'Brazil',
-                'United Kingdom',
-                'Italy',
-                'Mexico',
-                'Spain',
-                'Australia',
-                'Poland',
-              ],
-            },
-          ],
-          FilterExpressions: [],
-          RangeExpressions: [],
-        },
+        XAxisExpression:
+          "[Country] IN ('United States', 'China', 'Russian', 'India','Japan')",
         YAxisColumnIds: [
           'Coal %',
           'Renewable %',
@@ -147,14 +94,13 @@ const demoConfig: PredefinedConfig = ({
   },
 } as any) as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     autoGroupColumnDef: {
       sortable: true,
     },
@@ -181,7 +127,7 @@ export default (columnDefs: any[], rowData: any[]) => {
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
     plugins: [charts()],
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   return { adaptableOptions, adaptableApi };
 };

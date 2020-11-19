@@ -6,7 +6,7 @@ import init from './code';
 import { GridReadyEvent } from '@ag-grid-community/all-modules';
 const code = raw('./code.ts');
 
-export default () => {
+export default async () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
 
@@ -14,7 +14,7 @@ export default () => {
 
   const rowData = helperAgGrid.getTrades(300);
 
-  const { adaptableOptions, adaptableApi } = init(columndefs, rowData);
+  const { adaptableOptions, adaptableApi } = await init(columndefs, rowData);
 
   adaptableOptions.vendorGrid.onGridReady = function(
     gridReady: GridReadyEvent

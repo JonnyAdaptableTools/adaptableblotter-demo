@@ -16,52 +16,38 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
-  ColumnFilter: {
+  Filter: {
     ColumnFilters: [
       {
-        Filter: {
-          ColumnValueExpressions: [
-            {
-              ColumnDisplayValues: [
-                'Janet Leverling',
-                'Margaret Peacock',
-                'Nancy Davolio',
-              ],
-              ColumnId: 'Employee',
-            },
-          ],
-        },
-        ColumnId: 'Employee',
-      },
-      {
-        Filter: {
-          FilterExpressions: [
-            {
-              ColumnId: 'ChangeLastOrder',
-              Filters: ['Positive'],
-            },
-          ],
-        },
         ColumnId: 'ChangeLastOrder',
+        Predicate: { PredicateId: 'Positive' },
       },
       {
-        Filter: {
-          RangeExpressions: [
-            {
-              ColumnId: 'InvoicedCost',
-              Ranges: [
-                {
-                  Operand1: '10',
-                  Operand1Type: 'Value',
-                  Operand2: '300',
-                  Operand2Type: 'Value',
-                  Operator: 'Between',
-                },
-              ],
-            },
-          ],
+        ColumnId: 'Employee',
+        Predicate: {
+          PredicateId: 'Values',
+          Inputs: ['Janet Leverling', 'Margaret Peacock', 'Nancy Davolio'],
         },
+      },
+      {
         ColumnId: 'InvoicedCost',
+        Predicate: {
+          PredicateId: 'Between',
+          Inputs: [10, 300],
+        },
+      },
+      {
+        ColumnId: 'OrderDate',
+        Predicate: {
+          PredicateId: 'InPast',
+        },
+      },
+      {
+        ColumnId: 'ItemCost',
+        Predicate: {
+          PredicateId: 'GreaterThan',
+          Inputs: [20],
+        },
       },
     ],
   },
@@ -69,7 +55,7 @@ const demoConfig: PredefinedConfig = {
     Tabs: [
       {
         Name: 'Toolbars',
-        Toolbars: ['ColumnFilter'],
+        Toolbars: ['Filter'],
       },
     ],
   },
@@ -79,31 +65,36 @@ const demoConfig: PredefinedConfig = {
       {
         Columns: [
           'OrderId',
-          'ContactName',
-          'CustomerReference',
+          'ItemCost',
+          'OrderDate',
+          'ShippedDate',
           'Employee',
-          'OrderData',
+          'Freight',
           'ChangeLastOrder',
           'ShipCountry',
+          'ShipVia',
           'InvoicedCost',
-          'Freight',
-          'ShippedDate',
+          'CustomerReference',
         ],
-        ColumnSorts: [],
+        ColumnSorts: [
+          {
+            ColumnId: 'ShippedDate',
+            SortOrder: 'Desc',
+          },
+        ],
         Name: 'Orders',
       },
     ],
   },
 } as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     statusBar: {
       statusPanels: [
         { statusPanel: 'agTotalRowCountComponent', align: 'left' },
@@ -124,24 +115,24 @@ export default (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Column Filters Demo',
+    filterOptions: {
+      sortColumnValuesInFilter: true,
+    },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   adaptableApi.eventApi.on('AdaptableReady', () => {
     let columnFilter: ColumnFilter = {
       ColumnId: 'ShipCountry',
-      Filter: {
-        ColumnValueExpressions: [
-          {
-            ColumnId: 'ShipCountry',
-            ColumnDisplayValues: ['France', 'USA', 'UK'],
-          },
-        ],
+      Predicate: {
+        PredicateId: 'Values',
+        Inputs: ['France', 'USA', 'UK'],
       },
     };
-    adaptableApi.columnFilterApi.setColumnFilter([columnFilter]);
+
+    adaptableApi.filterApi.setColumnFilter([columnFilter]);
   });
 
   return { adaptableOptions, adaptableApi };

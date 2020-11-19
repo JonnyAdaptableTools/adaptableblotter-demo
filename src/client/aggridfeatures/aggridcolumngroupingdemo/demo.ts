@@ -10,7 +10,7 @@ import { GridReadyEvent } from '@ag-grid-community/all-modules';
 import { TickingDataHelper } from '../../../Helpers/TickingDataHelper';
 const code = raw('./code.ts');
 
-export default () => {
+export default async () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
   let tickingDataHelper = new TickingDataHelper();
@@ -19,7 +19,7 @@ export default () => {
 
   const columndefs = helperAgGrid.getColumnGroupingNorthwindColumnSchema();
 
-  const { adaptableOptions, adaptableApi } = init(columndefs, rowData);
+  const { adaptableOptions, adaptableApi } = await init(columndefs, rowData);
 
   adaptableOptions.vendorGrid.onGridReady = function(
     gridReady: GridReadyEvent
@@ -34,6 +34,7 @@ export default () => {
     gridReady.api!.closeToolPanel();
   };
 
+  /*
   adaptableApi.eventApi.on('AdaptableReady', () => {
     tickingDataHelper.startTickingDataagGridOrders(
       adaptableOptions.vendorGrid,
@@ -42,11 +43,13 @@ export default () => {
       10248,
       10293
     );
-  });
+  })
+  ;
+  */
 
   return {
     unload: () => {
-      tickingDataHelper.turnOffTicking();
+      //  tickingDataHelper.turnOffTicking();
     },
     code,
   };

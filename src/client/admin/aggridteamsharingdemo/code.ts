@@ -33,14 +33,13 @@ const demoConfig: PredefinedConfig = {
   },
 } as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     columnTypes: {
       abColDefNumber: {},
       abColDefString: {},
@@ -52,7 +51,7 @@ export default (columnDefs: any[], rowData: any[]) => {
   };
 
   const adaptableOptions: AdaptableOptions = {
-    primaryKey: 'tradeId',
+    primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Team Sharing Demo',
     predefinedConfig: demoConfig,
@@ -85,7 +84,7 @@ export default (columnDefs: any[], rowData: any[]) => {
       },
     },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   return { adaptableOptions, adaptableApi };
 };

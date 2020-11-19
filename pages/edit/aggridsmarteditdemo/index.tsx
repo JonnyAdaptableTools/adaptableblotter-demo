@@ -28,17 +28,31 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_smarteditstate_.smarteditstate.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/smart-edit-function"
             target="_blank"
           >
-            Predefined Config
+            Smart Edit Function
           </a>
-          ,{' '}
+          |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_smarteditapi_.smarteditapi.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/smart-edit-config"
             target="_blank"
           >
-            Adaptable API
+            Smart Edit Config
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-api/smart-edit-api"
+            target="_blank"
+          >
+            Smart Edit Api
+          </a>
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-options/edit-options"
+            target="_blank"
+          >
+            Edit Options
           </a>
         </div>
       }

@@ -23,55 +23,24 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
-  CustomSort: {
-    CustomSorts: [
-      {
-        ColumnId: 'ShipVia',
-        SortedValues: ['Speedy Express', 'United Package', 'Federal Shipping'],
-      },
-    ],
-  },
-  CalculatedColumn: {
-    CalculatedColumns: [
-      {
-        ColumnExpression: 'Col("ItemCost") / Col("ItemCount")',
-        ColumnId: 'Avg Item Cost',
-      },
-    ],
-  },
-  FreeTextColumn: {
-    FreeTextColumns: [
-      {
-        ColumnId: 'Comments',
-        DefaultValue: '',
-        FreeTextStoredValues: [
-          { PrimaryKey: 11137, FreeText: 'Dispatch asap' },
-          { PrimaryKey: 11133, FreeText: 'Angry customer' },
-          { PrimaryKey: 11128, FreeText: 'Important order' },
-        ],
-      },
-    ],
-  },
   Layout: {
-    Revision: 1,
     CurrentLayout: 'Simple Layout',
     Layouts: [
       {
         Name: 'Simple Layout',
         ColumnSorts: [
           {
-            Column: 'ShipName',
-            SortOrder: 'Ascending',
+            ColumnId: 'ShipName',
+            SortOrder: 'Asc',
           },
-          { Column: 'ShipVia', SortOrder: 'Descending' },
         ],
         Columns: [
           'OrderId',
-          'OrderDate',
+          'ShipName',
           'ItemCost',
           'ItemCount',
           'Comments',
-          'Avg Item Cost',
+          'AvgCost',
           'CustomerReference',
           'CompanyName',
           'ContactName',
@@ -83,15 +52,61 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
+  CustomSort: {
+    CustomSorts: [
+      {
+        ColumnId: 'ShipVia',
+        SortedValues: ['Speedy Express', 'United Package', 'Federal Shipping'],
+      },
+    ],
+  },
+  CalculatedColumn: {
+    CalculatedColumns: [
+      {
+        ColumnExpression: '[ItemCost] / [ItemCount]',
+        ColumnId: 'AvgCost',
+        FriendlyName: 'Avg Item Cost',
+      },
+    ],
+  },
+  FreeTextColumn: {
+    FreeTextColumns: [
+      {
+        ColumnId: 'Comments',
+        FriendlyName: 'Comments',
+        DefaultValue: '',
+        FreeTextStoredValues: [
+          { PrimaryKey: 10643, FreeText: 'Dispatch asap' },
+          { PrimaryKey: 10835, FreeText: 'Angry customer' },
+          { PrimaryKey: 10759, FreeText: 'Important order' },
+        ],
+      },
+    ],
+  },
+  FormatColumn: {
+    FormatColumns: [
+      {
+        Scope: {
+          ColumnIds: ['AvgCost'],
+        },
+        DisplayFormat: {
+          Formatter: 'NumberFormatter',
+          Options: {
+            FractionDigits: 2,
+          },
+        },
+        CellAlignment: 'Right',
+      },
+    ],
+  },
 } as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
     enableRangeSelection: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     rowGroupPanelShow: 'always',
     autoGroupColumnDef: {
       sortable: true,
@@ -112,13 +127,12 @@ export default (columnDefs: any[], rowData: any[]) => {
     adaptableId: 'Basic Layout Demo',
     predefinedConfig: demoConfig,
     layoutOptions: {
-      autoSizeColumnsInDefaultLayout: true,
       autoSizeColumnsInLayout: true,
       autoSizeColumnsInPivotLayout: true,
     },
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   return { adaptableOptions, adaptableApi };
 };

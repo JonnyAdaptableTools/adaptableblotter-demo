@@ -24,56 +24,58 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
+
   CellValidation: {
     CellValidations: [
       {
         ActionMode: 'Stop Edit',
-        ColumnId: 'CustomerReference',
-        Range: {
-          Operator: 'AnyChange',
-          Operand1: '',
-          Operand2: '',
-          Operand1Type: 'Value',
-          Operand2Type: 'Value',
+        Scope: {
+          ColumnIds: ['CustomerReference'],
+        },
+        Predicate: {
+          PredicateId: 'Any',
         },
       },
       {
         ActionMode: 'Show Warning',
-        ColumnId: 'Employee',
-        Range: {
-          Operator: 'AnyChange',
+        Scope: {
+          ColumnIds: ['Employee'],
+        },
+        Predicate: {
+          PredicateId: 'Any',
         },
       },
       {
         ActionMode: 'Stop Edit',
-        ColumnId: 'InvoicedCost',
-        Range: {
-          Operator: 'GreaterThan',
-          Operand1: 3000,
-          Operand1Type: 'Value',
+        Scope: {
+          ColumnIds: ['InvoicedCost'],
+        },
+        Predicate: {
+          PredicateId: 'GreaterThan',
+          Inputs: [300],
         },
       },
       {
         ActionMode: 'Show Warning',
-        ColumnId: 'OrderCost',
-        Range: {
-          Operator: 'PercentChange',
-          Operand1: 100,
-          Operand1Type: 'Value',
+        Scope: {
+          ColumnIds: ['OrderCost'],
+        },
+        Predicate: {
+          PredicateId: 'PercentChange',
+          Inputs: [100],
         },
       },
     ],
   },
 } as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     autoGroupColumnDef: {
       sortable: true,
     },
@@ -94,7 +96,7 @@ export default (columnDefs: any[], rowData: any[]) => {
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   return { adaptableOptions, adaptableApi };
 };

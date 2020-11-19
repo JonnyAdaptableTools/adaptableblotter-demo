@@ -16,74 +16,80 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleButtons: ['ColumnChooser', 'CalculatedColumn'],
+    VisibleButtons: ['CalculatedColumn'],
   },
   CalculatedColumn: {
     CalculatedColumns: [
       {
-        ColumnExpression: 'Col("ItemCost") / Col("ItemCount")',
-        ColumnId: 'Avg Item Cost',
+        ColumnExpression: '[ItemCost] / [ItemCount]',
+        ColumnId: 'AvgCost',
+        FriendlyName: 'Avg Item Cost',
       },
       {
-        ColumnExpression:
-          'Col("InvoicedCost") - ( Col("OrderCost") + Col("PackageCost"))',
+        ColumnExpression: '([ItemCost] * [ItemCount])- [PackageCost]',
         ColumnId: 'Profit',
+        FriendlyName: 'profit',
       },
       {
         ColumnExpression:
-          'Col("ItemCost") > 100 ? "High" : Col("ItemCost") > 50 ? "Medium": "Low"',
+          '[ItemCost] > 100 ? "High" : [ItemCost] > 50 ? "Medium": "Low"',
         ColumnId: 'Comment',
+        FriendlyName: 'Comment',
+        CalculatedColumnSettings: {
+          DataType: 'String',
+          Filterable: true,
+          Groupable: true,
+          Sortable: true,
+        },
       },
       {
         ColumnExpression:
-          'max(Col("ItemCost"), Col("OrderCost"), Col("InvoicedCost"), (Col("PackageCost")*10))',
-        ColumnId: 'Highest Cost',
+          'max([ItemCost], [OrderCost], [InvoicedCost], ([PackageCost]*10))',
+        ColumnId: 'HighCost',
+        FriendlyName: 'Highest Cost',
+      },
+      {
+        ColumnExpression:
+          "[ShippedDate] > ADD_DAYS([OrderDate] , 21) ? 'Delayed' : 'On time'",
+        ColumnId: 'ShipDelay',
+        FriendlyName: 'Ship Delay',
       },
       {
         // we will add the Display Format separately
-        ColumnExpression: 'Col("OrderCost")*0.2',
+        ColumnExpression: '[OrderCost]*0.2',
         ColumnId: 'Tax',
+        FriendlyName: 'Tax',
       },
     ],
   },
   ConditionalStyle: {
     ConditionalStyles: [
       {
-        ColumnId: 'Profit',
+        Scope: {
+          ColumnIds: ['Profit'],
+        },
         Style: {
           ForeColor: '#008000',
         },
-        ConditionalStyleScope: 'Column',
-        Expression: {
-          FilterExpressions: [
-            {
-              ColumnId: 'Profit',
-              Filters: ['Positive'],
-            },
-          ],
-        },
+        Expression: '[Profit] > 0',
       },
       {
-        ColumnId: 'Profit',
+        Scope: {
+          ColumnIds: ['Profit'],
+        },
         Style: {
           ForeColor: '#ff0000',
         },
-        ConditionalStyleScope: 'Column',
-        Expression: {
-          FilterExpressions: [
-            {
-              ColumnId: 'Profit',
-              Filters: ['Negative'],
-            },
-          ],
-        },
+        Expression: '[Profit] < 0',
       },
     ],
   },
   FormatColumn: {
     FormatColumns: [
       {
-        ColumnId: 'Avg Item Cost',
+        Scope: {
+          ColumnIds: ['AvgCost'],
+        },
         DisplayFormat: {
           Formatter: 'NumberFormatter',
           Options: {
@@ -92,7 +98,9 @@ const demoConfig: PredefinedConfig = {
         },
       },
       {
-        ColumnId: 'Highest Cost',
+        Scope: {
+          ColumnIds: ['HighCost'],
+        },
         DisplayFormat: {
           Formatter: 'NumberFormatter',
           Options: {
@@ -101,7 +109,9 @@ const demoConfig: PredefinedConfig = {
         },
       },
       {
-        ColumnId: 'Profit',
+        Scope: {
+          ColumnIds: ['Profit'],
+        },
         DisplayFormat: {
           Formatter: 'NumberFormatter',
           Options: {
@@ -110,7 +120,9 @@ const demoConfig: PredefinedConfig = {
         },
       },
       {
-        ColumnId: 'Tax',
+        Scope: {
+          ColumnIds: ['Tax'],
+        },
         DisplayFormat: {
           Formatter: 'NumberFormatter',
           Options: {
@@ -128,15 +140,16 @@ const demoConfig: PredefinedConfig = {
       {
         Columns: [
           'Comment',
-          'Avg Item Cost',
+          'AvgCost',
           'ItemCost',
           'ItemCount',
-          'Highest Cost',
+          'HighCost',
           'OrderCost',
           'Tax',
+          'Profit',
           'PackageCost',
           'InvoicedCost',
-          'Profit',
+          'ShipDelay',
           'OrderDate',
           'ShipCountry',
         ],
@@ -144,7 +157,7 @@ const demoConfig: PredefinedConfig = {
       },
       {
         Columns: [
-          'Avg Item Cost',
+          'AvgCost',
           'ItemCost',
           'ItemCount',
           'OrderCost',
@@ -154,21 +167,20 @@ const demoConfig: PredefinedConfig = {
           'OrderDate',
           'ShipCountry',
         ],
-        GroupedColumns: ['Comment'],
+        RowGroupedColumns: ['Comment'],
         Name: 'grouped calc cols',
       },
     ],
   },
 } as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     autoGroupColumnDef: {
       sortable: true,
     },
@@ -188,8 +200,11 @@ export default (columnDefs: any[], rowData: any[]) => {
     adaptableId: 'Calculated Column Demo',
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
+    queryOptions: {
+      ignoreCaseInQueries: false,
+    },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   return { adaptableOptions, adaptableApi };
 };

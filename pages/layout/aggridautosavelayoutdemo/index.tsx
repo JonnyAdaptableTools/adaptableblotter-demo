@@ -12,7 +12,7 @@ export default () => {
             Layouts can be updated automatically through the{' '}
             <b>autoSaveLayouts</b> property in{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_layoutoptions_.layoutoptions.html#autosavelayouts"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/layout-options"
               target="_blank"
             >
               Layout Options
@@ -34,31 +34,31 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_layoutstate_.layoutstate.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/layout-function"
             target="_blank"
           >
-            Predefined Config
+            Layout Function
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_layoutapi_.layoutapi.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/layout-config"
             target="_blank"
           >
-            Adaptable API
+            Layout Predefined Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_layoutoptions_.layoutoptions.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/layout-options"
             target="_blank"
           >
             Layout Options
           </a>{' '}
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/layout-function.md"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/layout-api"
             target="_blank"
           >
-            Read Me
+            Layout Api
           </a>{' '}
         </div>
       }

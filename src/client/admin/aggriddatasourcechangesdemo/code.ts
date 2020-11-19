@@ -19,27 +19,20 @@ const demoConfig: PredefinedConfig = {
     Tabs: [
       {
         Name: 'Toolbars',
-        Toolbars: ['ColumnFilter', 'Layout', 'QuickSearch'],
+        Toolbars: ['Filter', 'Layout', 'QuickSearch'],
       },
     ],
   },
   ConditionalStyle: {
     ConditionalStyles: [
       {
-        ColumnId: '',
-        ColumnCategoryId: '',
+        Scope: {
+          All: true,
+        },
         Style: {
           BackColor: '#87cefa',
         },
-        ConditionalStyleScope: 'Row',
-        Expression: {
-          ColumnValueExpressions: [
-            {
-              ColumnId: 'currency',
-              ColumnDisplayValues: ['EUR', 'GBP', 'USD'],
-            },
-          ],
-        },
+        Expression: "[currency] IN ('EUR', 'USD') ",
       },
     ],
   },
@@ -64,45 +57,31 @@ const demoConfig: PredefinedConfig = {
           'lastUpdated',
           'lastUpdatedBy',
         ],
-        ColumnSorts: [{ Column: 'tradeId', SortOrder: 'Descending' }],
+        ColumnSorts: [{ ColumnId: 'tradeId', SortOrder: 'Desc' }],
         Name: 'Data Source',
       },
     ],
   },
-  ColumnFilter: {
+  Filter: {
     ColumnFilters: [
       {
-        Filter: {
-          RangeExpressions: [
-            {
-              ColumnId: 'counterparty',
-              Ranges: [
-                {
-                  Operand1: 'm',
-                  Operand1Type: 'Value',
-                  Operator: 'Contains',
-                },
-              ],
-            },
-          ],
-        },
         ColumnId: 'counterparty',
+        Predicate: { PredicateId: 'Contains', Inputs: ['m'] },
       },
     ],
   },
   QuickSearch: {
-    QuickSearchText: 'i*',
+    QuickSearchText: 'i',
   },
 } as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     statusBar: {
       statusPanels: [
         { statusPanel: 'agTotalRowCountComponent', align: 'left' },
@@ -126,7 +105,7 @@ export default (columnDefs: any[], rowData: any[]) => {
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   return { adaptableOptions, adaptableApi };
 };

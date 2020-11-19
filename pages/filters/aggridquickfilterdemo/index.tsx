@@ -9,50 +9,66 @@ export default () => {
       description={
         <div>
           <p>
-            The Quick Filter Bar lies beneath the Column Header; if set set to
-            <i>visible</i> in the underlying grid (e.g. in ag-Grid it is
-            `floatingFilter: true` in GridOptions) then it will work in
-            AdapTable.
+            The Quick Filter Bar lies beneath the Column Header, providing a
+            shortcut to creating Column Filters manually in the filter dropdown
+            - the 2 components always stay in sync.
           </p>
           <p>
-            It essentially provides a shortcut to creating Column Filters
-            manually in the filter dropdown, e.g. typing 's' in the Quick Filter
-            Bar will create a Column Filter of [Column] contains 's'.
+            The left of the Quick Filter Bar provides a dropdown showing all the
+            'Predicates' available for that Column, including any{' '}
+            <a href="aggridcustompredicatesdemo">Custom Predicates</a> that have
+            been created.
           </p>
 
           <p>
-            There are a number of wildcards that you can use to speed up your
-            search as follows:
+            Any Predicate that requires an input (e.g. 'GreaterThan') will show
+            a textbox to enable text entry; those that do not (e.g. 'Postive')
+            will show it as disabled.
           </p>
-          <ul>
-            <li>
-              <b>Numeric Columns</b>: Standard wildcards (ie. &gt;, &le;, &lt;,
-              &ge;, =) and a few others (e.g. ':' is <i>between</i> as in
-              '5:100', or '&lt;&gt;' is <i>not equals</i>)
-            </li>
-            <li>
-              <b>Text Columns</b>: Wildcards include '*' for <b>StartsWith</b>{' '}
-              (e.g. 'f*'), '%' for <b>Contains</b> (e.g. 'd%'), '!' for{' '}
-              <b>NotContains</b> (e.g. '!r') and '=' for <b>Equals</b>
-            </li>
-            <li>
-              <b>Date Columns</b>: None at present but coming in a version soon.
-            </li>
-            <li>
-              <b>Boolean Columns</b>: 1, 'y', 't' all equal to <b>True</b>, 0,
-              'f', 'n' all equal to <b>False</b> - test it below in the{' '}
-              <i>Is Valid</i> Column
-            </li>
-          </ul>
+          <p>
+            If the 'IN' predicate is selected then a list will appear showing
+            all distinct values in the column to enable a selection to be made.
+          </p>
+
+          <p>
+            You can change also select frequently used Predicates by typing a
+            'wild card' in the Quick Filter Bar, e.g. {'>'}, {'<'},{'='}, {'!='}{' '}
+            and {'IN'} (for lists) - press 'Escape' to clear the Predicate.
+          </p>
+          <p>
+            The default Predicate for Numeric and Date columns is 'Equals' and
+            for String columns is 'Between'.
+          </p>
         </div>
       }
       helpResources={
         <div>
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-filtering-guide.md"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/filter-function"
             target="_blank"
           >
-            Adaptable Filtering Guide
+            Filter ReadMe
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/predefined-config/filter-config"
+            target="_blank"
+          >
+            Filter Config
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-api/filter-api"
+            target="_blank"
+          >
+            Filter Api
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-options/filter-options"
+            target="_blank"
+          >
+            Filter Options
           </a>
         </div>
       }

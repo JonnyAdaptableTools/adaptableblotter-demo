@@ -19,10 +19,26 @@ export default () => {
             'GreaterThan 15') by using the operator dropdown at the top.
           </p>
           <p>
-            In this example we create filters on 3 columns: Employee (3
-            selected), Order Chg. ('Positive' filter) and Invoiced ('Between
-            10-300' range). Edit / clear filters in the individual columns or
-            via the Column Filter toolbar.
+            In this example we create filters on 5 columns:
+            <ul>
+              <li>
+                ItemCost - <b>GreaterThan</b> 20
+              </li>{' '}
+              <li>
+                ChangeLastOrder - <b>Positive</b>
+              </li>{' '}
+              <li>
+                Employee - 3 <b>Values</b> selected
+              </li>
+              <li>
+                InvoicedCost - <b>Between</b> 10-300
+              </li>
+              <li>
+                OrderDate - <b>In Past</b>
+              </li>
+            </ul>
+            Edit / clear filters in the individual columns or via the Column
+            Filter toolbar.
           </p>
           <p>
             Note: You can show / hide the Quick Filter bar through the Column
@@ -33,26 +49,32 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_columnfilterstate_.columnfilterstate.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/filter-function"
             target="_blank"
           >
-            Predefined Config
+            Filter ReadMe
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_columnfilterapi_.columnfilterapi.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/filter-config"
             target="_blank"
           >
-            Adaptable API
+            Filter Config
           </a>{' '}
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-filtering-guide.md"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/filter-api"
             target="_blank"
           >
-            Adaptable Filtering Guide
+            Filter Api
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-options/filter-options"
+            target="_blank"
+          >
+            Filter Options
           </a>
-          .
         </div>
       }
     />

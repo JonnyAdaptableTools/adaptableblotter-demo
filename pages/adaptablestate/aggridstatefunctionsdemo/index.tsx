@@ -20,7 +20,7 @@ export default () => {
             </p>
             <p>
               However - as this example illustrates - by leveraging the{' '}
-              <a href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_stateoptions_.stateoptions.html">
+              <a href="https://docs.adaptabletools.com/docs/adaptable-options/state-options">
                 State Options
               </a>{' '}
               you can persist state to a remote datastore (which we do here to
@@ -31,7 +31,7 @@ export default () => {
             <ul>
               <li>
                 <b>
-                  <a href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_stateoptions_.stateoptions.html#loadstate">
+                  <a href="https://docs.adaptabletools.com/docs/adaptable-options/state-options#loadstate">
                     loadState
                   </a>
                 </b>
@@ -39,7 +39,7 @@ export default () => {
               </li>
               <li>
                 <b>
-                  <a href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_stateoptions_.stateoptions.html#applystate">
+                  <a href="https://docs.adaptabletools.com/docs/adaptable-options/state-options#applystate">
                     applyState
                   </a>
                 </b>
@@ -47,7 +47,7 @@ export default () => {
               </li>
               <li>
                 <b>
-                  <a href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_stateoptions_.stateoptions.html#saveState">
+                  <a href="https://docs.adaptabletools.com/docs/adaptable-options/state-options#saveState">
                     saveState
                   </a>
                 </b>
@@ -57,7 +57,7 @@ export default () => {
               <li>
                 <b>
                   {' '}
-                  <a href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_stateoptions_.stateoptions.html#persistState">
+                  <a href="https://docs.adaptabletools.com/docs/adaptable-options/state-options#persistState">
                     persistState
                   </a>
                 </b>
@@ -84,20 +84,20 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-state-guide.md"
+            href="https://docs.adaptabletools.com/docs/key-topics/state-guide"
             target="_blank"
           >
             Adaptable State Read Me
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_predefinedconfig_.predefinedconfig.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/predefined-config-overview"
             target="_blank"
           >
             Predefined Config
           </a>{' '}
           |{' '}
-          <a href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_stateoptions_.stateoptions.html">
+          <a href="https://docs.adaptabletools.com/docs/adaptable-options/state-options">
             State Options
           </a>{' '}
         </div>

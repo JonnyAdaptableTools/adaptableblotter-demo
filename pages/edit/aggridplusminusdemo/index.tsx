@@ -17,29 +17,39 @@ export default () => {
             'custom' Nudge Value which will increment / decrement based on other
             cells in the row.
           </p>
-          <p>
-            In this example we created 2 Plus Minus Rules: a default one for the
-            'Item Cost' column of 10, and a custom rule for the same column
-            which will increment / decrement by 20 if Employee is 'Janet
-            Leverling'.
-          </p>
+          <p>In this example we created 2 Plus Minus Rules: </p>
+          <ul>
+            <li>a default one for the 'Item Cost' column of 10</li>
+            <li>
+              a custom rule for the same column which will increment / decrement
+              by 20 if Employee is 'Janet Leverling
+            </li>
+          </ul>
         </div>
       }
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_plusminusstate_.plusminusstate.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/plus-minus-function"
             target="_blank"
           >
-            Predefined Config
-          </a>
-          ,{' '}
+            Plus / Minus Function
+          </a>{' '}
+          |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_plusminusapi_.plusminusapi.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/plus-minus-config"
             target="_blank"
           >
-            Adaptable API
+            Plus / Minus Config
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-api/plus-minus-api"
+            target="_blank"
+          >
+            Plus / Minus Api
           </a>
+          |{' '}
         </div>
       }
     />

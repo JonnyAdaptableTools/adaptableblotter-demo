@@ -11,7 +11,7 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import Adaptable from '@adaptabletools/adaptable/agGrid';
 import { AdaptableOptions } from '@adaptabletools/adaptable/types';
 
-export default (columndefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     enableRangeSelection: true,
     sideBar: true,
@@ -25,7 +25,7 @@ export default (columndefs: any[], rowData: any[]) => {
       abColDefObject: {},
       abColDefNumberArray: {},
     },
-    columnDefs: columndefs,
+    columnDefs: columnDefs,
     rowData: rowData,
     floatingFilter: true,
   };
@@ -39,5 +39,5 @@ export default (columndefs: any[], rowData: any[]) => {
     predefinedConfig: {},
   };
 
-  Adaptable.init(adaptableOptions);
+  await Adaptable.init(adaptableOptions);
 };

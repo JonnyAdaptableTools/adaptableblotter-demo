@@ -10,28 +10,51 @@ export default () => {
         <div>
           <p>
             Conditional Styles allow you to create rules that decide how columns
-            and rows are styled.
+            and rows are styled.{' '}
           </p>
           <p>
-            Rules work at either column or row level; when the rule is met the
-            column / row is styled according to the style set out in the rule.
-            Alternatively you can specify a css style name (which you provide).
+            The 'Scope' of the style determines where it can be applied: ie.
+            whole row, one or more columns, or one or more column data types.
           </p>
           <p>
-            This example has 4 Conditional Styles:
+            The Rule is based on a 'Predicate' - only the Predicates associated
+            with the selected scope are available.
+          </p>
+          <p>
+            For more complicated rules there is the option, instead, to use a
+            Query which will enable evaluation across multiple columns using
+            more advanced criteria.
+          </p>
+          <p>
+            When the rule is met the column / row will be styled according to
+            the style properties provided. Alternatively you can specify a css
+            style name (which you provide).
+          </p>
+          <p>
+            This example has 5 Conditional Styles:
             <ul>
               <li>
-                The 'Change Last Order' column has 2 styles: it is green when
-                positive and red when negative;
+                All colunns of DataType: Number have a green font when they are
+                positive (using the 'Positive' predicate)
               </li>
               <li>
-                Any row where the 'Item Cost' column is more than 80 is
-                italicised with a yellow background (note that
-                <i>ExcludeGroupedRows</i> is <b>true</b> so the style is not
-                applied on grouped rows.)
+                {' '}
+                All colunns of DataType: Number have a red font when they are
+                negative (using the 'Negative' predicate)
               </li>
               <li>
-                The font is bold where the 'Package Cost' column is less than 10
+                'Item Cost' column is italicised with a yellow background where
+                it is greater than 60 (using the 'GreaterThan' predicate)
+              </li>
+              <li>
+                Whole row is lightblue where 'InvoicedCost' column value is over
+                1000 (this uses an Expression rather than a Predicate and a
+                Scope of 'All: true')
+              </li>
+              <li>
+                Employee Column is bold where the value is Stephen or Laura
+                (this uses the 'new_starter' <b>custom predicate</b> defined in
+                the <i>customPredicateDefs</i> section of Adaptable Options.
               </li>
             </ul>
           </p>
@@ -40,17 +63,24 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_conditionalstylestate_.conditionalstylestate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/conditional-style-config"
             target="_blank"
           >
             Predefined Config
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_conditionalstyleapi_.conditionalstyleapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/conditional-style-api"
             target="_blank"
           >
             Adaptable API
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/conditional-style-function"
+            target="_blank"
+          >
+            Conditional Style Function
           </a>
         </div>
       }

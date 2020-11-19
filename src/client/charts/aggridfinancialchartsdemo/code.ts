@@ -26,7 +26,6 @@ const demoConfig: PredefinedConfig = ({
     ],
   },
   Chart: {
-    Revision: 4,
     CurrentChartName: 'FTSE Close',
     ChartDefinitions: [
       {
@@ -56,8 +55,8 @@ const demoConfig: PredefinedConfig = ({
         Name: 'FTSE Layout',
         ColumnSorts: [
           {
-            Column: 'CloseDate',
-            SortOrder: 'Descending',
+            ColumnId: 'CloseDate',
+            SortOrder: 'Desc',
           },
         ],
         Columns: [
@@ -77,24 +76,17 @@ const demoConfig: PredefinedConfig = ({
   },
 
   ToolPanel: {
-    VisibleToolPanels: [
-      'Export',
-      'AdvancedSearch',
-      'Layout',
-      'Chart',
-      'ColumnFilter',
-    ],
+    VisibleToolPanels: ['Export', 'Filter', 'Layout', 'Chart', 'Filter'],
   },
 } as any) as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     autoGroupColumnDef: {
       sortable: true,
     },
@@ -116,14 +108,11 @@ export default (columnDefs: any[], rowData: any[]) => {
       displayOnStartUp: true,
       showModal: false,
     },
-    userInterfaceOptions: {
-      showAdaptableToolPanel: true,
-    },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
     plugins: [charts()],
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   return { adaptableOptions, adaptableApi };
 };

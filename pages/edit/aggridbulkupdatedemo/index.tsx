@@ -26,18 +26,32 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_bulkupdatestate_.bulkupdatestate.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/bulk-update-function"
             target="_blank"
           >
-            Predefined Config
+            Bulk Update Function
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_bulkupdateapi_.bulkupdateapi.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/bulk-update-config"
             target="_blank"
           >
-            Adaptable API
+            Bulk Update Config
           </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-api/bulk-update-api"
+            target="_blank"
+          >
+            Bulk Update Api
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-options/edit-options"
+            target="_blank"
+          >
+            Edit Options
+          </a>
         </div>
       }
     />

@@ -10,54 +10,65 @@ export default () => {
         <div>
           <p>
             AdapTable provides a range of useful System Filters (e.g. 'Blanks',
-            'Zero', 'Yesterday') to complement any User Filters or Named Filters
-            provided by you.
+            'Zero', 'Yesterday') to complement any Custom Filters provided by
+            users at design-time.
           </p>
           <p>
-            They appear in italics at the top of the Column Filter form (above
-            individual column values) and can also be used when creating
-            Queries.
+            System Filters appear in both the Quick Filter Bar and the Filter
+            Form
           </p>
           <p>
-            By default <b>all</b> System Filters will be shown. However in{' '}
+            By default <b>all</b> System Filters will be shown. However the
+            `SystemFilters` property of{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_systemfilterstate_.systemfilterstate.html"
+              href="https://docs.adaptabletools.com/docs/predefined-config/filter-config"
               target="_blank"
             >
-              Sytem Filter State
-            </a>
-            , you can stipulate to show none (by passing in an empty array) or
-            to select just those that you want.
+              Filter State
+            </a>{' '}
+            allows you to choose which (if any) you want available.
           </p>
 
           <p>
-            In this example we have stipulated that just 2 System Filters are
-            used: Positive and Zero (both for Number columns) and then used it
-            on 'Order Chg.' column.
+            In this example we have stipulated that just a small selection of
+            System Filters are available: 'Positive', 'Zero', 'Contains',
+            'Equals', 'Is', 'On'.{' '}
+          </p>
+
+          <p>
+            And we then use the 'Positive' System Filter as the Column Filter
+            for the 'Order Chg.' column.
           </p>
         </div>
       }
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_systemfilterstate_.systemfilterstate.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/filter-function"
             target="_blank"
           >
-            Predefined Config
+            Filter ReadMe
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_systemfilterapi_.systemfilterapi.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/filter-config"
             target="_blank"
           >
-            Adaptable API
+            Filter Config
           </a>{' '}
           |{' '}
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/guides/adaptable-filtering-guide.md"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/filter-api"
             target="_blank"
           >
-            Adaptable Filtering Guide
+            Filter Api
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-options/filter-options"
+            target="_blank"
+          >
+            Filter Options
           </a>
         </div>
       }

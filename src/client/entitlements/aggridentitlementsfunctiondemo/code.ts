@@ -67,30 +67,8 @@ const demoConfig: PredefinedConfig = {
     CurrentReport: 'My Team Big Invoice',
     Reports: [
       {
-        Expression: {
-          ColumnValueExpressions: [
-            {
-              ColumnId: 'Employee',
-              ColumnDisplayValues: [
-                'Robert King',
-                'Margaret Peacock',
-                'Anne Dodsworth',
-              ],
-            },
-          ],
-          RangeExpressions: [
-            {
-              ColumnId: 'InvoicedCost',
-              Ranges: [
-                {
-                  Operator: 'GreaterThan',
-                  Operand1: '1000',
-                  Operand1Type: 'Value',
-                },
-              ],
-            },
-          ],
-        },
+        Expression:
+          '[Employee] IN ("Robert King", "Margaret Peacock", "Anne Dodsworth") AND [InvoicedCost] > 1000 ',
         Name: 'My Team Big Invoice',
         ReportColumnScope: 'AllColumns',
         ReportRowScope: 'ExpressionRows',
@@ -99,14 +77,13 @@ const demoConfig: PredefinedConfig = {
   },
 } as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     autoGroupColumnDef: {
       sortable: true,
     },
@@ -141,7 +118,7 @@ export default (columnDefs: any[], rowData: any[]) => {
             case 'SmartEdit':
             case 'Shortcut':
               return 'Hidden';
-            case 'AdvancedSearch':
+            case 'Query':
             case 'Export':
             case 'Layout':
               return getMockPermissionServerResult(
@@ -156,7 +133,7 @@ export default (columnDefs: any[], rowData: any[]) => {
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   return { adaptableOptions, adaptableApi };
 };

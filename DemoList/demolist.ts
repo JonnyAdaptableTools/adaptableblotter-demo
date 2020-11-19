@@ -57,10 +57,9 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Search across all columns using a simple text search (includes wildcards like ">").',
           },
           {
-            Name: 'Advanced Search',
-            Link: '/search/aggridadvancedsearchdemo',
-            Description:
-              'Saveable multiple-column search facility including a huge array of ranges and search criteria.',
+            Name: 'Current Query',
+            Link: '/search/aggridcurrentquerydemo',
+            Description: 'Set the current query to use at start up.',
           },
           {
             Name: 'Data Source Selector',
@@ -84,19 +83,21 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Column Filters',
             Link: '/filters/aggridcolumnfiltersdemo',
             Description:
-              'A filter panel available as a dropdown from the Column Header which allows you to perform complex filtering for a particular column.  Can be saved as User Filters.',
+              'A filter panel available as a dropdown from the Column Header which allows you to filter the column using a "Predicate".',
           },
+          /*
           {
             Name: 'User Filters',
             Link: '/filters/aggriduserfiltersdemo',
             Description:
-              'Column Filters which have been named and saved and so are usable across multiple functions that use queries (like Conditional Styles, Reports or Advanced Search).',
+              'Column Filters which have been named and saved and so are usable across multiple functions that use queries (like Conditional Styles or Reports).',
           },
+          */
           {
-            Name: 'Named Filters',
-            Link: '/filters/aggridnamedfiltersdemo',
+            Name: 'Custom Predicates',
+            Link: '/filters/aggridcustompredicatesdemo',
             Description:
-              'Named Filters are provided by users at design-time and include a custom Predicate function that is run each time the filter is applied.',
+              'Customs Filters are "Predicate Functions" provided by users at design-time with a scope that determines where and when the Predicate is applied.',
           },
           {
             Name: 'System Filters',
@@ -224,6 +225,12 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'You can provide your own icons to AdapTable to use in place of the defaults - this demo shows how.',
           },
+          {
+            Name: 'Alpine Theme',
+            Link: '/theme/aggridalpinethemedemo',
+            Description:
+              'Showing ag-Grid (in AdapTable)  with the new Alpine theme introduced in Version 23.',
+          },
         ],
       },
       {
@@ -241,12 +248,6 @@ export function getDemoPageStructure(): DemoPageStructure {
             Link: '/column/aggridfreetextcolumndemo',
             Description:
               'Create your own column where you can insert your own values (e.g. comments) that are stored separately from the Data Source.',
-          },
-          {
-            Name: 'Column Category',
-            Link: '/column/aggridcolumncategorydemo',
-            Description:
-              'Group columns together logically to help you to manipulate grids with very large numbers of columns.',
           },
           {
             Name: 'Column Info',
@@ -320,12 +321,6 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Create your own sort orders for columns (e.g. Ratings, Tenors, Sectors) where the default alphabetical sort doesnt make sense.',
           },
           {
-            Name: 'Export',
-            Link: '/gridmanagement/aggridexportdemo',
-            Description:
-              'Send grid data to a number of destinations using System or Custom reports and schedule them if you would like.',
-          },
-          {
             Name: 'Cell Summary',
             Link: '/gridmanagement/aggridcellsummarydemo',
             Description:
@@ -336,12 +331,6 @@ export function getDemoPageStructure(): DemoPageStructure {
             Link: '/gridmanagement/aggridgridinfodemo',
             Description:
               'Click the "info" button in the Dashboard Header to see summary information about the grid and the Adaptable Options you have set.',
-          },
-          {
-            Name: 'Column Chooser',
-            Link: '/gridmanagement/aggridcolumnchooserdemo',
-            Description:
-              'Set column visiblity and order through an intuitive column management screen.',
           },
           /*
           {
@@ -356,6 +345,36 @@ export function getDemoPageStructure(): DemoPageStructure {
             Link: '/gridmanagement/aggridcalendardemo',
             Description:
               'Select which Holiday Calendar you wish AdapTable to use when calculating Working Days (in Filters, Queries etc).',
+          },
+        ],
+      },
+      {
+        CategoryName: 'Export',
+        Link: '/export',
+        Pages: [
+          {
+            Name: 'System Reports',
+            Link: '/export/aggridsystemreportsdemo',
+            Description:
+              'Send grid data to a number of destinations using System Reports e.g. All Data, Visible Data or Selected Rows.',
+          },
+          {
+            Name: 'User Reports',
+            Link: '/export/aggriduserreportsdemo',
+            Description:
+              'Create bespoke reports either at design time or run time that will include a query to retrieve the data to export each time the report run.',
+          },
+          {
+            Name: 'Custom Reports',
+            Link: '/export/aggridcustomreportsdemo',
+            Description:
+              'Custom Reports are created only at design-time and can include columns and data not in the grid, and are run using a custom function.',
+          },
+          {
+            Name: 'Custom Destination',
+            Link: '/export/aggridcustomdestinationdemo',
+            Description:
+              'Send a report to the destination of your choice - by providing a function which AdapTable will call when the report is ready to send.',
           },
         ],
       },
@@ -376,10 +395,28 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Grouped Layouts can be created which include row grouping details',
           },
           {
+            Name: 'Pivot Layout',
+            Link: '/layout/aggridpivotlayoutdemo',
+            Description:
+              'A pivot layout defines how the grid should look in "Pivot Mode", i.e. which columns are pivoted, grouped and aggregated.',
+          },
+          {
             Name: 'Auto Save Layout',
             Link: '/layout/aggridautosavelayoutdemo',
             Description:
               'Layouts can be saved automatically whenever anything changes',
+          },
+          {
+            Name: 'Column Widths',
+            Link: '/layout/aggridcolumnwidthslayoutdemo',
+            Description:
+              'Provide column width information to Layout definition; and they will also be automatically saved by AdapTable',
+          },
+          {
+            Name: 'Pinned Columns',
+            Link: '/layout/aggridpinnedcolumslayoutdemo',
+            Description:
+              'You can define pinned columns as part of your Layout config',
           },
           {
             Name: 'Advanced Layouts',
@@ -489,18 +526,18 @@ export function getDemoPageStructure(): DemoPageStructure {
         ],
       },
       {
-        CategoryName: 'User Interface',
-        Link: '/userinterface',
+        CategoryName: 'Menus',
+        Link: '/menus',
         Pages: [
           {
             Name: 'Column Menu',
-            Link: '/userinterface/aggridcolumnmenudemo',
+            Link: '/menus/aggridcolumnmenudemo',
             Description:
               'Add your custom menu items to the Column Header Menu (and also choose with shipped items are available)',
           },
           {
             Name: 'Context Menu',
-            Link: '/userinterface/aggridcontextmenudemo',
+            Link: '/menus/aggridcontextmenudemo',
             Description:
               'Add your custom menu items to the (right-click) Context Menu (and choose with shipped items are available)',
           },
@@ -557,6 +594,12 @@ export function getDemoPageStructure(): DemoPageStructure {
             Link: '/admin/aggriddatasourcechangesdemo',
             Description:
               'Any changes made to the data source to the underlying DataGrid (in this example ag-Grid) is automatically reflected in AdapTable and it will be picked up by all relevant functions.',
+          },
+          {
+            Name: 'Batch Data',
+            Link: '/admin/aggridbatchdatademo',
+            Description:
+              'This demo shows how you can update data in transactional batches to improve update performance',
           },
 
           {
@@ -648,6 +691,18 @@ export function getDemoPageStructure(): DemoPageStructure {
             Link: '/aggridfeatures/aggridfixedcolumndemo',
             Description: 'Create some columns to be fixed in place',
           },
+          {
+            Name: 'Community Version',
+            Link: '/aggridfeatures/aggridcommunityversiondemo',
+            Description:
+              'Running AdapTable only using the ag-Grid Community version',
+          },
+          {
+            Name: 'Server Row Model',
+            Link: '/aggridfeatures/aggridservermodedemo',
+            Description:
+              'How to run AdapTable when ag-Grid is using the Server Row Model - and to perform filtering yourself.',
+          },
         ],
       },
       {
@@ -661,7 +716,7 @@ export function getDemoPageStructure(): DemoPageStructure {
               'An AdapTable instance with lots of different Predefined Config elements supplied.',
           },
           {
-            Name: 'State Options',
+            Name: 'State Functions',
             Link: '/adaptablestate/aggridstatefunctionsdemo',
             Description:
               'A group of functions which allow developers complete control over how and where User State is stored.',
@@ -671,6 +726,12 @@ export function getDemoPageStructure(): DemoPageStructure {
             Link: '/adaptablestate/aggridapplicationdataentriesdemo',
             Description:
               'Store bespoke information in Adaptable State as Key / Value pairs.',
+          },
+          {
+            Name: 'Multiple Views',
+            Link: '/adaptablestate/adaptablestatekeyusage',
+            Description:
+              'Leverage the "adaptableStateKey" property in AdaptableOptions to enable multiple, named, views or your Adaptable State.',
           },
         ],
       },
@@ -714,12 +775,14 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'Set the maximum number of distinct column values to show in column lookups and the Query Builder',
           },
+          /*
           {
             Name: 'Server Lookups',
             Link: '/lookups/aggridserverlookupsdemo',
             Description:
               'Provide AdapTable dynamically with the list of values to be displayed each time distinct cell values are required',
           },
+          */
           {
             Name: 'Permitted Values',
             Link: '/lookups/aggridpermittedvaluesdemo',
@@ -746,16 +809,11 @@ export function getDemoPageStructure(): DemoPageStructure {
           },
         ],
       },
+
       {
         CategoryName: 'Partners',
         Link: '/partners',
         Pages: [
-          {
-            Name: 'Finsemble',
-            Link: '/partners/finsembledemo',
-            Description:
-              'We leverage the powerful offering to enable multiple AdapTable instances to share state, data and events',
-          },
           {
             Name: 'ipushpull',
             Link: '/partners/ipushpulldemo',
@@ -763,10 +821,40 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Export AdapTable data to Excel (with Live Updates) or Symphony and elsewhere by using the services of our partner ipushpull',
           },
           {
+            Name: 'Glue42',
+            Link: '/partners/glue42demo',
+            Description:
+              'AdapTable integrates very closely with Glue42 so that your Grids and Blotters communicate with other widgets including Excel (with 2-way validated updates).',
+          },
+          {
             Name: 'OpenFin',
             Link: '/partners/openfindemo',
             Description:
               'If you are using this popular container we offer "Live Updates" so that data exported to Excel updates in real time as AdapTable data ticks or is edited',
+          },
+          {
+            Name: 'Finsemble',
+            Link: '/partners/finsembledemo',
+            Description:
+              'We leverage the powerful offering to enable multiple AdapTable instances to share state, data and events',
+          },
+          {
+            Name: 'Cyoda',
+            Link: '/partners/cyodademo',
+            Description:
+              'Use Cyoda as a server-side solution if you want to run AdapTable on large volumes of back end data',
+          },
+        ],
+      },
+      {
+        CategoryName: 'GridGurus',
+        Link: '/gridgurus',
+        Pages: [
+          {
+            Name: 'Ask the Experts',
+            Link: '/gridgurus/asktheexperts',
+            Description:
+              'At Grid Gurus we receive lots of DataGrid related questions - here we list some which we think others will find of interest',
           },
         ],
       },

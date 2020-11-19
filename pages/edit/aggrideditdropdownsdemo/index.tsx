@@ -15,7 +15,7 @@ export default () => {
           <p>
             However, in the{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_userinterfacestate_.userinterfacestate.html"
+              href="https://docs.adaptabletools.com/docs/predefined-config/user-interface-config"
               target="_blank"
             >
               User Interface
@@ -25,7 +25,7 @@ export default () => {
           </p>
           <p>
             Simply list the columns that should display a Dropdown in the{' '}
-            <b>EditLookUpColumns</b> property and Adaptable will do the rest. If
+            <b>EditLookUpItems</b> property and Adaptable will do the rest. If
             you wish, you may also provide a list of values to display in the
             dropdown.
           </p>
@@ -41,6 +41,16 @@ export default () => {
             populated via Permitted Values) and <b>Employee</b> (which gets
             distinct column values dynamically).
           </p>
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://docs.adaptabletools.com/docs/predefined-config/user-interface-config"
+            target="_blank"
+          >
+            User Interface Config
+          </a>
         </div>
       }
     />

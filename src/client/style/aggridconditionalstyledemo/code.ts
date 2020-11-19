@@ -9,6 +9,7 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
+  PredicateDefHandlerParams,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -21,91 +22,73 @@ const demoConfig: PredefinedConfig = {
   ConditionalStyle: {
     ConditionalStyles: [
       {
-        ColumnId: 'ChangeLastOrder',
+        Scope: {
+          DataTypes: ['Number'],
+        },
         Style: {
           ForeColor: '#008000',
         },
-        ConditionalStyleScope: 'Column',
-        Expression: {
-          FilterExpressions: [
-            {
-              ColumnId: 'ChangeLastOrder',
-              Filters: ['Positive'],
-            },
-          ],
+        Predicate: {
+          PredicateId: 'Positive',
         },
       },
       {
-        ColumnId: 'ChangeLastOrder',
+        Scope: {
+          DataTypes: ['Number'],
+        },
         Style: {
           ForeColor: '#ff0000',
         },
-        ConditionalStyleScope: 'Column',
-        Expression: {
-          FilterExpressions: [
-            {
-              ColumnId: 'ChangeLastOrder',
-              Filters: ['Negative'],
-            },
-          ],
+        Predicate: {
+          PredicateId: 'Negative',
         },
       },
       {
+        Scope: {
+          ColumnIds: ['ItemCost'],
+        },
         Style: {
           BackColor: '#ffffcc',
           FontStyle: 'Italic',
           ForeColor: '#000000',
         },
-        ConditionalStyleScope: 'Row',
-        ExcludeGroupedRows: true,
-        Expression: {
-          RangeExpressions: [
-            {
-              ColumnId: 'ItemCost',
-              Ranges: [
-                {
-                  Operand1: '60',
-                  Operand1Type: 'Value',
-                  Operator: 'GreaterThan',
-                },
-              ],
-            },
-          ],
+        Predicate: {
+          PredicateId: 'GreaterThan',
+          Inputs: [60],
         },
+        ExcludeGroupedRows: true,
       },
       {
-        ColumnId: 'PackageCost',
+        Scope: {
+          ColumnIds: ['Employee'],
+        },
         Style: {
           FontWeight: 'Bold',
         },
-        ConditionalStyleScope: 'Row',
-        Expression: {
-          RangeExpressions: [
-            {
-              ColumnId: 'PackageCost',
-              Ranges: [
-                {
-                  Operand1: '10',
-                  Operand1Type: 'Value',
-                  Operator: 'LessThan',
-                },
-              ],
-            },
-          ],
+        Predicate: {
+          PredicateId: 'new_starter',
         },
+      },
+      {
+        Scope: {
+          All: true,
+        },
+        Style: {
+          BackColor: 'lightblue',
+        },
+        Expression: '[InvoicedCost] > 1000',
       },
     ],
   },
 } as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     autoGroupColumnDef: {
       sortable: true,
     },
@@ -123,10 +106,26 @@ export default (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Cond Style Demo',
+    customPredicateDefs: [
+      {
+        id: 'new_starter',
+        label: 'New Starter',
+        columnScope: {
+          ColumnIds: ['Employee'],
+        },
+        functionScope: ['filter', 'conditionalstyle'],
+        handler(params: PredicateDefHandlerParams) {
+          return (
+            params.value == 'Steven Buchanan' ||
+            params.value == 'Laura Callahan'
+          );
+        },
+      },
+    ],
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   return { adaptableOptions, adaptableApi };
 };

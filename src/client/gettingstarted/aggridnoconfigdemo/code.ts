@@ -20,7 +20,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     autoGroupColumnDef: {
       sortable: true,
     },
@@ -39,6 +38,9 @@ export default async (columnDefs: any[], rowData: any[]) => {
     userName: 'Demo User',
     adaptableId: 'No Config Demo',
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
+    userInterfaceOptions: {
+      showAdaptableToolPanel: true,
+    },
   };
   adaptableApi = await Adaptable.init(adaptableOptions);
 

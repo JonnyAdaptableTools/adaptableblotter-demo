@@ -15,7 +15,7 @@ export default () => {
           <p>
             When the button is clicked an{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_api_eventapi_.eventapi.html"
+              href="https://docs.adaptabletools.com/docs/adaptable-events/action-column-clicked-event"
               target="_blank"
             >
               On('ActionColumnClicked')
@@ -31,14 +31,14 @@ export default () => {
             There are 2 optional functions you can provide for an Action Column
             (both of which you reference in{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_entitlementstate_.entitlementstate.html"
+              href="https://docs.adaptabletools.com/docs/predefined-config/action-column-config"
               target="_blank"
             >
               Predefined Config
             </a>{' '}
             , but provide the actual implementation in{' '}
             <a
-              href="https://api.adaptabletools.com/modules/_src_adaptableoptions_userfunctions_.html"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/user-functions"
               target="_blank"
             >
               UserFunctions
@@ -49,10 +49,10 @@ export default () => {
                 {' '}
                 <b>
                   <a
-                    href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_actioncolumnstate_.actioncolumn.html#shouldrenderpredicate"
+                    href="https://docs.adaptabletools.com/docs/adaptable-options/user-functions#actioncolumnshouldrenderpredicate"
                     target="_blank"
                   >
-                    ShouldRenderPredicate
+                    ActionColumnShouldRenderPredicate
                   </a>{' '}
                 </b>{' '}
                 - this will return true or false to determine whether the button
@@ -61,15 +61,15 @@ export default () => {
               <li>
                 <b>
                   <a
-                    href="https://api.adaptableblotter.com/interfaces/_predefinedconfig_actioncolumnstate_.actioncolumn.html#renderfunction"
+                    href="https://docs.adaptabletools.com/docs/adaptable-options/user-functions#actioncolumnrenderfunction"
                     target="_blank"
                   >
-                    RenderFunction
+                    ActionColumnRenderFunction
                   </a>{' '}
                 </b>{' '}
-                - this allows you to create a button that matches your style and
-                requirements - and allows you to provide differently styled
-                buttons depending on the data in each row.
+                - allows you to create a button that matches your style and
+                requirements (and provide differently styled buttons depending
+                on the data in each row).
               </li>
             </ul>
           </p>
@@ -98,7 +98,7 @@ export default () => {
             Note: the delete row and all the cell updates were performed by
             using various functions in the{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_api_gridapi_.gridapi.html"
+              href="https://docs.adaptabletools.com/docs/adaptable-api/grid-api"
               target="_blank"
             >
               gridApi
@@ -110,21 +110,21 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://github.com/AdaptableTools/adaptable/blob/master/packages/adaptable/readme/functions/action-column-function.md"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/action-column-function"
             target="_blank"
           >
             Action Column Read Me
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_actioncolumnstate_.actioncolumnstate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/action-column-config"
             target="_blank"
           >
-            Action Column Predefined Config
+            Action Column Config
           </a>{' '}
           |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_actioncolumnapi_.actioncolumnapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/action-column-api"
             target="_blank"
           >
             Action Column API
@@ -135,7 +135,7 @@ export default () => {
           </a>
           |{' '}
           <a
-            href="https://api.adaptabletools.com/modules/_src_adaptableoptions_userfunctions_.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/user-functions"
             target="_blank"
           >
             User Functions

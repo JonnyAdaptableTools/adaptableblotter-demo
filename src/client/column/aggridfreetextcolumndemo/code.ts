@@ -9,6 +9,7 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
+  AuditLogEventArgs,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -16,12 +17,13 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleButtons: ['ColumnChooser', 'FreeTextColumn'],
+    VisibleButtons: ['FreeTextColumn'],
   },
   FreeTextColumn: {
     FreeTextColumns: [
       {
         ColumnId: 'Comments',
+        FriendlyName: 'Comments',
         DefaultValue: '',
         FreeTextStoredValues: [
           { PrimaryKey: 11137, FreeText: 'Dispatch asap' },
@@ -56,14 +58,13 @@ const demoConfig: PredefinedConfig = {
   },
 } as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     autoGroupColumnDef: {
       sortable: true,
     },
@@ -81,10 +82,27 @@ export default (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Free Text Column Demo',
+    auditOptions: {
+      auditFunctionEvents: {
+        auditAsEvent: true,
+      },
+    },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
+
+  adaptableApi.auditEventApi.on(
+    'AuditFunctionApplied',
+    (auditLogEventArgs: AuditLogEventArgs) => {
+      let auditLogEntry = auditLogEventArgs.data[0].id;
+      if (
+        auditLogEntry.function_applied_details?.action ==
+        'FREE_TEXT_COLUMN_ADD_EDIT_STORED_VALUE'
+      )
+        console.log(auditLogEntry);
+    }
+  );
 
   return { adaptableOptions, adaptableApi };
 };

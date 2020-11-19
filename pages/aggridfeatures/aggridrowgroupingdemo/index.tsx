@@ -15,7 +15,7 @@ export default () => {
           <p>
             Note that we have set the 'showGroupingTotalsAsHeader' property in{' '}
             <a
-              href="https://api.adaptableblotter.com/interfaces/_adaptableoptions_generaloptions_.generaloptions.html#showgroupingtotalsasheader"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/general-options"
               target="_blank"
             >
               GeneralOptions
@@ -28,6 +28,23 @@ export default () => {
             <i>groupIncludeTotalFooter</i> and <i>groupIncludeFooter</i> to
             true.
           </p>
+        </div>
+      }
+      helpResources={
+        <div>
+          <a
+            href="https://docs.adaptabletools.com/docs/key-topics/using-aggrid"
+            target="_blank"
+          >
+            ag-Grid Read Me
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-options/general-options"
+            target="_blank"
+          >
+            General Options
+          </a>{' '}
         </div>
       }
     />

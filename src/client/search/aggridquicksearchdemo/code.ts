@@ -19,8 +19,7 @@ const demoConfig: PredefinedConfig = {
     Tabs: [],
   },
   QuickSearch: {
-    QuickSearchText: 'g*',
-    DisplayAction: 'ShowRowAndHighlightCell',
+    QuickSearchText: 'g',
     Style: {
       BackColor: '#ffff00',
       ForeColor: '#8b0000',
@@ -28,14 +27,13 @@ const demoConfig: PredefinedConfig = {
   },
 } as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     statusBar: {
       statusPanels: [
         { statusPanel: 'agTotalRowCountComponent', align: 'left' },
@@ -56,10 +54,13 @@ export default (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Quick Search Demo',
+    searchOptions: {
+      quickSearchPlaceholder: 'Search Grid',
+    },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   return { adaptableOptions, adaptableApi };
 };

@@ -16,9 +16,11 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   UserInterface: {
-    PermittedValuesColumns: [
+    PermittedValuesItems: [
       {
-        ColumnId: 'ContactName',
+        Scope: {
+          ColumnIds: ['ContactName'],
+        },
         PermittedValues: [
           'Elizabeth Lincoln',
           'Mario Pontes',
@@ -28,9 +30,11 @@ const demoConfig: PredefinedConfig = {
         ],
       },
     ],
-    EditLookUpColumns: [
+    EditLookUpItems: [
       {
-        ColumnId: 'CustomerReference',
+        Scope: {
+          ColumnIds: ['CustomerReference'],
+        },
         LookUpValues: [
           'SANTG',
           'LINOD',
@@ -42,16 +46,20 @@ const demoConfig: PredefinedConfig = {
         ],
       },
       {
-        ColumnId: 'ContactName',
+        Scope: {
+          ColumnIds: ['ContactName'],
+        },
       },
       {
-        ColumnId: 'Employee',
+        Scope: {
+          ColumnIds: ['Employee'],
+        },
       },
     ],
   },
 } as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
@@ -79,7 +87,7 @@ export default (columnDefs: any[], rowData: any[]) => {
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   return { adaptableOptions, adaptableApi };
 };

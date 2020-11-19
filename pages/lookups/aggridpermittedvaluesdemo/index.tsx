@@ -9,25 +9,26 @@ export default () => {
       description={
         <div>
           <p>
-            When AdapTable wants to provide a list of values for a column (e.g.
-            in a column filter, or when building a query or in Bulk Update) it
-            will first get the list from Server Lookups if that has been set.
+            AdapTable follows a series of steps when it wants to provide a list
+            of values for a column (e.g. in a column filter, or when building a
+            query or in Bulk Update).
           </p>
           <p>
-            If not then it will look for any Permitted Columns values for that
-            column. These are set through the{' '}
+            It will first look for any Permitted Values for that column, set via
+            the{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_userinterfacestate_.userinterfacestate.html"
+              href="https://docs.adaptabletools.com/docs/predefined-config/user-interface-config"
               target="_blank"
             >
-              PermittedValuesColumns
+              PermittedValuesItems
             </a>{' '}
-            property in the User Interface section of Predefined Config.
+            property in UserInterface State - where you can provide either a
+            list or a function.
           </p>
           <p>
-            Here we set 'hard-coded' Permitted Column Values for <i>Contact</i>{' '}
-            and <i>Employee</i> columns so only this list of values is displayed
-            in their Column Filters (and Query Builder).
+            Here we set 'hard-coded' Permitted Values for <i>Contact</i> and{' '}
+            <i>Employee</i> columns so only this list of values is displayed in
+            their Column Filters (and Expression Editor).
           </p>
           <p>
             For the <i>Cust Ref.</i> column we provide a function that will be
@@ -40,22 +41,22 @@ export default () => {
             System Filters for Date columns are shown.
           </p>
           <p>
-            Note: if there are no Permitted Values, then AdapTable will
-            dynamically build a list of distinct values for the column.
+            Note: if there are no Permitted Values provided, then AdapTable will
+            dynamically build a list of current distinct values for the column.
           </p>
         </div>
       }
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_userinterfacestate_.permittedvaluescolumn.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/user-interface-config#permittedvaluesitems"
             target="_blank"
           >
             Predefined Config
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_userinterfaceapi_.userinterfaceapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/user-interface-api"
             target="_blank"
           >
             Adaptable API

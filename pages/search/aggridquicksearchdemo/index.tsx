@@ -9,8 +9,8 @@ export default () => {
       description={
         <div>
           <p>
-            Quick Search enables you to quickly find matching text across all{' '}
-            <b>visible</b> columns.{' '}
+            Quick Search enables you to quickly find <b>any matching text</b>{' '}
+            across all cells in <b>visible</b> columns.
           </p>
           <p>
             Because it is such a popular function we have embedded it in the
@@ -18,46 +18,52 @@ export default () => {
             Quick Search Toolbar you can use)
           </p>
           <p>
-            In order to refine your search, you can use wildcards like '*'
-            (starts with) - see the Developer Documentation for a full list.
-          </p>
-          <p>
             Quick Search Predefined Config allows you to set the style of
-            matched cells and whether to hide or show rows with no matching
-            cells.
+            matched cells - which we have done in this example by setting a
+            darker yellow background with a brown font.
           </p>
           <p>
-            In this example we have made the following changes to Quick Search
-            Config: than the default option, chosen t for any columns that start
-            with 'g'.
+            By default the Quick Search box displays 'Search' as the placeholder
+            text, but this can be changed through <i>quickSearchPlaceholder</i>
+            property in{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/adaptable-options/search-options"
+              target="_blank"
+            >
+              Search Options
+            </a>
+            ; here it is set to 'Search Grid'.
           </p>
-          <ul>
-            <li>Selected a darker yellow to highlight cells</li>
-            <li>
-              Chosen to hide all non-matching rows (ie. any row that has no
-              visible cells that contain the search text)
-            </li>
-            <li>
-              Searched for 'g*' - this will return any cells that contain text
-              that starts with 'g'
-            </li>
-          </ul>
         </div>
       }
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_quicksearchstate_.quicksearchstate.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/quick-search-function"
             target="_blank"
           >
-            Predefined Config
-          </a>
-          ,{' '}
+            Quick Search Function
+          </a>{' '}
+          |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_quicksearchapi_.quicksearchapi.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/quick-search-config"
             target="_blank"
           >
-            Adaptable API
+            Quick Search Predefined Config
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-api/quick-search-api"
+            target="_blank"
+          >
+            Quick Search Api
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-options/search-options"
+            target="_blank"
+          >
+            Search Options
           </a>
         </div>
       }

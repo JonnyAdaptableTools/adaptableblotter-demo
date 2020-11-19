@@ -1,7 +1,10 @@
 import { GridOptions, RowNode } from '@ag-grid-community/all-modules';
 import { ITrade } from './Trade';
 import { HelperAgGrid } from './HelperAgGrid';
-import { AdaptableApi } from '@adaptabletools/adaptable/types';
+import {
+  AdaptableApi,
+  DataUpdateConfig,
+} from '@adaptabletools/adaptable/types';
 
 export class TickingDataHelper {
   private isTicking: boolean = false;
@@ -168,7 +171,7 @@ export class TickingDataHelper {
   }
 
   public startTickingDataagGridTradesUpdateData(
-    gridOptions: any,
+    gridOptions: GridOptions,
     adaptableApi: AdaptableApi,
     tickingFrequency: number,
     tradeCount: number,
@@ -181,7 +184,11 @@ export class TickingDataHelper {
         if (this.isTicking) {
           let tradeId = this.generateRandomInt(1, tradeCount);
 
-          const trade: ITrade = { ...gridOptions.rowData[tradeId] };
+          const node: any = gridOptions.api?.getRowNode(String(tradeId));
+          if (!node) {
+            return;
+          }
+          const trade: ITrade = { ...node.data };
 
           if (updateNotional) {
             const randomInt = this.generateRandomInt(1, 2);
@@ -212,8 +219,9 @@ export class TickingDataHelper {
               trade.currency = 'JPY';
             }
           }
-
+          //  node.setData(trade);
           adaptableApi.gridApi.updateGridData([trade]);
+          //  gridOptions.api?.setRowData([trade]);
         }
       }, tickingFrequency);
     }
@@ -226,6 +234,7 @@ export class TickingDataHelper {
   ) {
     if (gridOptions != null && gridOptions.api != null) {
       this.isTicking = true;
+      const helperAgGrid = new HelperAgGrid();
       setInterval(() => {
         if (this.isTicking) {
           let index: number = this.generateRandomInt(1, 100);
@@ -249,16 +258,82 @@ export class TickingDataHelper {
               trade.bloombergBid = this.roundTo4Dp(bid - directionToAdd);
 
               //    trade.notional = this.generateRandomInt(1, 50);
-              trade.changeOnYear = this.generateRandomInt(-150, 150);
+              trade.changeOnYear = helperAgGrid.getMeaningfulDouble();
 
-              let config = {
-                batchUpdate: true,
+              let config: DataUpdateConfig = {
+                runAsync: true,
                 // callback: test,
               };
               api.gridApi.updateGridData([trade], config);
             }
           }
         }
+      }, tickingFrequency);
+    }
+  }
+
+  public startTickingDataagGridTradeBatch(
+    adaptableApi: AdaptableApi,
+    gridOptions: GridOptions,
+    helperAgGrid: HelperAgGrid,
+    tickingFrequency: number,
+    tradeCount: number,
+    batchSize: number
+  ) {
+    if (gridOptions != null && gridOptions.api != null) {
+      const counterparties = helperAgGrid.getCounterparties();
+      const counterpartyindex = counterparties.length - 1;
+      const currencies = helperAgGrid.getCurrencies();
+      const currencyindex = currencies.length - 1;
+      const countries = helperAgGrid.getCountries();
+      const countryIndex = countries.length - 1;
+      const notionals = helperAgGrid.getNotionals();
+
+      let callbackFn = function resultCallback() {
+        console.log('batch update occurred');
+      };
+      let config = {
+        runAsync: true,
+        callbackFn: callbackFn,
+      };
+
+      setInterval(() => {
+        let tradeBatch: ITrade[] = [];
+        for (let i = 0; i < batchSize; i++) {
+          let tradeId = this.generateRandomInt(1, tradeCount);
+
+          const node: any = gridOptions.api?.getRowNode(String(tradeId));
+          if (!node) {
+            return;
+          }
+          const trade: ITrade = { ...node.data };
+          const randomInt = this.generateRandomInt(1, 2);
+          const counterparty =
+            counterparties[this.generateRandomInt(0, counterpartyindex)];
+          const currency = currencies[this.generateRandomInt(0, currencyindex)];
+          const country = countries[this.generateRandomInt(0, countryIndex)];
+          const numberToAdd: number = randomInt == 1 ? -0.5 : 0.5;
+          const directionToAdd: number = randomInt == 1 ? -0.01 : 0.01;
+          const price = this.roundTo4Dp(trade.price + numberToAdd);
+          const bidOfferSpread = trade.bidOfferSpread;
+          const ask = this.roundTo4Dp(price + bidOfferSpread / 2);
+          const bid = this.roundTo4Dp(price - bidOfferSpread / 2);
+          const notional = this.getRandomItem(notionals);
+          const changeOnYear = helperAgGrid.getMeaningfulDouble();
+
+          trade.price = price;
+          trade.bid = bid;
+          trade.ask = ask;
+          trade.bidOfferSpread = bidOfferSpread;
+          trade.notional = notional;
+          trade.changeOnYear = changeOnYear;
+          trade.counterparty = String(counterparty);
+          trade.currency = currency;
+          trade.country = country;
+
+          tradeBatch.push(trade);
+        }
+        adaptableApi.gridApi.updateGridData(tradeBatch, config);
       }, tickingFrequency);
     }
   }

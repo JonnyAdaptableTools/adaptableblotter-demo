@@ -21,10 +21,10 @@ export default () => {
           <p>
             When a Data Source is selected, the{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_api_eventapi_.eventapi.html"
+              href="https://docs.adaptabletools.com/docs/adaptable-events/search-changed-event"
               target="_blank"
             >
-              on('SearchChanged') event
+              Search Changed Event
             </a>{' '}
             fires - stating what triggered the event and providing the search
             and filter sections of the State (including the selected
@@ -34,7 +34,7 @@ export default () => {
             This allows you to perform the necessary actions on the server and
             return data to AdapTable via the{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_api_gridapi_.gridapi.html"
+              href="https://docs.adaptabletools.com/docs/adaptable-api/grid-api"
               target="_blank"
             >
               Grid APi
@@ -57,21 +57,28 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_datasourcestate_.datasourcestate.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/data-source-function"
             target="_blank"
           >
-            Predefined Config
-          </a>
-          ,{' '}
+            Data Source Function
+          </a>{' '}
+          |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_datasourceapi_.datasourceapi.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/data-source-config"
             target="_blank"
           >
-            Adaptable API
-          </a>
-          ,{' '}
+            Data Source Predefined Config
+          </a>{' '}
+          |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_searchoptions_.searchoptions.html#serversearchoption"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/data-source-api"
+            target="_blank"
+          >
+            Data Source Api
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-options/search-options#serversearchoption"
             target="_blank"
           >
             Server Searching

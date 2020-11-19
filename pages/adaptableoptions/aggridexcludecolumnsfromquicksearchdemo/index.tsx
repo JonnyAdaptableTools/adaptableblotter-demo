@@ -18,7 +18,7 @@ export default () => {
             If you wish to exclude certain columns from being included, provide
             a <b>excludeColumnFromQuickSearch</b> function in{' '}
             <a
-              href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_searchoptions_.searchoptions.html#excludecolumnfromquicksearch"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/search-options#excluding-quick-search"
               target="_blank"
             >
               Search Options
@@ -35,10 +35,10 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_adaptableoptions_searchoptions_.searchoptions.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/search-options"
             target="_blank"
           >
-            Adaptable Options
+            Search Options
           </a>
         </div>
       }

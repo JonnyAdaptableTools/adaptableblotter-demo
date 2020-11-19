@@ -35,35 +35,14 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
-  UserFilter: {
-    UserFilters: [
-      {
-        ColumnId: 'Employee',
-        Expression: {
-          ColumnValueExpressions: [
-            {
-              ColumnId: 'Employee',
-              ColumnDisplayValues: [
-                'Robert King',
-                'Janet Leverling',
-                'Anne Dodsworth',
-              ],
-            },
-          ],
-        },
-        Name: 'UK Team',
-      },
-    ],
-  },
   FormatColumn: {
     FormatColumns: [
       {
-        ColumnId: 'Employee',
+        Scope: {
+          ColumnIds: ['Employee'],
+        },
         Style: {
           BackColor: '#ffffcc',
-          FontWeight: 'Normal',
-          FontStyle: 'Normal',
-          ClassName: '',
         },
       },
     ],
@@ -71,22 +50,15 @@ const demoConfig: PredefinedConfig = {
   ConditionalStyle: {
     ConditionalStyles: [
       {
-        ColumnId: 'Employee',
+        Scope: {
+          ColumnIds: ['Employee'],
+        },
+
         Style: {
-          ClassName: '',
-          FontStyle: 'Normal',
           FontWeight: 'Bold',
           ForeColor: '#8b0000',
         },
-        ConditionalStyleScope: 'Column',
-        Expression: {
-          FilterExpressions: [
-            {
-              ColumnId: 'Employee',
-              Filters: ['UK Team'],
-            },
-          ],
-        },
+        Expression: '[Employee] = "UK Team"', // TODO Release7 this wont workg but....{
       },
     ],
   },
@@ -94,25 +66,24 @@ const demoConfig: PredefinedConfig = {
     CellValidations: [
       {
         ActionMode: 'Stop Edit',
-        ColumnId: 'Employee',
-        Range: {
-          Operator: 'None',
-          Operand1: '',
-          Operand1Type: 'Value',
+        Scope: {
+          ColumnIds: ['Employee'],
+        },
+        Predicate: {
+          PredicateId: 'Any', // ?? is that right?
         },
       },
     ],
   },
 } as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     autoGroupColumnDef: {
       sortable: true,
     },
@@ -133,7 +104,7 @@ export default (columnDefs: any[], rowData: any[]) => {
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   return { adaptableOptions, adaptableApi };
 };

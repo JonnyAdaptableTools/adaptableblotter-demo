@@ -36,17 +36,22 @@ const demoConfig: PredefinedConfig = {
     Layouts: [
       {
         Columns: [
-          'ShipVia',
           'CustomerReference',
           'ContactName',
           'InvoicedCost',
           'ChangeLastOrder',
+          'ItemCount',
           'OrderCost',
           'PackageCost',
           'Employee',
           'ShipCountry',
         ],
-        GroupedColumns: ['Employee'],
+        RowGroupedColumns: ['Employee', 'ShipVia'],
+        AggregationColumns: { InvoicedCost: 'sum', ItemCount: 'max' },
+        ExpandedRowGroupValues: [
+          'Janet Leverling',
+          'Janet Leverling/United Package',
+        ],
         Name: 'Grouped',
       },
       {
@@ -61,20 +66,40 @@ const demoConfig: PredefinedConfig = {
           'Employee',
           'ShipCountry',
         ],
-        GroupedColumns: ['ShipVia'],
+        RowGroupedColumns: ['ShipCountry', 'Employee'],
+        ColumnSorts: [
+          {
+            ColumnId: 'ShipVia',
+            SortOrder: 'Asc',
+          },
+        ],
         Name: 'Sorted Grouped',
+      },
+    ],
+  },
+  FormatColumn: {
+    FormatColumns: [
+      {
+        Scope: {
+          ColumnIds: ['InvoicedCost'],
+        },
+        DisplayFormat: {
+          Formatter: 'NumberFormatter',
+          Options: {
+            FractionDigits: 4,
+          },
+        },
       },
     ],
   },
 } as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
     enableRangeSelection: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     rowGroupPanelShow: 'always',
     autoGroupColumnDef: {
       sortable: true,
@@ -95,11 +120,11 @@ export default (columnDefs: any[], rowData: any[]) => {
     adaptableId: 'Grouped Layout Demo',
     predefinedConfig: demoConfig,
     layoutOptions: {
-      includeOpenedRowGroups: true,
+      includeExpandedRowGroups: true,
     },
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   return { adaptableOptions, adaptableApi };
 };

@@ -15,9 +15,12 @@ export default () => {
           </p>
           <p>
             Typically you ship the AdapTable instance with{' '}
-            <b>Predefined Config</b> (searches, views, reports etc. created at
-            design time). And you'll set Adaptable Options to non-default values
-            to configure your grid to precise requirements.
+            <a href="../adaptablestate/aggridpredefinedconfigdemo">
+              <b>Predefined Config</b>
+            </a>{' '}
+            (searches, views, reports etc. created at design time). And you'll
+            set Adaptable Options to non-default values to configure your grid
+            to precise requirements.
           </p>
           <p>
             You will also likely include Entitlements as part of Predefined

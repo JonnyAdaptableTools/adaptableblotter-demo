@@ -16,8 +16,9 @@ const demoConfig: PredefinedConfig = {
   CalculatedColumn: {
     CalculatedColumns: [
       {
-        ColumnExpression: 'Col("ItemCost") / Col("ItemCount")',
-        ColumnId: 'Avg Item Cost',
+        ColumnExpression: '[ItemCost] / [ItemCount]',
+        ColumnId: 'AvgCost',
+        FriendlyName: 'Avg Item Cost',
       },
     ],
   },
@@ -25,6 +26,7 @@ const demoConfig: PredefinedConfig = {
     FreeTextColumns: [
       {
         ColumnId: 'Comments',
+        FriendlyName: 'Comments',
         DefaultValue: '',
         FreeTextStoredValues: [
           { PrimaryKey: 11137, FreeText: 'Dispatch asap' },
@@ -34,47 +36,14 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
-  FlashingCell: {
-    FlashingCells: [
-      {
-        ColumnId: 'ChangeLastOrder',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 500,
-        IsLive: true,
-        UpColor: '#008000',
-      },
-      {
-        ColumnId: 'ItemCost',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 500,
-        IsLive: true,
-        UpColor: '#008000',
-      },
-      {
-        ColumnId: 'OrderCost',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 500,
-        IsLive: true,
-        UpColor: '#008000',
-      },
-      {
-        ColumnId: 'InvoicedCost',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 750,
-        IsLive: true,
-        UpColor: '#008000',
-      },
-    ],
-  },
   Layout: {
+    CurrentLayout: 'Column Groups',
     Layouts: [
       {
         Columns: [
-          'Avg Item Cost',
           'CustomerReference',
           'CompanyName',
           'ContactName',
-          'Comments',
           'ShippedDate',
           'OrderCost',
           'PackageCost',
@@ -88,20 +57,38 @@ const demoConfig: PredefinedConfig = {
           'ItemCount',
         ],
         ColumnSorts: [],
+        Name: 'Column Groups',
+      },
+      {
+        Columns: [
+          'AvgCost',
+          'Comments',
+          'CustomerReference',
+          'CompanyName',
+          'ContactName',
+          'ShippedDate',
+          'OrderCost',
+          'PackageCost',
+          'OrderId',
+          'Freight',
+          'ArrivedOnTime',
+          'ItemCount',
+          'ShipName',
+        ],
+        ColumnSorts: [],
         Name: 'With Special Cols',
       },
     ],
   },
 } as PredefinedConfig;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     groupIncludeTotalFooter: true,
     columnTypes: {
       abColDefNumber: {},
@@ -120,7 +107,7 @@ export default (columnDefs: any[], rowData: any[]) => {
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   return { adaptableOptions, adaptableApi };
 };

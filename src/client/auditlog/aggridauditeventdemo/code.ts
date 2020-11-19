@@ -15,14 +15,13 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
 var adaptableApi: AdaptableApi;
 
-export default (columnDefs: any[], rowData: any[]) => {
+export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
     columnDefs,
     rowData,
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    floatingFilter: true,
     autoGroupColumnDef: {
       sortable: true,
     },
@@ -44,25 +43,24 @@ export default (columnDefs: any[], rowData: any[]) => {
       auditCellEdits: {
         auditAsEvent: true,
       },
+      auditFunctionEvents: {
+        auditAsEvent: true,
+      },
     },
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
-  adaptableApi = Adaptable.init(adaptableOptions);
+  adaptableApi = await Adaptable.init(adaptableOptions);
 
   adaptableApi.auditEventApi.on(
     'AuditCellEdited',
     (auditLogEventArgs: AuditLogEventArgs) => {
-      const dataChangeDetails: DataChangedDetails | undefined =
-        auditLogEventArgs.data[0].id.data_change_details;
-      console.log(
-        'The "AuditCellEdited" event was fired because in the Column: "' +
-          dataChangeDetails?.column_id +
-          '" we changed "' +
-          dataChangeDetails?.previous_value +
-          '" to: "' +
-          dataChangeDetails?.new_value +
-          '"'
-      );
+      console.log(auditLogEventArgs.data[0].id);
+    }
+  );
+  adaptableApi.auditEventApi.on(
+    'AuditFunctionApplied',
+    (auditLogEventArgs: AuditLogEventArgs) => {
+      console.log(auditLogEventArgs.data[0].id);
     }
   );
 

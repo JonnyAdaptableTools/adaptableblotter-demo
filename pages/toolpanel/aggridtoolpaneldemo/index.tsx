@@ -23,29 +23,24 @@ export default () => {
             with one control to map to each Dashboard Toolbar.
           </p>{' '}
           <p>
-            You can set with Tool Panel elememt are availalbe and which are
-            visible through Tool Panel state (again similar to how the Dashboard
-            works).
+            You can set - through Tool Panel state - which Tool Panel elememts
+            are available and which are visible at start-up (again similar to
+            how the Dashboard works).
           </p>
-          <p>
-            In this example we have set the Dashboard to floating and set the
-            Toolpanel to show on open. You can 'restore' the Dashboard by
-            double-clicking the Name or by unchecking the 'Floating' option in
-            the 'Dashboard' Toolbar control.
-          </p>
+          <p>In this example we have set the Tool Panel to show on open.</p>
         </div>
       }
       helpResources={
         <div>
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_predefinedconfig_toolpanelstate_.toolpanelstate.html"
+            href="https://docs.adaptabletools.com/docs/predefined-config/tool-panel-config"
             target="_blank"
           >
             Predefined Config
-          </a>
-          ,{' '}
+          </a>{' '}
+          |{' '}
           <a
-            href="https://api.adaptabletools.com/interfaces/_src_api_toolpanelapi_.toolpanelapi.html"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/tool-panel-api"
             target="_blank"
           >
             Adaptable API
