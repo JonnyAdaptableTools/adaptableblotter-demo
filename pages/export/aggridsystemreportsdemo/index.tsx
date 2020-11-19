@@ -30,7 +30,18 @@ export default () => {
             </li>
           </ul>{' '}
           <p>
-            See the other demos for examples of{' '}
+            To configure which System Reports are available use the{' '}
+            <i>SystemReportNames</i> property of{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/predefined-config/export-config"
+              target="_blank"
+            >
+              Export Config
+            </a>
+            .{' '}
+          </p>
+          <p>
+            See the other Export demos for examples of{' '}
             <a href="aggriduserreportsdemo" target="_blank">
               User
             </a>{' '}
