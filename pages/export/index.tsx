@@ -89,14 +89,13 @@ export default () => {
               Glue42 Plugin)
             </li>
             <li>
-              <b>Excel (via OpenFin)</b>: Sends data to excel via OpenFin
-              ensuring Excel updates automatically as the grid ticks (requires
-              OpenFin Plugin)
+              <b>OpenFin</b>: Sends data to excel via OpenFin ensuring Excel
+              updates automatically as the grid ticks (requires OpenFin Plugin)
             </li>
             <li>
               <b>Custom</b>: The developer provides the name of the destination
-              in Predefined Config and a functin to be implemented to be called
-              by AdapTable.
+              (and form metadata) in Predefined Config and a function to be
+              implemented to be called by AdapTable.
             </li>
           </ul>{' '}
           <p>

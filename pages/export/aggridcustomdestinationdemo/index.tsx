@@ -90,13 +90,6 @@ export default () => {
           </a>
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-options/export-options"
-            target="_blank"
-          >
-            Export Options
-          </a>{' '}
-          |{' '}
-          <a
             href="https://docs.adaptabletools.com/docs/adaptable-options/user-functions"
             target="_blank"
           >

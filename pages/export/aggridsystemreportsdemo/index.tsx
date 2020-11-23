@@ -89,13 +89,6 @@ export default () => {
           >
             Export Api
           </a>
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/adaptable-options/export-options"
-            target="_blank"
-          >
-            Export Options
-          </a>
         </div>
       }
     />
