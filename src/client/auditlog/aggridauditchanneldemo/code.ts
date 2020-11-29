@@ -43,7 +43,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
       auditUserStateChanges: {
         auditToHttpChannel: true,
       },
-      auditFunctionEvents: {
+      auditFunctionsApplied: {
         auditToHttpChannel: true,
       },
       auditCellEdits: {

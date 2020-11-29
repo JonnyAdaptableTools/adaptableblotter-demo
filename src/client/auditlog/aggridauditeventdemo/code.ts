@@ -43,7 +43,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
       auditCellEdits: {
         auditAsEvent: true,
       },
-      auditFunctionEvents: {
+      auditFunctionsApplied: {
         auditAsEvent: true,
       },
     },

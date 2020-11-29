@@ -83,7 +83,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
     userName: 'Demo User',
     adaptableId: 'Free Text Column Demo',
     auditOptions: {
-      auditFunctionEvents: {
+      auditFunctionsApplied: {
         auditAsEvent: true,
       },
     },
@@ -97,7 +97,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
     (auditLogEventArgs: AuditLogEventArgs) => {
       let auditLogEntry = auditLogEventArgs.data[0].id;
       if (
-        auditLogEntry.function_applied_details?.action ==
+        auditLogEntry.function_applied_details?.actionType ==
         'FREE_TEXT_COLUMN_ADD_EDIT_STORED_VALUE'
       )
         console.log(auditLogEntry);

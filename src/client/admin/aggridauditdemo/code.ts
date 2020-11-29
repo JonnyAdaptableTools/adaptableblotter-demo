@@ -43,7 +43,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
       auditUserStateChanges: {
         auditToConsole: true,
       },
-      auditFunctionEvents: {
+      auditFunctionsApplied: {
         auditToConsole: true,
         //  auditAsAlert: true,
         auditToHttpChannel: true,

@@ -47,6 +47,9 @@ export default async (columnDefs: any[], rowData: any[]) => {
       auditInternalStateChanges: {
         auditToConsole: true,
       },
+      auditFunctionsApplied: {
+        auditToConsole: true,
+      },
     },
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

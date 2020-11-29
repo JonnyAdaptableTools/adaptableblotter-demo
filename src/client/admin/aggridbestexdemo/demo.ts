@@ -35,7 +35,7 @@ export default async () => {
       auditUserStateChanges: {
         auditToConsole: true,
       },
-      auditFunctionEvents: {
+      auditFunctionsApplied: {
         auditToConsole: true,
       },
       auditCellEdits: {

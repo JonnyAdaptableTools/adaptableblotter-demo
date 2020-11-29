@@ -46,9 +46,15 @@ export default () => {
             State, Function Applied and Internal State changes to the Audit Log.{' '}
           </p>
           <p>
-            And you can decide how the Audit Log will make these messages
-            available, via one of 4 ways, each illustrated here with a different
-            demo:
+            And you can decide how the{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/key-topics/audit-log"
+              target="_blank"
+            >
+              Audit Log
+            </a>{' '}
+            will make these messages available, via one of 4 ways, each
+            illustrated here with a different demo:
           </p>
           <ul>{demoLinks}</ul>
         </div>

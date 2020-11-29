@@ -50,7 +50,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
     userName: 'Demo User',
     adaptableId: 'Audit as Alert Demo',
     auditOptions: {
-      auditFunctionEvents: {
+      auditFunctionsApplied: {
         auditAsAlert: true,
       },
       auditCellEdits: {
