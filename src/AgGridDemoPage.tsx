@@ -172,6 +172,7 @@ AgGridDemoPageProps) => {
             margin: '2px',
           }}
         />
+        <div id="chartDiv" />
         <div id="adaptable" />
         <p />
         <div
