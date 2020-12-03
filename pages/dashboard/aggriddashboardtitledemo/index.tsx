@@ -25,7 +25,11 @@ export default () => {
           <p>
             In this example we set the name of the Toolbar to 'New Dashboard
             Header Name' (though we have <b>not</b> changed the adaptableId
-            property itself) and made the Dashboard 'floating'.
+            property itself).
+          </p>
+          <p>
+            Additionally we have set the Dashboard visibility mode to{' '}
+            <b>Collapsed</b>.
           </p>
         </div>
       }
