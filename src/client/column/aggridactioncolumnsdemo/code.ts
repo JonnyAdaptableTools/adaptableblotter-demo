@@ -13,6 +13,7 @@ import {
   AdaptableApi,
   ActionColumnClickedEventArgs,
   ActionColumnClickedInfo,
+  ActionColumnRenderParams,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -91,7 +92,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
       {
         type: 'ActionColumnRenderFunction',
         name: 'renderMultiplyFunction',
-        handler(params) {
+        handler(params: ActionColumnRenderParams) {
           return params.rowData.Employee == 'Robert King' ||
             params.rowData.Employee == 'Janet Leverling'
             ? '<button style="color:blue; font-weight:bold">Double</button>'
