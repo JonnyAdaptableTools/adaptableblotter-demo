@@ -20,7 +20,21 @@ const demoConfig: PredefinedConfig = {
     Tabs: [
       {
         Name: 'Demo',
-        Toolbars: ['Layou', 'Export', 'Export'],
+        Toolbars: ['Layou', 'Export'],
+      },
+    ],
+  },
+  ConditionalStyle: {
+    ConditionalStyles: [
+      {
+        Scope: {
+          All: true,
+        },
+        Expression: '[counterparty] IN ("Rabobank", "Nomura", "MUFJ", "RBS")',
+        //  Expression: '[country] IN ("USA", "Nomura", "MUFJ", "RBS")',
+        Style: {
+          BackColor: 'LightYellow',
+        },
       },
     ],
   },
@@ -34,10 +48,10 @@ const demoConfig: PredefinedConfig = {
           'country',
           'counterparty',
           'changeOnYear',
-          'currency',
-          'bidOfferSpread',
           'price',
+          'currency',
           'ask',
+          'bidOfferSpread',
           'bid',
           'sandpRating',
           'deskId',
@@ -45,7 +59,10 @@ const demoConfig: PredefinedConfig = {
           'lastUpdated',
           'lastUpdatedBy',
         ],
-        ColumnSorts: [{ ColumnId: 'country', SortOrder: 'Asc' }],
+        ColumnSorts: [
+          { ColumnId: 'country', SortOrder: 'Asc' },
+          { ColumnId: 'tradeId', SortOrder: 'Desc' },
+        ],
         Name: 'Data Source',
       },
     ],

@@ -1761,14 +1761,10 @@ export class HelperAgGrid {
       'Deutsche Bank',
       'Credit Suisse',
       'Nomura',
-      null,
-      undefined,
+      //   null,
+      //   undefined,
     ];
     return counterparties;
-  }
-
-  public getNamedCounterparties(): (string | null | undefined)[] {
-    return this.getCounterparties().filter(c => c != undefined && c != null);
   }
 
   public getCurrencies(): string[] {
