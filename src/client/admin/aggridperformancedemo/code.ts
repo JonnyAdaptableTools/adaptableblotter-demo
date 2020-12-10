@@ -45,7 +45,7 @@ const demoConfig: PredefinedConfig = {
           'lastUpdated',
           'lastUpdatedBy',
         ],
-        ColumnSorts: [{ ColumnId: 'tradeId', SortOrder: 'Desc' }],
+        ColumnSorts: [{ ColumnId: 'country', SortOrder: 'Asc' }],
         Name: 'Data Source',
       },
     ],

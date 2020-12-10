@@ -414,7 +414,7 @@ export class TickingDataHelper {
           adaptableApi.gridApi.deleteGridData(tradeBatch, config);
           addRow = true;
         }
-      }, 5000);
+      }, 3000);
     }
   }
 
