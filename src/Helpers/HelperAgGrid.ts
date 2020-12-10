@@ -1767,6 +1767,10 @@ export class HelperAgGrid {
     return counterparties;
   }
 
+  public getNamedCounterparties(): (string | null | undefined)[] {
+    return this.getCounterparties().filter(c => c != undefined && c != null);
+  }
+
   public getCurrencies(): string[] {
     var currencies = ['EUR', 'USD', 'GBP', 'CHF', 'CAD', 'AUD', 'ZAR'];
     return currencies;

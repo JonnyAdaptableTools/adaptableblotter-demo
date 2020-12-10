@@ -620,6 +620,12 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'Set up "Hot Keys" to open Adaptable Functions and windows with bespoke key combinations',
           },
+          {
+            Name: 'Performance',
+            Link: '/admin/aggridperformancedemo',
+            Description:
+              'Test the performance of AdapTable with fast updates and lots of changes',
+          },
         ],
       },
       {

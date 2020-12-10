@@ -17,16 +17,19 @@ export default async () => {
   const tickingDataHelper = new TickingDataHelper();
 
   const columndefs = helperAgGrid.getTradeSchema();
-
-  const rowData = helperAgGrid.getTrades(100000);
+  const rowCount = 20000;
+  const rowData = helperAgGrid.getTrades(rowCount);
 
   const { adaptableOptions, adaptableApi } = await init(columndefs, rowData);
 
   adaptableApi.eventApi.on('AdaptableReady', () => {
-    tickingDataHelper.startTickingDataagGridTrade(
+    tickingDataHelper.startTickingDataagGridTradeBatchAddDeleteUpdate(
       adaptableApi,
       adaptableOptions.vendorGrid,
-      20,
+      helperAgGrid,
+      10,
+      rowCount,
+      50,
       100
     );
   });

@@ -230,14 +230,15 @@ export class TickingDataHelper {
   public startTickingDataagGridTrade(
     api: AdaptableApi,
     gridOptions: any,
-    tickingFrequency: number
+    tickingFrequency: number,
+    upperLevel: number
   ) {
     if (gridOptions != null && gridOptions.api != null) {
       this.isTicking = true;
       const helperAgGrid = new HelperAgGrid();
       setInterval(() => {
         if (this.isTicking) {
-          let index: number = this.generateRandomInt(1, 100);
+          let index: number = this.generateRandomInt(1, upperLevel);
           let rowNode: RowNode = gridOptions.api!.getRowNode(index);
           if (rowNode) {
             // NOTE:  You need to make a COPY of the data that you are changing...
@@ -335,6 +336,85 @@ export class TickingDataHelper {
         }
         adaptableApi.gridApi.updateGridData(tradeBatch, config);
       }, tickingFrequency);
+    }
+  }
+
+  public startTickingDataagGridTradeBatchAddDeleteUpdate(
+    adaptableApi: AdaptableApi,
+    gridOptions: GridOptions,
+    helperAgGrid: HelperAgGrid,
+    tickingFrequency: number,
+    tradeCount: number,
+    updateBatchSize: number,
+    addDeleteBatchSize: number
+  ) {
+    if (gridOptions != null && gridOptions.api != null) {
+      const counterparties = helperAgGrid.getNamedCounterparties();
+      const counterpartyindex = counterparties.length - 1;
+
+      let config: DataUpdateConfig = {
+        runAsync: true,
+      };
+
+      setInterval(() => {
+        let tradeBatch: ITrade[] = [];
+        let rowCount: number = gridOptions.api!.getDisplayedRowCount();
+        for (let i = 0; i < updateBatchSize; i++) {
+          const rowId: number = this.generateRandomInt(0, rowCount - 1);
+          let rowNode = gridOptions.api!.getDisplayedRowAtIndex(rowId);
+          if (!rowNode) {
+            return;
+          }
+          const trade: ITrade = { ...rowNode.data };
+          const randomInt = this.generateRandomInt(-1, 1);
+          const counterparty =
+            counterparties[this.generateRandomInt(0, counterpartyindex)];
+          const price = this.roundTo4Dp(trade.price + randomInt);
+          const bidOfferSpread = trade.bidOfferSpread;
+          const ask = this.roundTo4Dp(price + bidOfferSpread / 2);
+          const bid = this.roundTo4Dp(price - bidOfferSpread / 2);
+
+          trade.price = price;
+          trade.bid = bid;
+          trade.ask = ask;
+          trade.counterparty = String(counterparty);
+
+          tradeBatch.push(trade);
+        }
+        adaptableApi.gridApi.updateGridData(tradeBatch, config);
+      }, tickingFrequency);
+
+      let addRow: boolean = true;
+      let tradeId = tradeCount;
+      setInterval(() => {
+        let tradeBatch: ITrade[] = [];
+        if (addRow) {
+          for (let i = 0; i < addDeleteBatchSize; i++) {
+            tradeId++;
+            const newTrade = helperAgGrid.createTrade(tradeId);
+            if (newTrade) {
+              tradeBatch.push(newTrade);
+            }
+          }
+          adaptableApi.gridApi.addGridData(tradeBatch, config);
+          addRow = false;
+        } else {
+          let rowCount: number = gridOptions.api!.getDisplayedRowCount();
+          for (let i = 0; i < addDeleteBatchSize; i++) {
+            const rowId: number = this.generateRandomInt(0, rowCount - 1);
+
+            let rowNode = gridOptions.api!.getDisplayedRowAtIndex(rowId);
+            if (rowNode) {
+              let rowToDelete = rowNode.data;
+              if (rowToDelete) {
+                tradeBatch.push(rowToDelete);
+              }
+            }
+          }
+          adaptableApi.gridApi.deleteGridData(tradeBatch, config);
+          addRow = true;
+        }
+      }, 5000);
     }
   }
 

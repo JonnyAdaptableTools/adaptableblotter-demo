@@ -104,7 +104,7 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/common-objects/common-objects-predicate"
             target="_blank"
           >
-            Prredicates Guide
+            Predicates Guide
           </a>
         </div>
       }
