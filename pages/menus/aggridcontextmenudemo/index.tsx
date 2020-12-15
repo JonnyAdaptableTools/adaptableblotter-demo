@@ -32,10 +32,10 @@ export default () => {
             menu items (with the latter having sub menu items).
           </p>
           <p>
-            When you define a UserMenuItem you can reference 2 functions (for
-            which you provide the implementation for both in{' '}
+            When you define a UserMenuItem you can reference 3 User Functions
+            (for which you provide the implementation for both in{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/adaptable-options/user-functions"
+              href="https://docs.adaptabletools.com/docs/user-functions/user-functions-overview"
               target="_blank"
             >
               UserFunctions
@@ -44,12 +44,33 @@ export default () => {
           </p>
           <ul>
             <li>
-              <b>UserMenuItemClickedFunction</b>: the function called when a
-              Menu Item is clicked.
+              <a
+                href="https://docs.adaptabletools.com/docs/user-functions/user-menu-item-clicked-user-function"
+                target="_blank"
+              >
+                UserMenuItem Clicked Function:
+              </a>{' '}
+              the User Function called when a Menu Item is clicked.
             </li>
             <li>
-              <b>UserMenuItemShowPredicate</b>: the predicate function that runs
-              when the menu is opened to return if the menu item should appear.
+              <a
+                href="https://docs.adaptabletools.com/docs/user-functions/user-menu-item-show-predicate-user-function"
+                target="_blank"
+              >
+                UserMenuItem Show Predicate:
+              </a>{' '}
+              the predicate function that runs when the menu is opened to return
+              if the menu item should appear.
+            </li>
+            <li>
+              <a
+                href="https://docs.adaptabletools.com/docs/user-functions/user-menu-item-label-user-function"
+                target="_blank"
+              >
+                UserMenuItem Label:
+              </a>{' '}
+              the User Function that runs when the menu is created to allow for
+              an alternative label to be displayed.
             </li>
           </ul>
           <p>
@@ -95,7 +116,7 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-options/user-functions"
+            href="https://docs.adaptabletools.com/docs/user-functions/user-functions-overview"
             target="_blank"
           >
             User Functions

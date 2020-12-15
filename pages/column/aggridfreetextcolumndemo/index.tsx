@@ -28,17 +28,24 @@ export default () => {
       helpResources={
         <div>
           <a
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/freetext-column-function"
+            target="_blank"
+          >
+            FreeText Column Function
+          </a>{' '}
+          |{' '}
+          <a
             href="https://docs.adaptabletools.com/docs/predefined-config/free-text-column-config"
             target="_blank"
           >
-            Predefined Config
+            FreeText Column Predefined Config
           </a>{' '}
           |{' '}
           <a
             href="https://docs.adaptabletools.com/docs/adaptable-api/free-text-column-api"
             target="_blank"
           >
-            Adaptable API
+            FreeText Column API
           </a>
         </div>
       }

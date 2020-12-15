@@ -40,12 +40,12 @@ export default () => {
             </li>
             <li>
               <b>A standard comparer function</b> - that you reference in
-              Config, but provide the actual implementation in{' '}
+              Config, but provide the actual implementation as a{' '}
               <a
-                href="https://docs.adaptabletools.com/docs/adaptable-options/user-functions"
+                href="https://docs.adaptabletools.com/docs/user-functions/custom-sort-comparer-user-function"
                 target="_blank"
               >
-                UserFunctions
+                Custom Sort Comparaer User Function
               </a>{' '}
               . The 'Employee' column in this demo has a custom sort using the
               'EmployeeLastName' function (see the code below).
@@ -82,10 +82,10 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-options/user-functions"
+            href="https://docs.adaptabletools.com/docs/user-functions/custom-sort-comparer-user-function"
             target="_blank"
           >
-            User Functions
+            Custom Sort Comparaer User Function
           </a>{' '}
           .
         </div>

@@ -43,13 +43,13 @@ export default () => {
             >
               Cell Summary State
             </a>{' '}
-            and the actual implementation in{' '}
+            and the actual implementation as a{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/adaptable-options/user-functions"
+              href="https://docs.adaptabletools.com/docs/user-functions/cell-summary-operation-user-function"
               target="_blank"
             >
-              UserFunctions
-            </a>
+              Cell Summary Operation User Function
+            </a>{' '}
             .
           </p>
           <p>
@@ -82,10 +82,10 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-options/user-functions"
+            href="https://docs.adaptabletools.com/docs/user-functions/cell-summary-operation-user-function"
             target="_blank"
           >
-            User Functions
+            Cell Summary Operation User Function
           </a>{' '}
         </div>
       }

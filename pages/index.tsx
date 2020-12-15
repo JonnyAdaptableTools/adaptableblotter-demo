@@ -99,9 +99,9 @@ export default () => {
               <a href="./edit/aggridcellvalidationdemo">Cell Validation</a> )
             </li>
             <li>
-              <a href="./userinterface/aggridcolumnmenudemo">Column Menu</a> and{' '}
-              <a href="./userinterface/aggridcontextmenudemo">Context Menu</a> -
-              add your own bespoke menu items.
+              <a href="./menus/aggridcolumnmenudemo">Column Menu</a> and{' '}
+              <a href="./menus/aggridcontextmenudemo">Context Menu</a> - add
+              your own bespoke menu items.
             </li>
             <li>
               <a href="./aggridfeatures/aggridtreegriddemo">Tree Data View</a> -

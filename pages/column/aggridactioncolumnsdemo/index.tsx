@@ -38,7 +38,7 @@ export default () => {
             </a>{' '}
             , but provide the actual implementation in{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/adaptable-options/user-functions"
+              href="https://docs.adaptabletools.com/docs/user-functions/user-functions-overview"
               target="_blank"
             >
               UserFunctions
@@ -49,7 +49,7 @@ export default () => {
                 {' '}
                 <b>
                   <a
-                    href="https://docs.adaptabletools.com/docs/adaptable-options/user-functions#actioncolumnshouldrenderpredicate"
+                    href="https://docs.adaptabletools.com/docs/user-functions/action-column-should-render-predicate-user-function"
                     target="_blank"
                   >
                     ActionColumnShouldRenderPredicate
@@ -61,7 +61,7 @@ export default () => {
               <li>
                 <b>
                   <a
-                    href="https://docs.adaptabletools.com/docs/adaptable-options/user-functions#actioncolumnrenderfunction"
+                    href="https://docs.adaptabletools.com/docs/user-functions/action-column-render-user-function"
                     target="_blank"
                   >
                     ActionColumnRenderFunction
@@ -135,7 +135,7 @@ export default () => {
           </a>
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-options/user-functions"
+            href="https://docs.adaptabletools.com/docs/user-functions/user-functions-overview"
             target="_blank"
           >
             User Functions

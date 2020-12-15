@@ -24,10 +24,10 @@ export default () => {
             </a>
             , but provide the <b>actual function implementation</b> in{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/adaptable-options/user-functions"
+              href="https://docs.adaptabletools.com/docs/user-functions/entitlement-lookup-user-function"
               target="_blank"
             >
-              UserFunctions
+              Entitlement Look Up User Function
             </a>
             .
           </p>
@@ -90,6 +90,13 @@ export default () => {
             target="_blank"
           >
             Entitlements Guide
+          </a>
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/user-functions/entitlement-lookup-user-function"
+            target="_blank"
+          >
+            Entitlement Look Up User Function
           </a>
         </div>
       }

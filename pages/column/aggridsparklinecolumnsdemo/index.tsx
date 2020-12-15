@@ -42,17 +42,17 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/plugins/chart/sparkline-column-config"
+            href="https://docs.adaptabletools.com/docs/plugins/chart/sparkline-column-function#sparkline-column-config"
             target="_blank"
           >
-            Predefined Config
+            Sparkline Column Predefined Config
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/plugins/chart/sparkline-column-api"
+            href="https://docs.adaptabletools.com/docs/plugins/chart/sparkline-column-function#sparkline-column-api-methods"
             target="_blank"
           >
-            Adaptable API
+            Sparkline Column API
           </a>
         </div>
       }

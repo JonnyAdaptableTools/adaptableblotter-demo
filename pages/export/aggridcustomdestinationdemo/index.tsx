@@ -29,13 +29,15 @@ export default () => {
             </li>
             <li>
               Provide an implementation of the{' '}
-              <b>CustomExportDestinationFunction</b> function in{' '}
-              <a
-                href="https://docs.adaptabletools.com/docs/adaptable-options/user-functions"
-                target="_blank"
-              >
-                User Functions
-              </a>{' '}
+              <b>
+                {' '}
+                <a
+                  href="https://docs.adaptabletools.com/docs/user-functions/custom-export-destination-user-function"
+                  target="_blank"
+                >
+                  Custom Export Destination UserFunction
+                </a>
+              </b>{' '}
               to be called whenever that destination has been specified
             </li>
             <li>
@@ -53,7 +55,13 @@ export default () => {
           <p>
             In this example we have created 2 Custom Destinations - for both we
             simply output the report data to the console in the{' '}
-            <i>CustomExportDestinationFunction</i> handler:{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/user-functions/custom-export-destination-user-function"
+              target="_blank"
+            >
+              Custom Export Destination UserFunction
+            </a>{' '}
+            handler:
           </p>
           <ul>
             <li>
@@ -90,10 +98,10 @@ export default () => {
           </a>
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-options/user-functions"
+            href="https://docs.adaptabletools.com/docs/user-functions/custom-export-destination-user-function"
             target="_blank"
           >
-            UserFunctions
+            Custom Export Destination UserFunction
           </a>{' '}
         </div>
       }

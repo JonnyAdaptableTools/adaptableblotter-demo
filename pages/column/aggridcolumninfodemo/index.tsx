@@ -31,9 +31,8 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/adaptable-functions/column-info-function"
             target="_blank"
           >
-            Column Info Function Read Me
+            Column Info Function
           </a>
-          .
         </div>
       }
     />

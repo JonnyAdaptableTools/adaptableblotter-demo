@@ -31,7 +31,6 @@ const demoConfig: PredefinedConfig = {
           All: true,
         },
         Expression: '[counterparty] IN ("Rabobank", "Nomura", "MUFJ", "RBS")',
-        //  Expression: '[country] IN ("USA", "Nomura", "MUFJ", "RBS")',
         Style: {
           BackColor: 'LightYellow',
         },
