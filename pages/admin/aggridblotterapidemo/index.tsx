@@ -15,7 +15,7 @@ export default () => {
           <p>
             There are hundreds of functions in the{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/adaptable-api/adaptable-api-overviewi"
+              href="https://docs.adaptabletools.com/docs/adaptable-api/adaptable-api-overview"
               target="_blank"
             >
               Adaptable API
@@ -41,7 +41,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-api/adaptable-api-overviewi"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/adaptable-api-overview"
             target="_blank"
           >
             Adaptable API

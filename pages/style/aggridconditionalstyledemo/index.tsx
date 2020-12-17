@@ -17,13 +17,26 @@ export default () => {
             whole row, one or more columns, or one or more column data types.
           </p>
           <p>
-            The Rule is based on a 'Predicate' - only the Predicates associated
-            with the selected scope are available.
+            The Rule is based on a{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/common-objects/common-objects-predicate"
+              target="_blank"
+            >
+              Predicate
+            </a>{' '}
+            - only the Predicates associated with the selected scope are
+            available.
           </p>
           <p>
-            For more complicated rules there is the option, instead, to use a
-            Query which will enable evaluation across multiple columns using
-            more advanced criteria.
+            For more complicated rules there is the option, instead, to use an{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/common-objects/common-objects-expression"
+              target="_blank"
+            >
+              Expression
+            </a>{' '}
+            which will enable evaluation across multiple columns using more
+            advanced criteria.
           </p>
           <p>
             When the rule is met the column / row will be styled according to
@@ -63,25 +76,39 @@ export default () => {
       helpResources={
         <div>
           <a
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/conditional-style-function"
+            target="_blank"
+          >
+            Conditional Style Function
+          </a>{' '}
+          |{' '}
+          <a
             href="https://docs.adaptabletools.com/docs/predefined-config/conditional-style-config"
             target="_blank"
           >
-            Predefined Config
+            Conditional Style Predefined Config
           </a>{' '}
           |{' '}
           <a
             href="https://docs.adaptabletools.com/docs/adaptable-api/conditional-style-api"
             target="_blank"
           >
-            Adaptable API
+            Conditional Style API
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/conditional-style-function"
+            href="https://docs.adaptabletools.com/docs/common-objects/common-objects-predicate"
             target="_blank"
           >
-            Conditional Style Function
-          </a>
+            Predicate
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/common-objects/common-objects-expression"
+            target="_blank"
+          >
+            Expression
+          </a>{' '}
         </div>
       }
     />

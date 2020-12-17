@@ -52,6 +52,13 @@ export default () => {
       helpResources={
         <div>
           <a
+            href="https://docs.adaptabletools.com/docs/key-topics/entitlements"
+            target="_blank"
+          >
+            Entitlements Guide
+          </a>{' '}
+          |{' '}
+          <a
             href="https://docs.adaptabletools.com/docs/predefined-config/entitlements-config"
             target="_blank"
           >
@@ -59,17 +66,10 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-api/entitlements-apif"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/entitlements-api"
             target="_blank"
           >
             Entitlements Api
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/key-topics/entitlements"
-            target="_blank"
-          >
-            Entitlements Guide
           </a>
         </div>
       }

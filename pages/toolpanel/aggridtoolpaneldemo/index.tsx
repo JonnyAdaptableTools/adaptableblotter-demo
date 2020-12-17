@@ -33,17 +33,24 @@ export default () => {
       helpResources={
         <div>
           <a
+            href="https://docs.adaptabletools.com/docs/user-interface/tool-panel"
+            target="_blank"
+          >
+            Tool Panel Guide
+          </a>{' '}
+          |{' '}
+          <a
             href="https://docs.adaptabletools.com/docs/predefined-config/tool-panel-config"
             target="_blank"
           >
-            Predefined Config
+            Tool Panel Config
           </a>{' '}
           |{' '}
           <a
             href="https://docs.adaptabletools.com/docs/adaptable-api/tool-panel-api"
             target="_blank"
           >
-            Adaptable API
+            Tool Panel API
           </a>
         </div>
       }

@@ -42,6 +42,13 @@ export default () => {
       helpResources={
         <div>
           <a
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/gradient-column-function"
+            target="_blank"
+          >
+            Gradient Column Function
+          </a>{' '}
+          |{' '}
+          <a
             href="https://docs.adaptabletools.com/docs/predefined-config/gradient-column-config"
             target="_blank"
           >
@@ -54,13 +61,6 @@ export default () => {
           >
             Gradient Column Api
           </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/gradient-column-function"
-            target="_blank"
-          >
-            Gradient Column ReadMe
-          </a>
           |{' '}
           <a href="https://youtu.be/33lID_zBsAw" target="_blank">
             Gradient Column Video

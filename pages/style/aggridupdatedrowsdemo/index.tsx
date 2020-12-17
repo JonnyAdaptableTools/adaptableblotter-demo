@@ -43,17 +43,24 @@ export default () => {
       helpResources={
         <div>
           <a
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/updated-row-function"
+            target="_blank"
+          >
+            Updated Row Function
+          </a>{' '}
+          |{' '}
+          <a
             href="https://docs.adaptabletools.com/docs/predefined-config/updated-row-config"
             target="_blank"
           >
-            Predefined Config
+            Updated Row Predefined Config
           </a>{' '}
           |{' '}
           <a
             href="https://docs.adaptabletools.com/docs/adaptable-api/updated-row-api"
             target="_blank"
           >
-            Adaptable API
+            Updated Row API
           </a>
         </div>
       }
