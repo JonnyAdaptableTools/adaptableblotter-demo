@@ -28,10 +28,10 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-api/event-api"
+            href="https://docs.adaptabletools.com/docs/adaptable-events/search-changed-event"
             target="_blank"
           >
-            Event API
+            Search Changed Event
           </a>{' '}
           |{' '}
           <a
@@ -45,7 +45,7 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/key-topics/server-functionality"
             target="_blank"
           >
-            AdapTable Server Functionality Guide
+            Server Functionality Guide
           </a>
         </div>
       }
