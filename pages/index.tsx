@@ -245,7 +245,7 @@ export default () => {
           This contains some big changes (and improvements) from previous
           versions. If you are new to Version 7 please read the{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/upgrade-guides/upgrade-guide-v7"
+            href="https://docs.adaptabletools.com/docs/releases/version7/upgrade-guide-v7"
             target="_blank"
           >
             Upgrade Guide

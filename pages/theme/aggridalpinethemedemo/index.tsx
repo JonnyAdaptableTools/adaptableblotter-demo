@@ -30,13 +30,6 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/upgrade-guides/upgrade-guide-v7"
-            target="_blank"
-          >
-            Adaptable Version 7 'ReadMe'
-          </a>{' '}
-          |{' '}
-          <a
             href="https://docs.adaptabletools.com/docs/adaptable-api/theme-api"
             target="_blank"
           >

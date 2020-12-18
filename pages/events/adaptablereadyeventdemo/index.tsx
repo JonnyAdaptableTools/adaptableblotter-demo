@@ -9,9 +9,16 @@ export default () => {
       description={
         <div>
           <p>
-            The on('AdaptableReady') event is fired as soon as AdapTable has
-            completed its initialisation. It provides the `AdaptableReadyInfo`
-            object which contains 2 properties:
+            The{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/adaptable-events/adaptable-ready-event"
+              target="_blank"
+            >
+              Adaptable Ready Event
+            </a>{' '}
+            is fired as soon as AdapTable has completed its initialisation. It
+            provides the `AdaptableReadyInfo` object which contains 2
+            properties:
           </p>
           <ul>
             <li>
@@ -42,17 +49,17 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-events/adaptable-events-overview"
-            target="_blank"
-          >
-            Adaptable Events
-          </a>{' '}
-          |{' '}
-          <a
             href="https://docs.adaptabletools.com/docs/adaptable-events/adaptable-ready-event"
             target="_blank"
           >
             Adaptable Ready Event
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-events/adaptable-events-overview"
+            target="_blank"
+          >
+            Adaptable Events
           </a>
         </div>
       }

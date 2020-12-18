@@ -9,8 +9,15 @@ export default () => {
       description={
         <div>
           <p>
-            The Search Changed event is fired whenever any of the Search or Sort
-            criteria in AdapTable are updated.
+            The{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/adaptable-events/search-changed-event"
+              target="_blank"
+            >
+              Search Changed Event
+            </a>{' '}
+            is fired whenever any of the Search or Sort criteria in AdapTable
+            are updated.
           </p>
           <p>
             Its particularly useful if you want to run searching or filtering on
