@@ -51,7 +51,6 @@ export default () => {
                 positive (using the 'Positive' predicate)
               </li>
               <li>
-                {' '}
                 All colunns of DataType: Number have a red font when they are
                 negative (using the 'Negative' predicate)
               </li>
@@ -65,9 +64,13 @@ export default () => {
                 Scope of 'All: true')
               </li>
               <li>
-                Employee Column is bold where the value is Stephen or Laura
-                (this uses the 'new_starter' <b>custom predicate</b> defined in
-                the <i>customPredicateDefs</i> section of Adaptable Options.
+                Employee Column uses the style pre-defined in the{' '}
+                <b>employeeStyle</b> ClassName where the cell value is Stephen
+                or Laura
+                <br />
+                (Note: this uses the 'new_starter' <b>custom predicate</b>{' '}
+                defined in the <i>customPredicateDefs</i> section of Adaptable
+                Options.)
               </li>
             </ul>
           </p>

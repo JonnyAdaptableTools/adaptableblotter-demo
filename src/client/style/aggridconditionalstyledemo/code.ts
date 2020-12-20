@@ -12,6 +12,7 @@ import {
   PredicateDefHandlerParams,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
+import './condstyle.css';
 
 var adaptableApi: AdaptableApi;
 
@@ -63,7 +64,7 @@ const demoConfig: PredefinedConfig = {
           ColumnIds: ['Employee'],
         },
         Style: {
-          FontWeight: 'Bold',
+          ClassName: 'employeeStyle',
         },
         Predicate: {
           PredicateId: 'new_starter',
