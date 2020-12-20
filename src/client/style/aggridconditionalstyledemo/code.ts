@@ -81,6 +81,9 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
+  UserInterface: {
+    StyleClassNames: ['employeeStyle'],
+  },
 } as PredefinedConfig;
 
 export default async (columnDefs: any[], rowData: any[]) => {
