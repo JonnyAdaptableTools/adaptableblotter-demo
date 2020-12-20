@@ -7,7 +7,6 @@ import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 
 import init from './code';
 import { GridReadyEvent } from '@ag-grid-community/all-modules';
-import adaptableoptions from '../../../../pages/adaptableoptions';
 const code = raw('./code.ts');
 
 export default async () => {
@@ -18,6 +17,7 @@ export default async () => {
   helperAgGrid.convertExcelData(rowData);
 
   const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
+
   const { adaptableOptions, adaptableApi } = await init(columndefs, rowData);
 
   adaptableOptions.vendorGrid.onGridReady = function(

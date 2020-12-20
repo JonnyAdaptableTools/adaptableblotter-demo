@@ -769,6 +769,12 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'Provide a function which will specify if some columns should be excluded from Quick Search results.',
           },
+          {
+            Name: 'Mac Like Scrollbars',
+            Link: '/adaptableoptions/aggridmaclikescrollbars',
+            Description:
+              'When running AdapTable on Windows make the scrollbars appear much thinner (as on a Mac).',
+          },
         ],
       },
       {

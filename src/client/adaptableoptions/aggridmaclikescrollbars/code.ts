@@ -7,11 +7,24 @@ import Adaptable from '@adaptabletools/adaptable/agGrid';
 import { GridOptions } from '@ag-grid-community/all-modules';
 import {
   AdaptableOptions,
+  PredefinedConfig,
   AdaptableApi,
+  AdaptableColumn,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
 var adaptableApi: AdaptableApi;
+
+const demoConfig: PredefinedConfig = {
+  Dashboard: {
+    Tabs: [
+      {
+        Name: 'Filter',
+        Toolbars: ['Query', 'Export', 'CellSummary', 'Theme', 'Filter'],
+      },
+    ],
+  },
+} as PredefinedConfig;
 
 export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
@@ -36,12 +49,12 @@ export default async (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'No Config Demo',
-    vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
+    adaptableId: 'Mac-Like Scrollbars Demo',
     userInterfaceOptions: {
-      showAdaptableToolPanel: true,
       useCustomMacLikeScrollbars: true,
     },
+    predefinedConfig: demoConfig,
+    vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
   adaptableApi = await Adaptable.init(adaptableOptions);
 
