@@ -263,13 +263,10 @@ const rowdata: any[] = [
 export default async () => {
   const gridOptions: GridOptions = {
     columnDefs: columnSchema,
-    //  rowData: rowdata,
     enableRangeSelection: true,
     sideBar: true,
     suppressAggFuncInHeader: true,
     suppressMenuHide: true,
-    // this is not strictly required but very useful for column data type identification
-    // if not used then the grid will try to work out the datatype of the column based on the initial value
   };
 
   const adaptableOptions: AdaptableOptions = {

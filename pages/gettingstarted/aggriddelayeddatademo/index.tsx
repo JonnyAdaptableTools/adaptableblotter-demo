@@ -12,11 +12,11 @@ export default () => {
             Frequently your Grid Data will arrive AFTER the grid has rendered.
           </p>
           <p>
-            There are many ways to handle this - and you can update ag-Grid
-            GridOptions directly and then everything will flow through.
+            This can be handled in ag-Grid GridOptions directly and then
+            everything will flow through.
           </p>
           <p>
-            However AdapTable provides the *loadGridData* function in{' '}
+            However AdapTable provides the <b>loadGridData</b> function in{' '}
             <a
               href="https://docs.adaptabletools.com/docs/adaptable-api/grid-api"
               target="_blank"
@@ -24,27 +24,46 @@ export default () => {
               Grid API
             </a>{' '}
             which is designed for this precise use case (for subsequent
-            refreshes you can use *setGridData* ).
+            refreshes you can use <i>setGridData</i>).
           </p>
           <p>
             The function will load the data in the grid and then make sure that
-            anything that is dependent on that data load will also run
-          </p>
-          <p>
-            For instance, if{' '}
+            anything that is dependent on that data load will also run (e.g.{' '}
             <a
               href="https://docs.adaptabletools.com/docs/adaptable-options/layout-options"
               target="_blank"
             >
               includeExpandedRowGroups
+            </a>
+            ).
+          </p>
+          <p>
+            This demo loads the data 3 seconds after the grid is initialised -
+            and adds the{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/adaptable-functions/format-column-function"
+              target="_blank"
+            >
+              Format Columns
             </a>{' '}
-            is set to true, then any opened groups saved in the Layout will
-            re-open at the start-up; try it by opening a row group and
-            refreshing the page.
+            to 'Invoiced Cost' and 'Order Date' columns.
+          </p>
+          <p>
+            Then after another 3 seconds it adds 2 extra columns - 'Package
+            Cost' and 'Company' - which AdapTable handles very smoothly.
           </p>
         </div>
       }
-      helpResources={<div></div>}
+      helpResources={
+        <div>
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-api/grid-api"
+            target="_blank"
+          >
+            Grid API
+          </a>{' '}
+        </div>
+      }
     />
   );
 };

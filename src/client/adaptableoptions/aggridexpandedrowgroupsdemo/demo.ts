@@ -15,6 +15,7 @@ export default async () => {
 
   let rowData = JSON.parse(JSON.stringify(json));
   helperAgGrid.convertExcelData(rowData);
+
   const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
   const { adaptableOptions, adaptableApi } = await init(columndefs, rowData);
 
@@ -25,7 +26,7 @@ export default async () => {
     setTimeout(() => gridReady.columnApi!.autoSizeAllColumns(), 1);
 
     gridReady.api!.addEventListener('newColumnsLoaded', function() {
-      //  gridReady.columnApi!.autoSizeAllColumns();
+      gridReady.columnApi!.autoSizeAllColumns();
     });
 
     gridReady.api!.closeToolPanel();

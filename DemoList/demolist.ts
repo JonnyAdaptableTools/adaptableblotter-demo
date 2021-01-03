@@ -764,6 +764,12 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Provide a function which will specify if some columns should be excluded from Quick Search results.',
           },
           {
+            Name: 'Expanded Row Groups',
+            Link: '/adaptableoptions/aggridexpandedrowgroupsdemo',
+            Description:
+              'Layouts can save which Row Groups are currently expanded - and load them when the Grid next opens.',
+          },
+          {
             Name: 'Mac Like Scrollbars',
             Link: '/adaptableoptions/aggridmaclikescrollbars',
             Description:

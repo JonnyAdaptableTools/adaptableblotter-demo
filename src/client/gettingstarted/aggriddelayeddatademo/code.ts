@@ -4,11 +4,12 @@ import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham-dark.css';
 import Adaptable from '@adaptabletools/adaptable/agGrid';
-import { GridOptions } from '@ag-grid-community/all-modules';
+import { ColDef, GridOptions } from '@ag-grid-community/all-modules';
 import {
   AdaptableOptions,
   AdaptableApi,
   PredefinedConfig,
+  AdaptableReadyInfo,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -26,7 +27,7 @@ const demoConfig: PredefinedConfig = {
           FontSize: 'XSmall',
           FontStyle: 'Italic',
         },
-        CellAlignment: 'Right',
+        CellAlignment: 'Center',
         DisplayFormat: {
           Formatter: 'DateFormatter',
           Options: {
@@ -34,24 +35,35 @@ const demoConfig: PredefinedConfig = {
           },
         },
       },
+      {
+        Scope: {
+          ColumnIds: ['InvoicedCost'],
+        },
+        CellAlignment: 'Right',
+        DisplayFormat: {
+          Formatter: 'NumberFormatter',
+          Options: {
+            FractionDigits: 2,
+            Prefix: '£',
+          },
+        },
+      },
     ],
   },
   Layout: {
-    CurrentLayout: 'Grouped',
+    CurrentLayout: 'Delayed',
     Layouts: [
       {
         Columns: [
-          'ShipVia',
           'CustomerReference',
-          'ContactName',
+          'OrderId',
           'InvoicedCost',
-          'ChangeLastOrder',
-          'OrderCost',
-          'PackageCost',
+          'ContactName',
           'Employee',
+          'OrderDate',
+          'ShipVia',
         ],
-        RowGroupedColumns: ['ShipCountry'],
-        Name: 'Grouped',
+        Name: 'Delayed',
       },
     ],
   },
@@ -82,12 +94,22 @@ export default async (columnDefs: any[], rowData: any[]) => {
   };
   adaptableApi = await Adaptable.init(adaptableOptions);
 
-  // mimic getting data from the server by waiting for a few seconds
-  adaptableApi.eventApi.on('AdaptableReady', () => {
+  adaptableApi.eventApi.on('AdaptableReady', (info: AdaptableReadyInfo) => {
+    // Add data to grid after 3 seconds using loadGridData method in GridApi
     setTimeout(() => {
-      // use the load data method in GridApi of AdaptableApi
       adaptableApi.gridApi.loadGridData(rowData);
     }, 3000);
+
+    // Add the Package Cost and Compamy Name columns to the grid after 6 seconds
+    setTimeout(() => {
+      const vendorGrid: GridOptions = info.vendorGrid;
+      const colDefs = vendorGrid.columnDefs as ColDef[];
+      vendorGrid.api?.setColumnDefs([
+        ...[colDefs.filter(c => c.field === 'CompanyName')[0]],
+        ...[colDefs.filter(c => c.field === 'PackageCost')[0]],
+        ...colDefs,
+      ]);
+    }, 6000);
   });
 
   return { adaptableOptions, adaptableApi };
