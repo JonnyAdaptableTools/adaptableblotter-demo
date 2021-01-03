@@ -74,13 +74,6 @@ export default async (rowData: any[]) => {
     enableRangeSelection: true,
     suppressColumnVirtualisation: false,
     suppressMenuHide: true,
-    columnTypes: {
-      abColDefNumber: {},
-      abColDefString: {},
-      abColDefBoolean: {},
-      abColDefDate: {},
-      abColDefObject: {},
-    },
   };
 
   const adaptableOptions: AdaptableOptions = {

@@ -250,12 +250,6 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Create your own column where you can insert your own values (e.g. comments) that are stored separately from the Data Source.',
           },
           {
-            Name: 'Column Info',
-            Link: '/column/aggridcolumninfodemo',
-            Description:
-              'Find out all the objects associated with a column with a single lookup.',
-          },
-          {
             Name: 'Action Column',
             Link: '/column/aggridactioncolumnsdemo',
             Description:

@@ -124,14 +124,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
     rowData,
     suppressMenuHide: true,
     groupIncludeTotalFooter: true,
-    columnTypes: {
-      abColDefNumber: {},
-      abColDefString: {},
-      abColDefBoolean: {},
-      abColDefDate: {},
-      abColDefObject: {},
-      abColDefNumberArray: {},
-    },
   };
 
   const adaptableOptions: AdaptableOptions = {

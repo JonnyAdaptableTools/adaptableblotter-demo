@@ -70,13 +70,6 @@ export class FootballDataHelper {
   public getDetailGridOptionsFootball(): GridOptions {
     return {
       columnDefs: this.getDetailsFootballSchema(),
-      columnTypes: {
-        abColDefNumber: {},
-        abColDefString: {},
-        abColDefBoolean: {},
-        abColDefDate: {},
-        abColDefObject: {},
-      },
     };
   }
 

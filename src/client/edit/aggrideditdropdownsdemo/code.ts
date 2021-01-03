@@ -67,14 +67,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
     sideBar: true,
     suppressMenuHide: true,
     singleClickEdit: true,
-    columnTypes: {
-      abColDefNumber: {},
-      abColDefString: {},
-      abColDefBoolean: {},
-      abColDefDate: {},
-      abColDefObject: {},
-      abColDefNumberArray: {},
-    },
   };
 
   const adaptableOptions: AdaptableOptions = {

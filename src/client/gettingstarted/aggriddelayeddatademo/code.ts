@@ -67,14 +67,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
       sortable: true,
       minWidth: 200,
     },
-    columnTypes: {
-      abColDefNumber: {},
-      abColDefString: {},
-      abColDefBoolean: {},
-      abColDefDate: {},
-      abColDefObject: {},
-      abColDefNumberArray: {},
-    },
   };
 
   const adaptableOptions: AdaptableOptions = {

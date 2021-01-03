@@ -327,14 +327,6 @@ export default async (columnDefs: ColDef[]) => {
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    columnTypes: {
-      abColDefNumber: {},
-      abColDefString: {},
-      abColDefBoolean: {},
-      abColDefDate: {},
-      abColDefObject: {},
-      abColDefNumberArray: {},
-    },
   };
 
   const adaptableOptions: AdaptableOptions = {

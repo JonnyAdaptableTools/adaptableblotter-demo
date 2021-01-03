@@ -17,14 +17,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
     sideBar: true,
     suppressMenuHide: true,
 
-    columnTypes: {
-      abColDefNumber: {},
-      abColDefString: {},
-      abColDefBoolean: {},
-      abColDefDate: {},
-      abColDefObject: {},
-      abColDefNumberArray: {},
-    },
     columnDefs: columnDefs,
     rowData: rowData,
     floatingFilter: true,

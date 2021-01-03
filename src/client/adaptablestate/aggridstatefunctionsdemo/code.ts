@@ -41,14 +41,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
     autoGroupColumnDef: {
       sortable: true,
     },
-    columnTypes: {
-      abColDefNumber: {},
-      abColDefString: {},
-      abColDefBoolean: {},
-      abColDefDate: {},
-      abColDefObject: {},
-      abColDefNumberArray: {},
-    },
   };
 
   const id = localStorage.getItem('firebaseprefix') || uuidv4();

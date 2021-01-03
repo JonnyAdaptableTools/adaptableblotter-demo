@@ -78,8 +78,8 @@ const demoConfig: PredefinedConfig = {
   },
 } as PredefinedConfig;
 
-// Step 2: Create any formmaters the ag-Grid Column Schema
-
+// Step 2: Define the ag-Grid Column Schema required
+// Note: the type property references the AdaptableColumn type
 const columnSchema: ColDef[] = [
   {
     headerName: 'Make',
@@ -126,15 +126,6 @@ export default async () => {
     sideBar: true,
     suppressAggFuncInHeader: true,
     suppressMenuHide: true,
-    columnTypes: {
-      // not strictly required but very useful for column data type identification
-      abColDefNumber: {},
-      abColDefString: {},
-      abColDefBoolean: {},
-      abColDefDate: {},
-      abColDefObject: {},
-      abColDefNumberArray: {},
-    },
   };
 
   // Step 5: Create an AdaptableOptions object which defines how AdapTable should work and contains all it needs

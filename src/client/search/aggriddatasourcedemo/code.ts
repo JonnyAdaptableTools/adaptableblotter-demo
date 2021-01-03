@@ -62,14 +62,6 @@ export default async (columnDefs: any[]) => {
         { statusPanel: 'agFilteredRowCountComponent' },
       ],
     },
-    columnTypes: {
-      abColDefNumber: {},
-      abColDefString: {},
-      abColDefBoolean: {},
-      abColDefDate: {},
-      abColDefObject: {},
-      abColDefNumberArray: {},
-    },
   };
 
   const adaptableOptions: AdaptableOptions = {

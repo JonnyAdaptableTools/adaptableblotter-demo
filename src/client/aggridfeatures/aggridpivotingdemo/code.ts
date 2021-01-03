@@ -87,14 +87,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
     groupIncludeTotalFooter: true,
     groupIncludeFooter: true,
     suppressAggFuncInHeader: true,
-    columnTypes: {
-      abColDefNumber: {},
-      abColDefString: {},
-      abColDefBoolean: {},
-      abColDefDate: {},
-      abColDefObject: {},
-      abColDefNumberArray: {},
-    },
     processSecondaryColDef: function(colDef) {
       if (colDef.headerName == 'Item Count') {
         colDef.headerName += ' (max)';

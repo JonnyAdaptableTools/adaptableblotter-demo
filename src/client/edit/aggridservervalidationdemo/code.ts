@@ -72,14 +72,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
     autoGroupColumnDef: {
       sortable: true,
     },
-    columnTypes: {
-      abColDefNumber: {},
-      abColDefString: {},
-      abColDefBoolean: {},
-      abColDefDate: {},
-      abColDefObject: {},
-      abColDefNumberArray: {},
-    },
   };
 
   const adaptableOptions: AdaptableOptions = {
@@ -104,18 +96,18 @@ export default async (columnDefs: any[], rowData: any[]) => {
   function getServerEditResponse(
     dataChangedInfo: DataChangedInfo
   ): ValidationResult {
-    if (dataChangedInfo.ColumnId === 'ItemCount') {
-      if (dataChangedInfo.NewValue == 17) {
+    if (dataChangedInfo.columnId === 'ItemCount') {
+      if (dataChangedInfo.newValue == 17) {
         return {
-          NewValue: dataChangedInfo.OldValue,
+          NewValue: dataChangedInfo.oldValue,
           ValidationMessage: 'Cannot set Item Count to 17',
         };
-      } else if (dataChangedInfo.NewValue > 25) {
+      } else if (dataChangedInfo.newValue > 25) {
         return {
           NewValue: 25,
           ValidationMessage: 'Item Count cannot be greater than 25',
         };
-      } else if (dataChangedInfo.NewValue < 5) {
+      } else if (dataChangedInfo.newValue < 5) {
         return {
           NewValue: 5,
           ValidationMessage: 'Item Count cannot  be less than  5',

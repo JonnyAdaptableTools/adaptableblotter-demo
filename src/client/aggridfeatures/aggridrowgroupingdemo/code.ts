@@ -84,14 +84,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
     groupIncludeFooter: true,
     suppressAggFuncInHeader: true,
     rowGroupPanelShow: 'always',
-    columnTypes: {
-      abColDefNumber: {},
-      abColDefString: {},
-      abColDefBoolean: {},
-      abColDefDate: {},
-      abColDefObject: {},
-      abColDefNumberArray: {},
-    },
   };
 
   const adaptableOptions: AdaptableOptions = {

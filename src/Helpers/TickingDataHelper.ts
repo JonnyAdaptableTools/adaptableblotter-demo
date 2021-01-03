@@ -4,7 +4,6 @@ import { HelperAgGrid } from './HelperAgGrid';
 import {
   AdaptableApi,
   DataUpdateConfig,
-  IAdaptable,
 } from '@adaptabletools/adaptable/types';
 
 export class TickingDataHelper {
@@ -243,12 +242,12 @@ export class TickingDataHelper {
           let rowNode: RowNode = gridOptions.api!.getRowNode(index);
           if (rowNode) {
             // NOTE:  You need to make a COPY of the data that you are changing...
-            const trade: ITrade = rowNode.data;
+            const trade: ITrade = { ...rowNode.data };
             if (trade) {
               const randomInt = this.generateRandomInt(1, 2);
               const numberToAdd: number = randomInt == 1 ? -0.5 : 0.5;
               const directionToAdd: number = randomInt == 1 ? -0.01 : 0.01;
-              const newPrice = this.roundTo4Dp(trade.price + numberToAdd);
+              const newPrice = this.roundTo4Dp(trade.price + numberToAdd); // numberToAdd
               const bidOfferSpread = trade.bidOfferSpread;
               const ask = this.roundTo4Dp(newPrice + bidOfferSpread / 2);
               const bid = this.roundTo4Dp(newPrice - bidOfferSpread / 2);
@@ -267,6 +266,7 @@ export class TickingDataHelper {
                 // callback: test,
               };
               api.gridApi.updateGridData([trade], config);
+              // gridOptions.api!.applyTransaction({ update: [trade] });
             }
           }
         }
@@ -352,7 +352,7 @@ export class TickingDataHelper {
     if (gridOptions != null && gridOptions.api != null) {
       const counterparties = helperAgGrid.getCounterparties();
       const counterpartyindex = counterparties.length - 1;
-      const blotter: IAdaptable = adaptableApi.internalApi.getAdaptableInstance();
+      const blotter = adaptableApi.internalApi.getAdaptableInstance();
 
       let config: DataUpdateConfig = {
         runAsync: true,

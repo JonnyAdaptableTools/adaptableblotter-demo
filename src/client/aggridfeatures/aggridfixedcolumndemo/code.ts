@@ -51,14 +51,6 @@ export default async (columnDefs: ColDef[], rowData: any[]) => {
     sideBar: true,
     suppressMenuHide: true,
     groupIncludeTotalFooter: true,
-    columnTypes: {
-      abColDefNumber: {},
-      abColDefString: {},
-      abColDefBoolean: {},
-      abColDefDate: {},
-      abColDefObject: {},
-      abColDefNumberArray: {},
-    },
   };
 
   const adaptableOptions: AdaptableOptions = {

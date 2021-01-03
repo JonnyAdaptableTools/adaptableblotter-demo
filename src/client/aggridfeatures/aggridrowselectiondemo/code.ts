@@ -44,14 +44,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
     rowSelection: 'multiple',
     autoGroupColumnDef: autoGroupColumnDef,
     suppressRowClickSelection: true,
-    columnTypes: {
-      abColDefNumber: {},
-      abColDefString: {},
-      abColDefBoolean: {},
-      abColDefDate: {},
-      abColDefObject: {},
-      abColDefNumberArray: {},
-    },
   };
 
   const adaptableOptions: AdaptableOptions = {

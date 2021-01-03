@@ -270,14 +270,6 @@ export default async () => {
     suppressMenuHide: true,
     // this is not strictly required but very useful for column data type identification
     // if not used then the grid will try to work out the datatype of the column based on the initial value
-    columnTypes: {
-      abColDefNumber: {},
-      abColDefString: {},
-      abColDefBoolean: {},
-      abColDefDate: {},
-      abColDefObject: {},
-      abColDefNumberArray: {},
-    },
   };
 
   const adaptableOptions: AdaptableOptions = {

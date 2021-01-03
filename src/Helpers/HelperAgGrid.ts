@@ -112,15 +112,6 @@ export class HelperAgGrid {
       enableRangeSelection: true,
       sideBar: true,
       suppressMenuHide: true,
-
-      columnTypes: {
-        abColDefNumber: {},
-        abColDefString: {},
-        abColDefBoolean: {},
-        abColDefDate: {},
-        abColDefObject: {},
-        abColDefNumberArray: {},
-      },
       columnDefs: columndefs,
       rowData: data,
       onGridReady: function(gridReady: GridReadyEvent) {
