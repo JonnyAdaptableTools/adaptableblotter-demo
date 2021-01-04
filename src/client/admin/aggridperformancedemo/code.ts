@@ -29,6 +29,7 @@ const demoConfig: PredefinedConfig = {
       {
         Scope: {
           All: true,
+          // ColumnIds: ['notional', 'country'],
         },
         Expression: '[counterparty] IN ("Rabobank", "Nomura", "MUFJ", "RBS")',
         Style: {

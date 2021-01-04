@@ -412,7 +412,7 @@ export class TickingDataHelper {
 
               let rowNode = gridOptions.api!.getDisplayedRowAtIndex(rowId);
               if (rowNode) {
-                let rowToDelete = rowNode.data;
+                let rowToDelete = { ...rowNode.data };
                 if (rowToDelete) {
                   tradeBatch.push(rowToDelete);
                 }

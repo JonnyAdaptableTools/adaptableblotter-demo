@@ -27,7 +27,7 @@ export default async () => {
       adaptableApi,
       adaptableOptions.vendorGrid,
       helperAgGrid,
-      10,
+      100,
       rowCount,
       50,
       100
