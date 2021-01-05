@@ -19,7 +19,7 @@ export default () => {
             'GreaterThan 15') by using the operator dropdown at the top.
           </p>
           <p>
-            In this example we create filters on 5 columns:
+            In this example we create filters on 6 columns:
             <ul>
               <li>
                 ItemCost - <b>GreaterThan</b> 20
@@ -28,13 +28,16 @@ export default () => {
                 ChangeLastOrder - <b>Positive</b>
               </li>{' '}
               <li>
-                Employee - 3 <b>Values</b> selected
+                Employee - 3 <b>Column Values</b> selected
               </li>
               <li>
                 InvoicedCost - <b>Between</b> 10-300
               </li>
               <li>
                 OrderDate - <b>In Past</b>
+              </li>
+              <li>
+                Ship Country - 3 <b>Column Values</b> selected
               </li>
             </ul>
             Edit / clear filters in the individual columns or via the Column

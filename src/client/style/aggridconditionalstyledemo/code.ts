@@ -75,7 +75,7 @@ const demoConfig: PredefinedConfig = {
           All: true,
         },
         Style: {
-          BackColor: 'lightblue',
+          BackColor: '#d3d3d3',
         },
         Expression: '[InvoicedCost] > 1000',
       },

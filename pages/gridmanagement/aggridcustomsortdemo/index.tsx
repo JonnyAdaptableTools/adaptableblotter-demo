@@ -48,7 +48,8 @@ export default () => {
                 Custom Sort Comparaer User Function
               </a>{' '}
               . The 'Employee' column in this demo has a custom sort using the
-              'EmployeeLastName' function (see the code below).
+              'EmployeeLastName' function which will sort by Last Name (see the
+              code below).
             </li>
           </ul>
           <p>

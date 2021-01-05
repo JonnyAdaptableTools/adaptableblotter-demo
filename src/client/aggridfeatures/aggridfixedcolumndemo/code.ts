@@ -18,6 +18,7 @@ const demoConfig: PredefinedConfig = {
     Layouts: [
       {
         Columns: [
+          'OrderId',
           'Avg Item Cost',
           'CustomerReference',
           'CompanyName',
@@ -35,7 +36,7 @@ const demoConfig: PredefinedConfig = {
           'ItemCount',
         ],
         ColumnSorts: [],
-        Name: 'With Special Cols',
+        Name: 'With Fixed column',
       },
     ],
   },

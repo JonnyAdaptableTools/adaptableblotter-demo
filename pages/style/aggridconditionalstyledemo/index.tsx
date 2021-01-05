@@ -59,9 +59,22 @@ export default () => {
                 it is greater than 60 (using the 'GreaterThan' predicate)
               </li>
               <li>
-                Whole row is lightblue where 'InvoicedCost' column value is over
-                1000 (this uses an Expression rather than a Predicate and a
-                Scope of 'All: true')
+                Whole row is gray where 'InvoicedCost' column value is over 1000
+                (this uses an{' '}
+                <a
+                  href="https://docs.adaptabletools.com/docs/common-objects/common-objects-expression"
+                  target="_blank"
+                >
+                  Expression
+                </a>{' '}
+                rather than a{' '}
+                <a
+                  href="https://docs.adaptabletools.com/docs/common-objects/common-objects-predicate"
+                  target="_blank"
+                >
+                  Predicate
+                </a>{' '}
+                and a Scope of 'All: true')
               </li>
               <li>
                 Employee Column uses the style pre-defined in the{' '}

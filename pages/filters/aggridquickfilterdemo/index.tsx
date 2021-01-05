@@ -37,7 +37,14 @@ export default () => {
           </p>
           <p>
             The default Predicate for Numeric and Date columns is 'Equals' and
-            for String columns is 'Between'.
+            for String columns is 'Between' - however this can be changed in{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/adaptable-options/filter-options"
+              target="_blank"
+            >
+              Filter Options
+            </a>
+            .
           </p>
         </div>
       }

@@ -20,6 +20,10 @@ export default () => {
             default flashing values while (for no particularly good reason) the
             'Invoiced' column has different colours and a longer duration.
           </p>
+          <p>
+            The Dashobard has been put into floating mode - useful for when
+            screen estate is at a premium.
+          </p>
         </div>
       }
       helpResources={
