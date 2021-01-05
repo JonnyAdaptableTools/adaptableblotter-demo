@@ -13,6 +13,8 @@ import {
   AdaptableApi,
   ThemeChangedEventArgs,
   RowStyle,
+  ThemeChangedInfo,
+  AdaptableTheme,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -67,29 +69,35 @@ export default async (columnDefs: any[], rowData: any[]) => {
   adaptableApi.eventApi.on(
     'ThemeChanged',
     (themeChangedEventArgs: ThemeChangedEventArgs) => {
-      if (themeChangedEventArgs.data[0].id.theme === 'wimbledon-theme') {
-        let rowStyles: RowStyle[] = [];
-        let evenStyle: RowStyle = {
-          Style: {
-            ForeColor: 'white',
-            BackColor: '#462376',
-            FontWeight: 'Bold',
-          },
-          RowType: 'Even',
-        };
-        let oddStyle: RowStyle = {
-          Style: {
-            ForeColor: 'white',
-            BackColor: '#0e6537',
-            FontStyle: 'Italic',
-          },
-          RowType: 'Odd',
-        };
-        rowStyles.push(evenStyle);
-        rowStyles.push(oddStyle);
-        adaptableApi.userInterfaceApi.setRowStyles(rowStyles);
-      } else {
-        adaptableApi.userInterfaceApi.clearRowStyles();
+      let info: ThemeChangedInfo = adaptableApi.eventApi.getThemeChangedInfoFromEventArgs(
+        themeChangedEventArgs
+      );
+      if (info) {
+        let theme: AdaptableTheme = info.theme as AdaptableTheme;
+        if (theme && theme.Name === 'wimbledon-theme') {
+          let rowStyles: RowStyle[] = [];
+          let evenStyle: RowStyle = {
+            Style: {
+              ForeColor: 'white',
+              BackColor: '#462376',
+              FontWeight: 'Bold',
+            },
+            RowType: 'Even',
+          };
+          let oddStyle: RowStyle = {
+            Style: {
+              ForeColor: 'white',
+              BackColor: '#0e6537',
+              FontStyle: 'Italic',
+            },
+            RowType: 'Odd',
+          };
+          rowStyles.push(evenStyle);
+          rowStyles.push(oddStyle);
+          adaptableApi.userInterfaceApi.setRowStyles(rowStyles);
+        } else {
+          adaptableApi.userInterfaceApi.clearRowStyles();
+        }
       }
     }
   );
