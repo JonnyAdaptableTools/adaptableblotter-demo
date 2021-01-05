@@ -11,7 +11,6 @@ import {
   AdaptableApi,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
-import { DataGenerator } from '../../../Helpers/DataGenerator';
 
 var adaptableApi: AdaptableApi;
 
