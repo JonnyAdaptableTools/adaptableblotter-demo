@@ -20,6 +20,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
+    groupIncludeTotalFooter: true,
     autoGroupColumnDef: {
       sortable: true,
     },

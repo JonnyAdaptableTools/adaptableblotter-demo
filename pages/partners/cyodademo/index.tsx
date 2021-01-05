@@ -10,16 +10,27 @@ export default () => {
       </p>
       <p>
         If you want to run AdapTable on a large volumes of back end data, then
-        you’ll need to consider a server-side solution. Cyoda offers a easy and
-        fast means to integrate data from disparate source systems onto an
-        infinitely scalable platform that is fully integrated to AdapTable.
+        you’ll need to consider a server-side solution.{' '}
+      </p>
+      <p>
+        <a href="https://cyoda.com/" target="_blank">
+          Cyoda
+        </a>{' '}
+        offers a easy and fast means to integrate data from disparate source
+        systems onto an infinitely scalable platform that is fully integrated to
+        AdapTable.
       </p>
       <p>
         Cyoda uses an innovative approach to data integration, which is far
         faster to implement than the traditional approach of a fixed,
-        centralised data model . It also uses ‘aliases’ to simplify the assembly
-        of data, so that users can interact with simple business terms, without
-        needing to understand the complexities of the underlying source data.
+        centralised data model .{' '}
+      </p>
+      <p>
+        It also uses ‘aliases’ to simplify the assembly of data, so that users
+        can interact with simple business terms, without needing to understand
+        the complexities of the underlying source data.
+      </p>
+      <p>
         The approach is also extensible - so new data sources or use cases may
         be added with ease.
       </p>
@@ -30,8 +41,10 @@ export default () => {
         no need for separate DR.
       </p>
       <p>
-        Fast to build. Easy to Change - all at a fraction of the TCO of a
-        conventional data hub.
+        <b>
+          Fast to build. Easy to Change - all at a fraction of the TCO of a
+          conventional data hub.
+        </b>
       </p>
       <p>
         <iframe

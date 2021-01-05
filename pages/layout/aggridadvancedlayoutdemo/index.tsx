@@ -59,6 +59,18 @@ export default () => {
               <b>Advanced Layout</b>: bit of everything
             </li>
           </ol>{' '}
+          <p>
+            Note: we have set <b>groupIncludeTotalFooter</b> to <i>true</i> in{' '}
+            <a
+              href="https://www.ag-grid.com/javascript-grid-properties/"
+              target="_blank"
+            >
+              GridOptions
+            </a>{' '}
+            so that it always appears (even when grid is <b>not</b> row grouped)
+            and added these aggregations: 'ItemCost', 'InvoicedCost': sum,
+            'ItemCount': avg
+          </p>
         </div>
       }
       helpResources={

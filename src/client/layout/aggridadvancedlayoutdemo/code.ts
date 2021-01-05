@@ -77,6 +77,11 @@ const demoConfig: PredefinedConfig = {
           'OrderCost',
           'PackageCost',
         ],
+        AggregationColumns: {
+          ItemCount: 'avg',
+          ItemCost: 'sum',
+          InvoicedCost: true,
+        },
       },
       {
         Name: 'Col Widths Layout',
@@ -98,6 +103,11 @@ const demoConfig: PredefinedConfig = {
           OrderId: 200,
           Comments: 300,
         },
+        AggregationColumns: {
+          ItemCount: 'avg',
+          ItemCost: 'sum',
+          InvoicedCost: true,
+        },
       },
       {
         Name: 'Sorting Layout',
@@ -117,6 +127,11 @@ const demoConfig: PredefinedConfig = {
           'ShippedDate',
           'CustomerReference',
         ],
+        AggregationColumns: {
+          ItemCount: 'avg',
+          ItemCost: 'sum',
+          InvoicedCost: true,
+        },
       },
       {
         Columns: [
@@ -130,6 +145,11 @@ const demoConfig: PredefinedConfig = {
           'Employee',
           'ShipCountry',
         ],
+        AggregationColumns: {
+          ItemCount: 'avg',
+          ItemCost: 'sum',
+          InvoicedCost: true,
+        },
         RowGroupedColumns: ['Employee', 'ShipCountry'],
         Name: 'Grouping Layout',
       },
@@ -142,7 +162,11 @@ const demoConfig: PredefinedConfig = {
         ],
         RowGroupedColumns: ['Employee'],
         PivotColumns: ['ShipVia'],
-        AggregationColumns: { InvoicedCost: 'sum', ItemCost: 'avg' },
+        AggregationColumns: {
+          ItemCount: 'avg',
+          ItemCost: 'sum',
+          InvoicedCost: true,
+        },
         EnablePivot: true,
         Name: 'Pivot Layout',
       },
@@ -165,6 +189,11 @@ const demoConfig: PredefinedConfig = {
           },
           { Column: 'ShipVia', SortOrder: 'Descending' },
         ],
+        AggregationColumns: {
+          ItemCount: 'avg',
+          ItemCost: 'sum',
+          InvoicedCost: true,
+        },
         RowGroupedColumns: ['Employee'],
         Name: 'Advanced Layout',
       },
@@ -194,7 +223,23 @@ const demoConfig: PredefinedConfig = {
           },
         },
       },
+      {
+        Scope: {
+          ColumnIds: ['ItemCount'],
+        },
+        DisplayFormat: {
+          Formatter: 'NumberFormatter',
+          Options: {
+            FractionDigits: 0,
+          },
+        },
+      },
     ],
+    AggregationColumns: {
+      ItemCount: 'avg',
+      ItemCost: 'sum',
+      InvoicedCost: true,
+    },
   },
 } as PredefinedConfig;
 
@@ -208,6 +253,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
     autoGroupColumnDef: {
       sortable: true,
     },
+    groupIncludeTotalFooter: true,
   };
 
   const adaptableOptions: AdaptableOptions = {

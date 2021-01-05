@@ -97,12 +97,10 @@ export class TickingDataHelper {
                   initialItemCost + numberToAdd
                 );
                 order.ItemCost = newItemCost;
-                //     rowNode.setDataValue(columnName, newItemCost);
 
                 let itemCount = gridOptions.api.getValue('ItemCount', rowNode);
                 let newOrderCost = itemCount * newItemCost;
                 order.OrderCost = newOrderCost;
-                //   rowNode.setDataValue('OrderCost', newOrderCost);
 
                 let packageCost = gridOptions.api.getValue(
                   'PackageCost',
@@ -110,7 +108,6 @@ export class TickingDataHelper {
                 );
                 let newInvoicedCost = newOrderCost - packageCost;
                 order.InvoicedCost = newInvoicedCost;
-                //    rowNode.setDataValue('InvoicedCost', newInvoicedCost);
 
                 let incdec: number = this.generateRandomInt(1, 2) == 1 ? -1 : 1;
                 let changeLastOrder = gridOptions.api.getValue(
@@ -118,7 +115,6 @@ export class TickingDataHelper {
                   rowNode
                 );
                 order.ChangeLastOrder = incdec + changeLastOrder;
-                //       rowNode.setDataValue('ChangeLastOrder', incdec + changeLastOrder);
 
                 order.ItemCount = this.generateRandomInt(1, 2000);
               } else {
