@@ -16,7 +16,6 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    HomeToolbarTitle: 'New Dashboard Header Name',
     IsCollapsed: true,
   },
 } as PredefinedConfig;
@@ -36,7 +35,18 @@ export default async (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Dashboard Title Demo',
+    adaptableId: 'Application Icon Demo',
+    userInterfaceOptions: {
+      showAdaptableToolPanel: true,
+      useCustomMacLikeScrollbars: true,
+      applicationIcon: {
+        url: 'https://docs.adaptabletools.com/img/favicon_white.png',
+        size: {
+          height: 25,
+          width: 25,
+        },
+      },
+    },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

@@ -775,6 +775,12 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'When running AdapTable on Windows make the scrollbars appear much thinner (as on a Mac).',
           },
+          {
+            Name: 'Application Icon',
+            Link: '/adaptableoptions/aggridapplicationicondemo',
+            Description:
+              'Provide an icon for your app which will appear in the Dashboard and elsewhere',
+          },
         ],
       },
       {
