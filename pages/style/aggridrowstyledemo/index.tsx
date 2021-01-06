@@ -52,8 +52,8 @@ export default () => {
             css).
           </p>{' '}
           <p>
-            In this example we have set an Even Row style (using a classname
-            property) and an Odd Row Style that uses the AdaptableStyle object.
+            In this example we have set an Initial Style and then added 3
+            buttons to load more dynamically via the AdapTable Api.
           </p>
         </div>
       }
