@@ -770,6 +770,12 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Layouts can save which Row Groups are currently expanded - and load them when the Grid next opens.',
           },
           {
+            Name: 'Custom Function Names',
+            Link: '/adaptableoptions/aggridalternativefunctionnamedemo',
+            Description:
+              'Provide an alternative name for an AdapTable Function to be used instead of the default one',
+          },
+          {
             Name: 'Mac Like Scrollbars',
             Link: '/adaptableoptions/aggridmaclikescrollbars',
             Description:
