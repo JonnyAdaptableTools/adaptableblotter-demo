@@ -50,6 +50,13 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
+            href="https://docs.adaptabletools.com/docs/common-objects/common-objects-expression"
+            target="_blank"
+          >
+            Adaptable Expression
+          </a>{' '}
+          |{' '}
+          <a
             href="https://docs.adaptabletools.com/docs/predefined-config/query-config"
             target="_blank"
           >
