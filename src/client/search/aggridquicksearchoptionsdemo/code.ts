@@ -17,15 +17,14 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    Tabs: [
-      {
-        Name: 'Filter',
-        Toolbars: ['Filter'],
-      },
-    ],
+    Tabs: [],
   },
   QuickSearch: {
-    QuickSearchText: 'Mar',
+    Style: {
+      BackColor: '#ffff00',
+      ForeColor: '#8b0000',
+      FontStyle: 'Italic',
+    },
   },
 } as PredefinedConfig;
 
@@ -36,23 +35,29 @@ export default async (columnDefs: any[], rowData: any[]) => {
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    autoGroupColumnDef: {
-      sortable: true,
+    statusBar: {
+      statusPanels: [
+        { statusPanel: 'agTotalRowCountComponent', align: 'left' },
+        { statusPanel: 'agFilteredRowCountComponent' },
+      ],
     },
   };
 
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Exclude Quick Search Columns Demo',
+    adaptableId: 'Quick Search Options Demo',
     searchOptions: {
+      quickSearchPlaceholder: 'Search Grid',
       excludeColumnFromQuickSearch: (column: AdaptableColumn) => {
         if (column.ColumnId === 'ContactName') {
           return true;
         }
         return false;
       },
+      runQueryAfterQuickSearch: true,
     },
+
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

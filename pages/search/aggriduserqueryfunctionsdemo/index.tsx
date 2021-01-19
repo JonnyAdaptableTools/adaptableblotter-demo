@@ -19,8 +19,14 @@ export default () => {
             of Expression Functions that can be used in a query.
           </p>
           <p>
-            Users can add to this at run-time by providing custom expresion
-            functions which AdapTable will invoke the query is being evaluated.
+            Users can add to this at run-time by providing{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/common-objects/common-objects-expression/#custom-expression-functions"
+              target="_blank"
+            >
+              custom expresion functions
+            </a>{' '}
+            which AdapTable will invoke the query is being evaluated.
           </p>
           <p>
             The main element to be provided is a <b>handler</b> property that
@@ -45,8 +51,11 @@ export default () => {
                 Year.
               </p>
               <p>
-                Here we use it inside the Query we are running:
-                ('IN_BUSINESS_YEAR([OrderDate]) AND
+                Here we use it inside the{' '}
+                <a href="./aggridcurrentquerydemo" target="_blank">
+                  Query
+                </a>{' '}
+                we are running: ('IN_BUSINESS_YEAR([OrderDate]) AND
                 IN_BUSINESS_YEAR([ShippedDate])').
               </p>
               <p>
@@ -61,20 +70,36 @@ export default () => {
               </p>
               <p>
                 (The function uses a mock service and also passes in the
-                Shipping Details (which we get from the Context in the handler)
-                in order to arrive at the fictitious price.)
+                Shipping Details (which we get from the{' '}
+                <a
+                  href="https://docs.adaptabletools.com/api/expressioncontext"
+                  target="_blank"
+                >
+                  Context
+                </a>{' '}
+                in the handler) in order to arrive at the fictitious price.)
               </p>
               <p>
-                The user function is used to create 2 Calculated Columns -
-                'OrderCostGBP' and 'PackageCostGBP'
+                The user function is used to create 2{' '}
+                <a
+                  href="../../column/aggridcalculatedcolumndemo"
+                  target="_blank"
+                >
+                  Calculated Columns
+                </a>{' '}
+                :<i>OrderCostGBP</i>, <i>PackageCostGBP</i>.
               </p>
               <p>
-                Each Calclated Column contains an Expression which is passed the
-                equivalent USD column as the sole input.
+                Each Calculated Column contains an Expression which is passed
+                the equivalent USD column as the sole input.
               </p>
               <p>
-                Note also that we create a Format Column with the Scope of the 2
-                columns that adds a '£' and formats the digits.
+                Note also that we create a{' '}
+                <a href="../../style/aggridformatcolumndemo" target="_blank">
+                  Format Column
+                </a>{' '}
+                with the Scope of the 2 columns that adds a '£' and formats the
+                digits.
               </p>
             </li>
           </ul>
@@ -83,13 +108,6 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/query-function"
-            target="_blank"
-          >
-            Query Function
-          </a>{' '}
-          |{' '}
-          <a
             href="https://docs.adaptabletools.com/docs/common-objects/common-objects-expression"
             target="_blank"
           >
@@ -97,17 +115,10 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/predefined-config/query-config"
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/query-function"
             target="_blank"
           >
-            Query Predefined Config
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/adaptable-api/query-api"
-            target="_blank"
-          >
-            Query API
+            Query Function
           </a>{' '}
         </div>
       }

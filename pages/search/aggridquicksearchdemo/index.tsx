@@ -18,21 +18,12 @@ export default () => {
             Quick Search Toolbar you can use)
           </p>
           <p>
-            Quick Search Predefined Config allows you to set the style of
-            matched cells - which we have done in this example by setting a
-            darker yellow background with a brown font.
-          </p>
-          <p>
-            By default the Quick Search box displays 'Search' as the placeholder
-            text, but this can be changed through <i>quickSearchPlaceholder</i>
-            property in{' '}
-            <a
-              href="https://docs.adaptabletools.com/docs/adaptable-options/search-options"
-              target="_blank"
-            >
-              Search Options
-            </a>
-            ; here it is set to 'Search Grid'.
+            There are many options available for Quick Search around styling,
+            available columns and filtering behaviour. See the{' '}
+            <a href="./aggridquicksearchoptionsdemo" target="_blank">
+              Quick Search Options Demo
+            </a>{' '}
+            for more details.
           </p>
         </div>
       }

@@ -20,10 +20,6 @@ const demoConfig: PredefinedConfig = {
   },
   QuickSearch: {
     QuickSearchText: 'g',
-    Style: {
-      BackColor: '#ffff00',
-      ForeColor: '#8b0000',
-    },
   },
 } as PredefinedConfig;
 
@@ -46,9 +42,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Quick Search Demo',
-    searchOptions: {
-      quickSearchPlaceholder: 'Search Grid',
-    },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

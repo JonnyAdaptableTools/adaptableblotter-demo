@@ -118,7 +118,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
         GBP_PRICE: {
           handler(args: any[], context: ExpressionContext) {
             const shippingCompany = context.node.data['ShipVia'];
-            return currencyConverterMockService.getSterlingPrice(
+            return mockCurrencyConverterService.getSterlingPrice(
               args[0],
               shippingCompany
             );
@@ -131,7 +131,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
       },
     },
     predefinedConfig: demoConfig,
-
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
   adaptableApi = await Adaptable.init(adaptableOptions);
@@ -139,9 +138,9 @@ export default async (columnDefs: any[], rowData: any[]) => {
   return { adaptableOptions, adaptableApi };
 };
 
-let currencyConverterMockService = {
+let mockCurrencyConverterService = {
   getSterlingPrice: (dollarPrice: number, shipVia: string) => {
-    // can get externally in real life scenario
+    // will get externally and do properly in real life scenario
     return shipVia == 'United Package'
       ? dollarPrice * 1.36
       : dollarPrice * 1.45;

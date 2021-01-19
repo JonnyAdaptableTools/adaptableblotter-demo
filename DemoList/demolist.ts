@@ -57,6 +57,12 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Search across all columns using a simple text search (includes wildcards like ">").',
           },
           {
+            Name: 'Quick Search Options',
+            Link: '/search/aggridquicksearchoptionsdemo',
+            Description:
+              'There are many options to in Quick Search around styling, available columns and filtering behaviour.',
+          },
+          {
             Name: 'Current Query',
             Link: '/search/aggridcurrentquerydemo',
             Description: 'Set the current query to use at start up.',
@@ -774,12 +780,6 @@ export function getDemoPageStructure(): DemoPageStructure {
             Link: '/adaptableoptions/aggridautoapplyfiltersdemo',
             Description:
               'In Column Filters the default is to filter each time a value in the dropdown is clicked. But if you prefer, you can apply the filters only after an "Apply" button is clicked (useful if doing server side filtering).',
-          },
-          {
-            Name: 'Quick Search Columns',
-            Link: '/adaptableoptions/aggridexcludecolumnsfromquicksearchdemo',
-            Description:
-              'Provide a function which will specify if some columns should be excluded from Quick Search results.',
           },
           {
             Name: 'Expanded Row Groups',
