@@ -62,6 +62,12 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description: 'Set the current query to use at start up.',
           },
           {
+            Name: 'Managing Queries',
+            Link: '/search/aggridmanagingquerydemo',
+            Description:
+              'Configure which Expression Functions are available in the parser and which Columns are Queryable.',
+          },
+          {
             Name: 'Data Source Selector',
             Link: '/search/aggriddatasourcedemo',
             Description:
@@ -644,6 +650,12 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'Set a default Entitlement Access Level to be used if not Entitlement is explicitly provided.',
           },
+          {
+            Name: 'Read Only Objects',
+            Link: '/entitlements/aggridreadonlyobjectsdemo',
+            Description:
+              'Adaptable Objects in Predefined Config can be ReadOnly which will override the Function Entitlement of "Full".',
+          },
         ],
       },
       {
@@ -768,6 +780,12 @@ export function getDemoPageStructure(): DemoPageStructure {
             Link: '/adaptableoptions/aggridexpandedrowgroupsdemo',
             Description:
               'Layouts can save which Row Groups are currently expanded - and load them when the Grid next opens.',
+          },
+          {
+            Name: 'Empty Row Groups',
+            Link: '/adaptableoptions/aggridemptyrowgroupsdemo',
+            Description:
+              'Set Row Groups not to open if there are no non-grouped columns',
           },
           {
             Name: 'Custom Function Names',
