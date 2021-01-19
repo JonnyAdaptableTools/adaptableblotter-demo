@@ -15,7 +15,7 @@ export default async () => {
   helperAgGrid.convertExcelData(rowData);
 
   const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
-  console.log(2);
+
   const { adaptableOptions, adaptableApi } = await init(columndefs, rowData);
 
   adaptableApi.eventApi.on('AdaptableReady', () => {

@@ -62,6 +62,12 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description: 'Set the current query to use at start up.',
           },
           {
+            Name: 'User Query Functions',
+            Link: '/search/aggriduserqueryfunctionsdemo',
+            Description:
+              'Users can provide custom functions to be included in - and evaluated by -  the Expression Parser.',
+          },
+          {
             Name: 'Managing Queries',
             Link: '/search/aggridmanagingquerydemo',
             Description:

@@ -35,51 +35,57 @@ export default () => {
             ) and not by AdapTable.
           </p>
           <p>Both of these can be accomplished in AdapTable:</p>
-          <p>
-            <b>Expression Functions</b>
-          </p>
-          <p>
-            {' '}
-            The <b>expressionFunctions</b> option in{' '}
-            <a
-              href="https://docs.adaptabletools.com/docs/adaptable-options/query-options"
-              target="_blank"
-            >
-              Query Options
-            </a>{' '}
-            allows a precise set of Expression Functions to be provided to
-            AdapTable (or a list of those to omit).
-          </p>
-          <p>
-            Only these Expression Functions will be displayed in the Expression
-            Editor UI and only these will be valid when the Parser evaluates the
-            Expression.
-          </p>
-          <p>
-            Note for Devs: You need to import{' '}
-            <i>AdaptableExpressionFunctions</i> from the same place you import{' '}
-            <i>Adaptable</i> as seen in the code below.
-          </p>
-          <p>
-            In this example we have used omit (from Lodash) to remove the
-            'COALESCE', 'DIFF_YEARS' and 'IS_BLANK' functions.
-          </p>
-          <p>
-            <b>Queryable Columns</b>
-          </p>
-          <p>
-            The <b>QueryableColumns</b> property in Query State can be supplied
-            with a list of Columns - only these can be used in a Query.
-          </p>
-          <p>
-            Note: The default is set all Columns as Queryable so only provide a
-            value here if you explicitly require to limit this.
-          </p>
-          <p>
-            In this example we have configured that only 4 columns -
-            'ShipCountry', 'ShipVia', 'Employee' and 'ItemCount' - can be used
-            in a Query.
-          </p>
+          <ul>
+            <li>
+              <p>
+                <b>Expression Functions</b>
+              </p>
+              <p>
+                The <b>expressionFunctions</b> option in{' '}
+                <a
+                  href="https://docs.adaptabletools.com/docs/adaptable-options/query-options"
+                  target="_blank"
+                >
+                  Query Options
+                </a>{' '}
+                allows a precise set of Expression Functions to be provided to
+                AdapTable (or a list of those to omit).
+              </p>
+              <p>
+                Only these Expression Functions will be displayed in the
+                Expression Editor UI and only these will be valid when the
+                Parser evaluates the Expression.
+              </p>
+              <p>
+                Note for Devs: You need to import{' '}
+                <i>AdaptableExpressionFunctions</i> from the same place you
+                import <i>Adaptable</i> as seen in the code below.
+              </p>
+              <p>
+                In this example we have used omit (from Lodash) to remove the
+                'COALESCE', 'DIFF_YEARS' and 'IS_BLANK' functions.
+              </p>
+            </li>
+            <li>
+              <p>
+                <b>Queryable Columns</b>
+              </p>
+              <p>
+                The <b>QueryableColumns</b> property in Query State can be
+                supplied with a list of Columns - only these can be used in a
+                Query.
+              </p>
+              <p>
+                Note: The default is set all Columns as Queryable so only
+                provide a value here if you explicitly require to limit this.
+              </p>
+              <p>
+                In this example we have configured that only 4 columns -
+                'ShipCountry', 'ShipVia', 'Employee' and 'ItemCount' - can be
+                used in a Query.
+              </p>
+            </li>
+          </ul>
         </div>
       }
       helpResources={
