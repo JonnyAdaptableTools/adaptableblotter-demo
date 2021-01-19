@@ -15,6 +15,14 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
+  Dashboard: {
+    Tabs: [
+      {
+        Name: 'Demo',
+        Toolbars: ['Layout'],
+      },
+    ],
+  },
   Layout: {
     CurrentLayout: 'No Columns',
     Layouts: [
