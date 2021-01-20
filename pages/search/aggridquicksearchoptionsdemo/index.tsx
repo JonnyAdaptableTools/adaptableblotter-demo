@@ -48,7 +48,7 @@ export default () => {
                 cells highlighted.
               </p>
               <p>
-                To return only those rows which contains a matching cell, set
+                To display only those rows which contains a matching cell, set
                 the
                 <i>runQueryAfterQuickSearch</i> property in{' '}
                 <a

@@ -50,14 +50,10 @@ export default async (columnDefs: any[], rowData: any[]) => {
     searchOptions: {
       quickSearchPlaceholder: 'Search Grid',
       excludeColumnFromQuickSearch: (column: AdaptableColumn) => {
-        if (column.ColumnId === 'ContactName') {
-          return true;
-        }
-        return false;
+        return column.ColumnId === 'ContactName' ? true : false;
       },
       runQueryAfterQuickSearch: true,
     },
-
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

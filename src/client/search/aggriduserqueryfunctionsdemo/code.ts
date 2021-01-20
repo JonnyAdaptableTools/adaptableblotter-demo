@@ -105,7 +105,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
       expressionFunctions: {
         ...AdaptableExpressionFunctions,
         IN_BUSINESS_YEAR: {
-          handler(args: any[], context: ExpressionContext) {
+          handler(args: any[]) {
             const dateToCheck: Date = args[0]; // normally do type checking here!
             const businessYear: Date = new Date(2020, 5, 1);
             return dateToCheck > businessYear;
@@ -123,9 +123,8 @@ export default async (columnDefs: any[], rowData: any[]) => {
               shippingCompany
             );
           },
-          description:
-            'Converts USD price to GBP equivalent (via a mock service)',
-          signatures: ['GBP_PRICE(sterlingPrice: number)'],
+          description: 'Converts USD price to GBP (via mock service)',
+          signatures: ['GBP_PRICE(dollarPrice: number)'],
           examples: ['GBP_PRICE([ItemCost])'],
         },
       },
