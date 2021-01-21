@@ -727,6 +727,12 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'How to run AdapTable when ag-Grid is using the Server Row Model - and to perform filtering yourself.',
           },
+          {
+            Name: 'Integrated Charting',
+            Link: '/aggridfeatures/aggridintegratedchartingdedemo',
+            Description:
+              'AdapTable integrates fully with ag-Grids Integrated Charts',
+          },
         ],
       },
       {
