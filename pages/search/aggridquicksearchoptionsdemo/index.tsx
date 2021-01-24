@@ -86,8 +86,6 @@ export default () => {
               </p>
             </li>
           </ul>
-
-          <p></p>
         </div>
       }
       helpResources={

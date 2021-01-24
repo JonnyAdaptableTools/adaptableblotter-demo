@@ -123,6 +123,12 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'System Filters are those provided by AdapTable (e.g. "Blanks", "Yeserday", "Positive"); you can choose which - if any - of these are available.',
           },
+          {
+            Name: 'Filter Options',
+            Link: '/filters/aggridfilteroptionsdemo',
+            Description:
+              'Many options are available to mange how Filters work e.g. when they open and when the filtering option takes place.',
+          },
         ],
       },
       {
@@ -780,12 +786,6 @@ export function getDemoPageStructure(): DemoPageStructure {
             Link: '/adaptableoptions/aggridvendorgridfiltersdemo',
             Description:
               'You can use the agGrid Floating Filter and Filter Form if you wish instead of AdapTable Quick Filter and Filter Form respectively',
-          },
-          {
-            Name: 'Auto Apply Filters',
-            Link: '/adaptableoptions/aggridautoapplyfiltersdemo',
-            Description:
-              'In Column Filters the default is to filter each time a value in the dropdown is clicked. But if you prefer, you can apply the filters only after an "Apply" button is clicked (useful if doing server side filtering).',
           },
           {
             Name: 'Expanded Row Groups',

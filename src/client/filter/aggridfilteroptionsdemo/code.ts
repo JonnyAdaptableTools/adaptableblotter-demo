@@ -14,7 +14,34 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
 var adaptableApi: AdaptableApi;
 
-const demoConfig: PredefinedConfig = {} as PredefinedConfig;
+const demoConfig: PredefinedConfig = {
+  Layout: {
+    CurrentLayout: 'Orders',
+    Layouts: [
+      {
+        Columns: [
+          'OrderId',
+          'ItemCost',
+          'OrderDate',
+          'Employee',
+          'Freight',
+          'ChangeLastOrder',
+          'ShipCountry',
+          'ShipVia',
+          'InvoicedCost',
+          'CustomerReference',
+        ],
+        ColumnSorts: [
+          {
+            ColumnId: 'OrderDate',
+            SortOrder: 'Desc',
+          },
+        ],
+        Name: 'Orders',
+      },
+    ],
+  },
+} as PredefinedConfig;
 
 export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
@@ -23,17 +50,26 @@ export default async (columnDefs: any[], rowData: any[]) => {
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
-    autoGroupColumnDef: {
-      sortable: true,
+    statusBar: {
+      statusPanels: [
+        { statusPanel: 'agTotalRowCountComponent', align: 'left' },
+        { statusPanel: 'agFilteredRowCountComponent' },
+      ],
     },
   };
 
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Auto Apply Filters Demo',
+    adaptableId: 'Filter Options Demo',
     filterOptions: {
       autoApplyFilter: false,
+      quickFilterTrigger: 'click',
+      sortColumnValuesInFilter: true,
+      clearFiltersOnStartUp: true,
+      defaultNumericColumnFilter: 'GreaterThan',
+      defaultStringColumnFilter: 'StartsWith',
+      defaultDateColumnFilter: 'NotOn',
     },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },

@@ -12,11 +12,10 @@ const code = raw('./code.ts');
 export default async () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
-
   let rowData = JSON.parse(JSON.stringify(json));
   helperAgGrid.convertExcelData(rowData);
 
-  const columndefs = helperAgGrid.getFilteredColumnSchema();
+  const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
 
   const { adaptableOptions, adaptableApi } = await init(columndefs, rowData);
 
