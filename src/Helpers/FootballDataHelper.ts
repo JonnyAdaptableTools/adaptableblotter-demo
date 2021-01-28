@@ -1,7 +1,7 @@
 import { ColDef, GridOptions, Module } from '@ag-grid-community/all-modules';
 
 export interface IFootballTeam {
-  name: string;
+  team: string;
   country: string;
   stadium: string;
   capacity: number;
@@ -12,6 +12,7 @@ export interface IFootballTeam {
 
 export interface IFootballPlayer {
   name: string;
+  country: string;
   age: number;
   position: string;
 }
@@ -21,7 +22,7 @@ export class FootballDataHelper {
     var schema: any[] = [];
     schema.push({
       headerName: 'Team',
-      field: 'name',
+      field: 'team',
       editable: false,
       filter: false,
       cellRenderer: 'agGroupCellRenderer',
@@ -102,6 +103,13 @@ export class FootballDataHelper {
       editable: true,
       type: 'abColDefString',
     });
+    schema.push({
+      headerName: 'Country',
+      field: 'country',
+      editable: false,
+      filter: true,
+      type: 'abColDefString',
+    });
 
     return schema;
   }
@@ -111,7 +119,7 @@ export class FootballDataHelper {
 
     // Liverpool
     let liverpool: IFootballTeam = {
-      name: 'Liverpool',
+      team: 'Liverpool',
       country: 'England',
       stadium: 'Anfield',
       capacity: 48000,
@@ -123,33 +131,38 @@ export class FootballDataHelper {
           age: 26,
           name: 'Alisson Becker',
           position: 'Goalkeeper',
+          country: 'Brazil',
         },
         {
           age: 20,
           name: 'Trent Alexander Arnold',
           position: 'Defender',
+          country: 'England',
         },
         {
           age: 28,
           name: 'Virgil van Dijk',
           position: 'Defender',
+          country: 'Holland',
         },
         {
           age: 29,
           name: 'Jordan Henderson',
           position: 'Midfielder',
+          country: 'England',
         },
         {
           age: 32,
           name: 'Mo Salah',
           position: 'Striker',
+          country: 'Egypt',
         },
       ],
     };
     footballTeams.push(liverpool);
     // barca
     let barcelona: IFootballTeam = {
-      name: 'Barcelona',
+      team: 'Barcelona',
       country: 'Spain',
       stadium: 'Nou Camp',
       capacity: 99354,
@@ -160,21 +173,25 @@ export class FootballDataHelper {
           age: 27,
           name: 'Marc-André ter Stegen',
           position: 'Goalkeeper',
+          country: 'Germany',
         },
         {
           age: 32,
           name: 'Gerard Piqué',
           position: 'Defender',
+          country: 'Spain',
         },
         {
           age: 27,
           name: 'Phillipe Coutinho',
           position: 'Midfielder',
+          country: 'Brazil',
         },
         {
           age: 32,
           name: 'Lionel Messi',
           position: 'Forward',
+          country: 'Argentina',
         },
       ],
     };
@@ -182,7 +199,7 @@ export class FootballDataHelper {
 
     // real madrid
     let realMadrid: IFootballTeam = {
-      name: 'Real Madrid',
+      team: 'Real Madrid',
       country: 'Spain',
       stadium: 'Bernabou',
       capacity: 857673,

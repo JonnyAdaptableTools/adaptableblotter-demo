@@ -7,6 +7,8 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
+  SearchChangedEventArgs,
+  SearchChangedInfo,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import masterDetailAgGridPlugin from '@adaptabletools/adaptable-plugin-master-detail-aggrid';
@@ -14,6 +16,7 @@ import masterDetailAgGridPlugin from '@adaptabletools/adaptable-plugin-master-de
 var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {} as PredefinedConfig;
+var currentquery: string | undefined = '';
 
 export default async (
   columnDefs: any[],
@@ -43,7 +46,7 @@ export default async (
   };
 
   const adaptableOptions: AdaptableOptions = {
-    primaryKey: 'name',
+    primaryKey: 'team',
     userName: 'Demo User',
     adaptableId: 'Master Detail Demo - Master Grid',
     predefinedConfig: demoConfig,
@@ -69,10 +72,30 @@ export default async (
             },
           },
         },
+        onDetailInit(api: AdaptableApi) {
+          if (currentquery) {
+            // note: we have NO way currently of testing if a Query is valid through the api
+            //  api.queryApi.setCurrentQuery(currentquery);
+          } else {
+            //   api.queryApi.clearCurrentQuery();
+          }
+        },
       }),
     ],
   };
   adaptableApi = await Adaptable.init(adaptableOptions);
+
+  adaptableApi.eventApi.on(
+    'SearchChanged',
+    (searchArgs: SearchChangedEventArgs) => {
+      const searchChangedInfo: SearchChangedInfo = adaptableApi.eventApi.getSearchChangedInfoFromEventArgs(
+        searchArgs
+      );
+      if (searchChangedInfo.searchChangedTrigger == 'CurrentQuery') {
+        currentquery = searchChangedInfo.adaptableSearchState.currentQuery;
+      }
+    }
+  );
 
   return { adaptableOptions, adaptableApi };
 };

@@ -11,20 +11,26 @@ export default () => {
       description={
         <div>
           <p>
-            3 sets of <b>column groups</b> have been created (this is where
-            columns are 'banded' together and cannot be separated from each
-            other): <i>Customer Info</i>, <i>Order</i>, and{' '}
-            <i>Shipping Details</i>
+            Column Groups are where columns are 'banded' together with a common
+            header, and each column can only stay inside the Group.
           </p>
           <p>
-            Note that the other functions in AdapTable will 'honour' this column
-            grouping and work appropriately.
+            In this demo, 3 sets of <b>column groups</b> have been created:{' '}
+            <i>Customer Info</i>, <i>Order</i>, and <i>Shipping Details</i>
           </p>
           <p>
-            For instance if you load the <i>With Special Cols</i> Layout, you
-            will see that it includes 2 special columns (Calculated Column and
-            FreeText Column), that appear - and position - in the Grid as
-            normal.
+            All other functions in AdapTable will 'honour' this column grouping
+            and work appropriately.
+          </p>
+          <p>
+            For instance if you edit a Layout with Grouped Columns, they will
+            marked as such, and the Editor will not allow them to be dragged out
+            of their parent group.
+          </p>
+          <p>
+            Likewise the <i>With Special Cols</i> Layout - which includes 2
+            special columns (Calculated Column and FreeText Column) - displays
+            their position in the Grid as normal.
           </p>
         </div>
       }
