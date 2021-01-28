@@ -29,7 +29,7 @@ export default () => {
               <b>Placeholder Text</b>
               <p>
                 The default placeholder text value of 'Search' in the Quick
-                Search box can be changed via the <i>quickSearchPlaceholder</i>{' '}
+                Search box can be changed via the <b>quickSearchPlaceholder</b>{' '}
                 property in{' '}
                 <a
                   href="https://docs.adaptabletools.com/docs/adaptable-options/search-options"
@@ -50,7 +50,7 @@ export default () => {
               <p>
                 To display only those rows which contains a matching cell, set
                 the
-                <i>runQueryAfterQuickSearch</i> property in{' '}
+                <b>runQueryAfterQuickSearch</b> property in{' '}
                 <a
                   href="https://docs.adaptabletools.com/docs/adaptable-options/search-options"
                   target="_blank"
@@ -83,6 +83,30 @@ export default () => {
                 In this example our function will exclude the <i>Contact</i>{' '}
                 Column which is why searching for 'Maria' will not show up in
                 the result set.
+              </p>
+            </li>
+            <li>
+              <b>Ignoring Case</b>{' '}
+              <p>
+                By default case is ignored when searching against string
+                columns. This is the case for{' '}
+                <b>Quick Search, Filters, and Queries</b>.
+              </p>
+              <p>
+                Setting the <b>ignoreCaseInQueries</b> property of{' '}
+                <a
+                  href="https://docs.adaptabletools.com/docs/adaptable-options/query-options"
+                  target="_blank"
+                >
+                  Query Options
+                </a>{' '}
+                to be <i>false</i> (the default if not set is <i>true</i>) will
+                change this behaviour.
+              </p>
+              <p>
+                This example we set the value to false: type 'j' into Quick
+                Search and note that Janet Leverling does not highlight; change
+                that to 'J' and it will highlight.
               </p>
             </li>
           </ul>

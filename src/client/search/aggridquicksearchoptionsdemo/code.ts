@@ -26,6 +26,26 @@ const demoConfig: PredefinedConfig = {
       FontStyle: 'Italic',
     },
   },
+  Layout: {
+    CurrentLayout: 'QueryLayout',
+    Revision: Date.now(),
+    Layouts: [
+      {
+        Columns: [
+          'OrderId',
+          'ShipVia',
+          'Employee',
+          'ContactName',
+          'ItemCount',
+          'OrderCost',
+          'PackageCost',
+          'CompanyName',
+          'ChangeLastOrder',
+        ],
+        Name: 'QueryLayout',
+      },
+    ],
+  },
 } as PredefinedConfig;
 
 export default async (columnDefs: any[], rowData: any[]) => {
@@ -53,6 +73,9 @@ export default async (columnDefs: any[], rowData: any[]) => {
         return column.ColumnId === 'ContactName' ? true : false;
       },
       runQueryAfterQuickSearch: true,
+    },
+    queryOptions: {
+      ignoreCaseInQueries: false,
     },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
