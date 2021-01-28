@@ -241,20 +241,15 @@ export default () => {
         <p>
           <b>AdapTable Version</b>
           <br />
-          The demos on this site use <b>Version 7 of AdapTable</b>. <br />
-          This contains some big changes (and improvements) from previous
-          versions. If you are new to Version 7 please read the{' '}
+          The demos on this site use <b>Version 8 of AdapTable</b>. <br />
+          See{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/releases/version7/upgrade-guide-v7"
+            href="https://docs.adaptabletools.com/docs/releases/version8/upgrade-guide-v8"
             target="_blank"
           >
             Upgrade Guide
           </a>{' '}
-          or watch{' '}
-          <a href="https://youtu.be/tyzP6wa_SuU" target="_blank">
-            this video
-          </a>
-          .
+          for more details .
         </p>
         <p>
           <b>Custom Examples (on Github)</b>
