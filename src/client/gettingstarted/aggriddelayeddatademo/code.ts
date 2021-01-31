@@ -69,7 +69,12 @@ const demoConfig: PredefinedConfig = {
   },
 } as PredefinedConfig;
 
-export default async (columnDefs: any[], rowData: any[]) => {
+export default async (
+  columnDefs: ColDef[],
+  rowData: any[],
+  companyNameColDef: ColDef,
+  packageCostColDef: ColDef
+) => {
   const gridOptions: GridOptions = {
     columnDefs,
     // rowData, - note we are NOT setting rowData at startup
@@ -105,8 +110,8 @@ export default async (columnDefs: any[], rowData: any[]) => {
       const vendorGrid: GridOptions = info.vendorGrid;
       const colDefs = vendorGrid.columnDefs as ColDef[];
       vendorGrid.api?.setColumnDefs([
-        ...[colDefs.filter(c => c.field === 'CompanyName')[0]],
-        ...[colDefs.filter(c => c.field === 'PackageCost')[0]],
+        companyNameColDef,
+        packageCostColDef,
         ...colDefs,
       ]);
     }, 6000);

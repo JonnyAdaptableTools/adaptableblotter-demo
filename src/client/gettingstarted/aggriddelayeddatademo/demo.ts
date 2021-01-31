@@ -6,17 +6,29 @@ import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 
 import init from './code';
-import { GridReadyEvent } from '@ag-grid-community/all-modules';
+import { ColDef, GridReadyEvent } from '@ag-grid-community/all-modules';
 const code = raw('./code.ts');
 
 export default async () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
-
+  console.log(1);
   let rowData = JSON.parse(JSON.stringify(json));
   helperAgGrid.convertExcelData(rowData);
   const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
-  const { adaptableOptions, adaptableApi } = await init(columndefs, rowData);
+  const companyNameColDef: ColDef = columndefs.filter(
+    c => c.field === 'CompanyName'
+  )[0];
+  const packageCostColDef: ColDef = columndefs.filter(
+    c => c.field === 'PackageCost'
+  )[0];
+
+  const { adaptableOptions, adaptableApi } = await init(
+    columndefs,
+    rowData,
+    companyNameColDef,
+    packageCostColDef
+  );
 
   adaptableOptions.vendorGrid.onGridReady = function(
     gridReady: GridReadyEvent
