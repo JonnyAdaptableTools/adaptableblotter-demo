@@ -106,6 +106,7 @@ export default async (
     }, 3000);
 
     // Add the Package Cost and Compamy Name columns to the grid after 6 seconds
+    // Note: we access ag-Grid through the info object returned by AdaptableReady
     setTimeout(() => {
       const vendorGrid: GridOptions = info.vendorGrid;
       const colDefs = vendorGrid.columnDefs as ColDef[];
