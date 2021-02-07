@@ -260,7 +260,7 @@ export default () => {
         <ul>
           <li>
             <a
-              href="https://github.com/AdaptableTools/example-adaptableblotter-angular-aggrid"
+              href="https://github.com/AdaptableTools/example-adaptable-angular-aggrid/tree/angular-10"
               target="_blank"
             >
               Using the Angular Wrapper

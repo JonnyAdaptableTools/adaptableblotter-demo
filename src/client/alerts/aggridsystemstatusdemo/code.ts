@@ -70,10 +70,8 @@ const demoConfig: PredefinedConfig = {
   },
   SystemStatus: {
     ShowAlert: false,
-    //  DefaultStatusMessage: 'Everything is fine',
-    //  DefaultStatusType: 'Success',
-    StatusMessage: 'Server running slowly',
-    StatusType: 'Warning',
+    DefaultStatusMessage: 'Everything is fine',
+    DefaultStatusType: 'Success',
   },
 } as PredefinedConfig;
 
