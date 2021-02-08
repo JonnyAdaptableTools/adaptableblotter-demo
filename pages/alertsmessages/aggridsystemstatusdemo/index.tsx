@@ -15,48 +15,64 @@ export default () => {
           </p>
           <p>
             Messages can be <b>Success</b> (by default green), <b>Warning</b>{' '}
-            (amber), <b>Error</b> (red) or <b>Info</b> (blue). Clicking the
-            button will display the message.{' '}
+            (amber), <b>Error</b> (red) or <b>Info</b> (blue).{' '}
           </p>
           <p>
-            You can provide default and start-up messages (and message types)
-            and also choose whether an Alert will be displayed when the System
-            Status changes (to anything other than default).
+            You can provide a default message (and message type) to display when
+            there is no current message,
+          </p>{' '}
+          <p>
+            The System Status Toolbar and ToolPanel show the most recent (or
+            default) message, while the function popup displays all System
+            Status messages.{' '}
+          </p>{' '}
+          <p>
+            Other options allow an Alert to show when the System Status changes
+            (to anything other than default), and a custom Div where Messages
+            should be displayed (as provided here).
           </p>
           <p>
-            You can set the System Status through{' '}
+            If System Status is selected as a Visible Button in{' '}
             <a
               href="https://docs.adaptabletools.com/docs/predefined-config/dashboard-config"
               target="_blank"
             >
               Dashboard State
             </a>{' '}
-            and see the System Status in 3 ways: via the System Status button in
-            the Dashboard Header or via the System Status toolbar and tool
-            panel.
+            then it will display with colour corresponding to current Message
+            Type.
           </p>
           <p>
-            You set System Status messages through code using the{' '}
+            Set System Status messages through code using the{' '}
             <a
               href="https://docs.adaptabletools.com/docs/adaptable-api/system-status-api"
               target="_blank"
             >
-              Adaptable API
-            </a>
-            . In this example we set info, warning, success and error messages
-            through the API - using Buttons in a{' '}
-            <a
-              href="../../dashboard/aggriddashboardcustomtoolbarsdemo"
-              target="_blank"
-            >
+              System Status section
+            </a>{' '}
+            of AdapTable API.
+          </p>
+          <p>
+            In this example we set info, warning, success and error messages
+            using Dasbhoard Buttons in a{' '}
+            <a href="../../dashboard/aggriddashboardcustomtoolbarsdemo">
               Custom Toolbar
-            </a>
-            .
+            </a>{' '}
+            and via entries in the{' '}
+            <a href="../../menus/aggridcontextmenudemo">Context Menu</a>.
           </p>
         </div>
       }
       helpResources={
         <div>
+          {' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-functions/system-status-function"
+            target="_blank"
+          >
+            System Status Function
+          </a>{' '}
+          |{' '}
           <a
             href="https://docs.adaptabletools.com/docs/predefined-config/system-status-config"
             target="_blank"

@@ -75,6 +75,31 @@ const demoConfig: PredefinedConfig = {
     // show system messages in a Div also
     SystemStatusMessageDisplayDiv: 'systemStatusDiv',
   },
+  UserInterface: {
+    ContextMenuItems: [
+      {
+        Label: 'Set System Status',
+        SubMenuItems: [
+          {
+            Label: 'Set Error',
+            UserMenuItemClickedFunction: 'setError',
+          },
+          {
+            Label: 'Set Warning',
+            UserMenuItemClickedFunction: 'setWarning',
+          },
+          {
+            Label: 'Set Success',
+            UserMenuItemClickedFunction: 'setSuccess',
+          },
+          {
+            Label: 'Set Info',
+            UserMenuItemClickedFunction: 'setInfo',
+          },
+        ],
+      },
+    ],
+  },
 } as PredefinedConfig;
 
 export default async (columnDefs: any[], rowData: any[]) => {
@@ -93,6 +118,44 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'System Status Demo',
+    userFunctions: [
+      {
+        type: 'UserMenuItemClickedFunction',
+        name: 'setError',
+        handler() {
+          adaptableApi.systemStatusApi.setErrorSystemStatus(
+            'The server is down!',
+            'Please do not make any edits until the server comes back up'
+          );
+        },
+      },
+      {
+        type: 'UserMenuItemClickedFunction',
+        name: 'setWarning',
+        handler() {
+          adaptableApi.systemStatusApi.setWarningSystemStatus(
+            'Problems with server',
+            'Avoid any unnecesary edits'
+          );
+        },
+      },
+      {
+        type: 'UserMenuItemClickedFunction',
+        name: 'setSuccess',
+        handler() {
+          adaptableApi.systemStatusApi.setSuccessSystemStatus(
+            'All working fine'
+          );
+        },
+      },
+      {
+        type: 'UserMenuItemClickedFunction',
+        name: 'setInfo',
+        handler() {
+          adaptableApi.systemStatusApi.setInfoSystemStatus('No issues');
+        },
+      },
+    ],
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
