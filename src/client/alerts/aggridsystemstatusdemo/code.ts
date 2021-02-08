@@ -72,6 +72,8 @@ const demoConfig: PredefinedConfig = {
     ShowAlert: false,
     DefaultStatusMessage: 'Everything is fine',
     DefaultStatusType: 'Success',
+    // show system messages in a Div also
+    SystemStatusMessageDisplayDiv: 'systemStatusDiv',
   },
 } as PredefinedConfig;
 
@@ -110,7 +112,8 @@ export default async (columnDefs: any[], rowData: any[]) => {
           break;
         case 'warning':
           adaptableApi.systemStatusApi.setWarningSystemStatus(
-            'Problems with server'
+            'Problems with server',
+            'Avoid any unnecesary edits'
           );
           break;
         case 'error':

@@ -173,6 +173,12 @@ AgGridDemoPageProps) => {
           }}
         />
         <div id="chartDiv" />
+        <div
+          id="systemStatusDiv"
+          style={{
+            margin: '2px',
+          }}
+        />
         <div id="adaptable" />
         <p />
         <div
