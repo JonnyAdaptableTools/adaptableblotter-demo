@@ -72,8 +72,6 @@ const demoConfig: PredefinedConfig = {
     ShowAlert: false,
     DefaultStatusMessage: 'Everything is fine',
     DefaultStatusType: 'Success',
-    // show system messages in a Div also
-    SystemStatusMessageDisplayDiv: 'systemStatusDiv',
   },
   UserInterface: {
     ContextMenuItems: [
@@ -118,6 +116,9 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'System Status Demo',
+    containerOptions: {
+      systemStatusContainer: 'systemStatusDiv',
+    },
     userFunctions: [
       {
         type: 'UserMenuItemClickedFunction',

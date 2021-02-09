@@ -25,7 +25,6 @@ const demoConfig: PredefinedConfig = {
   },
   Alert: {
     MaxAlertsInStore: 10,
-    AlertDisplayDiv: 'alertDiv',
     AlertDefinitions: [
       {
         Scope: {
@@ -76,6 +75,9 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Alert Demo',
+    containerOptions: {
+      alertContainer: 'alertDiv',
+    },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

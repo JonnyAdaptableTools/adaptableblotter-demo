@@ -263,7 +263,15 @@ export default () => {
               href="https://github.com/AdaptableTools/example-adaptable-angular-aggrid/tree/angular-10"
               target="_blank"
             >
-              Using the Angular Wrapper
+              Using the Angular Wrapper (version 10)
+            </a>{' '}
+          </li>
+          <li>
+            <a
+              href="https://github.com/AdaptableTools/example-adaptable-angular-aggrid/tree/master"
+              target="_blank"
+            >
+              Using the Angular Wrapper (version 9)
             </a>{' '}
           </li>
           <li>
