@@ -43,7 +43,7 @@ class MockServer {
     // create an inital dataset with 150,000 rows (to mimic many rows on the server)
     const helperAgGrid = new HelperAgGrid();
     this._dummyTrades = [];
-    for (let i = 1; i <= 400; i++) {
+    for (let i = 1; i <= 200_000; i++) {
       this._dummyTrades.push(helperAgGrid.createTrade(i));
     }
   }
@@ -64,9 +64,8 @@ class MockServer {
       adaptableApi.configApi.configGetAdaptableSearchState(), // this is the current Adaptable Search State
       adaptableApi.configApi.configGetAdaptableSortState() // this is the current Adaptable Sort State
     );
-    const lastRow = BATCH_COUNT <= params.endRow ? BATCH_COUNT : -1;
-    console.log(params.request);
-    console.log(rows.map(r => r.tradeId));
+    const lastRow = BATCH_COUNT <= params.request.endRow ? BATCH_COUNT : -1;
+
     params.successCallback(rows, lastRow);
   }
 
@@ -346,7 +345,7 @@ export default async (columnDefs: ColDef[]) => {
   };
 
   const adaptableOptions: AdaptableOptions = {
-    primaryKey: 'TradeId',
+    primaryKey: 'tradeId',
     userName: 'Demo User',
     adaptableId: 'Server Mode Demo',
     predefinedConfig: {
@@ -393,4 +392,4 @@ export default async (columnDefs: ColDef[]) => {
   return { adaptableOptions, adaptableApi };
 };
 
-const BATCH_COUNT = 30;
+const BATCH_COUNT = 100;
