@@ -727,12 +727,12 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'Running AdapTable only using the ag-Grid Community version',
           },
-          //   {
-          //     Name: 'Server Row Model',
-          //     Link: '/aggridfeatures/aggridservermodedemo',
-          ////    Description:
-          // 'How to run AdapTable when ag-Grid is using the Server Row Model - and to perform filtering yourself.',
-          //   },
+          {
+            Name: 'Server Row Model',
+            Link: '/aggridfeatures/aggridservermodedemo',
+            Description:
+              'How to run AdapTable when ag-Grid is using the Server Row Model - and to perform filtering yourself.',
+          },
           {
             Name: 'Integrated Charting',
             Link: '/aggridfeatures/aggridintegratedchartingdedemo',
