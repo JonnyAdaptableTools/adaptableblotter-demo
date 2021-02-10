@@ -2,7 +2,11 @@ import '@adaptabletools/adaptable/index.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
 import Adaptable from '@adaptabletools/adaptable/agGrid';
-import { GridOptions, ColDef } from '@ag-grid-community/all-modules';
+import {
+  GridOptions,
+  ColDef,
+  ServerSideStoreType,
+} from '@ag-grid-community/all-modules';
 import {
   AdaptableOptions,
   AdaptableApi,
@@ -32,11 +36,6 @@ import {
   isYesterday,
 } from 'date-fns';
 var adaptableApi: AdaptableApi;
-
-// this slightly contrived Mock Server mimics what will happen on a real server
-// the key method is 'getRows' which will be called by ag-Grid whenever filters or sorts change
-// or when the user scolls to the bottom of the grid
-// this Mock Server is passed to ag-Grid via its api method: setServerSideDatasource
 class MockServer {
   _dummyTrades: ITrade[];
 
@@ -44,9 +43,15 @@ class MockServer {
     // create an inital dataset with 150,000 rows (to mimic many rows on the server)
     const helperAgGrid = new HelperAgGrid();
     this._dummyTrades = [];
-    for (let i = 1; i <= 200000; i++) {
+    for (let i = 1; i <= 400; i++) {
       this._dummyTrades.push(helperAgGrid.createTrade(i));
     }
+  }
+
+  private _api?: AdaptableApi;
+
+  setApi(api: AdaptableApi) {
+    this._api = api;
   }
 
   // called by ag-Grid whenever we need to get the next batch of rows
@@ -60,6 +65,8 @@ class MockServer {
       adaptableApi.configApi.configGetAdaptableSortState() // this is the current Adaptable Sort State
     );
     const lastRow = BATCH_COUNT <= params.endRow ? BATCH_COUNT : -1;
+    console.log(params.request);
+    console.log(rows.map(r => r.tradeId));
     params.successCallback(rows, lastRow);
   }
 
@@ -320,6 +327,12 @@ class MockServer {
     }
   }
 }
+const mockServer = new MockServer();
+
+// this slightly contrived Mock Server mimics what will happen on a real server
+// the key method is 'getRows' which will be called by ag-Grid whenever filters or sorts change
+// or when the user scolls to the bottom of the grid
+// this Mock Server is passed to ag-Grid via its api method: setServerSideDatasource
 
 export default async (columnDefs: ColDef[]) => {
   const gridOptions: GridOptions = {
@@ -327,6 +340,9 @@ export default async (columnDefs: ColDef[]) => {
     enableRangeSelection: true,
     sideBar: true,
     suppressMenuHide: true,
+    serverSideDatasource: mockServer,
+    rowModelType: 'serverSide',
+    serverSideStoreType: ServerSideStoreType.Partial,
   };
 
   const adaptableOptions: AdaptableOptions = {
@@ -371,14 +387,10 @@ export default async (columnDefs: ColDef[]) => {
     ],
   };
   adaptableApi = await Adaptable.init(adaptableOptions);
+  mockServer.setApi(adaptableApi);
 
-  adaptableApi.eventApi.on('AdaptableReady', (info: AdaptableReadyInfo) => {
-    // Pass ag-Grid our Mock Server - with its implementation of getRows
-    // This will then be invoked by ag-Grid as required
-    info.vendorGrid.api.setServerSideDatasource(mockServer);
-  });
+  adaptableApi.eventApi.on('AdaptableReady', (info: AdaptableReadyInfo) => {});
   return { adaptableOptions, adaptableApi };
 };
 
-const BATCH_COUNT = 100;
-const mockServer = new MockServer();
+const BATCH_COUNT = 30;
