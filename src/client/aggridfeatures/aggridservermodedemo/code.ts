@@ -66,7 +66,9 @@ class MockServer {
     );
     const lastRow = BATCH_COUNT <= params.request.endRow ? BATCH_COUNT : -1;
 
-    params.successCallback(rows, lastRow);
+    params.success({
+      rowData: rows,
+    });
   }
 
   // In the real world this will be done on the server likely using SQL or similar structures
