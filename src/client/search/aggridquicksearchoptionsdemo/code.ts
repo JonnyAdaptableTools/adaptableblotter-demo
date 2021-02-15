@@ -28,7 +28,6 @@ const demoConfig: PredefinedConfig = {
   },
   Layout: {
     CurrentLayout: 'QueryLayout',
-    Revision: Date.now(),
     Layouts: [
       {
         Columns: [

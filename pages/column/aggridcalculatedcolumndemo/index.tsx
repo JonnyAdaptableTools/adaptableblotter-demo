@@ -26,7 +26,7 @@ export default () => {
             </a>
             . )
           </p>
-          <p>In this example we have created 5 Calculated Columns: </p>
+          <p>In this example we have created 6 Calculated Columns: </p>
           <ul>
             <li>
               <b>Avg Item Cost</b> - (numeric) which divides <i>ItemCost</i> by{' '}
@@ -45,6 +45,18 @@ export default () => {
               <b>Highest Cost</b> - (a number) which returns the largest of{' '}
               <i>ItemCost</i>, <i>OrderCost</i>, <i>InvoicedCost</i> and{' '}
               <i>PackageCost</i> (the latter being first multiplied by 10){' '}
+            </li>
+            <li>
+              <b>ShipDelay</b> - (a boolean) which returns true if{' '}
+              <i>ShippedDate</i> is 4 days later than the
+              <i>OrderDate</i> (we add it to <b>CheckboxColumns</b> in{' '}
+              <a
+                href="https://docs.adaptabletools.com/docs/predefined-config/user-interface-config"
+                target="_blank"
+              >
+                User Interface Predefined Config
+              </a>{' '}
+              for better visualisation).
             </li>
             <li>
               <b>Tax</b> - (a string) which returns the VAT (calculated at 20%)

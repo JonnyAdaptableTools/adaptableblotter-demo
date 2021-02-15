@@ -49,10 +49,13 @@ const demoConfig: PredefinedConfig = {
         FriendlyName: 'Highest Cost',
       },
       {
-        ColumnExpression:
-          "[ShippedDate] > ADD_DAYS([OrderDate] , 21) ? 'Delayed' : 'On time'",
+        ColumnExpression: '[ShippedDate] > ADD_DAYS([OrderDate] , 4)',
         ColumnId: 'ShipDelay',
         FriendlyName: 'Ship Delay',
+        CalculatedColumnSettings: {
+          DataType: 'Boolean',
+          Filterable: true,
+        },
       },
       {
         // we will add the Display Format separately
@@ -171,6 +174,9 @@ const demoConfig: PredefinedConfig = {
         Name: 'grouped calc cols',
       },
     ],
+  },
+  UserInterface: {
+    CheckboxColumns: ['ShipDelay'],
   },
 } as PredefinedConfig;
 
