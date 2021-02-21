@@ -292,7 +292,7 @@ export default () => {
           </li>
           <li>
             <a
-              href="https://github.com/AdaptableTools/example-adaptable-openfin-integration"
+              href="https://github.com/AdaptableTools/openfin-demo"
               target="_blank"
             >
               Integration with OpenFin

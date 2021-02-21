@@ -24,26 +24,36 @@ export default () => {
           advantage of the many benefits that OpenFin brings.
         </p>
         <p>
-          One of these is <b>Live Updates</b>; when AdapTable is running in
-          OpenFin if you export data to Excel, then any subsequent changes made
-          to your data in AdapTable (either user edits or ticking data changes)
-          are immediately reflected in Excel also.
-        </p>
-        <p>
-          And a number of other OpenFin-only features regarding Alerts,
-          Notifications and Window-management are coming very soon, so watch
-          this space...
-        </p>
-        <p>
           Run our{' '}
           <a
-            href="https://github.com/AdaptableTools/example-adaptable-openfin-integration"
+            href="https://github.com/AdaptableTools/openfin-demo"
             target="_blank"
           >
-            Integration with OpenFin
+            AdapTable OpenFin Demo Application
           </a>{' '}
           project and see for yourself.
         </p>
+        <p>
+          The Demo illustrates 3 areas where AdapTable and OpenFin functionality
+          combine in exciting ways:
+        </p>
+        <ul>
+          <li>
+            <b>Notifications</b> - AdapTable's powerful Alerts can be shown as
+            OpenFin Notifications with action buttons
+          </li>
+          <li>
+            <b>FDC3 Messages</b> - FDC3 broadcasts can be sent from AdapTable to
+            other OpenFin windows via current channel (and internally through
+            the IAB message bus)
+          </li>
+          <li>
+            <b>Live 2-way Excel Integration</b> - Data can be exported from
+            AdapTable to Excel and each updates in line with data changes made
+            in the other. This includes full validation.
+          </li>
+        </ul>
+
         <p>
           Or you can{' '}
           <b>
