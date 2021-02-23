@@ -35,6 +35,11 @@ import {
   isTomorrow,
   isYesterday,
 } from 'date-fns';
+import {
+  evaluate,
+  defaultFunctions,
+} from '@adaptabletools/adaptable/src/parser/src';
+
 var adaptableApi: AdaptableApi;
 class MockServer {
   _dummyTrades: ITrade[];
@@ -69,7 +74,7 @@ class MockServer {
     params.success({
       rowData: rows,
       // rowCount has to be defined, otherwise AG Grid does NOT refresh correctly the rows
-      rowCount: !!rows.length ? rows.length : 0
+      rowCount: !!rows.length ? rows.length : 0,
     });
   }
 
@@ -85,6 +90,20 @@ class MockServer {
     sortState: AdaptableSortState
   ): ITrade[] {
     let matchingRows: ITrade[] = this._dummyTrades;
+    // evaluate queries if present
+    if (!!searchState.currentQuery) {
+      const currentQuery = searchState.currentQuery;
+      const expressionFunctions = defaultFunctions;
+      matchingRows = matchingRows.filter(rowData =>
+        evaluate(currentQuery, {
+          node: { data: rowData },
+          api: this._api!,
+          functions: expressionFunctions,
+        })
+      );
+    }
+
+    // filter rows
     if (
       searchState.columnFilters != null &&
       searchState.columnFilters?.length > 0
