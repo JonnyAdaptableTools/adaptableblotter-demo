@@ -19,6 +19,7 @@ const demoConfig: PredefinedConfig = {
     VisibleButtons: ['FormatColumn'],
   },
   FormatColumn: {
+    Revision: Date.now(),
     FormatColumns: [
       // Set a Style for OrderId
       {
@@ -70,6 +71,7 @@ const demoConfig: PredefinedConfig = {
             Parentheses: true,
           },
         },
+        CellAlignment: 'Center',
       },
       // Set a Display Format of £ and 2 dp for InvoicedCost
       {
@@ -99,6 +101,18 @@ const demoConfig: PredefinedConfig = {
           },
         },
       },
+      // Set a Display Format Upper Case for ShipCountry Column
+      {
+        Scope: {
+          ColumnIds: ['ShipCountry'],
+        },
+        DisplayFormat: {
+          Formatter: 'StringFormatter',
+          Options: {
+            Case: 'Upper',
+          },
+        },
+      },
     ],
   },
   UserInterface: {
@@ -108,6 +122,24 @@ const demoConfig: PredefinedConfig = {
           ColumnIds: ['LastUpdatedTime'],
         },
         PermittedValues: [''],
+      },
+    ],
+  },
+  Layout: {
+    CurrentLayout: 'Format Layout',
+    Layouts: [
+      {
+        Name: 'Format Layout',
+        Columns: [
+          'OrderId',
+          'ShipCountry',
+          'InvoicedCost',
+          'OrderCost',
+          'ChangeLastOrder',
+          'LastUpdatedTime',
+          'OrderDate',
+          'ContactName',
+        ],
       },
     ],
   },
