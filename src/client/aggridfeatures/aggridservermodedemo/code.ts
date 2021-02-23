@@ -63,7 +63,7 @@ export default async (columnDefs: ColDef[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'tradeId',
     userName: 'Demo User',
-    adaptableId: 'Server Mode Demo',
+    adaptableId: 'Server Row Model Demo',
     predefinedConfig: {
       Dashboard: {
         Tabs: [
@@ -141,11 +141,11 @@ class ServerSideDatasource implements IServerSideDatasource {
   }
 
   get currentAdaptableSearchState() {
-    return this.adaptableApi.configApi.configGetAdaptableSearchState();
+    return this.adaptableApi.configApi.getAdaptableSearchState();
   }
 
   get currentAdaptableSortState() {
-    return this.adaptableApi.configApi.configGetAdaptableSortState();
+    return this.adaptableApi.configApi.getAdaptableSortState();
   }
 }
 
