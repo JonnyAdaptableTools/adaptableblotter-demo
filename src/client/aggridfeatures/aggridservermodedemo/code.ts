@@ -61,8 +61,8 @@ class MockServer {
     let rows = this.getTradesRange(
       params.request.startRow,
       params.request.endRow - params.request.startRow,
-      adaptableApi.configApi.configGetAdaptableSearchState(), // this is the current Adaptable Search State
-      adaptableApi.configApi.configGetAdaptableSortState() // this is the current Adaptable Sort State
+      adaptableApi.configApi.getAdaptableSearchState(), // this is the current Adaptable Search State
+      adaptableApi.configApi.getAdaptableSortState() // this is the current Adaptable Sort State
     );
     const lastRow = BATCH_COUNT <= params.request.endRow ? BATCH_COUNT : -1;
 

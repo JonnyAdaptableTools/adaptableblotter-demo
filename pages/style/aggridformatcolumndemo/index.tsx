@@ -45,6 +45,10 @@ export default () => {
               Separator, Integer Separator, Fraction Digits, Integer Digits,
               Multiplier and Negative Parentheses etc.
             </li>
+            <li>
+              <b>String Columns: </b> set text to show in Upper or Lower case or
+              be trimmed
+            </li>
           </ul>
           <p>
             <b>Visual Style</b>
@@ -57,7 +61,7 @@ export default () => {
             Alternatively you can specify a css style name in Format Colunn
             Predefined Config (which you must provide in your css).
           </p>
-          <p>This example has 6 Format Columns: </p>
+          <p>This example has 7 Format Columns: </p>
           <ul>
             <li>
               <b>Order Id</b> has Visual Style of lime green with a red fore
@@ -74,7 +78,7 @@ export default () => {
             </li>
             <li>
               <b>ChangeLastOrder</b> has a Display Format to show negative
-              numbers in parantheses.
+              numbers in parantheses and Cell Alignment of centre.
             </li>
             <li>
               <b>InvoicedCost</b> has a Display Format to show '£' sign and 2
@@ -83,6 +87,9 @@ export default () => {
             <li>
               <b>OrderCost</b> has a Display Format to separate integer
               thousands with a space, a '$' prefix and '(AUD)' suffix
+            </li>
+            <li>
+              <b>ShipCountry</b> has a Display Format to show text in Upper Case
             </li>
           </ul>
         </div>
