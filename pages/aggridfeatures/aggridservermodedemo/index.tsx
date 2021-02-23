@@ -51,9 +51,22 @@ export default () => {
             filter).
           </p>
           <p>
-            However, due to the way that Column Filters are created in AdapTable
-            - using Predicates - its relatively easy to hand this off to the
-            server to perform.
+            However, thanks to the way that the{' '}
+            <a
+              href="https://docs.adaptabletools.com/api/adaptablesearchstate/"
+              target="_blank"
+            >
+              Search
+            </a>{' '}
+            and{' '}
+            <a
+              href="https://docs.adaptabletools.com/api/adaptablesortstate/"
+              target="_blank"
+            >
+              Sort
+            </a>{' '}
+            states are abstracted in AdapTable, its relatively easy to hand this
+            off to the server to perform.
           </p>
           <p>
             In this demo we provide an example - its slightly contrived as we
@@ -62,39 +75,58 @@ export default () => {
           </p>
           <ul>
             <li>
-              We create 200,000 rows to mimic multiple rows on our 'Mock Server'
-              - which implements <b>getRows</b>.
+              We create 200,000 date entries on our 'Fake Server' - which
+              simulates a real life server.
             </li>
             <li>
-              We pass that Mock Server to ag-Grid via its api method{' '}
+              We create a ServerSideDatasource which implements <b>getRows</b>{' '}
+              (see{' '}
+              <a
+                href="https://www.ag-grid.com/documentation/javascript/server-side-model-datasource/#datasource-interface/"
+                target="_blank"
+              >
+                IServerSideDatasource
+              </a>
+              )
+            </li>
+            <li>
+              We pass that datasource to ag-Grid via its api method{' '}
               <b>setServerSideDatasource</b> - this calls <i>getRows</i> (see
               above) whenever the filters change or user scrolls to bottom of
               grid.
             </li>
             <li>
-              We set the <i>Batch Count</i> to 100 so that 100 rows are loaded
-              at at time - when you scroll and reach 100 you will see a small
-              lag.
-            </li>
-            <li>
-              On our mock server, we call a <b>getTradesRange</b> function each
+              In our datasource, we call a <b>fetchServerData</b> function each
               time that <b>getRows</b> is invoked by ag-Grid, passing in the
               current row count information.
             </li>
             <li>
-              We pass the current <b>AdaptableSearchState</b> which includes the
-              Column Filters, allowing us to perform on the server the same
-              filtering as AdapTable does for us on the client.
+              We also pass the current{' '}
+              <a
+                href="https://docs.adaptabletools.com/api/adaptablesearchstate/"
+                target="_blank"
+              >
+                <b>AdaptableSearchState</b>
+              </a>{' '}
+              which includes the ColumnFilters & Query(AST or string), allowing
+              us to perform on the server the same filtering & searching as
+              AdapTable does for us on the client.
             </li>
             <li>
-              We also pass the current <b>AdaptableSortState</b> which includes
-              which columns are sorted and the sort direction, and we perform
-              the same sorting on our result set.
+              We also pass the current{' '}
+              <a
+                href="https://docs.adaptabletools.com/api/adaptablesortstate/"
+                target="_blank"
+              >
+                <b>AdaptableSortState</b>
+              </a>{' '}
+              which includes which columns are sorted and the sort direction,
+              and we perform the same sorting on our result set.
             </li>
             <li>
               We use the <b>GetColumnValuesFunction</b> in UserFunctions to
-              retrieive the distinct values for each column too show in the
-              filter dropdown...
+              retrieve the distinct values for each column to show in the filter
+              dropdown...
             </li>
             <li>
               ...And we set the name of this function in the
