@@ -68,6 +68,8 @@ class MockServer {
 
     params.success({
       rowData: rows,
+      // rowCount has to be defined, otherwise AG Grid does NOT refresh correctly the rows
+      rowCount: !!rows.length ? rows.length : 0
     });
   }
 
