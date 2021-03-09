@@ -56,12 +56,18 @@ export default () => {
             Format Columns use the same Style builder as Quick Search and
             Conditional Styles, which allows you to name key elements of the
             style.
-          </p>
+          </p>{' '}
           <p>
             Alternatively you can specify a css style name in Format Colunn
             Predefined Config (which you must provide in your css).
           </p>
-          <p>This example has 7 Format Columns: </p>
+          <p>
+            <b>Header Name</b>
+            <br />
+            Format Column allows you to change the Header / Caption of any
+            column so that it better fits your requirements.
+          </p>
+          <p>This example has 8 Format Columns: </p>
           <ul>
             <li>
               <b>Order Id</b> has Visual Style of lime green with a red fore
@@ -90,6 +96,10 @@ export default () => {
             </li>
             <li>
               <b>ShipCountry</b> has a Display Format to show text in Upper Case
+            </li>
+            <li>
+              <b>Required Date</b> has been changed to have a HeaderName of
+              'Reqd Dt'
             </li>
           </ul>
         </div>

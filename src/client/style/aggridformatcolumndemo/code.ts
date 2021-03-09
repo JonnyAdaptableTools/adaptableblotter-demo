@@ -113,6 +113,13 @@ const demoConfig: PredefinedConfig = {
           },
         },
       },
+      // Change 'Required Date' header to 'Reqd Dt'
+      {
+        Scope: {
+          ColumnIds: ['RequiredDate'],
+        },
+        HeaderName: 'Reqd. Dt',
+      },
     ],
   },
   UserInterface: {
@@ -139,6 +146,7 @@ const demoConfig: PredefinedConfig = {
           'LastUpdatedTime',
           'OrderDate',
           'ContactName',
+          'RequiredDate',
         ],
       },
     ],

@@ -1974,11 +1974,9 @@ export class HelperAgGrid {
       if (row) {
         if (row.OrderDate) {
           row.OrderDate = new Date(row.OrderDate);
-          //row.OrderDate = '2020-04-11';
         }
         if (row.RequiredDate) {
           row.RequiredDate = new Date(row.RequiredDate);
-          //row.RequiredDate = '2021-03-08T09:14:29.189Z';
         }
         if (row.ShippedDate) {
           row.ShippedDate = new Date(row.ShippedDate);

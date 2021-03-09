@@ -250,6 +250,12 @@ export function getDemoPageStructure(): DemoPageStructure {
               'You can provide your own icons to AdapTable to use in place of the defaults - this demo shows how.',
           },
           {
+            Name: 'CSS Theme',
+            Link: '/theme/aggridcssthemedemo',
+            Description:
+              'Use CSS to control how AdapTable wizards and toolbars appear.',
+          },
+          {
             Name: 'Alpine Theme',
             Link: '/theme/aggridalpinethemedemo',
             Description:

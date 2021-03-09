@@ -1,0 +1,13 @@
+.custom-css-rules
+  .ab-Dashboard__container--Export
+  button[data-name='schedule'] {
+  display: none;
+}
+
+.custom-css-rules .ab-Popup__footer {
+  flex-direction: row-reverse;
+}
+
+.custom-css-rules .ab-Dashboard__title {
+  text-decoration: underline;
+}
