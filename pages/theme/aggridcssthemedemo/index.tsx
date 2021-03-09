@@ -6,7 +6,7 @@ export default () => {
     <DynamicDemoPage
       demo={import('../../../src/client/theme/aggridcssthemedemo')}
       pageTitle={'CSS Theme Demo'}
-      className="custom-css-rules"
+      documentClassName="custom-css-rules"
       description={
         <div>
           <p>

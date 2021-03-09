@@ -14,6 +14,7 @@ export type AgGridDemoPageProps = {
   loaded?: boolean;
   adaptableOptions?: any;
   className?: string;
+  documentClassName?: string;
   agGridTheme?: string;
 
   exampleCode?: string;
@@ -133,6 +134,7 @@ const AgGridDemoPage = ({
   loaded,
   exampleCode,
   className,
+  documentClassName,
   agGridTheme,
   adaptableOptions,
   helpResources,
@@ -148,8 +150,13 @@ AgGridDemoPageProps) => {
     config = JSON.stringify(config, null, 2);
   }
 
+  console.log({ documentClassName }, 'here');
   return (
-    <MainPage className={className} pageTitle={pageTitle}>
+    <MainPage
+      className={className}
+      pageTitle={pageTitle}
+      documentClassName={documentClassName}
+    >
       <div
         style={{
           paddingRight: 40 /*makes it easier to scroll to bottom, since you have some extra space*/,

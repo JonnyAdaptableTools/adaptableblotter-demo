@@ -50,6 +50,7 @@ export default (props: { demo: any } & AgGridDemoPageProps) => {
       }),
     []
   );
+  console.log({ pageProps });
 
   return (
     <AgGridDemoPage

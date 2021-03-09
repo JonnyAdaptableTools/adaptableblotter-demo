@@ -9,6 +9,7 @@ export type MainPageProps = {
   pageTitle: string;
   children?: ReactNode;
   className?: string;
+  documentClassName?: string;
   description?: ReactNode;
 };
 
@@ -34,14 +35,35 @@ const initDocsearch = async () => {
   });
 };
 
+type Decorator = {
+  addClassName: (...className: string[]) => void;
+  removeClassName: (...className: string[]) => void;
+};
+const getDecorator = () => {
+  const oldAdd = document.documentElement.classList.add;
+  const oldRemove = document.documentElement.classList.remove;
+
+  return {
+    addClassName: (...className: string[]) => {
+      oldAdd.call(document.documentElement.classList, ...className);
+    },
+    removeClassName: (...className: string[]) => {
+      oldRemove.call(document.documentElement.classList, ...className);
+    },
+  };
+};
+
+let decorator: Decorator;
 export default ({
   className,
+  documentClassName,
   pageTitle,
   children,
   description,
 }: MainPageProps) => {
   const [darkTheme, setDarkTheme] = React.useState(false);
 
+  console.log({ documentClassName });
   useEffect(() => {
     if (process.env.ALGOLIA_KEY) {
       initDocsearch();
@@ -49,8 +71,7 @@ export default ({
   });
 
   useEffect(() => {
-    const oldAdd = document.documentElement.classList.add;
-    const oldRemove = document.documentElement.classList.remove;
+    decorator = getDecorator();
 
     const check = () => {
       const darkTheme = document.documentElement.classList.contains(
@@ -60,14 +81,28 @@ export default ({
     };
 
     document.documentElement.classList.add = (...args: any[]) => {
-      oldAdd.call(document.documentElement.classList, ...args);
+      decorator.addClassName(...args);
       check();
     };
+
     document.documentElement.classList.remove = (...args: any[]) => {
-      oldRemove.call(document.documentElement.classList, ...args);
+      decorator.removeClassName(...args);
+
       check();
     };
+
     check();
+
+    if (documentClassName) {
+      console.log('add class name on documnet', documentClassName);
+      decorator.addClassName(documentClassName);
+    }
+
+    return () => {
+      if (documentClassName) {
+        decorator.removeClassName(documentClassName);
+      }
+    };
   }, []);
 
   return (
