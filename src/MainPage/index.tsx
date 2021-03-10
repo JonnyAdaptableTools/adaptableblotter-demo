@@ -16,7 +16,7 @@ export type MainPageProps = {
 const wait = (time: number) =>
   new Promise(resolve => {
     setTimeout(() => {
-      resolve();
+      resolve(true);
     }, time);
   });
 
@@ -53,7 +53,8 @@ const getDecorator = () => {
   };
 };
 
-let decorator: Decorator;
+let decorator: Decorator | null = process.browser ? getDecorator() : null;
+
 export default ({
   className,
   documentClassName,
@@ -63,7 +64,6 @@ export default ({
 }: MainPageProps) => {
   const [darkTheme, setDarkTheme] = React.useState(false);
 
-  console.log({ documentClassName });
   useEffect(() => {
     if (process.env.ALGOLIA_KEY) {
       initDocsearch();
@@ -71,8 +71,6 @@ export default ({
   });
 
   useEffect(() => {
-    decorator = getDecorator();
-
     const check = () => {
       const darkTheme = document.documentElement.classList.contains(
         'ab--theme-dark'
@@ -80,13 +78,13 @@ export default ({
       setDarkTheme(darkTheme);
     };
 
-    document.documentElement.classList.add = (...args: any[]) => {
-      decorator.addClassName(...args);
+    document.documentElement.classList.add = (...args: string[]) => {
+      decorator!.addClassName(...args);
       check();
     };
 
-    document.documentElement.classList.remove = (...args: any[]) => {
-      decorator.removeClassName(...args);
+    document.documentElement.classList.remove = (...args: string[]) => {
+      decorator!.removeClassName(...args);
 
       check();
     };
@@ -94,13 +92,12 @@ export default ({
     check();
 
     if (documentClassName) {
-      console.log('add class name on documnet', documentClassName);
-      decorator.addClassName(documentClassName);
+      decorator!.addClassName(documentClassName);
     }
 
     return () => {
       if (documentClassName) {
-        decorator.removeClassName(documentClassName);
+        decorator!.removeClassName(documentClassName);
       }
     };
   }, []);

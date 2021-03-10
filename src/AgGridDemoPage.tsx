@@ -150,7 +150,6 @@ AgGridDemoPageProps) => {
     config = JSON.stringify(config, null, 2);
   }
 
-  console.log({ documentClassName }, 'here');
   return (
     <MainPage
       className={className}
