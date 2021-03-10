@@ -9,13 +9,14 @@ export type MainPageProps = {
   pageTitle: string;
   children?: ReactNode;
   className?: string;
+  documentClassName?: string;
   description?: ReactNode;
 };
 
 const wait = (time: number) =>
   new Promise(resolve => {
     setTimeout(() => {
-      resolve();
+      resolve(true);
     }, time);
   });
 
@@ -34,8 +35,29 @@ const initDocsearch = async () => {
   });
 };
 
+type Decorator = {
+  addClassName: (...className: string[]) => void;
+  removeClassName: (...className: string[]) => void;
+};
+const getDecorator = () => {
+  const oldAdd = document.documentElement.classList.add;
+  const oldRemove = document.documentElement.classList.remove;
+
+  return {
+    addClassName: (...className: string[]) => {
+      oldAdd.call(document.documentElement.classList, ...className);
+    },
+    removeClassName: (...className: string[]) => {
+      oldRemove.call(document.documentElement.classList, ...className);
+    },
+  };
+};
+
+let decorator: Decorator | null = process.browser ? getDecorator() : null;
+
 export default ({
   className,
+  documentClassName,
   pageTitle,
   children,
   description,
@@ -49,9 +71,6 @@ export default ({
   });
 
   useEffect(() => {
-    const oldAdd = document.documentElement.classList.add;
-    const oldRemove = document.documentElement.classList.remove;
-
     const check = () => {
       const darkTheme = document.documentElement.classList.contains(
         'ab--theme-dark'
@@ -59,15 +78,28 @@ export default ({
       setDarkTheme(darkTheme);
     };
 
-    document.documentElement.classList.add = (...args: any[]) => {
-      oldAdd.call(document.documentElement.classList, ...args);
+    document.documentElement.classList.add = (...args: string[]) => {
+      decorator!.addClassName(...args);
       check();
     };
-    document.documentElement.classList.remove = (...args: any[]) => {
-      oldRemove.call(document.documentElement.classList, ...args);
+
+    document.documentElement.classList.remove = (...args: string[]) => {
+      decorator!.removeClassName(...args);
+
       check();
     };
+
     check();
+
+    if (documentClassName) {
+      decorator!.addClassName(documentClassName);
+    }
+
+    return () => {
+      if (documentClassName) {
+        decorator!.removeClassName(documentClassName);
+      }
+    };
   }, []);
 
   return (
