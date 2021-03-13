@@ -18,18 +18,14 @@ export default () => {
             (amber), <b>Error</b> (red) or <b>Info</b> (blue).{' '}
           </p>
           <p>
-            You can provide a default message (and message type) to display when
-            there is no current message,
-          </p>{' '}
-          <p>
-            The System Status Toolbar and ToolPanel show the most recent (or
-            default) message, while the function popup displays all System
-            Status messages.{' '}
+            The System Status Toolbar and ToolPanel show the most recent
+            message, while the function popup displays all System Status
+            messages.{' '}
           </p>{' '}
           <p>
             Other options allow an Alert to show when the System Status changes
-            (to anything other than default), and a custom Div where Messages
-            should be displayed (as provided here).
+            and a custom Div where Messages should be displayed (as provided
+            here).
           </p>
           <p>
             If System Status is selected as a Visible Button in{' '}

@@ -48,7 +48,6 @@ import ChartsPlugin from '@adaptabletools/adaptable-plugin-charts';
 // Step 1: Create any Predefined Config to ship AdapTable to meet your requirements. In this example we do 3 things:
 // a: Create 3 Tabs -  with 'Grid', 'Edit' and 'Search' related Toolbars respectively
 // b: Set 4 Visible buttons for the Dashboard Header - 'ConditionalStyle', 'CellValidation', 'CalculatedColumn', 'PieChart'
-// c: Set a default System Status message of type 'Success' which will display when not overriden by a newer one
 const demoConfig: PredefinedConfig = {
   Dashboard: {
     Tabs: [
@@ -71,10 +70,6 @@ const demoConfig: PredefinedConfig = {
       'CalculatedColumn',
       'PieChart',
     ],
-  },
-  SystemStatus: {
-    DefaultStatusMessage: 'All working fine',
-    DefaultStatusType: 'Success',
   },
 } as PredefinedConfig;
 

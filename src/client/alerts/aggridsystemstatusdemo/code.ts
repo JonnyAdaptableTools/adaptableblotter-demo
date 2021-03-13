@@ -59,19 +59,12 @@ const demoConfig: PredefinedConfig = {
               Tone: 'error',
             },
           },
-          {
-            Name: 'clear',
-            Caption: 'Clear Message',
-            //   Variant: 'raised',
-          },
         ],
       },
     ],
   },
   SystemStatus: {
     ShowAlert: false,
-    DefaultStatusMessage: 'Everything is fine',
-    DefaultStatusType: 'Success',
   },
   UserInterface: {
     ContextMenuItems: [
@@ -185,9 +178,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
             'The server is down!',
             'Please do not make any edits until the server comes back up'
           );
-          break;
-        case 'clear':
-          adaptableApi.systemStatusApi.clearSystemStatus();
           break;
       }
     }
