@@ -23,18 +23,6 @@ export default () => {
             operations or change the selected one by using the dropdown.
           </p>{' '}
           <p>
-            Note that the dropdown includes 3 financial summaries
-            ('WeightedAverage', 'VWAP' and 'Only'); this is beause we installed
-            the{' '}
-            <a
-              href="https://docs.adaptabletools.com/docs/plugins/finance/finance-plugin"
-              target="_blank"
-            >
-              Financial plugin
-            </a>{' '}
-            (one of the Plugins that AdapTable provides).
-          </p>
-          <p>
             To create a Summary Operation: provide the name of the function,
             which will be evaluated each time the summary is run, in{' '}
             <a

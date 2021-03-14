@@ -154,6 +154,35 @@ export class HelperAgGrid {
     return adaptableOptions;
   }
 
+  public getInstrumentSchema(): ColDef[] {
+    return [
+      {
+        headerName: 'Name',
+        field: 'Name',
+        filter: true,
+        editable: false,
+        sortable: true,
+        type: 'abColDefString',
+      },
+      {
+        headerName: 'Ticker',
+        field: 'Ticker',
+        filter: true,
+        editable: false,
+        sortable: true,
+        type: 'abColDefString',
+      },
+      {
+        headerName: 'Cusip',
+        field: 'Cusip',
+        filter: true,
+        editable: false,
+        sortable: true,
+        type: 'abColDefString',
+      },
+    ];
+  }
+
   private getAadaptableOptionsWithDivNames(
     gridOptions: GridOptions,
     pk: string,

@@ -11,6 +11,7 @@ import {
   AdaptableApi,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
+import finance from '@adaptabletools/adaptable-plugin-finance';
 
 var adaptableApi: AdaptableApi;
 
@@ -22,15 +23,6 @@ const demoConfig: PredefinedConfig = {
         Toolbars: ['CellSummary'],
       },
     ],
-  },
-  CellSummary: {
-    CellSummaryOperationDefinitions: [
-      {
-        OperationName: 'Oldest',
-        OperationFunction: 'OldestOperationFunction',
-      },
-    ],
-    SummaryOperation: 'Min',
   },
 } as PredefinedConfig;
 
@@ -49,32 +41,10 @@ export default async (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Cell Summary Demo',
-    userFunctions: [
-      {
-        type: 'CellSummaryOperationFunction',
-        name: 'OldestOperationFunction',
-        handler(operationParam) {
-          let dateValues: Date[] = [];
-          operationParam.selectedCellInfo.Columns.filter(
-            c => c.DataType === 'Date'
-          ).forEach(dc => {
-            let gridCells = operationParam.selectedCellInfo.GridCells.filter(
-              gc => gc.columnId == dc.ColumnId
-            ).map(gc => gc.rawValue);
-            dateValues.push(...gridCells);
-          });
-          if (dateValues.length > 0) {
-            const sortedDates = dateValues.sort((a, b) => {
-              return new Date(a).getTime() - new Date(b).getTime();
-            });
-            return new Date(sortedDates[0]).toLocaleDateString();
-          }
-        },
-      },
-    ],
+    adaptableId: 'Finance Cell Summary Demo',
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
+    plugins: [finance()],
   };
   adaptableApi = await Adaptable.init(adaptableOptions);
 

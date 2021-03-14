@@ -653,6 +653,24 @@ export function getDemoPageStructure(): DemoPageStructure {
         ],
       },
       {
+        CategoryName: 'Finance',
+        Link: '/finance',
+        Pages: [
+          {
+            Name: 'FDC3 Instrument',
+            Link: '/finance/fdc3instrumentdemo',
+            Description:
+              'Defining an a Column as an Instrument will cause AdapTable to create a context menu item which when clicked broadcasts an FDC3 message.',
+          },
+          {
+            Name: 'Cell Summaries',
+            Link: '/finance/financecellsummarydemo',
+            Description:
+              'The Finance Plugin adds extra Cell Summary options useful for financial users.',
+          },
+        ],
+      },
+      {
         CategoryName: 'Entitlements',
         Link: '/entitlements',
         Pages: [
