@@ -29,8 +29,26 @@ export default () => {
           </ul>
           <p>
             But you can, additionally, hide the Dashboard altogether by setting
-            the 'Dashboard' to be 'Hidden'in Entitlements; this is what we have
-            done in this example
+            the <i>IsHidden</i> property in{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/predefined-config/dashboard-config#isinline"
+              target="_blank"
+            >
+              Dashboard Predefined Config
+            </a>{' '}
+            (as done in this example).
+          </p>
+          <p>
+            The Dasbhoard can be made visible again by clicking Dashboard / Show
+            in the{' '}
+            <a href="../../menus/aggridcolumnmenudemo">Column Header Menu</a> or
+            via the Dashboard{' '}
+            <a href="../../toolpanel/aggridtoolpaneldemo">Tool Panel</a>{' '}
+          </p>
+          <p>
+            Note: you can hide the Dashboard completely by setting the
+            'Dashboard' to be <b>Hidden</b> in Entitlements and then it can
+            never be made visible again.
           </p>
         </div>
       }

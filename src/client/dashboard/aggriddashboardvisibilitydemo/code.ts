@@ -16,13 +16,14 @@ import charts from '@adaptabletools/adaptable-plugin-charts';
 var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
-  Entitlements: {
-    FunctionEntitlements: [
+  Dashboard: {
+    Tabs: [
       {
-        FunctionName: 'Dashboard',
-        AccessLevel: 'Hidden',
+        Name: 'Grid',
+        Toolbars: ['Layout', 'CellSummary', 'Alert'],
       },
     ],
+    IsHidden: true,
   },
 } as PredefinedConfig;
 
