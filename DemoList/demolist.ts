@@ -160,11 +160,19 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Set up "nudge" rules for numeric columns to respond when the "+" or "-" keys are pressed.',
           },
           {
+            Name: 'ReadOnly Cells',
+            Link: '/edit/aggridreadonlycellsndemo',
+            Description:
+              'Choose - at runtime - which cells can be ReadOnly through the provision of custom function.',
+          },
+          /*
+          {
             Name: 'Cell Validation',
             Link: '/edit/aggridcellvalidationdemo',
             Description:
               'Create rules to prevent (or show warnings) when particular cell edits take place. These will run on the client.',
           },
+          */
           {
             Name: 'Server Validation',
             Link: '/edit/aggridservervalidationdemo',

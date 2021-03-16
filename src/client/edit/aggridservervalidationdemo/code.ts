@@ -29,7 +29,6 @@ const demoConfig: PredefinedConfig = {
   CellValidation: {
     CellValidations: [
       {
-        ActionMode: 'Stop Edit',
         Scope: {
           ColumnIds: ['ItemCount'],
         },

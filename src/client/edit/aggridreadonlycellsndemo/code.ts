@@ -9,6 +9,7 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
+  GridCell,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -16,50 +17,30 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleButtons: ['CellValidation'],
     Tabs: [
       {
         Name: 'Toolbars',
-        Toolbars: ['QuickSearch', 'BulkUpdate', 'SmartEdit'],
+        Toolbars: ['Layout', 'BulkUpdate', 'SmartEdit'],
       },
     ],
   },
-
-  CellValidation: {
-    CellValidations: [
+  Layout: {
+    Revision: Date.now(),
+    CurrentLayout: 'Simple Layout',
+    Layouts: [
       {
-        Scope: {
-          ColumnIds: ['CustomerReference'],
-        },
-        Predicate: {
-          PredicateId: 'Any',
-        },
-      },
-      {
-        Scope: {
-          ColumnIds: ['Employee'],
-        },
-        Predicate: {
-          PredicateId: 'Any',
-        },
-      },
-      {
-        Scope: {
-          ColumnIds: ['InvoicedCost'],
-        },
-        Predicate: {
-          PredicateId: 'GreaterThan',
-          Inputs: [300],
-        },
-      },
-      {
-        Scope: {
-          ColumnIds: ['OrderCost'],
-        },
-        Predicate: {
-          PredicateId: 'PercentChange',
-          Inputs: [100],
-        },
+        Name: 'Simple Layout',
+        Columns: [
+          'OrderId',
+          'ShipVia',
+          'ItemCost',
+          'ItemCount',
+          'ContactName',
+          'InvoicedCost',
+          'ChangeLastOrder',
+          'OrderCost',
+          'PackageCost',
+        ],
       },
     ],
   },
@@ -80,7 +61,33 @@ export default async (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Cell Validating Demo',
+    adaptableId: 'ReadOnly Cells Demo',
+    editOptions: {
+      isCellEditable: (gridCell: GridCell, node: any) => {
+        // Rule 1:  No row where Ship Via is Federal Shipping is editable
+        if (node.data['ShipVia'] == 'United Package') {
+          return false;
+        }
+
+        // Rule 2:  Item Count not editable if > 7
+        if (gridCell.columnId == 'ItemCount') {
+          if (gridCell.rawValue > 7) {
+            return false;
+          }
+        }
+
+        // Rule 3:  Order Cost, Package Cost, Item Cost not editable where Order Change is negative
+        if (
+          node.data['ChangeLastOrder'] <= 0 &&
+          (gridCell.columnId == 'OrderCost' ||
+            gridCell.columnId == 'PackageCost' ||
+            gridCell.columnId == 'ItemCost')
+        ) {
+          return false;
+        }
+        return true;
+      },
+    },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
