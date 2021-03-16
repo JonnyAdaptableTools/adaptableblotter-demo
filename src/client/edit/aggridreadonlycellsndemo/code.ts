@@ -25,7 +25,6 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   Layout: {
-    Revision: Date.now(),
     CurrentLayout: 'Simple Layout',
     Layouts: [
       {

@@ -9,7 +9,7 @@ export default () => {
       description={
         <div>
           <p>
-            Columns can be marked as ReadOnly in ag-Grid (by settting{' '}
+            Columns can be marked as ReadOnly in ag-Grid (by setting{' '}
             <i>editable</i> to 'false' in GridOptions) and AdapTable will
             respect that.
           </p>
