@@ -34,19 +34,19 @@ const demoConfig: PredefinedConfig = {
           Description: 'Provide email details ',
           Fields: [
             {
-              Id: 'emailAddress',
+              Name: 'emailAddress',
               Label: 'Email Address',
               Type: 'text',
               DefaultValue: 'support@adaptabletools.com',
             },
             {
-              Id: 'subject',
+              Name: 'subject',
               Label: 'Email Subject',
               Type: 'text',
               DefaultValue: 'AdapTable Report Data',
             },
             {
-              Id: 'body',
+              Name: 'body',
               Label: 'Email Body',
               Type: 'text',
             },
