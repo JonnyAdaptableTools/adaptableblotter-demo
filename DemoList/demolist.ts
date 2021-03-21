@@ -165,14 +165,14 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'Choose - at runtime - which cells can be ReadOnly through the provision of custom function.',
           },
-          /*
+
           {
-            Name: 'Cell Validation',
-            Link: '/edit/aggridcellvalidationdemo',
+            Name: 'Stop Edit Alerts',
+            Link: '/edit/aggridpreventeditalertsdemo',
             Description:
               'Create rules to prevent (or show warnings) when particular cell edits take place. These will run on the client.',
           },
-          */
+
           {
             Name: 'Server Validation',
             Link: '/edit/aggridservervalidationdemo',

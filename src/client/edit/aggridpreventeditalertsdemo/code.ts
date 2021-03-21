@@ -20,13 +20,13 @@ const demoConfig: PredefinedConfig = {
     Tabs: [
       {
         Name: 'Toolbars',
-        Toolbars: ['QuickSearch', 'BulkUpdate', 'SmartEdit'],
+        Toolbars: ['Alert', 'BulkUpdate', 'SmartEdit'],
       },
     ],
   },
 
-  CellValidation: {
-    CellValidations: [
+  Alert: {
+    AlertDefinitions: [
       {
         Scope: {
           ColumnIds: ['CustomerReference'],
@@ -34,13 +34,9 @@ const demoConfig: PredefinedConfig = {
         Predicate: {
           PredicateId: 'Any',
         },
-      },
-      {
-        Scope: {
-          ColumnIds: ['Employee'],
-        },
-        Predicate: {
-          PredicateId: 'Any',
+        MessageType: 'Error',
+        AlertProperties: {
+          PreventEdit: true,
         },
       },
       {
@@ -51,14 +47,22 @@ const demoConfig: PredefinedConfig = {
           PredicateId: 'GreaterThan',
           Inputs: [300],
         },
+        MessageType: 'Error',
+        AlertProperties: {
+          PreventEdit: true,
+        },
       },
       {
         Scope: {
           ColumnIds: ['OrderCost'],
         },
+        MessageType: 'Warning',
         Predicate: {
           PredicateId: 'PercentChange',
           Inputs: [100],
+        },
+        AlertProperties: {
+          PreventEdit: true,
         },
       },
     ],
@@ -80,7 +84,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Cell Validating Demo',
+    adaptableId: 'Prevent Edit Alerts Demo',
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
