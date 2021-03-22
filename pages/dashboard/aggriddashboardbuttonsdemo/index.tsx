@@ -17,8 +17,8 @@ export default () => {
             'Layout' and 'ConditionalStyle' icons.
           </p>
           <p>
-            In this example we have set the 'CellValidation', 'BulkUpdate',
-            'SmartEdit', 'Alert' and 'Reminder' buttons to be visible.
+            In this example we have set the 'BulkUpdate', 'SmartEdit', 'Alert'
+            and 'Reminder' buttons to be visible.
           </p>
           <p>
             The Quick Search texbox enables you to quickly search grid; set

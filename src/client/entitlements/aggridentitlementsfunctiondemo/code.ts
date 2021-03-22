@@ -105,7 +105,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
           switch (functionName) {
             // We want a readonly grid so lets hide all editing functions
             case 'BulkUpdate':
-            case 'CellValidation':
+            case 'Alert':
             case 'PlusMinus':
             case 'SmartEdit':
             case 'Shortcut':

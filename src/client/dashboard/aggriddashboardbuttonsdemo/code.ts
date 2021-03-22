@@ -16,13 +16,7 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleButtons: [
-      'CellValidation',
-      'BulkUpdate',
-      'SmartEdit',
-      'Alert',
-      'Reminder',
-    ],
+    VisibleButtons: ['BulkUpdate', 'SmartEdit', 'Alert', 'Reminder'],
   },
 } as PredefinedConfig;
 

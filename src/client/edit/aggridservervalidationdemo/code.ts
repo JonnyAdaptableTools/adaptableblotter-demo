@@ -18,7 +18,7 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleButtons: ['CellValidation'],
+    VisibleButtons: ['Alert'],
     Tabs: [
       {
         Name: 'Toolbars',
@@ -26,14 +26,18 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
-  CellValidation: {
-    CellValidations: [
+  Alert: {
+    AlertDefinitions: [
       {
         Scope: {
           ColumnIds: ['ItemCount'],
         },
         Predicate: {
           PredicateId: 'Any',
+        },
+        MessageType: 'Error',
+        AlertProperties: {
+          PreventEdit: true,
         },
       },
     ],

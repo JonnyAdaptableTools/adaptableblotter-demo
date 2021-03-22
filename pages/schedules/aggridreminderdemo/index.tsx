@@ -4,7 +4,7 @@ import DynamicDemoPage from '../../../src/Helpers/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/alerts/aggridreminderdemo')}
+      demo={import('../../../src/client/schedules/aggridreminderdemo')}
       pageTitle={'Reminder Demo'}
       description={
         <div>

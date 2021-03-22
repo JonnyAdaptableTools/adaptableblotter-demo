@@ -364,14 +364,6 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'Click the "info" button in the Dashboard Header to see summary information about the grid and the Adaptable Options you have set.',
           },
-          /*
-          {
-            Name: 'Context Menu',
-            Link: '/gridmanagement/aggridcontextmenudemo',
-            Description:
-              'You can choose which items will appear in the Context Menu and additionally add your own.',
-          },
-          */
           {
             Name: 'Calendar',
             Link: '/gridmanagement/aggridcalendardemo',
@@ -463,28 +455,34 @@ export function getDemoPageStructure(): DemoPageStructure {
         Link: '/alertsmessages',
         Pages: [
           {
-            Name: 'System Status',
-            Link: '/alertsmessages/aggridsystemstatusdemo',
-            Description:
-              'Have your users be notified automatically when something happens to the System (or Server) that they need to know.',
-          },
-          {
             Name: 'Alert',
             Link: '/alertsmessages/aggridalertdemo',
             Description:
               'Be notified as soon as data changes that you need to know about.',
           },
           {
-            Name: 'Reminder',
-            Link: '/alertsmessages/aggridreminderdemo',
+            Name: 'System Status',
+            Link: '/alertsmessages/aggridsystemstatusdemo',
             Description:
-              'Set up scheduled notifications so you can be reminded of important actions.',
+              'Have your users be notified automatically when something happens to the System (or Server) that they need to know.',
           },
+        ],
+      },
+      {
+        CategoryName: 'Schedules',
+        Link: '/schedules',
+        Pages: [
           {
             Name: 'Schedules',
-            Link: '/alertsmessages/aggridschedulesdemo',
+            Link: '/schedules/aggridschedulesdemo',
             Description:
               'Create schedules for Reminders, Exports and Live Data Reports',
+          },
+          {
+            Name: 'Reminder',
+            Link: '/schedules/aggridreminderdemo',
+            Description:
+              'Set up scheduled notifications so you can be reminded of important actions.',
           },
         ],
       },

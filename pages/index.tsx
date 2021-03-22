@@ -95,8 +95,7 @@ export default () => {
             </li>
             <li>
               <a href="./edit/aggridservervalidationdemo">Server Validation</a>{' '}
-              - perform essential validation externally (as well as using{' '}
-              <a href="./edit/aggridcellvalidationdemo">Cell Validation</a> )
+              - perform essential validation externally
             </li>
             <li>
               <a href="./menus/aggridcolumnmenudemo">Column Menu</a> and{' '}

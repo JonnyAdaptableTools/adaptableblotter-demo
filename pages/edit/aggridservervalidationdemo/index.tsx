@@ -27,10 +27,10 @@ export default () => {
           </p>
           <p>
             <b>Note:</b>{' '}
-            <a href="./aggridcellvalidationdemo">Cell Validation</a> takes
-            precedence: we have also created a Cell Validation rule that an edit
-            cannot increase in value by 15; if that rule fails then no Server
-            Validation is run.
+            <a href="./aggridpreventeditalertsdemo">Prevent Edit Alerts</a>{' '}
+            takes precedence: we have also created an Alert Definition that an
+            edit cannot increase in value by 15; if that rule fails then no
+            Server Validation is run.
           </p>
         </div>
       }

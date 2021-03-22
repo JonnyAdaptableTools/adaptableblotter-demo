@@ -47,7 +47,7 @@ import ChartsPlugin from '@adaptabletools/adaptable-plugin-charts';
 
 // Step 1: Create any Predefined Config to ship AdapTable to meet your requirements. In this example we do 3 things:
 // a: Create 3 Tabs -  with 'Grid', 'Edit' and 'Search' related Toolbars respectively
-// b: Set 4 Visible buttons for the Dashboard Header - 'ConditionalStyle', 'CellValidation', 'CalculatedColumn', 'PieChart'
+// b: Set 4 Visible buttons for the Dashboard Header - 'ConditionalStyle', 'Alert', 'CalculatedColumn', 'PieChart'
 const demoConfig: PredefinedConfig = {
   Dashboard: {
     Tabs: [
@@ -66,7 +66,7 @@ const demoConfig: PredefinedConfig = {
     ],
     VisibleButtons: [
       'ConditionalStyle',
-      'CellValidation',
+      'Alert',
       'CalculatedColumn',
       'PieChart',
     ],
