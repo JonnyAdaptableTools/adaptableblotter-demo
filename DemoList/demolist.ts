@@ -165,14 +165,6 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'Choose - at runtime - which cells can be ReadOnly through the provision of custom function.',
           },
-
-          {
-            Name: 'Stop Edit Alerts',
-            Link: '/edit/aggridpreventeditalertsdemo',
-            Description:
-              'Create rules to prevent (or show warnings) when particular cell edits take place. These will run on the client.',
-          },
-
           {
             Name: 'Server Validation',
             Link: '/edit/aggridservervalidationdemo',
@@ -459,6 +451,19 @@ export function getDemoPageStructure(): DemoPageStructure {
             Link: '/alertsmessages/aggridalertdemo',
             Description:
               'Be notified as soon as data changes that you need to know about.',
+          },
+          {
+            Name: 'Stop Edit Alerts',
+            Link: '/alertsmessages/aggridpreventeditalertsdemo',
+            Description:
+              'Create rules to prevent (or show warnings) when particular cell edits take place. These will run on the client.',
+          },
+
+          {
+            Name: 'Overwrite Alerts',
+            Link: '/alertsmessages/aggridalertoverwritedemo',
+            Description:
+              'Create an Alert which provides users with the opportunity to provide a different, validated value when an intiial edit fails',
           },
           {
             Name: 'System Status',
