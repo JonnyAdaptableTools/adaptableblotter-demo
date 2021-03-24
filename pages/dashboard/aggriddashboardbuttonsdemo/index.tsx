@@ -14,14 +14,15 @@ export default () => {
           </p>
           <p>
             By default, AdapTable will show the 'SystemStatus', 'GridInfo',
-            'Layout' and 'ConditionalStyle' icons.
+            'Layout' and 'ConditionalStyle' icons, but any array can provided
+            (or any empty array to display none).
           </p>
           <p>
             In this example we have set the 'BulkUpdate', 'SmartEdit', 'Alert'
             and 'Reminder' buttons to be visible.
           </p>
           <p>
-            The Quick Search texbox enables you to quickly search grid; set
+            The Quick Search texbox enables you to quickly search the grid; set
             <i>ShowQuickSearchInHeader</i> to false in{' '}
             <a
               href="https://docs.adaptabletools.com/docs/predefined-config/dashboard-config#showquicksearchinheader"
