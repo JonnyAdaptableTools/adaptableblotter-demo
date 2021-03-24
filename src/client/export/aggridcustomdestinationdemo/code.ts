@@ -34,9 +34,19 @@ const demoConfig: PredefinedConfig = {
           Description: 'Provide email details ',
           Fields: [
             {
-              Name: 'emailAddress',
+              Name: 'address',
               Label: 'Email Address',
-              Type: 'text',
+              Type: 'select',
+              Options: [
+                {
+                  value: 'support@adaptabletools.com',
+                  label: 'Support',
+                },
+                {
+                  value: 'sales@adaptabletools.com',
+                  label: 'Sales',
+                },
+              ],
               DefaultValue: 'support@adaptabletools.com',
             },
             {
