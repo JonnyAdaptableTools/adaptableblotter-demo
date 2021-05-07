@@ -85,8 +85,8 @@ export default async (columnDefs: any[], rowData: any[]) => {
         type: 'ActionColumnRenderFunction',
         name: 'renderMultiplyFunction',
         handler(params: ActionColumnRenderParams) {
-          return params.rowData.Employee == 'Robert King' ||
-            params.rowData.Employee == 'Janet Leverling'
+          return params.rowData?.Employee == 'Robert King' ||
+            params.rowData?.Employee == 'Janet Leverling'
             ? '<button style="color:blue; font-weight:bold">Double</button>'
             : '<button style="color:red; font-weight:bold; font-style:italic">Treble</button>';
         },
@@ -95,7 +95,9 @@ export default async (columnDefs: any[], rowData: any[]) => {
         type: 'ActionColumnShouldRenderPredicate',
         name: 'shouldRenderMultiplyPredicate',
         handler(params) {
-          return params.rowData.Employee != 'Margaret Peacock';
+          return (
+            params.rowData && params.rowData?.Employee != 'Margaret Peacock'
+          );
         },
       },
     ],

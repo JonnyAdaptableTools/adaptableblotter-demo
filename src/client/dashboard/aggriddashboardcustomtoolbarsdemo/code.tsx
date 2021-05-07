@@ -118,23 +118,30 @@ export default async (columnDefs: any[], rowData: any[]) => {
         toolbarVisibilityChangedEventArgs.data[0].id.toolbar === 'Trades' &&
         toolbarVisibilityChangedEventArgs.data[0].id.visibility == 'Visible'
       ) {
-        const contents: any = (
+        let toolbarContents: any = (
           <div style={{ display: 'flex' }}>
             <button
               className="ab-SimpleButton ab-SimpleButton--variant-outlined"
-              onClick={() => alert('im clicked')}
+              onClick={() => {
+                alert('clicked rendered button');
+              }}
               style={{ marginRight: '3px' }}
             >
-              Create New Trade
+              Rendered Button
             </button>
             <select className="ab-Dropdown" style={{ marginRight: '3px' }}>
-              <option>Book 1</option>
-              <option>Book 2</option>
-              <option>Book 3</option>
+              <option>Rendered Dropdown 1</option>
+              <option>Rendered Dropdown 2</option>
+              <option>Rendered Dropdown 3</option>
             </select>
           </div>
         );
-        adaptableApi.dashboardApi.setCustomToolbarContents('Trades', contents);
+
+        // render with React - but any tech can be used
+        ReactDOM.render(
+          toolbarContents,
+          adaptableApi.dashboardApi.getCustomToolbarContentsDiv('Trades')
+        );
       }
     }
   );

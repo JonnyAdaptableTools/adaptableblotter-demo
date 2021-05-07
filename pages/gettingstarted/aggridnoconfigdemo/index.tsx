@@ -33,7 +33,7 @@ export default () => {
           </p>
           <p>
             So all the functionality (e.g. the 40+ AdapTable functions, the
-            Column Header and Context Menus, the Dashbaord, the Quick Filter bar
+            Column Header and Context Menus, the Dashboard, the Quick Filter bar
             etc.) is available in a default way.
           </p>
           <p>
