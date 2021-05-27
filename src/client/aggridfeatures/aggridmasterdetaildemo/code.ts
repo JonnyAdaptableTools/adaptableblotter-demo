@@ -7,7 +7,6 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
-  SearchChangedEventArgs,
   SearchChangedInfo,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
@@ -87,10 +86,7 @@ export default async (
 
   adaptableApi.eventApi.on(
     'SearchChanged',
-    (searchArgs: SearchChangedEventArgs) => {
-      const searchChangedInfo: SearchChangedInfo = adaptableApi.eventApi.getSearchChangedInfoFromEventArgs(
-        searchArgs
-      );
+    (searchChangedInfo: SearchChangedInfo) => {
       if (searchChangedInfo.searchChangedTrigger == 'CurrentQuery') {
         currentquery = searchChangedInfo.adaptableSearchState.currentQuery;
       }

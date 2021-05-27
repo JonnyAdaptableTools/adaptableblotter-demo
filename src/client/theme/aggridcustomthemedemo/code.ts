@@ -11,8 +11,6 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
-  ThemeChangedEventArgs,
-  RowStyle,
   ThemeChangedInfo,
   AdaptableTheme,
 } from '@adaptabletools/adaptable/types';
@@ -66,15 +64,12 @@ export default async (columnDefs: any[], rowData: any[]) => {
   };
   adaptableApi = await Adaptable.init(adaptableOptions);
 
-  adaptableApi.eventApi.on(
-    'ThemeChanged',
-    (themeChangedEventArgs: ThemeChangedEventArgs) => {
-      let info: ThemeChangedInfo = adaptableApi.eventApi.getThemeChangedInfoFromEventArgs(
-        themeChangedEventArgs
-      );
-      if (info) {
-        let theme: AdaptableTheme = info.theme as AdaptableTheme;
-        if (theme && theme.Name === 'wimbledon-theme') {
+  adaptableApi.eventApi.on('ThemeChanged', (info: ThemeChangedInfo) => {
+    if (info) {
+      let theme: AdaptableTheme = info.theme as AdaptableTheme;
+      if (theme && theme.Name === 'wimbledon-theme') {
+      }
+      /*
           let rowStyles: RowStyle[] = [];
           let evenStyle: RowStyle = {
             Style: {
@@ -97,10 +92,9 @@ export default async (columnDefs: any[], rowData: any[]) => {
           adaptableApi.userInterfaceApi.setRowStyles(rowStyles);
         } else {
           adaptableApi.userInterfaceApi.clearRowStyles();
-        }
-      }
+        }*/
     }
-  );
+  });
 
   return { adaptableOptions, adaptableApi };
 };

@@ -219,12 +219,6 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'Show numeric columns as a bar, that is filled according to the cell value as a %.',
           },
-          {
-            Name: 'Row Style',
-            Link: '/style/aggridrowstyledemo',
-            Description:
-              'Choose to style rows in AdapTable using your preferred colour scheme.',
-          },
         ],
       },
       {

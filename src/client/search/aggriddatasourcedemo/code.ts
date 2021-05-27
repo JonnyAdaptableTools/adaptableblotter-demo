@@ -9,7 +9,6 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
-  SearchChangedEventArgs,
   SearchChangedInfo,
   AdaptableSearchState,
 } from '@adaptabletools/adaptable/types';
@@ -76,8 +75,7 @@ export default async (columnDefs: any[]) => {
   const helperAgGrid = new HelperAgGrid();
   adaptableApi.eventApi.on(
     'SearchChanged',
-    (searchChangedArgs: SearchChangedEventArgs) => {
-      let searchChangedInfo: SearchChangedInfo = searchChangedArgs.data[0].id;
+    (searchChangedInfo: SearchChangedInfo) => {
       if (searchChangedInfo.searchChangedTrigger == 'DataSource') {
         let searchState: AdaptableSearchState =
           searchChangedInfo.adaptableSearchState;

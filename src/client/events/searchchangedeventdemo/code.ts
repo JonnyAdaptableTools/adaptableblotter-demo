@@ -9,7 +9,7 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
-  SearchChangedEventArgs,
+  SearchChangedInfo,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -74,9 +74,9 @@ export default async (columnDefs: any[], rowData: any[]) => {
 
   adaptableApi.eventApi.on(
     'SearchChanged',
-    (searchChangedArgs: SearchChangedEventArgs) => {
+    (changedInfo: SearchChangedInfo) => {
       console.log('search changed event ran');
-      console.log(searchChangedArgs.data[0].id);
+      console.log(changedInfo);
     }
   );
 

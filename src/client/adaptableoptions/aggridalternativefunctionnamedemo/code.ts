@@ -37,9 +37,9 @@ export default async (columnDefs: any[], rowData: any[]) => {
     userName: 'Demo User',
     adaptableId: 'Custom Function Name Demo',
     generalOptions: {
-      alternativeFunctionNames: [
+      alternativeModuleNames: [
         {
-          adaptableFunction: 'Dashboard',
+          adaptableModule: 'Dashboard',
           newName: 'Grid Header',
         },
       ],
