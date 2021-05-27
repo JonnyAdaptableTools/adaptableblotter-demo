@@ -20,16 +20,12 @@ const demoConfig: PredefinedConfig = {
       '([ShipCountry] IN ("UK", "USA") AND ENDS_WITH([ShipVia],"s"))  OR [ItemCount] < 5',
     SharedQueries: [
       {
-        // Note the Uuid is provided by the developer - the only place in AdapTable config that you need do
-        Uuid: 'SharedQuery1-BigChangedOrders',
         Name: 'Big Changed Orders',
-        Expression: '[OrderChange] > 10 AND [PackageCost] > 10 ',
+        BooleanExpression: '[OrderChange] > 10 AND [PackageCost] > 10 ',
       },
       {
-        // Note the Uuid is provided by the developer - the only place in AdapTable config that you need do
-        Uuid: 'SharedQuery2-NonUPShipping',
         Name: 'Non UP Shipping',
-        Expression: '[ShipVia] != "United Package" ',
+        BooleanExpression: '[ShipVia] != "United Package" ',
       },
     ],
   },
@@ -39,9 +35,11 @@ const demoConfig: PredefinedConfig = {
         Scope: {
           All: true,
         },
-        SharedQueryId: 'SharedQuery2-NonUPShipping',
         Style: {
           BackColor: 'orange',
+        },
+        Rule: {
+          BooleanExpression: " QUERY['Non UP Shipping']=true ",
         },
       },
     ],

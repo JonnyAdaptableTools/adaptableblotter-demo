@@ -124,11 +124,6 @@ export default () => {
               and we perform the same sorting on our result set.
             </li>
             <li>
-              We use the <b>GetColumnValuesFunction</b> in UserFunctions to
-              retrieve the distinct values for each column to show in the filter
-              dropdown...
-            </li>
-            <li>
               ...And we set the name of this function in the
               PermittedValuesItems property of the UserInterace section of
               Predefined Config.

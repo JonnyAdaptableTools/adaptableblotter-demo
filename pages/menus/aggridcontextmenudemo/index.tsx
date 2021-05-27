@@ -32,55 +32,21 @@ export default () => {
             menu items (with the latter having sub menu items).
           </p>
           <p>
-            When you define a UserMenuItem you can reference 3 User Functions
-            (for which you provide the implementation for both in{' '}
-            <a
-              href="https://docs.adaptabletools.com/docs/user-functions/user-functions-overview"
-              target="_blank"
-            >
-              UserFunctions
-            </a>{' '}
-            section of AdaptableOptions).
+            When you define a UserMenuItem you can reference 3 User Functions:
           </p>
           <ul>
-            <li>
-              <a
-                href="https://docs.adaptabletools.com/docs/user-functions/user-menu-item-clicked-user-function"
-                target="_blank"
-              >
-                UserMenuItem Clicked Function:
-              </a>{' '}
-              the User Function called when a Menu Item is clicked.
-            </li>
-            <li>
-              <a
-                href="https://docs.adaptabletools.com/docs/user-functions/user-menu-item-show-predicate-user-function"
-                target="_blank"
-              >
-                UserMenuItem Show Predicate:
-              </a>{' '}
-              the predicate function that runs when the menu is opened to return
-              if the menu item should appear.
-            </li>
-            <li>
-              <a
-                href="https://docs.adaptabletools.com/docs/user-functions/user-menu-item-label-user-function"
-                target="_blank"
-              >
-                UserMenuItem Label:
-              </a>{' '}
-              the User Function that runs when the menu is created to allow for
-              an alternative label to be displayed.
-            </li>
+            <li>Clicked Function</li>
+            <li>Show Predicate</li>
+            <li>Label</li>
           </ul>
           <p>
             You can also choose which - if any - of the shipped Menu Items are
             available via the <b>showAdaptableContextMenu</b> property of{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/adaptable-options/user-interface-option"
+              href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/menu-options"
               target="_blank"
             >
-              User Interface Options
+              Menu Options
             </a>
             ; in this example we removed the <i>Filter</i> menu item for the
             'Employee' column and all the menu items for the 'Contact' column.
@@ -95,38 +61,17 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/user-interface/context-menu"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/user-interface/context-menu"
             target="_blank"
           >
             Context Menu Guide
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/predefined-config/user-interface-config"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/menu-options"
             target="_blank"
           >
-            User Interface Predefined Config
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/adaptable-api/user-interface-api"
-            target="_blank"
-          >
-            User Interface Api
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/user-functions/user-functions-overview"
-            target="_blank"
-          >
-            User Functions
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/adaptable-options/user-interface-option"
-            target="_blank"
-          >
-            User Interface Options
+            Menu Options
           </a>{' '}
         </div>
       }

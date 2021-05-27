@@ -11,9 +11,8 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
-  ActionColumnClickedEventArgs,
-  ActionColumnClickedInfo,
-  ActionColumnRenderParams,
+  AdaptableButton,
+  ActionColumnButtonContext,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -24,21 +23,33 @@ const demoConfig: PredefinedConfig = {
     ActionColumns: [
       {
         ColumnId: 'Multiply',
-        ButtonText: 'Click',
-        ShouldRenderPredicate: 'shouldRenderMultiplyPredicate',
-        RenderFunction: 'renderMultiplyFunction',
+        ActionColumnButton: {
+          Label: 'Click',
+          ButtonClickedFunction: 'multiplyButtonClicked',
+          ButtonRenderPredicate: 'shouldRenderMultiplyPredicate',
+          //  RenderFunction: 'renderMultiplyFunction',
+        },
       },
       {
         ColumnId: 'Plus',
-        ButtonText: '+',
+        ActionColumnButton: {
+          Label: '+',
+          ButtonClickedFunction: 'addButtonClicked',
+        },
       },
       {
         ColumnId: 'Minus',
-        ButtonText: '-',
+        ActionColumnButton: {
+          Label: '-',
+          ButtonClickedFunction: 'subtractButtonClicked',
+        },
       },
       {
         ColumnId: 'Action',
-        ButtonText: 'Delete Row',
+        ActionColumnButton: {
+          Label: 'Delete Row',
+          ButtonClickedFunction: 'deleteButtonClicked',
+        },
       },
     ],
   },
@@ -82,6 +93,62 @@ export default async (columnDefs: any[], rowData: any[]) => {
     adaptableId: 'Action Column Demo',
     userFunctions: [
       {
+        type: 'ButtonClickedFunction',
+        name: 'multiplyButtonClicked',
+        handler(button: AdaptableButton, context: ActionColumnButtonContext) {
+          let rowData: any = context.rowNode?.data;
+          let multiplier: number =
+            rowData.Employee == 'Robert King' ||
+            rowData.Employee == 'Janet Leverling'
+              ? 2
+              : 3;
+          let newItemCost = rowData.ItemCost * multiplier;
+          newItemCost = Math.round(newItemCost * 100) / 100;
+          adaptableApi.gridApi.setCellValue(
+            'ItemCost',
+            newItemCost,
+            context.primaryKeyValue,
+            true
+          );
+        },
+      },
+      {
+        type: 'ButtonClickedFunction',
+        name: 'addButtonClicked',
+        handler(button: AdaptableButton, context: ActionColumnButtonContext) {
+          let rowData: any = context.rowNode?.data;
+          let itemCount = rowData.ItemCount;
+          adaptableApi.gridApi.setCellValue(
+            'ItemCount',
+            itemCount + 1,
+            context.primaryKeyValue,
+            true
+          );
+        },
+      },
+      {
+        type: 'ButtonClickedFunction',
+        name: 'subtractButtonClicked',
+        handler(button: AdaptableButton, context: ActionColumnButtonContext) {
+          let rowData: any = context.rowNode?.data;
+          let itemCount = rowData.ItemCount;
+          adaptableApi.gridApi.setCellValue(
+            'ItemCount',
+            itemCount - 1,
+            context.primaryKeyValue,
+            true
+          );
+        },
+      },
+      {
+        type: 'ButtonClickedFunction',
+        name: 'deleteButtonClicked',
+        handler(button: AdaptableButton, context: ActionColumnButtonContext) {
+          adaptableApi.gridApi.deleteGridData([context.rowNode?.data]);
+        },
+      },
+      /*
+      {
         type: 'ActionColumnRenderFunction',
         name: 'renderMultiplyFunction',
         handler(params: ActionColumnRenderParams) {
@@ -91,13 +158,12 @@ export default async (columnDefs: any[], rowData: any[]) => {
             : '<button style="color:red; font-weight:bold; font-style:italic">Treble</button>';
         },
       },
+      */
       {
-        type: 'ActionColumnShouldRenderPredicate',
+        type: 'ButtonRenderPredicate',
         name: 'shouldRenderMultiplyPredicate',
-        handler(params) {
-          return (
-            params.rowData && params.rowData?.Employee != 'Margaret Peacock'
-          );
+        handler(button: AdaptableButton, context: ActionColumnButtonContext) {
+          return context.rowNode?.data?.Employee != 'Margaret Peacock';
         },
       },
     ],
@@ -105,49 +171,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
   adaptableApi = await Adaptable.init(adaptableOptions);
-
-  adaptableApi.eventApi.on(
-    'ActionColumnClicked',
-    (actionColumnEventArgs: ActionColumnClickedEventArgs) => {
-      let actionColumnClickedInfo: ActionColumnClickedInfo =
-        actionColumnEventArgs.data[0].id;
-      let rowData: any = actionColumnClickedInfo.rowData;
-      const column = actionColumnEventArgs.data[0].id.actionColumn;
-      if (column.ColumnId == 'Plus') {
-        let itemCount = rowData.ItemCount;
-        adaptableApi.gridApi.setCellValue(
-          'ItemCount',
-          itemCount + 1,
-          actionColumnClickedInfo.primaryKeyValue,
-          true
-        );
-      } else if (column.ColumnId == 'Minus') {
-        let itemCount = rowData.ItemCount;
-        adaptableApi.gridApi.setCellValue(
-          'ItemCount',
-          itemCount - 1,
-          actionColumnClickedInfo.primaryKeyValue,
-          true
-        );
-      } else if (column.ColumnId == 'Multiply') {
-        let multiplier: number =
-          rowData.Employee == 'Robert King' ||
-          rowData.Employee == 'Janet Leverling'
-            ? 2
-            : 3;
-        let newItemCost = rowData.ItemCost * multiplier;
-        newItemCost = Math.round(newItemCost * 100) / 100;
-        adaptableApi.gridApi.setCellValue(
-          'ItemCost',
-          newItemCost,
-          actionColumnClickedInfo.primaryKeyValue,
-          true
-        );
-      } else if (column.ColumnId == 'Action') {
-        adaptableApi.gridApi.deleteGridData([actionColumnClickedInfo.rowData]);
-      }
-    }
-  );
 
   return { adaptableOptions, adaptableApi };
 };

@@ -28,7 +28,7 @@ export default async () => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Color Palette Demo',
-    queryOptions: {
+    searchOptions: {
       ignoreCaseInQueries: false,
       // maxColumnValueItemsDisplayed: 5,
       //  columnValuesOnlyInQueries: true,

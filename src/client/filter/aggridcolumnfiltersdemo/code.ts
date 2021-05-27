@@ -107,7 +107,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Column Filters Demo',
-    filterOptions: {
+    searchOptions: {
       sortColumnValuesInFilter: true,
     },
     predefinedConfig: demoConfig,

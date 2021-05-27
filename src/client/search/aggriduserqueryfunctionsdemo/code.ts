@@ -27,12 +27,16 @@ const demoConfig: PredefinedConfig = {
       {
         ColumnId: 'OrderCostGBP',
         FriendlyName: 'Order Cost GBP',
-        ColumnExpression: 'GBP_PRICE([OrderCost])',
+        Query: {
+          ScalarExpression: 'GBP_PRICE([OrderCost])',
+        },
       },
       {
         ColumnId: 'PackageCostGBP',
         FriendlyName: 'Package Cost GBP',
-        ColumnExpression: 'GBP_PRICE([PackageCost])',
+        Query: {
+          ScalarExpression: 'GBP_PRICE([PackageCost])',
+        },
       },
     ],
   },
@@ -101,7 +105,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'User Query Functions Demo',
-    queryOptions: {
+    searchOptions: {
       expressionFunctions: {
         ...AdaptableExpressionFunctions,
         IN_BUSINESS_YEAR: {

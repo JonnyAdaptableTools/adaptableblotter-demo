@@ -35,46 +35,12 @@ export default () => {
             .{' '}
           </p>{' '}
           <p>
-            When you define a UserMenuItem you can reference 3 User Functions
-            (for which you provide the implementation for both in{' '}
-            <a
-              href="https://docs.adaptabletools.com/docs/user-functions/user-functions-overview"
-              target="_blank"
-            >
-              UserFunctions
-            </a>{' '}
-            section of AdaptableOptions).
+            When you define a UserMenuItem you can reference 3 User Functions:
           </p>
           <ul>
-            <li>
-              <a
-                href="https://docs.adaptabletools.com/docs/user-functions/user-menu-item-clicked-user-function"
-                target="_blank"
-              >
-                UserMenuItem Clicked Function:
-              </a>{' '}
-              the User Function called when a Menu Item is clicked.
-            </li>
-            <li>
-              <a
-                href="https://docs.adaptabletools.com/docs/user-functions/user-menu-item-show-predicate-user-function"
-                target="_blank"
-              >
-                UserMenuItem Show Predicate:
-              </a>{' '}
-              the predicate function that runs when the menu is opened to return
-              if the menu item should appear.
-            </li>
-            <li>
-              <a
-                href="https://docs.adaptabletools.com/docs/user-functions/user-menu-item-label-user-function"
-                target="_blank"
-              >
-                UserMenuItem Label:
-              </a>{' '}
-              the User Function that runs when the menu is created to allow for
-              an alternative label to be displayed.
-            </li>
+            <li>Clicked Function</li>
+            <li>Show Predicate</li>
+            <li>Label</li>
           </ul>
           <p>
             In this example we added 'Float Dashboard' and 'Set System Status'
@@ -85,10 +51,10 @@ export default () => {
             Menu items are available by using the <b>showAdaptableColumnMenu</b>{' '}
             function property in{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/adaptable-options/user-interface-options"
+              href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/menu-options"
               target="_blank"
             >
-              User Interface Options
+              Menu Options
             </a>
           </p>
           <p>
@@ -101,38 +67,17 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/user-interface/column-menu"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/user-interface/column-menu"
             target="_blank"
           >
             Column Menu Guide
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/predefined-config/user-interface-config"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/menu-options"
             target="_blank"
           >
-            User Interface Config
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/adaptable-api/user-interface-api"
-            target="_blank"
-          >
-            User Interface Api
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/user-functions/user-functions-overview"
-            target="_blank"
-          >
-            User Functions
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/adaptable-options/user-interface-options"
-            target="_blank"
-          >
-            User Interface Options
+            Menu Options
           </a>{' '}
         </div>
       }

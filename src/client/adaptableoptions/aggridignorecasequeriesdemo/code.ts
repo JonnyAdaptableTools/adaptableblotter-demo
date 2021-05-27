@@ -41,7 +41,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Query Ignore Case Demo',
-    queryOptions: {
+    searchOptions: {
       ignoreCaseInQueries: false,
     },
     predefinedConfig: demoConfig,

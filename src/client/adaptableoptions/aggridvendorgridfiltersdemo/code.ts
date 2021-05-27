@@ -41,7 +41,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Vendor Grid Filters Demo',
-    filterOptions: {
+    searchOptions: {
       useAdaptableQuickFilter: false,
       useAdaptableFilterForm: false,
     },

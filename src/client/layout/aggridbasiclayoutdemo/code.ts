@@ -63,7 +63,9 @@ const demoConfig: PredefinedConfig = {
   CalculatedColumn: {
     CalculatedColumns: [
       {
-        ColumnExpression: '[ItemCost] / [ItemCount]',
+        Query: {
+          ScalarExpression: '[ItemCost] / [ItemCount]',
+        },
         ColumnId: 'AvgCost',
         FriendlyName: 'Avg Item Cost',
       },

@@ -73,7 +73,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
       },
       runQueryAfterQuickSearch: true,
     },
-    queryOptions: {
+    searchOptions: {
       ignoreCaseInQueries: false,
     },
     predefinedConfig: demoConfig,

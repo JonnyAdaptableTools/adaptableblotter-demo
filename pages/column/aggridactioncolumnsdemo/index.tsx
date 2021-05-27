@@ -12,67 +12,7 @@ export default () => {
             AdapTable provides an Action Column function that allows you to
             specify (and optionally render) a button to be placed in a column.
           </p>
-          <p>
-            When the button is clicked an{' '}
-            <a
-              href="https://docs.adaptabletools.com/docs/adaptable-events/action-column-clicked-event"
-              target="_blank"
-            >
-              On('ActionColumnClicked')
-            </a>{' '}
-            event fires, providing details of which column was clicked and the
-            current data in its row.{' '}
-          </p>
-          <p>
-            You can subscribe to this event and perform any additional logic or
-            functionality that is required.
-          </p>
-          <p>
-            There are 2 optional functions you can provide for an Action Column
-            (both of which you reference in{' '}
-            <a
-              href="https://docs.adaptabletools.com/docs/predefined-config/action-column-config"
-              target="_blank"
-            >
-              Predefined Config
-            </a>{' '}
-            , but provide the actual implementation in{' '}
-            <a
-              href="https://docs.adaptabletools.com/docs/user-functions/user-functions-overview"
-              target="_blank"
-            >
-              UserFunctions
-            </a>
-            ) :
-            <ul>
-              <li>
-                {' '}
-                <b>
-                  <a
-                    href="https://docs.adaptabletools.com/docs/user-functions/action-column-should-render-predicate-user-function"
-                    target="_blank"
-                  >
-                    ActionColumnShouldRenderPredicate
-                  </a>{' '}
-                </b>{' '}
-                - this will return true or false to determine whether the button
-                will be displayed.
-              </li>
-              <li>
-                <b>
-                  <a
-                    href="https://docs.adaptabletools.com/docs/user-functions/action-column-render-user-function"
-                    target="_blank"
-                  >
-                    ActionColumnRenderFunction
-                  </a>{' '}
-                </b>{' '}
-                - allows you to create a button that matches your style and
-                requirements (and provide differently styled buttons depending
-                on the data in each row).
-              </li>
-            </ul>
-          </p>
+
           <p>
             Here we created <b>Plus</b> and <b>Minus</b> Action Columns; in the
             onActionColumnClicked event handler we update the <i>Item Count</i>{' '}
@@ -110,10 +50,10 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/action-column-function"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/action-column-module"
             target="_blank"
           >
-            Action Column Read Me
+            Action Column Module
           </a>{' '}
           |{' '}
           <a
@@ -133,13 +73,6 @@ export default () => {
           <a href="https://youtu.be/y0cDvtdmSKM" target="_blank">
             Action Column Video
           </a>
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/user-functions/user-functions-overview"
-            target="_blank"
-          >
-            User Functions
-          </a>{' '}
         </div>
       }
     />

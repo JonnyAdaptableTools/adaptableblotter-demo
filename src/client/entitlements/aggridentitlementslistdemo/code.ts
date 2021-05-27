@@ -63,8 +63,11 @@ const demoConfig: PredefinedConfig = {
     CurrentReport: 'My Team Big Invoice',
     Reports: [
       {
-        Expression:
-          '[Employee] IN ("Robert King", "Margaret Peacock", "Anne Dodsworth") AND [InvoicedCost] > 1000 ',
+        Query: {
+          BooleanExpression:
+            '[Employee] IN ("Robert King", "Margaret Peacock", "Anne Dodsworth") AND [InvoicedCost] > 1000 ',
+        },
+
         Name: 'My Team Big Invoice',
         ReportColumnScope: 'AllColumns',
         ReportRowScope: 'ExpressionRows',

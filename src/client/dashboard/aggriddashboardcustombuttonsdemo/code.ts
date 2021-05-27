@@ -9,9 +9,6 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
-  ToolbarVisibilityChangedEventArgs,
-  ToolbarButtonClickedEventArgs,
-  DashboardButtonClickedEventArgs,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import charts from '@adaptabletools/adaptable-plugin-charts';
@@ -29,17 +26,16 @@ const demoConfig: PredefinedConfig = {
       },
     ],
     VisibleButtons: ['GridInfo'],
-    CustomButtons: [
+    DashboardButtons: [
       {
-        Name: 'deleteRow',
-        Caption: 'Delete Row',
+        Label: 'Delete Row',
         ButtonStyle: {
           Variant: 'raised',
           Tone: 'accent',
         },
       },
       {
-        Name: 'newRow',
+        Label: 'New Row',
         ButtonStyle: {
           Variant: 'outlined',
           Tone: 'info',
