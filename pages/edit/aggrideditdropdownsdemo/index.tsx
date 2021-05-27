@@ -15,12 +15,12 @@ export default () => {
           <p>
             However, in the{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/predefined-config/user-interface-config"
+              href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/user-interface-options"
               target="_blank"
             >
               User Interface
             </a>{' '}
-            section of Predefined Config you can stipulate that a column will
+            section of Adaptable Options you can stipulate that a column will
             automatically display a Dropdown (select) when being edited.
           </p>
           <p>
@@ -46,10 +46,10 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/predefined-config/user-interface-config"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/user-interface-options"
             target="_blank"
           >
-            User Interface Config
+            User Interface Options
           </a>
         </div>
       }

@@ -96,13 +96,14 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'Country',
     userName: 'Demo User',
     adaptableId: 'Financial Charts Demo',
-    chartOptions: {
-      displayOnStartUp: true,
-      showModal: false,
-    },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
-    plugins: [charts()],
+    plugins: [
+      charts({
+        displayOnStartUp: true,
+        showModal: false,
+      }),
+    ],
   };
   adaptableApi = await Adaptable.init(adaptableOptions);
 

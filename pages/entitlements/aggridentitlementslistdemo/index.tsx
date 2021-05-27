@@ -11,18 +11,18 @@ export default () => {
       description={
         <div>
           <p>
-            One way to provide Entitlements in Predefined Config is through a
-            'hard-coded' list via the <b>FunctionEntitlements</b> property.
+            One way to provide Entitlements in Adaptable Options is through a
+            'hard-coded' list via the <b>moduleEntitlements</b> property.
           </p>
           <p>
             This allows you to provide a list of Entitlements - essentially a{' '}
-            <b>FunctionName</b> and an <b>AccessLevel</b> (either <i>Full</i>,{' '}
+            <b>Module Name</b> and an <b>AccessLevel</b> (either <i>Full</i>,{' '}
             <i>ReadOnly</i> or <i>Hidden</i>).
           </p>
           <p>
-            Any Function not given an Entitlement automatically takes the Access
+            Any Module not given an Entitlement automatically takes the Access
             Level of 'Full'; however this can be changed through setting the{' '}
-            <b>DefaultAccessLevel</b> property (see{' '}
+            <b>defaultAccessLevel</b> property (see{' '}
             <a href="./aggridentitlementsdefaultdemo">Default Demo</a>
             ).
           </p>
@@ -52,25 +52,11 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/key-topics/entitlements"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/entitlements-options"
             target="_blank"
           >
-            Entitlements Guide
+            Entitlements Options
           </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/predefined-config/entitlements-config"
-            target="_blank"
-          >
-            Entitlements Config
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/adaptable-api/entitlements-api"
-            target="_blank"
-          >
-            Entitlements Api
-          </a>
         </div>
       }
     />

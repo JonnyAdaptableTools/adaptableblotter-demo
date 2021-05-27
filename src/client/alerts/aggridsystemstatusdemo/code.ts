@@ -9,6 +9,9 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
+  MenuContext,
+  ActionColumnButtonContext,
+  AdaptableButton,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -26,66 +29,38 @@ const demoConfig: PredefinedConfig = {
       {
         Name: 'DemoButtons',
         Title: 'Demo Buttons',
-        ToolbarButtons: [
+        CustomToolbarButtons: [
           {
-            Name: 'info',
-            Caption: 'Set Info',
+            Label: 'Set Info',
             ButtonStyle: {
               Variant: 'text',
               Tone: 'info',
             },
+            ButtonClickedFunction: 'SetInfoButtonClick',
           },
           {
-            Name: 'success',
-            Caption: 'Set Success',
+            Label: 'Set Success',
             ButtonStyle: {
               Variant: 'text',
               Tone: 'success',
             },
+            ButtonClickedFunction: 'SetSuccessButtonClick',
           },
           {
-            Name: 'warning',
-            Caption: 'Set Warning',
+            Label: 'Set Warning',
             ButtonStyle: {
               Variant: 'text',
               Tone: 'warning',
             },
+            ButtonClickedFunction: 'SetWarningButtonClick',
           },
           {
-            Name: 'error',
-            Caption: 'Set Error',
+            Label: 'Set Error',
             ButtonStyle: {
               Variant: 'text',
               Tone: 'error',
             },
-          },
-        ],
-      },
-    ],
-  },
-  SystemStatus: {
-    ShowAlert: false,
-  },
-  UserInterface: {
-    ContextMenuItems: [
-      {
-        Label: 'Set System Status',
-        SubMenuItems: [
-          {
-            Label: 'Set Error',
-            UserMenuItemClickedFunction: 'setError',
-          },
-          {
-            Label: 'Set Warning',
-            UserMenuItemClickedFunction: 'setWarning',
-          },
-          {
-            Label: 'Set Success',
-            UserMenuItemClickedFunction: 'setSuccess',
-          },
-          {
-            Label: 'Set Info',
-            UserMenuItemClickedFunction: 'setInfo',
+            ButtonClickedFunction: 'SetErrorButtonClick',
           },
         ],
       },
@@ -112,21 +87,78 @@ export default async (columnDefs: any[], rowData: any[]) => {
     containerOptions: {
       systemStatusContainer: 'systemStatusDiv',
     },
+    menuOptions: {
+      contextMenuItems: [
+        {
+          label: 'Set System Status',
+          subMenuItems: [
+            {
+              label: 'Set Error',
+              onClick: (menuContext: MenuContext) => {
+                adaptableApi.systemStatusApi.setErrorSystemStatus(
+                  'System Down'
+                );
+              },
+            },
+            {
+              label: 'Set Warning',
+              onClick: (menuContext: MenuContext) => {
+                adaptableApi.systemStatusApi.setWarningSystemStatus(
+                  'System Slow'
+                );
+              },
+            },
+            {
+              label: 'Set Success',
+              onClick: (menuContext: MenuContext) => {
+                adaptableApi.systemStatusApi.setSuccessSystemStatus(
+                  'System Fine'
+                );
+              },
+            },
+            {
+              label: 'Set Info',
+              onClick: (menuContext: MenuContext) => {
+                adaptableApi.systemStatusApi.setInfoSystemStatus(
+                  'Demos working fine'
+                );
+              },
+            },
+          ],
+        },
+      ],
+    },
+    userInterfaceOptions: {},
     userFunctions: [
       {
-        type: 'UserMenuItemClickedFunction',
-        name: 'setError',
-        handler() {
-          adaptableApi.systemStatusApi.setErrorSystemStatus(
-            'The server is down!',
-            'Please do not make any edits until the server comes back up'
+        type: 'ButtonClickedFunction',
+        name: 'SetInfoButtonClick',
+        handler: (
+          button: AdaptableButton,
+          context: ActionColumnButtonContext
+        ) => {
+          adaptableApi.systemStatusApi.setInfoSystemStatus('No issues');
+        },
+      },
+      {
+        type: 'ButtonClickedFunction',
+        name: 'SetSuccessButtonClick',
+        handler: (
+          button: AdaptableButton,
+          context: ActionColumnButtonContext
+        ) => {
+          adaptableApi.systemStatusApi.setSuccessSystemStatus(
+            'All working fine'
           );
         },
       },
       {
-        type: 'UserMenuItemClickedFunction',
-        name: 'setWarning',
-        handler() {
+        type: 'ButtonClickedFunction',
+        name: 'SetWarningButtonClick',
+        handler: (
+          button: AdaptableButton,
+          context: ActionColumnButtonContext
+        ) => {
           adaptableApi.systemStatusApi.setWarningSystemStatus(
             'Problems with server',
             'Avoid any unnecesary edits'
@@ -134,19 +166,16 @@ export default async (columnDefs: any[], rowData: any[]) => {
         },
       },
       {
-        type: 'UserMenuItemClickedFunction',
-        name: 'setSuccess',
-        handler() {
-          adaptableApi.systemStatusApi.setSuccessSystemStatus(
-            'All working fine'
+        type: 'ButtonClickedFunction',
+        name: 'SetErrorButtonClick',
+        handler: (
+          button: AdaptableButton,
+          context: ActionColumnButtonContext
+        ) => {
+          adaptableApi.systemStatusApi.setErrorSystemStatus(
+            'The server is down!',
+            'Please do not make any edits until the server comes back up'
           );
-        },
-      },
-      {
-        type: 'UserMenuItemClickedFunction',
-        name: 'setInfo',
-        handler() {
-          adaptableApi.systemStatusApi.setInfoSystemStatus('No issues');
         },
       },
     ],
@@ -154,34 +183,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
   adaptableApi = await Adaptable.init(adaptableOptions);
-
-  adaptableApi.eventApi.on(
-    'ToolbarButtonClicked',
-    toolbarButtonClickedEventArgs => {
-      switch (toolbarButtonClickedEventArgs.data[0].id.toolbarButton.Name) {
-        case 'info':
-          adaptableApi.systemStatusApi.setInfoSystemStatus('No issues');
-          break;
-        case 'success':
-          adaptableApi.systemStatusApi.setSuccessSystemStatus(
-            'All working fine'
-          );
-          break;
-        case 'warning':
-          adaptableApi.systemStatusApi.setWarningSystemStatus(
-            'Problems with server',
-            'Avoid any unnecesary edits'
-          );
-          break;
-        case 'error':
-          adaptableApi.systemStatusApi.setErrorSystemStatus(
-            'The server is down!',
-            'Please do not make any edits until the server comes back up'
-          );
-          break;
-      }
-    }
-  );
 
   return { adaptableOptions, adaptableApi };
 };

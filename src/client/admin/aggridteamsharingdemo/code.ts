@@ -23,14 +23,6 @@ const demoConfig: PredefinedConfig = {
       'GradientColumn',
     ],
   },
-  Entitlements: {
-    FunctionEntitlements: [
-      {
-        FunctionName: 'ConditionalStyle',
-        AccessLevel: 'ReadOnly',
-      },
-    ],
-  },
 } as PredefinedConfig;
 
 export default async (columnDefs: any[], rowData: any[]) => {
@@ -74,6 +66,14 @@ export default async (columnDefs: any[], rowData: any[]) => {
           setTimeout(() => resolve(), 1000);
         });
       },
+    },
+    entitlementOptions: {
+      moduleEntitlements: [
+        {
+          adaptableModule: 'ConditionalStyle',
+          accessLevel: 'ReadOnly',
+        },
+      ],
     },
   };
   adaptableApi = await Adaptable.init(adaptableOptions);

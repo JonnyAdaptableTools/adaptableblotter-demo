@@ -9,7 +9,7 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
-  AuditLogEventArgs,
+  AdaptableStateChangedInfo,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -51,7 +51,12 @@ const demoConfig: PredefinedConfig = {
           'ShipName',
           'ShipCountry',
         ],
-        ColumnSorts: [],
+        ColumnSorts: [
+          {
+            ColumnId: 'OrderId',
+            SortOrder: 'Desc',
+          },
+        ],
         Name: 'Comments View',
       },
     ],
@@ -74,25 +79,17 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Free Text Column Demo',
-    auditOptions: {
-      auditFunctionsApplied: {
-        auditAsEvent: true,
-      },
-    },
+
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
   adaptableApi = await Adaptable.init(adaptableOptions);
 
-  adaptableApi.auditEventApi.on(
-    'AuditFunctionApplied',
-    (auditLogEventArgs: AuditLogEventArgs) => {
-      let auditLogEntry = auditLogEventArgs.data[0].id;
-      if (
-        auditLogEntry.function_applied_details?.action ==
-        'FREE_TEXT_COLUMN_ADD_EDIT_STORED_VALUE'
-      )
-        console.log(auditLogEntry);
+  adaptableApi.eventApi.on(
+    'AdaptableStateChanged',
+    (info: AdaptableStateChangedInfo) => {
+      if (info.actionName == 'FREE_TEXT_COLUMN_ADD_EDIT_STORED_VALUE')
+        console.log(info);
     }
   );
 

@@ -18,39 +18,60 @@ const demoConfig: PredefinedConfig = {
   Dashboard: {
     VisibleButtons: ['PercentBar'],
   },
-  PercentBar: {
-    PercentBars: [
+  FormatColumn: {
+    Revision: Date.now(),
+    FormatColumns: [
       {
-        ColumnId: 'InvoicedCost',
-        Ranges: [
-          { Min: 0, Max: 500, Color: '#ff0000' },
-          { Min: 500, Max: 1000, Color: '#ffa500' },
-          { Min: 1000, Max: 3000, Color: '#008000' },
-        ],
-        ShowValue: false,
+        Scope: {
+          ColumnIds: ['InvoicedCost'],
+        },
+        NumericColumnStyle: {
+          PercentBarStyle: {
+            CellRanges: [
+              { Min: 0, Max: 500, Color: '#ff0000' },
+              { Min: 500, Max: 1000, Color: '#ffa500' },
+              { Min: 1000, Max: 3000, Color: '#008000' },
+            ],
+            // CellText: ['CellValue'],
+          },
+        },
       },
       {
-        BackColor: '#d3d3d3',
-        ColumnId: 'ItemCost',
-        DisplayPercentageValue: true,
-        DisplayRawValue: true,
-        Ranges: [{ Min: 0, Max: 199.46, Color: '#87cefa' }],
-        ShowValue: true,
+        Scope: {
+          ColumnIds: ['ItemCost'],
+        },
+        NumericColumnStyle: {
+          PercentBarStyle: {
+            CellRanges: [{ Min: 0, Max: 200, Color: '#87cefa' }],
+            CellText: ['CellValue', 'PercentageValue'],
+            BackColor: '#d3d3d3',
+          },
+        },
       },
       {
-        BackColor: '#808080',
-        ColumnId: 'ItemCount',
-        DisplayRawValue: true,
-        Ranges: [{ Min: 0, Max: 21, Color: '#006400' }],
-        ShowToolTip: true,
-        ShowValue: false,
+        Scope: {
+          ColumnIds: ['ItemCount'],
+        },
+        NumericColumnStyle: {
+          PercentBarStyle: {
+            CellRanges: [{ Min: 0, Max: 21, Color: '#006400' }],
+            ToolTipText: ['CellValue'],
+            BackColor: '#808080',
+          },
+        },
       },
       {
-        ColumnId: 'PackageCost',
-        ColumnComparison: {
-          MinValue: 0,
-          MaxValue: 'OrderCost',
-          Color: '#D2691E',
+        Scope: {
+          ColumnIds: ['PackageCost'],
+        },
+        NumericColumnStyle: {
+          PercentBarStyle: {
+            ColumnComparison: {
+              MinValue: 0,
+              MaxValue: 'OrderCost',
+              Color: '#D2691E',
+            },
+          },
         },
       },
     ],

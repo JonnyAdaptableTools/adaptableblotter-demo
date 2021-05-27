@@ -15,14 +15,6 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
-  Entitlements: {
-    FunctionEntitlements: [
-      {
-        FunctionName: 'Shortcut',
-        AccessLevel: 'Full',
-      },
-    ],
-  },
   Shortcut: {
     Shortcuts: [
       {
@@ -62,6 +54,14 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Shortcut Demo',
+    entitlementOptions: {
+      moduleEntitlements: [
+        {
+          adaptableModule: 'Shortcut',
+          accessLevel: 'Full',
+        },
+      ],
+    },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

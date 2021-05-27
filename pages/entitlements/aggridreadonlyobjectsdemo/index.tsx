@@ -17,14 +17,14 @@ export default () => {
           <p>
             This is possible by setting the <b>IsReadOnly</b> property in the
             Adaptable Object base class to true - this will override the
-            Function's Entitlement of 'Full'{' '}
+            Module's Entitlement of 'Full'{' '}
           </p>
           <p>
-            Note: This is the <b>only</b> use case where a Function's
-            Entitlement is ignored.{' '}
+            Note: This is the <b>only</b> use case where a Module's Entitlement
+            is ignored.{' '}
           </p>
           <p>
-            In this example we have created set the Layout function to be 'Full'
+            In this example we have created set the Layout Module to be 'Full'
             and provided 2 Layouts, one of which - 'ReadOnly View' - has
             'IsReadOnly' set to true.
           </p>
@@ -38,25 +38,11 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/key-topics/entitlements"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/entitlements-options"
             target="_blank"
           >
-            Entitlements Guide
+            Entitlements Options
           </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/predefined-config/entitlements-config"
-            target="_blank"
-          >
-            Entitlements Config
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/adaptable-api/entitlements-api"
-            target="_blank"
-          >
-            Entitlements Api
-          </a>
         </div>
       }
     />

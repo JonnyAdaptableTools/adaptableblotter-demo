@@ -121,16 +121,7 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
-  UserInterface: {
-    PermittedValuesItems: [
-      {
-        Scope: {
-          ColumnIds: ['LastUpdatedTime'],
-        },
-        PermittedValues: [''],
-      },
-    ],
-  },
+
   Layout: {
     CurrentLayout: 'Format Layout',
     Layouts: [
@@ -168,6 +159,16 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Format Col Demo',
+    userInterfaceOptions: {
+      permittedValues: [
+        {
+          scope: {
+            ColumnIds: ['LastUpdatedTime'],
+          },
+          values: [''],
+        },
+      ],
+    },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

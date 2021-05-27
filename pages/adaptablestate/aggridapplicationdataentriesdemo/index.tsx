@@ -34,8 +34,8 @@ export default () => {
           <p>The potential uses of Application Data Entries are endless. </p>
           <p>
             In this example we added a 'Role' entry which is then used to decide
-            the Entitlement for Layout; as the given value is 'Basic User' the
-            function becomes 'ReadOnly'
+            the Entitlement for the Layout Module; as the given value is 'Basic
+            User' the function becomes 'ReadOnly'
           </p>
         </div>
       }

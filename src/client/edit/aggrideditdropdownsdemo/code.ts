@@ -14,50 +14,7 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
 var adaptableApi: AdaptableApi;
 
-const demoConfig: PredefinedConfig = {
-  UserInterface: {
-    PermittedValuesItems: [
-      {
-        Scope: {
-          ColumnIds: ['ContactName'],
-        },
-        PermittedValues: [
-          'Elizabeth Lincoln',
-          'Mario Pontes',
-          'Maria Larsson',
-          'Roland Mendel',
-          'Catherine Dewey',
-        ],
-      },
-    ],
-    EditLookUpItems: [
-      {
-        Scope: {
-          ColumnIds: ['CustomerReference'],
-        },
-        LookUpValues: [
-          'SANTG',
-          'LINOD',
-          'ROMEY',
-          'FRANK',
-          'ALFKI',
-          'REGGC',
-          'GODOS',
-        ],
-      },
-      {
-        Scope: {
-          ColumnIds: ['ContactName'],
-        },
-      },
-      {
-        Scope: {
-          ColumnIds: ['Employee'],
-        },
-      },
-    ],
-  },
-} as PredefinedConfig;
+const demoConfig: PredefinedConfig = {} as PredefinedConfig;
 
 export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
@@ -73,7 +30,45 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Edit Lookup Columns Demo',
-    queryOptions: {
+    userInterfaceOptions: {
+      editLookUpItems: [
+        {
+          scope: { ColumnIds: ['CustomerReference'] },
+          values: [
+            'SANTG',
+            'LINOD',
+            'ROMEY',
+            'FRANK',
+            'ALFKI',
+            'REGGC',
+            'GODOS',
+          ],
+        },
+        {
+          scope: { ColumnIds: ['ContactName'] },
+          values: [],
+        },
+        {
+          scope: { ColumnIds: ['Employee'] },
+          values: [],
+        },
+      ],
+      permittedValues: [
+        {
+          scope: {
+            ColumnIds: ['ContactName'],
+          },
+          values: [
+            'Elizabeth Lincoln',
+            'Mario Pontes',
+            'Maria Larsson',
+            'Roland Mendel',
+            'Catherine Dewey',
+          ],
+        },
+      ],
+    },
+    searchOptions: {
       ignoreCaseInQueries: false,
     },
     predefinedConfig: demoConfig,

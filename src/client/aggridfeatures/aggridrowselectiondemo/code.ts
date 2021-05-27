@@ -7,22 +7,13 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
-  SelectionChangedEventArgs,
+  SelectionChangedInfo,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
 var adaptableApi: AdaptableApi;
 
-const demoConfig: PredefinedConfig = {
-  Entitlements: {
-    FunctionEntitlements: [
-      {
-        FunctionName: 'Layout',
-        AccessLevel: 'Hidden',
-      },
-    ],
-  },
-} as PredefinedConfig;
+const demoConfig: PredefinedConfig = {} as PredefinedConfig;
 
 export default async (columnDefs: any[], rowData: any[]) => {
   let autoGroupColumnDef: ColDef = {
@@ -50,6 +41,14 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Row Selection Demo',
+    entitlementOptions: {
+      moduleEntitlements: [
+        {
+          adaptableModule: 'Layout',
+          accessLevel: 'Hidden',
+        },
+      ],
+    },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
@@ -57,9 +56,11 @@ export default async (columnDefs: any[], rowData: any[]) => {
 
   adaptableApi.eventApi.on(
     'SelectionChanged',
-    (selectedChangedArgs: SelectionChangedEventArgs) => {
-      console.log('Selection Has Changed');
-      console.log(selectedChangedArgs.data[0].id);
+    (selectionChangedInfo: SelectionChangedInfo) => {
+      console.log(
+        'Row Selection Has Changed',
+        selectionChangedInfo.selectedRowInfo
+      );
     }
   );
 

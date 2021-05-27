@@ -63,7 +63,7 @@ export default async (
                   Style: {
                     BackColor: 'yellow',
                   },
-                  Expression: '[age] > 30',
+                  Rule: { BooleanExpression: '[age] > 30' },
                   Scope: {
                     All: true,
                   },

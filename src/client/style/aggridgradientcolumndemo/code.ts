@@ -18,27 +18,66 @@ const demoConfig: PredefinedConfig = {
   Dashboard: {
     VisibleButtons: ['GradientColumn'],
   },
-  GradientColumn: {
-    GradientColumns: [
+  FormatColumn: {
+    FormatColumns: [
       {
-        ColumnId: 'ChangeLastOrder',
-        NegativeValue: -41,
-        PositiveValue: 56,
-        NegativeColor: '#FF0000',
-        PositiveColor: '#00CC00',
-        BaseValue: 0,
+        Scope: {
+          ColumnIds: ['ChangeLastOrder'],
+        },
+        NumericColumnStyle: {
+          GradientStyle: {
+            CellRanges: [
+              {
+                Min: -41,
+                Max: -10,
+                Color: '#FF0000',
+                ReverseGradient: true,
+              },
+              {
+                Min: -10,
+                Max: 15,
+                Color: 'orange',
+              },
+              {
+                Min: 15 - 0,
+                Max: 56,
+                Color: '#00CC00',
+              },
+            ],
+          },
+        },
       },
       {
-        ColumnId: 'ItemCount',
-        PositiveValue: 170,
-        PositiveColor: '#008000',
-        BaseValue: 100,
+        Scope: {
+          ColumnIds: ['ItemCount'],
+        },
+        NumericColumnStyle: {
+          GradientStyle: {
+            CellRanges: [
+              {
+                Min: 100,
+                Max: 170,
+                Color: '#008000',
+              },
+            ],
+          },
+        },
       },
       {
-        ColumnId: 'PackageCost',
-        PositiveValue: 20,
-        PositiveColor: '#FF8000',
-        BaseValue: 0,
+        Scope: {
+          ColumnIds: ['PackageCost'],
+        },
+        NumericColumnStyle: {
+          GradientStyle: {
+            CellRanges: [
+              {
+                Min: 0,
+                Max: 20,
+                Color: 'purple',
+              },
+            ],
+          },
+        },
       },
     ],
   },
@@ -64,7 +103,6 @@ const demoConfig: PredefinedConfig = {
           'OrderDate',
           'PackageCost',
         ],
-
         Name: 'Orders',
       },
     ],

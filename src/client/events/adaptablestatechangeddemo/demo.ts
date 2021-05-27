@@ -13,7 +13,6 @@ const code = raw('./code.ts');
 export default async () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
-  const tickingDataHelper = new TickingDataHelper();
   let rowData = JSON.parse(JSON.stringify(json));
   helperAgGrid.convertExcelData(rowData);
 
@@ -34,22 +33,8 @@ export default async () => {
     gridReady.api!.closeToolPanel();
   };
 
-  adaptableApi.eventApi.on('AdaptableReady', () => {
-    tickingDataHelper.startTickingDataagGridOrders(
-      adaptableOptions.vendorGrid,
-      adaptableApi,
-      3000,
-      10248,
-      11142,
-      true
-    );
-  });
-
   return {
-    unload: () => {
-      tickingDataHelper.turnOffTicking();
-      adaptableOptions.auditOptions = undefined;
-    },
+    unload: () => {},
     code,
   };
 };

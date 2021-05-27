@@ -22,15 +22,7 @@ export default () => {
             set Adaptable Options to non-default values to configure your grid
             to precise requirements.
           </p>
-          <p>
-            You will also likely include Entitlements as part of Predefined
-            Config so that users only have access to the functions and the
-            functionality that they require.
-          </p>
-          <p>
-            This basic example has <b>no</b> Predefined Configuration (or
-            Entitlements) and no non-default AdaptableOptions properties.{' '}
-          </p>
+
           <p>
             So all the functionality (e.g. the 40+ AdapTable functions, the
             Column Header and Context Menus, the Dashboard, the Quick Filter bar

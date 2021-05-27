@@ -109,13 +109,13 @@ export default () => {
           </ul>
         </p>
         <p>
-          <b>Functions</b> <br />
-          AdapTable contains a large number of <b>Functions</b> (e.g. Advanced
-          Search, Bulk Update, Pie Chart etc). <br />
+          <b>Modules</b> <br />
+          AdapTable contains a large number of <b>Modules</b> (e.g. Conditional
+          Style, Bulk Update, Pie Chart etc). <br />
           Each function has its own 'popup screen' and many also have their own
           toolbars or tool panels for easy access.
           <br />
-          All functions are available to all users (depending on the{' '}
+          All Modules are available to all users (depending on the{' '}
           <a href="./entitlements" target="_blank">
             <b>entitlements</b>
           </a>{' '}
@@ -140,7 +140,7 @@ export default () => {
             <b>Predefined Config</b>
           </a>{' '}
           - objects that you have created at design time (eg. searches, layouts,
-          styles, entitlements etc.) that you would like to be available when it
+          styles, reports etc.) that you would like to be available when it
           first loads. <br />
           You set this Predefined Config as a property of{' '}
           <a

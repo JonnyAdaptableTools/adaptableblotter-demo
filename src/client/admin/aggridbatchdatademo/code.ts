@@ -31,12 +31,14 @@ const demoConfig: PredefinedConfig = {
         Scope: {
           ColumnIds: ['country'],
         },
-        Predicate: {
-          PredicateId: 'Is',
-          Inputs: ['Spain'],
+        Rule: {
+          Predicate: {
+            PredicateId: 'Is',
+            Inputs: ['Spain'],
+          },
         },
         AlertProperties: {
-          ShowPopup: false,
+          DisplayNotification: false,
         },
       },
     ],
@@ -50,7 +52,9 @@ const demoConfig: PredefinedConfig = {
         Style: {
           BackColor: '#87cefa',
         },
-        Expression: "[currency] IN ('EUR', 'USD') ",
+        Rule: {
+          BooleanExpression: "[currency] IN ('EUR', 'USD') ",
+        },
       },
     ],
   },

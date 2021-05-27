@@ -36,7 +36,9 @@ const demoConfig: PredefinedConfig = {
         Name: 'Euro Trades',
         ReportColumnScope: 'AllColumns',
         ReportRowScope: 'ExpressionRows',
-        Expression: '[currency] = "EUR" ',
+        Query: {
+          BooleanExpression: '[currency] = "EUR" ',
+        },
       },
     ],
   },

@@ -47,8 +47,8 @@ export default () => {
           </p>
           <p>
             Note: you can hide the Dashboard completely by setting the
-            'Dashboard' to be <b>Hidden</b> in Entitlements and then it can
-            never be made visible again.
+            'Dashboard' to be <b>Hidden</b> in Entitlement Options and then it
+            can never be made visible again.
           </p>
         </div>
       }

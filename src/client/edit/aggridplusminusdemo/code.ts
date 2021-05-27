@@ -16,31 +16,46 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   PlusMinus: {
-    PlusMinusRules: [
+    PlusMinusNudges: [
       {
-        ColumnId: 'ItemCost',
-        IsDefaultNudge: true,
+        Scope: {
+          ColumnIds: ['ItemCost'],
+        },
+        Rule: {
+          BooleanExpression: '[Employee] = "Janet Leverling"',
+        },
         NudgeValue: 10,
       },
       {
-        ColumnId: 'ItemCost',
-        Expression: '[Employee] = "Janet Leverling"',
-        IsDefaultNudge: false,
+        Scope: {
+          ColumnIds: ['ItemCost'],
+        },
+        Rule: {
+          Predicate: {
+            PredicateId: 'Any',
+          },
+        },
         NudgeValue: 20,
       },
     ],
   },
-  FlashingCell: {
-    FlashingCells: [
+  Alert: {
+    FlashingAlertDefinitions: [
       {
-        ColumnId: 'ItemCost',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 500,
-        IsLive: true,
-        UpColor: '#008000',
+        Scope: {
+          ColumnIds: ['ItemCost'],
+        },
+        UpChangeStyle: {
+          BackColor: '#008000',
+        },
+        DownChangeStyle: {
+          BackColor: '#FF0000',
+        },
+        FlashDuration: 500,
       },
     ],
   },
+
   Dashboard: {
     VisibleButtons: ['PlusMinus'],
   },

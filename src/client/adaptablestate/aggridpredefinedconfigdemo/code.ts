@@ -43,7 +43,9 @@ const demoConfig: PredefinedConfig = {
             'InvoicedCost',
           ],
         },
-        Expression: '[Freight] > 500',
+        Query: {
+          BooleanExpression: '[Freight] > 500',
+        },
       },
     ],
   },
@@ -68,8 +70,10 @@ const demoConfig: PredefinedConfig = {
         Style: {
           ForeColor: '#008000',
         },
-        Predicate: {
-          Id: 'Positive',
+        Rule: {
+          Predicate: {
+            Id: 'Positive',
+          },
         },
       },
       {
@@ -79,8 +83,10 @@ const demoConfig: PredefinedConfig = {
         Style: {
           ForeColor: '#ff0000',
         },
-        Predicate: {
-          PredicateId: 'Negative',
+        Rule: {
+          Predicate: {
+            PredicateId: 'Negative',
+          },
         },
       },
       {
@@ -92,7 +98,7 @@ const demoConfig: PredefinedConfig = {
         Scope: {
           All: true,
         },
-        Expression: '[InvoicedCost] > 2000',
+        Rule: { BooleanExpression: '[InvoicedCost] > 2000' },
       },
     ],
   },

@@ -8,22 +8,11 @@ import { GridOptions } from '@ag-grid-community/all-modules';
 import {
   AdaptableOptions,
   AdaptableApi,
-  PredefinedConfig,
+  AdaptableStateChangedInfo,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
 var adaptableApi: AdaptableApi;
-
-const demoConfig: PredefinedConfig = {
-  Dashboard: {
-    Tabs: [
-      {
-        Name: 'Toolbars',
-        Toolbars: ['Alert'],
-      },
-    ],
-  },
-} as PredefinedConfig;
 
 export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
@@ -40,21 +29,18 @@ export default async (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Audit as Alert Demo',
-    auditOptions: {
-      auditFunctionsApplied: {
-        auditAsAlert: true,
-      },
-      auditCellEdits: {
-        auditAsAlert: true,
-      },
-      alertMessageType: 'Info',
-      alertShowAsPopup: false,
-    },
-    predefinedConfig: demoConfig,
+    adaptableId: 'Adaptable State Changed Event Demo',
+
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
   adaptableApi = await Adaptable.init(adaptableOptions);
+
+  adaptableApi.eventApi.on(
+    'AdaptableStateChanged',
+    (stateChangedInfo: AdaptableStateChangedInfo) => {
+      console.log(stateChangedInfo);
+    }
+  );
 
   return { adaptableOptions, adaptableApi };
 };

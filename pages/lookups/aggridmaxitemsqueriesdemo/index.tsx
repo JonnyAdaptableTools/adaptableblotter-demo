@@ -17,10 +17,10 @@ export default () => {
             However, if you would prefer to return a larger result set, you can
             set the the <b>maxColumnValueItemsDisplayed</b> property of{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/adaptable-options/query-options"
+              href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/search-options"
               target="_blank"
             >
-              Query Options
+              Search Options
             </a>{' '}
             to a different value.
           </p>
@@ -34,10 +34,10 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-options/query-options"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/search-options"
             target="_blank"
           >
-            Adaptable Options
+            Search Options
           </a>
         </div>
       }

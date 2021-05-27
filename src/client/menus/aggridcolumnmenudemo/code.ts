@@ -9,7 +9,7 @@ import {
   PredefinedConfig,
   AdaptableApi,
   AdaptableMenuItem,
-  MenuInfo,
+  MenuContext,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -21,39 +21,6 @@ const demoConfig: PredefinedConfig = {
       {
         Name: 'Toolbars',
         Toolbars: ['QuickSearch', 'SystemStatus'],
-      },
-    ],
-  },
-  SystemStatus: {
-    ShowAlert: false,
-  },
-  UserInterface: {
-    ColumnMenuItems: [
-      {
-        Label: 'Floate Dashboard',
-        UserMenuItemClickedFunction: 'floatDashboard',
-        UserMenuItemShowPredicate: 'isColumnSortable',
-      },
-      {
-        Label: 'Set System Status',
-        SubMenuItems: [
-          {
-            Label: 'Set Error',
-            UserMenuItemClickedFunction: 'setError',
-          },
-          {
-            Label: 'Set Warning',
-            UserMenuItemClickedFunction: 'setWarning',
-          },
-          {
-            Label: 'Set Success',
-            UserMenuItemClickedFunction: 'setSuccess',
-          },
-          {
-            Label: 'Set Info',
-            UserMenuItemClickedFunction: 'setInfo',
-          },
-        ],
       },
     ],
   },
@@ -75,70 +42,72 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Column Menu Demo',
-    userInterfaceOptions: {
+    menuOptions: {
       showAdaptableColumnMenu: (
         menuItem: AdaptableMenuItem,
-        menuInfo: MenuInfo
+        menuContext: MenuContext
       ) => {
         if (
-          menuInfo.Column.ColumnId === 'ContactName' &&
-          (menuItem.FunctionName === 'CustomSort' ||
-            menuItem.FunctionName === 'CellSummary')
+          menuContext.adaptableColumn.ColumnId === 'ContactName' &&
+          (menuItem.module === 'CustomSort' ||
+            menuItem.module === 'FormatColumn')
         ) {
           return false;
         }
-        if (menuInfo.Column.ColumnId === 'CustomerReference') {
+        if (menuContext.adaptableColumn.ColumnId === 'CustomerReference') {
           return false;
         }
         return true;
       },
+      columnMenuItems: [
+        {
+          label: 'Floate Dashboard',
+          onClick: (menuContext: MenuContext) => {
+            adaptableApi.dashboardApi.floatDashboard();
+          },
+          shouldRender: (menuContext: MenuContext) => {
+            return menuContext.adaptableColumn.Sortable;
+          },
+        },
+        {
+          label: 'Set System Status',
+          subMenuItems: [
+            {
+              label: 'Set Error',
+              onClick: (menuContext: MenuContext) => {
+                adaptableApi.systemStatusApi.setErrorSystemStatus(
+                  'System Down'
+                );
+              },
+            },
+            {
+              label: 'Set Warning',
+              onClick: (menuContext: MenuContext) => {
+                adaptableApi.systemStatusApi.setWarningSystemStatus(
+                  'System Slow'
+                );
+              },
+            },
+            {
+              label: 'Set Success',
+              onClick: (menuContext: MenuContext) => {
+                adaptableApi.systemStatusApi.setSuccessSystemStatus(
+                  'System Fine'
+                );
+              },
+            },
+            {
+              label: 'Set Info',
+              onClick: (menuContext: MenuContext) => {
+                adaptableApi.systemStatusApi.setInfoSystemStatus(
+                  'Demos working fine'
+                );
+              },
+            },
+          ],
+        },
+      ],
     },
-    userFunctions: [
-      {
-        type: 'UserMenuItemClickedFunction',
-        name: 'floatDashboard',
-        handler() {
-          adaptableApi.dashboardApi.floatDashboard();
-        },
-      },
-      {
-        type: 'UserMenuItemClickedFunction',
-        name: 'setError',
-        handler() {
-          adaptableApi.systemStatusApi.setErrorSystemStatus('System Down');
-        },
-      },
-      {
-        type: 'UserMenuItemClickedFunction',
-        name: 'setWarning',
-        handler() {
-          adaptableApi.systemStatusApi.setWarningSystemStatus('System Slow');
-        },
-      },
-      {
-        type: 'UserMenuItemClickedFunction',
-        name: 'setSuccess',
-        handler() {
-          adaptableApi.systemStatusApi.setSuccessSystemStatus('System Fine');
-        },
-      },
-      {
-        type: 'UserMenuItemClickedFunction',
-        name: 'setInfo',
-        handler() {
-          adaptableApi.systemStatusApi.setInfoSystemStatus(
-            'Demos working fine'
-          );
-        },
-      },
-      {
-        type: 'UserMenuItemShowPredicate',
-        name: 'isColumnSortable',
-        handler(menuInfo) {
-          return menuInfo.Column.Sortable;
-        },
-      },
-    ],
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
     plugins: [charts()],

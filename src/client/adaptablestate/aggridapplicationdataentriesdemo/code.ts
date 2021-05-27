@@ -9,8 +9,8 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
-  AdaptableFunctionName,
   AccessLevel,
+  AdaptableModule,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -33,9 +33,7 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
-  Entitlements: {
-    EntitlementLookUpFunction: 'getEntitlementsByRole',
-  },
+
   Layout: {
     CurrentLayout: 'Orders View',
     Layouts: [
@@ -86,15 +84,16 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Application Data Entries Demo',
-    userFunctions: [
-      {
-        type: 'EntitlementLookUpFunction',
-        name: 'getEntitlementsByRole',
-        handler(functionName: AdaptableFunctionName) {
-          return getMockPermissionServerResult(functionName);
-        },
+    entitlementOptions: {
+      moduleEntitlements: (
+        module: AdaptableModule,
+        userName: string,
+        adaptableId: string
+      ) => {
+        return getMockPermissionServerResult(module);
       },
-    ],
+    },
+
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
@@ -103,11 +102,9 @@ export default async (columnDefs: any[], rowData: any[]) => {
   return { adaptableOptions, adaptableApi };
 };
 
-function getMockPermissionServerResult(
-  functionName: AdaptableFunctionName
-): AccessLevel {
+function getMockPermissionServerResult(module: AdaptableModule): AccessLevel {
   let role: AccessLevel = 'ReadOnly';
-  switch (functionName) {
+  switch (module) {
     case 'Layout':
       let dataEntry = adaptableApi?.applicationApi.getApplicationDataEntryByKey(
         'Role'

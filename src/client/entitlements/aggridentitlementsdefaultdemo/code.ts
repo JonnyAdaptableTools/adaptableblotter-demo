@@ -9,8 +9,6 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
-  AdaptableFunctionName,
-  AccessLevel,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -22,35 +20,6 @@ const demoConfig: PredefinedConfig = {
       {
         Name: 'Toolbars',
         Toolbars: ['QuickSearch', 'Export', 'Layout'],
-      },
-    ],
-  },
-  Entitlements: {
-    DefaultAccessLevel: 'Hidden',
-    FunctionEntitlements: [
-      {
-        FunctionName: 'QuickSearch',
-        AccessLevel: 'Full',
-      },
-      {
-        FunctionName: 'GridInfo',
-        AccessLevel: 'Full',
-      },
-      {
-        FunctionName: 'CustomSort',
-        AccessLevel: 'Full',
-      },
-      {
-        FunctionName: 'Dashboard',
-        AccessLevel: 'Hidden',
-      },
-      {
-        FunctionName: 'Export',
-        AccessLevel: 'ReadOnly',
-      },
-      {
-        FunctionName: 'Layout',
-        AccessLevel: 'ReadOnly',
       },
     ],
   },
@@ -72,6 +41,35 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Entitlements Default Demo',
+    entitlementOptions: {
+      defaultAccessLevel: 'Hidden',
+      moduleEntitlements: [
+        {
+          adaptableModule: 'QuickSearch',
+          accessLevel: 'Full',
+        },
+        {
+          adaptableModule: 'GridInfo',
+          accessLevel: 'Full',
+        },
+        {
+          adaptableModule: 'CustomSort',
+          accessLevel: 'Full',
+        },
+        {
+          adaptableModule: 'Dashboard',
+          accessLevel: 'Hidden',
+        },
+        {
+          adaptableModule: 'Export',
+          accessLevel: 'ReadOnly',
+        },
+        {
+          adaptableModule: 'Layout',
+          accessLevel: 'ReadOnly',
+        },
+      ],
+    },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

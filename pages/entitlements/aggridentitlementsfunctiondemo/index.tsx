@@ -11,25 +11,9 @@ export default () => {
       description={
         <div>
           <p>
-            Another way to provide Entitlements in Predefined Config is via a
-            Function (the <b>EntitlementLookUpFunction</b> property).
-          </p>
-          <p>
-            Note: you provide the <b>name</b> of function in{' '}
-            <a
-              href="https://docs.adaptabletools.com/docs/predefined-config/entitlements-config"
-              target="_blank"
-            >
-              Entitlements Predefined Config
-            </a>
-            , but provide the <b>actual function implementation</b> in{' '}
-            <a
-              href="https://docs.adaptabletools.com/docs/user-functions/entitlement-lookup-user-function"
-              target="_blank"
-            >
-              Entitlement Look Up User Function
-            </a>
-            .
+            Another way to provide Entitlements in Adaptable Options is via a
+            JavaScript function (which also uses the <b>moduleEntitlement</b>{' '}
+            property).
           </p>
           <p>
             This allows you to use an external permissioning or entitlment
@@ -39,7 +23,7 @@ export default () => {
           <p>
             The function will be run each time an Entitlement is required. It
             receives the id of the AdapTable instance, the current user, and the
-            Function and it returns an AccessLevel.
+            Module and it returns an AccessLevel.
           </p>
           <p>
             If the function returns nothing, the Entitlement is given the
@@ -52,16 +36,16 @@ export default () => {
             In this example the function does 3 things:
             <ul>
               <li>
-                For a list of editing-based Functions it returns an AccessLevel
-                of <i>Hidden</i> (presumably it wants a non-editable grid).
+                For a list of editing-based Modules it returns an AccessLevel of{' '}
+                <i>Hidden</i> (presumably it wants a non-editable grid).
               </li>
               <li>
-                For some other functions it mimics a call to an external
+                For some other Modules it mimics a call to an external
                 Permissions Service (which returns an AccessLevel of{' '}
                 <i>ReadOnly</i>)
               </li>
               <li>
-                For all other AdapTable functions it does nothing meaning that
+                For all other AdapTable Modules it does nothing meaning that
                 they will use the Entitlement set by the DefaultAccessLevel
                 property.
               </li>
@@ -72,32 +56,11 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/key-topics/entitlements"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/entitlements-options"
             target="_blank"
           >
-            Entitlements Guide
+            Entitlements Options
           </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/user-functions/entitlement-lookup-user-function"
-            target="_blank"
-          >
-            Entitlement Look Up User Function
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/predefined-config/entitlements-config"
-            target="_blank"
-          >
-            Entitlements Config
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/adaptable-api/entitlements-api"
-            target="_blank"
-          >
-            Entitlements Api
-          </a>
         </div>
       }
     />

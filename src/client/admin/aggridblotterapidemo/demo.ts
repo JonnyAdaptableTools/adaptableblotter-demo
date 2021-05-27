@@ -34,9 +34,7 @@ export default async () => {
   };
 
   return {
-    unload: () => {
-      adaptableOptions.auditOptions = undefined;
-    },
+    unload: () => {},
     code,
   };
 };

@@ -5,7 +5,7 @@ export default () => {
   return (
     <DynamicDemoPage
       demo={import('../../../src/client/lookups/aggridpermittedvaluesdemo')}
-      pageTitle={'Permitted Values Demo (User Inferface State)'}
+      pageTitle={'Permitted Values Demo (User Inferface Options)'}
       description={
         <div>
           <p>
@@ -17,12 +17,12 @@ export default () => {
             It will first look for any Permitted Values for that column, set via
             the{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/predefined-config/user-interface-config"
+              href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/user-interface-options#permittedvaluesitems"
               target="_blank"
             >
               PermittedValuesItems
             </a>{' '}
-            property in UserInterface State - where you can provide either a
+            property in UserInterface Options - where you can provide either a
             list or a function.
           </p>
           <p>
@@ -49,10 +49,10 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/predefined-config/user-interface-config#permittedvaluesitems"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/user-interface-options#permittedvaluesitems"
             target="_blank"
           >
-            Predefined Config
+            User Interface Options
           </a>{' '}
           |{' '}
           <a

@@ -9,8 +9,8 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
-  AdaptableFunctionName,
   AccessLevel,
+  AdaptableModule,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -25,9 +25,7 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
-  Entitlements: {
-    EntitlementLookUpFunction: 'entitlementServerLookUpFunction',
-  },
+
   Layout: {
     CurrentLayout: 'Orders View',
     Layouts: [
@@ -67,8 +65,10 @@ const demoConfig: PredefinedConfig = {
     CurrentReport: 'My Team Big Invoice',
     Reports: [
       {
-        Expression:
-          '[Employee] IN ("Robert King", "Margaret Peacock", "Anne Dodsworth") AND [InvoicedCost] > 1000 ',
+        Query: {
+          BooleanExpression:
+            '[Employee] IN ("Robert King", "Margaret Peacock", "Anne Dodsworth") AND [InvoicedCost] > 1000 ',
+        },
         Name: 'My Team Big Invoice',
         ReportColumnScope: 'AllColumns',
         ReportRowScope: 'ExpressionRows',
@@ -93,35 +93,28 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Entitlements Function Demo',
-    userFunctions: [
-      {
-        type: 'EntitlementLookUpFunction',
-        name: 'entitlementServerLookUpFunction',
-        handler(
-          functionName: AdaptableFunctionName,
-          userName: string,
-          adaptableId: string
-        ) {
-          switch (functionName) {
-            // We want a readonly grid so lets hide all editing functions
-            case 'BulkUpdate':
-            case 'Alert':
-            case 'PlusMinus':
-            case 'SmartEdit':
-            case 'Shortcut':
-              return 'Hidden';
-            case 'Query':
-            case 'Export':
-            case 'Layout':
-              return getMockPermissionServerResult(
-                functionName,
-                userName,
-                adaptableId
-              );
-          }
-        },
+    entitlementOptions: {
+      moduleEntitlements: (
+        module: AdaptableModule,
+        userName: string,
+        adaptableId: string
+      ) => {
+        switch (module) {
+          // We want a readonly grid so lets hide all editing modules
+          case 'BulkUpdate':
+          case 'Alert':
+          case 'PlusMinus':
+          case 'SmartEdit':
+          case 'Shortcut':
+            return 'Hidden';
+          case 'Query':
+          case 'Export':
+          case 'Layout':
+            return getMockPermissionServerResult(module, userName, adaptableId);
+        }
       },
-    ],
+    },
+
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
@@ -131,7 +124,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
 };
 
 function getMockPermissionServerResult(
-  functionName: AdaptableFunctionName,
+  module: AdaptableModule,
   userName: string,
   adaptableId: string
 ): AccessLevel {

@@ -23,18 +23,7 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
-  Entitlements: {
-    FunctionEntitlements: [
-      {
-        FunctionName: 'Layout',
-        AccessLevel: 'Full',
-      },
-      {
-        FunctionName: 'Query',
-        AccessLevel: 'Hidden',
-      },
-    ],
-  },
+
   Layout: {
     CurrentLayout: 'ReadOnly View',
     Layouts: [
@@ -89,6 +78,18 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Read Only Objects Demo',
+    entitlementOptions: {
+      moduleEntitlements: [
+        {
+          adaptableModule: 'Layout',
+          accessLevel: 'Full',
+        },
+        {
+          adaptableModule: 'Query',
+          accessLevel: 'Hidden',
+        },
+      ],
+    },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

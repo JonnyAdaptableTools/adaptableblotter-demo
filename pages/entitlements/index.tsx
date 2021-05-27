@@ -37,13 +37,12 @@ export default () => {
         <div>
           <h4>Entitlement Demos</h4>
           <p>
-            As well as allowing you create objects for users to have access to
-            when the system starts for the first time, Predefined Config also
-            includes Entitlments (also known as Permissions).
+            Adaptable Options includes an 'entitlementOptions' property enabling
+            you to set Entitlments (also known as Permissions) for your
+            AdapTable Modules and objects.
           </p>
           <p>
-            For each AdapTable <i>Function</i> you can set the Entitlement to
-            be:
+            For each AdapTable <i>Module</i> you can set the Entitlement to be:
             <ul>
               <li>
                 <i>Full</i> - this is the Default (though the default can be

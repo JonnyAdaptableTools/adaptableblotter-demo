@@ -16,17 +16,17 @@ export default () => {
           </p>
           <p>
             If not provided this property will default to 'Full' which means
-            that every Function will be available and you need to set those that
+            that every Module will be available and you need to set those that
             are not.
           </p>
           <p>
             You can change this default behaviour by, for example, setting the
-            DefaultAccessLevel to 'Hidden', so that only those Functions
-            explicitly entitled will be available.
+            DefaultAccessLevel to 'Hidden', so that only those Module explicitly
+            entitled will be available.
           </p>
           <p>
             In this example we have set the DefaultAccessLevel to 'Hidden' and
-            then explicity entitled just those Functions we want our users to
+            then explicity entitled just those Modules we want our users to
             access.
           </p>
         </div>
@@ -34,25 +34,11 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/key-topics/entitlements"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/entitlements-options"
             target="_blank"
           >
-            Entitlements Guide
+            Entitlements Options
           </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/predefined-config/entitlements-config"
-            target="_blank"
-          >
-            Entitlements Config
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/adaptable-api/entitlements-api"
-            target="_blank"
-          >
-            Entitlements Api
-          </a>
         </div>
       }
     />

@@ -29,8 +29,10 @@ const demoConfig: PredefinedConfig = {
         Style: {
           ForeColor: '#008000',
         },
-        Predicate: {
-          PredicateId: 'Positive',
+        Rule: {
+          Predicate: {
+            PredicateId: 'Positive',
+          },
         },
       },
       {
@@ -40,8 +42,10 @@ const demoConfig: PredefinedConfig = {
         Style: {
           ForeColor: '#ff0000',
         },
-        Predicate: {
-          PredicateId: 'Negative',
+        Rule: {
+          Predicate: {
+            PredicateId: 'Negative',
+          },
         },
       },
       {
@@ -53,9 +57,11 @@ const demoConfig: PredefinedConfig = {
           FontStyle: 'Italic',
           ForeColor: '#000000',
         },
-        Predicate: {
-          PredicateId: 'GreaterThan',
-          Inputs: [60],
+        Rule: {
+          Predicate: {
+            PredicateId: 'GreaterThan',
+            Inputs: [60],
+          },
         },
         ExcludeGroupedRows: true,
       },
@@ -66,8 +72,10 @@ const demoConfig: PredefinedConfig = {
         Style: {
           ClassName: 'employeeStyle',
         },
-        Predicate: {
-          PredicateId: 'new_starter',
+        Rule: {
+          Predicate: {
+            PredicateId: 'new_starter',
+          },
         },
       },
       {
@@ -77,7 +85,9 @@ const demoConfig: PredefinedConfig = {
         Style: {
           BackColor: '#d3d3d3',
         },
-        Expression: '[InvoicedCost] > 1000',
+        Rule: {
+          BooleanExpression: '[InvoicedCost] > 1000',
+        },
       },
     ],
   },

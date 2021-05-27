@@ -32,7 +32,9 @@ const demoConfig: PredefinedConfig = {
         Style: {
           BackColor: '#87cefa',
         },
-        Expression: "[currency] IN ('EUR', 'USD') ",
+        Rule: {
+          BooleanExpression: "[currency] IN ('EUR', 'USD') ",
+        },
       },
     ],
   },

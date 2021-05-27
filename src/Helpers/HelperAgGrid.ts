@@ -205,11 +205,6 @@ export class HelperAgGrid {
         vendorContainer: gridName,
         adaptableContainer: abName,
       },
-      chartOptions: {
-        displayOnStartUp: true,
-        showModal: false,
-        pieChartMaxItems: 50,
-      },
     };
     return adaptableOptions;
   }

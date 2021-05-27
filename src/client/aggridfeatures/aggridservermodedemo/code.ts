@@ -64,6 +64,19 @@ export default async (columnDefs: ColDef[]) => {
     primaryKey: 'tradeId',
     userName: 'Demo User',
     adaptableId: 'Server Row Model Demo',
+    userInterfaceOptions: {
+      permittedValues: [
+        {
+          scope: {
+            All: true,
+          },
+          values: (column: AdaptableColumn) => {
+            // Retrieve the unique column values (from the server)
+            return fakeServer.getUniqueColumnValues(column);
+          },
+        },
+      ],
+    },
     predefinedConfig: {
       Dashboard: {
         Tabs: [
@@ -73,33 +86,11 @@ export default async (columnDefs: ColDef[]) => {
           },
         ],
       },
-      UserInterface: {
-        PermittedValuesItems: [
-          {
-            Scope: {
-              All: true,
-            },
-            GetColumnValuesFunction: 'GetUniqueColumnValues',
-          },
-        ],
-      },
     },
     vendorGrid: {
       ...gridOptions,
       modules: AllEnterpriseModules,
     },
-    // provide an implementation for the 'GetColumnValuesFunction' to get unique values
-    // this is paired with PermittedValues in PredefinedConfig
-    userFunctions: [
-      {
-        name: 'GetUniqueColumnValues',
-        type: 'GetColumnValuesFunction',
-        handler(column: AdaptableColumn) {
-          // Retrieve the unique column values (from the server)
-          return fakeServer.getUniqueColumnValues(column);
-        },
-      },
-    ],
   };
 
   const adaptableApi = await Adaptable.init(adaptableOptions);
@@ -416,20 +407,6 @@ class FakeServer {
             } else if (predicate.PredicateId == 'InFuture') {
               matchingRows = matchingRows.filter((t: any) =>
                 isFuture(t[columnId])
-              );
-            } else if (predicate.PredicateId == 'NextWorkDay') {
-              matchingRows = matchingRows.filter((t: any) =>
-                isSameDay(
-                  t[columnId],
-                  this.adaptableApi.calendarApi.getNextWorkingDay()
-                )
-              );
-            } else if (predicate.PredicateId == 'NextWorkDay') {
-              matchingRows = matchingRows.filter((t: any) =>
-                isSameDay(
-                  t[columnId],
-                  this.adaptableApi.calendarApi.getPreviousWorkingDay()
-                )
               );
             }
             break;

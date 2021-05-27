@@ -36,10 +36,6 @@ export default () => {
             that match their needs.
           </p>
           <p>
-            Additionally Predefined Configuration will include 'Entitlements' -
-            stipulating which AdapTable functions they are allowed to access.
-          </p>
-          <p>
             It can also include <b>Application Data Entries</b> which are
             bespoke key / value pairs allowing devs to persist their own items
             in the State.

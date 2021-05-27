@@ -21,18 +21,24 @@ const demoConfig: PredefinedConfig = {
   CalculatedColumn: {
     CalculatedColumns: [
       {
-        ColumnExpression: '[ItemCost] / [ItemCount]',
+        Query: {
+          ScalarExpression: '[ItemCost] / [ItemCount]',
+        },
         ColumnId: 'AvgCost',
         FriendlyName: 'Avg Item Cost',
       },
       {
-        ColumnExpression: '([ItemCost] * [ItemCount])- [PackageCost]',
+        Query: {
+          ScalarExpression: '([ItemCost] * [ItemCount])- [PackageCost]',
+        },
         ColumnId: 'Profit',
         FriendlyName: 'profit',
       },
       {
-        ColumnExpression:
-          '[ItemCost] > 100 ? "High" : [ItemCost] > 50 ? "Medium": "Low"',
+        Query: {
+          ScalarExpression:
+            '[ItemCost] > 100 ? "High" : [ItemCost] > 50 ? "Medium": "Low"',
+        },
         ColumnId: 'Comment',
         FriendlyName: 'Comment',
         CalculatedColumnSettings: {
@@ -43,13 +49,17 @@ const demoConfig: PredefinedConfig = {
         },
       },
       {
-        ColumnExpression:
-          'max([ItemCost], [OrderCost], [InvoicedCost], ([PackageCost]*10))',
+        Query: {
+          ScalarExpression:
+            'max([ItemCost], [OrderCost], [InvoicedCost], ([PackageCost]*10))',
+        },
         ColumnId: 'HighCost',
         FriendlyName: 'Highest Cost',
       },
       {
-        ColumnExpression: '[ShippedDate] > ADD_DAYS([OrderDate] , 4)',
+        Query: {
+          ScalarExpression: '[ShippedDate] > ADD_DAYS([OrderDate] , 4)',
+        },
         ColumnId: 'ShipDelay',
         FriendlyName: 'Ship Delay',
         CalculatedColumnSettings: {
@@ -59,7 +69,9 @@ const demoConfig: PredefinedConfig = {
       },
       {
         // we will add the Display Format separately
-        ColumnExpression: '[OrderCost]*0.2',
+        Query: {
+          ScalarExpression: '[OrderCost]*0.2',
+        },
         ColumnId: 'Tax',
         FriendlyName: 'Tax',
       },
@@ -74,7 +86,9 @@ const demoConfig: PredefinedConfig = {
         Style: {
           ForeColor: '#008000',
         },
-        Expression: '[Profit] > 0',
+        Rule: {
+          BooleanExpression: '[Profit] > 0',
+        },
       },
       {
         Scope: {
@@ -83,7 +97,9 @@ const demoConfig: PredefinedConfig = {
         Style: {
           ForeColor: '#ff0000',
         },
-        Expression: '[Profit] < 0',
+        Rule: {
+          BooleanExpression: '[Profit] < 0',
+        },
       },
     ],
   },
@@ -198,7 +214,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
     adaptableId: 'Calculated Column Demo',
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
-    queryOptions: {
+    searchOptions: {
       ignoreCaseInQueries: false,
     },
   };

@@ -31,9 +31,12 @@ export default () => {
             Typically you will ship your AdapTable instance with Predefined
             Configuration so that your users open their application at first use
             and see it pre-loaded with Searches, Styles, Edit Rules, Reports etc
-            that match their needs. Additionally Predefined Configuration will
-            include 'Entitlements' - stipulating which AdapTable functions they
-            are allowed to access.
+            that match their needs.{' '}
+          </p>
+          <p>
+            Additionally you will add Adaptable Options which will include
+            'Entitlements' - stipulating which AdapTable Modules they are
+            allowed to access.
           </p>
           <p>
             However we have added a <b>No Config Demo</b> with NO Predefined

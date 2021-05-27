@@ -71,14 +71,15 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'Country',
     userName: 'Demo User',
     adaptableId: 'Pie Charts Demo',
-    chartOptions: {
-      displayOnStartUp: true,
-      showModal: false,
-      pieChartMaxItems: 50,
-    },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
-    plugins: [charts()],
+    plugins: [
+      charts({
+        displayOnStartUp: true,
+        showModal: false,
+        pieChartMaxItems: 50,
+      }),
+    ],
   };
   adaptableApi = await Adaptable.init(adaptableOptions);
 

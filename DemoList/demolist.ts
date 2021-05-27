@@ -579,36 +579,6 @@ export function getDemoPageStructure(): DemoPageStructure {
         ],
       },
       {
-        CategoryName: 'Audit Log',
-        Link: '/auditlog',
-        Pages: [
-          {
-            Name: 'Audit to Channel',
-            Link: '/auditlog/aggridauditchanneldemo',
-            Description:
-              'Sends all Audit Log messages to an Http Channel so you can hook it up to listening software like Elastic Stack for full oversight of everything that takes place in AdapTable.',
-          },
-          {
-            Name: 'Audit to Console',
-            Link: '/auditlog/aggridauditconsoledemo',
-            Description:
-              'Sends all Audit Log messages to the Console - particularly useful for Support or for when debugging.',
-          },
-          {
-            Name: 'Audit as Event',
-            Link: '/auditlog/aggridauditeventdemo',
-            Description:
-              'Publishes an event whenever an Audit Log message is triggered - you can listen to Audit Events the same way as for all AdapTable events.',
-          },
-          {
-            Name: 'Audit as Alert',
-            Link: '/auditlog/aggridauditalertdemo',
-            Description:
-              'Fires an AdapTable Alert whenever an Audit Log message is triggered - ideally used for more occasional scenarios (e.g. the Function Applied Audit type).',
-          },
-        ],
-      },
-      {
         CategoryName: 'Admin',
         Link: '/admin',
         Pages: [
@@ -689,7 +659,7 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Entitlements: List',
             Link: '/entitlements/aggridentitlementslistdemo',
             Description:
-              'Provide a list at in Predefined Config specifying which functions Users are permissioned for.',
+              'Provide a list of Entitlements in Entitlement Options specifying which Modules Users are permissioned for.',
           },
           {
             Name: 'Entitlements: Func',
@@ -701,13 +671,13 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Entitlements: Default',
             Link: '/entitlements/aggridentitlementsdefaultdemo',
             Description:
-              'Set a default Entitlement Access Level to be used if not Entitlement is explicitly provided.',
+              'Set a default Entitlement Access Level to be used if no Entitlement is explicitly provided.',
           },
           {
             Name: 'Read Only Objects',
             Link: '/entitlements/aggridreadonlyobjectsdemo',
             Description:
-              'Adaptable Objects in Predefined Config can be ReadOnly which will override the Function Entitlement of "Full".',
+              'Adaptable Objects in Predefined Config can be ReadOnly which will override the Module Entitlement of "Full".',
           },
         ],
       },
@@ -895,6 +865,12 @@ export function getDemoPageStructure(): DemoPageStructure {
             Link: '/events/searchchangedeventdemo',
             Description:
               'Event that fires whenever any of state elements in the Search or Filter related functions change',
+          },
+          {
+            Name: 'Adaptable State Changed',
+            Link: '/events/adaptablestatechangeddemo',
+            Description:
+              'Listens to ALL Adaptable State changes enabling a full Audit of user actions, and data edits',
           },
         ],
       },

@@ -41,7 +41,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Query Max Items Displayed Demo',
-    queryOptions: {
+    searchOptions: {
       maxColumnValueItemsDisplayed: 20,
     },
     predefinedConfig: demoConfig,
