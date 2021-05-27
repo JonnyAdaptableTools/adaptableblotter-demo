@@ -16,12 +16,12 @@ export default () => {
           <p>
             However sometimes you might want to provide AdapTable with a list of
             allowed values for lookups or filtering. You do this through the{' '}
-            <b>getColumnValues</b> property of{' '}
+            <b>permittedValues</b> property of{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/adaptable-options/query-options"
+              href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/user-interface-options"
               target="_blank"
             >
-              Query Options
+              User Interface Options
             </a>
             .
           </p>
