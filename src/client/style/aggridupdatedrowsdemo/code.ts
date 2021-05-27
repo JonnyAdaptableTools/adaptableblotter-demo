@@ -16,12 +16,29 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleButtons: ['UpdatedRow'],
+    VisibleButtons: ['Alert'],
   },
-  UpdatedRow: {
-    EnableUpdatedRow: true,
-    JumpToRow: true,
-    NeutralColor: 'lightblue',
+  Alert: {
+    FlashingAlertDefinitions: [
+      {
+        Scope: { All: true },
+        Rule: {
+          Predicate: {
+            PredicateId: 'Any',
+          },
+        },
+        FlashTarget: 'row',
+        UpChangeStyle: {
+          BackColor: '#008000',
+        },
+        DownChangeStyle: {
+          BackColor: '#FF0000',
+        },
+        NeutralChangeStyle: {
+          BackColor: 'lightblue',
+        },
+      },
+    ],
   },
 } as PredefinedConfig;
 

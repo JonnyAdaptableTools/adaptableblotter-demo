@@ -20,7 +20,7 @@ const demoConfig: PredefinedConfig = {
   },
   Dashboard: {
     IsCollapsed: true,
-    HomeToolbarTitle: 'ToolPanel Demo',
+    DashboardTitle: 'ToolPanel Demo',
   },
 } as PredefinedConfig;
 

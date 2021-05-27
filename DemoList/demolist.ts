@@ -202,7 +202,7 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Style a column so that each cell is shaded in proportion of its value to that of the maximum value.',
           },
           {
-            Name: 'Flashing Cell',
+            Name: 'Flashing Alerts',
             Link: '/style/aggridflashingcelldemo',
             Description:
               'Have cells flash briefly when their contents change (using colours and duration you specify).',

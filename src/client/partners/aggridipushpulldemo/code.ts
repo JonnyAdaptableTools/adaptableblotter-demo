@@ -9,7 +9,6 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
-  LiveDataChangedEventArgs,
   LiveDataChangedInfo,
   IPushPullApi,
 } from '@adaptabletools/adaptable/types';
@@ -42,56 +41,32 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
-  FlashingCell: {
-    FlashingCells: [
+  Alert: {
+    FlashingAlertDefinitions: [
       {
-        ColumnId: 'price',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 500,
-        IsLive: true,
-        UpColor: '#008000',
-      },
-      {
-        ColumnId: 'bid',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 500,
-        IsLive: true,
-        UpColor: '#008000',
-      },
-      {
-        ColumnId: 'ask',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 500,
-        IsLive: true,
-        UpColor: '#008000',
-      },
-      {
-        ColumnId: 'bloombergAsk',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 500,
-        IsLive: true,
-        UpColor: '#008000',
-      },
-      {
-        ColumnId: 'bloombergBid',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 500,
-        IsLive: true,
-        UpColor: '#008000',
-      },
-      {
-        ColumnId: 'notional',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 500,
-        IsLive: true,
-        UpColor: '#008000',
-      },
-      {
-        ColumnId: 'changeOnYear',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 500,
-        IsLive: true,
-        UpColor: '#008000',
+        Scope: {
+          ColumnIds: [
+            'changeOnYear',
+            'notional',
+            'price',
+            'bloombergAsk',
+            'bloombergBid',
+            'ask',
+            'bid',
+          ],
+        },
+        UpChangeStyle: {
+          BackColor: '#008000',
+        },
+        DownChangeStyle: {
+          BackColor: '#FF0000',
+        },
+        FlashDuration: 500,
+        Rule: {
+          Predicate: {
+            PredicateId: 'Any',
+          },
+        },
       },
     ],
   },
@@ -144,15 +119,13 @@ export default async (columnDefs: any[], rowData: any[]) => {
   adaptableApi.eventApi.on(
     'LiveDataChanged',
 
-    (liveDataChangedEventArgs: LiveDataChangedEventArgs) => {
-      let liveDataChangedInfo: LiveDataChangedInfo =
-        liveDataChangedEventArgs.data[0].id;
+    (liveDataChangedInfo: LiveDataChangedInfo) => {
       console.log('The Live Data Changed Event was triggered');
       console.log(liveDataChangedInfo);
       // get the username for the logged in user
       if (
-        liveDataChangedInfo.LiveDataTrigger == 'Connected' &&
-        liveDataChangedInfo.ReportDestination == 'ipushpull'
+        liveDataChangedInfo.liveDataTrigger == 'Connected' &&
+        liveDataChangedInfo.reportDestination == 'ipushpull'
       ) {
         console.log('logged in user: ' + ipushpullApi.getIPushPullUsername());
       }

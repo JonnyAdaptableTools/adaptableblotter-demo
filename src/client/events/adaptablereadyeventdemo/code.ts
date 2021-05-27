@@ -45,7 +45,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
   adaptableApi.eventApi.on(
     'AdaptableReady',
     (adaptableReadyInfo: AdaptableReadyInfo) => {
-      adaptableApi.quickSearchApi.applyQuickSearch('o*');
+      adaptableApi.quickSearchApi.runQuickSearch('o*');
       const gridOptions: GridOptions = adaptableReadyInfo.vendorGrid;
       gridOptions.onSelectionChanged = (event: SelectionChangedEvent) => {
         var rowCount = event.api.getSelectedNodes().length;

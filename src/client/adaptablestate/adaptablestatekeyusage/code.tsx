@@ -9,8 +9,9 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
-  DashboardButtonClickedEventArgs,
   AdaptableState,
+  DashboardButtonContext,
+  AdaptableButton,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -45,10 +46,12 @@ const view1Config: PredefinedConfig = {
           Variant: 'raised',
           Tone: 'neutral',
         },
+        ButtonClickedFunction: 'ToggleViewButton',
       },
       {
         Name: 'clear',
         Caption: 'Clear Views State',
+        ButtonClickedFunction: 'ClearViewButton',
       },
     ],
   },
@@ -107,30 +110,54 @@ const view1Config: PredefinedConfig = {
           FontWeight: 'Bold',
         },
       },
-    ],
-  },
-  GradientColumn: {
-    GradientColumns: [
       {
-        ColumnId: 'ChangeLastOrder',
-        NegativeValue: -41,
-        PositiveValue: 56,
-        NegativeColor: '#FF0000',
-        PositiveColor: '#00CC00',
-        BaseValue: 0,
+        Scope: {
+          ColumnIds: ['ChangeLastOrder'],
+        },
+        NumericColumnStyle: {
+          GradientStyle: {
+            CellRanges: [
+              {
+                Min: -41,
+                Max: 0,
+                Color: '#FF0000',
+                ReverseGradient: true,
+              },
+              {
+                Min: 0,
+                Max: 56,
+                Color: '#00CC00',
+              },
+            ],
+          },
+        },
       },
-    ],
-  },
-  PercentBar: {
-    PercentBars: [
       {
-        ColumnId: 'InvoicedCost',
-        Ranges: [
-          { Min: 0, Max: 500, Color: '#ff0000' },
-          { Min: 500, Max: 1000, Color: '#ffa500' },
-          { Min: 1000, Max: 3000, Color: '#008000' },
-        ],
-        ShowValue: false,
+        Scope: {
+          ColumnIds: ['InvoicedCost'],
+        },
+        NumericColumnStyle: {
+          PercentBarStyle: {
+            CellRanges: [
+              {
+                Min: 0,
+                Max: 500,
+                Color: '#ff0000',
+              },
+              {
+                Min: 500,
+                Max: 1000,
+                Color: '#ffa500',
+              },
+
+              {
+                Min: 1000,
+                Max: 3000,
+                Color: '#008000',
+              },
+            ],
+          },
+        },
       },
     ],
   },
@@ -139,22 +166,22 @@ const view1Config: PredefinedConfig = {
 // Create a second Config for View2 - this will contain DIFFERENT state to that for View1 Config
 const view2Config: PredefinedConfig = {
   Dashboard: {
-    HomeToolbarTitle: getToolbarTitle(),
-    VisibleButtons: ['Dashboard', 'Layout', 'GradientColumn', 'FormatColumn'],
+    DashboardTitle: getToolbarTitle(),
+    VisibleButtons: ['Dashboard', 'Layout', 'FormatColumn'],
     Tabs: [
       {
         Name: 'Toolbars',
         Toolbars: ['Export', 'Layout', 'CellSummary'],
       },
     ],
-    CustomButtons: [
+    DashboardButtons: [
       {
-        Name: 'ChangeView',
-        Caption: 'Click to toggle the View ',
+        Label: 'Click to toggle the View ',
         ButtonStyle: {
           Variant: 'raised',
           Tone: 'neutral',
         },
+        ButtonClickedFunction: 'ToggleViewButton',
       },
     ],
   },
@@ -241,6 +268,34 @@ export default async (columnDefs: any[], rowData: any[]) => {
         return result;
       },
     },
+    userFunctions: [
+      {
+        type: 'ButtonClickedFunction',
+        name: 'ToggleViewButton',
+        handler: (button: AdaptableButton, context: DashboardButtonContext) => {
+          currentView = currentView === views[0] ? views[1] : views[0];
+
+          let currentConfig =
+            currentView === views[0] ? view1Config : view2Config;
+
+          adaptableApi.configApi
+            .setAdaptableStateKey(currentView, {
+              predefinedConfig: currentConfig,
+            })
+            .then(() => {
+              adaptableApi.dashboardApi.setDashboardTitle(getToolbarTitle());
+            });
+        },
+      },
+      {
+        type: 'ButtonClickedFunction',
+        name: 'ClearViewButton',
+        handler: (button: AdaptableButton, context: DashboardButtonContext) => {
+          localStorage.clear();
+          window.location.href = window.location.href;
+        },
+      },
+    ],
     predefinedConfig: view1Config, // start off with View1 config
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
@@ -255,36 +310,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
         vendorGrid.api?.setRowData(rowData);
       }, 500);
     })
-  );
-
-  adaptableApi.eventApi.on(
-    'DashboardButtonClicked',
-    (dashboardButtonClickedEventArgs: DashboardButtonClickedEventArgs) => {
-      if (
-        dashboardButtonClickedEventArgs.data[0].id.dashboardButton.Name ==
-        'clear'
-      ) {
-        localStorage.clear();
-        window.location.href = window.location.href;
-      }
-      if (
-        dashboardButtonClickedEventArgs.data[0].id.dashboardButton.Name ==
-        'ChangeView'
-      ) {
-        currentView = currentView === views[0] ? views[1] : views[0];
-
-        let currentConfig =
-          currentView === views[0] ? view1Config : view2Config;
-
-        adaptableApi.configApi
-          .setAdaptableStateKey(currentView, {
-            predefinedConfig: currentConfig,
-          })
-          .then(() => {
-            adaptableApi.dashboardApi.setHomeToolbarTitle(getToolbarTitle());
-          });
-      }
-    }
   );
 
   return { adaptableOptions, adaptableApi };

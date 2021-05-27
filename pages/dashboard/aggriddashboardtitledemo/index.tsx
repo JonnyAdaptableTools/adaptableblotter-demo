@@ -13,10 +13,10 @@ export default () => {
             value of the 'adaptableId' property in <i>Adaptable Options</i>.
           </p>
           <p>
-            However you can change this via the <i>HomeToolbarTitle</i> property
+            However you can change this via the <i>DashboardTitle</i> property
             in{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/predefined-config/dashboard-config#hometoolbartitle"
+              href="https://v9-0--docs-adaptabletools.netlify.app/docs/predefined-config/dashboard-config"
               target="_blank"
             >
               Dashboard Predefined Config

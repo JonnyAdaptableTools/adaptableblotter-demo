@@ -38,12 +38,9 @@ export default () => {
           <p>AdapTable lets you send and receive messages.</p>
           <ul>{demoLinks}</ul>
           <p>
-            {' '}
-            Note: there is also the Audit Log which streams all actions in
-            AdapTable to a destination of your choice.
+            Click on the buttons below to see a demo for our Alert and Messaging
+            functions.
           </p>
-          Click on the buttons below to see a demo for our Alert and Messaging
-          functions.
         </div>
       }
     >

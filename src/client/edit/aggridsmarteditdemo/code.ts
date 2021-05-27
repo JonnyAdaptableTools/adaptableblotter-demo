@@ -15,18 +15,24 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
-  SmartEdit: {
-    SmartEditValue: 100,
-    MathOperation: 'Add',
-  },
-  FlashingCell: {
-    FlashingCells: [
+  Alert: {
+    FlashingAlertDefinitions: [
       {
-        ColumnId: 'InvoicedCost',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 500,
-        IsLive: true,
-        UpColor: '#008000',
+        Scope: {
+          ColumnIds: ['InvoicedCost'],
+        },
+        UpChangeStyle: {
+          BackColor: '#008000',
+        },
+        DownChangeStyle: {
+          BackColor: '#FF0000',
+        },
+        FlashDuration: 500,
+        Rule: {
+          Predicate: {
+            PredicateId: 'Any',
+          },
+        },
       },
     ],
   },

@@ -42,8 +42,7 @@ export default () => {
           <p>
             This has a very large number of properties which allow you complete
             control over how you set up your AdapTable instance, and we have
-            used many of them in the demos above (e.g. the Audit Log demo in the
-            Admin section).
+            used many of them in the demos above.
           </p>
           <p>
             This section contains a series of demos each of which highlights a

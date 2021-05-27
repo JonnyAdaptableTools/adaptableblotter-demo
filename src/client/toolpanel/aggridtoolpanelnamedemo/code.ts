@@ -17,7 +17,7 @@ var adaptableApi: AdaptableApi;
 const demoConfig: PredefinedConfig = {
   Dashboard: {
     IsFloating: true,
-    HomeToolbarTitle: 'TooPanel Name Demo',
+    DashboardTitle: 'TooPanel Name Demo',
   },
 } as PredefinedConfig;
 

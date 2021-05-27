@@ -23,10 +23,6 @@ export default () => {
             >
               Server Searching
             </a>
-            ,{' '}
-            <a href="../auditlog" target="_blank">
-              Audit Log
-            </a>
             , or{' '}
             <a
               href="https://docs.adaptabletools.com/docs/adaptable-options/state-options"

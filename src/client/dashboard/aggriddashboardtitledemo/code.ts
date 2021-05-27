@@ -16,7 +16,7 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    HomeToolbarTitle: 'New Dashboard Header Name',
+    DashboardTitle: 'New Dashboard Header Name',
     IsCollapsed: true,
   },
 } as PredefinedConfig;

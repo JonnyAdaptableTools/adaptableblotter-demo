@@ -152,6 +152,6 @@ export default async () => {
   // Step 7 (optional): Listen to the AdaptableReady event to do anything required at startup
   // Here we are using the AdaptableApi to run a quick search via code for any cell containing 'or'
   adaptableApi.eventApi.on('AdaptableReady', () => {
-    adaptableApi.quickSearchApi.applyQuickSearch('or');
+    adaptableApi.quickSearchApi.runQuickSearch('or');
   });
 };

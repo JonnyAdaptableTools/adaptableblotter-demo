@@ -20,38 +20,45 @@ const predefinedConfig = {
         Toolbars: ['Query', 'QuickSearch', 'Theme'],
       },
     ],
-    VisibleButtons: ['FlashingCells'],
+    VisibleButtons: ['Alert'],
     IsFloating: true,
   },
-  FlashingCell: {
-    FlashingCells: [
+
+  Alert: {
+    FlashingAlertDefinitions: [
       {
-        ColumnId: 'ChangeLastOrder',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 500,
-        IsLive: true,
-        UpColor: '#008000',
+        Scope: {
+          ColumnIds: ['ChangeLastOrder', 'ItemCost', 'OrderCost'],
+        },
+        UpChangeStyle: {
+          BackColor: '#008000',
+        },
+        DownChangeStyle: {
+          BackColor: '#FF0000',
+        },
+        FlashDuration: 500,
+        Rule: {
+          Predicate: {
+            PredicateId: 'Any',
+          },
+        },
       },
       {
-        ColumnId: 'ItemCost',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 500,
-        IsLive: true,
-        UpColor: '#008000',
-      },
-      {
-        ColumnId: 'OrderCost',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 500,
-        IsLive: true,
-        UpColor: '#008000',
-      },
-      {
-        ColumnId: 'InvoicedCost',
-        DownColor: '#ff6961',
-        FlashingCellDuration: 750,
-        IsLive: true,
-        UpColor: '#0000ff',
+        Scope: {
+          ColumnIds: ['InvoicedCost'],
+        },
+        UpChangeStyle: {
+          BackColor: '#0000ff',
+        },
+        DownChangeStyle: {
+          BackColor: '#ff6961',
+        },
+        FlashDuration: 750,
+        Rule: {
+          Predicate: {
+            PredicateId: 'Any',
+          },
+        },
       },
     ],
   },

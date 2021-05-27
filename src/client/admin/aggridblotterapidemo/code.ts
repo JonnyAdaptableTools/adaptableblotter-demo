@@ -127,7 +127,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
     if (element != null) {
       let searchValue = element.value;
       if (searchValue != null && searchValue != '') {
-        adaptableApi.quickSearchApi.applyQuickSearch(searchValue);
+        adaptableApi.quickSearchApi.runQuickSearch(searchValue);
       }
     }
   }

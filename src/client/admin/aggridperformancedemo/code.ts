@@ -70,28 +70,24 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
-  FlashingCell: {
-    FlashingCells: [
+  Alert: {
+    FlashingAlertDefinitions: [
       {
-        ColumnId: 'bid',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 500,
-        IsLive: true,
-        UpColor: '#008000',
-      },
-      {
-        ColumnId: 'ask',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 500,
-        IsLive: true,
-        UpColor: '#008000',
-      },
-      {
-        ColumnId: 'price',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 500,
-        IsLive: true,
-        UpColor: '#008000',
+        Scope: {
+          ColumnIds: ['price', 'ask', 'bid'],
+        },
+        UpChangeStyle: {
+          BackColor: '#008000',
+        },
+        DownChangeStyle: {
+          BackColor: '#FF0000',
+        },
+        FlashDuration: 500,
+        Rule: {
+          Predicate: {
+            PredicateId: 'Any',
+          },
+        },
       },
     ],
   },

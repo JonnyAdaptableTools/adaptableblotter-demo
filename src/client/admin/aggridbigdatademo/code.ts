@@ -15,50 +15,71 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
-  FlashingCell: {
-    FlashingCells: [
+  Alert: {
+    FlashingAlertDefinitions: [
       {
-        ColumnId: 'bid',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 500,
-        IsLive: true,
-        UpColor: '#008000',
-      },
-      {
-        ColumnId: 'ask',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 500,
-        IsLive: true,
-        UpColor: '#008000',
-      },
-      {
-        ColumnId: 'price',
-        DownColor: '#FF0000',
-        FlashingCellDuration: 500,
-        IsLive: true,
-        UpColor: '#008000',
+        Scope: {
+          ColumnIds: ['price', 'ask', 'bid'],
+        },
+        UpChangeStyle: {
+          BackColor: '#008000',
+        },
+        DownChangeStyle: {
+          BackColor: '#FF0000',
+        },
+        FlashDuration: 500,
+        Rule: {
+          Predicate: {
+            PredicateId: 'Any',
+          },
+        },
       },
     ],
   },
-  PercentBar: {
-    PercentBars: [
+  FormatColumn: {
+    FormatColumns: [
       {
-        ColumnId: 'changeOnYear',
-        Ranges: [
-          { Min: -0, Max: 50, Color: '#a52a2a' },
-          { Min: 51, Max: 100, Color: '#ffa500' },
-          { Min: 101, Max: 150, Color: '#006400' },
-        ],
+        Scope: {
+          ColumnIds: ['bidOfferSpread'],
+        },
+        NumericColumnStyle: {
+          GradientStyle: {
+            CellRanges: [
+              {
+                Min: 0,
+                Max: 0.5,
+                Color: '#006400',
+              },
+            ],
+          },
+        },
       },
-    ],
-  },
-  GradientColumn: {
-    GradientColumns: [
       {
-        ColumnId: 'bidOfferSpread',
-        PositiveValue: 0.5,
-        PositiveColor: '#006400',
-        BaseValue: 0,
+        Scope: {
+          ColumnIds: ['changeOnYear'],
+        },
+        NumericColumnStyle: {
+          PercentBarStyle: {
+            CellRanges: [
+              {
+                Min: 0,
+                Max: 50,
+                Color: '#a52a2a',
+              },
+              {
+                Min: 50,
+                Max: 100,
+                Color: '#ffa500',
+              },
+
+              {
+                Min: 100,
+                Max: 150,
+                Color: '#006400',
+              },
+            ],
+          },
+        },
       },
     ],
   },
