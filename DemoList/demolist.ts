@@ -180,44 +180,39 @@ export function getDemoPageStructure(): DemoPageStructure {
         ],
       },
       {
-        CategoryName: 'Styling',
-        Link: '/style',
+        CategoryName: 'Format Column',
+        Link: '/formatcolumn',
         Pages: [
           {
-            Name: 'Conditional Style',
-            Link: '/style/aggridconditionalstyledemo',
-            Description:
-              'Style cells, columns and rows in striking ways when their data matches rules that you create.',
-          },
-          {
             Name: 'Format Column',
-            Link: '/style/aggridformatcolumndemo',
+            Link: '/formatcolumn/aggridformatcolumndemo',
             Description:
               'Style an entire column so that it has a distinctive look.',
           },
           {
             Name: 'Gradient Column',
-            Link: '/style/aggridgradientcolumndemo',
+            Link: '/formatcolumn/aggridgradientcolumndemo',
             Description:
               'Style a column so that each cell is shaded in proportion of its value to that of the maximum value.',
           },
-          {
-            Name: 'Flashing Alerts',
-            Link: '/style/aggridflashingcelldemo',
-            Description:
-              'Have cells flash briefly when their contents change (using colours and duration you specify).',
-          },
-          {
-            Name: 'Updated Row',
-            Link: '/style/aggridupdatedrowsdemo',
-            Description:
-              'Colour (and jump to) rows as they update so you can see which rows have changed.',
-          },
+
           {
             Name: 'Percent Bar',
-            Link: '/style/aggridpercentbardemo',
+            Link: '/formatcolumn/aggridpercentbardemo',
             Description:
               'Show numeric columns as a bar, that is filled according to the cell value as a %.',
+          },
+        ],
+      },
+      {
+        CategoryName: 'Conditional Style',
+        Link: '/conditionalstyle',
+        Pages: [
+          {
+            Name: 'Conditional Style',
+            Link: '/formatcolumn/aggridconditionalstyledemo',
+            Description:
+              'Style cells, columns and rows in striking ways when their data matches rules that you create.',
           },
         ],
       },
@@ -458,6 +453,18 @@ export function getDemoPageStructure(): DemoPageStructure {
             Link: '/alertsmessages/aggridalertoverwritedemo',
             Description:
               'Create an Alert which provides users with the opportunity to provide a different, validated value when an intiial edit fails',
+          },
+          {
+            Name: 'Flashing Alerts',
+            Link: '/alertsmessages/aggridflashingalertsdemo',
+            Description:
+              'Have cells flash briefly when their contents change (using colours and duration you specify).',
+          },
+          {
+            Name: 'Updated Row',
+            Link: '/alertsmessages/aggridflashingrowsdemo',
+            Description:
+              'Colour (and jump to) rows as they update so you can see which rows have changed.',
           },
           {
             Name: 'System Status',

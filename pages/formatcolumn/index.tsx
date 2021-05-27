@@ -10,7 +10,7 @@ import DemoBox from '../../src/components/DemoBox';
 
 export default () => {
   let categoryPages = getDemoPageStructure().Categories.find(
-    c => c.CategoryName == 'Styling'
+    c => c.CategoryName == 'Format Column'
   )!.Pages;
 
   let demoLinks: any = categoryPages.map((page: DemoPage) => {
@@ -34,7 +34,7 @@ export default () => {
       pageTitle={'Style demos'}
       description={
         <div>
-          <h4>Styling Functions</h4>
+          <h4>Format Column</h4>
           <p>
             There are a number of different ways to style cells, columns, rows
             and the Grid itself.

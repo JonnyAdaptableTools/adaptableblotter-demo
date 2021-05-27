@@ -4,7 +4,7 @@ import DynamicDemoPage from '../../../src/Helpers/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/style/aggridgradientcolumndemo')}
+      demo={import('../../../src/client/formatcolumn/aggridgradientcolumndemo')}
       pageTitle={'Gradient Column Demo'}
       description={
         <div>

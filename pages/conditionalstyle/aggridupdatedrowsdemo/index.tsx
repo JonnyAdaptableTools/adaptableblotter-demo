@@ -4,7 +4,7 @@ import DynamicDemoPage from '../../../src/Helpers/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/style/aggridupdatedrowsdemo')}
+      demo={import('../../../src/client/alerts/aggridflashingrowsdemo')}
       pageTitle={'Updated Row Demo'}
       description={
         <div>

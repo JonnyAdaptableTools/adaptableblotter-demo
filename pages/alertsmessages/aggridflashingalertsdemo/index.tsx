@@ -4,8 +4,8 @@ import DynamicDemoPage from '../../../src/Helpers/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/style/aggridflashingcelldemo')}
-      pageTitle={'Flashing Cells Demo'}
+      demo={import('../../../src/client/alerts/aggridflashingalertsdemo')}
+      pageTitle={'Flashing Alerts Demo'}
       description={
         <div>
           <p>Flashing cells briefly appear when cell values' change.</p>
@@ -29,24 +29,10 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/flashing-cell-function"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/alert-module"
             target="_blank"
           >
-            Flashing Cells Function
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/predefined-config/flashing-cell-config"
-            target="_blank"
-          >
-            Flashing Cells Predefined Config
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/adaptable-api/flashing-cell-api"
-            target="_blank"
-          >
-            Flashing Cells API
+            Alerts Module
           </a>
         </div>
       }

@@ -11,6 +11,7 @@ import {
   AdaptableApi,
   Report,
   ReportData,
+  AdaptableFormData,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -62,9 +63,27 @@ const demoConfig: PredefinedConfig = {
             },
           ],
         },
+        onExport: (
+          report: Report,
+          reportData: ReportData,
+          customDestinationData?: AdaptableFormData
+        ) => {
+          // here you can send via your email client or to an endpoint or whatever you need
+          // in this example, we will just log the output to the console
+          // note that we include the customdestinationdata which was created in the UI
+          console.log('EMAIL');
+          console.log('report', report);
+          console.log('reportData', reportData);
+          console.log('customDestinationData', customDestinationData);
+        },
       },
       {
         Name: 'REST Endpoint',
+        onExport: (report: Report, reportData: ReportData) => {
+          console.log('EMAIL');
+          console.log('report', report);
+          console.log('reportData', reportData);
+        },
       },
     ],
   },
@@ -83,33 +102,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Custom Destination Demo',
-    /*
-    userFunctions: [
-      {
-        name: 'Email',
-        type: 'CustomExportDestinationFunction',
-        handler(report: Report, reportData: ReportData, customDestinationData) {
-          // here you can send via your email client or to an endpoint or whatever you need
-          // in this example, we will just log the output to the console
-          // note that we include the customdestinationdata which was created in the UI
-          console.log(report.Name);
-          console.log(
-            'will export to email:',
-            reportData,
-            customDestinationData
-          );
-        },
-      },
-      {
-        name: 'REST Endpoint',
-        type: 'CustomExportDestinationFunction',
-        handler(report: Report, reportData: ReportData) {
-          console.log(report.Name);
-          console.log('will send to a server endpoint:', reportData);
-        },
-      },
-    ],
-    */
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

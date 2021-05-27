@@ -57,7 +57,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'tradeId',
     userName: 'Demo User',
-    adaptableId: 'Updated Row Demo',
+    adaptableId: 'Flashing Rows Demo',
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

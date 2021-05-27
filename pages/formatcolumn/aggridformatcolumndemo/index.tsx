@@ -4,7 +4,7 @@ import DynamicDemoPage from '../../../src/Helpers/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/style/aggridformatcolumndemo')}
+      demo={import('../../../src/client/formatcolumn/aggridformatcolumndemo')}
       pageTitle={'Format Column Demo'}
       description={
         <div>
