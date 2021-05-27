@@ -71,7 +71,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
         columnScope: {
           ColumnIds: ['OrderId'],
         },
-        functionScope: ['filter', 'alert', 'validation', 'conditionalstyle'],
+        functionScope: ['filter', 'alert', 'conditionalstyle'],
         handler(params: PredicateDefHandlerParams) {
           let invoiced: number = params.node.data.InvoicedCost;
           let itemCount: number = params.node.data.ItemCount;

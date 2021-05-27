@@ -83,6 +83,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Custom Destination Demo',
+    /*
     userFunctions: [
       {
         name: 'Email',
@@ -108,6 +109,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
         },
       },
     ],
+    */
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

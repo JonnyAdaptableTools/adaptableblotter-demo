@@ -37,7 +37,7 @@ const demoConfig: PredefinedConfig = {
         },
 
         AlertProperties: {
-          ShowPopup: true,
+          DisplayNotification: true,
         },
       },
 
@@ -46,12 +46,14 @@ const demoConfig: PredefinedConfig = {
           ColumnIds: ['ItemCount'],
         },
         MessageType: 'Info',
-        Predicate: {
-          PredicateId: 'PercentChange',
-          Inputs: [100],
+        Rule: {
+          Predicate: {
+            PredicateId: 'PercentChange',
+            Inputs: [100],
+          },
         },
         AlertProperties: {
-          ShowPopup: false,
+          DisplayNotification: false,
         },
       },
     ],

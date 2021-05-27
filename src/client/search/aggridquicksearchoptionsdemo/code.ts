@@ -72,10 +72,9 @@ export default async (columnDefs: any[], rowData: any[]) => {
         return column.ColumnId === 'ContactName' ? true : false;
       },
       runQueryAfterQuickSearch: true,
-    },
-    searchOptions: {
       ignoreCaseInQueries: false,
     },
+
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

@@ -91,7 +91,7 @@ export default async (rowData: any[]) => {
         columnScope: {
           ColumnIds: ['dateAppointed'],
         },
-        functionScope: ['filter', 'alert', 'validation', 'conditionalstyle'],
+        functionScope: ['filter', 'alert', 'conditionalstyle'],
         handler(params: PredicateDefHandlerParams) {
           return params.value === '13 February 2020';
         },

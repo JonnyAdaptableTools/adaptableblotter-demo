@@ -17,7 +17,7 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleButtons: ['FormatColumn', 'GradientColumn'],
+    VisibleButtons: ['FormatColumn'],
   },
 } as PredefinedConfig;
 

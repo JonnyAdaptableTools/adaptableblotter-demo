@@ -18,6 +18,7 @@ import {
   AdaptableColumn,
   AdaptableSortState,
   ColumnSort,
+  ExpressionFunctionMap,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import { ITrade } from '../../../Helpers/Trade';
@@ -37,10 +38,8 @@ import {
   isTomorrow,
   isYesterday,
 } from 'date-fns';
-import {
-  evaluate,
-  defaultFunctions,
-} from '@adaptabletools/adaptable/src/parser/src';
+import { evaluate } from '@adaptabletools/adaptable/src/parser/src';
+import adaptableoptions from '../../../../pages/adaptableoptions';
 
 // 1. the Server-Side Row Model is selected using the grid options property: rowModelType = 'serverSide'
 // 2. the ServerSideDatasource (implementing IServerSideDatasource) is registered with the grid using the vendor grid api: api.setServerSideDatasource(datasource)
@@ -221,7 +220,8 @@ class FakeServer {
       evaluate(query, {
         node: { data: rowData },
         api: this.adaptableApi,
-        functions: defaultFunctions,
+        functions: this.adaptableApi.internalApi.getAdaptableOptions()
+          .searchOptions?.expressionFunctions as ExpressionFunctionMap,
       })
     );
   }

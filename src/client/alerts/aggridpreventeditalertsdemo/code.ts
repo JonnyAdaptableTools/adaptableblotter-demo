@@ -57,9 +57,11 @@ const demoConfig: PredefinedConfig = {
           ColumnIds: ['OrderCost'],
         },
         MessageType: 'Warning',
-        Predicate: {
-          PredicateId: 'PercentChange',
-          Inputs: [100],
+        Rule: {
+          Predicate: {
+            PredicateId: 'PercentChange',
+            Inputs: [100],
+          },
         },
         AlertProperties: {
           PreventEdit: true,

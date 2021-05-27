@@ -35,10 +35,9 @@ const demoConfig: PredefinedConfig = {
       {
         Name: 'customToolbar',
         Title: 'Custom Toolbar',
-        ToolbarButtons: [
+        CustomToolbarButtons: [
           {
-            Name: 'buttonOne',
-            Caption: 'Demo Button',
+            Label: 'Demo Button',
             ButtonStyle: {
               Variant: 'text',
               Tone: 'success',

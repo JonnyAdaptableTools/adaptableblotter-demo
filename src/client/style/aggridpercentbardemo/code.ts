@@ -16,7 +16,7 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleButtons: ['PercentBar'],
+    VisibleButtons: ['FormatColumn'],
   },
   FormatColumn: {
     Revision: Date.now(),

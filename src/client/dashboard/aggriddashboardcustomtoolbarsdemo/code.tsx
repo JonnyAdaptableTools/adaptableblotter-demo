@@ -9,12 +9,12 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
-  ToolbarVisibilityChangedEventArgs,
-  ToolbarButtonClickedEventArgs,
+  DashboardChangedInfo,
+  AdaptableButton,
+  DashboardButtonContext,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import charts from '@adaptabletools/adaptable-plugin-charts';
-import { renderCustomDiv } from '.';
 import ReactDOM from 'react-dom';
 
 var adaptableApi: AdaptableApi;
@@ -45,6 +45,7 @@ const demoConfig: PredefinedConfig = {
               Variant: 'raised',
               Tone: 'accent',
             },
+            ButtonClickedFunction: 'DemoButtonClicked',
           },
         ],
       },
@@ -55,10 +56,12 @@ const demoConfig: PredefinedConfig = {
           {
             Name: 'dealsButton1',
             Caption: 'New Deal',
+
             ButtonStyle: {
               Variant: 'text',
               Tone: 'success',
             },
+            ButtonClickedFunction: 'DemoButtonClicked',
           },
         ],
       },
@@ -66,12 +69,11 @@ const demoConfig: PredefinedConfig = {
       // Note that we have also added an Icon to the button
       {
         Name: 'Orders',
-        Caption: 'Orders',
+        Title: 'Orders',
         ShowConfigureButton: true,
-        ToolbarButtons: [
+        CustomToolbarButtons: [
           {
-            Name: 'ordersButton1',
-            Caption: 'Create Order',
+            Label: 'Create Order',
             ButtonStyle: {
               Variant: 'outlined',
               Tone: 'info',
@@ -82,6 +84,7 @@ const demoConfig: PredefinedConfig = {
               src:
                 'https://www.pngfind.com/pngs/m/278-2781613_blue-plus-icon-add-new-button-png-transparent.png',
             },
+            ButtonClickedFunction: 'DemoButtonClicked',
           },
         ],
       },
@@ -105,6 +108,15 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Custom Toolbars Demo',
+    userFunctions: [
+      {
+        type: 'ButtonClickedFunction',
+        name: 'DemoButtonClicked',
+        handler(button: AdaptableButton, context: DashboardButtonContext) {
+          alert('you clicked: ' + button.Label);
+        },
+      },
+    ],
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
     plugins: [charts()],
@@ -112,12 +124,15 @@ export default async (columnDefs: any[], rowData: any[]) => {
   adaptableApi = await Adaptable.init(adaptableOptions);
 
   adaptableApi.eventApi.on(
-    'ToolbarVisibilityChanged',
-    (toolbarVisibilityChangedEventArgs: ToolbarVisibilityChangedEventArgs) => {
-      if (
-        toolbarVisibilityChangedEventArgs.data[0].id.toolbar === 'Trades' &&
-        toolbarVisibilityChangedEventArgs.data[0].id.visibility == 'Visible'
-      ) {
+    'DashboardChanged',
+    (eventInfo: DashboardChangedInfo) => {
+      const dashboardApi = adaptableApi.dashboardApi;
+      const result:
+        | 'hidden'
+        | 'visible'
+        | 'none' = dashboardApi.hasCustomToolbarChanged(eventInfo, 'Trades');
+
+      if (result == 'visible') {
         let toolbarContents: any = (
           <div style={{ display: 'flex' }}>
             <button
@@ -137,24 +152,15 @@ export default async (columnDefs: any[], rowData: any[]) => {
           </div>
         );
 
-        // render with React - but any tech can be used
         ReactDOM.render(
           toolbarContents,
           adaptableApi.dashboardApi.getCustomToolbarContentsDiv('Trades')
         );
       }
-    }
-  );
 
-  adaptableApi.eventApi.on(
-    'ToolbarButtonClicked',
-    (toolbarButtonClickedEventArgs: ToolbarButtonClickedEventArgs) => {
-      alert(
-        'you clicked: name: ' +
-          toolbarButtonClickedEventArgs.data[0].id.toolbarButton.Name +
-          ';caption: ' +
-          toolbarButtonClickedEventArgs.data[0].id.toolbarButton.Caption
-      );
+      if (result == 'hidden') {
+        console.log('custom toolbar has disappeared');
+      }
     }
   );
 

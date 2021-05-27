@@ -32,8 +32,10 @@ const demoConfig: PredefinedConfig = {
         Scope: {
           ColumnIds: ['ItemCount'],
         },
-        Predicate: {
-          PredicateId: 'Any',
+        Rule: {
+          Predicate: {
+            PredicateId: 'Any',
+          },
         },
         MessageType: 'Error',
         AlertProperties: {

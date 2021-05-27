@@ -22,13 +22,13 @@ const demoConfig: PredefinedConfig = {
     Reminders: [
       {
         Alert: {
-          Header: "Run 'All Data' Report",
-          Msg: "Run the 'All Data' report so MO have full view of activity",
+          header: "Run 'All Data' Report",
+          message: "Run the 'All Data' report so MO have full view of activity",
 
-          AlertDefinition: {
+          alertDefinition: {
             MessageType: 'Warning',
             AlertProperties: {
-              ShowPopup: true,
+              DisplayNotification: true,
             },
           },
         },

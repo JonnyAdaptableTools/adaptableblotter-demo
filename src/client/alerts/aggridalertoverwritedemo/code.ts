@@ -30,12 +30,14 @@ const demoConfig: PredefinedConfig = {
           ColumnIds: ['ItemCost'],
         },
         MessageType: 'Warning',
-        Predicate: {
-          PredicateId: 'GreaterThan',
-          Inputs: [100],
+        Rule: {
+          Predicate: {
+            PredicateId: 'GreaterThan',
+            Inputs: [100],
+          },
         },
         AlertProperties: {
-          ShowPopup: true,
+          DisplayNotification: true,
         },
         // Create a dynamic form with 1 Field (of type number)
         // And 2 Buttons: one to Overwrite and one to Undo

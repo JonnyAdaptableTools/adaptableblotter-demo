@@ -40,12 +40,12 @@ const demoConfig: PredefinedConfig = {
     Reminders: [
       {
         Alert: {
-          Header: 'Update Invoices',
-          Msg: 'Check all invoices are accurate',
-          AlertDefinition: {
+          header: 'Update Invoices',
+          message: 'Check all invoices are accurate',
+          alertDefinition: {
             MessageType: 'Warning',
             AlertProperties: {
-              ShowPopup: true,
+              DisplayNotification: true,
             },
           },
         },

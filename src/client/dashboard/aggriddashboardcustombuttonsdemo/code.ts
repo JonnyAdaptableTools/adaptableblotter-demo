@@ -9,6 +9,9 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
+  DashboardButtonContext,
+  AdaptableButton,
+  DashboardChangedInfo,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import charts from '@adaptabletools/adaptable-plugin-charts';
@@ -33,6 +36,7 @@ const demoConfig: PredefinedConfig = {
           Variant: 'raised',
           Tone: 'accent',
         },
+        ButtonClickedFunction: 'DeleteRowButtonClicked',
       },
       {
         Label: 'New Row',
@@ -40,6 +44,7 @@ const demoConfig: PredefinedConfig = {
           Variant: 'outlined',
           Tone: 'info',
         },
+        ButtonClickedFunction: 'NewRowClicked',
         Icon: {
           height: 15,
           width: 15,
@@ -67,6 +72,27 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Custom Buttons Demo',
+    userFunctions: [
+      {
+        type: 'ButtonClickedFunction',
+        name: 'DeleteRowButtonClicked',
+        handler(button: AdaptableButton, context: DashboardButtonContext) {
+          let firstRow: any = adaptableOptions.vendorGrid.api.getDisplayedRowAtIndex(
+            0
+          );
+          if (firstRow && firstRow.data) {
+            adaptableApi.gridApi.deleteGridData([firstRow.data]);
+          }
+        },
+      },
+      {
+        type: 'ButtonClickedFunction',
+        name: 'NewRowButtonClicked',
+        handler(button: AdaptableButton, context: DashboardButtonContext) {
+          alert('you clicked the "newRow" (plus icon) button');
+        },
+      },
+    ],
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
     plugins: [charts()],
@@ -74,12 +100,15 @@ export default async (columnDefs: any[], rowData: any[]) => {
   adaptableApi = await Adaptable.init(adaptableOptions);
 
   adaptableApi.eventApi.on(
-    'ToolbarVisibilityChanged',
-    (toolbarVisibilityChangedEventArgs: ToolbarVisibilityChangedEventArgs) => {
-      if (
-        toolbarVisibilityChangedEventArgs.data[0].id.toolbar === 'Trades' &&
-        toolbarVisibilityChangedEventArgs.data[0].id.visibility == 'Visible'
-      ) {
+    'DashboardChanged',
+    (eventInfo: DashboardChangedInfo) => {
+      const dashboardApi = adaptableApi.dashboardApi;
+      const result:
+        | 'hidden'
+        | 'visible'
+        | 'none' = dashboardApi.hasCustomToolbarChanged(eventInfo, 'Trades');
+
+      if (result == 'visible') {
         let toolbarContents: any = renderCustomDiv();
 
         ReactDOM.render(
@@ -87,29 +116,9 @@ export default async (columnDefs: any[], rowData: any[]) => {
           adaptableApi.dashboardApi.getCustomToolbarContentsDiv('Trades')
         );
       }
-    }
-  );
 
-  adaptableApi.eventApi.on(
-    'DashboardButtonClicked',
-    (dashboardButtonClickedEventArgs: DashboardButtonClickedEventArgs) => {
-      if (
-        dashboardButtonClickedEventArgs.data[0].id.dashboardButton.Name ==
-        'deleteRow'
-      ) {
-        let firstRow: any = adaptableOptions.vendorGrid.api.getDisplayedRowAtIndex(
-          0
-        );
-        if (firstRow && firstRow.data) {
-          adaptableApi.gridApi.deleteGridData([firstRow.data]);
-        }
-      }
-
-      if (
-        dashboardButtonClickedEventArgs.data[0].id.dashboardButton.Name ==
-        'newRow'
-      ) {
-        alert('you clicked the "newRow" (plus icon) button');
+      if (result == 'hidden') {
+        console.log('custom toolbar has disappeared');
       }
     }
   );
