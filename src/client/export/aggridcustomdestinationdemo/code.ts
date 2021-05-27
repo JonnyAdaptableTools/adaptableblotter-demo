@@ -26,67 +26,6 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
-  Export: {
-    CustomDestinations: [
-      {
-        Name: 'Email',
-        Form: {
-          Title: 'Email Settings',
-          Description: 'Provide email details ',
-          Fields: [
-            {
-              Name: 'address',
-              Label: 'Email Address',
-              Type: 'select',
-              Options: [
-                {
-                  value: 'support@adaptabletools.com',
-                  label: 'Support',
-                },
-                {
-                  value: 'sales@adaptabletools.com',
-                  label: 'Sales',
-                },
-              ],
-              DefaultValue: 'support@adaptabletools.com',
-            },
-            {
-              Name: 'subject',
-              Label: 'Email Subject',
-              Type: 'text',
-              DefaultValue: 'AdapTable Report Data',
-            },
-            {
-              Name: 'body',
-              Label: 'Email Body',
-              Type: 'text',
-            },
-          ],
-        },
-        onExport: (
-          report: Report,
-          reportData: ReportData,
-          customDestinationData?: AdaptableFormData
-        ) => {
-          // here you can send via your email client or to an endpoint or whatever you need
-          // in this example, we will just log the output to the console
-          // note that we include the customdestinationdata which was created in the UI
-          console.log('EMAIL');
-          console.log('report', report);
-          console.log('reportData', reportData);
-          console.log('customDestinationData', customDestinationData);
-        },
-      },
-      {
-        Name: 'REST Endpoint',
-        onExport: (report: Report, reportData: ReportData) => {
-          console.log('EMAIL');
-          console.log('report', report);
-          console.log('reportData', reportData);
-        },
-      },
-    ],
-  },
 } as PredefinedConfig;
 
 export default async (columnDefs: any[], rowData: any[]) => {
@@ -102,6 +41,81 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Custom Destination Demo',
+    exportOptions: {
+      customDestinations: [
+        {
+          name: 'Email',
+          form: {
+            Title: 'Email Settings',
+            Description: 'Provide email details ',
+            Fields: [
+              {
+                Name: 'address',
+                Label: 'Email Address',
+                Type: 'select',
+                Options: [
+                  {
+                    value: 'support@adaptabletools.com',
+                    label: 'Support',
+                  },
+                  {
+                    value: 'sales@adaptabletools.com',
+                    label: 'Sales',
+                  },
+                ],
+                DefaultValue: 'support@adaptabletools.com',
+              },
+              {
+                Name: 'subject',
+                Label: 'Email Subject',
+                Type: 'text',
+                DefaultValue: 'AdapTable Report Data',
+              },
+              {
+                Name: 'body',
+                Label: 'Email Body',
+                Type: 'text',
+              },
+            ],
+            Buttons: [
+              {
+                Label: 'Cancel',
+                Validate: true,
+              },
+              {
+                Label: 'Export',
+                ButtonStyle: {
+                  Tone: 'success',
+                  Variant: 'raised',
+                },
+                AutoSubmitForm: true,
+              },
+            ],
+          },
+          onExport: (
+            report: Report,
+            reportData: ReportData,
+            customDestinationData?: AdaptableFormData
+          ) => {
+            // here you can send via your email client or to an endpoint or whatever you need
+            // in this example, we will just log the output to the console
+            // note that we include the customdestinationdata which was created in the UI
+            console.log('EMAIL');
+            console.log('report', report);
+            console.log('reportData', reportData);
+            console.log('customDestinationData', customDestinationData);
+          },
+        },
+        {
+          name: 'REST Endpoint',
+          onExport: (report: Report, reportData: ReportData) => {
+            console.log('EMAIL');
+            console.log('report', report);
+            console.log('reportData', reportData);
+          },
+        },
+      ],
+    },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
