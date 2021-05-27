@@ -66,28 +66,10 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/percent-bar-function"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/format-column-module"
             target="_blank"
           >
-            Percent Bar Function
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/predefined-config/percent-bar-config"
-            target="_blank"
-          >
-            Percent Bar Config
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/adaptable-api/percent-bar-api"
-            target="_blank"
-          >
-            Percent Bar Api
-          </a>
-          |{' '}
-          <a href="https://youtu.be/UfjkNgN3bH4" target="_blank">
-            Percent Bar Video
+            Format Column Module
           </a>{' '}
         </div>
       }

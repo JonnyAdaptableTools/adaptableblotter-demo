@@ -46,8 +46,7 @@ import adaptableoptions from '../../../../pages/adaptableoptions';
 //    the datasource instance exposes the 'getRows()' function, which is automatically called everytime the grid requires more rows
 // 3. the datasource fetches the grid data from a FakeServer instance - which is just a mock replacement for a real server implementation
 // 4. additional server-side data (required for AdapTable specific functions) may be fetched from the server.
-//    This example demonstrates how you can pass AdapTable the values it needs to show in filter dropdowns - see 'GetUniqueColumnValues' defined in adaptableOptions.userFunctions
-//    It retrieves all the distinct values from the server - this is invoked in UserFunctions section of AdaptableOptions
+//    This example demonstrates how you can pass AdapTable the values it needs to show in filter dropdowns
 export default async (columnDefs: ColDef[]) => {
   const gridOptions: GridOptions = {
     columnDefs,

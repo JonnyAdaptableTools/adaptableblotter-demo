@@ -11,6 +11,7 @@ const code = raw('./code.ts');
 
 export default async () => {
   let helperAgGrid = new HelperAgGrid();
+  console.log(1);
   helperAgGrid.setUpAgGridLicence();
 
   let rowData = JSON.parse(JSON.stringify(json));

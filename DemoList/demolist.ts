@@ -184,10 +184,21 @@ export function getDemoPageStructure(): DemoPageStructure {
         Link: '/formatcolumn',
         Pages: [
           {
-            Name: 'Format Column',
-            Link: '/formatcolumn/aggridformatcolumndemo',
+            Name: 'Column Style',
+            Link: '/formatcolumn/aggridformatcolumnstyledemo',
             Description:
               'Style an entire column so that it has a distinctive look.',
+          },
+          {
+            Name: 'Column Formatter',
+            Link: '/formatcolumn/aggridformatcolumnformatdemo',
+            Description: 'Provide bespoke formatting for a Column',
+          },
+          {
+            Name: 'Column Header Name',
+            Link: '/formatcolumn/aggridformatcolumnheadernamedemo',
+            Description:
+              'Change the Column Header (i.e. Caption) to better fit your requirements',
           },
           {
             Name: 'Gradient Column',

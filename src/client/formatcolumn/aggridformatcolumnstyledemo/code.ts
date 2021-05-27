@@ -30,18 +30,6 @@ const demoConfig: PredefinedConfig = {
           ForeColor: '#8b0000',
         },
       },
-      // Set a Time-based Display Format for LastUpdatedTime
-      {
-        Scope: {
-          ColumnIds: ['LastUpdatedTime'],
-        },
-        DisplayFormat: {
-          Formatter: 'DateFormatter',
-          Options: {
-            Pattern: 'HH:mm:ss',
-          },
-        },
-      },
       // Set both a Style and a (Date-based) Display Format for OrderDate
       {
         Scope: {
@@ -58,66 +46,6 @@ const demoConfig: PredefinedConfig = {
             Pattern: 'yyyyMMdd',
           },
         },
-      },
-      // Set a Display Format of negative parentheses for ChangeLastOrder
-      {
-        Scope: {
-          ColumnIds: ['ChangeLastOrder'],
-        },
-        DisplayFormat: {
-          Formatter: 'NumberFormatter',
-          Options: {
-            Parentheses: true,
-          },
-        },
-        CellAlignment: 'Center',
-      },
-      // Set a Display Format of £ and 2 dp for InvoicedCost
-      {
-        Scope: {
-          ColumnIds: ['InvoicedCost'],
-        },
-        DisplayFormat: {
-          Formatter: 'NumberFormatter',
-          Options: {
-            FractionDigits: 2,
-            Prefix: '£',
-          },
-        },
-      },
-      // Set a Display Format of $ with 'AUD' suffix and space for integer separator for OrderCost
-      {
-        Scope: {
-          ColumnIds: ['OrderCost'],
-        },
-        DisplayFormat: {
-          Formatter: 'NumberFormatter',
-          Options: {
-            FractionDigits: 2,
-            IntegerSeparator: ' ',
-            Prefix: '$',
-            Suffix: '(AUD)',
-          },
-        },
-      },
-      // Set a Display Format Upper Case for ShipCountry Column
-      {
-        Scope: {
-          ColumnIds: ['ShipCountry'],
-        },
-        DisplayFormat: {
-          Formatter: 'StringFormatter',
-          Options: {
-            Case: 'Upper',
-          },
-        },
-      },
-      // Change 'Required Date' header to 'Reqd Dt'
-      {
-        Scope: {
-          ColumnIds: ['RequiredDate'],
-        },
-        HeaderName: 'Reqd. Dt',
       },
     ],
   },
@@ -158,7 +86,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Format Col Demo',
+    adaptableId: 'Format Column Style Demo',
     userInterfaceOptions: {
       permittedValues: [
         {

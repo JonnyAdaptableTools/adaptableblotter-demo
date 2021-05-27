@@ -15,54 +15,22 @@ export default () => {
           <p>
             However sometimes developers might want to add additional
             destinations such as particular REST endpoints, or by email. This
-            can be done as follows:
+            can be done through the <i>customDestinations</i> property in{' '}
+            <a
+              href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/export-options"
+              target="_blank"
+            >
+              Export Options
+            </a>
           </p>
-          <ol>
-            <li>
-              Add the destination to the <b>CustomDestinations</b> section of{' '}
-              <a
-                href="https://docs.adaptabletools.com/docs/predefined-config/export-config#customdestinations"
-                target="_blank"
-              >
-                Export State
-              </a>
-            </li>
-            <li>
-              Provide an implementation of the{' '}
-              <b>
-                {' '}
-                <a
-                  href="https://docs.adaptabletools.com/docs/user-functions/custom-export-destination-user-function"
-                  target="_blank"
-                >
-                  Custom Export Destination UserFunction
-                </a>
-              </b>{' '}
-              to be called whenever that destination has been specified
-            </li>
-            <li>
-              In that function to provide whatever custom code is required to
-              send the report - the function receives the Report and the Report
-              Data
-            </li>
-          </ol>
           <p>
             If other information is needed you can provide{' '}
             <b>custom field definitions</b> and AdapTable will dynamically
-            display a form accordingly and send the results in the
-            <i>CustomExportDestinationFunction</i>.
+            display a form accordingly (and then provide the results in the
+            accompanying
+            <i>onExport</i> function.
           </p>
-          <p>
-            In this example we have created 2 Custom Destinations - for both we
-            simply output the report data to the console in the{' '}
-            <a
-              href="https://docs.adaptabletools.com/docs/user-functions/custom-export-destination-user-function"
-              target="_blank"
-            >
-              Custom Export Destination UserFunction
-            </a>{' '}
-            handler:
-          </p>
+          <p>In this example we have created 2 Custom Destinations:</p>
           <ul>
             <li>
               <i>Email</i> - which also contains Form Data and default form
@@ -80,7 +48,7 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/adaptable-functions/export-function"
             target="_blank"
           >
-            Export Function
+            Export Module
           </a>
           |{' '}
           <a
@@ -95,14 +63,14 @@ export default () => {
             target="_blank"
           >
             Export Api
-          </a>
+          </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/user-functions/custom-export-destination-user-function"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/export-options"
             target="_blank"
           >
-            Custom Export Destination UserFunction
-          </a>{' '}
+            Export Options
+          </a>
         </div>
       }
     />

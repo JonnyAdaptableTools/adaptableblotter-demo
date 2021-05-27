@@ -42,29 +42,11 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/gradient-column-function"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/format-column-module"
             target="_blank"
           >
-            Gradient Column Function
+            Format Column Module
           </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/predefined-config/gradient-column-config"
-            target="_blank"
-          >
-            Gradient Column Config
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/adaptable-api/gradient-column-api"
-            target="_blank"
-          >
-            Gradient Column Api
-          </a>{' '}
-          |{' '}
-          <a href="https://youtu.be/33lID_zBsAw" target="_blank">
-            Gradient Column Video
-          </a>
         </div>
       }
     />
