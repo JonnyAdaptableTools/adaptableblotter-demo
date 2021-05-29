@@ -85,7 +85,7 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/common-objects/common-objects-expression"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/common-objects/common-objects-query"
             target="_blank"
           >
             Adaptable Expression

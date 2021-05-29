@@ -39,8 +39,8 @@ export default () => {
           </p>
           <p>
             Note how View1 Predefined Config contains a different Layout,
-            Gradient Column, Percent Bar, Quick Search text and Format Columns
-            to those in View2.
+            Gradient Column, Quick Search text and Format Columns to those in
+            View2.
           </p>{' '}
           <p>
             Likewise the State in each View can be modified and will be

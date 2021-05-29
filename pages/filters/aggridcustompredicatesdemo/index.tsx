@@ -94,10 +94,10 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-options/filter-options"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/search-options"
             target="_blank"
           >
-            Filter Options
+            Search Options
           </a>{' '}
           |{' '}
           <a

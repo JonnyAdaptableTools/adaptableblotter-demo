@@ -20,10 +20,10 @@ export default () => {
             <b>useAdaptableQuickFilter</b> and <b>useAdaptableFilterForm</b>{' '}
             properties in{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/adaptable-options/filter-options"
+              href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/search-options"
               target="_blank"
             >
-              Filter Options
+              Search Options
             </a>{' '}
           </p>
           <p>
@@ -41,7 +41,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-options/filter-options"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/search-options"
             target="_blank"
           >
             Adaptable Options

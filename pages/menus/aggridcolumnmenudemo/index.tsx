@@ -20,27 +20,55 @@ export default () => {
           <p>
             You can add your own bespoke{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/api/usermenuitem"
+              href="https://v9-0--docs-adaptabletools.netlify.app/api/adaptablemenuitem"
               target="_blank"
             >
-              User Menu Item(s)
+              Menu Item(s)
             </a>{' '}
-            to the Column Menu, defining them in{' '}
+            to the Column Menu, defining them in the{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/predefined-config/user-interface-config"
+              href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/menu-options"
               target="_blank"
             >
-              User Interface State
+              Menu Options
             </a>{' '}
-            .{' '}
+            section of Adaptable Options. .{' '}
           </p>{' '}
           <p>
-            When you define a UserMenuItem you can reference 3 User Functions:
+            When you define a MenuItem you can provide 3 functions that will be
+            invoked by AdapTable:
           </p>
           <ul>
-            <li>Clicked Function</li>
-            <li>Show Predicate</li>
-            <li>Label</li>
+            <li>
+              {' '}
+              <a
+                href="https://v9-0--docs-adaptabletools.netlify.app/docs/user-interface/column-menu/#menu-item-onclick"
+                target="_blank"
+              >
+                Clicked Function
+              </a>
+              : What happens when the Menu Item is clicked
+            </li>
+            <li>
+              {' '}
+              <a
+                href="https://v9-0--docs-adaptabletools.netlify.app/docs/user-interface/column-menu/#menu-item-render"
+                target="_blank"
+              >
+                Render
+              </a>
+              : Whether the Menu Item should appear
+            </li>
+            <li>
+              {' '}
+              <a
+                href="https://v9-0--docs-adaptabletools.netlify.app/docs/user-interface/column-menu/#menu-item-label"
+                target="_blank"
+              >
+                Label
+              </a>
+              : What Label the Menu Item should have
+            </li>
           </ul>
           <p>
             In this example we added 'Float Dashboard' and 'Set System Status'
@@ -58,9 +86,9 @@ export default () => {
             </a>
           </p>
           <p>
-            In this example we removed the <i>'Create Custom Sort'</i> and{' '}
-            <i>'View as PieChart'</i> menu items for the 'Contact' column and we
-            removed all AdapTable menu items for the 'Cust. Ref' column.
+            In this example we removed the <i>Create Custom Sort</i> and{' '}
+            <i> Create Format Column</i> menu items for the 'Contact' column and
+            we removed all AdapTable Menu Items for the 'Cust. Ref' column.
           </p>
         </div>
       }

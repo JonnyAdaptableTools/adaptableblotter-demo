@@ -16,7 +16,7 @@ export default () => {
             However sometimes users want to <b>limit</b> either the Expression
             Functions available (of which there are{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/common-objects/common-objects-expression/#appendix--expression-functions"
+              href="https://v9-0--docs-adaptabletools.netlify.app/docs/common-objects/common-objects-query/#appendix--expression-functions"
               target="_blank"
             >
               very many
@@ -43,10 +43,10 @@ export default () => {
               <p>
                 The <b>expressionFunctions</b> option in{' '}
                 <a
-                  href="https://docs.adaptabletools.com/docs/adaptable-options/query-options"
+                  href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/search-options"
                   target="_blank"
                 >
-                  Query Options
+                  Search Options
                 </a>{' '}
                 allows a precise set of Expression Functions to be provided to
                 AdapTable (or a list of those to omit).
@@ -98,7 +98,7 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/common-objects/common-objects-expression"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/common-objects/common-objects-query"
             target="_blank"
           >
             Adaptable Expression

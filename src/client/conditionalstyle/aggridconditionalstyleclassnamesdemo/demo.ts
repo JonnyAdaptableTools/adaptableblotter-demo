@@ -8,16 +8,13 @@ import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 import init from './code';
 import { GridReadyEvent } from '@ag-grid-community/all-modules';
 const code = raw('./code.ts');
-console.log(1);
+
 export default async () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
-
   let rowData = JSON.parse(JSON.stringify(json));
   helperAgGrid.convertExcelData(rowData);
-
-  const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
-
+  const columndefs = helperAgGrid.getConditionalstyleNorthwindColumnSchema();
   const { adaptableOptions, adaptableApi } = await init(columndefs, rowData);
 
   adaptableOptions.vendorGrid.onGridReady = function(

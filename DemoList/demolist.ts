@@ -220,8 +220,20 @@ export function getDemoPageStructure(): DemoPageStructure {
         Link: '/conditionalstyle',
         Pages: [
           {
-            Name: 'Conditional Style',
-            Link: '/formatcolumn/aggridconditionalstyledemo',
+            Name: 'Basic Rule',
+            Link: '/conditionalstyle/aggridconditionalstylebasicruledemo',
+            Description:
+              'Style cells, columns and rows in striking ways when their data matches a Predicate Rule you create.',
+          },
+          {
+            Name: 'Advanced Rule',
+            Link: '/conditionalstyle/aggridconditionalstyleadvancedruledemo',
+            Description:
+              'Use an advanced Expression to create the Rule for a Conditional Style.',
+          },
+          {
+            Name: 'CSS Class Names',
+            Link: '/conditionalstyle/aggridconditionalstyleclassnamesdemo',
             Description:
               'Style cells, columns and rows in striking ways when their data matches rules that you create.',
           },
@@ -668,19 +680,19 @@ export function getDemoPageStructure(): DemoPageStructure {
         Link: '/entitlements',
         Pages: [
           {
-            Name: 'Entitlements: List',
+            Name: 'Hard-coded List',
             Link: '/entitlements/aggridentitlementslistdemo',
             Description:
               'Provide a list of Entitlements in Entitlement Options specifying which Modules Users are permissioned for.',
           },
           {
-            Name: 'Entitlements: Func',
+            Name: 'JavaScript Function',
             Link: '/entitlements/aggridentitlementsfunctiondemo',
             Description:
               'Supply a function (that can use external lookups or systems) which will be run each time an Entitlement is required.',
           },
           {
-            Name: 'Entitlements: Default',
+            Name: 'Default Entitlement',
             Link: '/entitlements/aggridentitlementsdefaultdemo',
             Description:
               'Set a default Entitlement Access Level to be used if no Entitlement is explicitly provided.',

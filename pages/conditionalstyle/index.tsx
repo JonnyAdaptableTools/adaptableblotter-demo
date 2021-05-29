@@ -34,10 +34,11 @@ export default () => {
       pageTitle={'Style demos'}
       description={
         <div>
-          <h4>Format Column</h4>
+          <h4>Conditional Style</h4>
           <p>
-            There are a number of different ways to style cells, columns, rows
-            and the Grid itself.
+            The Conditional Style function enables columns and rows in AdapTable
+            to receive a special style when their contents match a particular
+            Rule.
           </p>
           <ul>{demoLinks}</ul>
           Click on the buttons below to see a demo for each styling function.

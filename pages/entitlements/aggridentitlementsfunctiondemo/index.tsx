@@ -11,9 +11,15 @@ export default () => {
       description={
         <div>
           <p>
-            Another way to provide Entitlements in Adaptable Options is via a
-            JavaScript function (which also uses the <b>moduleEntitlement</b>{' '}
-            property).
+            Another way to provide Entitlements in{' '}
+            <a
+              href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/entitlements-options"
+              target="_blank"
+            >
+              Adaptable Options
+            </a>{' '}
+            is via a JavaScript function (which also uses the{' '}
+            <b>moduleEntitlement</b> property).
           </p>
           <p>
             This allows you to use an external permissioning or entitlment

@@ -11,7 +11,7 @@ export default () => {
           <p>
             The AdapTable parser ships with a{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/common-objects/common-objects-expression/#appendix--expression-functions"
+              href="https://v9-0--docs-adaptabletools.netlify.app/docs/common-objects/common-objects-query/#appendix--expression-functions"
               target="_blank"
             >
               very large number
@@ -21,7 +21,7 @@ export default () => {
           <p>
             Users can add to this at run-time by providing{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/common-objects/common-objects-expression/#custom-expression-functions"
+              href="https://v9-0--docs-adaptabletools.netlify.app/docs/common-objects/common-objects-query/#custom-expression-functions"
               target="_blank"
             >
               custom expresion functions
@@ -108,7 +108,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/common-objects/common-objects-expression"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/common-objects/common-objects-query"
             target="_blank"
           >
             Adaptable Expression

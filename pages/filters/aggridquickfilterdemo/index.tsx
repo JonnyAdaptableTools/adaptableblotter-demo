@@ -39,10 +39,10 @@ export default () => {
             The default Predicate for Numeric and Date columns is 'Equals' and
             for String columns is 'Between' - however this can be changed in{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/adaptable-options/filter-options"
+              href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/search-options"
               target="_blank"
             >
-              Filter Options
+              Search Options
             </a>
             .
           </p>
@@ -51,10 +51,10 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/filter-function"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/filter-module"
             target="_blank"
           >
-            Filter ReadMe
+            Filter Function
           </a>{' '}
           |{' '}
           <a
@@ -72,10 +72,10 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-options/filter-options"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/search-options"
             target="_blank"
           >
-            Filter Options
+            Search Options
           </a>
         </div>
       }

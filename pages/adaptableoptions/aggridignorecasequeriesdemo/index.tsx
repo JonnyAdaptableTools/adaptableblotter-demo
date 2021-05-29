@@ -19,10 +19,10 @@ export default () => {
             However, if this is not your preferred behaviour, you can set the
             the <b>ignoreCaseInQueries</b> property of{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/adaptable-options/query-options"
+              href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/search-options"
               target="_blank"
             >
-              Query Options
+              Search Options
             </a>{' '}
             to be <i>false</i> (the default if not set is <i>true</i>).
           </p>
@@ -36,7 +36,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-options/query-options"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/search-options"
             target="_blank"
           >
             Adaptable Options

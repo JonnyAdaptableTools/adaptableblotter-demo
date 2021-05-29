@@ -14,30 +14,60 @@ export default () => {
             that cell (and what is selected).
           </p>
           <p>
-            You can add your own{' '}
+            You can add your own bespoke{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/api/usermenuitem"
+              href="https://v9-0--docs-adaptabletools.netlify.app/api/adaptablemenuitem"
               target="_blank"
             >
-              User Menu Item(s)
+              Menu Item(s)
             </a>{' '}
             to the Context Menu - through{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/predefined-config/user-interface-config"
+              href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/menu-options"
               target="_blank"
             >
-              User Interface State
-            </a>
-            ; in this example we added 'Float Dashboard' and 'Set System Status'
+              Menu Options
+            </a>{' '}
+            section of Adaptable Options.{' '}
+          </p>
+          <p>
+            In this example we added 'Float Dashboard' and 'Set System Status'
             menu items (with the latter having sub menu items).
           </p>
           <p>
             When you define a UserMenuItem you can reference 3 User Functions:
           </p>
           <ul>
-            <li>Clicked Function</li>
-            <li>Show Predicate</li>
-            <li>Label</li>
+            <li>
+              {' '}
+              <a
+                href="https://v9-0--docs-adaptabletools.netlify.app/docs/user-interface/context-menu/#menu-item-onclick"
+                target="_blank"
+              >
+                Clicked Function
+              </a>
+              : What happens when the Menu Item is clicked
+            </li>
+            <li>
+              {' '}
+              <a
+                href="https://v9-0--docs-adaptabletools.netlify.app/docs/user-interface/context-menu/#menu-item-render"
+                target="_blank"
+              >
+                Render
+              </a>
+              : Whether the Menu Item should appear
+            </li>
+            <li>
+              {' '}
+              <a
+                href="https://v9-0--docs-adaptabletools.netlify.app/docs/user-interface/context-menu/#menu-item-label"
+                target="_blank"
+              >
+                Label
+              </a>
+              : What Label the Menu Item should have
+            </li>
           </ul>
           <p>
             You can also choose which - if any - of the shipped Menu Items are

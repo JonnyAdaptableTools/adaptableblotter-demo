@@ -9,10 +9,8 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
-  PredicateDefHandlerParams,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
-import './condstyle.css';
 
 var adaptableApi: AdaptableApi;
 
@@ -24,59 +22,16 @@ const demoConfig: PredefinedConfig = {
     ConditionalStyles: [
       {
         Scope: {
-          DataTypes: ['Number'],
+          All: true,
         },
         Style: {
-          ForeColor: '#008000',
+          BackColor: '#FFFF66',
         },
         Rule: {
-          Predicate: {
-            PredicateId: 'Positive',
-          },
+          BooleanExpression:
+            '[Employee] IN ("Michael Suyama", "Janet Leverling")',
         },
-      },
-      {
-        Scope: {
-          DataTypes: ['Number'],
-        },
-        Style: {
-          ForeColor: '#ff0000',
-        },
-        Rule: {
-          Predicate: {
-            PredicateId: 'Negative',
-          },
-        },
-      },
-      {
-        Scope: {
-          ColumnIds: ['ItemCost'],
-        },
-        Style: {
-          BackColor: '#ffffcc',
-          FontStyle: 'Italic',
-          ForeColor: '#000000',
-        },
-        Rule: {
-          Predicate: {
-            PredicateId: 'GreaterThan',
-            Inputs: [60],
-          },
-        },
-        ExcludeGroupedRows: true,
-      },
-      {
-        Scope: {
-          ColumnIds: ['Employee'],
-        },
-        Style: {
-          ClassName: 'employeeStyle',
-        },
-        Rule: {
-          Predicate: {
-            PredicateId: 'new_starter',
-          },
-        },
+        ExcludeGroupedRows: false,
       },
       {
         Scope: {
@@ -90,9 +45,6 @@ const demoConfig: PredefinedConfig = {
         },
       },
     ],
-  },
-  UserInterface: {
-    StyleClassNames: ['employeeStyle'],
   },
 } as PredefinedConfig;
 
@@ -111,23 +63,8 @@ export default async (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Cond Style Demo',
-    customPredicateDefs: [
-      {
-        id: 'new_starter',
-        label: 'New Starter',
-        columnScope: {
-          ColumnIds: ['Employee'],
-        },
-        functionScope: ['filter', 'conditionalstyle'],
-        handler(params: PredicateDefHandlerParams) {
-          return (
-            params.value == 'Steven Buchanan' ||
-            params.value == 'Laura Callahan'
-          );
-        },
-      },
-    ],
+    adaptableId: 'Cond Style Rows Demo',
+
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

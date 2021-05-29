@@ -11,8 +11,15 @@ export default () => {
       description={
         <div>
           <p>
-            One way to provide Entitlements in Adaptable Options is through a
-            'hard-coded' list via the <b>moduleEntitlements</b> property.
+            One way to provide Entitlements in{' '}
+            <a
+              href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/entitlements-options"
+              target="_blank"
+            >
+              Adaptable Options
+            </a>{' '}
+            is through a 'hard-coded' list via the <b>moduleEntitlements</b>{' '}
+            property.
           </p>
           <p>
             This allows you to provide a list of Entitlements - essentially a{' '}

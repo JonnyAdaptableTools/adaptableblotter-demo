@@ -114,7 +114,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
         }
       },
     },
-
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

@@ -95,10 +95,10 @@ export default () => {
               <p>
                 Setting the <b>ignoreCaseInQueries</b> property of{' '}
                 <a
-                  href="https://docs.adaptabletools.com/docs/adaptable-options/query-options"
+                  href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/search-options"
                   target="_blank"
                 >
-                  Query Options
+                  Search Options
                 </a>{' '}
                 to be <i>false</i> (the default if not set is <i>true</i>) will
                 change this behaviour.
