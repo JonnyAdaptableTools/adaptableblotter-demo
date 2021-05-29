@@ -15,8 +15,15 @@ export default () => {
           </p>
           <p>
             To do this a Holiday Calendar is used. The default is 'United
-            States' but you can change that through Predefined Config or at
-            run-time through the Calendars Function.
+            States' but you can change that via the 'currentCalendar' property
+            in{' '}
+            <a
+              href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/general-options"
+              target="_blank"
+            >
+              General Options
+            </a>{' '}
+            .
           </p>
           <p>
             This example we have set the 'Current Calendar' in Config to be
@@ -28,17 +35,10 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/predefined-config/calendar-config"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/general-options"
             target="_blank"
           >
-            Calendar Predefined Config
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/adaptable-api/calendar-api"
-            target="_blank"
-          >
-            Calendar Api
+            General Options
           </a>{' '}
         </div>
       }

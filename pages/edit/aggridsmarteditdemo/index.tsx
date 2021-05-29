@@ -28,10 +28,10 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/smart-edit-function"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/smart-edit-module"
             target="_blank"
           >
-            Smart Edit Function
+            Smart Edit Module
           </a>
           |{' '}
           <a

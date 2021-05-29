@@ -55,7 +55,6 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
-
   Dashboard: {
     VisibleButtons: ['PlusMinus'],
   },

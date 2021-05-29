@@ -116,7 +116,7 @@ export default () => {
             href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/filter-module"
             target="_blank"
           >
-            Filter Function
+            Filter Module
           </a>{' '}
           |{' '}
           <a

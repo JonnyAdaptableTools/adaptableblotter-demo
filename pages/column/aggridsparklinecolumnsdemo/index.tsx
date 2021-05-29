@@ -35,14 +35,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/plugins/chart/sparkline-column-function"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/plugins/chart/sparkline-column-module"
             target="_blank"
           >
-            Sparkline Column Function
+            Sparkline Column Module
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/plugins/chart/sparkline-column-function#sparkline-column-config"
+            href="https://docs.adaptabletools.com/docs/plugins/chart/sparkline-column-module#sparkline-column-config"
             target="_blank"
           >
             Sparkline Column Predefined Config

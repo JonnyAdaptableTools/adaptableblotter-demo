@@ -11,7 +11,7 @@ export default () => {
       description={
         <div>
           <p>
-            The Format Column Function allows you to style an entire column by
+            The Format Column Module allows you to style an entire column by
             proviing a visual Style or a Display Format (or both).
           </p>
           <p>

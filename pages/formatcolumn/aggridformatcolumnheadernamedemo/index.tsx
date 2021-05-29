@@ -11,7 +11,7 @@ export default () => {
       description={
         <div>
           <p>
-            The Format Column Function also allows you to change the Header /
+            The Format Column Module also allows you to change the Header /
             Caption of any column so that it better fits your requirements.
           </p>
           <p>This example has 2 Format Columns with a new Header / Caption: </p>

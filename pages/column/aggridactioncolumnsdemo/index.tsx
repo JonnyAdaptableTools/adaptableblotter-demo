@@ -18,7 +18,7 @@ export default () => {
             onActionColumnClicked event handler we update the <i>Item Count</i>{' '}
             column (though we do also have a{' '}
             <a href="../../edit/aggridplusminusdemo" target="_blank">
-              Plus/Minus Function
+              Plus/Minus Module
             </a>
             ).
           </p>

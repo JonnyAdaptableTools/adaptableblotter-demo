@@ -62,10 +62,10 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/export-function"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/export-module"
             target="_blank"
           >
-            Export Function
+            Export Module
           </a>
           |{' '}
           <a

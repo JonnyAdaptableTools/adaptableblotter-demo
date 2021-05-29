@@ -30,10 +30,10 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/layout-function"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/layout-module"
             target="_blank"
           >
-            Layout Function
+            Layout Module
           </a>{' '}
           |{' '}
           <a

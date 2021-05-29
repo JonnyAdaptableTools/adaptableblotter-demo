@@ -78,10 +78,10 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/calculated-column-function"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/calculated-column-module"
             target="_blank"
           >
-            Calculated Column Function
+            Calculated Column Module
           </a>{' '}
           |{' '}
           <a

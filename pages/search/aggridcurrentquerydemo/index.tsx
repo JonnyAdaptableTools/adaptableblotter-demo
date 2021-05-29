@@ -43,10 +43,10 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/query-function"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/query-module"
             target="_blank"
           >
-            Query Function
+            Query Module
           </a>{' '}
           |{' '}
           <a

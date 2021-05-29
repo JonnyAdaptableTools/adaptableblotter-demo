@@ -16,7 +16,7 @@ export default async () => {
   helperAgGrid.convertExcelData(rowData);
   const columndefs = helperAgGrid.getFlashingCellColumnSchema();
   const { adaptableOptions, adaptableApi } = await init(columndefs, rowData);
-  console.log(1);
+
   adaptableApi.eventApi.on('AdaptableReady', () => {});
 
   adaptableOptions.vendorGrid.onGridReady = function(

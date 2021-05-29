@@ -35,7 +35,8 @@ export default () => {
             menu items (with the latter having sub menu items).
           </p>
           <p>
-            When you define a UserMenuItem you can reference 3 User Functions:
+            When you define a MenuItem you can provide 3 functions that will be
+            invoked by AdapTable:
           </p>
           <ul>
             <li>

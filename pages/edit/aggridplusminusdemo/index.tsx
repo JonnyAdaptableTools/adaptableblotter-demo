@@ -13,16 +13,32 @@ export default () => {
             to the '+' or '-' keys being pressed in numeric cells.
           </p>
           <p>
-            You can create a 'default' Nudge Value for a whole column, or a
-            'custom' Nudge Value which will increment / decrement based on other
-            cells in the row.
+            The Nudge Rule can be based either on a{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/common-objects/common-objects-predicate"
+              target="_blank"
+            >
+              Predicate
+            </a>{' '}
+            or - for more advanced scenarios - a{' '}
+            <a
+              href="https://v9-0--docs-adaptabletools.netlify.app/docs/common-objects/common-objects-query"
+              target="_blank"
+            >
+              Query
+            </a>
+            .
           </p>
           <p>In this example we created 2 Plus Minus Rules: </p>
           <ul>
-            <li>a default one for the 'Item Cost' column of 10</li>
             <li>
-              a custom rule for the same column which will increment / decrement
-              by 20 if Employee is 'Janet Leverling
+              A Predicate of 'Any' for the 'Item Cost' column with a Nudge of{' '}
+              <b>10</b>
+            </li>
+            <li>
+              A Query for the same ('Item Cost') column which will increment /
+              decrement by 20 if the Employee value in the row is 'Janet
+              Leverling
             </li>
           </ul>
         </div>
@@ -30,10 +46,10 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/plus-minus-function"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/predefined-config/plus-minus-config"
             target="_blank"
           >
-            Plus / Minus Function
+            Plus / Minus Module
           </a>{' '}
           |{' '}
           <a

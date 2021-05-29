@@ -9,7 +9,7 @@ export default () => {
       description={
         <div>
           <p>
-            By default every Expression Function in the Adaptable Parser and
+            By default every Expression function in the Adaptable Parser and
             every column provided to AdapTable are available to use in a Query.
           </p>
           <p>
@@ -91,10 +91,10 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/query-function"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/query-module"
             target="_blank"
           >
-            Query Function
+            Query Module
           </a>{' '}
           |{' '}
           <a

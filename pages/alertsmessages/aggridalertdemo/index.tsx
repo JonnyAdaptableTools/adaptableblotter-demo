@@ -42,10 +42,10 @@ export default () => {
         <div>
           {' '}
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/alert-function"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/alert-module"
             target="_blank"
           >
-            Alert Function
+            Alert Module
           </a>{' '}
           |{' '}
           <a

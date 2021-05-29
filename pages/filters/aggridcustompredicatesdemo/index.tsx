@@ -76,7 +76,7 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/adaptable-functions/filter-function"
             target="_blank"
           >
-            Filter Function
+            Filter Module
           </a>{' '}
           |{' '}
           <a

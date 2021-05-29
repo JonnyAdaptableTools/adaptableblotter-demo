@@ -30,10 +30,10 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/quick-search-function"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/quick-search-module"
             target="_blank"
           >
-            Quick Search Function
+            Quick Search Module
           </a>{' '}
           |{' '}
           <a

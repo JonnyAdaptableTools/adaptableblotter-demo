@@ -63,25 +63,11 @@ export default () => {
         <div>
           {' '}
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/system-status-function"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/system-status-module"
             target="_blank"
           >
-            System Status Function
+            System Status Module
           </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/predefined-config/system-status-config"
-            target="_blank"
-          >
-            Predefined Config
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/adaptable-api/system-status-api"
-            target="_blank"
-          >
-            Adaptable API
-          </a>
         </div>
       }
     />

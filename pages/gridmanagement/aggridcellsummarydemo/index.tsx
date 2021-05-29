@@ -14,32 +14,28 @@ export default () => {
           </p>
           <p>
             AdapTable ships with a number of 'Summary Operations' that you can
-            use (some of which work only on numeric columns) and you can provide
-            your bespoke summaries.
+            use (some of which work only on numeric columns)
           </p>
           <p>
+            {' '}
             Try it: highlight a group of cells and see the value change in the
             Cell Summmary toolbar. Click the 'info' button to see results of all
             operations or change the selected one by using the dropdown.
-          </p>{' '}
-          <p>
-            To create a Summary Operation: provide the name of the function,
-            which will be evaluated each time the summary is run, in{' '}
-            <a
-              href="https://docs.adaptabletools.com/docs/predefined-config/cell-summary-config"
-              target="_blank"
-            >
-              Cell Summary State
-            </a>{' '}
-            and the actual implementation as a{' '}
-            <a
-              href="https://docs.adaptabletools.com/docs/user-functions/cell-summary-operation-user-function"
-              target="_blank"
-            >
-              Cell Summary Operation User Function
-            </a>{' '}
-            .
           </p>
+          <p>
+            <b>Bespoke Cell Summaries</b>
+            <br />
+            You can provide custom summary definitions which will be evaluated
+            each time the summary is run in the{' '}
+            <a
+              href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/general-options"
+              target="_blank"
+            >
+              General Options
+            </a>{' '}
+            section of Adaptable Options.{' '}
+          </p>
+
           <p>
             In this example we have provided an 'Oldest' function which runs
             only on Date columns and returns the oldest date in the selection.
@@ -49,10 +45,10 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/predefined-config/cell-summary-config"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/general-options"
             target="_blank"
           >
-            Cell Summary Config
+            General Options
           </a>{' '}
           |{' '}
           <a
@@ -67,14 +63,7 @@ export default () => {
             target="_blank"
           >
             Cell Summary Read Me
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/user-functions/cell-summary-operation-user-function"
-            target="_blank"
-          >
-            Cell Summary Operation User Function
-          </a>{' '}
+          </a>
         </div>
       }
     />

@@ -32,10 +32,10 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/shortcut-function"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/shortcut-module"
             target="_blank"
           >
-            Shortcut Function
+            Shortcut Module
           </a>{' '}
           |{' '}
           <a

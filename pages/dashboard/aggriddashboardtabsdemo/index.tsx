@@ -10,12 +10,12 @@ export default () => {
         <div>
           <p>
             The Dashboard ships with a large number of <b>Toolbars</b>. They
-            each provide quick access to a given Function together with
-            dropdowns and buttons as required.
+            each provide quick access to a given Module together with dropdowns
+            and buttons as required.
           </p>
           <p>
             Plus each toolbar contains a 'configure' button to open the
-            associated popup window for that Function.
+            associated popup window for that Module.
           </p>
           <p>
             You can create <b>Tabs</b> in Dashboard Predefined Config - tabs are
