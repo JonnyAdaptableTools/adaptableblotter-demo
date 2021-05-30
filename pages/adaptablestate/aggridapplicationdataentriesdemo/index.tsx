@@ -49,13 +49,6 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/application-function"
-            target="_blank"
-          >
-            Application Read Me
-          </a>{' '}
-          |{' '}
-          <a
             href="https://docs.adaptabletools.com/docs/predefined-config/application-config"
             target="_blank"
           >

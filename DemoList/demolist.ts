@@ -47,41 +47,47 @@ export function getDemoPageStructure(): DemoPageStructure {
       },
 
       {
-        CategoryName: 'Searching',
-        Link: '/search',
+        CategoryName: 'Quick Search',
+        Link: '/quicksearch',
         Pages: [
           {
             Name: 'Quick Search',
-            Link: '/search/aggridquicksearchdemo',
+            Link: '/quicksearch/aggridquicksearchdemo',
             Description:
               'Search across all columns using a simple text search (includes wildcards like ">").',
           },
           {
             Name: 'Quick Search Options',
-            Link: '/search/aggridquicksearchoptionsdemo',
+            Link: '/quicksearch/aggridquicksearchoptionsdemo',
             Description:
               'There are many options to in Quick Search around styling, available columns and filtering behaviour.',
           },
+        ],
+      },
+      {
+        CategoryName: 'Queries',
+        Link: '/queries',
+        Pages: [
           {
             Name: 'Current Query',
-            Link: '/search/aggridcurrentquerydemo',
+            Link: '/queries/aggridcurrentquerydemo',
             Description: 'Set the current query to use at start up.',
           },
           {
             Name: 'User Query Functions',
-            Link: '/search/aggriduserqueryfunctionsdemo',
+            Link: '/queries/aggriduserqueryfunctionsdemo',
             Description:
               'Users can provide custom functions to be included in - and evaluated by -  the Expression Parser.',
           },
           {
             Name: 'Managing Queries',
-            Link: '/search/aggridmanagingquerydemo',
+            Link: '/queries/aggridmanagingquerydemo',
             Description:
               'Configure which Expression Functions are available in the parser and which Columns are Queryable.',
           },
           {
             Name: 'Data Source Selector',
-            Link: '/search/aggriddatasourcedemo',
+            Link: '/queries/aggriddatasourcedemo',
             Description:
               'A list of Data Sources provided at run-time (e.g. books, stored procs); when one is selected an event is fired that you can listen to and then populate AdapTable with data via the API.',
           },

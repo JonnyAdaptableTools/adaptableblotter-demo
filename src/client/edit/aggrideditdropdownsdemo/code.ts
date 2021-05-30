@@ -9,12 +9,34 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
+  AdaptableColumn,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
 var adaptableApi: AdaptableApi;
 
-const demoConfig: PredefinedConfig = {} as PredefinedConfig;
+const demoConfig: PredefinedConfig = {
+  Layout: {
+    CurrentLayout: 'Simple Layout',
+    Layouts: [
+      {
+        Name: 'Simple Layout',
+        Columns: [
+          'OrderId',
+          'Employee',
+          'ShipName',
+          'CustomerReference',
+          'CompanyName',
+          'ContactName',
+          'InvoicedCost',
+          'ChangeLastOrder',
+          'OrderCost',
+          'PackageCost',
+        ],
+      },
+    ],
+  },
+} as PredefinedConfig;
 
 export default async (columnDefs: any[], rowData: any[]) => {
   const gridOptions: GridOptions = {
@@ -51,6 +73,18 @@ export default async (columnDefs: any[], rowData: any[]) => {
         {
           scope: { ColumnIds: ['Employee'] },
           values: [],
+        },
+        {
+          scope: { ColumnIds: ['ShipName'] },
+
+          values: (column: AdaptableColumn) => {
+            return [
+              'Ernst Handel',
+              'Maison Dewey',
+              'QUICK-stop',
+              'Simons bistro',
+            ];
+          },
         },
       ],
       permittedValues: [

@@ -16,17 +16,13 @@ export default () => {
             >
               Financial plugin
             </a>{' '}
-            AdapTable includes 3 extra Cell Summaries for numeric columns -
+            AdapTable includes 2 extra Cell Summaries for numeric columns -
             designed for finance users. These are:
           </p>
           <ul>
             <li>
-              <b>WeightedAverage: </b>Returns true if all selected cells (in a
-              single column) match
-            </li>
-            <li>
-              <b>VWAP: </b>Runs VWAP analysis (requires selection of 2
-              contiguous columns)
+              <b>WeightedAverage: </b>Shows the Weighted Average for Columns
+              that have been provided with the 'Weighted Average' aggregation.
             </li>
             <li>
               <b>Only: </b>Calculates the Weighted Average (requires selection
@@ -34,7 +30,7 @@ export default () => {
             </li>
           </ul>
           <p>
-            Open the Cell Summary dropdown and see this additional 3 entries are
+            Open the Cell Summary dropdown and see this additional 2 entries are
             present.
           </p>
         </div>
@@ -49,10 +45,10 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/cell-summary-function"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/cell-summary-module"
             target="_blank"
           >
-            Cell Summary Read Me
+            Cell Summary Module
           </a>{' '}
         </div>
       }

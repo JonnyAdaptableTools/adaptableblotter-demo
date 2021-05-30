@@ -76,10 +76,10 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/custom-sort-function"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/custom-sort-module"
             target="_blank"
           >
-            Custom Sort Read Me
+            Custom Sort Module
           </a>{' '}
           |{' '}
           <a

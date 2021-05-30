@@ -59,10 +59,10 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/cell-summary-function"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/cell-summary-module"
             target="_blank"
           >
-            Cell Summary Read Me
+            Cell Summary Module
           </a>
         </div>
       }

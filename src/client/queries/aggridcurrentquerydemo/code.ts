@@ -29,7 +29,9 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
+
   ConditionalStyle: {
+    Revision: Date.now(),
     ConditionalStyles: [
       {
         Scope: {
@@ -39,11 +41,12 @@ const demoConfig: PredefinedConfig = {
           BackColor: 'orange',
         },
         Rule: {
-          BooleanExpression: " QUERY['Non UP Shipping']=true ",
+          BooleanExpression: " QUERY('Non UP Shipping')",
         },
       },
     ],
   },
+
   Layout: {
     CurrentLayout: 'QueryLayout',
     Layouts: [

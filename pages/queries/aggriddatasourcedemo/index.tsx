@@ -4,7 +4,7 @@ import DynamicDemoPage from '../../../src/Helpers/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/search/aggriddatasourcedemo')}
+      demo={import('../../../src/client/queries/aggriddatasourcedemo')}
       pageTitle={'Data Source Selector Demo'}
       description={
         <div>

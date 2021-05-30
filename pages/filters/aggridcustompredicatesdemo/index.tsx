@@ -73,7 +73,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/filter-function"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/filter-modulen"
             target="_blank"
           >
             Filter Module

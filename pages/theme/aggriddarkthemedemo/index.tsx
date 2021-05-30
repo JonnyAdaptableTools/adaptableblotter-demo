@@ -52,10 +52,10 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/theme-function"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/theme-module"
             target="_blank"
           >
-            Theme Read Me
+            Theme Module
           </a>{' '}
           |{' '}
           <a

@@ -49,10 +49,10 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-functions/layout-function"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/layout-module"
             target="_blank"
           >
-            Layout Read Me
+            Layout Module
           </a>{' '}
         </div>
       }

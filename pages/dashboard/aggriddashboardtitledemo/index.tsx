@@ -36,7 +36,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/user-interface/dashboard"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/user-interface/dashboard"
             target="_blank"
           >
             Dashboard Read Me
