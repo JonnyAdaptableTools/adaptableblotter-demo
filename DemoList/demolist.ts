@@ -74,6 +74,11 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description: 'Set the current query to use at start up.',
           },
           {
+            Name: 'Shared Queries',
+            Link: '/queries/aggridsharedquerydemo',
+            Description: 'Re-use Queries in multiple Modules in AdapTable',
+          },
+          {
             Name: 'User Query Functions',
             Link: '/queries/aggriduserqueryfunctionsdemo',
             Description:

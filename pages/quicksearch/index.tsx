@@ -35,10 +35,10 @@ export default () => {
       pageTitle={'Search Demos'}
       description={
         <div>
-          <h4>Search Functions</h4>
+          <h4>Quick Search</h4>
           <p>
-            There are a number of different ways to search for data in
-            Adaptable:
+            Quick Search enables you to quickly find <b>any matching text</b>{' '}
+            across all cells in <b>visible</b> columns.
           </p>
           <ul>{demoLinks}</ul>
           Click on the buttons below to see a demo for each search function.

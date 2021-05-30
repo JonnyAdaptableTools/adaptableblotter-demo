@@ -16,9 +16,49 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Query: {
-    CurrentQuery:
-      '([ShipCountry] IN ("UK", "USA") AND ENDS_WITH([ShipVia],"s"))  OR [ItemCount] < 5',
+    Revision: Date.now(),
+    SharedQueries: [
+      {
+        Name: 'Non UP Shipping',
+        BooleanExpression: '[ShipVia] != "United Package" ',
+      },
+      {
+        Name: 'Big Changed Orders',
+        BooleanExpression: '[ChangeLastOrder] > 10 AND [PackageCost] > 10',
+      },
+    ],
   },
+  Export: {
+    Revision: Date.now(),
+    CurrentReport: 'Big Orders',
+    Reports: [
+      {
+        Name: 'Big Orders',
+        ReportColumnScope: 'AllColumns',
+        ReportRowScope: 'ExpressionRows',
+        Query: {
+          BooleanExpression: 'QUERY("Big Changed Orders") AND [ItemCount] > 3',
+        },
+      },
+    ],
+  },
+  ConditionalStyle: {
+    Revision: Date.now(),
+    ConditionalStyles: [
+      {
+        Scope: {
+          All: true,
+        },
+        Style: {
+          BackColor: '#FED8B1',
+        },
+        Rule: {
+          BooleanExpression: " QUERY('Non UP Shipping')",
+        },
+      },
+    ],
+  },
+
   Layout: {
     CurrentLayout: 'QueryLayout',
     Layouts: [
@@ -47,10 +87,11 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   Dashboard: {
+    Revision: Date.now(),
     Tabs: [
       {
         Name: 'Search',
-        Toolbars: ['Query'],
+        Toolbars: ['Query', 'Export'],
       },
     ],
   },
@@ -74,7 +115,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Current Query Demo',
+    adaptableId: 'Shared Query Demo',
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

@@ -35,10 +35,10 @@ export default () => {
       pageTitle={'Search Demos'}
       description={
         <div>
-          <h4>Search Functions</h4>
+          <h4>Queries</h4>
           <p>
-            There are a number of different ways to search for data in
-            Adaptable:
+            Queries wrap 'Expressions' allowing for human readable searches to
+            be created and shared across AdapTable Modules.
           </p>
           <ul>{demoLinks}</ul>
           Click on the buttons below to see a demo for each search function.
