@@ -16,7 +16,6 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Query: {
-    Revision: Date.now(),
     SharedQueries: [
       {
         Name: 'Non UP Shipping',
@@ -29,7 +28,6 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   Export: {
-    Revision: Date.now(),
     CurrentReport: 'Big Orders',
     Reports: [
       {
@@ -43,7 +41,6 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   ConditionalStyle: {
-    Revision: Date.now(),
     ConditionalStyles: [
       {
         Scope: {
@@ -87,7 +84,6 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   Dashboard: {
-    Revision: Date.now(),
     Tabs: [
       {
         Name: 'Search',

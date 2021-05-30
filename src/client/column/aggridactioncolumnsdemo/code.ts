@@ -20,7 +20,6 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   ActionColumn: {
-    Revision: Date.now(),
     ActionColumns: [
       {
         ColumnId: 'Multiply',

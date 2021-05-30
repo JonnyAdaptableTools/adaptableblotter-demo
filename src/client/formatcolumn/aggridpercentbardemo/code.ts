@@ -19,7 +19,6 @@ const demoConfig: PredefinedConfig = {
     VisibleButtons: ['FormatColumn'],
   },
   FormatColumn: {
-    Revision: Date.now(),
     FormatColumns: [
       {
         Scope: {
