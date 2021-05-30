@@ -85,8 +85,8 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Users can provide custom functions to be included in - and evaluated by -  the Expression Parser.',
           },
           {
-            Name: 'Managing Queries',
-            Link: '/queries/aggridmanagingquerydemo',
+            Name: 'Query Options',
+            Link: '/queries/aggridqueryoptionsdemo',
             Description:
               'Configure which Expression Functions are available in the parser and which Columns are Queryable.',
           },
@@ -287,7 +287,7 @@ export function getDemoPageStructure(): DemoPageStructure {
         ],
       },
       {
-        CategoryName: 'Columns',
+        CategoryName: 'Special Columns',
         Link: '/column',
         Pages: [
           {
@@ -534,7 +534,7 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Dashboard Tabs',
             Link: '/dashboard/aggriddashboardtabsdemo',
             Description:
-              'AdapTable provides a number of Toolbars to provide easy access to functions. You can put these into Tabs that you create.',
+              'AdapTable provides a number of Toolbars to provide easy access to Modules. You can put these into Tabs that you create.',
           },
           {
             Name: 'Floating Dashboard',
@@ -543,10 +543,10 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Save screen estate by making the Dashboard "float" when not in use',
           },
           {
-            Name: 'Function Buttons',
+            Name: 'Module Buttons',
             Link: '/dashboard/aggriddashboardbuttonsdemo',
             Description:
-              'You can select which Function Buttons you wish to see in the Dashboard Header',
+              'You can select which Module Buttons you wish to see in the Dashboard Header',
           },
           {
             Name: 'Dashboard Visibility',
@@ -840,10 +840,10 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Set Row Groups not to open if there are no non-grouped columns',
           },
           {
-            Name: 'Custom Function Names',
+            Name: 'Custom Module Names',
             Link: '/adaptableoptions/aggridalternativefunctionnamedemo',
             Description:
-              'Provide an alternative name for an AdapTable Function to be used instead of the default one',
+              'Provide an alternative name for an AdapTable Module to be used instead of the default one',
           },
           {
             Name: 'Mac Like Scrollbars',

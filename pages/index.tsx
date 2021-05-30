@@ -17,6 +17,18 @@ export default () => {
         </i>
         <br />
         <p>
+          <h2>
+            <div style={{ color: 'red' }}>
+              This demo site uses a pre-release version of{' '}
+              <a
+                href="https://v9-0--docs-adaptabletools.netlify.app/docs/releases/version9/upgrade-guide-v9/"
+                target="_blank"
+              >
+                Version 9
+              </a>{' '}
+              of AdapTable
+            </div>
+          </h2>
           <h3>
             AdapTable is the most advanced and powerful HTML5 Data Management
             Solution available today
@@ -45,8 +57,8 @@ export default () => {
           most excite you. Each demo seeks to do one of four things:
           <ul>
             <li>
-              Demonstrate how an AdapTable function operates; these are sorted
-              by type (e.g. Search, Edit etc.)
+              Demonstrate how an AdapTable Module operates; these are sorted by
+              type (e.g. Search, Edit etc.)
             </li>
             <li>
               Show key UI elements (e.g. Dashboard, Tool Panel, Context and
@@ -112,7 +124,7 @@ export default () => {
           <b>Modules</b> <br />
           AdapTable contains a large number of <b>Modules</b> (e.g. Conditional
           Style, Bulk Update, Pie Chart etc). <br />
-          Each function has its own 'popup screen' and many also have their own
+          Each Module has its own 'popup screen' and many also have their own
           toolbars or tool panels for easy access.
           <br />
           All Modules are available to all users (depending on the{' '}

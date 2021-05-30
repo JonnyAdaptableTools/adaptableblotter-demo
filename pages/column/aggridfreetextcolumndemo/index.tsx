@@ -28,7 +28,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/freetext-column-modulen"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/freetext-column-module"
             target="_blank"
           >
             FreeText Column Module

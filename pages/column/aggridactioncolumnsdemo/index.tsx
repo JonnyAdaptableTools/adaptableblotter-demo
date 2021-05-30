@@ -9,30 +9,51 @@ export default () => {
       description={
         <div>
           <p>
-            AdapTable provides an Action Column function that allows you to
-            specify (and optionally render) a button to be placed in a column.
-          </p>
-
-          <p>
-            Here we created <b>Plus</b> and <b>Minus</b> Action Columns; in the
-            onActionColumnClicked event handler we update the <i>Item Count</i>{' '}
-            column (though we do also have a{' '}
-            <a href="../../edit/aggridplusminusdemo" target="_blank">
-              Plus/Minus Module
-            </a>
-            ).
+            AdapTable provides an Action Column Module which wraps the{' '}
+            <b>Adaptable Button</b> object in helpful ways.
           </p>
           <p>
-            We also created a <b>Multiply</b> Action Column which updates the{' '}
-            <i>Item Cost</i> column. We supplied a <i>ShouldRenderPredicate</i>{' '}
-            to say the button shouldn't appear if Employee is 'Margaret
-            Peacock', and a <i>RenderFunction</i> to say that we double if the
-            Employee is 'Robert King' or 'Janet Leverling' and treble it
-            otherwise.
+            Each{' '}
+            <a
+              href="https://v9-0--docs-adaptabletools.netlify.app/docs/common-objects/common-objects-button"
+              target="_blank"
+            >
+              AdapTable Button
+            </a>{' '}
+            can be individually styled, and contains 2 JavaScript functions
+            (povided at design-time) which AdapTable will invoke when required:
           </p>
+          <ul>
+            <li>
+              <b>ButtonClickedFunction</b> (mandatory): What should happen when
+              the Button is clicked
+            </li>
+            <li>
+              <b>ButtonRenderPredicate</b>: Whether or not the Button should
+              display
+            </li>
+          </ul>
           <p>
-            Lastly we created an Action column with the text <b>Delete Row</b>{' '}
-            and does exactly that.
+            In this example we created 4 Action Columns:
+            <ul>
+              <li>
+                <b>Plus</b> and <b>Minus</b>: the clicked function will update
+                the <i>Item Count</i> column (though we do also have a{' '}
+                <a href="../../edit/aggridplusminusdemo" target="_blank">
+                  Plus/Minus Module
+                </a>
+                ).
+              </li>
+              <li>
+                <b>Multiply</b>: updates the <i>Item Cost</i> column (with a{' '}
+                <i>ButtonRenderPredicate</i> implementation to say the button
+                shouldn't appear if Employee is 'Margaret Peacock')
+              </li>
+              <li>
+                <b>Action</b>: which renders a <b>Delete Row</b> and does
+                exactly that.
+              </li>
+            </ul>
           </p>
           <p>
             Note: the delete row and all the cell updates were performed by

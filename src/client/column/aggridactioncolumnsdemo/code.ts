@@ -20,6 +20,7 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   ActionColumn: {
+    Revision: Date.now(),
     ActionColumns: [
       {
         ColumnId: 'Multiply',
@@ -28,6 +29,10 @@ const demoConfig: PredefinedConfig = {
           ButtonClickedFunction: 'multiplyButtonClicked',
           ButtonRenderPredicate: 'shouldRenderMultiplyPredicate',
           //  RenderFunction: 'renderMultiplyFunction',
+          ButtonStyle: {
+            Variant: 'raised',
+            Tone: 'accent',
+          },
         },
       },
       {
@@ -35,6 +40,10 @@ const demoConfig: PredefinedConfig = {
         ActionColumnButton: {
           Label: '+',
           ButtonClickedFunction: 'addButtonClicked',
+          ButtonStyle: {
+            Variant: 'raised',
+            Tone: 'neutral',
+          },
         },
       },
       {
@@ -42,6 +51,10 @@ const demoConfig: PredefinedConfig = {
         ActionColumnButton: {
           Label: '-',
           ButtonClickedFunction: 'subtractButtonClicked',
+          ButtonStyle: {
+            Variant: 'raised',
+            Tone: 'neutral',
+          },
         },
       },
       {
@@ -49,6 +62,10 @@ const demoConfig: PredefinedConfig = {
         ActionColumnButton: {
           Label: 'Delete Row',
           ButtonClickedFunction: 'deleteButtonClicked',
+          ButtonStyle: {
+            Variant: 'outlined',
+            Tone: 'neutral',
+          },
         },
       },
     ],

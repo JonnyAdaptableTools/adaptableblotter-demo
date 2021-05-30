@@ -7,44 +7,43 @@ export default () => {
       demo={import(
         '../../../src/client/adaptableoptions/aggridalternativefunctionnamedemo'
       )}
-      pageTitle={'Custom Function Name Demo'}
+      pageTitle={'Custom Module Name Demo'}
       description={
         <div>
           <p>
-            AdapTable allows you to provide your own Application Icon via the{' '}
-            <a
-              href="https://docs.adaptabletools.com/docs/adaptable-options/user-interface-options"
-              target="_blank"
-            >
-              User Interface Options
-            </a>{' '}
-            section of <i>Adaptable Options</i>.
+            AdapTable allows you to provide custom Module names in place of the
+            ones supplied by the System.
           </p>
           <p>
-            If provided, the icon will appear in the top left hand corner of the
-            Dashboard - and potentially in other places in AdapTable (e.g.
-            OpenFin notifications).
+            This (admittedly rarely-used) Option is useful if the containing
+            Application already has its own window / menu with functionality of
+            the same name, e.g. 'Dashboard' or 'Search'.
           </p>
           <p>
-            In this example we have passed in the Adaptable Tools icon as the{' '}
+            Simply provide the name of the new Module in the{' '}
+            <i>alternativeModuleNames</i> property of{' '}
             <a
-              href="https://docs.adaptabletools.com/api/applicationicon"
+              href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/general-options"
               target="_blank"
             >
-              Application Icon
+              General Options
             </a>{' '}
-            object and set a size of 25 pixels for both width and height.{' '}
+            section of <i>Adaptable Options</i>.{' '}
+          </p>
+          <p>
+            In this example we have renamed the 'Dashboard' module as{' '}
+            <b>Grid Header</b>
           </p>
         </div>
       }
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-options/user-interface-options"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/general-options"
             target="_blank"
           >
-            User Interface Options
-          </a>
+            General Options
+          </a>{' '}
         </div>
       }
     />

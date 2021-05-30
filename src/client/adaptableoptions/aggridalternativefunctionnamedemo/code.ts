@@ -35,12 +35,16 @@ export default async (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Custom Function Name Demo',
+    adaptableId: 'Custom Module Name Demo',
     generalOptions: {
       alternativeModuleNames: [
         {
           adaptableModule: 'Dashboard',
           newName: 'Grid Header',
+        },
+        {
+          adaptableModule: 'Layout',
+          newName: 'Column Manager',
         },
       ],
     },

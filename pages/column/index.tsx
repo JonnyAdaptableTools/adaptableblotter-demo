@@ -10,7 +10,7 @@ import DemoBox from '../../src/components/DemoBox';
 
 export default () => {
   let categoryPages = getDemoPageStructure().Categories.find(
-    c => c.CategoryName == 'Columns'
+    c => c.CategoryName == 'Special Columns'
   )!.Pages;
 
   let demoLinks: any = categoryPages.map((page: DemoPage) => {
@@ -35,10 +35,10 @@ export default () => {
       pageTitle={'Column demos'}
       description={
         <div>
-          <h4>Column Functions</h4>
+          <h4>Special Columns</h4>
           <p>
-            There are a number of different column-related functions in
-            AdapTable, to cater for a wide variety of use cases.
+            AdapTable provides some 'Special Columns' where users display /
+            store / act on information not provided in regular ag-Grid columns.
           </p>
           <ul>{demoLinks}</ul>
           <p>

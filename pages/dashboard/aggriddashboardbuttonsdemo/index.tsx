@@ -10,7 +10,8 @@ export default () => {
         <div>
           <p>
             The 'VisibleButtons' property of Dashboard Predefined Config allows
-            you to specify which buttons are visible in the Dashboard Header.
+            you to specify which Module buttons are visible in the Dashboard
+            Header.
           </p>
           <p>
             By default, AdapTable will show the 'SystemStatus', 'GridInfo',
@@ -34,7 +35,7 @@ export default () => {
           </p>{' '}
           <p>
             The 'Configure Dashboard' option in the main Menu allows you
-            configure the Dashboard including which Function Buttons to display.
+            configure the Dashboard including which Module Buttons to display.
           </p>
           <p>
             Note: You can also include custom buttons in the Dashboard by
