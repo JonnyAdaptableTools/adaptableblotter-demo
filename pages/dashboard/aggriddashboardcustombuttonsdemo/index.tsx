@@ -11,7 +11,8 @@ export default () => {
       description={
         <div>
           <p>
-            The Dashboard includes an optional <b>CustomButtons</b> collection.{' '}
+            The Dashboard includes an optional <b>CustomButtons</b> collection
+            (provided in Dashboard Options).{' '}
           </p>
           <p>
             This enables you to place your own buttons next to any{' '}
@@ -19,20 +20,12 @@ export default () => {
             selected to display.
           </p>
           <p>
-            Each button can show an icon, a caption or both; when a button is
-            clicked the{' '}
-            <a
-              href="https://docs.adaptabletools.com/docs/adaptable-events/dashboard-button-clicked-event"
-              target="_blank"
-            >
-              DashboardButtonClicked
-            </a>{' '}
-            event is fired.
+            Each button can show an icon, a caption or both and you can provide
+            an onClick event.
           </p>
           <p>
             In this demo we have created a 'Delete Row' button with a caption
-            and a 'New Row' button with an Icon. We handle the{' '}
-            <i>DashboardButtonClicked</i> event for both buttons.
+            and a 'New Row' button with an Icon.
           </p>
         </div>
       }
@@ -43,6 +36,13 @@ export default () => {
             target="_blank"
           >
             Dashboard Read Me
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/dashboard-options"
+            target="_blank"
+          >
+            Dashboard Options
           </a>{' '}
           |{' '}
           <a

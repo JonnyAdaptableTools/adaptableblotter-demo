@@ -45,7 +45,7 @@ export default () => {
                 href="https://v9-0--docs-adaptabletools.netlify.app/docs/user-interface/column-menu/#menu-item-onclick"
                 target="_blank"
               >
-                Clicked Function
+                onClick
               </a>
               : What happens when the Menu Item is clicked
             </li>
@@ -55,9 +55,9 @@ export default () => {
                 href="https://v9-0--docs-adaptabletools.netlify.app/docs/user-interface/column-menu/#menu-item-render"
                 target="_blank"
               >
-                Render
+                shouldRender
               </a>
-              : Whether the Menu Item should appear
+              : Whether the Menu Item should appear or not
             </li>
             <li>
               {' '}
@@ -65,7 +65,7 @@ export default () => {
                 href="https://v9-0--docs-adaptabletools.netlify.app/docs/user-interface/column-menu/#menu-item-label"
                 target="_blank"
               >
-                Label
+                label
               </a>
               : What Label the Menu Item should have
             </li>

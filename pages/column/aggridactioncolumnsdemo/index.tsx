@@ -45,7 +45,7 @@ export default () => {
               </li>
               <li>
                 <b>Multiply</b>: updates the <i>Item Cost</i> column (with a{' '}
-                <i>ButtonRenderPredicate</i> implementation to say the button
+                <i>shouldRender</i> Predicate implementation to say the button
                 shouldn't appear if Employee is 'Margaret Peacock')
               </li>
               <li>

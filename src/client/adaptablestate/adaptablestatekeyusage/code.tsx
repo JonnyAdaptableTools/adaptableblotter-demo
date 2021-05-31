@@ -38,22 +38,6 @@ const view1Config: PredefinedConfig = {
         Toolbars: ['Query', 'Alert', 'Layout'],
       },
     ],
-    CustomButtons: [
-      {
-        Name: 'ChangeView',
-        Caption: 'Click to toggle the View ',
-        ButtonStyle: {
-          Variant: 'raised',
-          Tone: 'neutral',
-        },
-        ButtonClickedFunction: 'ToggleViewButton',
-      },
-      {
-        Name: 'clear',
-        Caption: 'Clear Views State',
-        ButtonClickedFunction: 'ClearViewButton',
-      },
-    ],
   },
   // For view1 we will search on 'Ha'
   QuickSearch: {
