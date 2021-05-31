@@ -71,7 +71,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
         columnScope: {
           ColumnIds: ['OrderId'],
         },
-        functionScope: ['filter', 'alert', 'conditionalstyle'],
+        moduleScope: ['filter', 'alert', 'conditionalstyle'],
         handler(params: PredicateDefHandlerParams) {
           let invoiced: number = params.node.data.InvoicedCost;
           let itemCount: number = params.node.data.ItemCount;
@@ -84,7 +84,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
         columnScope: {
           ColumnIds: ['Employee'],
         },
-        functionScope: ['filter'],
+        moduleScope: ['filter'],
         handler(params: PredicateDefHandlerParams) {
           return (
             params.value == 'Robert King' ||
@@ -99,7 +99,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
         columnScope: {
           ColumnIds: ['LastUpdatedTime'],
         },
-        functionScope: ['filter'],
+        moduleScope: ['filter'],
         handler(params: PredicateDefHandlerParams) {
           return (params.value as Date).getHours() > 17;
         },
@@ -110,7 +110,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
         columnScope: {
           DataTypes: ['Date'],
         },
-        functionScope: ['filter'],
+        moduleScope: ['filter'],
         handler(params: PredicateDefHandlerParams) {
           let takeOverDate = new Date('2019-09-21');
           return (params.value as Date) > takeOverDate;

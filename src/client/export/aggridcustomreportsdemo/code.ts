@@ -31,7 +31,6 @@ const demoConfig: PredefinedConfig = {
         ReportColumnScope: 'CustomColumns',
         ReportRowScope: 'CustomRows',
         Name: 'People Report',
-        CustomReportFunction: 'getDummyData',
       },
     ],
   },
@@ -64,42 +63,43 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Custom Reports Demo',
-    userFunctions: [
-      {
-        type: 'CustomReportFunction',
-        name: 'getDummyData',
-        handler(reportName: string) {
-          // this will typically run a call on the server but here we just provide some dummy data
-          // note that it takes the form of a ReportData object - with a 'columns' and a 'rows' section
-          let reportData: ReportData = {
-            columns: [
-              {
-                ColumnId: 'Name',
-                FriendlyName: 'Name',
-                DataType: 'String',
-              },
-              {
-                ColumnId: 'Age',
-                FriendlyName: 'Age',
-                DataType: 'Number',
-              },
-              {
-                ColumnId: 'Location',
-                FriendlyName: 'Location',
-                DataType: 'String',
-              },
-            ],
-            rows: [
-              { Name: 'Joe', Age: 52, Location: 'London' },
-              { Name: 'Dawn', Age: 39, Location: 'New York' },
-              { Name: 'Peter', Location: 'France' },
-              { Name: 'Eleanor', Age: 525 },
-            ],
-          };
-          return reportData;
+    exportOptions: {
+      customReports: [
+        {
+          name: 'People Report',
+          onRunReport: () => {
+            // this will typically run a call on the server but here we just provide some dummy data
+            // note that it takes the form of a ReportData object - with a 'columns' and a 'rows' section
+            let reportData: ReportData = {
+              columns: [
+                {
+                  ColumnId: 'Name',
+                  FriendlyName: 'Name',
+                  DataType: 'String',
+                },
+                {
+                  ColumnId: 'Age',
+                  FriendlyName: 'Age',
+                  DataType: 'Number',
+                },
+                {
+                  ColumnId: 'Location',
+                  FriendlyName: 'Location',
+                  DataType: 'String',
+                },
+              ],
+              rows: [
+                { Name: 'Joe', Age: 52, Location: 'London' },
+                { Name: 'Dawn', Age: 39, Location: 'New York' },
+                { Name: 'Peter', Location: 'France' },
+                { Name: 'Eleanor', Age: 525 },
+              ],
+            };
+            return reportData;
+          },
         },
-      },
-    ],
+      ],
+    },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

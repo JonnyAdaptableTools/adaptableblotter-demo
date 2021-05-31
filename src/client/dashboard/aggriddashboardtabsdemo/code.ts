@@ -35,15 +35,7 @@ const demoConfig: PredefinedConfig = {
       {
         Name: 'customToolbar',
         Title: 'Custom Toolbar',
-        CustomToolbarButtons: [
-          {
-            Label: 'Demo Button',
-            ButtonStyle: {
-              Variant: 'text',
-              Tone: 'success',
-            },
-          },
-        ],
+        CustomToolbarButtonLabels: ['Demo Button'],
       },
     ],
   },
@@ -65,6 +57,17 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Dashboard Tabs Demo',
+    dashboardOptions: {
+      customToolbarButtons: [
+        {
+          label: 'Demo Button',
+          buttonStyle: {
+            variant: 'text',
+            tone: 'success',
+          },
+        },
+      ],
+    },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
     plugins: [charts()],

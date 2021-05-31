@@ -9,7 +9,7 @@ export default () => {
       description={
         <div>
           <p>
-            AdapTable provides an Action Column Module which wraps the{' '}
+            AdapTable provides an Action Column which wraps the{' '}
             <b>Adaptable Button</b> object in helpful ways.
           </p>
           <p>
@@ -25,12 +25,11 @@ export default () => {
           </p>
           <ul>
             <li>
-              <b>ButtonClickedFunction</b> (mandatory): What should happen when
-              the Button is clicked
+              <b>onClick</b> (mandatory): What should happen when the Button is
+              clicked
             </li>
             <li>
-              <b>ButtonRenderPredicate</b>: Whether or not the Button should
-              display
+              <b>shouldRender</b>: Whether or not the Button should display
             </li>
           </ul>
           <p>
@@ -71,29 +70,11 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/action-column-module"
+            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/user-interface-options#action-columns"
             target="_blank"
           >
-            Action Column Module
+            Action Columns (User Interface Options)
           </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/predefined-config/action-column-config"
-            target="_blank"
-          >
-            Action Column Config
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/adaptable-api/action-column-api"
-            target="_blank"
-          >
-            Action Column API
-          </a>
-          |{' '}
-          <a href="https://youtu.be/y0cDvtdmSKM" target="_blank">
-            Action Column Video
-          </a>
         </div>
       }
     />

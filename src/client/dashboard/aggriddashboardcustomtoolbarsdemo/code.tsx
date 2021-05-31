@@ -37,33 +37,12 @@ const demoConfig: PredefinedConfig = {
         Name: 'Trades',
         Title: 'Trades',
         ShowConfigureButton: true,
-        ToolbarButtons: [
-          {
-            Name: 'tradesButton1',
-            Caption: 'Make Trade',
-            ButtonStyle: {
-              Variant: 'raised',
-              Tone: 'accent',
-            },
-            ButtonClickedFunction: 'DemoButtonClicked',
-          },
-        ],
+        CustomToolbarButtonLabels: ['Make Trade'],
       },
       // Show no Title and no Configure Button
       {
         Name: 'Deals',
-        ToolbarButtons: [
-          {
-            Name: 'dealsButton1',
-            Caption: 'New Deal',
-
-            ButtonStyle: {
-              Variant: 'text',
-              Tone: 'success',
-            },
-            ButtonClickedFunction: 'DemoButtonClicked',
-          },
-        ],
+        CustomToolbarButtonLabels: ['New Deal'],
       },
       // Show Configure Button but no Title
       // Note that we have also added an Icon to the button
@@ -71,22 +50,7 @@ const demoConfig: PredefinedConfig = {
         Name: 'Orders',
         Title: 'Orders',
         ShowConfigureButton: true,
-        CustomToolbarButtons: [
-          {
-            Label: 'Create Order',
-            ButtonStyle: {
-              Variant: 'outlined',
-              Tone: 'info',
-            },
-            Icon: {
-              height: 20,
-              width: 25,
-              src:
-                'https://www.pngfind.com/pngs/m/278-2781613_blue-plus-icon-add-new-button-png-transparent.png',
-            },
-            ButtonClickedFunction: 'DemoButtonClicked',
-          },
-        ],
+        CustomToolbarButtonLabels: ['Create Order'],
       },
     ],
   },
@@ -108,15 +72,57 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Custom Toolbars Demo',
-    userFunctions: [
-      {
-        type: 'ButtonClickedFunction',
-        name: 'DemoButtonClicked',
-        handler(button: AdaptableButton, context: DashboardButtonContext) {
-          alert('you clicked: ' + button.Label);
+    dashboardOptions: {
+      customToolbarButtons: [
+        {
+          label: 'Make Trade',
+          buttonStyle: {
+            variant: 'raised',
+            tone: 'accent',
+          },
+          onClick: (
+            button: AdaptableButton,
+            context: DashboardButtonContext
+          ) => {
+            alert('you clicked: ' + button.label);
+          },
         },
-      },
-    ],
+        {
+          label: 'New Deal',
+
+          buttonStyle: {
+            variant: 'text',
+            tone: 'success',
+          },
+          onClick: (
+            button: AdaptableButton,
+            context: DashboardButtonContext
+          ) => {
+            alert('you clicked: ' + button.label);
+          },
+        },
+        {
+          label: 'Create Order',
+          buttonStyle: {
+            variant: 'outlined',
+            tone: 'info',
+          },
+          icon: {
+            height: 20,
+            width: 25,
+            src:
+              'https://www.pngfind.com/pngs/m/278-2781613_blue-plus-icon-add-new-button-png-transparent.png',
+          },
+          onClick: (
+            button: AdaptableButton,
+            context: DashboardButtonContext
+          ) => {
+            alert('you clicked: ' + button.label);
+          },
+        },
+      ],
+    },
+
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
     plugins: [charts()],

@@ -42,31 +42,31 @@ const demoConfig: PredefinedConfig = {
         // Create a dynamic form with 1 Field (of type number)
         // And 2 Buttons: one to Overwrite and one to Undo
         AlertForm: {
-          Description: 'Please enter a value < 100 or click "Undo" ',
-          Fields: [
+          description: 'Please enter a value < 100 or click "Undo" ',
+          fields: [
             {
-              Name: 'ItemCost',
-              Label: 'Item Cost',
-              DefaultValue: '',
-              Type: 'number',
+              name: 'ItemCost',
+              label: 'Item Cost',
+              defaultValue: '',
+              fieldType: 'number',
             },
           ],
-          Buttons: [
+          buttons: [
             {
-              Label: 'Overwrite',
-              Validate: '[ItemCost] >0 AND [ItemCost] <= 100',
-              Action: ['overwrite'],
-              ButtonStyle: {
-                Tone: 'warning',
-                Variant: 'outlined',
+              label: 'Overwrite',
+              validate: '[ItemCost] >0 AND [ItemCost] <= 100',
+              action: ['overwrite'],
+              buttonStyle: {
+                tone: 'warning',
+                variant: 'outlined',
               },
             },
             {
-              Label: 'Undo',
-              Action: ['undo'],
-              ButtonStyle: {
-                Tone: 'neutral',
-                Variant: 'outlined',
+              label: 'Undo',
+              action: ['undo'],
+              buttonStyle: {
+                tone: 'neutral',
+                variant: 'outlined',
               },
             },
           ],

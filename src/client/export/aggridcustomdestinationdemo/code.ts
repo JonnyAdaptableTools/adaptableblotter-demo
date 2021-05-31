@@ -46,14 +46,14 @@ export default async (columnDefs: any[], rowData: any[]) => {
         {
           name: 'Email',
           form: {
-            Title: 'Email Settings',
-            Description: 'Provide email details ',
-            Fields: [
+            title: 'Email Settings',
+            description: 'Provide email details ',
+            fields: [
               {
-                Name: 'address',
-                Label: 'Email Address',
-                Type: 'select',
-                Options: [
+                name: 'address',
+                label: 'Email Address',
+                fieldType: 'select',
+                options: [
                   {
                     value: 'support@adaptabletools.com',
                     label: 'Support',
@@ -63,32 +63,32 @@ export default async (columnDefs: any[], rowData: any[]) => {
                     label: 'Sales',
                   },
                 ],
-                DefaultValue: 'support@adaptabletools.com',
+                defaultValue: 'support@adaptabletools.com',
               },
               {
-                Name: 'subject',
-                Label: 'Email Subject',
-                Type: 'text',
-                DefaultValue: 'AdapTable Report Data',
+                name: 'subject',
+                label: 'Email Subject',
+                fieldType: 'text',
+                defaultValue: 'AdapTable Report Data',
               },
               {
-                Name: 'body',
-                Label: 'Email Body',
-                Type: 'text',
+                name: 'body',
+                label: 'Email Body',
+                fieldType: 'text',
               },
             ],
-            Buttons: [
+            buttons: [
               {
-                Label: 'Cancel',
-                Validate: true,
+                label: 'Cancel',
+                validate: true,
               },
               {
-                Label: 'Export',
-                ButtonStyle: {
-                  Tone: 'success',
-                  Variant: 'raised',
+                label: 'Export',
+                buttonStyle: {
+                  tone: 'success',
+                  variant: 'raised',
                 },
-                AutoSubmitForm: true,
+                autoSubmitForm: true,
               },
             ],
           },

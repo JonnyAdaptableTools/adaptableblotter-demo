@@ -21,33 +21,18 @@ export default () => {
           </p>
           <ol>
             <li>
-              Pre-populate the Toolbar with Button definitions (as part of{' '}
-              <a
-                href="https://docs.adaptabletools.com/docs/predefined-config/dashboard-config"
-                target="_blank"
-              >
-                Dashboard State
-              </a>
-              ); when a button is clicked the{' '}
-              <a
-                href="https://docs.adaptabletools.com/docs/adaptable-events/toolbar-button-clicked-event"
-                target="_blank"
-              >
-                ToolbarButtonClicked
-              </a>{' '}
-              event is fired.
-              <br />
-              Note that you can styled the buttons individually (as we have done
-              in all 3 custom toolbars), and you can add a custom icon.
+              Pre-populate the Toolbar with Adaptable Button definitions. Note
+              that you can styled the buttons individually (as we have done in
+              all 3 custom toolbars), and you can add a custom icon.
             </li>
             <li>
               Render the Toolbar with any bespoke, custom, content that is
               required; simply listen to the{' '}
               <a
-                href="https://docs.adaptabletools.com/docs/adaptable-events/toolbar-visibility-changed-event"
+                href="https://docs.adaptabletools.com/docs/adaptable-events/dashboard-changed-event"
                 target="_blank"
               >
-                ToolbarVisibilityChanged
+                DashboardChanged
               </a>{' '}
               event and when the Toolbar becomes visible, render any content.
             </li>

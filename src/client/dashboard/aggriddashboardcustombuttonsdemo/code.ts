@@ -29,30 +29,6 @@ const demoConfig: PredefinedConfig = {
       },
     ],
     VisibleButtons: ['GridInfo'],
-    DashboardButtons: [
-      {
-        Label: 'Delete Row',
-        ButtonStyle: {
-          Variant: 'raised',
-          Tone: 'accent',
-        },
-        ButtonClickedFunction: 'DeleteRowButtonClicked',
-      },
-      {
-        Label: 'New Row',
-        ButtonStyle: {
-          Variant: 'outlined',
-          Tone: 'info',
-        },
-        ButtonClickedFunction: 'NewRowClicked',
-        Icon: {
-          height: 15,
-          width: 15,
-          src:
-            'https://www.pngfind.com/pngs/m/170-1706847_8-skin-pack-pour-windows-xp-icc5l-description.png',
-        },
-      },
-    ],
   },
 } as PredefinedConfig;
 
@@ -72,27 +48,48 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Custom Buttons Demo',
-    userFunctions: [
-      {
-        type: 'ButtonClickedFunction',
-        name: 'DeleteRowButtonClicked',
-        handler(button: AdaptableButton, context: DashboardButtonContext) {
-          let firstRow: any = adaptableOptions.vendorGrid.api.getDisplayedRowAtIndex(
-            0
-          );
-          if (firstRow && firstRow.data) {
-            adaptableApi.gridApi.deleteGridData([firstRow.data]);
-          }
+    dashboardOptions: {
+      dashboardButtons: [
+        {
+          label: 'Delete Row',
+          buttonStyle: {
+            variant: 'raised',
+            tone: 'accent',
+          },
+          onClick: (
+            button: AdaptableButton,
+            context: DashboardButtonContext
+          ) => {
+            let firstRow: any = adaptableOptions.vendorGrid.api.getDisplayedRowAtIndex(
+              0
+            );
+            if (firstRow && firstRow.data) {
+              adaptableApi.gridApi.deleteGridData([firstRow.data]);
+            }
+          },
         },
-      },
-      {
-        type: 'ButtonClickedFunction',
-        name: 'NewRowButtonClicked',
-        handler(button: AdaptableButton, context: DashboardButtonContext) {
-          alert('you clicked the "newRow" (plus icon) button');
+        {
+          label: 'New Row',
+          buttonStyle: {
+            variant: 'outlined',
+            tone: 'info',
+          },
+          onClick: (
+            button: AdaptableButton,
+            context: DashboardButtonContext
+          ) => {
+            alert('you clicked the "newRow" (plus icon) button');
+          },
+          icon: {
+            height: 15,
+            width: 15,
+            src:
+              'https://www.pngfind.com/pngs/m/170-1706847_8-skin-pack-pour-windows-xp-icc5l-description.png',
+          },
         },
-      },
-    ],
+      ],
+    },
+
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
     plugins: [charts()],

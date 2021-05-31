@@ -29,39 +29,11 @@ const demoConfig: PredefinedConfig = {
       {
         Name: 'DemoButtons',
         Title: 'Demo Buttons',
-        CustomToolbarButtons: [
-          {
-            Label: 'Set Info',
-            ButtonStyle: {
-              Variant: 'text',
-              Tone: 'info',
-            },
-            ButtonClickedFunction: 'SetInfoButtonClick',
-          },
-          {
-            Label: 'Set Success',
-            ButtonStyle: {
-              Variant: 'text',
-              Tone: 'success',
-            },
-            ButtonClickedFunction: 'SetSuccessButtonClick',
-          },
-          {
-            Label: 'Set Warning',
-            ButtonStyle: {
-              Variant: 'text',
-              Tone: 'warning',
-            },
-            ButtonClickedFunction: 'SetWarningButtonClick',
-          },
-          {
-            Label: 'Set Error',
-            ButtonStyle: {
-              Variant: 'text',
-              Tone: 'error',
-            },
-            ButtonClickedFunction: 'SetErrorButtonClick',
-          },
+        CustomToolbarButtonLabels: [
+          'Set Info',
+          'Set Success',
+          'Set Warning',
+          'Set Error',
         ],
       },
     ],
@@ -128,57 +100,71 @@ export default async (columnDefs: any[], rowData: any[]) => {
         },
       ],
     },
-    userInterfaceOptions: {},
-    userFunctions: [
-      {
-        type: 'ButtonClickedFunction',
-        name: 'SetInfoButtonClick',
-        handler: (
-          button: AdaptableButton,
-          context: ActionColumnButtonContext
-        ) => {
-          adaptableApi.systemStatusApi.setInfoSystemStatus('No issues');
+    dashboardOptions: {
+      customToolbarButtons: [
+        {
+          label: 'Set Info',
+          buttonStyle: {
+            variant: 'text',
+            tone: 'info',
+          },
+          onClick: (
+            button: AdaptableButton,
+            context: ActionColumnButtonContext
+          ) => {
+            adaptableApi.systemStatusApi.setInfoSystemStatus('No issues');
+          },
         },
-      },
-      {
-        type: 'ButtonClickedFunction',
-        name: 'SetSuccessButtonClick',
-        handler: (
-          button: AdaptableButton,
-          context: ActionColumnButtonContext
-        ) => {
-          adaptableApi.systemStatusApi.setSuccessSystemStatus(
-            'All working fine'
-          );
+        {
+          label: 'Set Success',
+          buttonStyle: {
+            variant: 'text',
+            tone: 'success',
+          },
+          onClick: (
+            button: AdaptableButton,
+            context: ActionColumnButtonContext
+          ) => {
+            adaptableApi.systemStatusApi.setSuccessSystemStatus(
+              'All working fine'
+            );
+          },
         },
-      },
-      {
-        type: 'ButtonClickedFunction',
-        name: 'SetWarningButtonClick',
-        handler: (
-          button: AdaptableButton,
-          context: ActionColumnButtonContext
-        ) => {
-          adaptableApi.systemStatusApi.setWarningSystemStatus(
-            'Problems with server',
-            'Avoid any unnecesary edits'
-          );
+        {
+          label: 'Set Warning',
+          buttonStyle: {
+            variant: 'text',
+            tone: 'warning',
+          },
+          onClick: (
+            button: AdaptableButton,
+            context: ActionColumnButtonContext
+          ) => {
+            adaptableApi.systemStatusApi.setWarningSystemStatus(
+              'Problems with server',
+              'Avoid any unnecesary edits'
+            );
+          },
         },
-      },
-      {
-        type: 'ButtonClickedFunction',
-        name: 'SetErrorButtonClick',
-        handler: (
-          button: AdaptableButton,
-          context: ActionColumnButtonContext
-        ) => {
-          adaptableApi.systemStatusApi.setErrorSystemStatus(
-            'The server is down!',
-            'Please do not make any edits until the server comes back up'
-          );
+        {
+          label: 'Set Error',
+          buttonStyle: {
+            variant: 'text',
+            tone: 'error',
+          },
+          onClick: (
+            button: AdaptableButton,
+            context: ActionColumnButtonContext
+          ) => {
+            adaptableApi.systemStatusApi.setErrorSystemStatus(
+              'The server is down!',
+              'Please do not make any edits until the server comes back up'
+            );
+          },
         },
-      },
-    ],
+      ],
+    },
+
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

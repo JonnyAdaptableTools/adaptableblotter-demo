@@ -174,16 +174,6 @@ const view2Config: PredefinedConfig = {
         Toolbars: ['Export', 'Layout', 'CellSummary'],
       },
     ],
-    DashboardButtons: [
-      {
-        Label: 'Click to toggle the View ',
-        ButtonStyle: {
-          Variant: 'raised',
-          Tone: 'neutral',
-        },
-        ButtonClickedFunction: 'ToggleViewButton',
-      },
-    ],
   },
   // For view2 we will search on st
   QuickSearch: {
@@ -268,34 +258,45 @@ export default async (columnDefs: any[], rowData: any[]) => {
         return result;
       },
     },
-    userFunctions: [
-      {
-        type: 'ButtonClickedFunction',
-        name: 'ToggleViewButton',
-        handler: (button: AdaptableButton, context: DashboardButtonContext) => {
-          currentView = currentView === views[0] ? views[1] : views[0];
+    dashboardOptions: {
+      dashboardButtons: [
+        {
+          label: 'Click to toggle the View ',
+          buttonStyle: {
+            variant: 'raised',
+            tone: 'neutral',
+          },
+          onClick: (
+            button: AdaptableButton,
+            context: DashboardButtonContext
+          ) => {
+            currentView = currentView === views[0] ? views[1] : views[0];
 
-          let currentConfig =
-            currentView === views[0] ? view1Config : view2Config;
+            let currentConfig =
+              currentView === views[0] ? view1Config : view2Config;
 
-          adaptableApi.configApi
-            .setAdaptableStateKey(currentView, {
-              predefinedConfig: currentConfig,
-            })
-            .then(() => {
-              adaptableApi.dashboardApi.setDashboardTitle(getToolbarTitle());
-            });
+            adaptableApi.configApi
+              .setAdaptableStateKey(currentView, {
+                predefinedConfig: currentConfig,
+              })
+              .then(() => {
+                adaptableApi.dashboardApi.setDashboardTitle(getToolbarTitle());
+              });
+          },
         },
-      },
-      {
-        type: 'ButtonClickedFunction',
-        name: 'ClearViewButton',
-        handler: (button: AdaptableButton, context: DashboardButtonContext) => {
-          localStorage.clear();
-          window.location.href = window.location.href;
+
+        {
+          label: 'Clear Views State',
+          onClick: (
+            button: AdaptableButton,
+            context: DashboardButtonContext
+          ) => {
+            localStorage.clear();
+            window.location.href = window.location.href;
+          },
         },
-      },
-    ],
+      ],
+    },
     predefinedConfig: view1Config, // start off with View1 config
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

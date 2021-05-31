@@ -65,7 +65,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
         columnScope: {
           ColumnIds: ['Employee'],
         },
-        functionScope: ['filter', 'conditionalstyle'],
+        moduleScope: ['filter', 'conditionalstyle'],
         handler(params: PredicateDefHandlerParams) {
           return (
             params.value == 'Steven Buchanan' ||
