@@ -16,7 +16,7 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Query: {
-    SharedQueries: [
+    NamedQueries: [
       {
         Name: 'Non UP Shipping',
         BooleanExpression: '[ShipVia] != "United Package" ',
@@ -111,7 +111,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Shared Query Demo',
+    adaptableId: 'Named Query Demo',
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

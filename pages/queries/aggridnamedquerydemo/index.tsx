@@ -4,29 +4,28 @@ import DynamicDemoPage from '../../../src/Helpers/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/queries/aggridsharedquerydemo')}
-      pageTitle={'Shared Query Demo'}
+      demo={import('../../../src/client/queries/aggridnamedquerydemo')}
+      pageTitle={'Named Query Demo'}
       description={
         <div>
           <p>
             A (Boolean) Query can be named, saved and then re-used as required.
           </p>
           <p>
-            'Shared Queries' appear in the menu that is accessed when clicked
-            the 'Load Query' button (on the right hand side of the Query
-            Toolbar).
+            'Named Queries' appear in the menu that is accessed when clicked the
+            'Load Query' button (on the right hand side of the Query Toolbar).
           </p>
           <p>
             And they can be referenced in other Expressions making them
             available in any AdapTable Module that use Expressions.
           </p>
           <p>
-            The <b>Query</b> function in the parser takes the name of the Shared
+            The <b>Query</b> function in the parser takes the name of the Named
             Query as the only parameter and evaluates it as part of running the
             Expression.
           </p>
           <p>
-            In this demo we have created 2 Shared Queries queries:
+            In this demo we have created 2 Named Queries queries:
             <ul>
               <li>
                 <p>
