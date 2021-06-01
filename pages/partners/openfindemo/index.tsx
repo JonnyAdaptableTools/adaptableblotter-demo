@@ -8,6 +8,18 @@ export default () => {
       <p>
         <h4>OpenFin</h4>
       </p>
+      <div style={{ background: 'lightgray', padding: '20px', margin: '10px' }}>
+        <h3>
+          <a
+            href="https://us02web.zoom.us/webinar/register/6916219135348/WN_f6SCDosmSvOk5ent3_wBEQ"
+            target="_blank"
+          >
+            Register today
+          </a>{' '}
+          for the AdapTable / OpenFin Webinar which will showcase the many
+          integrations between these 2 leading products
+        </h3>
+      </div>
       <div id="launcherOpenfin">
         <p>
           AdapTable runs in the Broswer or Electron with all functionality

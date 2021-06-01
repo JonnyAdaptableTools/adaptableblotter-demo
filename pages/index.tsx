@@ -33,6 +33,20 @@ export default () => {
             AdapTable is the most advanced and powerful HTML5 Data Management
             Solution available today
           </h3>
+          <div
+            style={{ background: 'lightgray', padding: '20px', margin: '10px' }}
+          >
+            <h3>
+              <a
+                href="https://us02web.zoom.us/webinar/register/6916219135348/WN_f6SCDosmSvOk5ent3_wBEQ"
+                target="_blank"
+              >
+                Register today
+              </a>{' '}
+              for the AdapTable / OpenFin Webinar which will showcase the many
+              integrations between these 2 leading products
+            </h3>
+          </div>
           <b>
             AdapTable provides all the functionality users need to manage data.
           </b>{' '}
