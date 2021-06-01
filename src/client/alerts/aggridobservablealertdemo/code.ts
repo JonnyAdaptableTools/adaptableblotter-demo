@@ -44,10 +44,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Reactive Alert Demo',
-    containerOptions: {
-      alertContainer: 'alertDiv',
-    },
+    adaptableId: 'Observable Alert Demo',
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

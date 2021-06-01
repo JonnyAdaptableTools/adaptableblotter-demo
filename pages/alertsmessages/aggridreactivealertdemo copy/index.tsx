@@ -5,10 +5,10 @@ export default () => {
   return (
     <DynamicDemoPage
       demo={import('../../../src/client/alerts/aggridobservablealertdemo')}
-      pageTitle={'Aggregation Alerts Demo'}
+      pageTitle={'Observable Alerts Demo'}
       description={
         <div>
-          <p>TO DO - Will enable managing Limits</p>
+          <p>TO DO - But very exciting!!!!!</p>
         </div>
       }
       helpResources={
@@ -33,13 +33,6 @@ export default () => {
             target="_blank"
           >
             Alert Predefined Config
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/adaptable-options/alert-options"
-            target="_blank"
-          >
-            Alert Options
           </a>{' '}
           |{' '}
           <a

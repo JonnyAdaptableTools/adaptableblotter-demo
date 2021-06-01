@@ -433,8 +433,8 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description: 'Write an Expression to create an Alert.',
           },
           {
-            Name: 'Reactive Alerts',
-            Link: '/alertsmessages/aggridreactivealertdemo',
+            Name: 'Observable Alerts',
+            Link: '/alertsmessages/aggridobservablealertdemo',
             Description:
               'Create an Alert that will react to changes (or lack of changes) in data over time',
           },
