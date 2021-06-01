@@ -34,6 +34,7 @@ export default () => {
       }
       helpResources={
         <div>
+          {' '}
           <a
             href="https://docs.adaptabletools.com/docs/adaptable-modules/alert-module"
             target="_blank"
@@ -45,14 +46,28 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/predefined-config/alert-config"
             target="_blank"
           >
-            Alert Config
+            Alert Predefined Config
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-options/alert-options"
+            target="_blank"
+          >
+            Alert Options
           </a>{' '}
           |{' '}
           <a
             href="https://docs.adaptabletools.com/docs/adaptable-api/alert-api"
             target="_blank"
           >
-            Alert Api
+            Alert API
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-events/alert-fired-event"
+            target="_blank"
+          >
+            AlertFired Event
           </a>
         </div>
       }

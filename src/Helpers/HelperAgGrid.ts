@@ -2005,26 +2005,7 @@ export class HelperAgGrid {
         if (row.ShippedDate) {
           row.ShippedDate = new Date(row.ShippedDate);
         }
-        if (row.OrderCost) {
-          row.OrderCost = Number(Math.round(row.OrderCost * 100) / 100).toFixed(
-            2
-          );
-        }
-        if (row.ItemCost) {
-          row.ItemCost = Number(
-            (Math.round(row.ItemCost * 10000) / 10000).toFixed(2)
-          );
-        }
-        if (row.InvoicedCost) {
-          row.InvoicedCost = Number(
-            (Math.round(row.InvoicedCost * 10000) / 10000).toFixed(4)
-          );
-        }
-        if (row.PackageCost) {
-          row.PackageCost = Number(
-            Math.round(row.PackageCost * 1000) / 1000
-          ).toFixed(3);
-        }
+
         if (row.LastUpdatedTime) {
           row.LastUpdatedTime = new Date(row.LastUpdatedTime);
         }

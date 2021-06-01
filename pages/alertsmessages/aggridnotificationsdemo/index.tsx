@@ -4,25 +4,45 @@ import DynamicDemoPage from '../../../src/Helpers/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/alerts/aggridflashingalertsdemo')}
-      pageTitle={'Flashing Alerts Demo'}
+      demo={import('../../../src/client/alerts/aggridnotificationsdemo')}
+      pageTitle={'Notifications Demo'}
       description={
         <div>
-          <p>Flashing cells briefly appear when cell values' change.</p>
           <p>
-            By default they flash for half a second, with a green flash for a
-            positive change and a red flash for a negative change but this can
-            be amended by you.
+            There are many options provided in{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/adaptable-options/alert-options"
+              target="_blank"
+            >
+              Alert Options
+            </a>{' '}
+            to control how the Toast-style Notification will look.
           </p>
           <p>
-            This (very contrived!) example has 4 Flashing cell columns: The
-            'Item Cost', 'Order Cost', 'Change Last Order' columns use the
-            default flashing values while (for no particularly good reason) the
-            'Invoiced' column has different colours and a longer duration.
-          </p>
-          <p>
-            The Dashobard has been put into floating mode - useful for when
-            screen estate is at a premium.
+            In this demo we have set up the Notifications with these properties:
+            <ul>
+              <li>
+                <b>position</b>: BottomRight
+              </li>
+              <li>
+                <b>duration</b>: 10000
+              </li>
+              <li>
+                <b>showProgressBar</b>: true
+              </li>
+              <li>
+                <b>closeWhenClicked</b>: true
+              </li>
+              <li>
+                <b>pauseWhenHovering</b>:true
+              </li>
+              <li>
+                <b>isDraggable</b>: false
+              </li>
+              <li>
+                <b>transition</b>: Flip
+              </li>
+            </ul>
           </p>
         </div>
       }
@@ -34,6 +54,13 @@ export default () => {
             target="_blank"
           >
             Alert Module
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/common-objects/common-objects-query"
+            target="_blank"
+          >
+            Expressions
           </a>{' '}
           |{' '}
           <a

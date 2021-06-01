@@ -24,7 +24,6 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   Alert: {
-    MaxAlertsInStore: 500,
     AlertDefinitions: [
       {
         MessageType: 'Warning',

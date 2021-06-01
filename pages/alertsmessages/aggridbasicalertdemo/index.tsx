@@ -4,8 +4,8 @@ import DynamicDemoPage from '../../../src/Helpers/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/alerts/aggridalertdemo')}
-      pageTitle={'Alerts Demo'}
+      demo={import('../../../src/client/alerts/aggridbasicalertdemo')}
+      pageTitle={'Basic Alerts Demo'}
       description={
         <div>
           <p>
@@ -53,6 +53,13 @@ export default () => {
             target="_blank"
           >
             Alert Predefined Config
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-options/alert-options"
+            target="_blank"
+          >
+            Alert Options
           </a>{' '}
           |{' '}
           <a

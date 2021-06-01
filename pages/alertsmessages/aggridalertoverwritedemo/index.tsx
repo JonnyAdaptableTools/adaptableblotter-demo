@@ -71,6 +71,13 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
+            href="https://docs.adaptabletools.com/docs/adaptable-options/alert-options"
+            target="_blank"
+          >
+            Alert Options
+          </a>{' '}
+          |{' '}
+          <a
             href="https://docs.adaptabletools.com/docs/adaptable-api/alert-api"
             target="_blank"
           >

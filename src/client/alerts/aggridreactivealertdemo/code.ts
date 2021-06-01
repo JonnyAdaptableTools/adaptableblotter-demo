@@ -24,39 +24,7 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   Alert: {
-    MaxAlertsInStore: 10,
-    AlertDefinitions: [
-      {
-        Scope: {
-          ColumnIds: ['InvoicedCost'],
-        },
-        MessageType: 'Warning',
-        Predicate: {
-          PredicateId: 'GreaterThan',
-          Inputs: [2000],
-        },
-
-        AlertProperties: {
-          DisplayNotification: true,
-        },
-      },
-
-      {
-        Scope: {
-          ColumnIds: ['ItemCount'],
-        },
-        MessageType: 'Info',
-        Rule: {
-          Predicate: {
-            PredicateId: 'PercentChange',
-            Inputs: [100],
-          },
-        },
-        AlertProperties: {
-          DisplayNotification: false,
-        },
-      },
-    ],
+    Revision: Date.now(),
   },
 } as PredefinedConfig;
 
@@ -76,7 +44,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Alert Demo',
+    adaptableId: 'Reactive Alert Demo',
     containerOptions: {
       alertContainer: 'alertDiv',
     },

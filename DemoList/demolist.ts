@@ -308,47 +308,7 @@ export function getDemoPageStructure(): DemoPageStructure {
           },
         ],
       },
-      {
-        CategoryName: 'Charts',
-        Link: '/charts',
-        Pages: [
-          {
-            Name: 'Category Charts',
-            Link: '/charts/aggridcategorychartsdemo',
-            Description:
-              'Create standard, saveable, bar or line charts, with many different visualation options.',
-          },
-          {
-            Name: 'Financial Charts',
-            Link: '/charts/aggridfinancialchartsdemo',
-            Description: 'Create financial charts',
-          },
-          {
-            Name: 'Pie Charts',
-            Link: '/charts/aggridpiechartsdemo',
-            Description:
-              'Create a saveable Pie (or doughnut) Chart.  It contains the ability to group data if you have multiple values.',
-          },
-          {
-            Name: 'Pie Charts (Column)',
-            Link: '/charts/aggridpiechartscolumndemo',
-            Description:
-              'Select a column (or cells within a column) and see it as a Pie Chart',
-          },
-          {
-            Name: 'Sparkline Charts',
-            Link: '/charts/aggridsparklinechartsdemo',
-            Description:
-              'Create a saveable SparkLine chart, which will show data as a series of points or graphs',
-          },
-          {
-            Name: 'Sparkline (Column)',
-            Link: '/charts/aggridsparklinecolumndemo',
-            Description:
-              'Select a column (or cells within a column) and see it as a Sparkline Chart',
-          },
-        ],
-      },
+
       {
         CategoryName: 'Grid Management',
         Link: '/gridmanagement',
@@ -462,10 +422,27 @@ export function getDemoPageStructure(): DemoPageStructure {
         Link: '/alertsmessages',
         Pages: [
           {
-            Name: 'Alert',
-            Link: '/alertsmessages/aggridalertdemo',
+            Name: 'Basic Alerts',
+            Link: '/alertsmessages/aggridbasicalertdemo',
             Description:
-              'Be notified as soon as data changes that you need to know about.',
+              'Use a Predicate to be notified as soon as data changes that you need to know about.',
+          },
+          {
+            Name: 'Advanced Alerts',
+            Link: '/alertsmessages/aggridadvancedalertdemo',
+            Description: 'Write an Expression to create an Alert.',
+          },
+          {
+            Name: 'Reactive Alerts',
+            Link: '/alertsmessages/aggridreactivealertdemo',
+            Description:
+              'Create an Alert that will react to changes (or lack of changes) in data over time',
+          },
+          {
+            Name: 'Aggregation Alerts',
+            Link: '/alertsmessages/aggridaggregationalertdemo',
+            Description:
+              'Alerts can be triggered based on given data set - enables Limits watching',
           },
           {
             Name: 'Stop Edit Alerts',
@@ -491,6 +468,11 @@ export function getDemoPageStructure(): DemoPageStructure {
             Link: '/alertsmessages/aggridflashingrowsdemo',
             Description:
               'Colour (and jump to) rows as they update so you can see which rows have changed.',
+          },
+          {
+            Name: 'Toast Notifications',
+            Link: '/alertsmessages/aggridnotificationsdemo',
+            Description: 'You can manage how Toast Notifications will work.',
           },
           {
             Name: 'System Status',
@@ -602,6 +584,47 @@ export function getDemoPageStructure(): DemoPageStructure {
             Link: '/menus/aggridcontextmenudemo',
             Description:
               'Add your custom menu items to the (right-click) Context Menu (and choose with shipped items are available)',
+          },
+        ],
+      },
+      {
+        CategoryName: 'Charts',
+        Link: '/charts',
+        Pages: [
+          {
+            Name: 'Category Charts',
+            Link: '/charts/aggridcategorychartsdemo',
+            Description:
+              'Create standard, saveable, bar or line charts, with many different visualation options.',
+          },
+          {
+            Name: 'Financial Charts',
+            Link: '/charts/aggridfinancialchartsdemo',
+            Description: 'Create financial charts',
+          },
+          {
+            Name: 'Pie Charts',
+            Link: '/charts/aggridpiechartsdemo',
+            Description:
+              'Create a saveable Pie (or doughnut) Chart.  It contains the ability to group data if you have multiple values.',
+          },
+          {
+            Name: 'Pie Charts (Column)',
+            Link: '/charts/aggridpiechartscolumndemo',
+            Description:
+              'Select a column (or cells within a column) and see it as a Pie Chart',
+          },
+          {
+            Name: 'Sparkline Charts',
+            Link: '/charts/aggridsparklinechartsdemo',
+            Description:
+              'Create a saveable SparkLine chart, which will show data as a series of points or graphs',
+          },
+          {
+            Name: 'Sparkline (Column)',
+            Link: '/charts/aggridsparklinecolumndemo',
+            Description:
+              'Select a column (or cells within a column) and see it as a Sparkline Chart',
           },
         ],
       },
