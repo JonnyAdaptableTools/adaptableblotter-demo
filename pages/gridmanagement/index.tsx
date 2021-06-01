@@ -34,7 +34,7 @@ export default () => {
       pageTitle={'Grid Management demos'}
       description={
         <div>
-          <h4>Grid Management Functions</h4>
+          <h4>Grid Management Modules</h4>
           <p>
             There are a many functions in AdapTable which let you set up the
             Grid and columns exactly how you want:

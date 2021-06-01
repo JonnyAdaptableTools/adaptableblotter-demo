@@ -27,7 +27,7 @@ export default () => {
                 Predicate be relevant
               </li>
               <li>
-                <b>Function Scope</b>: In which Adaptable Functions can the
+                <b>Module Scope</b>: In which Adaptable Modules can the
                 Predicate be called (e.g. Conditional Style, Alerts, Filters
                 etc.)
               </li>

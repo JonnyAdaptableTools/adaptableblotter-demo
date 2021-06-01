@@ -19,7 +19,7 @@ export default () => {
             <i>Customer Info</i>, <i>Order</i>, and <i>Shipping Details</i>
           </p>
           <p>
-            All other functions in AdapTable will 'honour' this column grouping
+            All other Modules in AdapTable will 'honour' this column grouping
             and work appropriately.
           </p>
           <p>

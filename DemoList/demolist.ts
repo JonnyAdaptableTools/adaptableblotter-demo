@@ -114,14 +114,6 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'A filter panel available as a dropdown from the Column Header which allows you to filter the column using a "Predicate".',
           },
-          /*
-          {
-            Name: 'User Filters',
-            Link: '/filters/aggriduserfiltersdemo',
-            Description:
-              'Column Filters which have been named and saved and so are usable across multiple functions that use queries (like Conditional Styles or Reports).',
-          },
-          */
           {
             Name: 'Custom Predicates',
             Link: '/filters/aggridcustompredicatesdemo',
@@ -633,7 +625,7 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Changing Data',
             Link: '/admin/aggriddatasourcechangesdemo',
             Description:
-              'Any changes made to the data source to the underlying DataGrid (in this example ag-Grid) is automatically reflected in AdapTable and it will be picked up by all relevant functions.',
+              'Any changes made to the data source to the underlying DataGrid (in this example ag-Grid) is automatically reflected in AdapTable and it will be picked up by all relevant Modules.',
           },
           {
             Name: 'Batch Data',
@@ -646,7 +638,7 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'No Code',
             Link: '/admin/aggridnocodedemo',
             Description:
-              'Create an AdapTable instance dynamically from a JSON or Excel file that you provide; your AdapTable instance will include the full range of functions and all the advanced functionality like state management and audit.',
+              'Create an AdapTable instance dynamically from a JSON or Excel file that you provide; your AdapTable instance will include the full range of Modules and all the advanced functionality like state management and audit.',
           },
           {
             Name: 'Team Sharing',

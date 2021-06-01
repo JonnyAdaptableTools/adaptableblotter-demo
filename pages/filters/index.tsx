@@ -35,7 +35,7 @@ export default () => {
       pageTitle={'Filter Demos'}
       description={
         <div>
-          <h4>Filter Functions</h4>
+          <h4>Filter Modules</h4>
           <p>
             There are a number of different ways to filter data in AdapTable:
           </p>

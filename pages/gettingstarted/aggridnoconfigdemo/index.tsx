@@ -9,7 +9,7 @@ export default () => {
       description={
         <div>
           <p>
-            AdapTable offers more than 30 functions to allow you to search,
+            AdapTable offers more than 30 Modules to allow you to search,
             filter, edit, audit, export and style your data in cutting-edge and
             exciting ways.
           </p>

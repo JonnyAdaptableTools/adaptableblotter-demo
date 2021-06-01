@@ -46,16 +46,19 @@ export default () => {
             Renderer the <i>raw value</i> is displayed.
           </p>
           <p>
-            Note: AdapTable Functions like{' '}
-            <a href="../style/aggridpercentbardemo">Percent Bar</a> and{' '}
-            <a href="../style/aggridgradientcolumndemo">Gradient Column</a>{' '}
+            Note: AdapTable functionality like{' '}
+            <a href="../formatcolumn/aggridpercentbardemo">Percent Bar</a> and{' '}
+            <a href="../formatcolumn/aggridgradientcolumndemo">
+              Gradient Column
+            </a>{' '}
             effectively create advanced cell renderers on the fly for you.
           </p>
           <p>
             To format columns on the fly, or for more complicated date and
             numeric formats, use the AdaptTable{' '}
-            <a href="../style/aggridformatcolumndemo">Format Column</a> Function
-            (as done below for <b>First Bought</b> and <b>Price</b> Columns)
+            <a href="../formatcolumn/aggridformatcolumndemo">Format Column</a>{' '}
+            Function (as done below for <b>First Bought</b> and <b>Price</b>{' '}
+            Columns)
           </p>
           <p>
             In this demo we have created value formatters for the{' '}

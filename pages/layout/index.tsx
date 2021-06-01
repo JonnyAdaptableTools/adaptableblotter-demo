@@ -47,8 +47,9 @@ export default () => {
             must always be one 'active' layout.
           </p>
           <p>
-            The search and filter functions determine <b>row</b> visibility and
-            order, while layouts manage <b>column</b> visibility and order.
+            The search and filter related Modules determine <b>row</b>{' '}
+            visibility and order, while layouts manage <b>column</b> visibility
+            and order.
           </p>
           <ul>{demoLinks}</ul>
           Click on the buttons below to see a demo for some of the different

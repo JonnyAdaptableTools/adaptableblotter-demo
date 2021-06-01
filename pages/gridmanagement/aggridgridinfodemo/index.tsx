@@ -22,8 +22,8 @@ export default () => {
               <b>Adaptable Options</b>: displays your AdaptableOptions values
             </li>
             <li>
-              <b>Column</b>: shows information about which AdapTable Functions
-              are linked to a given column.
+              <b>Column</b>: shows information about which AdapTable Modules are
+              active for a given column.
             </li>
           </ol>
           <p>The Grid Info popup can be acccessed in multiple ways:</p>

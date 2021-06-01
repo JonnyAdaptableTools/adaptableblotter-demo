@@ -146,7 +146,7 @@ export default async () => {
   };
 
   // Step 6: Instantiate AdapTable using the asynchronous Static Contstructor passing in the AdaptableOptions object
-  // Note that the constructor returns the AdaptableApi object (via a Promise) which gives run time access to AdapTable functions
+  // Note that the constructor returns the AdaptableApi object (via a Promise) which gives run time access to AdapTable functionality
   const adaptableApi: AdaptableApi = await Adaptable.init(adaptableOptions);
 
   // Step 7 (optional): Listen to the AdaptableReady event to do anything required at startup
