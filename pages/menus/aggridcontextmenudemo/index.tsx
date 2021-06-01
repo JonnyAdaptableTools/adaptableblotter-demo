@@ -16,14 +16,14 @@ export default () => {
           <p>
             You can add your own bespoke{' '}
             <a
-              href="https://v9-0--docs-adaptabletools.netlify.app/api/adaptablemenuitem"
+              href="https://docs.adaptabletools.com/api/adaptablemenuitem"
               target="_blank"
             >
               Menu Item(s)
             </a>{' '}
             to the Context Menu - through{' '}
             <a
-              href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/menu-options"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/menu-options"
               target="_blank"
             >
               Menu Options
@@ -42,7 +42,7 @@ export default () => {
             <li>
               {' '}
               <a
-                href="https://v9-0--docs-adaptabletools.netlify.app/docs/user-interface/context-menu/#menu-item-onclick"
+                href="https://docs.adaptabletools.com/docs/user-interface/context-menu/#menu-item-onclick"
                 target="_blank"
               >
                 onClick
@@ -52,7 +52,7 @@ export default () => {
             <li>
               {' '}
               <a
-                href="https://v9-0--docs-adaptabletools.netlify.app/docs/user-interface/context-menu/#menu-item-render"
+                href="https://docs.adaptabletools.com/docs/user-interface/context-menu/#menu-item-render"
                 target="_blank"
               >
                 shouldRender
@@ -62,7 +62,7 @@ export default () => {
             <li>
               {' '}
               <a
-                href="https://v9-0--docs-adaptabletools.netlify.app/docs/user-interface/context-menu/#menu-item-label"
+                href="https://docs.adaptabletools.com/docs/user-interface/context-menu/#menu-item-label"
                 target="_blank"
               >
                 label
@@ -74,7 +74,7 @@ export default () => {
             You can also choose which - if any - of the shipped Menu Items are
             available via the <b>showAdaptableContextMenu</b> property of{' '}
             <a
-              href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/menu-options"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/menu-options"
               target="_blank"
             >
               Menu Options
@@ -92,14 +92,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/user-interface/context-menu"
+            href="https://docs.adaptabletools.com/docs/user-interface/context-menu"
             target="_blank"
           >
             Context Menu Guide
           </a>{' '}
           |{' '}
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/menu-options"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/menu-options"
             target="_blank"
           >
             Menu Options

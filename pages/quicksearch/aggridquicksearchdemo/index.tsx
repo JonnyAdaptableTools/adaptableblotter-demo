@@ -30,7 +30,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/quick-search-module"
+            href="https://docs.adaptabletools.com/docs/adaptable-modules/quick-search-module"
             target="_blank"
           >
             Quick Search Module

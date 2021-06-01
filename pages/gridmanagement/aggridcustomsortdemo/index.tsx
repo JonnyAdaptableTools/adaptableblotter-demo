@@ -76,7 +76,7 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/custom-sort-module"
+            href="https://docs.adaptabletools.com/docs/adaptable-modules/custom-sort-module"
             target="_blank"
           >
             Custom Sort Module

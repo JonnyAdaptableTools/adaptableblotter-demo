@@ -52,7 +52,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/layout-module"
+            href="https://docs.adaptabletools.com/docs/adaptable-modules/layout-module"
             target="_blank"
           >
             Layout Module

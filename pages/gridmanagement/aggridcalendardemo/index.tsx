@@ -18,7 +18,7 @@ export default () => {
             States' but you can change that via the 'currentCalendar' property
             in{' '}
             <a
-              href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/general-options"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/general-options"
               target="_blank"
             >
               General Options
@@ -35,7 +35,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/general-options"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/general-options"
             target="_blank"
           >
             General Options

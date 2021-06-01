@@ -23,7 +23,7 @@ export default () => {
             Simply provide the name of the new Module in the{' '}
             <i>alternativeModuleNames</i> property of{' '}
             <a
-              href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/general-options"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/general-options"
               target="_blank"
             >
               General Options
@@ -39,7 +39,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/general-options"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/general-options"
             target="_blank"
           >
             General Options

@@ -28,7 +28,7 @@ export default () => {
             You can provide custom summary definitions which will be evaluated
             each time the summary is run in the{' '}
             <a
-              href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/general-options"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/general-options"
               target="_blank"
             >
               General Options
@@ -45,7 +45,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/general-options"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/general-options"
             target="_blank"
           >
             General Options
@@ -59,7 +59,7 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/cell-summary-module"
+            href="https://docs.adaptabletools.com/docs/adaptable-modules/cell-summary-module"
             target="_blank"
           >
             Cell Summary Module

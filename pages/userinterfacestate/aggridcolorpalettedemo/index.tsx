@@ -18,7 +18,7 @@ export default () => {
           <p>
             However, if you would prefer to return a larger result set, you can
             set the the <b>maxColumnValueItemsDisplayed</b> property of{' '}
-            <a href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/search-options">
+            <a href="https://docs.adaptabletools.com/docs/adaptable-options/search-options">
               Search Options
             </a>
             to a different value.

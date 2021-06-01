@@ -21,7 +21,7 @@ export default () => {
             <div style={{ color: 'red' }}>
               This demo site uses a pre-release version of{' '}
               <a
-                href="https://v9-0--docs-adaptabletools.netlify.app/docs/releases/version9/upgrade-guide-v9/"
+                href="https://docs.adaptabletools.com/docs/releases/version9/upgrade-guide-v9/"
                 target="_blank"
               >
                 Version 9

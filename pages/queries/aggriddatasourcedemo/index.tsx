@@ -57,7 +57,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/data-source-module"
+            href="https://docs.adaptabletools.com/docs/adaptable-modules/data-source-module"
             target="_blank"
           >
             Data Source Module

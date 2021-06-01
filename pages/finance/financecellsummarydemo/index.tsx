@@ -45,7 +45,7 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/cell-summary-module"
+            href="https://docs.adaptabletools.com/docs/adaptable-modules/cell-summary-module"
             target="_blank"
           >
             Cell Summary Module

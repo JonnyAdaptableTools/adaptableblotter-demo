@@ -22,7 +22,7 @@ export default () => {
             </a>{' '}
             or - for more advanced scenarios - a{' '}
             <a
-              href="https://v9-0--docs-adaptabletools.netlify.app/docs/common-objects/common-objects-query"
+              href="https://docs.adaptabletools.com/docs/common-objects/common-objects-query"
               target="_blank"
             >
               Query
@@ -46,7 +46,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/predefined-config/plus-minus-config"
+            href="https://docs.adaptabletools.com/docs/predefined-config/plus-minus-config"
             target="_blank"
           >
             Plus / Minus Module

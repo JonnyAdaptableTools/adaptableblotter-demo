@@ -57,7 +57,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/grid-info-module"
+            href="https://docs.adaptabletools.com/docs/adaptable-modules/grid-info-module"
             target="_blank"
           >
             Grid Info Function Module

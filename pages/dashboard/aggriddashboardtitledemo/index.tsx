@@ -16,7 +16,7 @@ export default () => {
             However you can change this via the <i>DashboardTitle</i> property
             in{' '}
             <a
-              href="https://v9-0--docs-adaptabletools.netlify.app/docs/predefined-config/dashboard-config"
+              href="https://docs.adaptabletools.com/docs/predefined-config/dashboard-config"
               target="_blank"
             >
               Dashboard Predefined Config
@@ -36,7 +36,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/user-interface/dashboard"
+            href="https://docs.adaptabletools.com/docs/user-interface/dashboard"
             target="_blank"
           >
             Dashboard Read Me

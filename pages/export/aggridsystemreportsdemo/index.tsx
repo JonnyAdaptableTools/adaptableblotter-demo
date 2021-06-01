@@ -70,7 +70,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/export-module"
+            href="https://docs.adaptabletools.com/docs/adaptable-modules/export-module"
             target="_blank"
           >
             Export Module

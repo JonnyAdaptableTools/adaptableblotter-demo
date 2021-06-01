@@ -17,7 +17,7 @@ export default () => {
             destinations such as particular REST endpoints, or by email. This
             can be done through the <i>customDestinations</i> property in{' '}
             <a
-              href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/export-options"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/export-options"
               target="_blank"
             >
               Export Options
@@ -45,7 +45,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/export-module"
+            href="https://docs.adaptabletools.com/docs/adaptable-modules/export-module"
             target="_blank"
           >
             Export Module
@@ -66,7 +66,7 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/export-options"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/export-options"
             target="_blank"
           >
             Export Options

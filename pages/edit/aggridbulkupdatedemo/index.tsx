@@ -26,7 +26,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/bulk-update-module"
+            href="https://docs.adaptabletools.com/docs/adaptable-modules/bulk-update-module"
             target="_blank"
           >
             Bulk Update Module

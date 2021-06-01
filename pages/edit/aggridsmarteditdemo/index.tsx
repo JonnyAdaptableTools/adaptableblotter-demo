@@ -28,7 +28,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/smart-edit-module"
+            href="https://docs.adaptabletools.com/docs/adaptable-modules/smart-edit-module"
             target="_blank"
           >
             Smart Edit Module

@@ -17,14 +17,14 @@ export default () => {
           <p>
             The name of the CSS Class if supplied in the{' '}
             <a
-              href="https://v9-0--docs-adaptabletools.netlify.app/api/userinterfacestate#styleclassnames"
+              href="https://docs.adaptabletools.com/api/userinterfacestate#styleclassnames"
               target="_blank"
             >
               StyleClassNames
             </a>{' '}
             property of{' '}
             <a
-              href=" https://v9-0--docs-adaptabletools.netlify.app/docs/predefined-config/user-interface-config#styleclassnames
+              href=" https://docs.adaptabletools.com/docs/predefined-config/user-interface-config#styleclassnames
               "
               target="_blank"
             >
@@ -32,7 +32,7 @@ export default () => {
             </a>{' '}
             and then reference in{' '}
             <a
-              href="https://v9-0--docs-adaptabletools.netlify.app/docs/predefined-config/conditional-style-config"
+              href="https://docs.adaptabletools.com/docs/predefined-config/conditional-style-config"
               target="_blank"
             >
               Conditional Style Config.
@@ -47,7 +47,7 @@ export default () => {
             <b>Note:</b> The Conditional Style also uses the 'new_starter'{' '}
             <b>custom predicate</b> defined in the{' '}
             <a
-              href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/custom-predicate-defs-options"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/custom-predicate-defs-options"
               target="_blank"
             >
               customPredicateDefs
@@ -87,7 +87,7 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/common-objects/common-objects-query"
+            href="https://docs.adaptabletools.com/docs/common-objects/common-objects-query"
             target="_blank"
           >
             Expression

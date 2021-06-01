@@ -13,7 +13,7 @@ export default () => {
           <p>
             Another way to provide Entitlements in{' '}
             <a
-              href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/entitlements-options"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/entitlements-options"
               target="_blank"
             >
               Adaptable Options
@@ -62,7 +62,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/entitlements-options"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/entitlements-options"
             target="_blank"
           >
             Entitlements Options

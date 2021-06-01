@@ -18,7 +18,7 @@ export default () => {
             allowed values for lookups or filtering. You do this through the{' '}
             <b>permittedValues</b> property of{' '}
             <a
-              href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/user-interface-options"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/user-interface-options"
               target="_blank"
             >
               User Interface Options

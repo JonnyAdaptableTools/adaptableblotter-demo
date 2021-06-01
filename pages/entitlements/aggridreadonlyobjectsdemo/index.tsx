@@ -38,7 +38,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/entitlements-options"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/entitlements-options"
             target="_blank"
           >
             Entitlements Options

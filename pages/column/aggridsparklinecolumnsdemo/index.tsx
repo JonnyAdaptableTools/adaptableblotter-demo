@@ -35,7 +35,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/plugins/chart/sparkline-column-module"
+            href="https://docs.adaptabletools.com/docs/plugins/chart/sparkline-column-module"
             target="_blank"
           >
             Sparkline Column Module

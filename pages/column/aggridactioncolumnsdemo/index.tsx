@@ -15,7 +15,7 @@ export default () => {
           <p>
             Each{' '}
             <a
-              href="https://v9-0--docs-adaptabletools.netlify.app/docs/common-objects/common-objects-button"
+              href="https://docs.adaptabletools.com/docs/common-objects/common-objects-button"
               target="_blank"
             >
               AdapTable Button
@@ -70,7 +70,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/user-interface-options#action-columns"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/user-interface-options#action-columns"
             target="_blank"
           >
             Action Columns (User Interface Options)

@@ -30,7 +30,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/format-column-module"
+            href="https://docs.adaptabletools.com/docs/adaptable-modules/format-column-module"
             target="_blank"
           >
             Format Column Module

@@ -33,14 +33,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/query-module"
+            href="https://docs.adaptabletools.com/docs/adaptable-modules/query-module"
             target="_blank"
           >
             Query Module
           </a>{' '}
           |{' '}
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/common-objects/common-objects-query"
+            href="https://docs.adaptabletools.com/docs/common-objects/common-objects-query"
             target="_blank"
           >
             Adaptable Expression

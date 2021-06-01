@@ -25,7 +25,7 @@ export default () => {
             Instead the data in the export is fetched each time the report is
             run via a function provided in the <i>customReports</i> section of{' '}
             <a
-              href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/export-options"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/export-options"
               target="_blank"
             >
               Export Options
@@ -55,14 +55,14 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/export-options"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/export-options"
             target="_blank"
           >
             Export Options
           </a>{' '}
           |{' '}
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/export-module"
+            href="https://docs.adaptabletools.com/docs/adaptable-modules/export-module"
             target="_blank"
           >
             Export Module

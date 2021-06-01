@@ -97,7 +97,7 @@ export default () => {
               <p>
                 Setting the <b>ignoreCaseInQueries</b> property of{' '}
                 <a
-                  href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/search-options"
+                  href="https://docs.adaptabletools.com/docs/adaptable-options/search-options"
                   target="_blank"
                 >
                   Search Options
@@ -117,7 +117,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/quick-search-module"
+            href="https://docs.adaptabletools.com/docs/adaptable-modules/quick-search-module"
             target="_blank"
           >
             Quick Search Module

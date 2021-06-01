@@ -17,7 +17,7 @@ export default () => {
             It will first look for any Permitted Values for that column, set via
             the{' '}
             <a
-              href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/user-interface-options#permittedvaluesitems"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/user-interface-options#permittedvaluesitems"
               target="_blank"
             >
               PermittedValuesItems
@@ -55,7 +55,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/user-interface-options#permittedvaluesitems"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/user-interface-options#permittedvaluesitems"
             target="_blank"
           >
             User Interface Options

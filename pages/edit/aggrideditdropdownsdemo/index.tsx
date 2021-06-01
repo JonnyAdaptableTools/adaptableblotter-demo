@@ -15,7 +15,7 @@ export default () => {
           <p>
             However, the <b>EditLookUpItems</b> property of the{' '}
             <a
-              href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/user-interface-options"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/user-interface-options"
               target="_blank"
             >
               User Interface
@@ -74,7 +74,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-options/user-interface-options"
+            href="https://docs.adaptabletools.com/docs/adaptable-options/user-interface-options"
             target="_blank"
           >
             User Interface Options

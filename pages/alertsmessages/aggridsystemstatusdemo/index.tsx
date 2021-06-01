@@ -63,7 +63,7 @@ export default () => {
         <div>
           {' '}
           <a
-            href="https://v9-0--docs-adaptabletools.netlify.app/docs/adaptable-modules/system-status-module"
+            href="https://docs.adaptabletools.com/docs/adaptable-modules/system-status-module"
             target="_blank"
           >
             System Status Module
