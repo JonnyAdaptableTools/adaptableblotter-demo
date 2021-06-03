@@ -5,7 +5,7 @@ export default () => {
   return (
     <DynamicDemoPage
       demo={import(
-        '../../../src/client/userinterfacestate/aggridcolorpalettedemo'
+        '../../../src/client/userinterfaceoptions/aggridcolorpalettedemo'
       )}
       pageTitle={'Color Palette Demo (User Inferface State)'}
       description={

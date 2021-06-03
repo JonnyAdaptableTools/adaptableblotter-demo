@@ -10,10 +10,10 @@ import DemoBox from '../../src/components/DemoBox';
 export default () => {
   return (
     <MainPage
-      pageTitle={'User Interface State demos'}
+      pageTitle={'User Interface Options demos'}
       description={
         <div>
-          <h4>User Interface State Demos</h4>
+          <h4>User Interface Options Demos</h4>
           <p>
             Queries are a key element of AdapTable - and they are used by many
             functions, e.g. Current Query, Conditional Styles, Reports, Alerts
