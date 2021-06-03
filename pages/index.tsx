@@ -145,7 +145,7 @@ export default () => {
           <a href="./entitlements" target="_blank">
             <b>entitlements</b>
           </a>{' '}
-          you set). The combination of a selection from these functions is what
+          you set). The combination of a selection from these Modules is what
           drives client problem solving.
           <br />
           We can work with you to establish how the function set can help

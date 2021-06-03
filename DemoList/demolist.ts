@@ -560,7 +560,7 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Adaptable Tool Panel',
             Link: '/toolpanel/aggridtoolpaneldemo',
             Description:
-              'Use the Adaptable Tool Panel as a Dashboard alternative for quick access to commonly used functions and screens',
+              'Use the Adaptable Tool Panel as a Dashboard alternative for quick access to commonly used Modules and screens',
           },
           {
             Name: 'Tool Panel Name',
@@ -673,7 +673,7 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Hot Keys',
             Link: '/admin/aggridhotkeysdemo',
             Description:
-              'Set up "Hot Keys" to open Adaptable Functions and windows with bespoke key combinations',
+              'Set up "Hot Keys" to open Adaptable Module Popups and windows with bespoke key combinations',
           },
           {
             Name: 'Performance',
@@ -914,7 +914,7 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Search Changed',
             Link: '/events/searchchangedeventdemo',
             Description:
-              'Event that fires whenever any of state elements in the Search or Filter related functions change',
+              'Event that fires whenever any of state elements in the Search or Filter related Modules change',
           },
           {
             Name: 'State Changed',

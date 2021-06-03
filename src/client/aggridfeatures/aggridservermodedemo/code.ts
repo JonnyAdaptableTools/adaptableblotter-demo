@@ -151,7 +151,7 @@ class FakeServer {
 
   // in the real world this will be done on the server, probably with SQL or similar structures
   // the implementation (especially the dependency on the AdaptableApi is not relevant for a real use case)
-  // important here is the possibility to evaluate & process both AG Grid and AdapTable functions
+  // important here is the possibility to evaluate & process both AG Grid and AdapTable functionality
   fetchServerData(
     startRowIndex: number,
     count: number,

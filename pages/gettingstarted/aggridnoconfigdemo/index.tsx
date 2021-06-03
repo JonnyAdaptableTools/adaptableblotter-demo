@@ -24,9 +24,9 @@ export default () => {
           </p>
 
           <p>
-            So all the functionality (e.g. the 40+ AdapTable functions, the
-            Column Header and Context Menus, the Dashboard, the Quick Filter bar
-            etc.) is available in a default way.
+            So all the functionality (e.g. the many AdapTable Modules, the
+            Column and Context Menus, the Dashboard, the Tool Panels, the Quick
+            Filter bar etc.) is available in a default way.
           </p>
           <p>
             Note: because we have not provided any Dashboard Config with any

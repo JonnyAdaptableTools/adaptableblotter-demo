@@ -26,7 +26,7 @@ export default () => {
             Alerts, Schedules etc. are present.
           </p>{' '}
           <p>
-            However, functions which support advanced ag-Grid features only
+            However, Modules which support advanced ag-Grid features only
             available in ag-Grid Enterprise Edition <b>are missing</b> e.g.
             support for Master / Detail or Tree Grids.
           </p>

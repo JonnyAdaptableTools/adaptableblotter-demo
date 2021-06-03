@@ -41,7 +41,7 @@ export default () => {
             This demo loads the data 3 seconds after the grid is initialised -
             and adds the{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/adaptable-functions/format-column-function"
+              href="https://docs.adaptabletools.com/docs/adaptable-modules/format-column-module"
               target="_blank"
             >
               Format Columns

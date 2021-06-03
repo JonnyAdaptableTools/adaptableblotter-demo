@@ -29,7 +29,7 @@ export default () => {
           </p>
           <p>
             AdapTable fully supports both of these charting modes e.g. any edits
-            made to data through AdapTable functions like Smart Edit will be
+            made to data through AdapTable Modules like Smart Edit will be
             reflected in the chart.
           </p>
           <p>
