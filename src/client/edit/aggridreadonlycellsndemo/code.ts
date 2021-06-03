@@ -50,6 +50,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
     columnDefs,
     rowData,
     enableRangeSelection: true,
+    singleClickEdit: true,
     sideBar: true,
     suppressMenuHide: true,
     autoGroupColumnDef: {
@@ -61,7 +62,11 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'ReadOnly Cells Demo',
-    userInterfaceOptions: {},
+    userInterfaceOptions: {
+      editableCellStyle: {
+        BorderColor: 'LightGreen',
+      },
+    },
     editOptions: {
       isCellEditable: (gridCell: GridCell, node: any) => {
         // Rule 1:  No row where Ship Via is Federal Shipping is editable

@@ -48,6 +48,22 @@ export default () => {
               editable where <i>Order Chang</i>e is negative
             </li>
           </ul>
+          <p>
+            Additionally in{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/adaptable-options/user-interface-options"
+              target="_blank"
+            >
+              User Interface Options
+            </a>{' '}
+            you can provide a <b>readOnlyCellStyle</b> (or an{' '}
+            <b>editableCellStyle</b>) to more clearly visually demonstrate which
+            cells are editable or not.
+          </p>
+          <p>
+            In this demo we have set an editableCellStyle so that cells which
+            can be edited display a Green border.
+          </p>
         </div>
       }
       helpResources={
@@ -57,6 +73,13 @@ export default () => {
             target="_blank"
           >
             Edit Options
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-options/user-interface-options"
+            target="_blank"
+          >
+            User Interface Options
           </a>{' '}
         </div>
       }
