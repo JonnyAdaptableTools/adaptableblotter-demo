@@ -20,15 +20,14 @@ export default () => {
               href="https://docs.adaptabletools.com/api/userinterfacestate#styleclassnames"
               target="_blank"
             >
-              StyleClassNames
+              styleClassNames
             </a>{' '}
             property of{' '}
             <a
-              href=" https://docs.adaptabletools.com/docs/predefined-config/user-interface-config#styleclassnames
-              "
+              href="https://docs.adaptabletools.com/docs/adaptable-options/user-interface-options"
               target="_blank"
             >
-              User Interface Config
+              User Interface Options
             </a>{' '}
             and then reference in{' '}
             <a
@@ -77,6 +76,13 @@ export default () => {
             target="_blank"
           >
             Conditional Style API
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-options/user-interface-options"
+            target="_blank"
+          >
+            User Interface Options
           </a>{' '}
           |{' '}
           <a
