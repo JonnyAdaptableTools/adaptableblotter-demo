@@ -34,7 +34,7 @@ export default () => {
       pageTitle={'Alerts and Messages demos'}
       description={
         <div>
-          <h4>Alerts and Messages Modules</h4>
+          <h4>Alerts and Messages Demos</h4>
           <p>AdapTable lets you send and receive messages.</p>
           <ul>{demoLinks}</ul>
           <p>

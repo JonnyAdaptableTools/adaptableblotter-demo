@@ -917,7 +917,7 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Event that fires whenever any of state elements in the Search or Filter related functions change',
           },
           {
-            Name: 'Adaptable State Changed',
+            Name: 'State Changed',
             Link: '/events/adaptablestatechangeddemo',
             Description:
               'Listens to ALL Adaptable State changes enabling a full Audit of user actions, and data edits',

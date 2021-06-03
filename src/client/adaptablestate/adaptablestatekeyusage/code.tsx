@@ -98,7 +98,7 @@ const view1Config: PredefinedConfig = {
         Scope: {
           ColumnIds: ['ChangeLastOrder'],
         },
-        NumericColumnStyle: {
+        ColumnStyle: {
           GradientStyle: {
             CellRanges: [
               {
@@ -120,7 +120,7 @@ const view1Config: PredefinedConfig = {
         Scope: {
           ColumnIds: ['InvoicedCost'],
         },
-        NumericColumnStyle: {
+        ColumnStyle: {
           PercentBarStyle: {
             CellRanges: [
               {

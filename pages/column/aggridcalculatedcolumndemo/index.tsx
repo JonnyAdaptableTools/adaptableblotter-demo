@@ -49,14 +49,8 @@ export default () => {
             <li>
               <b>ShipDelay</b> - (a boolean) which returns true if{' '}
               <i>ShippedDate</i> is 4 days later than the
-              <i>OrderDate</i> (we add it to <b>CheckboxColumns</b> in{' '}
-              <a
-                href="https://docs.adaptabletools.com/docs/predefined-config/user-interface-config"
-                target="_blank"
-              >
-                User Interface Predefined Config
-              </a>{' '}
-              for better visualisation).
+              <i>OrderDate</i> (we add it to <b>CheckboxColumns</b> in Format
+              Column Module for better visualisation).
             </li>
             <li>
               <b>Tax</b> - (a string) which returns the VAT (calculated at 20%)

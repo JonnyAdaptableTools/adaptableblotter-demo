@@ -10,7 +10,7 @@ import DemoBox from '../../src/components/DemoBox';
 
 export default () => {
   let categoryPages = getDemoPageStructure().Categories.find(
-    c => c.CategoryName == 'Alerts & Messages'
+    c => c.CategoryName == 'Schedules'
   )!.Pages;
 
   let demoLinks: any = categoryPages.map((page: DemoPage) => {
@@ -31,15 +31,18 @@ export default () => {
   });
   return (
     <MainPage
-      pageTitle={'Alerts and Messages demos'}
+      pageTitle={'Schedule demos'}
       description={
         <div>
-          <h4>Alerts and Messages Modules</h4>
-          <p>AdapTable lets you send and receive messages.</p>
+          <h4>Schedule Demos</h4>
+          <p>
+            AdapTable lets you create Schedules to arrange for tasks to run at
+            particular times
+          </p>
           <ul>{demoLinks}</ul>
           <p>
-            Click on the buttons below to see a demo for our Alert and Messaging
-            functions.
+            Click on the buttons below to see a demo for our Scheduling
+            functionality.
           </p>
         </div>
       }

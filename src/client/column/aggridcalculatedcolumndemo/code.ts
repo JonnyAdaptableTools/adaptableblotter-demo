@@ -107,6 +107,14 @@ const demoConfig: PredefinedConfig = {
     FormatColumns: [
       {
         Scope: {
+          ColumnIds: ['ShipDelay'],
+        },
+        ColumnStyle: {
+          CheckBoxStyle: true,
+        },
+      },
+      {
+        Scope: {
           ColumnIds: ['AvgCost'],
         },
         DisplayFormat: {
@@ -190,9 +198,6 @@ const demoConfig: PredefinedConfig = {
         Name: 'grouped calc cols',
       },
     ],
-  },
-  UserInterface: {
-    CheckboxColumns: ['ShipDelay'],
   },
 } as PredefinedConfig;
 

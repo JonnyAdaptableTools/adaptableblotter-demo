@@ -27,6 +27,14 @@ const demoConfig: PredefinedConfig = {
     FormatColumns: [
       {
         Scope: {
+          ColumnIds: ['available'],
+        },
+        ColumnStyle: {
+          CheckBoxStyle: true,
+        },
+      },
+      {
+        Scope: {
           ColumnIds: ['price'],
         },
         CellAlignment: 'Right',
@@ -56,9 +64,6 @@ const demoConfig: PredefinedConfig = {
         CellAlignment: 'Center',
       },
     ],
-  },
-  UserInterface: {
-    CheckboxColumns: ['available'],
   },
 } as PredefinedConfig;
 

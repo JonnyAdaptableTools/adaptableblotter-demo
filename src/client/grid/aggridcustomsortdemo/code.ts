@@ -19,6 +19,8 @@ const demoConfig: PredefinedConfig = {
     VisibleButtons: ['CustomSort'],
   },
   CustomSort: {
+    // Provide sorts for Contact Name and ShipVia here
+    // a function for Employee in General Options
     CustomSorts: [
       {
         ColumnId: 'ContactName',
@@ -35,10 +37,6 @@ const demoConfig: PredefinedConfig = {
       {
         ColumnId: 'ShipVia',
         SortedValues: ['Speedy Express', 'United Package', 'Federal Shipping'],
-      },
-      {
-        ColumnId: 'Employee',
-        CustomSortComparerFunction: 'EmployeeLastName',
       },
     ],
   },
@@ -113,23 +111,26 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Custom Sort Demo',
-    userFunctions: [
-      {
-        name: 'EmployeeLastName',
-        type: 'CustomSortComparerFunction',
-        handler(valueA: any, valueB: any, nodeA?: any, nodeB?: any) {
-          if (!valueA || !valueB) {
-            return 0;
-          }
+    generalOptions: {
+      columnSortComparers: [
+        {
+          columnId: 'Employee',
+          comparer: (valueA: any, valueB: any, nodeA?: any, nodeB?: any) => {
+            if (!valueA || !valueB) {
+              return 0;
+            }
 
-          const fullName = valueA.split(' ');
-          const fullNameB = valueB.split(' ');
-          return fullName[fullName.length - 1] > fullNameB[fullNameB.length - 1]
-            ? 1
-            : -1;
+            const fullName = valueA.split(' ');
+            const fullNameB = valueB.split(' ');
+            return fullName[fullName.length - 1] >
+              fullNameB[fullNameB.length - 1]
+              ? 1
+              : -1;
+          },
         },
-      },
-    ],
+      ],
+    },
+
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

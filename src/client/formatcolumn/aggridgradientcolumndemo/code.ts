@@ -24,7 +24,7 @@ const demoConfig: PredefinedConfig = {
         Scope: {
           ColumnIds: ['ChangeLastOrder'],
         },
-        NumericColumnStyle: {
+        ColumnStyle: {
           GradientStyle: {
             CellRanges: [
               {
@@ -51,7 +51,7 @@ const demoConfig: PredefinedConfig = {
         Scope: {
           ColumnIds: ['ItemCount'],
         },
-        NumericColumnStyle: {
+        ColumnStyle: {
           GradientStyle: {
             CellRanges: [
               {
@@ -67,7 +67,7 @@ const demoConfig: PredefinedConfig = {
         Scope: {
           ColumnIds: ['PackageCost'],
         },
-        NumericColumnStyle: {
+        ColumnStyle: {
           GradientStyle: {
             CellRanges: [
               {

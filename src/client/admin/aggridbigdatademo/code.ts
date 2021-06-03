@@ -42,7 +42,7 @@ const demoConfig: PredefinedConfig = {
         Scope: {
           ColumnIds: ['bidOfferSpread'],
         },
-        NumericColumnStyle: {
+        ColumnStyle: {
           GradientStyle: {
             CellRanges: [
               {
@@ -58,7 +58,7 @@ const demoConfig: PredefinedConfig = {
         Scope: {
           ColumnIds: ['changeOnYear'],
         },
-        NumericColumnStyle: {
+        ColumnStyle: {
           PercentBarStyle: {
             CellRanges: [
               {

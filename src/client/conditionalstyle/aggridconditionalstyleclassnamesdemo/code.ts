@@ -37,9 +37,6 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
-  UserInterface: {
-    StyleClassNames: ['employeeStyle'],
-  },
 } as PredefinedConfig;
 
 export default async (columnDefs: any[], rowData: any[]) => {
@@ -58,6 +55,9 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Cond Style ClassNames Demo',
+    userInterfaceOptions: {
+      styleClassNames: ['employeeStyle'],
+    },
     customPredicateDefs: [
       {
         id: 'new_starter',

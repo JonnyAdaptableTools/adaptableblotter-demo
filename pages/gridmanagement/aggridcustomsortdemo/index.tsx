@@ -23,7 +23,7 @@ export default () => {
             own preferred non standard sort (e.g. a 'Sector' column).
           </p>
           <p>
-            You can define (in your{' '}
+            You can define Custom (in your{' '}
             <a
               href="https://docs.adaptabletools.com/docs/predefined-config/custom-sort-config"
               target="_blank"

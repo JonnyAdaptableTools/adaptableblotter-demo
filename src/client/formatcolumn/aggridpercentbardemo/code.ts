@@ -24,7 +24,7 @@ const demoConfig: PredefinedConfig = {
         Scope: {
           ColumnIds: ['InvoicedCost'],
         },
-        NumericColumnStyle: {
+        ColumnStyle: {
           PercentBarStyle: {
             CellRanges: [
               { Min: 0, Max: 500, Color: '#ff0000' },
@@ -39,7 +39,7 @@ const demoConfig: PredefinedConfig = {
         Scope: {
           ColumnIds: ['ItemCost'],
         },
-        NumericColumnStyle: {
+        ColumnStyle: {
           PercentBarStyle: {
             CellRanges: [{ Min: 0, Max: 200, Color: '#87cefa' }],
             CellText: ['CellValue', 'PercentageValue'],
@@ -51,7 +51,7 @@ const demoConfig: PredefinedConfig = {
         Scope: {
           ColumnIds: ['ItemCount'],
         },
-        NumericColumnStyle: {
+        ColumnStyle: {
           PercentBarStyle: {
             CellRanges: [{ Min: 0, Max: 21, Color: '#006400' }],
             ToolTipText: ['CellValue'],
@@ -63,7 +63,7 @@ const demoConfig: PredefinedConfig = {
         Scope: {
           ColumnIds: ['PackageCost'],
         },
-        NumericColumnStyle: {
+        ColumnStyle: {
           PercentBarStyle: {
             ColumnComparison: {
               MinValue: 0,

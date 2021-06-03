@@ -61,6 +61,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'ReadOnly Cells Demo',
+    userInterfaceOptions: {},
     editOptions: {
       isCellEditable: (gridCell: GridCell, node: any) => {
         // Rule 1:  No row where Ship Via is Federal Shipping is editable
