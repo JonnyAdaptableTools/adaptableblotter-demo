@@ -4,7 +4,7 @@ import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham-dark.css';
 import Adaptable from '@adaptabletools/adaptable/agGrid';
-import { GridOptions } from '@ag-grid-community/all-modules';
+import { GridOptions, RowNode } from '@ag-grid-community/all-modules';
 import {
   AdaptableOptions,
   PredefinedConfig,
@@ -16,6 +16,7 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
+    Revision: Date.now(),
     Tabs: [
       {
         Name: 'Toolbars',
@@ -45,6 +46,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Observable Alert Demo',
+
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

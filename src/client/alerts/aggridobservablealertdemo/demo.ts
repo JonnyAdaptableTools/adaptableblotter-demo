@@ -19,16 +19,7 @@ export default async () => {
   const columndefs = helperAgGrid.getFlashingCellColumnSchema();
   const { adaptableOptions, adaptableApi } = await init(columndefs, rowData);
 
-  adaptableApi.eventApi.on('AdaptableReady', () => {
-    tickingDataHelper.startTickingDataagGridOrders(
-      adaptableOptions.vendorGrid,
-      adaptableApi,
-      750,
-      11084,
-      11142,
-      true
-    );
-  });
+  adaptableApi.eventApi.on('AdaptableReady', () => {});
 
   adaptableOptions.vendorGrid.onGridReady = function(
     gridReady: GridReadyEvent

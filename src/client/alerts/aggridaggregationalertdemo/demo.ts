@@ -1,10 +1,7 @@
 import raw from 'raw.macro';
-
 import '../../../../DemoPage/aggriddemo.css';
-
 import json from '../../../../DataSets/Json/NorthwindOrders.json';
 import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
-
 import init from './code';
 import { GridReadyEvent } from '@ag-grid-community/all-modules';
 import { TickingDataHelper } from '../../../Helpers/TickingDataHelper';
@@ -19,16 +16,7 @@ export default async () => {
   const columndefs = helperAgGrid.getFlashingCellColumnSchema();
   const { adaptableOptions, adaptableApi } = await init(columndefs, rowData);
 
-  adaptableApi.eventApi.on('AdaptableReady', () => {
-    tickingDataHelper.startTickingDataagGridOrders(
-      adaptableOptions.vendorGrid,
-      adaptableApi,
-      750,
-      11084,
-      11142,
-      true
-    );
-  });
+  adaptableApi.eventApi.on('AdaptableReady', () => {});
 
   adaptableOptions.vendorGrid.onGridReady = function(
     gridReady: GridReadyEvent

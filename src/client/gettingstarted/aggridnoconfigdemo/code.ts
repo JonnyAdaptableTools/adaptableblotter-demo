@@ -31,6 +31,9 @@ export default async (columnDefs: any[], rowData: any[]) => {
     userName: 'Demo User',
     adaptableId: 'No Config Demo',
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
+    exportOptions: {
+      exportDateFormat: 'MMMM do yyyy, h:mm:ss a',
+    },
     userInterfaceOptions: {
       showAdaptableToolPanel: true,
       useCustomMacLikeScrollbars: true,
