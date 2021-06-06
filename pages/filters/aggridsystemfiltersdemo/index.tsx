@@ -19,12 +19,12 @@ export default () => {
           </p>
           <p>
             By default <b>all</b> System Filters will be shown. However the
-            `SystemFilters` property of{' '}
+            `systemFilters` property of{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/predefined-config/filter-config"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/search-options/"
               target="_blank"
             >
-              Filter State
+              Search Options
             </a>{' '}
             allows you to choose which (if any) you want available.
           </p>

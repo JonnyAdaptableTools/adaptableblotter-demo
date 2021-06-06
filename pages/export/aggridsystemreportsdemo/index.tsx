@@ -31,12 +31,12 @@ export default () => {
           </ul>{' '}
           <p>
             To configure which System Reports are available use the{' '}
-            <i>SystemReportNames</i> property of{' '}
+            <i>systemReportNames</i> property of{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/predefined-config/export-config"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/export-options"
               target="_blank"
             >
-              Export Config
+              Export Options
             </a>
             .{' '}
           </p>
@@ -75,6 +75,13 @@ export default () => {
           >
             Export Module
           </a>
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-options/export-options"
+            target="_blank"
+          >
+            Export Options
+          </a>{' '}
           |{' '}
           <a
             href="https://docs.adaptabletools.com/docs/predefined-config/export-config"

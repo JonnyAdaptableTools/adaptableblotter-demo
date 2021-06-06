@@ -16,7 +16,6 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Filter: {
-    SystemFilters: ['Positive', 'Zero', 'Contains', 'Equals', 'Is', 'On'],
     ColumnFilters: [
       {
         ColumnId: 'ChangeLastOrder',
@@ -45,6 +44,9 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'System Filters Demo',
+    searchOptions: {
+      systemFilters: ['Positive', 'Zero', 'Contains', 'Equals', 'Is', 'On'],
+    },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };

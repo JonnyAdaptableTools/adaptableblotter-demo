@@ -46,6 +46,13 @@ const demoConfig: PredefinedConfig = {
         },
       },
     ],
+    FlashingAlertDefinitions: [
+      {
+        Scope: {
+          DataTypes: ['Number'],
+        },
+      },
+    ],
   },
 } as PredefinedConfig;
 
