@@ -28,7 +28,7 @@ export default () => {
       helpResources={
         <div>
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-modules/freetext-column-module"
+            href="https://docs.adaptabletools.com/docs/adaptable-modules/free-text-column-module"
             target="_blank"
           >
             FreeText Column Module
