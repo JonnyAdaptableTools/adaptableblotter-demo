@@ -62,6 +62,27 @@ const predefinedConfig = {
       },
     ],
   },
+  FormatColumn: {
+    Revision: Date.now(),
+    FormatColumns: [
+      {
+        Scope: {
+          ColumnIds: [
+            'ChangeLastOrder',
+            'ItemCost',
+            'OrderCost',
+            'InvoicedCost',
+          ],
+        },
+        DisplayFormat: {
+          Formatter: 'NumberFormatter',
+          Options: {
+            FractionDigits: 2,
+          },
+        },
+      },
+    ],
+  },
 } as PredefinedConfig;
 
 export default async (columnDefs: any[], rowData: any[]) => {

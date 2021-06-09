@@ -26,7 +26,7 @@ const demoConfig: PredefinedConfig = {
       {
         Name: 'Custom',
         Title: 'Custom',
-        CustomToolbarButtonLabels: ['Edit First Row', 'Delete Row'],
+        CustomToolbarButtonLabels: ['Edit First Row', 'Delete Last Row'],
       },
     ],
   },
@@ -99,7 +99,7 @@ export default async () => {
           },
         },
         {
-          label: 'Delete Row',
+          label: 'Delete Last Row',
           onClick: () => {
             // get last row
             let lastRow: any = rowdata[rowdata.length - 1];

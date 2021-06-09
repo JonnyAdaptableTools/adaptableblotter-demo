@@ -266,10 +266,10 @@ export default () => {
         <p>
           <b>AdapTable Version</b>
           <br />
-          The demos on this site use <b>Version 8 of AdapTable</b>. <br />
+          The demos on this site use <b>Version 9 of AdapTable</b>. <br />
           See{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/releases/version8/upgrade-guide-v8"
+            href="https://docs.adaptabletools.com/docs/releases/version9/upgrade-guide-v9/"
             target="_blank"
           >
             Upgrade Guide
@@ -285,18 +285,10 @@ export default () => {
         <ul>
           <li>
             <a
-              href="https://github.com/AdaptableTools/example-adaptable-angular-aggrid/tree/angular-10"
+              href="https://github.com/AdaptableTools/example-adaptable-angular-aggrid/"
               target="_blank"
             >
-              Using the Angular Wrapper (version 10)
-            </a>{' '}
-          </li>
-          <li>
-            <a
-              href="https://github.com/AdaptableTools/example-adaptable-angular-aggrid/tree/master"
-              target="_blank"
-            >
-              Using the Angular Wrapper (version 9)
+              Using the Angular Wrapper
             </a>{' '}
           </li>
           <li>

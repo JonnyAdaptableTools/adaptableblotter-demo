@@ -8,21 +8,59 @@ export default () => {
       pageTitle={'Flashing Alerts Demo'}
       description={
         <div>
-          <p>Flashing cells briefly appear when cell values' change.</p>
           <p>
-            By default they flash for half a second, with a green flash for a
-            positive change and a red flash for a negative change but this can
-            be amended by you.
+            <a
+              href="https://docs.adaptabletools.com/docs/adaptable-modules/alert-module#flashing-alerts"
+              target="_blank"
+            >
+              Flashing Alerts
+            </a>{' '}
+            enable cells to change their style briefly appear as the value
+            changes.
           </p>
           <p>
-            This (very contrived!) example has 4 Flashing cell columns: The
-            'Item Cost', 'Order Cost', 'Change Last Order' columns use the
-            default flashing values while (for no particularly good reason) the
-            'Invoiced' column has different colours and a longer duration.
+            The style and duration of the flash can be set for each Column or
+            group of columns - through{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/predefined-config/alert-config"
+              target="_blank"
+            >
+              Alert Predefined Config
+            </a>{' '}
+            or via the UI.
           </p>
           <p>
-            The Dashobard has been put into floating mode - useful for when
-            screen estate is at a premium.
+            Alternatively you can provide default flashing styles in{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/adaptable-options/alert-options"
+              target="_blank"
+            >
+              Alert Options
+            </a>{' '}
+            which will be used unless they are expressly overriden.
+          </p>
+          <p>
+            If nothing is provided, the defaults for Flashing Alerts are: half a
+            second, with a green flash for a positive change and a red flash for
+            a negative change.
+          </p>
+          <p>
+            This (very contrived!) example has 4 Columns with Flashing Alerts
+            set:
+            <ul>
+              <li>
+                The 'Item Cost', 'Order Cost', 'Change Last Order' columns use
+                the default flashing values
+              </li>
+              <li>
+                The 'Invoiced' column (for no particularly good reason) has
+                custom colours and a longer duration.
+              </li>
+            </ul>
+          </p>
+          <p>
+            The Dashboard in this demo has been put into floating mode - useful
+            for when screen estate is at a premium.
           </p>
         </div>
       }

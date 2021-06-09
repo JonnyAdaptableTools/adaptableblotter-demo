@@ -23,9 +23,11 @@ const demoConfig: PredefinedConfig = {
         },
         UpChangeStyle: {
           BackColor: '#008000',
+          ForeColor: 'white',
         },
         DownChangeStyle: {
           BackColor: '#FF0000',
+          ForeColor: 'white',
         },
         FlashDuration: 500,
         Rule: {

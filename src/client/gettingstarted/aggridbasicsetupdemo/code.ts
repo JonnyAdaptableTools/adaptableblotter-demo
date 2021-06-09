@@ -43,7 +43,7 @@ import { GridOptions, ColDef } from '@ag-grid-community/all-modules';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
 // Import any Adaptable plugins that we want to use - in this case 'ChartsPlugin'
-//import ChartsPlugin from '@adaptabletools/adaptable-plugin-charts';
+import ChartsPlugin from '@adaptabletools/adaptable-plugin-charts';
 
 // Step 1: Create any Predefined Config to ship AdapTable to meet your requirements. In this example we do 3 things:
 // a: Create 3 Tabs -  with 'Grid', 'Edit' and 'Search' related Toolbars respectively
@@ -53,7 +53,7 @@ const demoConfig: PredefinedConfig = {
     Tabs: [
       {
         Name: 'Grid',
-        Toolbars: ['Layout', 'Export', 'CellSummary', 'Alert'],
+        Toolbars: ['Layout', 'Export', 'CellSummary', 'Alert', 'Chart'],
       },
       {
         Name: 'Edit',
@@ -137,7 +137,7 @@ export default async () => {
     },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
-    //  plugins: [ChartsPlugin()],
+    plugins: [ChartsPlugin()],
   };
 
   // Step 6: Instantiate AdapTable using the asynchronous Static Contstructor passing in the AdaptableOptions object
