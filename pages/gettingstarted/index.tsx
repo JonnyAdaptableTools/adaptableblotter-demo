@@ -4,10 +4,31 @@ import Link from 'next/link';
 
 import './index.scss';
 import GridLayout from '../../src/components/GridLayout';
+import { getDemoPageStructure, DemoPage } from '../../DemoList/demolist';
 
 import DemoBox from '../../src/components/DemoBox';
 
 export default () => {
+  let categoryPages = getDemoPageStructure().Categories.find(
+    c => c.CategoryName == 'Getting Started'
+  )!.Pages;
+
+  let demoLinks: any = categoryPages.map((page: DemoPage) => {
+    return (
+      <li>
+        <b>{page.Name}: </b> {page.Description}
+      </li>
+    );
+  });
+
+  let demoBoxes: any = categoryPages.map((page: DemoPage) => {
+    let title = page.Name + ' Demo';
+    return (
+      <DemoBox key={page.Name} href={page.Link}>
+        {title}
+      </DemoBox>
+    );
+  });
   return (
     <MainPage
       pageTitle={'Getting Started demos'}
@@ -46,14 +67,7 @@ export default () => {
         </div>
       }
     >
-      <GridLayout>
-        <DemoBox href="/gettingstarted/aggridbasicsetupdemo">
-          Basic Set Up demo
-        </DemoBox>
-        <DemoBox href="/gettingstarted/aggridnoconfigdemo">
-          No Predefined Config demo
-        </DemoBox>
-      </GridLayout>
+      <GridLayout>{demoBoxes}</GridLayout>
     </MainPage>
   );
 };
