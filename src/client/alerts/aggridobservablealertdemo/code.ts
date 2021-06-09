@@ -16,7 +16,6 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    Revision: Date.now(),
     Tabs: [
       {
         Name: 'Toolbars',
@@ -35,7 +34,6 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   Alert: {
-    Revision: Date.now(),
     AlertDefinitions: [
       {
         MessageType: 'Info',

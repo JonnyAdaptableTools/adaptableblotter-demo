@@ -24,7 +24,6 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   Alert: {
-    Revision: Date.now(),
     AlertDefinitions: [
       {
         Scope: {

@@ -16,7 +16,6 @@ import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    Revision: Date.now(),
     Tabs: [
       {
         Name: 'Demo Toolbar',
