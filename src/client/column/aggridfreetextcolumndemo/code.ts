@@ -20,6 +20,7 @@ const demoConfig: PredefinedConfig = {
     VisibleButtons: ['FreeTextColumn'],
   },
   FreeTextColumn: {
+    Revision: Date.now(),
     FreeTextColumns: [
       {
         ColumnId: 'Comments',
@@ -31,22 +32,29 @@ const demoConfig: PredefinedConfig = {
           { PrimaryKey: 11128, FreeText: 'Important order' },
         ],
       },
+      {
+        ColumnId: 'OrderCode',
+        FriendlyName: 'Order Code',
+        DataType: 'Number',
+        DefaultValue: 123,
+      },
+      {
+        ColumnId: 'LastSpoken',
+        FriendlyName: 'Last Spoken',
+        DataType: 'Date',
+      },
     ],
   },
   Layout: {
+    Revision: Date.now(),
     CurrentLayout: 'Comments View',
     Layouts: [
       {
         Columns: [
           'OrderId',
-          'ItemCost',
-          'ItemCount',
           'Comments',
-          'OrderCost',
-          'PackageCost',
-          'OrderDate',
-          'CompanyName',
-          'ShipVia',
+          'LastSpoken',
+          'OrderCode',
           'Freight',
           'ShipName',
           'ShipCountry',

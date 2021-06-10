@@ -19,12 +19,18 @@ export default () => {
             expression by hand.{' '}
           </p>
           <p>
-            Once created, a Calculated Column becomes a 'normal' column in your
-            grid and will update automatically as other values change. (
-            <a href="https://youtu.be/mk_KpFLzV-c" target="_blank">
-              See this video for more details
+            A Calculated Column contains a{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/common-objects/common-objects-query#scalar-expressions"
+              target="_blank"
+            >
+              Scalar Expression
             </a>
-            . )
+            , meaning that it can return any single value.
+          </p>
+          <p>
+            Once created, a Calculated Column becomes a 'normal' column in your
+            grid and will update automatically as other values change.
           </p>
           <p>In this example we have created 6 Calculated Columns: </p>
           <ul>

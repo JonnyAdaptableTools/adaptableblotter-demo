@@ -44,9 +44,13 @@ export default () => {
                 ).
               </li>
               <li>
-                <b>Multiply</b>: updates the <i>Item Cost</i> column (with a{' '}
-                <i>shouldRender</i> Predicate implementation to say the button
-                shouldn't appear if Employee is 'Margaret Peacock')
+                <b>Multiply</b>: doubles the <i>Item Cost</i> column value if
+                Employee is 'Robert King' or 'Janet Leverling'; otherwise it
+                trebles it
+                <br />
+                (We also provide a<i>shouldRender</i> Predicate implementation
+                to say the button shouldn't appear if Employee is 'Margaret
+                Peacock')
               </li>
               <li>
                 <b>Action</b>: which renders a <b>Delete Row</b> and does

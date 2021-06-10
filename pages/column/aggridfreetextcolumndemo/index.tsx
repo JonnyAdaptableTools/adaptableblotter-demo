@@ -19,9 +19,36 @@ export default () => {
             row (typically comments).
           </p>
           <p>
-            This example we created a Free Text Column named 'Comments'. And we
-            added 3 initial comments - which are then automatically saved with
-            the user's state and reloaded with the grid.
+            A FreeText Column is usually a string, but it has a <i>DataType</i>{' '}
+            property that can, alternatively, be set to Number, Boolean or Data;
+            AdapTable will provide an appropriate Cell Editor
+          </p>
+          <p>
+            Free Text Columns can be provided with a <b>Default Value</b> which
+            will appear if no other value is given
+          </p>
+          <p>
+            You can provide a Free Text Column with an initial set of values,
+            and then add to them at run-time; they are automatically saved with
+            the user's state and reloaded with the grid.{' '}
+          </p>
+          <p>
+            In this example we created 3 Free Text Columns:
+            <ul>
+              <li>
+                <b>Comments</b>: together with 3 initial comments. No DataType
+                was provided so it uses the default of <i>String</i>
+              </li>
+              <li>
+                <b>OrderCode</b>: of type <i>Number</i> and with a default value
+                of 123
+              </li>
+              <li>
+                <b>LastSpoken</b>: of type <i>Date</i> (see how a Date Picker
+                appears when you edit the Column)
+              </li>
+            </ul>{' '}
+            named
           </p>
         </div>
       }
