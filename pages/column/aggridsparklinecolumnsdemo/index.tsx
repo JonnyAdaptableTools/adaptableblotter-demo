@@ -45,7 +45,7 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/plugins/chart/sparkline-column-module#sparkline-column-config"
             target="_blank"
           >
-            Sparkline Column Predefined Config
+            Sparkline Column Config
           </a>{' '}
           |{' '}
           <a

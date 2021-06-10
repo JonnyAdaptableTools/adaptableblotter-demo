@@ -88,7 +88,7 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/predefined-config/format-column-config"
             target="_blank"
           >
-            Format Column Predefined Config
+            Format Column Config
           </a>{' '}
           |{' '}
           <a

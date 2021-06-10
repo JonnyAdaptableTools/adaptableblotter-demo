@@ -67,7 +67,7 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/predefined-config/data-source-config"
             target="_blank"
           >
-            Data Source Predefined Config
+            Data Source Config
           </a>{' '}
           |{' '}
           <a

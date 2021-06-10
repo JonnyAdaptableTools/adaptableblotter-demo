@@ -44,7 +44,7 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/predefined-config/layout-config"
             target="_blank"
           >
-            Layout Predefined Config
+            Layout Config
           </a>{' '}
           |{' '}
           <a

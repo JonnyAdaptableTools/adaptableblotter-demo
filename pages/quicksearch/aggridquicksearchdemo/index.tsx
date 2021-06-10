@@ -40,7 +40,7 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/predefined-config/quick-search-config"
             target="_blank"
           >
-            Quick Search Predefined Config
+            Quick Search Config
           </a>{' '}
           |{' '}
           <a

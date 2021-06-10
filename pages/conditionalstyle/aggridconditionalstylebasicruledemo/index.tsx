@@ -68,7 +68,7 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/predefined-config/conditional-style-config"
             target="_blank"
           >
-            Conditional Style Predefined Config
+            Conditional Style Config
           </a>{' '}
           |{' '}
           <a

@@ -49,7 +49,7 @@ export default () => {
               href="https://docs.adaptabletools.com/docs/predefined-config/dashboard-config"
               target="_blank"
             >
-              Dashboard Predefined Config
+              Dashboard Config
             </a>{' '}
             to customise the Dashboard to fit your requirements, ie. create your
             own toolbars, select the buttons to show etc.

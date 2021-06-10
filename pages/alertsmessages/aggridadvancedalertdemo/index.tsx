@@ -48,7 +48,7 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/predefined-config/alert-config"
             target="_blank"
           >
-            Alert Predefined Config
+            Alert Config
           </a>{' '}
           |{' '}
           <a

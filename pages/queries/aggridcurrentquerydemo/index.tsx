@@ -50,7 +50,7 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/predefined-config/query-config"
             target="_blank"
           >
-            Query Predefined Config
+            Query Config
           </a>{' '}
           |{' '}
           <a

@@ -52,7 +52,7 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/predefined-config/application-config"
             target="_blank"
           >
-            Application Predefined Config
+            Application Config
           </a>{' '}
           |{' '}
           <a

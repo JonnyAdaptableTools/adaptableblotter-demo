@@ -26,7 +26,7 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/predefined-config/theme-config"
             target="_blank"
           >
-            Theme Predefined Config
+            Theme Config
           </a>{' '}
           |{' '}
           <a

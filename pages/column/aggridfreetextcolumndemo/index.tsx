@@ -38,7 +38,7 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/predefined-config/free-text-column-config"
             target="_blank"
           >
-            FreeText Column Predefined Config
+            FreeText Column Config
           </a>{' '}
           |{' '}
           <a

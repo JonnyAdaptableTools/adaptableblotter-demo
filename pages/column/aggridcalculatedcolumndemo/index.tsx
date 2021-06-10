@@ -89,7 +89,7 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/predefined-config/calculated-column-config"
             target="_blank"
           >
-            Calculated Column Predefined Config
+            Calculated Column Config
           </a>{' '}
           |{' '}
           <a
