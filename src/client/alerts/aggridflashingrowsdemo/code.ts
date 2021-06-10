@@ -27,6 +27,7 @@ const demoConfig: PredefinedConfig = {
             PredicateId: 'Any',
           },
         },
+        FlashDuration: 'always',
         FlashTarget: 'row',
         UpChangeStyle: {
           BackColor: '#008000',

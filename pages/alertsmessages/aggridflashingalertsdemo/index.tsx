@@ -16,7 +16,8 @@ export default () => {
               Flashing Alerts
             </a>{' '}
             enable cells to change their style briefly appear as the value
-            changes.
+            changes. (AdapTable also offer flashing rows - see{' '}
+            <a href="./aggridflashingrowsdemo">this demo</a>.)
           </p>
           <p>
             The style and duration of the flash can be set for each Column or

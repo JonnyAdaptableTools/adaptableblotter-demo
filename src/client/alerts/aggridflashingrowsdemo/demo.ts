@@ -31,7 +31,7 @@ export default async () => {
     tickingDataHelper.startTickingDataagGridTradesUpdateData(
       adaptableOptions.vendorGrid,
       adaptableApi,
-      4000,
+      3000,
       tradeCount
     );
   });
