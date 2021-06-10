@@ -17,10 +17,10 @@ export default () => {
             It will first look for any Permitted Values for that column, set via
             the{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/adaptable-options/user-interface-options#permittedvaluesitems"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/user-interface-options#permitted-values"
               target="_blank"
             >
-              PermittedValuesItems
+              permittedValues
             </a>{' '}
             property in UserInterface Options - where you can provide either a
             list or a function.
@@ -60,13 +60,6 @@ export default () => {
           >
             User Interface Options
           </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/adaptable-api/user-interface-api"
-            target="_blank"
-          >
-            Adaptable API
-          </a>
         </div>
       }
     />
