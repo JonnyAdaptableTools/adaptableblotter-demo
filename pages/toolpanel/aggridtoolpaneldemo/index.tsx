@@ -50,7 +50,7 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/adaptable-api/tool-panel-api"
             target="_blank"
           >
-            Tool Panel API
+            Tool Panel Api
           </a>
         </div>
       }

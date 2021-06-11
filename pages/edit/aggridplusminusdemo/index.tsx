@@ -65,7 +65,6 @@ export default () => {
           >
             Plus / Minus Api
           </a>
-          |{' '}
         </div>
       }
     />

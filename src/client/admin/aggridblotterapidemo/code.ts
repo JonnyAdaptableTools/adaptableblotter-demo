@@ -63,9 +63,9 @@ export default async (columnDefs: any[], rowData: any[]) => {
     testDiv.style.marginBottom = '10px';
     testDiv.style.padding = '10px';
     var para = document.createElement('P');
-    para.innerHTML = '<b>Using the Adaptable API</b><br/>';
+    para.innerHTML = '<b>Using the Adaptable Api</b><br/>';
     para.innerHTML +=
-      'Click "Run Quick Search" (or "Clear Quick Search") to call the equivalent Quick Search API functions.<br/>';
+      'Click "Run Quick Search" (or "Clear Quick Search") to call the equivalent Quick Search Api functions.<br/>';
     para.innerHTML +=
       'And use other buttons to set Dashboard visibility, load a layout and display a popup.';
     testDiv.appendChild(para);

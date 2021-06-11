@@ -72,7 +72,7 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/adaptable-api/free-text-column-api"
             target="_blank"
           >
-            FreeText Column API
+            FreeText Column Api
           </a>
         </div>
       }

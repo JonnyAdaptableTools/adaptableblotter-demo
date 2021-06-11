@@ -13,9 +13,17 @@ export default () => {
             JSON and Clipboard.
           </p>
           <p>
-            However sometimes developers might want to add additional
-            destinations such as particular REST endpoints, or by email. This
-            can be done through the <i>customDestinations</i> property in{' '}
+            However sometimes developers might want to add{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/adaptable-modules/export-module#custom-destinations"
+              target="_blank"
+            >
+              additional destinations
+            </a>{' '}
+            such as particular REST endpoints, or by email.{' '}
+          </p>
+          <p>
+            This can be done through the <i>customDestinations</i> property in{' '}
             <a
               href="https://docs.adaptabletools.com/docs/adaptable-options/export-options"
               target="_blank"
@@ -24,20 +32,28 @@ export default () => {
             </a>
           </p>
           <p>
-            If other information is needed you can provide{' '}
-            <b>custom field definitions</b> and AdapTable will dynamically
-            display a form accordingly (and then provide the results in the
-            accompanying
-            <i>onExport</i> function.
+            If other information is required from the user you can provide form
+            information through <b>custom field definitions</b>.
+          </p>
+          <p>
+            AdapTable will then automatically display a{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/common-objects/common-objects-form"
+              target="_blank"
+            >
+              dynamic form
+            </a>{' '}
+            (and provide the results in the accompanying <b>onExport</b>{' '}
+            function.
           </p>
           <p>In this example we have created 2 Custom Destinations:</p>
           <ul>
             <li>
-              <i>Email</i> - which also contains Form Data and default form
+              <b>Email</b> - which also contains Form Data and default form
               values
             </li>
             <li>
-              <i>REST Endpoint</i> - which has no form data
+              <b>REST Endpoint</b> - which has no form data
             </li>
           </ul>
         </div>
@@ -71,6 +87,13 @@ export default () => {
           >
             Export Options
           </a>
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/common-objects/common-objects-form"
+            target="_blank"
+          >
+            Adaptable Form
+          </a>{' '}
         </div>
       }
     />

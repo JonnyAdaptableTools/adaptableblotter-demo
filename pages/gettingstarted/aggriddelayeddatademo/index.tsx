@@ -21,7 +21,7 @@ export default () => {
               href="https://docs.adaptabletools.com/docs/adaptable-api/grid-api"
               target="_blank"
             >
-              Grid API
+              Grid Api
             </a>{' '}
             which is designed for this precise use case (for subsequent
             refreshes you can use <i>setGridData</i>).
@@ -60,7 +60,7 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/adaptable-api/grid-api"
             target="_blank"
           >
-            Grid API
+            Grid Api
           </a>{' '}
         </div>
       }

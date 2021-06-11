@@ -47,7 +47,7 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/adaptable-api/format-column-api"
             target="_blank"
           >
-            Format Column API
+            Format Column Api
           </a>
           |{' '}
           <a href="https://youtu.be/tYTGQ1ufhbc" target="_blank">

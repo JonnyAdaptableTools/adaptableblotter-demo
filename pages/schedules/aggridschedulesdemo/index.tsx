@@ -38,7 +38,7 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/adaptable-api/schedule-api"
             target="_blank"
           >
-            Adaptable API
+            Adaptable Api
           </a>
           .
         </div>

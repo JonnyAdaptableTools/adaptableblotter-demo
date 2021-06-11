@@ -63,7 +63,7 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/adaptable-api/conditional-style-api"
             target="_blank"
           >
-            Conditional Style API
+            Conditional Style Api
           </a>{' '}
           |{' '}
           <a

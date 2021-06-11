@@ -16,10 +16,18 @@ export default () => {
             and{' '}
             <a href="./aggriduserreportsdemo" target="_self">
               User Reports
-            </a>{' '}
-            , <b>Custom Reports</b> - also offered by AdapTable - do not need to
-            include data (or columns) present in the grid in the exported data
-            set.
+            </a>
+            ,{' '}
+            <b>
+              <a
+                href="https://docs.adaptabletools.com/docs/adaptable-modules/export-module#custom-reports"
+                target="_blank"
+              >
+                Custom Reports
+              </a>
+            </b>{' '}
+            - also offered by AdapTable - do not need to include data (or
+            columns) present in the grid in the exported data set.
           </p>
           <p>
             Instead the data in the export is fetched each time the report is
@@ -30,11 +38,11 @@ export default () => {
             >
               Export Options
             </a>
-            ) .
+            .
           </p>
           <p>
-            This allows developers to provide their own reports but leverage
-            AdapTable state, scheduling and report destinations.
+            This allows developers to provide their own reports but still
+            leverage AdapTable state, scheduling and report destinations.
           </p>
           <p>
             This example includes a Custom Report entitled <i>People Report</i>{' '}
@@ -66,6 +74,13 @@ export default () => {
             target="_blank"
           >
             Export Module
+          </a>
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-modules/export-module#custom-reports"
+            target="_blank"
+          >
+            Custom Reports
           </a>
           |{' '}
           <a

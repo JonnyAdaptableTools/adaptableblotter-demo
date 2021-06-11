@@ -82,7 +82,7 @@ export default () => {
                 and retrieving an{' '}
                 <b>
                   <a
-                    href="https://docs.adaptabletools.com/docs/adaptable-api/adaptable-api-overviewi"
+                    href="https://docs.adaptabletools.com/docs/adaptable-api/adaptable-api-overview"
                     target="_blank"
                   >
                     AdaptableApi
@@ -127,12 +127,11 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/adaptable-api/adaptable-api-overviewi"
+            href="https://docs.adaptabletools.com/docs/adaptable-api/adaptable-api-overview"
             target="_blank"
           >
-            Adaptable API
+            Adaptable Api
           </a>
-          .
         </div>
       }
     />

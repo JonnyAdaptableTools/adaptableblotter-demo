@@ -122,7 +122,7 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/adaptable-api/query-api"
             target="_blank"
           >
-            Query API
+            Query Api
           </a>{' '}
         </div>
       }

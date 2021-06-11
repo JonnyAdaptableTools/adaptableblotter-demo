@@ -46,7 +46,7 @@ export default () => {
             >
               System Status section
             </a>{' '}
-            of AdapTable API.
+            of AdapTable Api.
           </p>
           <p>
             In this example we set info, warning, success and error messages

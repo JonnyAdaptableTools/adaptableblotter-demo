@@ -47,13 +47,6 @@ export default () => {
           >
             Sparkline Column Config
           </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/plugins/chart/sparkline-column-function#sparkline-column-api-methods"
-            target="_blank"
-          >
-            Sparkline Column API
-          </a>
         </div>
       }
     />

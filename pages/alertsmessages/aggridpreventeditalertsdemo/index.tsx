@@ -60,7 +60,7 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/adaptable-api/alert-api"
             target="_blank"
           >
-            Alert API
+            Alert Api
           </a>{' '}
           |{' '}
           <a

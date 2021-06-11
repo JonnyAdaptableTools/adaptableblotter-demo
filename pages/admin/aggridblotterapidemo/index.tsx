@@ -18,7 +18,7 @@ export default () => {
               href="https://docs.adaptabletools.com/docs/adaptable-api/adaptable-api-overview"
               target="_blank"
             >
-              Adaptable API
+              Adaptable Api
             </a>
             , that allow you to do programmatically - through code - everything
             that is available via the GUI or Config,{' '}
@@ -30,9 +30,9 @@ export default () => {
           </p>
           <p>
             In this example we create our own form controls (external to the
-            AdapTable instance) but we call the QuickSearch API to run and clear
-            Quick Search, Dashboard API to manage Dashboard visibility, Layout
-            API to load a layout and Custom Sort API to open that window. Note
+            AdapTable instance) but we call the QuickSearch Api to run and clear
+            Quick Search, Dashboard Api to manage Dashboard visibility, Layout
+            Api to load a layout and Custom Sort Api to open that window. Note
             that the functions run as if you were using AdapTable and that all
             State is stored (refresh the page to see).
           </p>
@@ -44,7 +44,7 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/adaptable-api/adaptable-api-overview"
             target="_blank"
           >
-            Adaptable API
+            Adaptable Api
           </a>
         </div>
       }

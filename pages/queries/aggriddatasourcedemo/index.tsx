@@ -49,7 +49,7 @@ export default () => {
           <p>
             In this example we created 4 Data Sources. We subscribe to
             SearchChanged event, fetch the relevant data and send to AdapTable
-            via the API. We also ouput the event info to the console for your
+            via the Api. We also ouput the event info to the console for your
             convenience.
           </p>
         </div>
