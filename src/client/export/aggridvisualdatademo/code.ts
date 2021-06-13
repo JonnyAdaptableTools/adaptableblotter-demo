@@ -24,12 +24,29 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   Export: {
-    Revision: Date.now(),
     CurrentReport: 'Visual Data',
     CurrentDestination: 'Excel',
   },
+  Filter: {
+    ColumnFilters: [
+      {
+        ColumnId: 'InvoicedCost',
+        Predicate: {
+          PredicateId: 'GreaterThan',
+          Inputs: [600],
+        },
+      },
+    ],
+  },
+  CustomSort: {
+    CustomSorts: [
+      {
+        ColumnId: 'ShipVia',
+        SortedValues: ['United Package', 'Federal Shipping', 'Speedy Express'],
+      },
+    ],
+  },
   Layout: {
-    Revision: Date.now(),
     CurrentLayout: 'Grouped',
     Layouts: [
       {
@@ -46,12 +63,17 @@ const demoConfig: PredefinedConfig = {
         ],
         RowGroupedColumns: ['ShipCountry'],
         ExpandedRowGroupValues: ['France'],
+        ColumnSorts: [
+          {
+            SortOrder: 'Asc',
+            ColumnId: 'ShipVia',
+          },
+        ],
         Name: 'Grouped',
       },
     ],
   },
   ConditionalStyle: {
-    Revision: Date.now(),
     ConditionalStyles: [
       {
         Scope: {
@@ -69,7 +91,6 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   FormatColumn: {
-    Revision: Date.now(),
     FormatColumns: [
       {
         Scope: {

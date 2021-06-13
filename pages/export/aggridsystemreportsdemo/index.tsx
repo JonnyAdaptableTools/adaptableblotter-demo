@@ -23,12 +23,18 @@ export default () => {
             </li>
             <li>
               <b>Visual Data</b>: All the data presently in the grid together
-              with all styles and formats (exported to Excel only - see Visual
-              Data Demo)
+              with all styles and formats (exported to Excel only - see{' '}
+              <a href="aggridvisualdatademo" target="_blank">
+                Visual Data Demo
+              </a>
             </li>
             <li>
               <b>Selected Cells</b>: All cells currently selected in the grid
-              (they do not need to be contiguous - see Selected Cells Demo)
+              (they do not need to be contiguous - see{' '}
+              <a href="aggridselectedcellsdemo" target="_blank">
+                Selected Cells Demo
+              </a>
+              )
             </li>
             <li>
               <b>Selected Rows</b>: Any rows currently selected in the grid.

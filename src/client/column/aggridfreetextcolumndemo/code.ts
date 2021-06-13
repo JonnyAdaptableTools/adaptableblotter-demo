@@ -20,7 +20,6 @@ const demoConfig: PredefinedConfig = {
     VisibleButtons: ['FreeTextColumn'],
   },
   FreeTextColumn: {
-    Revision: Date.now(),
     FreeTextColumns: [
       {
         ColumnId: 'Comments',
@@ -46,7 +45,6 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   Layout: {
-    Revision: Date.now(),
     CurrentLayout: 'Comments View',
     Layouts: [
       {

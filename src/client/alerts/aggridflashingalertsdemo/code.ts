@@ -63,7 +63,6 @@ const predefinedConfig = {
     ],
   },
   FormatColumn: {
-    Revision: Date.now(),
     FormatColumns: [
       {
         Scope: {

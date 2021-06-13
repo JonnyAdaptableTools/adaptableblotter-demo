@@ -8,7 +8,18 @@ export default () => {
       pageTitle={'Visual Data Report Demo'}
       description={
         <div>
-          <p>To DO</p>
+          <p>
+            <b>Visual Data</b> is one of the System Reports provided by
+            AdapTable.{' '}
+          </p>
+          <p>
+            Unlike other reports which are designed to export data, Visual is a
+            WYSIWYG (What You See Is What You Get) report.{' '}
+          </p>
+          <p>
+            The report exports all the data curretnly in the Grid - including
+            any Grouping, Cell Styles and other formats.
+          </p>
         </div>
       }
       helpResources={

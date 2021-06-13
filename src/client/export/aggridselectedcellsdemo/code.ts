@@ -24,9 +24,28 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   Export: {
-    Revision: Date.now(),
     CurrentReport: 'Selected Cells',
     CurrentDestination: 'Excel',
+  },
+  Layout: {
+    CurrentLayout: 'Selection',
+    Layouts: [
+      {
+        Columns: [
+          'OrderId',
+          'ContactName',
+          'Employee',
+          'InvoicedCost',
+          'ShipVia',
+          'ChangeLastOrder',
+          'ItemCount',
+          'OrderCost',
+          'CustomerReference',
+          'PackageCost',
+        ],
+        Name: 'Selection',
+      },
+    ],
   },
 } as PredefinedConfig;
 
@@ -38,22 +57,32 @@ export default async (columnDefs: any[], rowData: any[]) => {
     sideBar: true,
     suppressMenuHide: true,
     rowSelection: 'multiple',
-    autoGroupColumnDef: {
-      sortable: true,
-    },
   };
 
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Selected Cells Report Demo',
-    layoutOptions: {
-      includeExpandedRowGroups: true,
-    },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
   adaptableApi = await Adaptable.init(adaptableOptions);
+
+  adaptableApi.eventApi.on('AdaptableReady', () => {
+    setTimeout(() => {
+      adaptableApi.gridApi.selectCells(
+        ['InvoicedCost', 'ShipVia', 'ChangeLastOrder', 'ItemCount'],
+        10250,
+        10253
+      );
+      adaptableApi.gridApi.selectCells(
+        ['ContactName', 'Employee', 'InvoicedCost', 'ShipVia'],
+        10255,
+        10256
+      );
+      adaptableApi.gridApi.selectCells(['CustomerReference'], 10248, 10260);
+    }, 500);
+  });
 
   return { adaptableOptions, adaptableApi };
 };
