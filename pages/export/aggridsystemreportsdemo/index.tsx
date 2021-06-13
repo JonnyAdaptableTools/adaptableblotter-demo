@@ -9,7 +9,7 @@ export default () => {
       description={
         <div>
           <p>
-            AdapTable ships with 4 <b>System Reports</b> that can be run at any
+            AdapTable ships with 5 <b>System Reports</b> that can be run at any
             time:{' '}
           </p>
           <ul>
@@ -18,12 +18,17 @@ export default () => {
               (irrespective of whether it is currently visible)
             </li>
             <li>
-              <b>Visible Data</b>: All the data currently displayed in the grid
-              (if exported to Excel it will include grouped row information)
+              <b>Current Data</b>: All the data currently displayed in the grid,
+              i.e. what has been filtered
+            </li>
+            <li>
+              <b>Visual Data</b>: All the data presently in the grid together
+              with all styles and formats (exported to Excel only - see Visual
+              Data Demo)
             </li>
             <li>
               <b>Selected Cells</b>: All cells currently selected in the grid
-              (they do not need to be contiguous)
+              (they do not need to be contiguous - see Selected Cells Demo)
             </li>
             <li>
               <b>Selected Rows</b>: Any rows currently selected in the grid.
@@ -64,6 +69,17 @@ export default () => {
               Custom Destination
             </a>{' '}
             demo for how to send Reports to other destinations.
+          </p>
+          <p>
+            In this demo we have set the{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/predefined-config/export-config"
+              target="_blank"
+            >
+              Export Config
+            </a>{' '}
+            so that the Current Report is 'Current Data' and the Current
+            Destination is 'CSV'.
           </p>
         </div>
       }

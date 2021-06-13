@@ -355,6 +355,12 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Send grid data to a number of destinations using System Reports e.g. All Data, Visible Data or Selected Rows.',
           },
           {
+            Name: 'Visual Data Report',
+            Link: '/export/aggridvisualdatademo',
+            Description:
+              'Export data from the Grid with full WYSIWYG effect - groupings, styles, formats etc.',
+          },
+          {
             Name: 'User Reports',
             Link: '/export/aggriduserreportsdemo',
             Description:

@@ -24,8 +24,63 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   Export: {
-    CurrentReport: 'Current Data',
-    CurrentDestination: 'CSV',
+    Revision: Date.now(),
+    CurrentReport: 'Visual Data',
+    CurrentDestination: 'Excel',
+  },
+  Layout: {
+    Revision: Date.now(),
+    CurrentLayout: 'Grouped',
+    Layouts: [
+      {
+        Columns: [
+          'CustomerReference',
+          'ContactName',
+          'Employee',
+          'InvoicedCost',
+          'ShipVia',
+          //   'ChangeLastOrder',
+          // 'ItemCount',
+          // 'OrderCost',
+          // 'PackageCost',
+        ],
+        RowGroupedColumns: ['ShipCountry'],
+        ExpandedRowGroupValues: ['France'],
+        Name: 'Grouped',
+      },
+    ],
+  },
+  ConditionalStyle: {
+    Revision: Date.now(),
+    ConditionalStyles: [
+      {
+        Scope: {
+          All: true,
+        },
+        Rule: {
+          BooleanExpression: '[ItemCount]> 10 AND [OrderCost] < 1000',
+        },
+        Style: {
+          BackColor: 'LightYellow',
+          ForeColor: 'DarkGray',
+          FontWeight: 'Bold',
+        },
+      },
+    ],
+  },
+  FormatColumn: {
+    Revision: Date.now(),
+    FormatColumns: [
+      {
+        Scope: {
+          ColumnIds: ['Employee'],
+        },
+        Style: {
+          BackColor: 'Brown',
+          ForeColor: 'Yellow',
+        },
+      },
+    ],
   },
 } as PredefinedConfig;
 
@@ -45,7 +100,10 @@ export default async (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'System Reports Demo',
+    adaptableId: 'Visual Data Report Demo',
+    layoutOptions: {
+      includeExpandedRowGroups: true,
+    },
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
