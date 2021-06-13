@@ -361,6 +361,12 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Export data from the Grid with full WYSIWYG effect - groupings, styles, formats etc.',
           },
           {
+            Name: 'Selected Cells Report',
+            Link: '/export/aggridselectedcellsdemo',
+            Description:
+              'Export selected cells from AdapTable to a destination of your choice',
+          },
+          {
             Name: 'User Reports',
             Link: '/export/aggriduserreportsdemo',
             Description:
