@@ -9,6 +9,7 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
+  GridCellRange,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -70,17 +71,21 @@ export default async (columnDefs: any[], rowData: any[]) => {
 
   adaptableApi.eventApi.on('AdaptableReady', () => {
     setTimeout(() => {
-      adaptableApi.gridApi.selectCells(
-        ['InvoicedCost', 'ShipVia', 'ChangeLastOrder', 'ItemCount'],
-        10250,
-        10253
-      );
-      adaptableApi.gridApi.selectCells(
-        ['ContactName', 'Employee', 'InvoicedCost', 'ShipVia'],
-        10255,
-        10256
-      );
-      adaptableApi.gridApi.selectCells(['CustomerReference'], 10248, 10260);
+      adaptableApi.gridApi.selectCellRange({
+        columnIds: ['InvoicedCost', 'ShipVia', 'ChangeLastOrder', 'ItemCount'],
+        primaryKeyValueStart: 10250,
+        primaryKeyValueEnd: 10253,
+      });
+      adaptableApi.gridApi.selectCellRange({
+        columnIds: ['ContactName', 'Employee', 'InvoicedCost', 'ShipVia'],
+        primaryKeyValueStart: 10255,
+        primaryKeyValueEnd: 10256,
+      });
+      adaptableApi.gridApi.selectCellRange({
+        columnIds: ['CustomerReference'],
+        primaryKeyValueStart: 10248,
+        primaryKeyValueEnd: 10260,
+      });
     }, 500);
   });
 

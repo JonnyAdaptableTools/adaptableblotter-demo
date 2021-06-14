@@ -47,19 +47,19 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   Layout: {
+    Revision: Date.now(),
     CurrentLayout: 'Grouped',
     Layouts: [
       {
         Columns: [
           'CustomerReference',
           'ContactName',
+          'OrderCost',
+          'PackageCost',
           'Employee',
           'InvoicedCost',
           'ShipVia',
-          //   'ChangeLastOrder',
-          // 'ItemCount',
-          // 'OrderCost',
-          // 'PackageCost',
+          'ChangeLastOrder',
         ],
         RowGroupedColumns: ['ShipCountry'],
         ExpandedRowGroupValues: ['France'],
@@ -91,6 +91,7 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   FormatColumn: {
+    Revision: Date.now(),
     FormatColumns: [
       {
         Scope: {
@@ -100,6 +101,19 @@ const demoConfig: PredefinedConfig = {
           BackColor: 'Brown',
           ForeColor: 'Yellow',
         },
+      },
+      {
+        Scope: {
+          DataTypes: ['Number'],
+        },
+        DisplayFormat: {
+          Formatter: 'NumberFormatter',
+          Options: {
+            FractionDigits: 2,
+            Prefix: '$',
+          },
+        },
+        CellAlignment: 'Right',
       },
     ],
   },
@@ -122,6 +136,9 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Visual Data Report Demo',
+    exportOptions: {
+      exportFormatType: 'formattedValue',
+    },
     layoutOptions: {
       includeExpandedRowGroups: true,
     },
