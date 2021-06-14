@@ -32,8 +32,8 @@ export default () => {
               aggregation.
             </li>
             <li>
-              <b>Only: </b>Calculates the Weighted Average (requires selection
-              of 2 contiguous columns)
+              <b>Only: </b>Returns true if all selected cells in a single column
+              match
             </li>
           </ul>
           <p>

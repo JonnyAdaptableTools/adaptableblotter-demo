@@ -716,6 +716,11 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'The Finance Plugin adds extra Cell Summary options useful for financial users.',
           },
+          {
+            Name: 'Weighted Average',
+            Link: '/finance/financeweightedaveragedemo',
+            Description: 'Define a column with a Weighted Average aggregation',
+          },
         ],
       },
       {
