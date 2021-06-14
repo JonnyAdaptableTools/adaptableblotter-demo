@@ -21,8 +21,15 @@ export default () => {
           </p>
           <ul>
             <li>
-              <b>WeightedAverage: </b>Shows the Weighted Average for Columns
-              that have been provided with the 'Weighted Average' aggregation.
+              <b>WeightedAverage: </b>Shows the Weighted Average for any Columns
+              that have been provided with the{' '}
+              <a
+                href="https://docs.adaptabletools.com/docs/plugins/finance/finance-plugin-options#weighted-average-columns"
+                target="_blank"
+              >
+                Weighted Average
+              </a>{' '}
+              aggregation.
             </li>
             <li>
               <b>Only: </b>Calculates the Weighted Average (requires selection
