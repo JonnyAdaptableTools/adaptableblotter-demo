@@ -47,7 +47,6 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   Layout: {
-    Revision: Date.now(),
     CurrentLayout: 'Grouped',
     Layouts: [
       {
@@ -91,7 +90,6 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   FormatColumn: {
-    Revision: Date.now(),
     FormatColumns: [
       {
         Scope: {

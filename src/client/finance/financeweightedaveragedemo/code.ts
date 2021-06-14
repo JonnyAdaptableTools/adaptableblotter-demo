@@ -25,7 +25,6 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   Filter: {
-    Revision: Date.now(),
     ColumnFilters: [
       {
         ColumnId: 'PackageCost',
@@ -34,7 +33,6 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   FormatColumn: {
-    Revision: Date.now(),
     FormatColumns: [
       {
         Scope: {
@@ -51,7 +49,6 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   Layout: {
-    Revision: Date.now(),
     CurrentLayout: 'Selection',
     Layouts: [
       {
