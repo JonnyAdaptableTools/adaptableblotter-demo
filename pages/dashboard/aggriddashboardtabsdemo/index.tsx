@@ -63,6 +63,13 @@ export default () => {
             Dashboard Api
           </a>{' '}
           |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-options/dashboard-options"
+            target="_blank"
+          >
+            Dashboard Options
+          </a>{' '}
+          |{' '}
           <a href="https://youtu.be/KrahnLFYHjs" target="_blank">
             Dashboard Video
           </a>

@@ -50,6 +50,13 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
+            href="https://docs.adaptabletools.com/docs/adaptable-options/dashboard-options"
+            target="_blank"
+          >
+            Dashboard Options
+          </a>{' '}
+          |{' '}
+          <a
             href="https://docs.adaptabletools.com/docs/adaptable-api/dashboard-api"
             target="_blank"
           >

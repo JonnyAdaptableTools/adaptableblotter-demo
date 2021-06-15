@@ -51,6 +51,13 @@ export default () => {
             >
               Dashboard Config
             </a>{' '}
+            and{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/adaptable-options/dashboard-options"
+              target="_blank"
+            >
+              Dashboard Options
+            </a>{' '}
             to customise the Dashboard to fit your requirements, ie. create your
             own toolbars, select the buttons to show etc.
           </p>

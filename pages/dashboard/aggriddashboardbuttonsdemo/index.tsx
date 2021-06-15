@@ -26,10 +26,10 @@ export default () => {
             The Quick Search texbox enables you to quickly search the grid; set
             <i>ShowQuickSearchInHeader</i> to false in{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/predefined-config/dashboard-config#showquicksearchinheader"
+              href="https://docs.adaptabletools.com/docs/adaptable-options/dashboard-options"
               target="_blank"
             >
-              Dashboard Predefined Config
+              Dashboard Options
             </a>{' '}
             if you don't want this to be visible.
           </p>{' '}
@@ -58,6 +58,13 @@ export default () => {
             target="_blank"
           >
             Dashboard Config
+          </a>{' '}
+          |{' '}
+          <a
+            href="https://docs.adaptabletools.com/docs/adaptable-options/dashboard-options"
+            target="_blank"
+          >
+            Dashboard Options
           </a>{' '}
           |{' '}
           <a
