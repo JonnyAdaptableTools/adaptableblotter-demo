@@ -373,6 +373,12 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Create bespoke reports either at design time or run time that will include a query to retrieve the data to export each time the report run.',
           },
           {
+            Name: 'Formatted Values',
+            Link: '/export/aggridexportformatvaluesdemo',
+            Description:
+              'Select whether to export raw values or formmatted values - you can choose for all reports or by Column data type.',
+          },
+          {
             Name: 'Custom Reports',
             Link: '/export/aggridcustomreportsdemo',
             Description:
