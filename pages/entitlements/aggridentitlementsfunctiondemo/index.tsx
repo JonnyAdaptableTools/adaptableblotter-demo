@@ -33,8 +33,8 @@ export default () => {
           </p>
           <p>
             If the function returns nothing, the Entitlement is given the
-            default Access Level of 'Full' (however this can be changed through
-            setting the <b>DefaultAccessLevel</b> property, see{' '}
+            default Access Level of 'Full' (this can be changed via the{' '}
+            <b>DefaultAccessLevel</b> property, see{' '}
             <a href="./aggridentitlementsdefaultdemo">Default Demo</a>
             ).
           </p>

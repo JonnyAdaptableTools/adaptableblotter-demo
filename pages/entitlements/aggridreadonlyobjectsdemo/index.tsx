@@ -12,7 +12,7 @@ export default () => {
         <div>
           <p>
             Occasionally you might want to make one Adaptable Object ReadOnly
-            while keeping the main Entitlement for the Function to be 'Full'.
+            while keeping the main Entitlement for the Module to be 'Full'.
           </p>
           <p>
             This is possible by setting the <b>IsReadOnly</b> property in the

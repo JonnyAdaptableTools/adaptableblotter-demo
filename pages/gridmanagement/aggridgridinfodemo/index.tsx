@@ -60,7 +60,7 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/adaptable-modules/grid-info-module"
             target="_blank"
           >
-            Grid Info Function Module
+            Grid Info Module
           </a>
         </div>
       }

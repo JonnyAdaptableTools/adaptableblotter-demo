@@ -28,13 +28,13 @@ export default () => {
           </p>
           <p>
             Any Module not given an Entitlement automatically takes the Access
-            Level of 'Full'; however this can be changed through setting the{' '}
+            Level of 'Full'; this can be changed via the{' '}
             <b>defaultAccessLevel</b> property (see{' '}
             <a href="./aggridentitlementsdefaultdemo">Default Demo</a>
             ).
           </p>
           <p>
-            In this example we have created 3 Entitlements (one for each
+            In this example we have created 3 Module Entitlements (one for each
             AccessLevel):
             <ul>
               <li>

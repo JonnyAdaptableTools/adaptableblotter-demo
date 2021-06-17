@@ -23,8 +23,8 @@ export default () => {
             and 'Reminder' buttons to be visible.
           </p>
           <p>
-            The Quick Search texbox enables you to quickly search the grid; set
-            <i>ShowQuickSearchInHeader</i> to false in{' '}
+            The Quick Search texbox enables you to quickly search the grid; set{' '}
+            <i>showQuickSearchInHeader</i> to false in{' '}
             <a
               href="https://docs.adaptabletools.com/docs/adaptable-options/dashboard-options"
               target="_blank"

@@ -88,7 +88,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
             ) => {
               return context.rowNode?.data?.Employee != 'Margaret Peacock';
             },
-            //  RenderFunction: 'renderMultiplyFunction',
             buttonStyle: {
               variant: 'raised',
               tone: 'accent',
@@ -118,6 +117,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
             },
           },
         },
+
         {
           columnId: 'Minus',
           actionColumnButton: {

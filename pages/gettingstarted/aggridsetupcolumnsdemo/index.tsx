@@ -55,11 +55,12 @@ export default () => {
           </p>
           <p>
             To format columns on the fly, or for more complicated date and
-            numeric formats, use the AdaptTable{' '}
+            numeric formats, use the AdapTable{' '}
             <a href="../formatcolumn/aggridformatcolumndemo">Format Column</a>{' '}
-            Function (as done below for <b>First Bought</b> and <b>Price</b>{' '}
+            Module (as done below for <b>First Bought</b> and <b>Price</b>{' '}
             Columns)
           </p>
+
           <p>
             In this demo we have created value formatters for the{' '}
             <b>Efficiency</b>, <b>First Used</b> and <b>Efficiency Rating</b>{' '}

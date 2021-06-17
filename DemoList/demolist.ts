@@ -573,6 +573,12 @@ export function getDemoPageStructure(): DemoPageStructure {
             Link: '/dashboard/aggriddashboardinlinedemo',
             Description: 'Set the Dashboard in "Expanded" view to be inline.',
           },
+          {
+            Name: 'Stacked Toolbars',
+            Link: '/dashboard/aggridstackedtoolarsdemo',
+            Description:
+              'Use CSS to stack the Toolbars so they do not scroll to the right when wider than the grid',
+          },
         ],
       },
       {

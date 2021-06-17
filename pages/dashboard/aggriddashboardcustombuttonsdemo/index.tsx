@@ -16,7 +16,7 @@ export default () => {
           </p>
           <p>
             This enables you to place your own buttons next to any{' '}
-            <a href="./aggriddashboardbuttonsdemo">Function Buttons</a> you have
+            <a href="./aggriddashboardbuttonsdemo">Module Buttons</a> you have
             selected to display.
           </p>
           <p>

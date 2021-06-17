@@ -37,7 +37,7 @@ export default () => {
           <h4>Dashboard</h4>
           <p>
             The Dashboard is the area above the grid which contains Tabs (with
-            Toolbars), Function Buttons and the Quick Search textbox.
+            Toolbars), Module Buttons and the Quick Search textbox.
           </p>
           <p>
             It has 3 visibility modes - 'Full', 'Collapsed' and 'Floating' to
