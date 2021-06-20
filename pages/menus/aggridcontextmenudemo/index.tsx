@@ -10,10 +10,56 @@ export default () => {
         <div>
           <p>
             AdapTable provides a Context Menu - accessible when you right-click
-            in a cell - which includes shortcuts to functionality relevant to
-            that cell (and what is selected).
+            in any cell in the Grid.
           </p>
           <p>
+            <b>System Menu Items</b>
+            <br />
+            The Context Menu include a large number of{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/user-interface/context-menu/#system-context-menu-entries"
+              target="_blank"
+            >
+              System Menu Items
+            </a>{' '}
+            relevant to that cell (and what is selected).
+          </p>{' '}
+          <p>
+            You can choose which - if any - of these are available via the{' '}
+            <b>showAdaptableContextMenu</b> property of{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/adaptable-options/menu-options"
+              target="_blank"
+            >
+              Menu Options
+            </a>
+            .
+          </p>
+          <p>
+            The 2 arguments to the function are{' '}
+            <a
+              href="https://docs.adaptabletools.com/api/adaptablemenuitem"
+              target="_blank"
+            >
+              AdaptableMenuItem
+            </a>{' '}
+            (the menu item to show) and{' '}
+            <a
+              href="https://docs.adaptabletools.com/api/menucontext"
+              target="_blank"
+            >
+              Menu Context
+            </a>{' '}
+            (which provides details of the current cell and cell selection).
+          </p>
+          <p>
+            In this example we removed the <i>Filter</i> menu item for the
+            'Employee' column and all the menu items for the 'Contact' column.
+          </p>
+          <p>
+            {' '}
+            <b>User Menu Items</b>
+            <br />
             You can add your own bespoke{' '}
             <a
               href="https://docs.adaptabletools.com/api/adaptablemenuitem"
@@ -21,7 +67,7 @@ export default () => {
             >
               Menu Item(s)
             </a>{' '}
-            to the Context Menu - through{' '}
+            to the Context Menu - also through{' '}
             <a
               href="https://docs.adaptabletools.com/docs/adaptable-options/menu-options"
               target="_blank"
@@ -35,9 +81,8 @@ export default () => {
             clicked allowing you provide different menu items for when the grid
             is grouped or the current cell is a grouped node.
           </p>
-
           <p>
-            When you define a MenuItem you can provide 3 functions that will be
+            When you define a Menu Item you can provide 3 functions that will be
             invoked by AdapTable:
           </p>
           <ul>
@@ -85,23 +130,6 @@ export default () => {
                 state of the row and which only appears in Grouped Rows
               </li>
             </ul>{' '}
-          </p>
-          <p>
-            You can also choose which - if any - of the shipped Menu Items are
-            available via the <b>showAdaptableContextMenu</b> property of{' '}
-            <a
-              href="https://docs.adaptabletools.com/docs/adaptable-options/menu-options"
-              target="_blank"
-            >
-              Menu Options
-            </a>
-            ; in this example we removed the <i>Filter</i> menu item for the
-            'Employee' column and all the menu items for the 'Contact' column.
-          </p>
-          <p>
-            The 2 arguments to the function are <i>AdaptableMenuItem</i> (the
-            menu item to show) and <i>MenuContext</i> (which provides details of
-            the current cell and cell selection).
           </p>
         </div>
       }
