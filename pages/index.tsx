@@ -17,18 +17,18 @@ export default () => {
         </i>
         <br />
         <p>
-          <h2>
-            <div style={{ color: 'red' }}>
-              This demo site uses a pre-release version of{' '}
+          <h3>
+            <div style={{ color: 'purple' }}>
+              These demos use a pre-release version of{' '}
               <a
                 href="https://docs.adaptabletools.com/docs/releases/version9/upgrade-guide-v9/"
                 target="_blank"
               >
                 Version 9
               </a>{' '}
-              of AdapTable
+              of AdapTable, which will be officially launched on 5 July
             </div>
-          </h2>
+          </h3>
           <h3>
             AdapTable is the most advanced and powerful HTML5 Data Management
             Solution available today
