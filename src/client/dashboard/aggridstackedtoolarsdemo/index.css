@@ -1,3 +1,4 @@
 html.custom-css-rules {
   --ab-dashboard-wrap: wrap;
+  --ab-dashboard-gap-size: 5px;
 }

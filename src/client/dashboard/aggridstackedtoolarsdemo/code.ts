@@ -24,6 +24,9 @@ const demoConfig: PredefinedConfig = {
         We have a lot of toolbars to display so we have set in our CSS:
         --ab-dashboard-wrap: wrap;
         This will wrap the toolbars and avoid the horizontal scrollbar
+
+        We also updated another css variable to ensure a bigger gap between toolbars:
+        --ab-dashboard-gap-size: 5px (instead of default of 2px)
         */
         Toolbars: [
           'Layout',
