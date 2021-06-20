@@ -31,9 +31,11 @@ export default () => {
             section of Adaptable Options.{' '}
           </p>
           <p>
-            In this example we added 'Float Dashboard' and 'Set System Status'
-            menu items (with the latter having sub menu items).
+            AdapTable provides you with full details of the cell which was
+            clicked allowing you provide different menu items for when the grid
+            is grouped or the current cell is a grouped node.
           </p>
+
           <p>
             When you define a MenuItem you can provide 3 functions that will be
             invoked by AdapTable:
@@ -71,6 +73,20 @@ export default () => {
             </li>
           </ul>
           <p>
+            In this example we provided 3 Context Menu Items:
+            <ul>
+              <li>Float Dashboard</li>
+              <li>
+                Set System Status - which has a sub/menu containing other menu
+                items
+              </li>
+              <li>
+                Expand / Close Group - where the label changes based on the
+                state of the row and which only appears in Grouped Rows
+              </li>
+            </ul>{' '}
+          </p>
+          <p>
             You can also choose which - if any - of the shipped Menu Items are
             available via the <b>showAdaptableContextMenu</b> property of{' '}
             <a
@@ -83,9 +99,9 @@ export default () => {
             'Employee' column and all the menu items for the 'Contact' column.
           </p>
           <p>
-            The 2 arguments to the function are Adaptable Menu Item (the menu
-            item to show) and Menu Info (which provides details of the current
-            cell and cell selection).
+            The 2 arguments to the function are <i>AdaptableMenuItem</i> (the
+            menu item to show) and <i>MenuContext</i> (which provides details of
+            the current cell and cell selection).
           </p>
         </div>
       }

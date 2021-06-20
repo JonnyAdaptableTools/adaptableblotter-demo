@@ -70,7 +70,22 @@ export default async (columnDefs: any[], rowData: any[]) => {
             adaptableApi.dashboardApi.floatDashboard();
           },
           shouldRender: (menuContext: MenuContext) => {
-            return menuContext.adaptableColumn.Sortable;
+            return menuContext.adaptableColumn?.Sortable;
+          },
+        },
+        {
+          label: (menuContext: MenuContext) => {
+            return menuContext.rowNode.expanded
+              ? 'Close Group'
+              : 'Expand Group';
+          },
+          onClick: (menuContext: MenuContext) => {
+            if (menuContext.rowNode.isExpandable()) {
+              menuContext.rowNode.setExpanded(!menuContext.rowNode.expanded);
+            }
+          },
+          shouldRender: (menuContext: MenuContext) => {
+            return menuContext.isGroupedNode === true;
           },
         },
         {
