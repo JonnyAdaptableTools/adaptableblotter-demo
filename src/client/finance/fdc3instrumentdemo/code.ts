@@ -8,10 +8,10 @@ import { GridOptions } from '@ag-grid-community/all-modules';
 import {
   AdaptableOptions,
   AdaptableApi,
+  InstrumentContext,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 import finance from '@adaptabletools/adaptable-plugin-finance';
-import { InstrumentContext } from '@adaptabletools/adaptable-plugin-finance/src/FDC3Types';
 
 var adaptableApi: AdaptableApi;
 
@@ -46,7 +46,10 @@ export default async (columnDefs: any[], rowData: any[]) => {
   adaptableApi.eventApi.on(
     'BroadcastInstrument',
     (context: InstrumentContext) => {
-      console.log(context);
+      const div = document.getElementById('outputDiv');
+      if (div) {
+        div.innerHTML = JSON.stringify(context);
+      }
     }
   );
 
