@@ -41,9 +41,13 @@ export default () => {
           </p>
           <p>
             In this example we have used Adaptable Ready to set the Quick Search
-            (through AdaptableAPI) and also to hook up to the ag-grid Selection
-            Changed event (logging to console).
+            Text (through Quick Search section of AdaptableAPI).{' '}
           </p>
+          <p>
+            We also use it to hook up to the ag-grid Selection Changed event
+            (logging the output below).
+          </p>
+          <div id="outputDiv" />{' '}
         </div>
       }
       helpResources={

@@ -17,11 +17,11 @@ export default () => {
             edit etc. is auditable by AdapTable and available for you to listen
             to and review - perfect for Support Teams or for data playback.
           </p>
-
           <p>
-            Open the console in Dev Tools to see the messages as they come
-            through - note that we have mimiced ticking data.
-          </p>
+            Open the console in Dev Tools to see all the messages as they come
+            through - and we have printed the name of the Action below
+          </p>{' '}
+          <div id="outputDiv" />{' '}
         </div>
       }
       helpResources={

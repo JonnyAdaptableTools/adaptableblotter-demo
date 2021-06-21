@@ -57,10 +57,8 @@ export default async (columnDefs: any[], rowData: any[]) => {
   adaptableApi.eventApi.on(
     'SelectionChanged',
     (selectionChangedInfo: SelectionChangedInfo) => {
-      console.log(
-        'Row Selection Has Changed',
-        selectionChangedInfo.selectedRowInfo
-      );
+      console.log('Row Info Selection', selectionChangedInfo.selectedRowInfo);
+      console.log('Cell Info Selection', selectionChangedInfo.selectedCellInfo);
     }
   );
 

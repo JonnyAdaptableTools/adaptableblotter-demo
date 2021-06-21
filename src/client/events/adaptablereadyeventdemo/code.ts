@@ -49,7 +49,10 @@ export default async (columnDefs: any[], rowData: any[]) => {
       const gridOptions: GridOptions = adaptableReadyInfo.vendorGrid;
       gridOptions.onSelectionChanged = (event: SelectionChangedEvent) => {
         var rowCount = event.api.getSelectedNodes().length;
-        console.log('selection changed, ' + rowCount + ' rows selected');
+        const div = document.getElementById('outputDiv');
+        if (div) {
+          div.innerHTML = 'Selection changed: ' + rowCount + ' rows selected';
+        }
       };
     }
   );

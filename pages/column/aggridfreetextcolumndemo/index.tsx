@@ -47,8 +47,7 @@ export default () => {
                 <b>LastSpoken</b>: of type <i>Date</i> (see how a Date Picker
                 appears when you edit the Column)
               </li>
-            </ul>{' '}
-            named
+            </ul>
           </p>
         </div>
       }

@@ -39,6 +39,10 @@ export default async (columnDefs: any[], rowData: any[]) => {
     'AdaptableStateChanged',
     (stateChangedInfo: AdaptableStateChangedInfo) => {
       console.log(stateChangedInfo);
+      const div = document.getElementById('outputDiv');
+      if (div) {
+        div.innerHTML = 'Action Name: ' + stateChangedInfo.actionName;
+      }
     }
   );
 

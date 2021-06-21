@@ -26,7 +26,7 @@ const demoConfig: PredefinedConfig = {
       {
         Name: 'Custom',
         Title: 'Custom',
-        CustomToolbarButtonLabels: ['Edit First Row', 'Delete Last Row'],
+        CustomToolbarButtonLabels: ['Edit First Row Price', 'Delete Last Row'],
       },
     ],
   },
@@ -46,6 +46,13 @@ const columnSchema: ColDef[] = [
     filter: true,
     editable: true,
     type: 'abColDefString',
+  },
+  {
+    headerName: 'Price',
+    field: 'price',
+    filter: true,
+    editable: true,
+    type: 'abColDefNumber',
   },
 ];
 
@@ -86,13 +93,13 @@ export default async () => {
     dashboardOptions: {
       customToolbarButtons: [
         {
-          label: 'Edit First Row',
+          label: 'Edit First Row Price',
           onClick: () => {
             // get first row
             let firstRow: any = rowdata[0];
 
-            // change model value in first row
-            firstRow['model'] = 'New Value';
+            // change price value in first row
+            firstRow['price'] = Math.floor(Math.random() * 100000) + 1;
 
             // update Adaptable using Grid Api
             adaptableApi.gridApi.updateGridData([firstRow]);
