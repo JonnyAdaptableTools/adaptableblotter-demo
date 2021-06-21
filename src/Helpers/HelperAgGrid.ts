@@ -558,9 +558,7 @@ export class HelperAgGrid {
       editable: false,
       filter: true,
       floatingFilter: true,
-      cellClass: 'bool-cell',
-      cellRenderer: (params: any) =>
-        `<input disabled type='checkbox' ${params.value ? 'checked' : ''} />`,
+
       type: 'abColDefBoolean',
     });
 
@@ -1331,13 +1329,10 @@ export class HelperAgGrid {
     return {
       headerName: 'Is Valid',
       field: 'IsValid',
-      editable: false,
+      editable: true,
       filter: true,
       floatingFilter: true,
       resizable: true,
-      cellClass: 'bool-cell',
-      cellRenderer: (params: any) =>
-        `<input disabled type='checkbox' ${params.value ? 'checked' : ''} />`,
       type: 'abColDefBoolean',
     };
   }

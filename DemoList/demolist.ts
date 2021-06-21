@@ -221,6 +221,11 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'Show numeric columns as a bar, that is filled according to the cell value as a %.',
           },
+          {
+            Name: 'Checkbox Column',
+            Link: '/formatcolumn/aggridcheckboxcolumndemo',
+            Description: 'Display Boolean columns as a Checkbox',
+          },
         ],
       },
       {
