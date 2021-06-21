@@ -473,8 +473,8 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Alerts can be triggered based on given data set - enables Limits watching',
           },
           {
-            Name: 'Stop Edit Alerts',
-            Link: '/alertsmessages/aggridpreventeditalertsdemo',
+            Name: 'Validation Alerts',
+            Link: '/alertsmessages/aggridvalidationalertsdemo',
             Description:
               'Create rules to prevent (or show warnings) when particular cell edits take place. These will run on the client.',
           },

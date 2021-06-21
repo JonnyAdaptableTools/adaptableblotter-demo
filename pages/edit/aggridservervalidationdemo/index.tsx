@@ -27,7 +27,7 @@ export default () => {
           </p>
           <p>
             <b>Note:</b>{' '}
-            <a href="../alertsmessages/aggridpreventeditalertsdemo">
+            <a href="../alertsmessages/aggridvalidationalertsdemo">
               Prevent Edit Alerts
             </a>{' '}
             takes precedence: we have also created an Alert Definition that an
