@@ -22,16 +22,26 @@ export default () => {
             </a>{' '}
             can be individually styled, and contains 2 JavaScript functions
             (povided at design-time) which AdapTable will invoke when required:
+            <ul>
+              <li>
+                <b>onClick</b> (mandatory): What should happen when the Button
+                is clicked
+              </li>
+              <li>
+                <b>shouldRender</b>: Whether or not the Button should display
+              </li>
+            </ul>
+            A button also contains 2 properties that can either be supplied
+            either as a value or via a provided JavaScript function:
+            <ul>
+              <li>
+                <b>label</b>: what the button will show
+              </li>
+              <li>
+                <b>buttonStyle</b>: how the button appears
+              </li>
+            </ul>{' '}
           </p>
-          <ul>
-            <li>
-              <b>onClick</b> (mandatory): What should happen when the Button is
-              clicked
-            </li>
-            <li>
-              <b>shouldRender</b>: Whether or not the Button should display
-            </li>
-          </ul>
           <p>
             In this example we created 4 Action Columns:
             <ul>
@@ -44,23 +54,35 @@ export default () => {
                 ).
               </li>
               <li>
-                <b>Multiply</b>: doubles the <i>Item Cost</i> column value if
-                Employee is 'Robert King' or 'Janet Leverling'; otherwise it
-                trebles it
-                <br />
-                (We also provide a<i>shouldRender</i> Predicate implementation
-                to say the button shouldn't appear if Employee is 'Margaret
-                Peacock')
-              </li>
-              <li>
                 <b>Action</b>: which renders a <b>Delete Row</b> and does
                 exactly that.
+              </li>{' '}
+              <li>
+                <b>Multiply</b>: updates the value of the <i>Item Cost</i>{' '}
+                column using a number of functions:
+                <ul>
+                  <li>
+                    label: either 'Double' or 'Treble' depending on the Employee
+                  </li>
+                  <li>
+                    buttonStyle: either green or blue depending on the Employee
+                    (using same logic as Label)
+                  </li>
+                  <li>
+                    onClick: doubles or trebles the cell value depending on the
+                    Employee (using the same logic as Label)
+                  </li>
+                  <li>
+                    shouldRender: only displays the button if the cell value is
+                    not 'Margaret Peacock'
+                  </li>
+                </ul>{' '}
               </li>
             </ul>
           </p>
           <p>
-            Note: the delete row and all the cell updates were performed by
-            using various functions in the{' '}
+            Note: the delete row and all the cell updates are performed by using
+            various functions available in the{' '}
             <a
               href="https://docs.adaptabletools.com/docs/adaptable-api/grid-api"
               target="_blank"

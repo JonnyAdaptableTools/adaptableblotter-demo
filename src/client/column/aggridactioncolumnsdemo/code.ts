@@ -62,17 +62,32 @@ export default async (columnDefs: any[], rowData: any[]) => {
         {
           columnId: 'Multiply',
           actionColumnButton: {
-            label: 'Click',
+            label: (
+              button: AdaptableButton,
+              context: ActionColumnButtonContext
+            ) => {
+              return isSpecialEmployee(context) ? 'Double' : 'Treble';
+            },
+            buttonStyle: (
+              button: AdaptableButton,
+              context: ActionColumnButtonContext
+            ) => {
+              return isSpecialEmployee(context)
+                ? {
+                    variant: 'raised',
+                    tone: 'accent',
+                  }
+                : {
+                    variant: 'raised',
+                    tone: 'success',
+                  };
+            },
             onClick: (
               button: AdaptableButton,
               context: ActionColumnButtonContext
             ) => {
               let rowData: any = context.rowNode?.data;
-              let multiplier: number =
-                rowData.Employee == 'Robert King' ||
-                rowData.Employee == 'Janet Leverling'
-                  ? 2
-                  : 3;
+              let multiplier: number = isSpecialEmployee(context) ? 2 : 3;
               let newItemCost = rowData.ItemCost * multiplier;
               newItemCost = Math.round(newItemCost * 100) / 100;
               adaptableApi.gridApi.setCellValue(
@@ -87,10 +102,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
               context: ActionColumnButtonContext
             ) => {
               return context.rowNode?.data?.Employee != 'Margaret Peacock';
-            },
-            buttonStyle: {
-              variant: 'raised',
-              tone: 'accent',
             },
           },
         },
@@ -167,3 +178,12 @@ export default async (columnDefs: any[], rowData: any[]) => {
 
   return { adaptableOptions, adaptableApi };
 };
+
+export function isSpecialEmployee(context: ActionColumnButtonContext): boolean {
+  let rowData: any = context.rowNode?.data;
+  return (
+    rowData.Employee == 'Robert King' ||
+    rowData.Employee == 'Janet Leverling' ||
+    rowData.Employee == 'Andrew Fuller'
+  );
+}
