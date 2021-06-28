@@ -503,6 +503,12 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description: 'You can manage how Toast Notifications will work.',
           },
           {
+            Name: 'Custom Actions',
+            Link: '/alertsmessages/aggridcustomactionsdemo',
+            Description:
+              'Provide custom actions to be undertaken when a Button in an Alert Notification is clicked',
+          },
+          {
             Name: 'System Status',
             Link: '/alertsmessages/aggridsystemstatusdemo',
             Description:

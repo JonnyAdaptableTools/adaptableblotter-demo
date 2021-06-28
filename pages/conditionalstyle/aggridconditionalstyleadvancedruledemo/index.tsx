@@ -13,7 +13,7 @@ export default () => {
           <p>
             For more complicated Conditional Styles there is the option to use a{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/common-objects/common-objects-query"
+              href="https://docs.adaptabletools.com/docs/adaptable-parser/query"
               target="_blank"
             >
               Query
@@ -67,7 +67,7 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/common-objects/common-objects-query"
+            href="https://docs.adaptabletools.com/docs/adaptable-parser/query"
             target="_blank"
           >
             Expression

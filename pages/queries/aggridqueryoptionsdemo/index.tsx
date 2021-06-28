@@ -16,7 +16,7 @@ export default () => {
             However sometimes users want to <b>limit</b> either the Expression
             Functions available (of which there are{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/common-objects/common-objects-query/#appendix--expression-functions"
+              href="https://docs.adaptabletools.com/docs/adaptable-parser/query/#appendix--expression-functions"
               target="_blank"
             >
               very many
@@ -98,7 +98,7 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/common-objects/common-objects-query"
+            href="https://docs.adaptabletools.com/docs/adaptable-parser/query"
             target="_blank"
           >
             Adaptable Expression

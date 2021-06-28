@@ -62,7 +62,7 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/common-objects/common-objects-query"
+            href="https://docs.adaptabletools.com/docs/adaptable-parser/query"
             target="_blank"
           >
             Adaptable Expression

@@ -86,14 +86,14 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/common-objects/common-objects-predicate"
+            href="https://docs.adaptabletools.com/docs/adaptable-parser/predicate"
             target="_blank"
           >
             Predicate
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/common-objects/common-objects-query"
+            href="https://docs.adaptabletools.com/docs/adaptable-parser/query"
             target="_blank"
           >
             Expression

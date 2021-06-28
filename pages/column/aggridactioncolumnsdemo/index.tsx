@@ -15,7 +15,7 @@ export default () => {
           <p>
             Each{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/common-objects/common-objects-button"
+              href="https://docs.adaptabletools.com/docs/user-interface/adaptable-button"
               target="_blank"
             >
               AdapTable Button

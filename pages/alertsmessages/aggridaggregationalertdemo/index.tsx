@@ -15,7 +15,7 @@ export default () => {
           <p>
             An{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/common-objects/common-objects-query#aggregatation-expressions"
+              href="https://docs.adaptabletools.com/docs/adaptable-parser/query#aggregatation-expressions"
               target="_blank"
             >
               Aggregation Query
@@ -56,7 +56,7 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/common-objects/common-objects-query#aggregatation-expressions"
+            href="https://docs.adaptabletools.com/docs/adaptable-parser/query#aggregatation-expressions"
             target="_blank"
           >
             Aggregation Expressions

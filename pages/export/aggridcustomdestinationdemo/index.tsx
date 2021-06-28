@@ -38,7 +38,7 @@ export default () => {
           <p>
             AdapTable will then automatically display a{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/common-objects/common-objects-form"
+              href="https://docs.adaptabletools.com/docs/user-interface/adaptable-form"
               target="_blank"
             >
               dynamic form
@@ -89,7 +89,7 @@ export default () => {
           </a>
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/common-objects/common-objects-form"
+            href="https://docs.adaptabletools.com/docs/user-interface/adaptable-form"
             target="_blank"
           >
             Adaptable Form

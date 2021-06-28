@@ -21,7 +21,7 @@ export default () => {
           <p>
             A Calculated Column contains a{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/common-objects/common-objects-query#scalar-expressions"
+              href="https://docs.adaptabletools.com/docs/adaptable-parser/query#scalar-expressions"
               target="_blank"
             >
               Scalar Expression
@@ -85,7 +85,7 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/common-objects/common-objects-query"
+            href="https://docs.adaptabletools.com/docs/adaptable-parser/query"
             target="_blank"
           >
             Adaptable Expression

@@ -15,7 +15,7 @@ export default () => {
           <p>
             An{' '}
             <a
-              href="https://docs.adaptabletools.com/docs/common-objects/common-objects-query#observable-expressions"
+              href="https://docs.adaptabletools.com/docs/adaptable-parser/query#observable-expressions"
               target="_blank"
             >
               Observable Query
@@ -98,7 +98,7 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/common-objects/common-objects-query/#observable-expressions"
+            href="https://docs.adaptabletools.com/docs/adaptable-parser/query/#observable-expressions"
             target="_blank"
           >
             Observable Expressions

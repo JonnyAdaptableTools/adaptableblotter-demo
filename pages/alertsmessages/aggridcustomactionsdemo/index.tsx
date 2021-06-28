@@ -4,8 +4,8 @@ import DynamicDemoPage from '../../../src/Helpers/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/alerts/aggridnotificationsdemo')}
-      pageTitle={'Notifications Demo'}
+      demo={import('../../../src/client/alerts/aggridcustomactionsdemo')}
+      pageTitle={'Custom Actions Demo'}
       description={
         <div>
           <p>
@@ -17,32 +17,6 @@ export default () => {
               Alert Options
             </a>{' '}
             to control how the Toast-style Notification will look.
-          </p>
-          <p>
-            In this demo we have set up the Notifications with these properties:
-            <ul>
-              <li>
-                <b>position</b>: BottomRight
-              </li>
-              <li>
-                <b>duration</b>: 10000
-              </li>
-              <li>
-                <b>showProgressBar</b>: true
-              </li>
-              <li>
-                <b>closeWhenClicked</b>: true
-              </li>
-              <li>
-                <b>pauseWhenHovering</b>:true
-              </li>
-              <li>
-                <b>isDraggable</b>: false
-              </li>
-              <li>
-                <b>transition</b>: Flip
-              </li>
-            </ul>
           </p>
         </div>
       }
