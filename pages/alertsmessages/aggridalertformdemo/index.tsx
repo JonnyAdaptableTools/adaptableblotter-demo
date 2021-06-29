@@ -4,20 +4,11 @@ import DynamicDemoPage from '../../../src/Helpers/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/alerts/aggridcustomactionsdemo')}
-      pageTitle={'Custom Actions Demo'}
+      demo={import('../../../src/client/alerts/aggridalertformdemo')}
+      pageTitle={'Alert Form Demo'}
       description={
         <div>
-          <p>
-            There are many options provided in{' '}
-            <a
-              href="https://docs.adaptabletools.com/docs/adaptable-options/alert-options"
-              target="_blank"
-            >
-              Alert Options
-            </a>{' '}
-            to control how the Toast-style Notification will look.
-          </p>
+          <p>To Do </p>
         </div>
       }
       helpResources={
@@ -28,13 +19,6 @@ export default () => {
             target="_blank"
           >
             Alert Module
-          </a>{' '}
-          |{' '}
-          <a
-            href="https://docs.adaptabletools.com/docs/adaptable-parser/query"
-            target="_blank"
-          >
-            Expressions
           </a>{' '}
           |{' '}
           <a

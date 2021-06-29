@@ -7,13 +7,11 @@ import { HelperAgGrid } from '../../../Helpers/HelperAgGrid';
 
 import init from './code';
 import { GridReadyEvent } from '@ag-grid-community/all-modules';
-import { TickingDataHelper } from '../../../Helpers/TickingDataHelper';
 const code = raw('./code.ts');
 
 export default async () => {
   let helperAgGrid = new HelperAgGrid();
   helperAgGrid.setUpAgGridLicence();
-  let tickingDataHelper = new TickingDataHelper();
   let rowData = JSON.parse(JSON.stringify(json));
   helperAgGrid.convertExcelData(rowData);
   const columndefs = helperAgGrid.getFlashingCellColumnSchema();
@@ -35,9 +33,7 @@ export default async () => {
   };
 
   return {
-    unload: () => {
-      tickingDataHelper.turnOffTicking();
-    },
+    unload: () => {},
     code,
   };
 };

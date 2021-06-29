@@ -4,11 +4,7 @@ import '@ag-grid-community/all-modules/dist/styles/ag-grid.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css';
 import '@ag-grid-community/all-modules/dist/styles/ag-theme-balham-dark.css';
 import Adaptable from '@adaptabletools/adaptable/agGrid';
-import {
-  GridOptions,
-  RowNode,
-  TestHeadless,
-} from '@ag-grid-community/all-modules';
+import { GridOptions } from '@ag-grid-community/all-modules';
 import {
   AdaptableOptions,
   PredefinedConfig,
@@ -22,7 +18,6 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    Revision: Date.now(),
     Tabs: [
       {
         Name: 'Toolbars',
@@ -41,7 +36,6 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   Alert: {
-    Revision: Date.now(),
     FlashingAlertDefinitions: [
       {
         Scope: {
@@ -69,24 +63,7 @@ const demoConfig: PredefinedConfig = {
         AlertProperties: {
           DisplayNotification: true,
         },
-        AlertForm: {
-          buttons: [
-            {
-              label: (button: AdaptableButton, context: AlertButtonContext) => {
-                console.log('context', context);
-                return context.alert.dataChangedInfo?.rowData['OrderCost'] > 300
-                  ? 'Assign to Robert'
-                  : 'Assign Paul';
-              },
-
-              action: 'reassignEmployee',
-              buttonStyle: {
-                tone: 'info',
-                variant: 'raised',
-              },
-            },
-          ],
-        },
+        AlertForm: 'reassignEmployee',
       },
     ],
   },
@@ -108,28 +85,59 @@ export default async (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: 'Demo User',
-    adaptableId: 'Custom Actions Demo',
+    adaptableId: 'Alert Form Demo',
     alertOptions: {
       duration: 10000,
       showProgressBar: true,
       closeWhenClicked: true,
       pauseWhenHovering: true,
-      actionHandlers: [
+      alertForms: [
         {
           name: 'reassignEmployee',
-          handler: (btn: AdaptableButton, context: AlertButtonContext) => {
-            const newEmployee: string =
-              context.alert.dataChangedInfo?.rowData['OrderCost'] > 300
-                ? 'Robert King'
-                : 'Paul Andrews';
-            // in real life you would do so something like
-            // employeeService.changeOwner(.....)
-            adaptableApi.gridApi.setCellValue(
-              'Employee',
-              newEmployee,
-              context.alert.dataChangedInfo?.primaryKeyValue,
-              true
-            );
+          form: {
+            buttons: [
+              {
+                label: (
+                  button: AdaptableButton,
+                  context: AlertButtonContext
+                ) => {
+                  console.log('label context', context.alert.dataChangedInfo);
+                  return context.alert.dataChangedInfo?.rowData['OrderId'];
+                  //  return context.alert.dataChangedInfo?.rowData['OrderCost'] >
+                  //    300
+                  //    ? 'Assign to Robert'
+                  //    : 'Assign Paul';
+                },
+                buttonStyle: (
+                  btn: AdaptableButton,
+                  context: AlertButtonContext
+                ) => {
+                  console.log(
+                    'button style context',
+                    context.alert.dataChangedInfo
+                  );
+                  return { tone: 'info', variant: 'raised' };
+                },
+                onClick: (
+                  btn: AdaptableButton,
+                  context: AlertButtonContext
+                ) => {
+                  console.log('click context', context.alert.dataChangedInfo);
+                  const newEmployee: string =
+                    context.alert.dataChangedInfo?.rowData['OrderCost'] > 300
+                      ? 'Robert King'
+                      : 'Paul Andrews';
+                  // in real life you would do so something like
+                  // employeeService.changeOwner(.....)
+                  adaptableApi.gridApi.setCellValue(
+                    'Employee',
+                    newEmployee,
+                    context.alert.dataChangedInfo?.primaryKeyValue,
+                    true
+                  );
+                },
+              },
+            ],
           },
         },
       ],

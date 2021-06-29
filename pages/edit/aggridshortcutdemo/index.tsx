@@ -10,21 +10,24 @@ export default () => {
         <div>
           <p>
             Use Shortcuts to avoid fat finger issues and speed up data entry for
-            numeric and date columns.
+            numeric columns.
           </p>
           <p>
-            Numeric columns perform an operation. e.g. with a shortcut of 'M'
-            which multiplies by a million, then typing 3M will emit 3,000,000.
-            For dates the current value is replaced with a new date value.
+            A Shortcut performs a mathematical operation on set of numeric
+            columns which match a given Scope.{' '}
+          </p>
+          <p>
+            There are 4 operations available: <b>Addition</b>,{' '}
+            <b>Subtraction</b>, <b>Multiplication</b> and <b>Division</b>
           </p>
           <p>In this example we created 2 Shortcuts:</p>
           <ul>
             <li>
-              a numeric Shortcut where 'K' multiplies numeric cells by 1,000
+              On <b>all numeric</b> columns where 'K' multiplies the cell value
+              by 1,000
             </li>
             <li>
-              a Date Shortcut where 'N' uses the System Filter of 'Next Working
-              Day' to replace the cell contents appropriately.
+              On the <b>Item Count</b> column where 'A' adds 5 to the cell value
             </li>
           </ul>
         </div>

@@ -485,6 +485,7 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'Create an Alert which provides users with the opportunity to provide a different, validated value when an intiial edit fails',
           },
+
           {
             Name: 'Flashing Alerts',
             Link: '/alertsmessages/aggridflashingalertsdemo',
@@ -502,12 +503,14 @@ export function getDemoPageStructure(): DemoPageStructure {
             Link: '/alertsmessages/aggridnotificationsdemo',
             Description: 'You can manage how Toast Notifications will work.',
           },
+          /*
           {
-            Name: 'Custom Actions',
-            Link: '/alertsmessages/aggridcustomactionsdemo',
+            Name: 'Alert Form',
+            Link: '/alertsmessages/aggridalertformdemo',
             Description:
-              'Provide custom actions to be undertaken when a Button in an Alert Notification is clicked',
+              'Provide a sophisticated form to show in the Notification when an Alert is triggered',
           },
+          */
           {
             Name: 'System Status',
             Link: '/alertsmessages/aggridsystemstatusdemo',

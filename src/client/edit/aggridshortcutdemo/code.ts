@@ -18,14 +18,46 @@ const demoConfig: PredefinedConfig = {
   Shortcut: {
     Shortcuts: [
       {
+        Scope: { DataTypes: ['Number'] },
         ShortcutKey: 'K',
         ShortcutOperation: 'Multiply',
-        ShortcutValue: '1000',
+        ShortcutValue: 1000,
+      },
+      {
+        Scope: { ColumnIds: ['ItemCount'] },
+        ShortcutKey: 'A',
+        ShortcutOperation: 'Add',
+        ShortcutValue: 5,
       },
     ],
   },
   Dashboard: {
     VisibleButtons: ['Shortcut'],
+    Tabs: [
+      {
+        Name: 'Shortcut',
+        Toolbars: ['SmartEdit'],
+      },
+    ],
+  },
+  Layout: {
+    CurrentLayout: 'Simple Layout',
+    Layouts: [
+      {
+        Name: 'Simple Layout',
+        Columns: [
+          'OrderId',
+          'ShipName',
+          'ItemCost',
+          'ItemCount',
+          'ContactName',
+          'InvoicedCost',
+          'ChangeLastOrder',
+          'OrderCost',
+          'PackageCost',
+        ],
+      },
+    ],
   },
 } as PredefinedConfig;
 

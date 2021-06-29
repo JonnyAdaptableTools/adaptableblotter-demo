@@ -55,7 +55,7 @@ const demoConfig: PredefinedConfig = {
             {
               label: 'Overwrite',
               validate: '[ItemCost] >0 AND [ItemCost] <= 100',
-              action: ['overwrite'],
+              onClick: ['overwrite'],
               buttonStyle: {
                 tone: 'warning',
                 variant: 'outlined',
@@ -63,7 +63,7 @@ const demoConfig: PredefinedConfig = {
             },
             {
               label: 'Undo',
-              action: ['undo'],
+              onClick: ['undo'],
               buttonStyle: {
                 tone: 'neutral',
                 variant: 'outlined',
