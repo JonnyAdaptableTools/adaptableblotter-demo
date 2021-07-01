@@ -281,6 +281,12 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Use CSS to control how AdapTable wizards and toolbars appear.',
           },
           {
+            Name: 'Date Picker',
+            Link: '/theme/aggriddatepickerdemo',
+            Description:
+              'Theme (and configure) the Date Picker to meet your precise styling requirements',
+          },
+          {
             Name: 'Alpine Theme',
             Link: '/theme/aggridalpinethemedemo',
             Description:

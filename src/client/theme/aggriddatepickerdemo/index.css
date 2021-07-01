@@ -1,0 +1,10 @@
+html.datepicker-css-rules {
+  --ab-cmp-datepicker__background: #c3e7fd;
+  --ab-cmp-datepicker__selected-color: #654321;
+  --ab-cmp-datepicker__selected-text-color: #ffffe0;
+  --ab-cmp-datepicker__selected-border-radius: 5%;
+  --ab-cmp-datepicker__hover-color: #b0b3b8;
+  --ab-cmp-datepicker__font-family: 'Verdana';
+  --ab-cmp-datepicker__border: 3px solid #7c5295;
+  --ab-cmp-datepicker__cell-size: 35px;
+}

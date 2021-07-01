@@ -8,12 +8,9 @@ export default () => {
       <p>
         <h4>OpenFin</h4>
       </p>
-      <div style={{ background: 'lightgray', padding: '20px', margin: '10px' }}>
+      <div style={{ background: 'lightgray', padding: '5px', margin: '5px' }}>
         <h3>
-          <a
-            href="https://us02web.zoom.us/rec/share/2rSh-BJQNtTRclh9FEilFZAVZv0VUUl58pElImiPXPzTJJYykslVA1WFf5MqxMv-.4K1_UC74tsPj9qG4"
-            target="_blank"
-          >
+          <a href="https://www.youtube.com/watch?v=bQHVDyw2UZ8" target="_blank">
             Watch the AdapTable / OpenFin Webinar
           </a>{' '}
           which showcased the many integrations between these 2 leading products
