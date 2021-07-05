@@ -11,8 +11,15 @@ export default () => {
       description={
         <div>
           <p>
-            The Dashboard includes an optional <b>CustomButtons</b> collection
-            (provided in Dashboard Options).{' '}
+            The Dashboard includes an optional <b>customDashboardButtons</b>{' '}
+            collection (provided in{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/adaptable-options/dashboard-options"
+              target="_blank"
+            >
+              Dashboard Options
+            </a>{' '}
+            ).{' '}
           </p>
           <p>
             This enables you to place your own buttons next to any{' '}

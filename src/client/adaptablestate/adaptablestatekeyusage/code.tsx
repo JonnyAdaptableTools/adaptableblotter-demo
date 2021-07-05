@@ -243,7 +243,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
       },
     },
     dashboardOptions: {
-      dashboardButtons: [
+      customDashboardButtons: [
         {
           label: 'Click to toggle the View ',
           buttonStyle: {

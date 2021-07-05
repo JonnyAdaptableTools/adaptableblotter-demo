@@ -39,7 +39,14 @@ export default () => {
           </p>
           <p>
             Note: You can also include custom buttons in the Dashboard by
-            populating the <b>CustomButtons</b> property - see the{' '}
+            populating the <b>customDashboardButtons</b> property in{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/adaptable-options/dashboard-options"
+              target="_blank"
+            >
+              Dashboard Options
+            </a>{' '}
+            - see the{' '}
             <a href="./aggriddashboardcustombuttonsdemo">Custom Buttons demo</a>{' '}
           </p>
         </div>

@@ -49,7 +49,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
     userName: 'Demo User',
     adaptableId: 'Custom Buttons Demo',
     dashboardOptions: {
-      dashboardButtons: [
+      customDashboardButtons: [
         {
           label: 'Delete Row',
           buttonStyle: {
