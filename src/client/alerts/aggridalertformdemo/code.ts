@@ -101,12 +101,10 @@ export default async (columnDefs: any[], rowData: any[]) => {
                   button: AdaptableButton,
                   context: AlertButtonContext
                 ) => {
-                  console.log('label context', context.alert.dataChangedInfo);
-                  return context.alert.dataChangedInfo?.rowData['OrderId'];
-                  //  return context.alert.dataChangedInfo?.rowData['OrderCost'] >
-                  //    300
-                  //    ? 'Assign to Robert'
-                  //    : 'Assign Paul';
+                  return context.alert.dataChangedInfo?.rowData['OrderCost'] >
+                    300
+                    ? 'Assign to Robert'
+                    : 'Assign to Paul';
                 },
                 buttonStyle: (
                   btn: AdaptableButton,
@@ -122,7 +120,6 @@ export default async (columnDefs: any[], rowData: any[]) => {
                   btn: AdaptableButton,
                   context: AlertButtonContext
                 ) => {
-                  console.log('click context', context.alert.dataChangedInfo);
                   const newEmployee: string =
                     context.alert.dataChangedInfo?.rowData['OrderCost'] > 300
                       ? 'Robert King'

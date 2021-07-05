@@ -16,6 +16,10 @@ export default async () => {
   helperAgGrid.convertExcelData(rowData);
 
   const columndefs = helperAgGrid.getBasicNorthwindColumnSchema();
+  const orderId = columndefs.find(c => c.field == 'OrderId');
+  if (orderId) {
+    orderId.editable = false;
+  }
   const { adaptableOptions, adaptableApi } = await init(columndefs, rowData);
 
   adaptableOptions.vendorGrid.onGridReady = function(

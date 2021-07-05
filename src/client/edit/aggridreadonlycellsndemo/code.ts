@@ -69,8 +69,8 @@ export default async (columnDefs: any[], rowData: any[]) => {
     },
     editOptions: {
       isCellEditable: (gridCell: GridCell, node: any) => {
-        // Rule 1:  No row where Ship Via is Federal Shipping is editable
-        if (node.data['ShipVia'] == 'United Package') {
+        // Rule 1:  Only rows where Ship Via is Federal Shipping are editable
+        if (node.data['ShipVia'] != 'Federal Shipping') {
           return false;
         }
 

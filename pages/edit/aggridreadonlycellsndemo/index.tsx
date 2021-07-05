@@ -30,13 +30,13 @@ export default () => {
             which allows a decision to be made on a cell by cell basis.
           </p>
           <p>
-            In this demo we have provided an implementation which contains 2
+            In this demo we have provided an implementation which contains 4
             rules:
           </p>
           <ul>
             <li>
-              No row where <i>Ship Via</i> is 'Federal Shipping' is editable -
-              this uses the node object provided in the function.
+              Only rows where <i>Ship Via</i> is 'Federal Shipping' are editable
+              - this uses the node object provided in the function.
             </li>
             <li>
               The <i>Item Count</i> column is not editable for cells with a
@@ -46,6 +46,9 @@ export default () => {
             <li>
               The <i>Order Cost, Package Cost, Item Cost</i> columns are not
               editable where <i>Order Chang</i>e is negative
+            </li>
+            <li>
+              The <i>Order Id</i> is never editable
             </li>
           </ul>
           <p>

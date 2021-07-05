@@ -509,14 +509,14 @@ export function getDemoPageStructure(): DemoPageStructure {
             Link: '/alertsmessages/aggridnotificationsdemo',
             Description: 'You can manage how Toast Notifications will work.',
           },
-          /*
+
           {
             Name: 'Alert Form',
             Link: '/alertsmessages/aggridalertformdemo',
             Description:
               'Provide a sophisticated form to show in the Notification when an Alert is triggered',
           },
-          */
+
           {
             Name: 'System Status',
             Link: '/alertsmessages/aggridsystemstatusdemo',
