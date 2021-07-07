@@ -32,7 +32,7 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   Dashboard: {
-    VisibleButtons: ['Shortcut'],
+    ModuleButtons: ['Shortcut'],
     Tabs: [
       {
         Name: 'Shortcut',

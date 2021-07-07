@@ -31,7 +31,7 @@ const getToolbarTitle = () => {
 // Create config for View1 - with some format columns, percent bar and gradient column
 const view1Config: PredefinedConfig = {
   Dashboard: {
-    VisibleButtons: ['Dashboard', 'Layout'],
+    ModuleButtons: ['Dashboard', 'Layout'],
     Tabs: [
       {
         Name: 'Toolbars',
@@ -151,7 +151,7 @@ const view1Config: PredefinedConfig = {
 const view2Config: PredefinedConfig = {
   Dashboard: {
     DashboardTitle: getToolbarTitle(),
-    VisibleButtons: ['Dashboard', 'Layout', 'FormatColumn'],
+    ModuleButtons: ['Dashboard', 'Layout', 'FormatColumn'],
     Tabs: [
       {
         Name: 'Toolbars',

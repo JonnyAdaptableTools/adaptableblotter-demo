@@ -16,7 +16,7 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleButtons: ['Dashboard', 'Query'],
+    ModuleButtons: ['Dashboard', 'Query'],
     Tabs: [
       {
         Name: 'Toolbars',

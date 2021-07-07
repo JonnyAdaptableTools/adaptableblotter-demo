@@ -16,9 +16,10 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleButtons: ['CalculatedColumn'],
+    ModuleButtons: ['CalculatedColumn', 'ConditionalStyle'],
   },
   CalculatedColumn: {
+    Revision: Date.now(),
     CalculatedColumns: [
       {
         Query: {
@@ -32,7 +33,7 @@ const demoConfig: PredefinedConfig = {
           ScalarExpression: '([ItemCost] * [ItemCount])- [PackageCost]',
         },
         ColumnId: 'Profit',
-        FriendlyName: 'profit',
+        FriendlyName: 'Total Profit',
       },
       {
         Query: {
@@ -68,9 +69,10 @@ const demoConfig: PredefinedConfig = {
         },
       },
       {
+        // Note: This Calculated Column references another Calculated Column
         // we will add the Display Format separately
         Query: {
-          ScalarExpression: '[OrderCost]*0.2',
+          ScalarExpression: '[Profit]*0.2',
         },
         ColumnId: 'Tax',
         FriendlyName: 'Tax',
@@ -78,7 +80,20 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   ConditionalStyle: {
+    Revision: Date.now(),
     ConditionalStyles: [
+      {
+        Scope: {
+          All: true,
+        },
+        Style: {
+          ForeColor: '#ffffe0',
+          BackColor: '#a52a2a',
+        },
+        Rule: {
+          BooleanExpression: '[HighCost] > 2000',
+        },
+      },
       {
         Scope: {
           ColumnIds: ['Profit'],
@@ -87,7 +102,9 @@ const demoConfig: PredefinedConfig = {
           ForeColor: '#008000',
         },
         Rule: {
-          BooleanExpression: '[Profit] > 0',
+          Predicate: {
+            PredicateId: 'Positive',
+          },
         },
       },
       {
@@ -98,7 +115,9 @@ const demoConfig: PredefinedConfig = {
           ForeColor: '#ff0000',
         },
         Rule: {
-          BooleanExpression: '[Profit] < 0',
+          Predicate: {
+            PredicateId: 'Negative',
+          },
         },
       },
     ],
@@ -172,8 +191,8 @@ const demoConfig: PredefinedConfig = {
           'ItemCount',
           'HighCost',
           'OrderCost',
-          'Tax',
           'Profit',
+          'Tax',
           'PackageCost',
           'InvoicedCost',
           'ShipDelay',

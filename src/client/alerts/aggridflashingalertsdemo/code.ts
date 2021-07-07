@@ -20,7 +20,7 @@ const predefinedConfig = {
         Toolbars: ['Query', 'QuickSearch', 'Theme'],
       },
     ],
-    VisibleButtons: ['Alert'],
+    ModuleButtons: ['Alert'],
     IsFloating: true,
   },
 

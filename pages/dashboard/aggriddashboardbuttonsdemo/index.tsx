@@ -9,9 +9,9 @@ export default () => {
       description={
         <div>
           <p>
-            The 'VisibleButtons' property of Dashboard Predefined Config allows
-            you to specify which Module buttons are visible in the Dashboard
-            Header.
+            The <b>ModuleButtons</b> property of Dashboard Predefined Config
+            allows you to specify which Module buttons are visible in the
+            Dashboard Header.
           </p>
           <p>
             By default, AdapTable will show the 'SystemStatus', 'GridInfo',

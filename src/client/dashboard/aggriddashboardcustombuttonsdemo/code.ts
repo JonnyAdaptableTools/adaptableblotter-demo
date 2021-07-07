@@ -28,7 +28,7 @@ const demoConfig: PredefinedConfig = {
         Toolbars: ['Layout', 'Export', 'SmartEdit'],
       },
     ],
-    VisibleButtons: ['GridInfo'],
+    ModuleButtons: ['GridInfo'],
   },
 } as PredefinedConfig;
 

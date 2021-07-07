@@ -64,7 +64,7 @@ const demoConfig: PredefinedConfig = {
         Toolbars: ['Query', 'Filter', 'QuickSearch'],
       },
     ],
-    VisibleButtons: ['ConditionalStyle', 'Alert', 'CalculatedColumn'],
+    ModuleButtons: ['ConditionalStyle', 'Alert', 'CalculatedColumn'],
   },
 } as PredefinedConfig;
 

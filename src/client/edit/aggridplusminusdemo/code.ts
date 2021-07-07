@@ -56,7 +56,7 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   Dashboard: {
-    VisibleButtons: ['PlusMinus'],
+    ModuleButtons: ['PlusMinus'],
   },
 } as PredefinedConfig;
 

@@ -16,7 +16,7 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleButtons: ['CustomSort'],
+    ModuleButtons: ['CustomSort'],
   },
   CustomSort: {
     // Provide sorts for Contact Name and ShipVia here

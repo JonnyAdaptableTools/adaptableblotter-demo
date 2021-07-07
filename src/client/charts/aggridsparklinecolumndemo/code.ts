@@ -17,7 +17,7 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleButtons: ['Chart'],
+    ModuleButtons: ['Chart'],
   },
 } as PredefinedConfig;
 

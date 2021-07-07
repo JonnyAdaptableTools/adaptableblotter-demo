@@ -16,7 +16,7 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleButtons: ['Reminder', 'Schedule'],
+    ModuleButtons: ['Reminder', 'Schedule'],
     Tabs: [
       {
         Name: 'Toolbars',

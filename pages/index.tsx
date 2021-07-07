@@ -26,7 +26,7 @@ export default () => {
               >
                 Version 9
               </a>{' '}
-              of AdapTable, which will be officially launched on 5 July
+              of AdapTable, which will be officially launched on 12 July
             </div>
           </h3>
           <h3>

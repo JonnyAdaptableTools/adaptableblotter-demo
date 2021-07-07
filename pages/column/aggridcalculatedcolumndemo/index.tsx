@@ -26,11 +26,8 @@ export default () => {
             >
               Scalar Expression
             </a>
-            , meaning that it can return any single value.
-          </p>
-          <p>
-            Once created, a Calculated Column becomes a 'normal' column in your
-            grid and will update automatically as other values change.
+            , meaning that it can return any single value, and it{' '}
+            <b>will update automatically</b> as other values change.
           </p>
           <p>In this example we have created 6 Calculated Columns: </p>
           <ul>
@@ -59,8 +56,9 @@ export default () => {
               Column Module for better visualisation).
             </li>
             <li>
-              <b>Tax</b> - (a string) which returns the VAT (calculated at 20%)
-              on <i>OrderCost</i> and to which we've added a{' '}
+              <b>Tax</b> - (a number) which returns the VAT (calculated at 20%)
+              on <i>Profit</i> (which is <b>also a Calculated Column!</b>) and
+              to which we've added a{' '}
               <a href="../style/aggridformatcolumndemo">Display Format</a>{' '}
             </li>
           </ul>{' '}
@@ -69,9 +67,27 @@ export default () => {
             or 'Edit Expression' in the Column Header menu.{' '}
           </p>
           <p>
-            They are treated as 'normal' columns so we included them in the
-            layouts we created (and we grouped on 'Comment') and we also styled
-            them (e.g. 'Profit') using Conditional Styles.{' '}
+            Calculated Columns are treated as 'normal' columns and can be
+            referenced in other AdapTable objects. In this demo these Calculated
+            Columns are referenced elsewhere:
+            <ul>
+              <li>
+                <b>Comment</b> in the <i>grouped calc cols</i>layout
+              </li>
+              <li>
+                <b>Profit</b> in 2 Conditional Styles which use Predicates (
+                <i>Positive</i> and <i>Negative</i>){' '}
+              </li>
+              <li>
+                <b>High Cost</b> in a Row-based Conditional Style that uses an
+                Expression
+              </li>
+            </ul>
+          </p>
+          <p>
+            so we included them in the layouts we created (and we grouped on
+            'Comment') and we also styled them (e.g. 'Profit') using Conditional
+            Styles.{' '}
           </p>
         </div>
       }

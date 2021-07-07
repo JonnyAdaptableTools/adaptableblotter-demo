@@ -30,10 +30,9 @@ export default () => {
           <ul>
             <li>
               The 'GridInfo' button in the <a href="../dashboard">Dashboard</a>{' '}
-              - one of the default items in the <b>VisibleButtons</b> property
-              in{' '}
+              - one of the default items in the <b>ModuleButtons</b> property in{' '}
               <a
-                href="https://docs.adaptabletools.com/docs/predefined-config/dashboard-config#visiblebuttons"
+                href="https://docs.adaptabletools.com/docs/user-interface/dashboard#module-buttons"
                 target="_blank"
               >
                 Dashboard Config

@@ -16,7 +16,7 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleButtons: ['TeamSharing', 'ConditionalStyle', 'FormatColumn'],
+    ModuleButtons: ['TeamSharing', 'ConditionalStyle', 'FormatColumn'],
   },
 } as PredefinedConfig;
 

@@ -16,7 +16,7 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    VisibleButtons: ['BulkUpdate', 'SmartEdit', 'Alert', 'Reminder'],
+    ModuleButtons: ['BulkUpdate', 'SmartEdit', 'Alert', 'Reminder'],
   },
 } as PredefinedConfig;
 

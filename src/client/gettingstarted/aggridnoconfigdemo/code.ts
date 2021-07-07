@@ -34,6 +34,14 @@ export default async (columnDefs: any[], rowData: any[]) => {
     exportOptions: {
       exportDateFormat: 'MMMM do yyyy, h:mm:ss a',
     },
+    entitlementOptions: {
+      moduleEntitlements: [
+        {
+          adaptableModule: 'StateManagement',
+          accessLevel: 'ReadOnly',
+        },
+      ],
+    },
     userInterfaceOptions: {
       showAdaptableToolPanel: true,
       useCustomMacLikeScrollbars: true,
