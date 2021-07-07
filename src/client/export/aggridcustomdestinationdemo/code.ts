@@ -80,7 +80,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
             buttons: [
               {
                 label: 'Cancel',
-                validate: true,
+                //  validate: true,
               },
               {
                 label: 'Export',
@@ -88,7 +88,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
                   tone: 'success',
                   variant: 'raised',
                 },
-                autoSubmitForm: true,
+                //  autoSubmitForm: true,
               },
             ],
           },
