@@ -39,7 +39,7 @@ export default () => {
             (as done in this example).
           </p>
           <p>
-            The Dasbhoard can be made visible again by clicking Dashboard / Show
+            The Dashboard can be made visible again by clicking Dashboard / Show
             in the{' '}
             <a href="../../menus/aggridcolumnmenudemo">Column Header Menu</a> or
             via the Dashboard{' '}

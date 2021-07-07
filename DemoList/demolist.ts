@@ -569,7 +569,7 @@ export function getDemoPageStructure(): DemoPageStructure {
             Name: 'Dashboard Visibility',
             Link: '/dashboard/aggriddashboardvisibilitydemo',
             Description:
-              'Select whether the Dasbhoard is visible, minimised (so only a button is shown) or hidden altogether.',
+              'Select whether the Dashboard is visible, minimised (so only a button is shown) or hidden altogether.',
           },
           {
             Name: 'Custom Toolbars',

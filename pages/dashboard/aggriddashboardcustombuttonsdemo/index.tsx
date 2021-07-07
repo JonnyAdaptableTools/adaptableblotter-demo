@@ -70,7 +70,7 @@ export default () => {
             href="https://docs.adaptabletools.com/docs/adaptable-api/dashboard-api"
             target="_blank"
           >
-            Dasbhoard Api
+            Dashboard Api
           </a>{' '}
           |{' '}
           <a href="https://youtu.be/KrahnLFYHjs" target="_blank">

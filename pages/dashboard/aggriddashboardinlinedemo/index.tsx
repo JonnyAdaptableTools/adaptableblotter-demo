@@ -10,7 +10,7 @@ export default () => {
         <div>
           <p>
             By default, AdapTable will show the Dashboard Header when the
-            Dasbhoard is expanded.
+            Dashboard is expanded.
           </p>
           <p>
             However you can change this via the <i>IsInline</i> property in{' '}

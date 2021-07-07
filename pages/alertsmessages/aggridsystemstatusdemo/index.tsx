@@ -50,7 +50,7 @@ export default () => {
           </p>
           <p>
             In this example we set info, warning, success and error messages
-            using Dasbhoard Buttons in a{' '}
+            using Dashboard Buttons in a{' '}
             <a href="../../dashboard/aggriddashboardcustomtoolbarsdemo">
               Custom Toolbar
             </a>{' '}

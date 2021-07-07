@@ -19,7 +19,6 @@ const demoConfig: PredefinedConfig = {
     ModuleButtons: ['CalculatedColumn', 'ConditionalStyle'],
   },
   CalculatedColumn: {
-    Revision: Date.now(),
     CalculatedColumns: [
       {
         Query: {
@@ -80,7 +79,6 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   ConditionalStyle: {
-    Revision: Date.now(),
     ConditionalStyles: [
       {
         Scope: {
@@ -91,7 +89,7 @@ const demoConfig: PredefinedConfig = {
           BackColor: '#a52a2a',
         },
         Rule: {
-          BooleanExpression: '[HighCost] > 2000',
+          BooleanExpression: '[HighCost] > 900',
         },
       },
       {
