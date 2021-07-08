@@ -158,12 +158,12 @@ export default async (columnDefs: any[], rowData: any[]) => {
             buttons: [
               {
                 label: 'Overwrite',
-                validate: (
+                disabled: (
                   button: AdaptableButton,
                   context: AlertButtonContext
                 ) => {
                   const newItemCostValue: any = context.formData?.['ItemCost'];
-                  return newItemCostValue > 0 && newItemCostValue <= 100;
+                  return newItemCostValue < 0 || newItemCostValue > 100;
                 },
                 onClick: (
                   button: AdaptableButton,

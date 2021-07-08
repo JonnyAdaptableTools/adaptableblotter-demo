@@ -10,7 +10,14 @@ export default () => {
         <div>
           <p>
             Alert Notifications in Adaptable can also include Forms - which are
-            created dynamically when required.{' '}
+            provided in{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/predefined-config/alert-config"
+              target="_blank"
+            >
+              Alert Config
+            </a>{' '}
+            and rendered dynamically when required.{' '}
           </p>
           <p>
             This is the same form as used in the Export Module when exporting
@@ -21,7 +28,7 @@ export default () => {
             .
           </p>
           <p>
-            The Form itself is defined in{' '}
+            The Form is defined in{' '}
             <a
               href="https://docs.adaptabletools.com/docs/adaptable-options/alert-options"
               target="_blank"
@@ -34,12 +41,9 @@ export default () => {
               target="_blank"
             >
               Alert Config
-            </a>
-            .
-          </p>
-          <p>
-            This is because Predefined Config can only store strings and not the
-            many JavaScript functions which forms and form buttons can include.
+            </a>{' '}
+            (as Predefined Config only stores strings and not JavaScript
+            functions which forms can include).
           </p>
           <p>
             In this example we have provided an Alert which fires whenever the

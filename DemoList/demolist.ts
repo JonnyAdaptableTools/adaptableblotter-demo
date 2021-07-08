@@ -516,6 +516,12 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'Provide a sophisticated form to show in the Notification when an Alert is triggered',
           },
+          {
+            Name: 'Alert Actions',
+            Link: '/alertsmessages/aggridalertactionsdemo',
+            Description:
+              'Use Alert Actions to configure behaviour when an Alert is triggered',
+          },
 
           {
             Name: 'System Status',
