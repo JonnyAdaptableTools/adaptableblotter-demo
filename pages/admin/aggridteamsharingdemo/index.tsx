@@ -78,6 +78,7 @@ export default () => {
               </li>
             </ul>
           </p>
+          <div className="js-adaptable-config"></div>
         </div>
       }
       helpResources={
