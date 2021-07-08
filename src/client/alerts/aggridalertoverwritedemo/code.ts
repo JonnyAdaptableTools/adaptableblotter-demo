@@ -29,98 +29,20 @@ const demoConfig: PredefinedConfig = {
     AlertDefinitions: [
       {
         Scope: {
-          ColumnIds: ['ItemCost'],
+          ColumnIds: ['ItemCount'],
         },
         MessageType: 'Warning',
         Rule: {
           Predicate: {
             PredicateId: 'GreaterThan',
-            Inputs: [100],
+            Inputs: [30],
           },
         },
         AlertProperties: {
           DisplayNotification: true,
         },
-        // For ItemCost we will reference a form with validation
+        // For ItemCount we will reference a form with validation
         AlertForm: 'Overwrite Form',
-        /*
-          description: 'Please enter a value < 100 or click "Undo" ',
-          fields: [
-            {
-              name: 'ItemCost',
-              label: 'Item Cost',
-              defaultValue: '',
-              fieldType: 'number',
-            },
-          ],
-          buttons: [
-            {
-              label: 'Overwrite',
-              validate: '[ItemCost] >0 AND [ItemCost] <= 100',
-              onClick: ['overwrite'],
-              buttonStyle: {
-                tone: 'warning',
-                variant: 'outlined',
-              },
-            },
-            {
-              label: 'Undo',
-              onClick: ['undo'],
-              buttonStyle: {
-                tone: 'neutral',
-                variant: 'outlined',
-              },
-            },
-          ],
-        },*/
-      },
-      {
-        Scope: {
-          ColumnIds: ['ItemCost'],
-        },
-        MessageType: 'Warning',
-        Rule: {
-          Predicate: {
-            PredicateId: 'GreaterThan',
-            Inputs: [100],
-          },
-        },
-        AlertProperties: {
-          DisplayNotification: true,
-        },
-        // Create a dynamic form with 1 Field (of type number)
-        // Add 2 Buttons: one to Overwrite and one to Undo
-        AlertForm: 'Overwrite Form',
-        /*
-          description: 'Please enter a value < 100 or click "Undo" ',
-          fields: [
-            {
-              name: 'ItemCost',
-              label: 'Item Cost',
-              defaultValue: '',
-              fieldType: 'number',
-            },
-          ],
-          buttons: [
-            {
-              label: 'Overwrite',
-              validate: '[ItemCost] >0 AND [ItemCost] <= 100',
-              onClick: ['overwrite'],
-              buttonStyle: {
-                tone: 'warning',
-                variant: 'outlined',
-              },
-            },
-            {
-              label: 'Undo',
-              onClick: ['undo'],
-              buttonStyle: {
-                tone: 'neutral',
-                variant: 'outlined',
-              },
-            },
-          ],
-        },*/
       },
     ],
   },
@@ -146,11 +68,11 @@ export default async (columnDefs: any[], rowData: any[]) => {
         {
           name: 'Overwrite Form',
           form: {
-            description: 'Please enter a value < 100 or click "Undo" ',
+            description: 'Please enter a value < 30 or click "Undo" ',
             fields: [
               {
-                name: 'ItemCost',
-                label: 'Item Cost',
+                name: 'ItemCount',
+                label: 'Item Count',
                 defaultValue: '',
                 fieldType: 'number',
               },
@@ -162,8 +84,13 @@ export default async (columnDefs: any[], rowData: any[]) => {
                   button: AdaptableButton,
                   context: AlertButtonContext
                 ) => {
-                  const newItemCostValue: any = context.formData?.['ItemCost'];
-                  return newItemCostValue < 0 || newItemCostValue > 100;
+                  const newItemCountValue: any =
+                    context.formData?.['ItemCount'];
+                  return (
+                    !newItemCountValue ||
+                    newItemCountValue < 0 ||
+                    newItemCountValue > 100
+                  );
                 },
                 onClick: (
                   button: AdaptableButton,
@@ -173,7 +100,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
                     context.alert.dataChangedInfo?.columnId;
                   const primaryKeyValue: any =
                     context.alert.dataChangedInfo?.primaryKeyValue;
-                  const newValue: any = context.formData?.['ItemCost'];
+                  const newValue: any = context.formData?.['ItemCount'];
                   if (columnId && primaryKeyValue && newValue) {
                     adaptableApi.gridApi.setCellValue(
                       columnId,

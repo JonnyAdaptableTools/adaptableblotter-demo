@@ -9,8 +9,14 @@ export default () => {
       description={
         <div>
           <p>
-            In AdapTable you can create Alerts where you can override the edited
-            value with a new one.
+            In AdapTable you can create Alerts with an{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/user-interface/adaptable-form"
+              target="_blank"
+            >
+              Adaptable Form
+            </a>{' '}
+            that allows users to override the edited value with a new one.
           </p>
           <p>
             You can also provide validation to ensure the new value itself
@@ -21,12 +27,8 @@ export default () => {
             value is automatically rejected if it breaks the Alert Definition.
           </p>
           <p>
-            The Alert uses the same <b>Dynamic Form</b> template used in Custom
-            Report destinations and the Data Source function.
-          </p>
-          <p>
             In this example we have created a 'Warning' Alert to fire if
-            'ItemCost' is over 100 and provided a form with the following
+            'ItemCount' is over 30 and provided a form with the following
             features:
           </p>
           <ul>
@@ -34,21 +36,22 @@ export default () => {
               A <b>Description</b> to explain why a new value is required
             </li>
             <li>
-              A single field with a label of 'Item Cost', no default value and
+              A single field with a label of 'Item Count', no default value and
               an input type of number
             </li>
             <li>
-              A button labelled 'Overwrite' with a predefined Action of{' '}
-              <b>overwrite</b> styled with a tone of 'warning' and variant of
-              'outlined'
+              A button labelled <b>Overwrite</b> with an <i>onClick</i> handler
+              that calls the Grid Api <code>setCellValue</code> function to set
+              a new value
             </li>
             <li>
-              The button has <b>validation</b> provided which sets whether it is
-              enabled defined as: "[ItemCost] &gt;0 AND [ItemCost] &lt;= 100"
+              The button also has a <i>disabled</i> callback so that it is only
+              enabled if the new Item Count value is between 1 and 30
             </li>
             <li>
-              A second button labelled 'Undo' and with an action of <b>undo</b>{' '}
-              - which will set the cell back to the pre-edited value
+              A second button labelled <b>Undo</b> has an <i>onClick</i> handler
+              that calls the Grid Api <code>undoCellEdit</code> function to set
+              a new value
             </li>
           </ul>{' '}
         </div>
