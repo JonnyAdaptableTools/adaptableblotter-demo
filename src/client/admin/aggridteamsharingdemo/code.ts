@@ -40,40 +40,6 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
-  Query: {
-    NamedQueries: [
-      {
-        Name: 'high-invoice-cost',
-        BooleanExpression: '[InvoicedCost] > 1000',
-      },
-      {
-        Name: 'medium-invoice-cost',
-        BooleanExpression: '[InvoicedCost] >= 500',
-      },
-      {
-        Name: 'low-invoice-cost',
-        BooleanExpression: '[InvoicedCost] < 500',
-      },
-    ],
-  },
-  CalculatedColumn: {
-    CalculatedColumns: [
-      {
-        Query: {
-          ScalarExpression: `QUERY('high-invoice-cost') ? 'High' : QUERY('medium-invoice-cost') ? 'Medium': 'Low'`,
-        },
-        ColumnId: 'InvoicedCostLabel',
-      },
-    ],
-  },
-  FreeTextColumn: {
-    FreeTextColumns: [
-      {
-        ColumnId: 'Additional Notes',
-        DataType: 'String',
-      },
-    ],
-  },
 };
 
 export default async (columnDefs: any[], rowData: any[]) => {
