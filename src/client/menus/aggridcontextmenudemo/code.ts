@@ -69,8 +69,8 @@ export default async (columnDefs: any[], rowData: any[]) => {
           onClick: (menuContext: MenuContext) => {
             adaptableApi.dashboardApi.floatDashboard();
           },
-          shouldRender: (menuContext: MenuContext) => {
-            return menuContext.adaptableColumn?.Sortable;
+          hidden: (menuContext: MenuContext) => {
+            return !menuContext.adaptableColumn?.Sortable;
           },
         },
         {
@@ -84,8 +84,8 @@ export default async (columnDefs: any[], rowData: any[]) => {
               menuContext.rowNode.setExpanded(!menuContext.rowNode.expanded);
             }
           },
-          shouldRender: (menuContext: MenuContext) => {
-            return menuContext.isGroupedNode === true;
+          hidden: (menuContext: MenuContext) => {
+            return menuContext.isGroupedNode !== true;
           },
         },
         {

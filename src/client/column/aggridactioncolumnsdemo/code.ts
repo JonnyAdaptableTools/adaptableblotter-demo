@@ -97,11 +97,11 @@ export default async (columnDefs: any[], rowData: any[]) => {
                 true
               );
             },
-            shouldRender: (
+            hidden: (
               button: AdaptableButton,
               context: ActionColumnButtonContext
             ) => {
-              return context.rowNode?.data?.Employee != 'Margaret Peacock';
+              return context.rowNode?.data?.Employee == 'Margaret Peacock';
             },
           },
         },

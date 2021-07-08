@@ -65,8 +65,8 @@ export default async (columnDefs: any[], rowData: any[]) => {
           onClick: (menuContext: MenuContext) => {
             adaptableApi.dashboardApi.floatDashboard();
           },
-          shouldRender: (menuContext: MenuContext) => {
-            return menuContext.adaptableColumn.Sortable;
+          hidden: (menuContext: MenuContext) => {
+            return !menuContext.adaptableColumn.Sortable;
           },
         },
         {

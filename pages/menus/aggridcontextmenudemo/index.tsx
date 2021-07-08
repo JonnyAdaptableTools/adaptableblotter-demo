@@ -102,9 +102,19 @@ export default () => {
                 href="https://docs.adaptabletools.com/docs/user-interface/context-menu/#menu-item-render"
                 target="_blank"
               >
-                shouldRender
+                hidden
               </a>
               : Whether the Menu Item should appear or not
+            </li>
+            <li>
+              {' '}
+              <a
+                href="https://docs.adaptabletools.com/docs/user-interface/context-menu/#menu-item-label"
+                target="_blank"
+              >
+                disabled
+              </a>
+              : Whether the Menu Item is enabled
             </li>
             <li>
               {' '}

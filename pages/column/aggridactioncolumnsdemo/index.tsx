@@ -20,7 +20,7 @@ export default () => {
             >
               AdapTable Button
             </a>{' '}
-            can be individually styled, and contains 2 JavaScript functions
+            can be individually styled, and contains 3 JavaScript functions
             (povided at design-time) which AdapTable will invoke when required:
             <ul>
               <li>
@@ -28,7 +28,10 @@ export default () => {
                 is clicked
               </li>
               <li>
-                <b>shouldRender</b>: Whether or not the Button should display
+                <b>hidden</b>: Whether or not the Button is visible{' '}
+              </li>
+              <li>
+                <b>disabled</b>: Whether or not the Button is enabled
               </li>
             </ul>
             A button also contains 2 properties that can either be supplied
@@ -73,8 +76,8 @@ export default () => {
                     Employee (using the same logic as Label)
                   </li>
                   <li>
-                    shouldRender: only displays the button if the cell value is
-                    not 'Margaret Peacock'
+                    hidden: only displays the button if the cell value is not
+                    'Margaret Peacock'
                   </li>
                 </ul>{' '}
               </li>
