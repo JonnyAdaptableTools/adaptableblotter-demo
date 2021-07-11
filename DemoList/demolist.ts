@@ -982,6 +982,12 @@ export function getDemoPageStructure(): DemoPageStructure {
             Description:
               'Listens to ALL Adaptable State changes enabling a full Audit of user actions, and data edits',
           },
+          {
+            Name: 'Cells Changed',
+            Link: '/events/adaptablecellchangeddemo',
+            Description:
+              'Fires whenever any cell changes in AdapTable either as a result of a ticking data change or a Cell Edit',
+          },
         ],
       },
 

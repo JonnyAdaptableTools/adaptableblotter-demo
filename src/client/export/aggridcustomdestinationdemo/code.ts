@@ -49,7 +49,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
           name: 'Email',
           form: {
             title: 'Email Settings',
-            description: 'Provide email details ',
+            description: 'Provide email details including a Body ',
             fields: [
               {
                 name: 'address',
@@ -85,36 +85,54 @@ export default async (columnDefs: any[], rowData: any[]) => {
               },
               {
                 label: 'Export',
+
                 buttonStyle: { tone: 'success', variant: 'raised' },
                 onClick: (
                   button: AdaptableButton,
                   context: ExportButtonContext
                 ) => {
-                  // Export data in the context object...
+                  // here you can send via your email client or to an endpoint or whatever you need
+                  // in this example, we will just log the output to the screen
+                  const emailAddress: string = context.formData?.['address'];
+                  const div = document.getElementById('outputDiv');
+                  if (emailAddress && div) {
+                    div.innerHTML =
+                      'Sending to Email Address ("' +
+                      emailAddress +
+                      '"); Report: "' +
+                      context.report.Name +
+                      '"; Columns: ' +
+                      context.reportData.columns.length +
+                      ', Rows: ' +
+                      context.reportData.rows.length;
+                  }
+                },
+                disabled: (
+                  button: AdaptableButton,
+                  context: ExportButtonContext
+                ) => {
+                  return (
+                    context.formData['body'] === null ||
+                    context.formData['body'] === ''
+                  );
                 },
               },
             ],
-          },
-          onExport: (
-            report: Report,
-            reportData: ReportData,
-            customDestinationData?: AdaptableFormData
-          ) => {
-            // here you can send via your email client or to an endpoint or whatever you need
-            // in this example, we will just log the output to the console
-            // note that we include the customdestinationdata which was created in the UI
-            console.log('EMAIL');
-            console.log('report', report);
-            console.log('reportData', reportData);
-            console.log('customDestinationData', customDestinationData);
           },
         },
         {
           name: 'REST Endpoint',
           onExport: (report: Report, reportData: ReportData) => {
-            console.log('EMAIL');
-            console.log('report', report);
-            console.log('reportData', reportData);
+            const div = document.getElementById('outputDiv');
+            if (div) {
+              div.innerHTML =
+                'Sending to REST: Report: "' +
+                report.Name +
+                '"; Columns: ' +
+                reportData.columns.length +
+                ', Rows: ' +
+                reportData.rows.length;
+            }
           },
         },
       ],

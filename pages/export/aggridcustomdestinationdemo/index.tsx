@@ -32,30 +32,21 @@ export default () => {
             </a>
           </p>
           <p>
-            If other information is required from the user you can provide form
-            information through <b>custom field definitions</b>.
-          </p>
-          <p>
-            AdapTable will then automatically display a{' '}
-            <a
-              href="https://docs.adaptabletools.com/docs/user-interface/adaptable-form"
-              target="_blank"
-            >
-              dynamic form
-            </a>{' '}
-            (and provide the results in the accompanying <b>onExport</b>{' '}
-            function.
+            If additional information is required from the user prior to export,
+            you can provide a <b>custom form definition</b>, which AdapTable
+            will automatically display.
           </p>
           <p>In this example we have created 2 Custom Destinations:</p>
           <ul>
             <li>
-              <b>Email</b> - which also contains Form Data and default form
-              values
+              <b>Email</b> - which also contains a Form with 3 controls, default
+              value and validation
             </li>
             <li>
               <b>REST Endpoint</b> - which has no form data
             </li>
-          </ul>
+          </ul>{' '}
+          <div id="outputDiv" />{' '}
         </div>
       }
       helpResources={

@@ -11,9 +11,18 @@ export default () => {
       description={
         <div>
           <p>
-            The Dashboard includes a Custom Toolbars collection to enable users
-            to render their own content, and AdapTable will manage toolbar
-            visibility as part of User State.
+            The Dashboard can be configured to display <b>Custom Toolbars</b>,
+            where users can render their own bespoke content{' '}
+          </p>
+          <p>
+            Custom Toolbars are provided through{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/adaptable-options/dashboard-options"
+              target="_blank"
+            >
+              Dashboard Options
+            </a>{' '}
+            and AdapTable will manage toolbar visibility as part of User State.
           </p>
           <p>
             Each Custom Toolbar contains 2 'Divs', in order to cater for a
@@ -22,7 +31,7 @@ export default () => {
           <ol>
             <li>
               Pre-populate the Toolbar with Adaptable Button definitions. Note
-              that you can styled the buttons individually (as we have done in
+              that you can style the buttons individually (as we have done in
               all 3 custom toolbars), and you can add a custom icon.
             </li>
             <li>
@@ -37,14 +46,14 @@ export default () => {
               event and when the Toolbar becomes visible, render any content.
             </li>
           </ol>{' '}
-          <p>Each Custom Toolbar has 2 optional display properties:</p>
+          <p>Each Custom Toolbar has 3 optional display properties:</p>
           <ul>
             <li>
-              <b>Title</b>: if set, this will display at the bottom of the
+              <b>title</b>: if set, this will display at the bottom of the
               Toolbar
             </li>
             <li>
-              <b>ShowConfigureButton</b>: if set to <i>true</i>, this will
+              <b>showConfigureButton</b>: if set to <i>true</i>, this will
               display a button with a 'wrench' icon' - when the button is
               clicked the{' '}
               <a
@@ -54,6 +63,10 @@ export default () => {
                 CustomToolbarConfigured
               </a>{' '}
               event is fired.
+            </li>
+            <li>
+              <b>showCloseButton</b>: if set to <i>true</i>, this will display a
+              button that closes the Toolbar if clicked.
             </li>
           </ul>
         </div>
