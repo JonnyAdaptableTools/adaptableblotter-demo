@@ -169,7 +169,7 @@ export function getDemoPageStructure(): DemoPageStructure {
           },
           {
             Name: 'ReadOnly Cells',
-            Link: '/edit/aggridreadonlycellsndemo',
+            Link: '/edit/aggridreadonlycellsdemo',
             Description:
               'Choose - at runtime - which cells can be ReadOnly through the provision of custom function.',
           },

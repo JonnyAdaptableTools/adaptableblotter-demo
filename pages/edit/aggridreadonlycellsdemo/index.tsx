@@ -4,7 +4,7 @@ import DynamicDemoPage from '../../../src/Helpers/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/edit/aggridreadonlycellsndemo')}
+      demo={import('../../../src/client/edit/aggridreadonlycellsdemo')}
       pageTitle={'ReadOnly Cells Demo'}
       description={
         <div>
