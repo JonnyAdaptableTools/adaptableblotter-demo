@@ -684,6 +684,24 @@ export function getDemoPageStructure(): DemoPageStructure {
         ],
       },
       {
+        CategoryName: 'Team Sharing',
+        Link: '/teamsharing',
+        Pages: [
+          {
+            Name: 'Snapshot',
+            Link: '/teamsharing/aggridteamsharingsnapshotdemo',
+            Description:
+              'Dynamically share Adaptable Objects you create at run-time with other team members and colleagues.',
+          },
+          {
+            Name: 'Active Share',
+            Link: '/teamsharing/aggridteamsharingactivesharedemo',
+            Description:
+              'Create a Live Share so that any changes made to a Shared Object are immediately available to everyone',
+          },
+        ],
+      },
+      {
         CategoryName: 'Admin',
         Link: '/admin',
         Pages: [
@@ -719,12 +737,6 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Create an AdapTable instance dynamically from a JSON or Excel file that you provide; your AdapTable instance will include the full range of Modules and all the advanced functionality like state management and audit.',
           },
           {
-            Name: 'Team Sharing',
-            Link: '/admin/aggridteamsharingdemo',
-            Description:
-              'Dynamically share Adaptable Objects you create at run-time with other team members and colleagues.',
-          },
-          {
             Name: 'Hot Keys',
             Link: '/admin/aggridhotkeysdemo',
             Description:
@@ -738,6 +750,7 @@ export function getDemoPageStructure(): DemoPageStructure {
           },
         ],
       },
+
       {
         CategoryName: 'Finance',
         Link: '/finance',

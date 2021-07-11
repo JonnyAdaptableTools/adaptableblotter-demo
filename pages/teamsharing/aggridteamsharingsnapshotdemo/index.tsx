@@ -4,13 +4,22 @@ import DynamicDemoPage from '../../../src/Helpers/DynamicDemoPage';
 export default () => {
   return (
     <DynamicDemoPage
-      demo={import('../../../src/client/admin/aggridteamsharingdemo')}
-      pageTitle={'Team Sharing Demo'}
+      demo={import(
+        '../../../src/client/teamsharing/aggridteamsharingsnapshotdemo'
+      )}
+      pageTitle={'Team Sharing Snapshot Demo'}
       description={
         <div>
           <p>
             Team Sharing allows users to share - at run-time - Adaptable Objects
-            between colleagues.
+            between colleagues. It is configued in{' '}
+            <a
+              href="https://docs.adaptabletools.com/docs/adaptable-options/team-sharing-options"
+              target="_blank"
+            >
+              Team Sharing Options
+            </a>
+            .
           </p>
           <p>
             It is designed for use cases where the same, newly-created Adaptable
@@ -18,33 +27,26 @@ export default () => {
             will be required by multiple users.
           </p>
           <p>
-            Team Sharing is based on a based pull-based workflow as the
-            following example demonstrates:
+            If the object being shared references other objects (e.g. a Layout
+            references a Calculated Column which references a Named Query) then
+            all the objects in the tree are shared.
+          </p>{' '}
+          <p>
+            Team Sharing works by a User <b>uploading</b> an object to the Team
+            Share from where it can then be <b>downloaded</b> by colleagues.
           </p>
-          <ol>
-            <li>A User creates a new Layout </li>
+          <p>There are 2 types of Team Sharing:</p>
+          <ul>
             <li>
-              In the Layouts Popup an orange Team Share button will appear in
-              the row for the Layout (if <i>enableTeamSharing</i> is set to true
-              in{' '}
-              <a
-                href="https://docs.adaptabletools.com/docs/adaptable-options/team-sharing-options"
-                target="_blank"
-              >
-                Team Sharing Options
-              </a>
-              ){' '}
+              <b>Snapshot</b>: The object is shared once and then any changes
+              made (either by uploader or downloaders) are unique to that user
+              only.
             </li>
             <li>
-              After this button is clicked, the Layout will be in the Team
-              Sharing collection (available for download by colleagues){' '}
+              <b>Active</b>: A "Live" Share which will get automatically updated
+              with every local change
             </li>
-            <li>
-              Any colleague can now open the Team Sharing Popup (which lists all
-              available Adaptable Objects that have been shared) and click to
-              download the Layout created in Step 1.{' '}
-            </li>
-          </ol>
+          </ul>
           <p>
             Setting up Team Sharing requires the provision at design-time of 2
             functions (both of which return Promises, and both of which are

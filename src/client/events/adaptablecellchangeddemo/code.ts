@@ -17,7 +17,6 @@ var adaptableApi: AdaptableApi;
 
 const demoConfig: PredefinedConfig = {
   Dashboard: {
-    Revision: Date.now(),
     Tabs: [
       {
         Name: 'Demo Toolbar',

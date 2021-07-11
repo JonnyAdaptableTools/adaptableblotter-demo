@@ -9,6 +9,9 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
+  AlertButtonContext,
+  AlertButton,
+  AdaptableButton,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -42,20 +45,20 @@ const demoConfig: PredefinedConfig = {
         AlertForm: {
           buttons: [
             {
-              onClick: ['undo', 'highlight-cell', 'jump-to-cell'],
+              onClick: ['highlight-cell', 'jump-to-cell', 'email-support'],
+              buttonStyle: {
+                tone: 'neutral',
+                variant: 'text',
+              },
+              label: 'Show Me',
+            },
+            {
+              onClick: ['undo'],
               buttonStyle: {
                 tone: 'accent',
                 variant: 'raised',
               },
               label: 'Undo',
-            },
-            {
-              onClick: ['overwrite'],
-              buttonStyle: {
-                tone: 'accent',
-                variant: 'raised',
-              },
-              label: 'Overwrite',
             },
           ],
         },
@@ -86,6 +89,16 @@ export default async (columnDefs: any[], rowData: any[]) => {
       showProgressBar: true,
       closeWhenClicked: true,
       pauseWhenHovering: true,
+      actionHandlers: [
+        {
+          name: 'email-support',
+          handler: (button: AlertButton, context: AlertButtonContext) => {
+            // should provide an implementation to email Alert details
+            // but will just output to console
+            console.log(context.alert);
+          },
+        },
+      ],
     },
     dashboardOptions: {
       customToolbars: [
@@ -95,8 +108,18 @@ export default async (columnDefs: any[], rowData: any[]) => {
           toolbarButtons: [
             {
               label: 'Change Contact First Row',
-              onClick: () => {
-                changeContactName('James Dean', 10248);
+              onClick: (
+                button: AdaptableButton,
+                context: AlertButtonContext
+              ) => {
+                // get the contact Value in first Row
+                const newContact =
+                  adaptableApi.gridApi.getRowNodeForPrimaryKey(10248).data[
+                    'ContactName'
+                  ] === 'James Dean'
+                    ? 'Marlyn Monroe'
+                    : 'James Dean';
+                changeContactName(newContact, 10248);
               },
             },
           ],

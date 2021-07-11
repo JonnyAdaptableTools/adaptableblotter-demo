@@ -59,7 +59,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
   const adaptableOptions: AdaptableOptions = {
     primaryKey: 'OrderId',
     userName: `${username}`,
-    adaptableId: 'Team Sharing Demo',
+    adaptableId: 'Team Sharing Active Sharing Demo',
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
     teamSharingOptions: {
