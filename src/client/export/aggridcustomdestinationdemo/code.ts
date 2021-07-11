@@ -12,6 +12,8 @@ import {
   Report,
   ReportData,
   AdaptableFormData,
+  AdaptableButton,
+  ExportButtonContext,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -83,9 +85,12 @@ export default async (columnDefs: any[], rowData: any[]) => {
               },
               {
                 label: 'Export',
-                buttonStyle: {
-                  tone: 'success',
-                  variant: 'raised',
+                buttonStyle: { tone: 'success', variant: 'raised' },
+                onClick: (
+                  button: AdaptableButton,
+                  context: ExportButtonContext
+                ) => {
+                  // Export data in the context object...
                 },
               },
             ],

@@ -76,6 +76,9 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Basic Alert Demo',
+    alertOptions: {
+      duration: 'always',
+    },
     containerOptions: {
       alertContainer: 'alertDiv',
     },

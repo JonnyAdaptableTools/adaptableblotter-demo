@@ -24,16 +24,6 @@ const demoConfig: PredefinedConfig = {
         Toolbars: ['Alert', 'Custom'],
       },
     ],
-    CustomToolbars: [
-      {
-        Name: 'Custom',
-        Title: 'Custom',
-        CustomToolbarButtonLabels: [
-          'Change Contact First Row',
-          'Change Contact Second Row',
-        ],
-      },
-    ],
   },
   Alert: {
     FlashingAlertDefinitions: [
@@ -140,18 +130,24 @@ export default async (columnDefs: any[], rowData: any[]) => {
       ],
     },
     dashboardOptions: {
-      customToolbarButtons: [
+      customToolbars: [
         {
-          label: 'Change Contact First Row',
-          onClick: () => {
-            changeContactName('James Dean', 10248);
-          },
-        },
-        {
-          label: 'Change Contact Second Row',
-          onClick: () => {
-            changeContactName('Marilyn Monroe', 10249);
-          },
+          name: 'Custom',
+          title: 'Custom',
+          toolbarButtons: [
+            {
+              label: 'Change Contact First Row',
+              onClick: () => {
+                changeContactName('James Dean', 10248);
+              },
+            },
+            {
+              label: 'Change Contact Second Row',
+              onClick: () => {
+                changeContactName('Marilyn Monroe', 10249);
+              },
+            },
+          ],
         },
       ],
     },

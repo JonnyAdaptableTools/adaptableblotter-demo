@@ -31,28 +31,6 @@ const demoConfig: PredefinedConfig = {
         Toolbars: ['Layout', 'Export', 'SmartEdit'],
       },
     ],
-    CustomToolbars: [
-      // Show a Title and Configure Button
-      {
-        Name: 'Trades',
-        Title: 'Trades',
-        ShowConfigureButton: true,
-        CustomToolbarButtonLabels: ['Make Trade'],
-      },
-      // Show no Title and no Configure Button
-      {
-        Name: 'Deals',
-        CustomToolbarButtonLabels: ['New Deal'],
-      },
-      // Show Configure Button but no Title
-      // Note that we have also added an Icon to the button
-      {
-        Name: 'Orders',
-        Title: 'Orders',
-        ShowConfigureButton: true,
-        CustomToolbarButtonLabels: ['Create Order'],
-      },
-    ],
   },
 } as PredefinedConfig;
 
@@ -73,52 +51,75 @@ export default async (columnDefs: any[], rowData: any[]) => {
     userName: 'Demo User',
     adaptableId: 'Custom Toolbars Demo',
     dashboardOptions: {
-      customToolbarButtons: [
+      customToolbars: [
+        // Show a Title and Configure Button
         {
-          label: 'Make Trade',
-          buttonStyle: {
-            variant: 'raised',
-            tone: 'accent',
-          },
-          onClick: (
-            button: AdaptableButton,
-            context: DashboardButtonContext
-          ) => {
-            alert('you clicked: ' + button.label);
-          },
+          name: 'Trades',
+          title: 'Trades',
+          showConfigureButton: true,
+          toolbarButtons: [
+            {
+              label: 'Make Trade',
+              buttonStyle: {
+                variant: 'raised',
+                tone: 'accent',
+              },
+              onClick: (
+                button: AdaptableButton,
+                context: DashboardButtonContext
+              ) => {
+                alert('you clicked: ' + button.label);
+              },
+            },
+          ],
         },
+        // Show no Title and no Configure Button
         {
-          label: 'New Deal',
+          name: 'Deals',
+          toolbarButtons: [
+            {
+              label: 'New Deal',
 
-          buttonStyle: {
-            variant: 'text',
-            tone: 'success',
-          },
-          onClick: (
-            button: AdaptableButton,
-            context: DashboardButtonContext
-          ) => {
-            alert('you clicked: ' + button.label);
-          },
+              buttonStyle: {
+                variant: 'text',
+                tone: 'success',
+              },
+              onClick: (
+                button: AdaptableButton,
+                context: DashboardButtonContext
+              ) => {
+                alert('you clicked: ' + button.label);
+              },
+            },
+          ],
         },
+        // Show Configure Button but no Title
+        // Note that we have also added an Icon to the button
         {
-          label: 'Create Order',
-          buttonStyle: {
-            variant: 'outlined',
-            tone: 'info',
-          },
-          icon: {
-            height: 20,
-            width: 25,
-            src:
-              'https://www.pngfind.com/pngs/m/278-2781613_blue-plus-icon-add-new-button-png-transparent.png',
-          },
-          onClick: (
-            button: AdaptableButton,
-            context: DashboardButtonContext
-          ) => {
-            alert('you clicked: ' + button.label);
-          },
+          name: 'Orders',
+          title: 'Orders',
+          showConfigureButton: true,
+          toolbarButtons: [
+            {
+              label: 'Create Order',
+              buttonStyle: {
+                variant: 'outlined',
+                tone: 'info',
+              },
+              icon: {
+                height: 20,
+                width: 25,
+                src:
+                  'https://www.pngfind.com/pngs/m/278-2781613_blue-plus-icon-add-new-button-png-transparent.png',
+              },
+              onClick: (
+                button: AdaptableButton,
+                context: DashboardButtonContext
+              ) => {
+                alert('you clicked: ' + button.label);
+              },
+            },
+          ],
         },
       ],
     },

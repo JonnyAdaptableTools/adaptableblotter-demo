@@ -31,13 +31,6 @@ const demoConfig: PredefinedConfig = {
         Toolbars: ['Query', 'Filter', 'QuickSearch'],
       },
     ],
-    CustomToolbars: [
-      {
-        Name: 'customToolbar',
-        Title: 'Custom Toolbar',
-        CustomToolbarButtonLabels: ['Demo Button'],
-      },
-    ],
   },
 } as PredefinedConfig;
 
@@ -58,13 +51,19 @@ export default async (columnDefs: any[], rowData: any[]) => {
     userName: 'Demo User',
     adaptableId: 'Dashboard Tabs Demo',
     dashboardOptions: {
-      customToolbarButtons: [
+      customToolbars: [
         {
-          label: 'Demo Button',
-          buttonStyle: {
-            variant: 'text',
-            tone: 'success',
-          },
+          name: 'customToolbar',
+          title: 'Custom Toolbar',
+          toolbarButtons: [
+            {
+              label: 'Demo Button',
+              buttonStyle: {
+                variant: 'text',
+                tone: 'success',
+              },
+            },
+          ],
         },
       ],
     },

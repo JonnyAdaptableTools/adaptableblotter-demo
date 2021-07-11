@@ -37,6 +37,7 @@ const demoConfig: PredefinedConfig = {
         MessageType: 'Error',
         AlertProperties: {
           PreventEdit: true,
+          DisplayNotification: true,
         },
       },
       {
@@ -88,6 +89,9 @@ export default async (columnDefs: any[], rowData: any[]) => {
     userName: 'Demo User',
     adaptableId: 'Validation Alerts Demo',
     predefinedConfig: demoConfig,
+    alertOptions: {
+      duration: 'always',
+    },
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
   };
   adaptableApi = await Adaptable.init(adaptableOptions);

@@ -20,7 +20,10 @@ export default () => {
           <p>
             This example has 3 'Prevent Edit' Alerts:{' '}
             <ul>
-              <li>All Edits are prevented in the 'Cust Ref' column</li>
+              <li>
+                All Edits are prevented in the 'Cust Ref' column (with a
+                Notification being diplayed)
+              </li>
               <li>Invoiced' column cannot accept values over 300</li>
               <li>
                 'Order Cost' column cannot more than double in value (with a

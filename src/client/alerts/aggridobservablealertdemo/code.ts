@@ -22,16 +22,6 @@ const demoConfig: PredefinedConfig = {
         Toolbars: ['Alert', 'Custom'],
       },
     ],
-    CustomToolbars: [
-      {
-        Name: 'Custom',
-        Title: 'Custom',
-        CustomToolbarButtonLabels: [
-          'Increase Item Count',
-          'Increase Order Cost',
-        ],
-      },
-    ],
   },
   Alert: {
     AlertDefinitions: [
@@ -86,50 +76,56 @@ export default async (columnDefs: any[], rowData: any[]) => {
     userName: 'Demo User',
     adaptableId: 'Observable Alert Demo',
     dashboardOptions: {
-      customToolbarButtons: [
+      customToolbars: [
         {
-          label: 'Increase Item Count',
-          onClick: () => {
-            // lets use the first row - which has a Primary Key Vlaue of 10248
-            const primaryKeyValue = 10248;
+          name: 'Custom',
+          title: 'Custom',
+          toolbarButtons: [
+            {
+              label: 'Increase Item Count',
+              onClick: () => {
+                // lets use the first row - which has a Primary Key Vlaue of 10248
+                const primaryKeyValue = 10248;
 
-            // lets update the 'ItemCount' column by 1000
-            const itemCount = 'ItemCount';
+                // lets update the 'ItemCount' column by 1000
+                const itemCount = 'ItemCount';
 
-            // get first node (using Adaptable Api)
-            const node: RowNode = adaptableApi.gridApi.getRowNodeForPrimaryKey(
-              primaryKeyValue
-            );
-            const currentItemCount = node.data[itemCount];
-            adaptableApi.gridApi.setCellValue(
-              itemCount,
-              currentItemCount + 5,
-              primaryKeyValue,
-              false
-            );
-          },
-        },
-        {
-          label: 'Increase Order Cost',
-          onClick: () => {
-            // lets use the second row - which has a Primary Key Vlaue of 10249
-            const primaryKeyValue = 10249;
+                // get first node (using Adaptable Api)
+                const node: RowNode = adaptableApi.gridApi.getRowNodeForPrimaryKey(
+                  primaryKeyValue
+                );
+                const currentItemCount = node.data[itemCount];
+                adaptableApi.gridApi.setCellValue(
+                  itemCount,
+                  currentItemCount + 5,
+                  primaryKeyValue,
+                  false
+                );
+              },
+            },
+            {
+              label: 'Increase Order Cost',
+              onClick: () => {
+                // lets use the second row - which has a Primary Key Vlaue of 10249
+                const primaryKeyValue = 10249;
 
-            // lets update the 'OrderCost' column by 1000
-            const itemCost = 'OrderCost';
+                // lets update the 'OrderCost' column by 1000
+                const itemCost = 'OrderCost';
 
-            // get first node (using Adaptable Api)
-            const node: RowNode = adaptableApi.gridApi.getRowNodeForPrimaryKey(
-              primaryKeyValue
-            );
-            const currentItemCount = node.data[itemCost];
-            adaptableApi.gridApi.setCellValue(
-              itemCost,
-              currentItemCount + 3000,
-              primaryKeyValue,
-              false
-            );
-          },
+                // get first node (using Adaptable Api)
+                const node: RowNode = adaptableApi.gridApi.getRowNodeForPrimaryKey(
+                  primaryKeyValue
+                );
+                const currentItemCount = node.data[itemCost];
+                adaptableApi.gridApi.setCellValue(
+                  itemCost,
+                  currentItemCount + 3000,
+                  primaryKeyValue,
+                  false
+                );
+              },
+            },
+          ],
         },
       ],
     },

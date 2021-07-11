@@ -9,8 +9,6 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
-  AdaptableButton,
-  AlertButtonContext,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -22,13 +20,6 @@ const demoConfig: PredefinedConfig = {
       {
         Name: 'Toolbars',
         Toolbars: ['Alert', 'Custom'],
-      },
-    ],
-    CustomToolbars: [
-      {
-        Name: 'Custom',
-        Title: 'Custom',
-        CustomToolbarButtonLabels: ['Change Contact First Row'],
       },
     ],
   },
@@ -97,12 +88,18 @@ export default async (columnDefs: any[], rowData: any[]) => {
       pauseWhenHovering: true,
     },
     dashboardOptions: {
-      customToolbarButtons: [
+      customToolbars: [
         {
-          label: 'Change Contact First Row',
-          onClick: () => {
-            changeContactName('James Dean', 10248);
-          },
+          name: 'Custom',
+          title: 'Custom',
+          toolbarButtons: [
+            {
+              label: 'Change Contact First Row',
+              onClick: () => {
+                changeContactName('James Dean', 10248);
+              },
+            },
+          ],
         },
       ],
     },

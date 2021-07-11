@@ -18,18 +18,6 @@ export default () => {
         <br />
         <p>
           <h3>
-            <div style={{ color: 'purple' }}>
-              These demos use a pre-release version of{' '}
-              <a
-                href="https://docs.adaptabletools.com/docs/releases/version9/upgrade-guide-v9/"
-                target="_blank"
-              >
-                Version 9
-              </a>{' '}
-              of AdapTable, which will be officially launched on 12 July
-            </div>
-          </h3>
-          <h3>
             AdapTable is the most advanced and powerful HTML5 Data Management
             Solution available today
           </h3>
@@ -252,7 +240,7 @@ export default () => {
         <p>
           <b>AdapTable Version</b>
           <br />
-          The demos on this site use <b>Version 9 of AdapTable</b>. <br />
+          The demos on this site use <b>AdapTable Rx</b> (Version 9). <br />
           See{' '}
           <a
             href="https://docs.adaptabletools.com/docs/releases/version9/upgrade-guide-v9/"

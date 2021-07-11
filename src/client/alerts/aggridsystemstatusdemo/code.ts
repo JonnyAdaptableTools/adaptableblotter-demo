@@ -25,18 +25,6 @@ const demoConfig: PredefinedConfig = {
         Toolbars: ['SystemStatus', 'DemoButtons'],
       },
     ],
-    CustomToolbars: [
-      {
-        Name: 'DemoButtons',
-        Title: 'Demo Buttons',
-        CustomToolbarButtonLabels: [
-          'Set Info',
-          'Set Success',
-          'Set Warning',
-          'Set Error',
-        ],
-      },
-    ],
   },
 } as PredefinedConfig;
 
@@ -101,66 +89,72 @@ export default async (columnDefs: any[], rowData: any[]) => {
       ],
     },
     dashboardOptions: {
-      customToolbarButtons: [
+      customToolbars: [
         {
-          label: 'Set Info',
-          buttonStyle: {
-            variant: 'text',
-            tone: 'info',
-          },
-          onClick: (
-            button: AdaptableButton,
-            context: ActionColumnButtonContext
-          ) => {
-            adaptableApi.systemStatusApi.setInfoSystemStatus('No issues');
-          },
-        },
-        {
-          label: 'Set Success',
-          buttonStyle: {
-            variant: 'text',
-            tone: 'success',
-          },
-          onClick: (
-            button: AdaptableButton,
-            context: ActionColumnButtonContext
-          ) => {
-            adaptableApi.systemStatusApi.setSuccessSystemStatus(
-              'All working fine'
-            );
-          },
-        },
-        {
-          label: 'Set Warning',
-          buttonStyle: {
-            variant: 'text',
-            tone: 'warning',
-          },
-          onClick: (
-            button: AdaptableButton,
-            context: ActionColumnButtonContext
-          ) => {
-            adaptableApi.systemStatusApi.setWarningSystemStatus(
-              'Problems with server',
-              'Avoid any unnecesary edits'
-            );
-          },
-        },
-        {
-          label: 'Set Error',
-          buttonStyle: {
-            variant: 'text',
-            tone: 'error',
-          },
-          onClick: (
-            button: AdaptableButton,
-            context: ActionColumnButtonContext
-          ) => {
-            adaptableApi.systemStatusApi.setErrorSystemStatus(
-              'The server is down!',
-              'Please do not make any edits until the server comes back up'
-            );
-          },
+          name: 'DemoButtons',
+          title: 'Demo Buttons',
+          toolbarButtons: [
+            {
+              label: 'Set Info',
+              buttonStyle: {
+                variant: 'text',
+                tone: 'info',
+              },
+              onClick: (
+                button: AdaptableButton,
+                context: ActionColumnButtonContext
+              ) => {
+                adaptableApi.systemStatusApi.setInfoSystemStatus('No issues');
+              },
+            },
+            {
+              label: 'Set Success',
+              buttonStyle: {
+                variant: 'text',
+                tone: 'success',
+              },
+              onClick: (
+                button: AdaptableButton,
+                context: ActionColumnButtonContext
+              ) => {
+                adaptableApi.systemStatusApi.setSuccessSystemStatus(
+                  'All working fine'
+                );
+              },
+            },
+            {
+              label: 'Set Warning',
+              buttonStyle: {
+                variant: 'text',
+                tone: 'warning',
+              },
+              onClick: (
+                button: AdaptableButton,
+                context: ActionColumnButtonContext
+              ) => {
+                adaptableApi.systemStatusApi.setWarningSystemStatus(
+                  'Problems with server',
+                  'Avoid any unnecesary edits'
+                );
+              },
+            },
+            {
+              label: 'Set Error',
+              buttonStyle: {
+                variant: 'text',
+                tone: 'error',
+              },
+              onClick: (
+                button: AdaptableButton,
+                context: ActionColumnButtonContext
+              ) => {
+                adaptableApi.systemStatusApi.setErrorSystemStatus(
+                  'The server is down!',
+                  'Please do not make any edits until the server comes back up'
+                );
+              },
+            },
+          ],
         },
       ],
     },

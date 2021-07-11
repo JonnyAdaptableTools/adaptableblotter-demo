@@ -64,6 +64,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
     adaptableId: 'Alert Overwrite Demo',
     alertOptions: {
       duration: 'always',
+      position: 'TopCenter',
       alertForms: [
         {
           name: 'Overwrite Form',
