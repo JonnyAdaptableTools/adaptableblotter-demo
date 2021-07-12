@@ -1,20 +1,5 @@
 {
   "name": "adaptable-demo",
-<<<<<<< HEAD
-  "version": "9.0.0-canary.42",
-  "description": "AdapTable Demo",
-  "main": "index.js",
-  "dependencies": {
-    "@adaptabletools/adaptable": "9.0.0-canary.42",
-    "@adaptabletools/adaptable-plugin-charts": "9.0.0-canary.42",
-    "@adaptabletools/adaptable-plugin-finance": "9.0.0-canary.42",
-    "@adaptabletools/adaptable-plugin-finsemble": "9.0.0-canary.42",
-    "@adaptabletools/adaptable-plugin-glue42": "9.0.0-canary.42",
-    "@adaptabletools/adaptable-plugin-ipushpull": "9.0.0-canary.42",
-    "@adaptabletools/adaptable-plugin-openfin": "9.0.0-canary.42",
-    "@adaptabletools/adaptable-plugin-master-detail-aggrid": "9.0.0-canary.42",
-    "@adaptabletools/adaptable-plugin-nocode-aggrid": "9.0.0-canary.42",
-=======
   "version": "9.0.0-canary.43",
   "description": "AdapTable Demo",
   "main": "index.js",
@@ -28,7 +13,6 @@
     "@adaptabletools/adaptable-plugin-openfin": "9.0.0-canary.43",
     "@adaptabletools/adaptable-plugin-master-detail-aggrid": "9.0.0-canary.43",
     "@adaptabletools/adaptable-plugin-nocode-aggrid": "9.0.0-canary.43",
->>>>>>> 430d2b4502dc1beb2d937758e1365cbbd8e59f56
     "@ag-grid-community/all-modules": "25.3.0",
     "@ag-grid-community/react": "25.3.0",
     "@ag-grid-enterprise/all-modules": "25.3.0",
