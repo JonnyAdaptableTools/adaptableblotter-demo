@@ -103,6 +103,12 @@ export default async (columnDefs: any[], rowData: any[]) => {
             ) => {
               return context.rowNode?.data?.Employee == 'Margaret Peacock';
             },
+            disabled: (
+              button: AdaptableButton,
+              context: ActionColumnButtonContext
+            ) => {
+              return context.rowNode?.data?.ItemCost < 10;
+            },
           },
         },
         {

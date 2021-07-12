@@ -18,6 +18,7 @@ const demoConfig: PredefinedConfig = {
   Dashboard: {
     ModuleButtons: ['CalculatedColumn', 'ConditionalStyle'],
   },
+
   CalculatedColumn: {
     CalculatedColumns: [
       {
@@ -78,6 +79,7 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
+
   ConditionalStyle: {
     ConditionalStyles: [
       {
@@ -121,8 +123,9 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   FormatColumn: {
+    Revision: Date.now(),
     FormatColumns: [
-      {
+      /*  {
         Scope: {
           ColumnIds: ['ShipDelay'],
         },
@@ -130,6 +133,7 @@ const demoConfig: PredefinedConfig = {
           CheckBoxStyle: true,
         },
       },
+      */
       {
         Scope: {
           ColumnIds: ['AvgCost'],
@@ -178,6 +182,7 @@ const demoConfig: PredefinedConfig = {
       },
     ],
   },
+
   Layout: {
     CurrentLayout: 'with calc cols',
     Layouts: [

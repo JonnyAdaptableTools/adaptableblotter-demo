@@ -76,8 +76,12 @@ export default () => {
                     Employee (using the same logic as Label)
                   </li>
                   <li>
-                    hidden: only displays the button if the cell value is not
-                    'Margaret Peacock'
+                    hidden: hides the button if the 'Employee' is 'Margaret
+                    Peacock'
+                  </li>
+                  <li>
+                    disabled: disabled the button if the 'ItemCost' is less than
+                    10
                   </li>
                 </ul>{' '}
               </li>
