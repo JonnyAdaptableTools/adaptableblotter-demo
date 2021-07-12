@@ -36,14 +36,8 @@ export default () => {
             </li>
             <li>
               Render the Toolbar with any bespoke, custom, content that is
-              required; simply listen to the{' '}
-              <a
-                href="https://docs.adaptabletools.com/docs/adaptable-events/dashboard-changed-event"
-                target="_blank"
-              >
-                DashboardChanged
-              </a>{' '}
-              event and when the Toolbar becomes visible, render any content.
+              required (with different implementations for core and the React
+              and Angular Wrappers).
             </li>
           </ol>{' '}
           <p>Each Custom Toolbar has 3 optional display properties:</p>

@@ -11,12 +11,8 @@ import {
   AdaptableApi,
   DashboardButtonContext,
   AdaptableButton,
-  DashboardChangedInfo,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
-import charts from '@adaptabletools/adaptable-plugin-charts';
-import { renderCustomDiv } from '.';
-import ReactDOM from 'react-dom';
 
 var adaptableApi: AdaptableApi;
 
@@ -92,33 +88,8 @@ export default async (columnDefs: any[], rowData: any[]) => {
 
     predefinedConfig: demoConfig,
     vendorGrid: { ...gridOptions, modules: AllEnterpriseModules },
-    plugins: [charts()],
   };
   adaptableApi = await Adaptable.init(adaptableOptions);
-
-  adaptableApi.eventApi.on(
-    'DashboardChanged',
-    (eventInfo: DashboardChangedInfo) => {
-      const dashboardApi = adaptableApi.dashboardApi;
-      const result:
-        | 'hidden'
-        | 'visible'
-        | 'none' = dashboardApi.hasCustomToolbarChanged(eventInfo, 'Trades');
-
-      if (result == 'visible') {
-        let toolbarContents: any = renderCustomDiv();
-
-        ReactDOM.render(
-          toolbarContents,
-          adaptableApi.dashboardApi.getCustomToolbarContentsDiv('Trades')
-        );
-      }
-
-      if (result == 'hidden') {
-        console.log('custom toolbar has disappeared');
-      }
-    }
-  );
 
   return { adaptableOptions, adaptableApi };
 };
