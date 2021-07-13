@@ -56,7 +56,7 @@ export default () => {
           </a>{' '}
           |{' '}
           <a
-            href="https://docs.adaptabletools.com/docs/key-topics/theming-and-styling"
+            href="https://docs.adaptabletools.com/docs/theming/theming-overview"
             target="_blank"
           >
             Theming and Styling Guide
