@@ -31,7 +31,7 @@ const demoConfig: PredefinedConfig = {
           BooleanExpression:
             '[Employee] IN ("Michael Suyama", "Janet Leverling")',
         },
-        ExcludeGroupedRows: false,
+        IncludeGroupedRows: false,
       },
       {
         Scope: {

@@ -9,6 +9,8 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
+  AdaptableButton,
+  ActionColumnButtonContext,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -19,7 +21,7 @@ const demoConfig: PredefinedConfig = {
     Tabs: [
       {
         Name: 'Toolbars',
-        Toolbars: ['Alert', 'Custom'],
+        Toolbars: ['Alert', 'CellSummary', 'Export', 'Layout'],
       },
     ],
   },
@@ -41,7 +43,7 @@ const demoConfig: PredefinedConfig = {
         Scope: { All: true },
         Rule: {
           ObservableExpression:
-            " ROW_CHANGE( MAX([OrderCost] ),  TIMEFRAME('1h')) WHERE [CustomerReference] = 'TRADH' ",
+            " ROW_CHANGE( MAX([OrderCost] ),  TIMEFRAME('1h')) WHERE [Employee] = 'Margaret Peacock' ",
         },
         AlertProperties: {
           DisplayNotification: true,
@@ -53,6 +55,34 @@ const demoConfig: PredefinedConfig = {
         Scope: {
           DataTypes: ['Number'],
         },
+        Rule: {
+          Predicate: {
+            PredicateId: 'Any',
+          },
+        },
+      },
+    ],
+  },
+  Layout: {
+    CurrentLayout: 'Simple Layout',
+    Layouts: [
+      {
+        Name: 'Simple Layout',
+        Columns: [
+          'OrderId',
+          'increaseItemCount',
+          'ItemCount',
+          'Employee',
+          'increaseOrderCost',
+          'OrderCost',
+          'decreaseOrderCost',
+          'CompanyName',
+          'ContactName',
+          'ItemCost',
+          'InvoicedCost',
+          'ChangeLastOrder',
+          'PackageCost',
+        ],
       },
     ],
   },
@@ -75,57 +105,58 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Observable Alert Demo',
-    dashboardOptions: {
-      customToolbars: [
+    userInterfaceOptions: {
+      actionColumns: [
         {
-          name: 'Custom',
-          title: 'Custom',
-          toolbarButtons: [
-            {
-              label: 'Increase Item Count',
-              onClick: () => {
-                // lets use the first row - which has a Primary Key Vlaue of 10248
-                const primaryKeyValue = 10248;
-
-                // lets update the 'ItemCount' column by 1000
-                const itemCount = 'ItemCount';
-
-                // get first node (using Adaptable Api)
-                const node: RowNode = adaptableApi.gridApi.getRowNodeForPrimaryKey(
-                  primaryKeyValue
-                );
-                const currentItemCount = node.data[itemCount];
-                adaptableApi.gridApi.setCellValue(
-                  itemCount,
-                  currentItemCount + 5,
-                  primaryKeyValue,
-                  false
-                );
-              },
+          columnId: 'increaseItemCount',
+          friendlyName: 'Increment',
+          actionColumnButton: {
+            label: '+',
+            buttonStyle: {
+              tone: 'neutral',
+              variant: 'raised',
             },
-            {
-              label: 'Increase Order Cost',
-              onClick: () => {
-                // lets use the second row - which has a Primary Key Vlaue of 10249
-                const primaryKeyValue = 10249;
-
-                // lets update the 'OrderCost' column by 1000
-                const itemCost = 'OrderCost';
-
-                // get first node (using Adaptable Api)
-                const node: RowNode = adaptableApi.gridApi.getRowNodeForPrimaryKey(
-                  primaryKeyValue
-                );
-                const currentItemCount = node.data[itemCost];
-                adaptableApi.gridApi.setCellValue(
-                  itemCost,
-                  currentItemCount + 3000,
-                  primaryKeyValue,
-                  false
-                );
-              },
+            onClick: (
+              button: AdaptableButton,
+              context: ActionColumnButtonContext
+            ) => {
+              incrementCellValue('ItemCount', context, 1);
             },
-          ],
+          },
+        },
+        {
+          columnId: 'increaseOrderCost',
+          friendlyName: 'Increment',
+          actionColumnButton: {
+            label: '+',
+            buttonStyle: {
+              tone: 'neutral',
+              variant: 'raised',
+            },
+            onClick: (
+              button: AdaptableButton,
+              context: ActionColumnButtonContext
+            ) => {
+              incrementCellValue('OrderCost', context, 1);
+            },
+          },
+        },
+        {
+          columnId: 'decreaseOrderCost',
+          friendlyName: 'Decrement',
+          actionColumnButton: {
+            label: '-',
+            buttonStyle: {
+              tone: 'neutral',
+              variant: 'raised',
+            },
+            onClick: (
+              button: AdaptableButton,
+              context: ActionColumnButtonContext
+            ) => {
+              incrementCellValue('OrderCost', context, -3);
+            },
+          },
         },
       ],
     },
@@ -139,3 +170,17 @@ export default async (columnDefs: any[], rowData: any[]) => {
 
   return { adaptableOptions, adaptableApi };
 };
+
+export function incrementCellValue(
+  columnName: string,
+  context: ActionColumnButtonContext,
+  incrementValue: number
+): void {
+  const currentItemCount = context.rowNode.data[columnName];
+  adaptableApi.gridApi.setCellValue(
+    columnName,
+    currentItemCount + incrementValue,
+    context.primaryKeyValue,
+    false
+  );
+}

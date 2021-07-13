@@ -9,6 +9,8 @@ import {
   AdaptableOptions,
   PredefinedConfig,
   AdaptableApi,
+  ActionColumnButtonContext,
+  AdaptableButton,
 } from '@adaptabletools/adaptable/types';
 import { AllEnterpriseModules } from '@ag-grid-enterprise/all-modules';
 
@@ -19,7 +21,7 @@ const demoConfig: PredefinedConfig = {
     Tabs: [
       {
         Name: 'Toolbars',
-        Toolbars: ['Alert', 'Custom'],
+        Toolbars: ['Alert'],
       },
     ],
   },
@@ -30,7 +32,7 @@ const demoConfig: PredefinedConfig = {
         Scope: { All: true },
         Rule: {
           AggregationExpression:
-            " SUM([ItemCount]) > '8K' WHERE [CustomerReference] = 'WILMK'   ",
+            " SUM([ItemCount]) > '2K' WHERE [Employee] = 'Margaret Peacock'  ",
         },
         AlertProperties: {
           DisplayNotification: true,
@@ -41,6 +43,50 @@ const demoConfig: PredefinedConfig = {
       {
         Scope: {
           DataTypes: ['Number'],
+        },
+        Rule: {
+          Predicate: {
+            PredicateId: 'Any',
+          },
+        },
+      },
+    ],
+  },
+  Layout: {
+    CurrentLayout: 'Simple Layout',
+    Layouts: [
+      {
+        Name: 'Simple Layout',
+        Columns: [
+          'OrderId',
+          'ItemCount',
+          'increaseItemCount',
+          'Employee',
+          'CompanyName',
+          'ContactName',
+          'ItemCost',
+          'InvoicedCost',
+          'ChangeLastOrder',
+          'PackageCost',
+        ],
+        RowGroupedColumns: ['Employee'],
+        AggregationColumns: {
+          ItemCount: 'sum',
+        },
+      },
+    ],
+  },
+  FormatColumn: {
+    FormatColumns: [
+      {
+        Scope: {
+          ColumnIds: ['ItemCount'],
+        },
+        DisplayFormat: {
+          Formatter: 'NumberFormatter',
+          Options: {
+            FractionDigits: 4,
+          },
         },
       },
     ],
@@ -64,35 +110,24 @@ export default async (columnDefs: any[], rowData: any[]) => {
     primaryKey: 'OrderId',
     userName: 'Demo User',
     adaptableId: 'Aggregation Alert Demo',
-    dashboardOptions: {
-      customToolbars: [
+    userInterfaceOptions: {
+      actionColumns: [
         {
-          name: 'Custom',
-          title: 'Custom',
-          toolbarButtons: [
-            {
-              label: 'Increase Item Count',
-              onClick: () => {
-                // lets use the first row - which has a Primary Key Vlaue of 10248
-                const primaryKeyValue = 10248;
-
-                // lets update the 'ItemCount' column by 1000
-                const itemCount = 'ItemCount';
-
-                // get first node (using Adaptable Api)
-                const node: RowNode = adaptableApi.gridApi.getRowNodeForPrimaryKey(
-                  primaryKeyValue
-                );
-                const currentItemCount = node.data[itemCount];
-                adaptableApi.gridApi.setCellValue(
-                  itemCount,
-                  currentItemCount + 3000,
-                  primaryKeyValue,
-                  false
-                );
-              },
+          columnId: 'increaseItemCount',
+          friendlyName: 'Increment',
+          actionColumnButton: {
+            label: '+',
+            buttonStyle: {
+              tone: 'neutral',
+              variant: 'raised',
             },
-          ],
+            onClick: (
+              button: AdaptableButton,
+              context: ActionColumnButtonContext
+            ) => {
+              incrementCellValue('ItemCount', context, 150);
+            },
+          },
         },
       ],
     },
@@ -103,3 +138,17 @@ export default async (columnDefs: any[], rowData: any[]) => {
 
   return { adaptableOptions, adaptableApi };
 };
+
+export function incrementCellValue(
+  columnName: string,
+  context: ActionColumnButtonContext,
+  incrementValue: number
+): void {
+  const currentItemCount = context.rowNode.data[columnName];
+  adaptableApi.gridApi.setCellValue(
+    columnName,
+    currentItemCount + incrementValue,
+    context.primaryKeyValue,
+    false
+  );
+}
