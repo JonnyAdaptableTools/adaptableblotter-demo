@@ -56,31 +56,33 @@ export default () => {
             which will limit the number of rows which are observed.
           </p>
           <p>
-            In this demo we have provided 2 Observable Expression:{' '}
+            In this demo we have provided 2 Observable Expressions:{' '}
             <ul>
               <li>
-                <b>ROW_CHANGE( COUNT( [ItemCount], 3) , TIMEFRAME('5m') ) </b>
+                <code>
+                  ROW_CHANGE(COUNT([ItemCount], 3), TIMEFRAME('5m') ){' '}
+                </code>
                 <br />
-                Triggers if <i>Item Count</i> in a Row changes 3 times within a
-                5 minute timeframe <br />
-                Try it yourself: Click the <i>Increase Item Count</i> button
-                which will update the 'Item Count' value in the first row; once
-                it is clicked 3 times, the <i>Info</i> Alert will be triggered.
+                Triggers if <i>Item Count</i> in any Row changes 3 times within
+                a 5 minute timeframe <br />
+                Try it yourself: Click the <i>Increment</i> Action Column button
+                next to 'Item Count'; once it is clicked 3 times in a row, the{' '}
+                <i>Info</i> Alert will be triggered.
                 <br />
               </li>
               <br />
               <li>
-                <b>
-                  ROW_CHANGE( MAX( [OrderCost] ), TIMEFRAME('1h') ) WHERE
-                  [CustomerReference] = 'TRADH'
-                </b>
-                <br /> Triggers when the <i>Order Cost</i> f is the highest
-                value it has been within the last hour - for rows where the{' '}
-                <i>Cust Ref.</i> is 'TRADH'
+                <code>
+                  ROW_CHANGE(MAX([OrderCost]), TIMEFRAME('1h') ) WHERE
+                  [Employee] = 'Margaret Peacock'
+                </code>
+                <br /> Triggers when the <i>Order Cost</i> is the highest value
+                it has been within the last hour - for rows where the{' '}
+                <i>Employee</i> is 'Margaret Peacock'
                 <br />
-                Try it yourself: Click the <i>Increase Order Cost</i> button
-                which will update the 'Order Cost' value in the second row; as
-                it updates it will trigger the <i>Success</i> Alert
+                Try it yourself: Click the Click the <i>Increment</i> Action
+                Column button next to 'Order Cost'; if the Row matches the
+                'WHERE' clause, it will trigger the <i>Success</i> Alert
                 <br />
               </li>
             </ul>

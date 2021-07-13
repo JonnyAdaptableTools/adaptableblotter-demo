@@ -123,7 +123,6 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   FormatColumn: {
-    Revision: Date.now(),
     FormatColumns: [
       /*  {
         Scope: {

@@ -61,7 +61,6 @@ const demoConfig: PredefinedConfig = {
             Inputs: [60],
           },
         },
-        ExcludeGroupedRows: true,
       },
     ],
   },

@@ -34,14 +34,14 @@ export default () => {
           </p>
           <p>
             In this demo we have provided the Aggregation Expression:{' '}
-            <b>
-              SUM([ItemCount]) &gt; '8K' WHERE [CustomerReference] = 'WILMK'
-            </b>
+            <code>
+              SUM([ItemCount]) &gt; '2K' WHERE [Employee]='Margaret Peacock'
+            </code>
           </p>
           <p>
-            Try it yourself: Click the 'Increase Item Count' button which will
-            update the 'Item Count' value in the first row by 3K; once it
-            exceeds 8000, the Alert will be triggered.
+            Try it yourself: Click the 'Increment' button which updates 'Item
+            Count' value by 150; once all the rows that match the 'WHERE' clause
+            exceeds 2000, the Alert is triggered.
           </p>
         </div>
       }
