@@ -1,48 +1,29 @@
-html.ab--theme-wimbledon-theme {
-  font-family: Helvetica, Arial, sans-serif;
-  --ab-theme-loaded: wimbledon-theme;
-
-  --ab-dashboard__background: gray;
-  --ab-cmp-input--disabled__background: #0e6537;
-
-  --ab-color-defaultbackground: gray;
-  --ab-color-text-on-defaultbackground: #462376;
-
-  --ab-color-accent: yellow;
-
-  --ab-color-success: lightgreen;
-  --ab-color-text-on-success: #462376;
-
-  --ab-color-primary: #462376;
-  --ab-color-primarylight: #0e6537;
-  --ab-color-primarydark: blue;
-  --ab-color-text-on-primary: white;
-
-  --ab-color-secondary: #0e6537;
-  --ab-color-secondarylight: #07456d;
-  --ab-color-secondarydark: #462376;
-  --ab-color-text-on-secondary: #462376;
-  --ab-color-text-on-secondarylight: white;
-
-  --ab__border-radius: var(--ab-space-2);
-}
-
 html.ab--theme-BlueTheme {
   --ab-theme-loaded: BlueTheme;
-  --ab-dashboard__background: #cce5ff;
-  --ab-cmp-input--disabled__background: #0e6537;
-  --ab-color-defaultbackground: #99ccff;
-  --ab-color-text-on-defaultbackground: #000099;
-  --ab-color-accent: yellow;
-  --ab-color-success: lightgreen;
-  --ab-color-text-on-success: #000099;
-  --ab-color-primary: #99ccff;
-  --ab-color-primarylight: #0066cc;
-  --ab-color-primarydark: #3333ff;
-  --ab-color-text-on-primary: #000099;
-  --ab-color-secondary: #000099;
-  --ab-color-secondarylight: #07456d;
-  --ab-color-secondarydark: #000099;
-  --ab-color-text-on-secondary: #99ccff;
-  --ab-color-text-on-secondarylight: white;
+
+  --ab-cmp-input--disabled__background: #232323;
+
+  --ab-color-defaultbackground: white;
+  --ab-color-text-on-defaultbackground: #3e444c;
+
+  --ab-color-secondarylight: #8fbae0;
+  --ab-color-secondarydark: #163550;
+  --ab-color-secondary: #5e9cd3;
+  --ab-color-primary: #cee1f3;
+  --ab-color-primarylight: #f4f9fe;
+  --ab-color-primarydark: #183e63;
+  --ab-color-text-on-primary: #183e63;
+
+  --ab-dashboard__border: #555;
+  --ab-cmp-dropdownbutton-list-separator__border: 1px solid #555;
+
+  --ab-gridheader--filtered__background: var(--ab-color-defaultbackground);
+  --ab__border-radius: 0px;
+  --ab-cmp-panel__border-radius: 0px;
+
+  --ab-color-accent: #d8dc6a;
+  --ab-color-accentlight: #d8dc6a;
+}
+html.ab--theme-BlueTheme .ab-Panel {
+  --ab-cmp-panel__border-radius: 0px;
 }

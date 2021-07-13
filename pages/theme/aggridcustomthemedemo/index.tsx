@@ -25,17 +25,9 @@ export default () => {
             and sizes for example.
           </p>
           <p>
-            In this example we have created a 'Wimbledon Theme' that styles the
-            AdapTable instance purple and green, with slightly rounded borders.
-            Note that we use{' '}
-            <a href="../../style/aggridrowstyledemo" target="_self">
-              Row Styles
-            </a>{' '}
-            to similarly colour the grid).
-          </p>
-          <p>
-            We have also created a 'Blue Theme'. When this loads we leverage the{' '}
-            <b>VendorGridClassName</b> of{' '}
+            In this example we have created a 'Blue Theme' that styles the
+            AdapTable instance blue, with no border radius. When this loads we
+            leverage the <b>VendorGridClassName</b> of{' '}
             <a
               href="https://docs.adaptabletools.com/docs/predefined-config/theme-config"
               target="_blank"

@@ -197,12 +197,13 @@ export default ({
                 style={{
                   padding: 'var(--demo-space-2) var(--demo-space-2)',
                   cursor: 'pointer',
+
                   textAlign: 'center',
                   minWidth: '9rem',
                   fontSize: 'var(--sidebar_font-size)',
                   // marginBottom: 'var(--demo-space-1)',
                   marginLeft: 'var(--demo-space-2)',
-                  background: 'var(--demo-color-washedblue)',
+                  background: 'var(--demo-color-defaultbackground)',
                   borderRadius: 'var(--ab__border-radius)',
                   color: 'var(--ab-color-text-on-defaultbackground)',
                   border: '1px solid var(--ab-color-inputborder)',

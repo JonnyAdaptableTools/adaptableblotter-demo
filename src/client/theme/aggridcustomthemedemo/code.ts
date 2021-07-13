@@ -28,18 +28,26 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   Theme: {
+    Revision: 3,
     UserThemes: [
-      {
-        Name: 'wimbledon-theme',
-        Description: 'Wimbledon',
-      },
       {
         Name: 'BlueTheme',
         Description: 'Blue theme',
         VendorGridClassName: 'ag-theme-blue',
       },
+      {
+        Name: 'dark',
+        Description: 'Dark Theme',
+        VendorGridClassName: 'ag-theme-balham-dark',
+      },
+      {
+        Name: 'light',
+        Description: 'Light Theme',
+        VendorGridClassName: 'ag-theme-balham',
+      },
     ],
-    CurrentTheme: 'wimbledon-theme',
+    SystemThemes: [],
+    CurrentTheme: 'BlueTheme',
   },
 } as PredefinedConfig;
 
@@ -67,32 +75,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
   adaptableApi.eventApi.on('ThemeChanged', (info: ThemeChangedInfo) => {
     if (info) {
       let theme: AdaptableTheme = info.theme as AdaptableTheme;
-      if (theme && theme.Name === 'wimbledon-theme') {
-      }
-      /*
-          let rowStyles: RowStyle[] = [];
-          let evenStyle: RowStyle = {
-            Style: {
-              ForeColor: 'white',
-              BackColor: '#462376',
-              FontWeight: 'Bold',
-            },
-            RowType: 'Even',
-          };
-          let oddStyle: RowStyle = {
-            Style: {
-              ForeColor: 'white',
-              BackColor: '#0e6537',
-              FontStyle: 'Italic',
-            },
-            RowType: 'Odd',
-          };
-          rowStyles.push(evenStyle);
-          rowStyles.push(oddStyle);
-          adaptableApi.userInterfaceApi.setRowStyles(rowStyles);
-        } else {
-          adaptableApi.userInterfaceApi.clearRowStyles();
-        }*/
+      console.log(theme);
     }
   });
 

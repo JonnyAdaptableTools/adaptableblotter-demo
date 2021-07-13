@@ -128,8 +128,8 @@ h5 {
   .config,
   .description,
   .helpResource {
-    color: white;
-    background: var(--ab-color-primarylight);
+    // color: var(--ab-color-text-on-primary);
+    // background: var(--ab-color-primarylight);
     border-radius: var(--ab-space-2);
   }
 }
@@ -137,6 +137,7 @@ h5 {
 .description,
 .config,
 .helpResource {
+  color: var(--ab-color-text-on-primary);
   background: var(--ab-color-primarylight);
 }
 .description {
