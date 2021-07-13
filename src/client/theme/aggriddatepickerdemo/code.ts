@@ -19,7 +19,8 @@ In this demo we add the following css for the Date Picker:
   --ab-cmp-datepicker__background: #c3e7fd;
   --ab-cmp-datepicker__selected-color: #654321;
   --ab-cmp-datepicker__selected-text-color: #ffffe0;
-  --ab-cmp-datepicker__selected-border-radius: 5%;
+  --ab-cmp-datepicker__selected-border-radius: 1%;
+  --ab-cmp-datepicker__day-border-radius: 1%;
   --ab-cmp-datepicker__hover-color: #b0b3b8;
   --ab-cmp-datepicker__font-family: 'Verdana';
   --ab-cmp-datepicker__border: 3px solid #7c5295;
@@ -46,7 +47,15 @@ export default async (columnDefs: any[], rowData: any[]) => {
     adaptableId: 'Date Picker Demo',
     userInterfaceOptions: {
       dateInputOptions: {
-        datepickerButtons: ['today', '-', 'tomorrow', '-', 'yesterday'],
+        datepickerButtons: [
+          'tomorrow',
+          '-',
+          'yesterday',
+          '|',
+          '-',
+          'today',
+          '-',
+        ],
         showOutsideDays: false,
         showWeekNumber: true,
         dateFormat: 'MMM do yyyy',
