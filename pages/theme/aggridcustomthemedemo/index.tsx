@@ -37,6 +37,11 @@ export default () => {
             to tell AdapTable to load the ag-Grid <i>ag-theme-blue</i> theme
             also.
           </p>
+          <p>
+            Additionally, we also show a 'Custom Theme' which overrides even
+            more CSS variables and changes layout around buttons in dialog
+            footers and other details.
+          </p>
         </div>
       }
       helpResources={

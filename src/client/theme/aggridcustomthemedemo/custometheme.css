@@ -27,3 +27,72 @@ html.ab--theme-BlueTheme {
 html.ab--theme-BlueTheme .ab-Panel {
   --ab-cmp-panel__border-radius: 0px;
 }
+
+html.ab--theme-CustomTheme {
+  --ab-theme-loaded: CustomTheme;
+
+  --ab-dashboard__background: #d8dc6a;
+  --ab-dashboard-gap__background: white;
+  --ab-cmp-input--disabled__background: #232323;
+
+  --ab-color-defaultbackground: white;
+  --ab-color-text-on-defaultbackground: #3e444c;
+
+  --ab-color-secondarylight: #8fbae0;
+  --ab-color-secondarydark: #163550;
+  --ab-color-secondary: #5e9cd3;
+  --ab-color-primary: #cee1f3;
+  --ab-color-primarylight: #f4f9fe;
+  --ab-color-primarydark: #183e63;
+  --ab-dashboard-header__background: var(--ab-color-primarydark);
+  --ab-dashboard-header__color: white;
+  --ab-cmp-panel_header--variant-primary__background: var(
+    --ab-color-primarydark
+  );
+  --ab-cmp-panel_header--variant-modern__background: var(
+    --ab-color-primarydark
+  );
+  --ab-cmp-panel_header--variant-modern__color: white;
+  --ab-cmp-panel_header__color: white;
+  --ab-color-text-on-primary: #183e63;
+
+  --ab-dashboard__border: #555;
+  --ab-cmp-dropdownbutton-list-separator__border: 1px solid #555;
+
+  --ab-gridheader--filtered__background: var(--ab-color-defaultbackground);
+
+  --ab-color-accent: #d8dc6a;
+  --ab-color-accentlight: #d8dc6a;
+  --ab-color-secondary: var(--ab-color-accent);
+  --ab-color-secondarylight: var(--ab-color-accentlight);
+  --ab-cmp-panel_header__background: var(--ab-color-accent);
+  --ab-cmp-panel_header--variant-primary__color: white;
+  --ab-cmp-tooltip__background: var(--ab-color-accent);
+  --ab-color-action-add: var(--ab-color-accent);
+  --ab-cmp-one-page-wizard__background: var(--ab-color-accent);
+  --ab-cmp-one-page-wizard-section-title__color: white;
+  --ab-cmp-one-page-wizard-selected-title__background: var(
+    --ab-color-primarydark
+  );
+  --ab-color-text-on-secondary: var(--ab-color-text-on-primary);
+  --ab-color-text-on-secondarylight: var(--ab-color-text-on-primary);
+}
+html.ab--theme-CustomTheme .ab-WizardDialog__footer,
+html.ab--theme-CustomTheme .ab-Popup__footer {
+  background: var(--ab-color-accent);
+  justify-content: flex-end;
+}
+html.ab--theme-CustomTheme .ab-Dashboard__container {
+  border-radius: var(--ab__border-radius);
+}
+html.ab--theme-CustomTheme .ab-WizardDialog__footer > *,
+html.ab--theme-CustomTheme .ab-Popup__footer > * {
+  flex: none !important;
+}
+
+html.ab--theme-CustomTheme .ab-WizardDialog__footer button[data-name='finish'],
+html.ab--theme-CustomTheme .ab-Popup__footer button[data-name='finish'] {
+  background: transparent;
+  margin-left: var(--ab-space-2);
+  color: var(--ab-color-text-on-primary);
+}

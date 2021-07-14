@@ -28,12 +28,17 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   Theme: {
-    Revision: 3,
+    Revision: 4,
     UserThemes: [
       {
         Name: 'BlueTheme',
         Description: 'Blue theme',
         VendorGridClassName: 'ag-theme-blue',
+      },
+      {
+        Name: 'CustomTheme',
+        Description: 'Custom theme',
+        VendorGridClassName: 'ag-theme-balham',
       },
       {
         Name: 'dark',
