@@ -17,20 +17,25 @@ var adaptableApi: AdaptableApi;
 /*
 In this demo we add the following css:
 
-1.  To hide the Schedule Button in the Export Toolbar
+1.  Hide the Schedule Button in the Export Toolbar
 .ab-Dashboard__container--Export
   button[data-name='schedule'] {
   display: none;
 }
 
-2.  To move the Cancel buttton in the popup to the right
+2.  Move the Cancel buttton in the popup to the right
 .custom-css-rules .ab-Popup__footer {
   flex-direction: row-reverse;
 }
 
-3. To underline the Title in the Dashboard
+3. Italicise the Title in the Dashboard
 .custom-css-rules .ab-Dashboard__title {
-  text-decoration: underline;
+  font-style: italic;
+}
+
+4. Add an Overline above Titles in Toolbars 
+.custom-css-rules .ab-Dashboard__toolbar-title {
+  text-decoration: overline;
 }
 */
 

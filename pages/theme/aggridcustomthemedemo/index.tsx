@@ -25,9 +25,12 @@ export default () => {
             and sizes for example.
           </p>
           <p>
-            In this example we have created a 'Blue Theme' that styles the
-            AdapTable instance blue, with no border radius. When this loads we
-            leverage the <b>VendorGridClassName</b> of{' '}
+            In this example we have created a <b>Blue Theme</b> that styles the
+            AdapTable instance blue, with no border radius on the controls.
+          </p>
+          <p>
+            When the theme loads we leverage the{' '}
+            <code>VendorGridClassName</code> property of{' '}
             <a
               href="https://docs.adaptabletools.com/docs/predefined-config/theme-config"
               target="_blank"

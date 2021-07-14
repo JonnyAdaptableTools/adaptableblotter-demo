@@ -44,7 +44,8 @@ export default () => {
             </li>
             <li>
               <b>Active</b>: A "Live" Share which will get automatically updated
-              with every local change
+              with every local change (see{' '}
+              <a href="./aggridteamsharingactivesharedemo">this demo</a> )
             </li>
           </ul>
           <p>
@@ -99,7 +100,7 @@ export default () => {
             Team Sharing Options
           </a>{' '}
           |{' '}
-          <a href="https://youtu.be/bPb1PQtyjlQ" target="_blank">
+          <a href="https://youtu.be/cBdTaIImNhw" target="_blank">
             Team Sharing Video
           </a>{' '}
         </div>

@@ -132,7 +132,11 @@ export default () => {
             target="_blank"
           >
             AlertFired Event
-          </a>
+          </a>{' '}
+          |{' '}
+          <a href="https://youtu.be/Jo2rpfOATng" target="_blank">
+            Reactive Queries Video
+          </a>{' '}
         </div>
       }
     />

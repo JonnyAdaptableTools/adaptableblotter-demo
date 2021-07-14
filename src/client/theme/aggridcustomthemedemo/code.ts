@@ -28,7 +28,7 @@ const demoConfig: PredefinedConfig = {
     ],
   },
   Theme: {
-    Revision: 4,
+    Revision: 5,
     UserThemes: [
       {
         Name: 'BlueTheme',
@@ -38,7 +38,7 @@ const demoConfig: PredefinedConfig = {
       {
         Name: 'CustomTheme',
         Description: 'Custom theme',
-        VendorGridClassName: 'ag-theme-balham',
+        VendorGridClassName: 'ag-theme-balham-dark',
       },
       {
         Name: 'dark',

@@ -9,5 +9,9 @@
 }
 
 .custom-css-rules .ab-Dashboard__title {
-  text-decoration: underline;
+  font-style: italic;
+}
+
+.custom-css-rules .ab-Dashboard__toolbar-title {
+  text-decoration: overline;
 }
