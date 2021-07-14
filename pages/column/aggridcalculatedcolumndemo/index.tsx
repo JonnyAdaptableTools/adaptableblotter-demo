@@ -72,7 +72,7 @@ export default () => {
             Columns are referenced elsewhere:
             <ul>
               <li>
-                <b>Comment</b> in the <i>grouped calc cols</i>layout
+                <b>Comment</b> in the <i>grouped calc cols</i> layout
               </li>
               <li>
                 <b>Profit</b> in 2 Conditional Styles which use Predicates (

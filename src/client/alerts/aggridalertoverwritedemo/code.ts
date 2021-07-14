@@ -90,7 +90,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
                   return (
                     !newItemCountValue ||
                     newItemCountValue < 0 ||
-                    newItemCountValue > 100
+                    newItemCountValue > 30
                   );
                 },
                 onClick: (

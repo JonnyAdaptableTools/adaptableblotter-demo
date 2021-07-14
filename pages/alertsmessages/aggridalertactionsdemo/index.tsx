@@ -46,7 +46,9 @@ export default () => {
             AdapTable when the button is clicked.
           </p>
           <p>
-            In this demo we have created 2 buttons:
+            In this demo we have create an Alert which is triggered on any
+            change to the Contact column and displays a form with 2 action
+            buttons:
             <ul>
               <li>
                 <b>Show Me</b>: attaches to AdapTable's 'highlight-cell' and
