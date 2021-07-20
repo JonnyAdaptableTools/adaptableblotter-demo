@@ -1015,17 +1015,18 @@ export function getDemoPageStructure(): DemoPageStructure {
               'Export AdapTable data to Excel (with Live Updates) or Symphony and elsewhere by using the services of our partner ipushpull',
           },
           {
-            Name: 'Glue42',
-            Link: '/partners/glue42demo',
-            Description:
-              'AdapTable integrates very closely with Glue42 so that your Grids and Blotters communicate with other widgets including Excel (with 2-way validated updates).',
-          },
-          {
             Name: 'OpenFin',
             Link: '/partners/openfindemo',
             Description:
               'If you are using this popular container we offer "Live Updates" so that data exported to Excel updates in real time as AdapTable data ticks or is edited',
           },
+          {
+            Name: 'Glue42',
+            Link: '/partners/glue42demo',
+            Description:
+              'AdapTable integrates very closely with Glue42 so that your Grids and Blotters communicate with other widgets including Excel (with 2-way validated updates).',
+          },
+
           {
             Name: 'Finsemble',
             Link: '/partners/finsembledemo',

@@ -93,7 +93,7 @@ export default async (columnDefs: any[], rowData: any[]) => {
     plugins: [
       ipp({
         username: process.env.IPUSHPULL_USERNAME,
-        password: process.env.IPUSHPULL_PASSWORD,
+        // password: process.env.IPUSHPULL_PASSWORD,
         throttleTime: 5000,
         includeSystemReports: true,
         autoLogin: true,
